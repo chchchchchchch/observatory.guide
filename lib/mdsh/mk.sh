@@ -13,8 +13,8 @@
 # =========================================================================== #
 # CONFIGURE                                                                   #
 # =========================================================================== #
-  FUNCTIONSBASIC="../lib/sh/201702_basic.functions"
-  OUTDIR="../_" ; TMPDIR="."
+  FUNCTIONSBASIC="basic.functions"
+  OUTDIR="../../_" ; TMPDIR="/tmp"
   REFURL="http://freeze.sh/etherpad/export/_/references.bib"
   SELECTLINES="tee"
 # --------------------------------------------------------------------------- #
@@ -24,14 +24,14 @@
 # --------------------------------------------------------------------------- #
 # INCLUDE                                                                     #
 # --------------------------------------------------------------------------- #
-  source ../lib/sh/prepress.functions
-  source ../lib/sh/page.functions
-  source ../lib/sh/text.functions
+  source ../../lib/sh/prepress.functions
+  source ../../lib/sh/page.functions
+  source ../../lib/sh/text.functions
   source $FUNCTIONS
+
 # --------------------------------------------------------------------------- #
 # DEFINITIONS SPECIFIC TO OUTPUT
 # --------------------------------------------------------------------------- #
- #PANDOCACTION="pandoc --ascii -V links-as-notes -r markdown -w latex"
   PANDOCACTION="pandoc --ascii -r markdown -w latex"
 # --------------------------------------------------------------------------- #
 # FOOTNOTES
@@ -61,31 +61,35 @@
 # --------------------------------------------------------------------------- #
 # WRITE TEX SOURCE
 # --------------------------------------------------------------------------- #
-  echo "\documentclass[8pt,cleardoubleempty]{scrbook}"          >  $TMPTEX
-  cat   ${TMPID}.preamble                                       >> $TMPTEX
-  echo "\bibliography{${TMPID}.bib}"                            >> $TMPTEX
-  echo "\begin{document}"                                       >> $TMPTEX
-  cat   $SRCDUMP                                                >> $TMPTEX
-  echo "\end{document}"                                         >> $TMPTEX
+  echo "\documentclass[8pt,cleardoubleempty]{scrbook}"      >  $TMPTEX
+  if [ -f ${TMPID}.preamble ];then cat ${TMPID}.preamble    >> $TMPTEX ;fi
+  echo "\bibliography{${TMPID}.bib}"                        >> $TMPTEX
+  echo "\begin{document}"                                   >> $TMPTEX
+  cat   $SRCDUMP                                            >> $TMPTEX
+  echo "\end{document}"                                     >> $TMPTEX
 
   if [ `echo $THISDOCUMENTCLASS | wc -c` -gt 2 ]; then
   sed -i "s/^\\\documentclass.*}$/\\\documentclass$THISDOCUMENTCLASS/" $TMPTEX
   fi
-# --------------------------------------------------------------------------- #
-# MAKE PDF
-# --------------------------------------------------------------------------- #
-  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-  biber --nodieonerror `echo ${TMPTEX} | rev  | #
-                        cut -d "." -f 2- | rev` #
-  makeindex -s ${TMPID}.ist ${TMPID}.idx
-  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-  mv ${TMPID}.pdf $OUTDIR/$FINALPDF
+## --------------------------------------------------------------------------- #
+## MAKE PDF
+## --------------------------------------------------------------------------- #
+#  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
+#  biber --nodieonerror `echo ${TMPTEX} | rev  | #
+#                        cut -d "." -f 2- | rev` #
+#  makeindex -s ${TMPID}.ist ${TMPID}.idx
+#  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
+#  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
+#  mv ${TMPID}.pdf $OUTDIR/$FINALPDF
+#
+## --------------------------------------------------------------------------- #
+#  else echo "not existing"; 
+## --------------------------------------------------------------------------- #
+   fi
 
-# --------------------------------------------------------------------------- #
-  else echo "not existing"; 
-# --------------------------------------------------------------------------- #
-  fi
+
+  cp $TMPTEX debug.txt
+
 # =========================================================================== #
 # CLEAN UP (MAKE SURE $TMPID IS SET FOR WILDCARD DELETE)
 
@@ -94,7 +98,7 @@
   then
         rm ${TMPID}*.*
   fi
-  rm FOGRA39L.icc pdfx-1a.xmp*
+# rm FOGRA39L.icc pdfx-1a.xmp*
 
 
 exit 0;
