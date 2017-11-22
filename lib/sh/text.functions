@@ -1,4 +1,7 @@
- function listSrc() {
+  SRCLIST=${TMPID}X.list
+# =========================================================================== #
+
+ function getLines() {
 
   if [ `echo $* | wc -c` -lt 2 ]; then   # = NO PARAMETERS PROVIDED 
        SEP="% ------------"              # THIS IS THE SEPARATOR
@@ -7,7 +10,8 @@
             tail -n 1                       | # SELECT LAST 
             cut -d ":" -f 1`                  # SELECT FIRST FIELD
        sed "1,${SEPN}d" $SRCDUMP   | # PRINT FROM LINE NUM TO END
-       grep -v "^% QUAVERBATIM"    | # IGNORE COMMAND ITSELF
+      #grep -v "^% QUAVERBATIM"    | # IGNORE COMMAND ITSELF
+       grep -v "^% [A-Z]*:"        | # IGNORE COMMAND ITSELF
        sed "s/^%//"                | # REMOVE LEADING %
        sed "s/^[ ]*//"             | # REMOVE ALL LEADING BLANKS
        sed "/^[ \t]*$/d"           | # REMOVE EMPTY LINES
