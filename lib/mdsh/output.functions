@@ -1,0 +1,78 @@
+function MKPDF() {
+
+  echo "INSIDE MKPDF"
+
+  TMPTEX=${TMPID}.tex
+# --------------------------------------------------------------------------- #
+# WRITE TEX SOURCE
+# --------------------------------------------------------------------------- #
+  echo "\documentclass[8pt,cleardoubleempty]{scrbook}"      >  $TMPTEX
+  if [ -f ${TMPID}.preamble ];then cat ${TMPID}.preamble    >> $TMPTEX ;fi
+  echo "\bibliography{${TMPID}.bib}"                        >> $TMPTEX
+  echo "\begin{document}"                                   >> $TMPTEX
+  cat   $SRCDUMP                                            >> $TMPTEX
+  echo "\end{document}"                                     >> $TMPTEX
+
+  if [ `echo $THISDOCUMENTCLASS | wc -c` -gt 2 ]; then
+  sed -i "s/^\\\documentclass.*}$/\\\documentclass$THISDOCUMENTCLASS/" $TMPTEX
+  fi
+# --------------------------------------------------------------------------- #
+# MAKE PDF
+# --------------------------------------------------------------------------- #
+  pdflatex -interaction=nonstopmode  \
+           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+  biber --nodieonerror `echo ${TMPTEX} | rev  | #
+                        cut -d "." -f 2- | rev` #
+  makeindex -s ${TMPID}.ist ${TMPID}.idx
+  pdflatex -interaction=nonstopmode  \
+           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+  pdflatex -interaction=nonstopmode  \
+           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+  mv ${TMPID}.pdf $OUTPUT
+
+ }
+
+
+
+
+# =========================================================================== #
+
+  if [ "$OUTPUTFORMAT" == "pdf" ];then
+
+  # ----------------------------------------------------------------------- #
+  # DEFINITIONS SPECIFIC TO OUTPUT
+  # ----------------------------------------------------------------------- #
+    PANDOCACTION="pandoc --ascii -r markdown -w latex"
+  # ----------------------------------------------------------------------- #
+  # FOOTNOTES
+  # \footnote{the end is near, the text is here}
+  # ----------------------------------------------------------------------- #
+    FOOTNOTEOPEN="\footnote{" ; FOOTNOTECLOSE="}"
+  # CITATIONS
+  # \cite{phillips:2004:vectoraesthetic}
+  # ----------------------------------------------------------------------- #
+    CITEOPEN="\cite{"   ; CITECLOSE="}"
+  # ----------------------------------------------------------------------- #
+    CITEPOPEN="\citep[" ; CITEPCLOSE="]{"
+  # ----------------------------------------------------------------------- #
+
+    lastAction="MKPDF"
+
+# --------------------------------------------------------------------------- #
+  elif [ "$OUTPUTFORMAT" == "html" ];then
+
+
+  echo "IS HTML"
+  exit 0;
+
+
+  else
+
+    echo "NO (SUITABLE) OUTPUT FORMAT DEFINED"
+  fi
+
+# =========================================================================== #
+
+
+
+

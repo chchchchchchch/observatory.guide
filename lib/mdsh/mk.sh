@@ -15,7 +15,6 @@
   if [ `echo $OUTPUTFORMAT | wc -c` -lt 3 ];then exit 0;fi
   OUTPUT="${MAINPATH}/${MAINNAME}.${OUTPUTFORMAT}"
 
-
 # =========================================================================== #
 # CONFIGURE                                                                   #
 # =========================================================================== #
@@ -33,27 +32,9 @@
   source "$SHDIR/../sh/prepress.functions"
   source "$SHDIR/../sh/page.functions"
   source "$SHDIR/../sh/text.functions"
+
+  source "$SHDIR/output.functions"
   source "$FUNCTIONS"
-
-
-# --------------------------------------------------------------------------- #
-# DEFINITIONS SPECIFIC TO OUTPUT
-# --------------------------------------------------------------------------- #
-  PANDOCACTION="pandoc --ascii -r markdown -w latex"
-# --------------------------------------------------------------------------- #
-# FOOTNOTES
-# \footnote{the end is near, the text is here}
-# --------------------------------------------------------------------------- #
-  FOOTNOTEOPEN="\footnote{" ; FOOTNOTECLOSE="}"
-# CITATIONS
-# \cite{phillips:2004:vectoraesthetic}
-# --------------------------------------------------------------------------- #
-  CITEOPEN="\cite{"   ; CITECLOSE="}"
-# --------------------------------------------------------------------------- #
-  CITEPOPEN="\citep[" ; CITEPCLOSE="]{"
-# --------------------------------------------------------------------------- #
-
-
 
 # =========================================================================== #
 # ACTION STARTS NOW!
@@ -65,45 +46,17 @@
 # DO CONVERSION
 # --------------------------------------------------------------------------- #
   mdsh2src "$MAIN"
-
-
-
+# --------------------------------------------------------------------------- #
+# DO CONVERSION
+# --------------------------------------------------------------------------- #
   if [ `ls $SRCDUMP 2>/dev/null | wc -l` -gt 0 ]; then
 
-  TMPTEX=${TMPID}.tex
-# --------------------------------------------------------------------------- #
-# WRITE TEX SOURCE
-# --------------------------------------------------------------------------- #
-  echo "\documentclass[8pt,cleardoubleempty]{scrbook}"      >  $TMPTEX
-  if [ -f ${TMPID}.preamble ];then cat ${TMPID}.preamble    >> $TMPTEX ;fi
-  echo "\bibliography{${TMPID}.bib}"                        >> $TMPTEX
-  echo "\begin{document}"                                   >> $TMPTEX
-  cat   $SRCDUMP                                            >> $TMPTEX
-  echo "\end{document}"                                     >> $TMPTEX
+  $lastAction
 
-  if [ `echo $THISDOCUMENTCLASS | wc -c` -gt 2 ]; then
-  sed -i "s/^\\\documentclass.*}$/\\\documentclass$THISDOCUMENTCLASS/" $TMPTEX
+  # ----------------------------------------------------------------------- #
+  else echo '$SRCDUMP not existing'; 
+  # ----------------------------------------------------------------------- #
   fi
-# --------------------------------------------------------------------------- #
-# MAKE PDF
-# --------------------------------------------------------------------------- #
-  pdflatex -interaction=nonstopmode  \
-           -output-directory $TMPDIR $TMPTEX    # > /dev/null
-  biber --nodieonerror `echo ${TMPTEX} | rev  | #
-                        cut -d "." -f 2- | rev` #
-  makeindex -s ${TMPID}.ist ${TMPID}.idx
-  pdflatex -interaction=nonstopmode  \
-           -output-directory $TMPDIR $TMPTEX    # > /dev/null
-  pdflatex -interaction=nonstopmode  \
-           -output-directory $TMPDIR $TMPTEX    # > /dev/null
-  mv ${TMPID}.pdf $OUTPUT
-
-# --------------------------------------------------------------------------- #
-  else echo "not existing"; 
-# --------------------------------------------------------------------------- #
-  fi
-
-
 
 # =========================================================================== #
 # CLEAN UP (MAKE SURE $TMPID IS SET FOR WILDCARD DELETE)
