@@ -2,13 +2,14 @@
 
 # THIS IS A FRAGILE SYSTEM, HANDLE WITH CARE.
 # --------------------------------------------------------------------------- #
-  MAIN="$1";PDF="$2"
+  MAIN="$1"
 # --------------------------------------------------------------------------- #
   SHDIR=`dirname \`realpath $0\``;cd $SHDIR
   if [ ! -f "$MAIN" ]; then exit 0; fi
-  if [ `echo $PDF | grep "\.pdf$" | #
-        wc -c` -lt 2 ]; then exit 0; fi
-  FINALPDF=`basename $2`
+  OUTPUTFORMAT=`echo $* | sed 's/ /\n/g' | #
+                egrep '^html$|^pdf$' | head -n 1`
+  if [ `echo $OUTPUTFORMAT | wc -c` -lt 3 ];then exit 0;fi
+  MAINNAME=`basename "$MAIN" | rev | cut -d "." -f 2- | rev`
 
 # =========================================================================== #
 # CONFIGURE                                                                   #
@@ -19,7 +20,7 @@
   SELECTLINES="tee"
 # --------------------------------------------------------------------------- #
   TMPID=$TMPDIR/TMP`date +%Y%m%H``echo $RANDOM | cut -c 1-4`
-  SRCDUMP=${TMPID}.maindump ; TMPTEX=${TMPID}.tex
+  SRCDUMP=${TMPID}.maindump
   FUNCTIONS="$TMPID.functions"; cat $FUNCTIONSBASIC > $FUNCTIONS
 # --------------------------------------------------------------------------- #
 # INCLUDE                                                                     #
@@ -28,6 +29,7 @@
   source ../../lib/sh/page.functions
   source ../../lib/sh/text.functions
   source $FUNCTIONS
+
 
 # --------------------------------------------------------------------------- #
 # DEFINITIONS SPECIFIC TO OUTPUT
@@ -46,6 +48,8 @@
   CITEPOPEN="\citep[" ; CITEPCLOSE="]{"
 # --------------------------------------------------------------------------- #
 
+
+
 # =========================================================================== #
 # ACTION STARTS NOW!
 # =========================================================================== #
@@ -57,7 +61,11 @@
 # --------------------------------------------------------------------------- #
   mdsh2src $MAIN
 
+
+
   if [ `ls $SRCDUMP 2>/dev/null | wc -l` -gt 0 ]; then
+
+  TMPTEX=${TMPID}.tex
 # --------------------------------------------------------------------------- #
 # WRITE TEX SOURCE
 # --------------------------------------------------------------------------- #
@@ -80,12 +88,15 @@
 #  makeindex -s ${TMPID}.ist ${TMPID}.idx
 #  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
 #  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-#  mv ${TMPID}.pdf $OUTDIR/$FINALPDF
+#  mv ${TMPID}.pdf $OUTDIR/$FINAL
 #
 ## --------------------------------------------------------------------------- #
 #  else echo "not existing"; 
 ## --------------------------------------------------------------------------- #
    fi
+
+
+
 
 
   cp $TMPTEX debug.txt
