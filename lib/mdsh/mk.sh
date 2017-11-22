@@ -4,19 +4,24 @@
 # --------------------------------------------------------------------------- #
   MAIN="$1"
 # --------------------------------------------------------------------------- #
-  SHDIR=`dirname \`realpath $0\``;cd $SHDIR
+  SHDIR=`dirname \`realpath $0\`` #;cd $SHDIR
+  if [ ! -f "$MAIN" ]; then exit 0; fi
+  MAINPATH=`realpath "$MAIN" | rev | cut -d "/" -f 2- | rev`
+  MAINNAME=`basename "$MAIN" | rev | cut -d "." -f 2- | rev`
+  MAIN="${MAINPATH}/${MAINNAME}.mdsh"
   if [ ! -f "$MAIN" ]; then exit 0; fi
   OUTPUTFORMAT=`echo $* | sed 's/ /\n/g' | #
                 egrep '^html$|^pdf$' | head -n 1`
   if [ `echo $OUTPUTFORMAT | wc -c` -lt 3 ];then exit 0;fi
-  MAINNAME=`basename "$MAIN" | rev | cut -d "." -f 2- | rev`
+  OUTPUT="${MAINPATH}/${MAINNAME}.${OUTPUTFORMAT}"
+
 
 # =========================================================================== #
 # CONFIGURE                                                                   #
 # =========================================================================== #
-  FUNCTIONSBASIC="basic.functions"
-  OUTDIR="../../_" ; TMPDIR="/tmp"
   REFURL="http://freeze.sh/etherpad/export/_/references.bib"
+  FUNCTIONSBASIC="$SHDIR/basic.functions"
+  TMPDIR="/tmp"
   SELECTLINES="tee"
 # --------------------------------------------------------------------------- #
   TMPID=$TMPDIR/TMP`date +%Y%m%H``echo $RANDOM | cut -c 1-4`
@@ -25,10 +30,10 @@
 # --------------------------------------------------------------------------- #
 # INCLUDE                                                                     #
 # --------------------------------------------------------------------------- #
-  source ../../lib/sh/prepress.functions
-  source ../../lib/sh/page.functions
-  source ../../lib/sh/text.functions
-  source $FUNCTIONS
+  source "$SHDIR/../sh/prepress.functions"
+  source "$SHDIR/../sh/page.functions"
+  source "$SHDIR/../sh/text.functions"
+  source "$FUNCTIONS"
 
 
 # --------------------------------------------------------------------------- #
@@ -59,7 +64,7 @@
 # --------------------------------------------------------------------------- #
 # DO CONVERSION
 # --------------------------------------------------------------------------- #
-  mdsh2src $MAIN
+  mdsh2src "$MAIN"
 
 
 
@@ -79,27 +84,26 @@
   if [ `echo $THISDOCUMENTCLASS | wc -c` -gt 2 ]; then
   sed -i "s/^\\\documentclass.*}$/\\\documentclass$THISDOCUMENTCLASS/" $TMPTEX
   fi
-## --------------------------------------------------------------------------- #
-## MAKE PDF
-## --------------------------------------------------------------------------- #
-#  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-#  biber --nodieonerror `echo ${TMPTEX} | rev  | #
-#                        cut -d "." -f 2- | rev` #
-#  makeindex -s ${TMPID}.ist ${TMPID}.idx
-#  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-#  pdflatex -interaction=nonstopmode $TMPTEX     # > /dev/null
-#  mv ${TMPID}.pdf $OUTDIR/$FINAL
-#
-## --------------------------------------------------------------------------- #
-#  else echo "not existing"; 
-## --------------------------------------------------------------------------- #
-   fi
+# --------------------------------------------------------------------------- #
+# MAKE PDF
+# --------------------------------------------------------------------------- #
+  pdflatex -interaction=nonstopmode  \
+           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+  biber --nodieonerror `echo ${TMPTEX} | rev  | #
+                        cut -d "." -f 2- | rev` #
+  makeindex -s ${TMPID}.ist ${TMPID}.idx
+  pdflatex -interaction=nonstopmode  \
+           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+  pdflatex -interaction=nonstopmode  \
+           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+  mv ${TMPID}.pdf $OUTPUT
+
+# --------------------------------------------------------------------------- #
+  else echo "not existing"; 
+# --------------------------------------------------------------------------- #
+  fi
 
 
-
-
-
-  cp $TMPTEX debug.txt
 
 # =========================================================================== #
 # CLEAN UP (MAKE SURE $TMPID IS SET FOR WILDCARD DELETE)
