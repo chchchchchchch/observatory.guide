@@ -1,6 +1,6 @@
-function MKPDF() {
+# .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- #
 
-  echo "INSIDE MKPDF"
+ function mkPdf() {
 
   TMPTEX=${TMPID}.tex
 # --------------------------------------------------------------------------- #
@@ -32,7 +32,71 @@ function MKPDF() {
 
  }
 
+# .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. #
 
+ function mkHtml() {
+
+  tac $OUTPUT | #
+  sed -n "/<!--.*${HEADMARK}.*-->$/,\$p" | #
+  tac     >  ${TMPID}.htmltmp
+
+  cat $SRCDUMP                | #
+ #sed "s/[ \t]*$APND//g"      | # DOUBLED FROM FUNCTIONS (BUG?!)
+ #sed "s/[ \t]*$ESC//g"       | # DOUBLED FROM FUNCTIONS (BUG?!)
+ #tidy -config tc.txt         | #
+ #sed -e :a \
+ #    -e '$!N;s/=[ ]*\n"/="/;ta' \
+ #    -e 'P;D'                | # REAPPEND UNTIDY TIDY BREAK (=")
+  tee >> ${TMPID}.htmltmp
+
+
+# --------------------------------------------------------------------------- #
+# MAKE FOOTNOTES
+# --------------------------------------------------------------------------- #
+  ( IFS=$'\n' ; COUNT=1
+    for FOOTNOTE in `sed "s/$FOOTNOTEOPEN/\n&/g" ${TMPID}.htmltmp | #
+                     sed "s/$FOOTNOTECLOSE/&\n/"         | #
+                     grep "^$FOOTNOTEOPEN"`                #
+     do
+        if [ $COUNT -eq 1 ]; then
+             echo "<div class=\"footnotes\">"  >> ${TMPID}.htmltmp
+             echo "<ol>"                       >> ${TMPID}.htmltmp
+             FOOTNOTEBLOCKSTARTED="YES"
+        fi
+        LNUM=`grep -n $FOOTNOTE ${TMPID}.htmltmp | head -n 1 | cut -d ":" -f 1`
+  
+        FOOTNOTETXT=`echo $FOOTNOTE    | #
+                     cut -d "{" -f 2   | #
+                     cut -d "}" -f 1`    #
+        ID=`echo $FOOTNOTETXT | md5sum | #
+            cut -c 1-8`                  #
+        FOOTNOTE=`echo $FOOTNOTE       | #
+                  sed 's/\[/\\\[/g'    | #
+                  sed 's/|/\\|/g'`
+        OLDFOOTNOTE=$FOOTNOTE
+        NEWFOOTNOTE="<sup><a href=\"#$ID\">$COUNT</a><\/sup>"
+        sed -i "$((LNUM))s|$OLDFOOTNOTE|$NEWFOOTNOTE|" ${TMPID}.htmltmp
+        echo "<li id=\"$ID\"> $FOOTNOTETXT </li>"   >> ${TMPID}.htmltmp
+        COUNT=`expr $COUNT + 1`
+    done
+  
+    if [ "X${FOOTNOTEBLOCKSTARTED}" == "XYES" ]; then
+          echo "</ol>"              >> ${TMPID}.htmltmp
+          echo "</div>"             >> ${TMPID}.htmltmp
+          sed -i "s|$FOOTNOTECLOSE||g" ${TMPID}.htmltmp # WORKAROUND (BUG!!)
+    fi
+  )
+
+
+
+  echo "" >> ${TMPID}.htmltmp
+  sed -n "/<!--.*${FOOTMARK}.*-->$/,\$p" $OUTPUT >> ${TMPID}.htmltmp
+
+  mv ${TMPID}.htmltmp $OUTPUT
+
+
+ }
+# .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. #
 
 
 # =========================================================================== #
@@ -55,20 +119,44 @@ function MKPDF() {
   # ----------------------------------------------------------------------- #
     CITEPOPEN="\citep[" ; CITEPCLOSE="]{"
   # ----------------------------------------------------------------------- #
+  # COMMENT
+  # -------
+    COMSTART=''; COMCLOSE=''
+  # ======================================================================= #
 
-    lastAction="MKPDF"
+    lastAction="mkPdf"
 
-# --------------------------------------------------------------------------- #
+# ........................................................................... #
+
   elif [ "$OUTPUTFORMAT" == "html" ];then
 
+  # ----------------------------------------------------------------------- #
+    PANDOCACTION="pandoc --ascii -r markdown -w html"
+  # ----------------------------------------------------------------------- #
+  # FOOTNOTES [^]{the end is near, the text is here}
+  # ---------
+    FOOTNOTEOPEN="FOOTNOTEOPEN$RANDOM{";FOOTNOTECLOSE="}FOOTNOTECLOSE$RANDOM"
+  # ----------------------------------------------------------------------- #
+  # CITATIONS [@xx:0000:aa] / [@[p.44]xx:0000:aa]
+  # ---------
+    CITEOPEN="CITEOPEN$RANDOM" ; CITECLOSE="CITECLOSE$RANDOM"
+    CITEPOPEN="$CITEOPEN" ; CITEPCLOSE="CITEPCLOSE$RANDOM"
+  # ----------------------------------------------------------------------- #
+  # COMMENT
+  # -------
+    COMSTART='<!--'; COMCLOSE='-->'
+  # ======================================================================= #
+    HEADMARK="= FROM MDSH START ="
+    FOOTMARK="= FROM MDSH END ="
 
-  echo "IS HTML"
-  exit 0;
 
+    lastAction="mkHtml"
+
+# ........................................................................... #
 
   else
-
     echo "NO (SUITABLE) OUTPUT FORMAT DEFINED"
+    exit 0;
   fi
 
 # =========================================================================== #
