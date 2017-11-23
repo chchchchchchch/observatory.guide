@@ -18,7 +18,8 @@
 # =========================================================================== #
 # CONFIGURE                                                                   #
 # =========================================================================== #
-  REFURL="http://freeze.sh/etherpad/export/_/references.bib"
+ #REFURL="http://freeze.sh/etherpad/export/_/references.bib"
+  REFURL="$SHDIR/../../E/references.bib"
   FUNCTIONSBASIC="$SHDIR/basic.functions"
   TMPDIR="/tmp"
   SELECTLINES="tee"
@@ -66,7 +67,7 @@
   then
         rm ${TMPID}*.*
   fi
-# rm FOGRA39L.icc pdfx-1a.xmp*
+  rm FOGRA39L.icc pdfx-1a.xmp*
 
 
 exit 0;
