@@ -64,10 +64,9 @@
 
   if [ `echo ${TMPID} | wc -c` -ge 4 ] && 
      [ `ls ${TMPID}*.* 2>/dev/null | wc -l` -gt 0 ]
-  then
-        rm ${TMPID}*.*
-  fi
-  rm FOGRA39L.icc pdfx-1a.xmp*
+  then  rm ${TMPID}*.* ;fi
+  if [ -f "$TMPDIR/FOGRA39L.icc" ];then rm $TMPDIR/FOGRA39L.icc; fi
+  if [ -f "$TMPDIR/pdfx-1a.xmp*" ];then rm $TMPDIR/pdfx-1a.xmp*; fi
 
 
 exit 0;
