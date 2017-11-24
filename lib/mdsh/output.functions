@@ -36,19 +36,20 @@
 
  function mkHtml() {
 
+  # http://tidy.sourceforge.net/docs/quickref.html#show-body-only 
+  echo "show-body-only: y"     >  ${TMPID}.tc
+  echo "wrap-attributes: n"    >> ${TMPID}.tc
+  echo "quiet:y"               >> ${TMPID}.tc
+  echo "vertical-space:y"      >> ${TMPID}.tc
+
   tac $OUTPUT | #
   sed -n "/<!--.*${HEADMARK}.*-->$/,\$p" | #
-  tac     >  ${TMPID}.htmltmp
+  tac      >   ${TMPID}.htmltmp
+  echo ""  >>  ${TMPID}.htmltmp
 
   cat $SRCDUMP                | #
- #sed "s/[ \t]*$APND//g"      | # DOUBLED FROM FUNCTIONS (BUG?!)
- #sed "s/[ \t]*$ESC//g"       | # DOUBLED FROM FUNCTIONS (BUG?!)
- #tidy -config tc.txt         | #
- #sed -e :a \
- #    -e '$!N;s/=[ ]*\n"/="/;ta' \
- #    -e 'P;D'                | # REAPPEND UNTIDY TIDY BREAK (=")
+  tidy -config ${TMPID}.tc    | #
   tee >> ${TMPID}.htmltmp
-
 
 # --------------------------------------------------------------------------- #
 # MAKE FOOTNOTES
