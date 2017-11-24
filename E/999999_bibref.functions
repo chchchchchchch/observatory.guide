@@ -70,23 +70,21 @@ function BIBREF() {
                       sed "s/$CITECLOSE/&\n/g" | #
                       grep "^$CITEOPEN"`
       do
-          CITEKEY=`echo $CITATION        | #
-                   sed "s/$CITECLOSE//g" | #
-                   sed "s/$CITEOPEN//g"  | #
-                   sed "s/^.*$CITEPCLOSE//"`
-         OPTIONAL=`echo $CITATION | #
+         CITEKEY=`echo $CITATION        | #
+                  sed "s/$CITECLOSE//g" | #
+                  sed "s/$CITEOPEN//g"  | #
+                  sed "s/^.*$CITEPCLOSE//"`
+         OPTIONAL=`echo $CITATION  | #
                    grep ${CITEPCLOSE} | #
                    sed "s/$CITEOPEN//g"  | #
                    sed "s/${CITEPCLOSE}.*$//"`
           LINENUM=`grep -n $CITATION $SRCDUMP | #
-                   head -n 1 | #
-                   cut -d ":" -f 1`
+                   head -n 1 | cut -d ":" -f 1`  #
    
        if [ "X$CITEKEY" != "X$LASTKEY" ]; then
    
          COLLECTNAMES="";TITLE=""
          BIBENTRY=`grep $CITEKEY $BIBTMP`
-   
          XID="<genre"
          GENRE=`echo $BIBENTRY   | sed "s/$XID/\n&/g" | #
                 grep "^$XID"     | head -n 1          | #
@@ -96,93 +94,76 @@ function BIBREF() {
                 grep "^$XID"     | head -n 1          | #
                 cut -d ">" -f 2  | cut -d "<" -f 1`     #
          XID="<subTitle>"
-         STITLE=`echo $BIBENTRY   | sed "s/$XID/\n&/g" | #
-                 grep "^$XID"     | head -n 1          | #
-                 cut -d ">" -f 2  | cut -d "<" -f 1`     #
+         STITLE=`echo $BIBENTRY  | sed "s/$XID/\n&/g" | #
+                 grep "^$XID"    | head -n 1          | #
+                 cut -d ">" -f 2 | cut -d "<" -f 1`     #
          if [ `echo $STITLE | wc -c` -gt 2 ]; then
               TITLE="${TITLE}: ${STITLE}"
-         else
-              TITLE="$TITLE"
-         fi
+         else TITLE="$TITLE"; fi
          if [  `echo $TITLE | wc -c` -gt 2 ]; then
                  TITLE="<span class=\"title\">$TITLE</span>, "
-            else
-                 TITLE=""
-         fi
+            else TITLE=""; fi
          XID="<dateIssued>"
          DATE=`echo $BIBENTRY   | sed "s/$XID/\n&/g" | #
                grep "^$XID"     | head -n 1          | #
                cut -d ">" -f 2  | cut -d "<" -f 1`     #
          if [  `echo $DATE | wc -c` -gt 2 ]; then
                  DATE="<span class=\"date\">${DATE}</span>"
-            else
-                 DATE=""
-         fi
+            else DATE=""; fi
          XID="<publisher>"
-         PUBLISHER=`echo $BIBENTRY   | sed "s/$XID/\n&/g" | #
-                    grep "^$XID"     | head -n 1          | #
-                    cut -d ">" -f 2  | cut -d "<" -f 1`     #
+         PUBLISHER=`echo $BIBENTRY  | sed "s/$XID/\n&/g" | #
+                    grep "^$XID"    | head -n 1          | #
+                    cut -d ">" -f 2 | cut -d "<" -f 1`     #
          if [  `echo $PUBLISHER | wc -c` -gt 2 ]; then
                  PUBLISHER="<span class=\"publisher\">${PUBLISHER}</span>, "
-            else
-                 PUBLISHER=""
-         fi
+            else PUBLISHER="";fi
          XID="<placeTerm type=\"text\""
-         PLACE=`echo $BIBENTRY   | sed "s/$XID/\n&/g" | #
-                grep "^$XID"     | head -n 1          | #
-                cut -d ">" -f 2  | cut -d "<" -f 1`     #
+         PLACE=`echo $BIBENTRY  | sed "s/$XID/\n&/g" | #
+                grep "^$XID"    | head -n 1          | #
+                cut -d ">" -f 2 | cut -d "<" -f 1`     #
          if [  `echo $PLACE | wc -c` -gt 2 ]; then
                  PLACE="<span class=\"place\">${PLACE}</span>, "
-            else
-                 PLACE=""
-         fi
-   
+            else PLACE="";fi
          K=$RANDOM ; L=`echo $K | rev`
          XID="<name type=\"personal\""
          for PERSONS in `echo $BIBENTRY     | #
                          sed "s/$XID/\n&/g" | #
                          grep "^$XID" | #
                          sed 's/ /5pA4c3e/g'`
-   
-         do
-             PERSONS=`echo $PERSONS | sed 's/5pA4c3e/ /g'`
+         do  PERSONS=`echo $PERSONS | sed 's/5pA4c3e/ /g'`
              XID="<namePart type=\"given\""
              GNAME=`echo $PERSONS   | sed "s/$XID/\n&/g" | #
-                    grep "^$XID"     | head -n 4         | #
-                    cut -d ">" -f 2  | cut -d "<" -f 1`    #
+                    grep "^$XID"    | head -n 4          | #
+                    cut -d ">" -f 2 | cut -d "<" -f 1`     #
              XID="<namePart type=\"family\""
              FNAME=`echo $PERSONS   | sed "s/$XID/\n&/g" | #
-                    grep "^$XID"     | head -n 4         | #
-                    cut -d ">" -f 2  | cut -d "<" -f 1`    #
-             COLLECTNAMES="${COLLECTNAMES}${K} <span class=\"fname\">${FNAME}</span>,\
+                    grep "^$XID"    | head -n 4          | #
+                    cut -d ">" -f 2 | cut -d "<" -f 1`     #
+             COLLECTNAMES="${COLLECTNAMES}${K} \
+                           <span class=\"fname\">${FNAME}</span>,\
                            <span class=\"gname\">${GNAME}</span>"
          done
-   
          COLLECTNAMES=`echo $COLLECTNAMES | #
                        sed "s/^$K //"     | #
                        rev | sed "s/$L/ dna /" | #
                        rev | sed "s/$K/,/g"`
-   
          CITEINSERT=`echo "$FOOTNOTEOPEN<span class=\"$GENRE\">\
-               ${COLLECTNAMES}: ${TITLE}${PUBLISHER}${PLACE}${DATE}. \
-               $OPTIONAL \
-               </span>$FOOTNOTECLOSE" | #
-         sed 's/>[ ]*</></g'         | #
-         tr -s ' '                  | #
-         sed 's/"/\\\\"/g'         | #
-         sed 's/&/\\\\&/g'        | #
-         sed 's/\\//\\\\\//g'    | #
-         sed 's/]/\\\\]/g'      | #
-         sed 's/\[/\\\\\[/g'`    #
-   
+                    ${COLLECTNAMES}: ${TITLE}${PUBLISHER}${PLACE}${DATE}. \
+                    $OPTIONAL </span>$FOOTNOTECLOSE" | #
+                     sed 's/>[ ]*</></g'            | #
+                     tr -s ' '                     | #
+                     sed 's/"/\\\\"/g'            | #
+                     sed 's/&/\\\\&/g'           | #
+                     sed 's/\\//\\\\\//g'       | #
+                     sed 's/]/\\\\]/g'         | #
+                     sed 's/\[/\\\\\[/g'`       #
          sed -i "${LINENUM}s/$CITATION/$CITEINSERT/" $SRCDUMP
-   
-       else
-            CITEINSERT="$FOOTNOTEOPEN<span class=\"ibid\">ibid. $OPTIONAL<\/span>$FOOTNOTECLOSE"
+
+       else CITEINSERT="$FOOTNOTEOPEN<span class=\"ibid\">ibid. \
+                        $OPTIONAL<\/span>$FOOTNOTECLOSE"
             sed -i "${LINENUM}s/$CITATION/$CITEINSERT/" $SRCDUMP
        fi
-   
-         LASTKEY="$CITEKEY"
+          LASTKEY="$CITEKEY"  
      done
 
    }
