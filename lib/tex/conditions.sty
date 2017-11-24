@@ -1,0 +1,28 @@
+% --------------------------------------------------------------------------- %
+%  C O N D I T I O N S
+% --------------------------------------------------------------------------- %
+
+%% IF BODYTEXT WORKAROUND; TO DO BETTER
+   \newif\ifbodytext
+   \bodytexttrue
+
+%% SET CONDITION (AND BY THE WAY REMOVE NUMBERING (=\chapter*{x}))
+%  \let\Chapter\chapter
+%  \renewcommand\chapter[1]{\bodytextfalse\Chapter*{#1}\bodytexttrue}
+%  \let\Section\section
+%  \renewcommand\section[1]{\bodytextfalse\Section*{#1}\bodytexttrue}
+%  \let\Subsection\subsection
+%  \renewcommand\subsection[1]{\bodytextfalse\Subsection*{#1}\bodytexttrue}
+%  \let\Subsubsection\subsubsection
+%  \renewcommand\subsubsection[1]{\bodytextfalse\Subsubsection*{#1}\bodytexttrue}
+%% TODO: HEADER/FOOTER/TOC
+
+% IF FOOTNOTE (+NOT BODYTEXT)
+  \newif\iffootnote
+  \let\Footnote\footnote
+  \renewcommand\footnote[1]{%
+  \begingroup%
+  \bodytextfalse%
+  \footnotetrue\Footnote{#1}%
+  \bodytexttrue%
+  \endgroup}
