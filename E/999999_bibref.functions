@@ -80,9 +80,7 @@ function BIBREF() {
                    sed "s/${CITEPCLOSE}.*$//"`
           LINENUM=`grep -n $CITATION $SRCDUMP | #
                    head -n 1 | cut -d ":" -f 1`  #
-   
-       if [ "X$CITEKEY" != "X$LASTKEY" ]; then
-   
+      
          COLLECTNAMES="";TITLE=""
          BIBENTRY=`grep $CITEKEY $BIBTMP`
          XID="<genre"
@@ -148,23 +146,55 @@ function BIBREF() {
                        rev | sed "s/$L/ dna /" | #
                        rev | sed "s/$K/,/g"`
          CITEINSERT=`echo "$FOOTNOTEOPEN<span class=\"$GENRE\">\
-                    ${COLLECTNAMES}: ${TITLE}${PUBLISHER}${PLACE}${DATE}. \
-                    $OPTIONAL </span>$FOOTNOTECLOSE" | #
-                     sed 's/>[ ]*</></g'            | #
-                     tr -s ' '                     | #
+                    ${COLLECTNAMES}: ${TITLE}${PUBLISHER}${PLACE}\
+                    ${DATE}. </span>$FOOTNOTECLOSE"  | #
+                     sed ':a;N;$!ba;s/\n//g'        | #
+                     sed 's/>[ ]*</></g'           | #
                      sed 's/"/\\\\"/g'            | #
                      sed 's/&/\\\\&/g'           | #
                      sed 's/\\//\\\\\//g'       | #
                      sed 's/]/\\\\]/g'         | #
-                     sed 's/\[/\\\\\[/g'`       #
-         sed -i "${LINENUM}s/$CITATION/$CITEINSERT/" $SRCDUMP
+                     sed 's/\[/\\\\\[/g'      | #
+                     tr -s ' '` #
+         CITEID=`echo $CITEINSERT | md5sum | cut -d " " -f 1`
+         CITEINSERT=`echo $CITEINSERT | #
+                     sed "s/$FOOTNOTEOPEN//g" | #
+                     sed "s/$FOOTNOTECLOSE//g"`
+         echo "$CITEID:$CITEINSERT:O:$OPTIONAL" >> ${TMPID}.citations
+         CITEID=`echo $CITEID | #
+                 sed "s/^/$FOOTNOTEOPEN/" | #
+                 sed "s/$/$FOOTNOTECLOSE/"`
+         sed -i "${LINENUM}s/$CITATION/$CITEID/" $SRCDUMP
 
-       else CITEINSERT="$FOOTNOTEOPEN<span class=\"ibid\">ibid. \
-                        $OPTIONAL<\/span>$FOOTNOTECLOSE"
-            sed -i "${LINENUM}s/$CITATION/$CITEINSERT/" $SRCDUMP
-       fi
-          LASTKEY="$CITEKEY"  
      done
+
+   }
+
+   function insertCites() {
+
+     ( IFS=$'\n' 
+       for LINE in `cat ${TMPID}.citations`
+        do
+           CITEID=`echo $LINE | cut -d ":" -f 1`
+           LNUMTHIS=`grep -n $CITEID $OUTPUT | #
+                     head -n 1 | cut -d ":" -f 1`
+           
+           CITEREF=`echo $LINE | cut -d ":" -f 2-`
+           OPTIONAL=`echo $CITEREF | sed 's/^.*:O://'`
+           CITEREF=`echo $CITEREF | #
+                    sed "s/\(.*\)</\1$OPTIONAL</"`
+           if [ "$LNUMTHIS" == `expr $LNUMPREV + 1` ] &&
+              [   "$CITEID" == "$IDPREV" ]
+            then
+                CITEREF="ibid"
+           else
+                CITEREF=`echo $CITEREF | sed 's/:O:.*$//'`
+           fi
+
+           sed -in "${LNUMTHIS}s/$CITEID/$CITEREF/g" $OUTPUT
+           LNUMPREV=$LNUMTHIS
+           IDPREV=$CITEID
+       done; )
 
    }
 
@@ -172,6 +202,11 @@ function BIBREF() {
          preOutput="$preOutput; htmlBibref"
    else
          preOutput="htmlBibref"
+   fi
+   if [ `echo $postOutput | wc -c` -gt 1 ];then
+         postOutput="$postOutput; insertCites"
+   else
+         postOutput="insertCites"
    fi
 
   fi
