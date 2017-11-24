@@ -1,0 +1,95 @@
+% .MDSH IS MARKDOWN +X -> http://freeze.sh/2015/mdsh
+%
+% A COMMENT MAY BE FUNCTIONAL (= ignored/interpreted during export)
+% A text [^]{a footnote} and some more text
+% A citation reference [@krausse:2001:fuller]
+% A citation reference with pagenumber [@[1-8]krausse:2001:fuller]
+% -> bibtex references: http://freeze.sh/etherpad/bibref
+% -> markdown reference: http://daringfireball.net/projects/markdown
+
+% --------------------------------------------------------------------------- %
+% EXTENDFUNCTIONS: 170727_Book-A5.functions
+% USEPACKAGE: 170727_Book-A5
+% EXTENDFUNCTIONS: 999999_bibref.functions
+% USEPACKAGE: ../lib/tex/conditions
+% ---
+% --------------------------------------------------------------------------- %
+% PDFXTITLE: mdsh - testing the testbed
+% PDFXAUTHOR: Christoph Haag
+% PDFXORG: LAFKON Publishing
+% MKPDFXCOMPLIANT:
+% --------------------------------------------------------------------------- %
+
+%!DOCUMENTCLASS:[10pt,cleardoubleempty]{scrbook}
+
+%!BIBREF: http://freeze.sh/etherpad/export/_/references.bib
+% BIBREF: references.bib
+
+
+
+% EXTENDFUNCTIONS: 000000_setup.functions
+
+
+
+
+
+
+
+
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa[^]{kmdsa} kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% CUSTOM: eqrw rwqrwr
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd[^]{fsdfdsfsf sdfds sfdsf} mdslamdsl kdöladk 
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+
+% CUSTOM: eqrw rwqrwr
+% CUSTOM: \newpage
+
+xklsa amxlkasmx mxslamxsl kxölaxk kxöax kxölak xkasxla kaxsosak
+xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+xklsa amxlkasmx[^]{fsxfxsfsf sxfxs sfxsf} mxslamxsl kxölaxk 
+xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+xklsa amxlkasmx mxslamxsl [@[1-8]krausse:2001:fuller] kaxsosak
+xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+
