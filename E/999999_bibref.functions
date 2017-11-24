@@ -1,9 +1,57 @@
 
 function BIBREF() {
 
-  REFSRC="$1"
-  getFile "$REFSRC" ${TMPID}.tmp
+  REFSRC=$1
+  getFile $REFSRC ${TMPID}.tmp
   cat ${TMPID}.tmp >> ${TMPID}.bib
+
+  if [ "$OUTPUTFORMAT" == "pdf" ];then
+
+     echo '\usepackage{twoopt,ifmtarg}'          >> ${TMPID}.preamble
+     echo '\usepackage[style=fiwi,
+                       natbib=true, 
+                       backend=biber]{biblatex}' >> ${TMPID}.preamble
+     echo '\usepackage{bibentry}'                >> ${TMPID}.preamble
+     echo '\AtEveryCitekey{\clearfield{url}}
+           \AtEveryCitekey{\clearfield{note}}
+         
+           \renewbibmacro*{director}{
+           \ifpunct{}{}\printnames[director]{author}
+           }
+           \DeclareFieldFormat{season}{ {\textsc\emph{season}} #1}
+           \DeclareFieldFormat{episode}{ {\textsc\emph{episode}} #1}
+           \renewcommand\cite[1]{%
+            \iffootnote 
+             { \mbox{\tiny\fullcite{#1}}}
+            \else
+             \footnote{\fullcite{#1}}%
+            \fi
+            }
+         
+           \let\oldcitep\citealp
+           \makeatletter
+           \renewcommandtwoopt\citep[3][][]{%
+           \iffootnote 
+            \begingroup\protected\def\harvardand{\&}%
+            \@ifmtarg{#1}%
+            { {\tiny\fullcite{#3}}}%
+            {\@ifmtarg{#2}%
+            { {\tiny\fullcite{#3}, #1}}%
+            { {\tiny\fullcite{#3}, #1, #2}}}%
+            \endgroup%
+           \else
+            \begingroup\protected\def\harvardand{\&}%
+            \@ifmtarg{#1}%
+            {\footnote{\fullcite{#3}}}%
+            {\@ifmtarg{#2}%
+            {\footnote{\fullcite{#3}, #1}}%
+            {\footnote{\fullcite{#3}, #1, #2}}}%
+            \endgroup%
+           \fi
+           }
+           \makeatother
+           \protected\def\harvardand{and}'       >> ${TMPID}.preamble
+  fi
 
 }
 
