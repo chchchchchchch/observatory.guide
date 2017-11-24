@@ -45,7 +45,9 @@
 # --------------------------------------------------------------------------- #
   if [ `ls $SRCDUMP 2>/dev/null | wc -l` -gt 0 ]; then
 
+   $preOutput
    $lastAction
+   $postOutput
 
   # ----------------------------------------------------------------------- #
   else echo '$SRCDUMP not existing'; 
