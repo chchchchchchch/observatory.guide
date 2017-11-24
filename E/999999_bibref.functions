@@ -1,0 +1,11 @@
+
+function BIBREF() {
+
+  REFSRC="$1"
+  getFile "$REFSRC" ${TMPID}.tmp
+  cat ${TMPID}.tmp >> ${TMPID}.bib
+
+}
+
+
+
