@@ -1,212 +1,12 @@
 # --------------------------------------------------------------------------- #
-  function svglayers2pdfpages() {
 
-     CROP=10.63 # 3mm in px
-     SVGLAYER=$1 ; PDFPAGES=$2
-     SUPERTMP=${TMPID}.`echo $SVGL | md5sum | cut -c 1-4`.tmp
-     CANVASWIDTH=`sed ':a;N;$!ba;s/\n//g' $SVGLAYER | # SVG WITHOUT LINEBREAKS
-                  sed 's/width=/\n&/g'              | # EXTRACT WIDTH
-                  grep "^width="                    | # EXTRACT WIDTH
-                  cut -d "\"" -f 2                  | # EXTRACT WIDTH VALUE
-                  head -n 1`                          # FIRST WIDTH ONLY
-      LAYERNAMES=`sed ':a;N;$!ba;s/\n//g' $SVGLAYER | # SVG WITHOUT LINEBREAKS
-                  sed "s/</\n</g" | sed "s/>/>\n/g" | # 
-                  grep 'groupmode="layer"'          | #
-                  sed 's/nkscape:label/\n&/g'       | # EXTRACT LAYER NAME
-                  grep "^nkscape:label"             | # EXTRACT LAYER NAME
-                  cut -d "\"" -f 2                  | # EXTRACT LAYER NAME
-                  grep -v "XX_"                     | # IGNORE XX_LAYERS
-                 #grep "^[0-9]*$"                   | # NUMBERS ONLY (NEW!) ?
-                  sort -nu`                           # SORT AND UNIQ
-
-     BFOO=NL`echo ${RANDOM} | cut -c 1`F00
-     SFOO=SP`echo ${RANDOM} | cut -c 1`F0O
-   # ----------------------------------------------------------------------- #
-   # MOVE LAYERS ON SEPARATE LINES (TEMPORARILY; EASIFY PARSING LATER ON)
-   # ----------------------------------------------------------------------- #
-     sed ":a;N;\$!ba;s/\n/$BFOO/g" $SVGLAYER | # REMOVE ALL LINEBREAKS (BUT SAVE)
-     sed "s/ /$SFOO/g"                       | # REMOVE ALL SPACE (BUT SAVE)
-     sed 's/<g/4Fgt7RfjIoPg7/g'              | # PLACEHOLDER FOR GROUP OPEN
-     sed ':a;N;$!ba;s/\n/ /g'                | # REMOVE ALL NEW LINES
-     sed 's/4Fgt7RfjIoPg7/\n<g/g'            | # RESTORE GROUP OPEN + NEWLINE
-     sed '/groupmode="layer"/s/<g/4Fgt7R/g'  | # PLACEHOLDER FOR LAYERGROUP OPEN
-     sed ':a;N;$!ba;s/\n/ /g'                | # REMOVE ALL LINEBREAKS
-     sed 's/4Fgt7R/\n<g/g'                   | # RESTORE LAYERGROUP OPEN + NEWLINE
-     sed 's/<\/svg>//g'                      | # REMOVE SVG CLOSE
-     sed 's/display:none/display:inline/g'   | # MAKE VISIBLE EVEN WHEN HIDDEN
-     tee > ${SUPERTMP}                         # WRITE TO TEMPORARY FILE
-   # ----------------------------------------------------------------------- #
-   # WRITE LAYERS TO SEPARATE FILES AND TRANSFORM TO PDF 
-   # ----------------------------------------------------------------------- #
-     COUNT=1 
-     for LAYERNAME in $LAYERNAMES
-      do for PAGE in 1 2
-         do  if [ $PAGE -eq 1 ]; then
-                  XSHIFT=-$CROP
-             else XSHIFT=-`python -c "print $CANVASWIDTH - $CROP"`
-             fi
-             TRANSFORM="transform=\"translate($XSHIFT,0)\""
-             NUM=`echo 0000$COUNT | rev | cut -c 1-4 | rev`
-             LNAME=`echo $LAYERNAME | md5sum | cut -c 1-6`
-                head -n 1 ${SUPERTMP}  | # THE HEADER
-                sed "s/$BFOO/\n/g"     | # RESTORE ORIGINAL LINEBREAKS
-                sed "s/$SFOO/ /g"      | # RESTORE ORIGINAL SPACES
-                tee                    >   ${TMPID}_${NUM}_${LNAME}.svg
-                echo "<g $TRANSFORM>"  >>  ${TMPID}_${NUM}_${LNAME}.svg
-                grep "inkscape:label=\"$LAYERNAME\"" ${SUPERTMP} | #
-                sed "s/$BFOO/\n/g"     | # RESTORE ORIGINAL LINEBREAKS
-                sed "s/$SFOO/ /g"      | # RESTORE ORIGINAL SPACES
-                tee                    >>  ${TMPID}_${NUM}_${LNAME}.svg
-                echo "</g>"            >>  ${TMPID}_${NUM}_${LNAME}.svg
-                echo "</svg>"          >>  ${TMPID}_${NUM}_${LNAME}.svg 
-              # ------------------------------------------------------------ #
-              # EXTRACT TEXT (FOR INDEXING)
-              # ------------------------------------------------------------ #
-                inkscape --export-pdf=${TMPID}_${NUM}_${LNAME}.pdf \
-                         ${TMPID}_${NUM}_${LNAME}.svg
-                pdftotext -eol unix -nopgbrk ${TMPID}_${NUM}_${LNAME}.pdf - | #
-                sed '/^[ \t]*$/d' $PDFTXT | tr -s ' ' | #
-                sed ":a;N;\$!ba;s/\n/ /g" > $PDFPAGES.${NUM}.txt
-              # ------------------------------------------------------------ #
-                inkscape --export-pdf=${TMPID}_${NUM}_${LNAME}.pdf \
-                         --export-text-to-path ${TMPID}_${NUM}_${LNAME}.svg
-                conformColor ${TMPID}_${NUM}_${LNAME}.pdf
-                rm ${TMPID}_${NUM}_${LNAME}.svg
-             COUNT=`expr $COUNT + 1`
-         done
-     done
-   # ----------------------------------------------------------------------- #
-   # MAKE MULTIPAGE PDF
-   # ----------------------------------------------------------------------- #
-     pdftk ${TMPID}_*.pdf cat output $PDFPAGES
-   # ----------------------------------------------------------------------- #
-   # CLEAN UP(OBSOLETE?)
-   # ----------------------------------------------------------------------- #
-     rm ${TMPID}_*.pdf $SVGLAYER
-
-  }
-# --------------------------------------------------------------------------- #
-
- function mkpages() {
-
-   FIRSTPAGEIS="" # RESET
-
-   PDFSRC=`echo $* | sed 's/ /\n/g'    | # SPACES TO NEWLINES
-           egrep "\.svg$|\.pdf$"       | # SELECT ENDING WITH .svg/.pdf
-           head -n 1`                    # SELECT FIRST
-    PAGES=`echo $* | sed 's/ /\n/g'    | # SPACES TO NEWLINES
-           sed "/[^0-9\\-]/d"          | # NO LINES WITH MORE THAN NUMS AND -
-           egrep -v "^-|-$"            | # IGNORE ISOLATED - 
-           grep -v "^[ ]*$" | tail -n 1` # 
-      EXT=`echo $PDFSRC | rev | cut -d "." -f 1 | rev`
-
-   if [ `echo $PAGES | wc -c` -le 1 ]; then
-         PAGES=-
-   elif [ `echo $PAGES | grep "^[0-9]" | wc -l` -ge 1 ]; then
-         P1=`echo $PAGES | cut -d "-" -f 1`
-         P2=`echo $PAGES | sed 's/^[0-9]*-/-/' | #
-             grep "-" | cut -d "-" -f 2`
-         if [ `python -c "print $P1 / 2.0" | #
-               cut -d "." -f 2` -lt 5 ]; then
-               FIRSTPAGEIS="even"
-         else
-               FIRSTPAGEIS="odd"
-         fi
-   else
-         PAGES=- ; PAGECOMMAND=""
-   fi
-
-   PDFGET=${TMPID}`echo $PDFSRC | md5sum | cut -c 1-6`.pdf
-   SVGTMP=${TMPID}`echo $PDFSRC | md5sum | cut -c 4-9`.svg
-
-   if [ -f $PDFGET ]; then
-        echo "$PDFGET exists"
-   else
-        if [ "X$EXT" == "Xsvg" ]; then
-
-              getFile $PDFSRC $SVGTMP
-
-        if [ "X$SUCCESS" == "XYES" ]; then
-              SVGTMP=`realpath $SVGTMP`
-              svglayers2pdfpages $SVGTMP $PDFGET
-        fi
-
-        elif [ "X$EXT" == "Xpdf" ]; then
-
-               getFile $PDFSRC $PDFGET
-               conformColor $PDFGET
-        fi
-   fi
-
- }
-
-# --------------------------------------------------------------------------- #
-
-  write2src   '\newcommand\offpagetext[1]{'
-  write2src   '\begin{minipage}{10\paperwidth} % MAKE IT HUGE'
-  write2src   '{\vspace{-4\paperheight} % MOVE IT OUT'
-  write2src   ' \tiny #1} % MAKE IT TINY'
-  write2src   '\end{minipage}}'
-  
-  write2src '% ------------------------------------------------ %'
-  write2src '   \newcommand\spreadwithtext[3]{%'
-  write2src '   \includepdf[pagecommand={\thispagestyle{empty}'
-  write2src '                             \offpagetext{#3}},'
-  write2src '               scale=1,pages=#2]{#1}'
-  write2src '  }'
-  write2src '% ------------------------------------------------ %'
-
-# --------------------------------------------------------------------------- #
-
-function SPREAD() {
-
-   mkpages $*
-
-   NUMPAGES=`pdftk $PDFGET dump_data | #
-             grep NumberOfPages | cut -d ":" -f 2 | #
-             sed 's/[^0-9]//g'`
-   if [ `echo $P2 | wc -c` -gt 1 ];then
-   if [ "$P2" -gt "$NUMPAGES" ];then
-        P2="$NUMPAGES"
-        PAGES="${P1}-${P2}"
-   fi;fi
-   if [ "$PAGES" == "-" ]; then
-         P1="1"
-         P2="$NUMPAGES"
-   fi
-
-   MACRO="% something went wrong with $SVGSRC" # WRITE AT LEAST SOMETHING
-   if   [ "P$FIRSTPAGEIS" == "Podd" ]; then
-           PAGECOMMAND="\cleartoleft"
-   elif [ "P$FIRSTPAGEIS" == "Peven" ]; then
-           PAGECOMMAND="\cleartoright"
-   else  # ALL PAGES
-         # PAGECOMMAND=""
-           PAGECOMMAND="\cleartoleft" # P1 = 1
-   fi
-   if [ `echo $PAGES | grep -v "-" | # RM - AND 0-9 => 2 -gt 0
-         wc -l` -gt 0 ]; then  PAGECOMMAND=""; fi
-
-   if [ -f $PDFGET ]; then
-        write2src "$PAGECOMMAND"
-        for PAGENUM in `seq $P1 $P2`
-         do
-            PDFTXT=`ls ${PDFGET}* | grep "0\{1,\}${PAGENUM}.txt"`
-           #write2src "\spread{$PDFGET}{$PAGENUM}{$PAGECOMMAND}"
-            write2src "\spreadwithtext{$PDFGET}{$PAGENUM}{%"
-            cat $PDFTXT >> $SRCDUMP
-            write2src "}"
-        done
-   fi
-}
-
-# --------------------------------------------------------------------------- #
-
-KEYWORDURL="170803_index.keywords"
 
 function KEYWORDIZE() {
 
-  getFile $KEYWORDURL ${TMPID}.keywords
+  KEYWORDSRC=$1;IDSTAMP=`echo $KEYWORDSRC | md5sum | cut -c 1-10`
+  getFile $KEYWORDSRC ${TMPID}.${IDSTAMP}.tmp
+  cat ${TMPID}.${IDSTAMP}.tmp >> ${TMPID}.keywords
+
 
   ( # A SUBSHELL => PROTECT VARIABLES
 
@@ -255,10 +55,15 @@ function KEYWORDIZE() {
    echo 'preamble
         "\\begin{theindex}\n\\pagestyle{fancy}\n"
           postamble "\n\n\\end{theindex}\n"' > ${TMPID}.ist
-  write2src "\cleartoleft"
+  ADD2PREAMBLE "\usepackage{fancyhdr}"
+  ADD2PREAMBLE "\usepackage{fancyvrb}"
+ #write2src "\cleartoleft"
   write2src "\renewcommand\chapter[1]{}" # NOT SAFE!
   write2src "\renewcommand{\indexname}{}"
   write2src "\printindex"
+
+  cp $SRCDUMP debug.tex
+
 
 }
 
