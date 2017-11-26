@@ -184,14 +184,14 @@ function BIBREF() {
            CITEREF=`echo $CITEREF | #
                     sed "s/\(.*\)</\1$OPTIONAL</"`
            if [ "$LNUMTHIS" == `expr $LNUMPREV + 1` ] &&
-              [   "$CITEID" == "$IDPREV" ]
+              [ "$CITEID" == "$IDPREV" ]
             then
                 CITEREF="ibid"
            else
                 CITEREF=`echo $CITEREF | sed 's/:O:.*$//'`
            fi
 
-           sed -in "${LNUMTHIS}s/$CITEID/$CITEREF/g" $OUTPUT
+           sed -i "${LNUMTHIS}s/$CITEID/$CITEREF/g" $OUTPUT
            LNUMPREV=$LNUMTHIS
            IDPREV=$CITEID
        done; )
