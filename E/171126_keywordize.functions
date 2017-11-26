@@ -49,22 +49,40 @@ function KEYWORDIZE() {
    sed -i "s/M$UN//g"    $SRCDUMP  # NORMALIZE PROTECTED KEYWORD ANCHOR
    sed -i "s/M$S/ /g"    $SRCDUMP  # NORMALIZE PROTECTED KEYWORD ANCHOR
 
-
    ) # END SUBSHELL
 
-   echo 'preamble
-        "\\begin{theindex}\n\\pagestyle{fancy}\n"
-          postamble "\n\n\\end{theindex}\n"' > ${TMPID}.ist
-  ADD2PREAMBLE "\usepackage{fancyhdr}"
-  ADD2PREAMBLE "\usepackage{fancyvrb}"
- #write2src "\cleartoleft"
-  write2src "\renewcommand\chapter[1]{}" # NOT SAFE!
-  write2src "\renewcommand{\indexname}{}"
-  write2src "\printindex"
+   if [ "$OUTPUTFORMAT" == "pdf" ];then
 
-  cp $SRCDUMP debug.tex
+        echo 'preamble
+             "\\begin{theindex}\n\\pagestyle{fancy}\n"
+               postamble "\n\n\\end{theindex}\n"' > ${TMPID}.ist
+        ADD2PREAMBLE "\usepackage{fancyhdr}"
+        ADD2PREAMBLE "\usepackage{fancyvrb}"
+       #write2src "\cleartoleft"
+        write2src "\renewcommand\chapter[1]{}" # NOT SAFE!
+        write2src "\renewcommand{\indexname}{}"
+        write2src "\printindex"
 
+   elif [ "$OUTPUTFORMAT" == "html" ];then
 
+       for ANCHOR in `sed 's/\\\index{[^}]*}/\n&\n/g' $SRCDUMP | #
+                       grep -- '\index{.*}$' | sort -u`
+        do
+           KEYWORD=`echo $ANCHOR | cut -d "{" -f 2 | cut -d "}" -f 1`
+           CNT=1
+           for MATCH in `grep -n "$ANCHOR" $SRCDUMP | cut -d ":" -f 1`
+            do
+               ID=`echo $KEYWORD$CNT | md5sum | cut -c 1-8`
+               O="<span class=\"k\" id=\"$ID\">";C="<\/span>"
+               sed -i "${MATCH}s/\b[^ >]*$ANCHOR/$O&$C/" $SRCDUMP
+              #echo ${ID}:${KEYWORD}
+               CNT=`expr $CNT + 1`
+           done
+       done
+
+       sed -i 's/\\index{[^}]*}//g' $SRCDUMP
+
+  fi
 }
 
 # --------------------------------------------------------------------------- ##
