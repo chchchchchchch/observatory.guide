@@ -186,7 +186,9 @@ function BIBREF() {
            if [ "$LNUMTHIS" == `expr $LNUMPREV + 1` ] &&
               [ "$CITEID" == "$IDPREV" ]
             then
-                CITEREF="ibid"
+                CITEREF=`echo "<span class\"ibid\">ibid.
+                               <\/span> $OPTIONAL" | #
+                         sed ':a;N;$!ba;s/\n//g' | tr -s ' '`
            else
                 CITEREF=`echo $CITEREF | sed 's/:O:.*$//'`
            fi
