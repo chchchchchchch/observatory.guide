@@ -39,7 +39,8 @@ function MKPDFXCOMPLIANT() {
 function USEPACKAGE() {
 
   PACKAGENAME=`echo $1 | sed 's/ //g'`
-  PACKAGEFILE=`ls ${INCLUDEPATH}/${PACKAGENAME}.*`
+  PACKAGEFILE=`ls ${INCLUDEPATH}/${PACKAGENAME}.* | #
+               grep "\.sty$" | head -n 1`
 
   if [ -f "$PACKAGEFILE" ]
    then
