@@ -23,7 +23,10 @@
            -output-directory $TMPDIR $TMPTEX    # > /dev/null
   biber --nodieonerror `echo ${TMPTEX} | rev  | #
                         cut -d "." -f 2- | rev` #
-  makeindex -s ${TMPID}.ist ${TMPID}.idx
+  TMPIDBASE=`basename $TMPID`
+  cd $TMPDIR
+  makeindex -s ${TMPIDBASE}.ist ${TMPIDBASE}.idx
+  cd -
   pdflatex -interaction=nonstopmode  \
            -output-directory $TMPDIR $TMPTEX    # > /dev/null
   pdflatex -interaction=nonstopmode  \
