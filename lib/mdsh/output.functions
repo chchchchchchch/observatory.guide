@@ -69,8 +69,8 @@
         FOOTNOTETXT=`echo $FOOTNOTE    | #
                      cut -d "{" -f 2   | #
                      cut -d "}" -f 1`    #
-        ID=`echo $FOOTNOTETXT | md5sum | #
-            cut -c 1-8`                  #
+        ID=`echo $FOOTNOTETXT$COUNT    | #
+            md5sum | cut -c 1-8`         #
         FOOTNOTE=`echo $FOOTNOTE       | #
                   sed 's/\[/\\\[/g'    | #
                   sed 's/|/\\|/g'`
