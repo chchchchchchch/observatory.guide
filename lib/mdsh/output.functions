@@ -74,13 +74,19 @@
                      cut -d "}" -f 1`    #
         ID=`echo $FOOTNOTETXT$COUNT    | #
             md5sum | cut -c 1-8`         #
+        DI=`echo $ID | rev`              # ID BACKWARDS
         FOOTNOTE=`echo $FOOTNOTE       | #
                   sed 's/\[/\\\[/g'    | #
                   sed 's/|/\\|/g'`
         OLDFOOTNOTE=$FOOTNOTE
-        NEWFOOTNOTE="<sup><a href=\"#$ID\">$COUNT</a><\/sup>"
+        FC="class=\"f\""
+        NEWFOOTNOTE="<sup id=\"$DI\" $FC><a href=\"#$ID\">$COUNT</a><\/sup>"
         sed -i "$((LNUM))s|$OLDFOOTNOTE|$NEWFOOTNOTE|" ${TMPID}.htmltmp
-        echo "<li id=\"$ID\"> $FOOTNOTETXT </li>"   >> ${TMPID}.htmltmp
+        echo "<li id=\"$ID\">
+               $FOOTNOTETXT
+              <a href=\"#$DI\">-&gt;</a>
+              </li>" | #
+        sed ':a;N;$!ba;s/\n//g' | tr -s ' ' >> ${TMPID}.htmltmp
         COUNT=`expr $COUNT + 1`
     done
   
