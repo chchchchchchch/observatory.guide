@@ -11,8 +11,11 @@
 % EXTENDFUNCTIONS: 170727_Book-A5.functions
 % USEPACKAGE: 170727_Book-A5
 % EXTENDFUNCTIONS: ../lib/mdsh/bibref.functions
+%!BIBREF: http://freeze.sh/etherpad/export/_/references.bib
+% BIBREF: references.bib
+% ----
 % USEPACKAGE: ../lib/tex/conditions
-% ---
+% USEPACKAGE: 171126_Basic
 % --------------------------------------------------------------------------- %
 % PDFXTITLE: mdsh - testing the testbed
 % PDFXAUTHOR: Christoph Haag
@@ -21,17 +24,16 @@
 % --------------------------------------------------------------------------- %
 % EXTENDFUNCTIONS: 171126_keywordize.functions
 % ADD2PREAMBLE: \usepackage{makeidx}
-% ADD2PREAMBLE:  \makeindex
+% ADD2PREAMBLE: \makeindex
 % --------------------------------------------------------------------------- %
 
 
+% DOCUMENTCLASS:[8pt,cleardoubleempty]{scrbook}
 
-%!DOCUMENTCLASS:[10pt,cleardoubleempty]{scrbook}
-
-%!BIBREF: http://freeze.sh/etherpad/export/_/references.bib
-% BIBREF: references.bib
 
 % EXTENDFUNCTIONS: 000000_setup.functions
+
+
 
 
 dklsa Armenviertel mdslamdsl kadk kdöad kdölak dkasdla kadsosak
@@ -39,6 +41,10 @@ dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+
+Headline 1
+==========
+
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
@@ -47,6 +53,10 @@ dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+
+Headline 2
+----------
+
 dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
@@ -58,6 +68,9 @@ dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+
+### Headline 3
+
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
@@ -68,6 +81,27 @@ dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd[^]{fsdfdsfsf sdfds sfdsf} mdslamdsl kdöladk 
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
+
+
+    # --------------------------------------------------------------------------- #
+    # MAKE PDF
+    # --------------------------------------------------------------------------- #
+      pdflatex -interaction=nonstopmode  \
+               -output-directory $TMPDIR $TMPTEX    # > /dev/null
+      biber --nodieonerror `echo ${TMPTEX} | rev  | #
+                            cut -d "." -f 2- | rev` #
+      TMPIDBASE=`basename $TMPID`
+      cd $TMPDIR
+      makeindex -s ${TMPIDBASE}.ist ${TMPIDBASE}.idx
+      cd -
+      pdflatex -interaction=nonstopmode  \
+               -output-directory $TMPDIR $TMPTEX    # > /dev/null
+      pdflatex -interaction=nonstopmode  \
+               -output-directory $TMPDIR $TMPTEX    # > /dev/null
+      mv ${TMPID}.pdf $OUTPUT
+
+
+
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
 dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
@@ -83,6 +117,36 @@ xklsa amxlkasmx[^]{fsxfxsfsf sxfxs sfxsf} mxslamxsl kxölaxk
 xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
 xklsa amxlkasmx mxslamxsl [@[1-8]krausse:2001:fuller] kaxsosak
 xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+
+* sdfsfsdf
+* sdfsfsdf
+* sdfsfsdf
+* sdfsfsdf
+* sdfsfsdf
+* sdfsfsdf
+
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+1. sdfdsfdsf sdfdsfdsg dsgdsg
+
+
 
 Armenviertel kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
 dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
