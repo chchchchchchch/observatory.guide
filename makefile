@@ -1,0 +1,5 @@
+
+lokal:
+	./utils/lokalize.sh
+
+
