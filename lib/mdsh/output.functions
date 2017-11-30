@@ -51,8 +51,10 @@
   echo ""  >>  ${TMPID}.htmltmp
 
   cat $SRCDUMP                | #
+  sed '/^%[ 0-9]*$/d'         | # RM STAMP (caused refsrc ??)
   tidy -config ${TMPID}.tc    | #
   tee >> ${TMPID}.htmltmp
+
 
 # --------------------------------------------------------------------------- #
 # MAKE FOOTNOTES
