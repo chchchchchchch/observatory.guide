@@ -32,6 +32,7 @@
   source "$SHDIR/../sh/text.functions"
 
   source "$SHDIR/output.functions"
+  source "$SHDIR/href.functions"
   source "$FUNCTIONS"
 
 # =========================================================================== #
