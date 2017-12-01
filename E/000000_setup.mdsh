@@ -16,6 +16,7 @@
 % ----
 % USEPACKAGE: ../lib/tex/conditions
 % USEPACKAGE: 171126_Basic
+% DOCUMENTCLASS:[8pt,cleardoubleempty]{scrbook}
 % --------------------------------------------------------------------------- %
 % PDFXTITLE: mdsh - testing the testbed
 % PDFXAUTHOR: Christoph Haag
@@ -26,140 +27,171 @@
 % ADD2PREAMBLE: \usepackage{makeidx}
 % ADD2PREAMBLE: \makeindex
 % --------------------------------------------------------------------------- %
-
-
-% DOCUMENTCLASS:[8pt,cleardoubleempty]{scrbook}
+% EXTENDFUNCTIONS: 171130_href.functions
+% HREF: OFF
 
 
 % EXTENDFUNCTIONS: 000000_setup.functions
 
 
-
-
-dklsa Armenviertel mdslamdsl kadk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-
-Headline 1
-==========
-
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-
-Headline 2
-----------
-
-dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa[^]{kmdsa} kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-
-### Headline 3
-
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-% CUSTOM: eqrw rwqrwr
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd[^]{fsdfdsfsf sdfds sfdsf} mdslamdsl kdöladk 
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
-
-
-    # --------------------------------------------------------------------------- #
-    # MAKE PDF
-    # --------------------------------------------------------------------------- #
-      pdflatex -interaction=nonstopmode  \
-               -output-directory $TMPDIR $TMPTEX    # > /dev/null
-      biber --nodieonerror `echo ${TMPTEX} | rev  | #
-                            cut -d "." -f 2- | rev` #
-      TMPIDBASE=`basename $TMPID`
-      cd $TMPDIR
-      makeindex -s ${TMPIDBASE}.ist ${TMPIDBASE}.idx
-      cd -
-      pdflatex -interaction=nonstopmode  \
-               -output-directory $TMPDIR $TMPTEX    # > /dev/null
-      pdflatex -interaction=nonstopmode  \
-               -output-directory $TMPDIR $TMPTEX    # > /dev/null
-      mv ${TMPID}.pdf $OUTPUT
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide/2302/export/txt 5-19
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide/2302/export/txt 78-86
+% QUAVERBATIM: http://pad.constantvzw.org/p/observatory.guide/2302/export/txt 78-86
 
 
 
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkmdslamdsl kdöladk[@[1-8]roszak:1986:informationcult]
-dklsa amdlkmdslamdsl kdöladk[@[8-9]roszak:1986:informationcult]
-
-% CUSTOM: eqrw rwqrwr
-% CUSTOM: \newpage
-
-xklsa amxlkasmx mxslamxsl kxölaxk kxöax kxölak xkasxla kaxsosak
-xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
-xklsa amxlkasmx[^]{fsxfxsfsf sxfxs sfxsf} mxslamxsl kxölaxk 
-xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
-xklsa amxlkasmx mxslamxsl [@[1-8]krausse:2001:fuller] kaxsosak
-xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
-
-* sdfsfsdf
-* sdfsfsdf
-* sdfsfsdf
-* sdfsfsdf
-* sdfsfsdf
-* sdfsfsdf
-
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
-1. sdfdsfdsf sdfdsfdsg dsgdsg
 
 
 
-Armenviertel kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
-dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
-dadskölasköa dreinzuschauen d akmdöö amdslamdleqop powqepqpqweo
-oxedklsa amdlkasmd mdsll kdöladk kdöad kdölak disdla kadsosak
+% QUAVERBATIM: http://pad.constantvzw.org/p/observatory.guide/export/txt
+
+%!QUAVERBATIM: 000000_setup.mdsh 3-20
 
 
-% KEYWORDIZE: test.keywords
+
+% -------------------------
+% 000000_setup.mdsh 1-3
+% 000000_setup.mdsh 8-20
+% 000000_setup.mdsh 25
+%!QUAVERBATIM:
+
+
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.methods/export/txt
+
+
+
+
+% dklsa Armenviertel mdslamdsl kadk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% 
+% Headline 1
+% ==========
+% 
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% 
+% Headline 2
+% ----------
+% 
+% dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa[^]{kmdsa} kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% 
+% ### Headline 3
+% 
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% % HTMLIN: <span style="color:#00ff00">Test HTMLIN</span>
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd[^]{fsdfdsfsf sdfds sfdsf} mdslamdsl kdöladk 
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
+% 
+% 
+%     # --------------------------------------------------------------------------- #
+%     # MAKE PDF
+%     # --------------------------------------------------------------------------- #
+%       pdflatex -interaction=nonstopmode  \
+%                -output-directory $TMPDIR $TMPTEX    # > /dev/null
+%       biber --nodieonerror `echo ${TMPTEX} | rev  | #
+%                             cut -d "." -f 2- | rev` #
+%       TMPIDBASE=`basename $TMPID`
+%       cd $TMPDIR
+%       makeindex -s ${TMPIDBASE}.ist ${TMPIDBASE}.idx
+%       cd -
+%       pdflatex -interaction=nonstopmode  \
+%                -output-directory $TMPDIR $TMPTEX    # > /dev/null
+%       pdflatex -interaction=nonstopmode  \
+%                -output-directory $TMPDIR $TMPTEX    # > /dev/null
+%       mv ${TMPID}.pdf $OUTPUT
+% 
+% 
+% 
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk[@krausse:2001:fuller] kdöad
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkmdslamdsl kdöladk[@[1-8]roszak:1986:informationcult]
+% dklsa amdlkmdslamdsl kdöladk[@[8-9]roszak:1986:informationcult]
+% 
+% % HTMLIN: <br><br><br> Test HTMLIN <br><br>
+% % HTMLIN: <br><br><br> Test HTMLIN <br><br>
+% 
+% % HREF: ON
+% 
+% % INCLUDE: 999999_subtest.mdsh
+% 
+% % HTMLIN: <br><br><br> Test HTMLIN <br><br>
+% % HTMLIN: <br><br><br> Test HTMLIN <br><br>
+% 
+% xklsa amxlkasmx mxslamxsl kxölaxk kxöax kxölak xkasxla kaxsosak
+% xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+% xklsa amxlkasmx[^]{fsxfxsfsf sxfxs sfxsf} mxslamxsl kxölaxk 
+% xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+% xklsa amxlkasmx mxslamxsl [@[1-8]krausse:2001:fuller] kaxsosak
+% xaxskölasköa kmxsa kxa kxalx akmxöö amxslamxlweqop powqepqpqweo
+% 
+% * sdfsfsdf
+% * sdfsfsdf
+% * sdfsfsdf
+% * sdfsfsdf
+% * sdfsfsdf
+% * sdfsfsdf
+% 
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% 
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 1. sdfdsfdsf sdfdsfdsg dsgdsg
+% 
+% 
+% 
+% Armenviertel kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda[^]{kdald akmdöö amdslamdlweqop powqepq}
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa kmdsa kda kdald akmdöö amdslamdlweqop powqepqpqweo
+% dklsa amdlkasmd mdslamdsl kdöladk kdöad kdölak dkasdla kadsosak
+% dadskölasköa dreinzuschauen d akmdöö amdslamdleqop powqepqpqweo
+% oxedklsa amdlkasmd mdsll kdöladk kdöad kdölak disdla kadsosak
+% 
+% 
+% % KEYWORDIZE: test.keywords
 
 
