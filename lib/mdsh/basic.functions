@@ -190,30 +190,32 @@
                 sed 's/\//\\\\\//g'`     #
   # ------------------------------------ #
 
-  cat $PROTECTED                         | # USELESS USE OF CAT
-  sed '/^\t*\*/s/\t\*/*/'                | # CONFORM (?) LISTS PRODUCED BY ETHERPAD (1)
-  sed '/^\t*\*/s/\t/    /'               | # CONFORM (?) LISTS PRODUCED BY ETHERPAD (2)
+  cat $PROTECTED                          | # USELESS USE OF CAT
+  sed '/^\t*\*/s/\t\*/*/'                 | # CONFORM (?) LISTS PRODUCED BY ETHERPAD (1)
+  sed '/^\t*\*/s/\t/    /'                | # CONFORM (?) LISTS PRODUCED BY ETHERPAD (2)
   sed "s/^ *$/$EMPTYLINE/g" | # PROTECT EMPTY LINES (BREAK FOR HEADINGS)
-  sed "s/^[ ]\{4\}/$CODEFOO/"            | # PROTECT CODEBLOCKS
-  sed ":a;N;\$!ba;s/\n/$BREAKFOO/g"      | # REMOVE LINEBREAKS (TEMPORARY)
-  sed "s/\[\^\]{/\n$FN1FOO/g"            | # PROTECT (FOONOTE OPEN)
-  sed "/^$FN1FOO/s/}/\n$FN2FOO/"         | # PROTECT (FOOTNOTE CLOSE)
+  sed "s/^[ ]\{4\}/$CODEFOO/"             | # PROTECT CODEBLOCKS
+  sed ":a;N;\$!ba;s/\n/$BREAKFOO/g"       | # REMOVE LINEBREAKS (TEMPORARY)
+  sed "s/\[\^\]{/\n$FN1FOO/g"             | # PROTECT (FOONOTE OPEN)
+  sed "/^$FN1FOO/s/}/\n$FN2FOO/"          | # PROTECT (FOOTNOTE CLOSE)
   sed "s/\($BREAKFOO\)*[ ]*\[@\[/\n$CP1FOO/g" | # ++ PROTECT (CITEP OPEN)
-  sed "s/\($BREAKFOO\)*[ ]*\[@/\n$CI1FOO/g"  | # ++ PROTECT (CITE OPEN)
-  sed "/^$CP1FOO/s/\]/$CP2FOO/"          | # PROTECT (CITEP OPTION OPEN)
-  sed "/^$CICOMMON/s/\]/$CI2FOO/"        | # PROTECT (CITE CLOSE)
-  sed "s/$BREAKFOO/\n/g"                 | # RESTORE LINEBREAKS
-  sed "s/$CODEFOO/    /"                 | # RESTORE CODEFOO
-  sed "s/$EMPTYLINE/\n&\n/"              | # RESTORE EMPTYLINES
-  eval "$PANDOCACTION"                   | # MD TO TARGET MARKUP
+  sed "s/\($BREAKFOO\)*[ ]*\[@/\n$CI1FOO/g"   | # ++ PROTECT (CITE OPEN)
+  sed "/^$CP1FOO/s/\]/$CP2FOO/"           | # PROTECT (CITEP OPTION OPEN)
+  sed "/^$CICOMMON/s/\]/$CI2FOO/"         | # PROTECT (CITE CLOSE)
+  sed "s/$BREAKFOO/\n/g"                  | # RESTORE LINEBREAKS
+  sed "s/$CODEFOO/    /"                  | # RESTORE CODEFOO
+  sed "s/$EMPTYLINE/\n&\n/"               | # RESTORE EMPTYLINES
+  sed "s/^[a-f0-9]\{32\}${MKLONG}$/&\n/g" | # FORCE LINE AFTER 'MDSH LINES'
+  sed 's/</\&lt;/g'                       | # ALLOW INLINE <tag>
+  eval "$PANDOCACTION"                    | # MD TO TARGET MARKUP
   sed "/^<[^>]*>\([a-f0-9]\{32\}${MKLONG}\)<[^>]*>$/s/<[^>]*>//g" | # REMOVE TAGS IF IS 'FUNCTIONS ONLY'
-  sed "s/[ \t]*$FN1FOO/$APND$FNOESC/g"   | # SUBSTITUTE WITH TARGET MARKUP 
-  sed "s/[ \t]*$FN2FOO/$FOOTNOTECLOSE/g" | # SUBSTITUTE WITH TARGET MARKUP 
-  sed "s/[ \t]*$CI1FOO/$APND$CTOESC/g"   | # SUBSTITUTE WITH TARGET MARKUP 
-  sed "s/[ \t]*$CI2FOO/$CITECLOSE/g"     | # SUBSTITUTE WITH TARGET MARKUP 
-  sed "s/[ \t]*$CP1FOO/$APND$CPOESC/g"   | # SUBSTITUTE WITH TARGET MARKUP 
-  sed "s/[ \t]*$CP2FOO/$CITEPCLOSE/g"    | # SUBSTITUTE WITH TARGET MARKUP 
-  tee > $MDSHMOD                           # WRITE TO FILE
+  sed "s/[ \t]*$FN1FOO/$APND$FNOESC/g"    | # SUBSTITUTE WITH TARGET MARKUP 
+  sed "s/[ \t]*$FN2FOO/$FOOTNOTECLOSE/g"  | # SUBSTITUTE WITH TARGET MARKUP 
+  sed "s/[ \t]*$CI1FOO/$APND$CTOESC/g"    | # SUBSTITUTE WITH TARGET MARKUP 
+  sed "s/[ \t]*$CI2FOO/$CITECLOSE/g"      | # SUBSTITUTE WITH TARGET MARKUP 
+  sed "s/[ \t]*$CP1FOO/$APND$CPOESC/g"    | # SUBSTITUTE WITH TARGET MARKUP 
+  sed "s/[ \t]*$CP2FOO/$CITEPCLOSE/g"     | # SUBSTITUTE WITH TARGET MARKUP 
+  tee > $MDSHMOD                            # WRITE TO FILE
 
 # MAKE MD5 HASH TO PREVENT (REPETITION)/RECURSION -> SKIP IF NECESSARY
 # --------------------------------------------------------------------------- #
