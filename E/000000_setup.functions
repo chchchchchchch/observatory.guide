@@ -1,10 +1,51 @@
 # --------------------------------------------------------------------------- #
 
-function CUSTOM() {
+function HTMLIN() {
 
-  write2src "jdlajdlsajfdlk $*"
+  write2src "$*"
 
 }
 
 # --------------------------------------------------------------------------- #
 
+# TODO: OPTIONAL RM LEADING CHARS (E.G: % )
+
+function QUAVERBATIM() {(
+
+  getLines $*
+  getFileRange
+
+  cat $SRCLIST   > debug.srclist
+  cat $COLLECTED > debug.collected
+
+  if [ -f $COLLECTED ]; then
+
+     if [ "X$HREFMODE" != "XOFF"  ]; then
+           WWWLINK=`shortref $*`
+           REFCODE=`refsrc $WWWLINK`
+           write2src "$REFCODE"
+     fi
+
+  # ------------------------------------------------------------------------- #
+   #write2src "\begin{quaverbatim}"
+   #write2src "\begin{fitbatim}"
+    write2src "<pre class=\"quaverbatim\">"
+
+     cat $COLLECTED      | # START ...
+     cut -c ${INDENT}-   | # REMOVE INDENT
+     tee >> $SRCDUMP       # WRITE TO FILE
+
+    write2src "</pre>"
+   #write2src "\end{fitbatim}"
+   #write2src "\end{quaverbatim}"
+  # ------------------------------------------------------------------------- #
+
+  rm $COLLECTED
+
+  fi
+
+  if [ -f $SRCLIST ]; then rm $SRCLIST ;fi
+
+)}
+
+# --------------------------------------------------------------------------- #
