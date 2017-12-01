@@ -1,0 +1,44 @@
+% .MDSH IS MARKDOWN +X -> http://freeze.sh/2015/mdsh
+%
+% A COMMENT MAY BE FUNCTIONAL (= ignored/interpreted during export)
+% A text [^]{a footnote} and some more text
+% A citation reference [@krausse:2001:fuller]
+% A citation reference with pagenumber [@[1-8]krausse:2001:fuller]
+% -> bibtex references: http://freeze.sh/etherpad/bibref
+% -> markdown reference: http://daringfireball.net/projects/markdown
+
+% --------------------------------------------------------------------------- %
+% EXTENDFUNCTIONS: 170727_Book-A5.functions
+% USEPACKAGE: 170727_Book-A5
+% EXTENDFUNCTIONS: ../lib/mdsh/bibref.functions
+% BIBREF: http://pad.constantvzw.org/p/observatory.bib/export/txt
+% ----
+% USEPACKAGE: ../lib/tex/conditions
+% USEPACKAGE: observatory
+% --------------------------------------------------------------------------- %
+% PDFXTITLE: a guide to techno-galactic software observation
+% PDFXORG: .
+% PDFXAUTHOR: .
+% MKPDFXCOMPLIANT:
+% --------------------------------------------------------------------------- %
+% EXTENDFUNCTIONS: 171126_keywordize.functions
+% ADD2PREAMBLE: \usepackage{makeidx}
+% ADD2PREAMBLE: \makeindex
+% --------------------------------------------------------------------------- %
+% EXTENDFUNCTIONS: 171130_href.functions
+% HREF: OFF
+
+% EXTENDFUNCTIONS: observatory.functions
+
+
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-9
+
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-165
+%!QUAVERBATIM: http://pad.constantvzw.org/p/observatory.guide/export/txt 171-270
+
+
+
+
+% KEYWORDIZE: test.keywords
+
+

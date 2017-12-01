@@ -1,5 +1,27 @@
 # --------------------------------------------------------------------------- #
 
+function CSSHERE() {
+
+     CLASSHERE="test"
+
+     FIDHERE=`tail -n 1 ${TMPID}.fid`
+     LNHEAD=`grep -n $FIDHERE $SRCDUMP | cut -d ":" -f 1`
+     LNTAIL=`tac $SRCDUMP | grep -n $FIDHERE | cut -d ":" -f 1`
+
+     head -n $LNHEAD $SRCDUMP > ${SRCDUMP}.head
+     tac $SRCDUMP | head -n $LNTAIL | tac > ${SRCDUMP}.tail
+
+     cp ${SRCDUMP}.tail debug.tail
+
+     sed -i "s/\(<[^>]*class=\"[^\"]\)/\1 $CLASSHERE/g" ${SRCDUMP}.tail
+     sed -i "s/\(<[^>=]*\)>/\1 class=\"$CLASSHERE\">/g" ${SRCDUMP}.tail
+
+     cat ${SRCDUMP}.head ${SRCDUMP}.tail > $SRCDUMP
+
+}
+
+# --------------------------------------------------------------------------- #
+
 function HTMLIN() {
 
   write2src "$*"
