@@ -282,9 +282,9 @@
          if [ $CMDMATCH -ge 1 ]; then
             # EXECUTE COMMAND
               $CMD "$ARG"
-         else
-            # KEEP COMMENT (U.A. NEEDED FOR LIST INJECTS)
-              echo "${COMSTART}${LINE}${COMCLOSE}" >> $SRCDUMP
+       # else
+       #    # KEEP COMMENT (U.A. NEEDED FOR LIST INJECTS)
+       #      echo "${COMSTART}${LINE}${COMCLOSE}" >> $SRCDUMP
          fi
        # --------------------------------------------------- # 
        # IF LINE DOES NOT START WITH %
