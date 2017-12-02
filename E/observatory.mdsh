@@ -31,14 +31,23 @@
 % EXTENDFUNCTIONS: observatory.functions
 
 
-% INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-9
 
-%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-165
+
+
+
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 48
+
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-160
+
+
+
+
+
+
+%!KEYWORDIZE: test.keywords
+
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/5061/export/txt 122-124
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide.quine/export/txt
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-9
 %!QUAVERBATIM: http://pad.constantvzw.org/p/observatory.guide/export/txt 171-270
-
-
-
-
-% KEYWORDIZE: test.keywords
-
 
