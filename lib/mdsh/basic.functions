@@ -288,8 +288,8 @@
          if [ $CMDMATCH -ge 1 ]; then
             # EXECUTE COMMAND
               $CMD "$ARG"
-         else
-              echo "% ${CMD} ${ARG}" >> $SRCDUMP
+       # else
+       #      echo "% ${CMD} ${ARG}" >> $SRCDUMP
        # else
        #    # KEEP COMMENT (U.A. NEEDED FOR LIST INJECTS)
        #      echo "${COMSTART}${LINE}${COMCLOSE}" >> $SRCDUMP
