@@ -269,12 +269,13 @@
        # IF LINE STARTS WITH %
          if [ $ISCOMMENT -ge 1 ]; then
  
-            CMD=`echo "$LINE"       | #
-                 cut -d "%" -f 2    | #
-                 cut -d ":" -f 1    | #
-                 sed 's/\[/ /g'     | #
-                 sed 's/\]/ /g'     | #
-                 sed 's/\\\[ ]*$//' | # NEW! RM TRAILING SLASH
+            CMD=`echo "$LINE"          | #
+                 grep "^%[ ]*[A-Z]\+:" | # BE PICKY
+                 cut -d "%" -f 2       | #
+                 cut -d ":" -f 1       | #
+                 sed 's/\[/ /g'        | #
+                 sed 's/\]/ /g'        | #
+                 sed 's/\\\[ ]*$//'    | # NEW! RM TRAILING SLASH
                  sed 's, ,,g'`
             ARG=`echo "$LINE" | cut -d ":" -f 2-`
        # --------------------------------------------------- # 
