@@ -1,0 +1,22 @@
+% METHOD: Adding qualifiers (secure, bad, bourgeois, queer...)
+
+% REMEMBER:  [[Find a values in design quote from Helen and Mary's book]]
+
+
+% WHAT:  Bringing a moral, ethical, or otherwise evaluative/adjectival/validating lens: 
+
+% HOW: Adjectives create subcategories. They narrow the focus by naming more specifically the imagined object at hand and by implicitly excluding all objects that do not meet the criteria of the qualifier. The more adjectives that are added, the easier it becomes to answer the question what is software. Or so it seems. 
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE: A qualifier like "good", "bad", "spy", "queer", "proletarian", "bourgeisoie" can help narrow down definitions.
+% WARNING: This exercise may be more effective at identifying normative and ideological assumptions at play in the making, distributing, using, and maintaining of software than at producing a concise definition.
+
+% EXAMPLE: "This morning, Jan had difficulties to answer the question "what is software", but he said that he could answer the question "what is good software". What is good software?
+
+% SEEALSO:
+
+% SOURCE: http://observatory.constantvzw.org/etherdump/multiple-software-axes.html
+
+
+

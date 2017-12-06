@@ -1,0 +1,38 @@
+% METHOD: Prepare a reader to think theory with software
+
+% REMEMBER:
+
+% WHAT: Compile a collection of texts about software.
+% HOW: Choose texts from different realms. Software observations are mostly done in the realm of the technological and the pragmatic. Also the ecology of texts around software includes first and foremost manuals, technical documentation and academic papers by software engineers and these all 'live' in different realms. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes filosophy. By compiling a reader ... ways of speaking/writing about. Proximity.
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE:
+
+% WARNING:
+
+% EXAMPLE:
+
+Pull some quotes from the reader, for example from the chapter: Observation and its consequences
+
+Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015 http://sci-hub.bz/10.1177/0162243915578486
+
+Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014, https://www.nngroup.com/articles/talking-to-users/
+
+Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive. 2004 http://texttechnology.mcmaster.ca/pdf/vol13_2_06.pdf
+
+Alexander R. Galloway, The Poverty of Philosophy: Realism and Post-Fordism, Critical Inquiry. 2013, http://cultureandcommunication.org/galloway/pdf/Galloway,%20Poverty%20of%20Philosophy.pdf
+
+Edward Alcosser, James P. Phillips, Allen M. Wolk, How to Build a Working Digital Computer. Hayden Book Company, 1968. https://archive.org/details/howtobuildaworkingdigitalcomputer_jun67
+
+Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000. https://library.memoryoftheworld.org/b/xpDrXE_VQeeuDDpc5RrywyTJwbzD8eatYGHKmyT2A_HnIHKb
+
+Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015 www.memcon.com/pdfs/proceedings2015/SAT104_FuturePlus.pdf
+
+Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015 http://palms.ee.princeton.edu/system/files/SP_vfinal.pdf
+
+
+% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.samequestion
+
+% SOURCE: http://pad.constantvzw.org/p/observatory.reader
+

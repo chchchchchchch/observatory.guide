@@ -1,0 +1,43 @@
+% METHOD: Encounter several collections of historical hardware back-to-back
+
+% REMEMBER:
+
+% WHAT:
+% HOW: 
+This can be done by identifying one or more computer museums and visit them with little time in-between. Visiting a friend with a large basement and lots of left-over computer equipment can help. Seeing and possibly touching hardware from different contexts (state-administration, business, research, ...), periods of time, cultural contexts (California, Germany, French-speaking Belgium) and price ranges allows you to sense the interactions between hardware and software development.
+
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE: It's a perfect way  to hear people speak about the objects and their contexts, how they worked or not and how objects are linked one with another.  It's also showing economic and cultural aspects of softwares.
+
+% WARNING: **DO NOT FOLD, SPINDLE OR MUTILATE**
+
+% EXAMPLES:
+% Example one
+At one point during the demonstration of a Bull computer, the guide revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression about early code usign many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
+
+Preserving old hardware in order to observe physical manifestation of software. 
+See software here : we did experienced the incredible possibility of actually touching software.
+% http://observatory.constantvzw.org/images/wednesday/IMG_20170607_113634_585.jpg
+% http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMG_1163.JPG?m=1496916927
+
+% Example two
+Playing with the binary. Bull cards. Happy operator! Punch card plays.
+"The highlight of the collection is to revive a real punch card workshop of the 1960s."
+% http://observatory.constantvzw.org/images/wednesday/P1040696.JPG
+% http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMG_1131.JPG?m=1496916914
+% Atelier mécanographique Bull complet http://www.histoireinform.com/Histoire/+Infos/perf_atldenis.jpg
+
+% Example three
+Collection de la Maison des Écritures d'Informatique & Bible, Maredsous  
+The particularity of the collection lies in the fact that it's the conservation of multiple stages of life of a software since its initial computerization until today.
+The idea of introducing informatics into the work of working with/on the Bible (versions in Hebrew, Greek, Latin, and French) dates back to 1971, via punch card recordings and their memorization on magnetic tape. Then came the step of analyzing texts using computers.
+% http://gallery.constantvzw.org/var/resizes/Preparing-the-Techno-galactic-Software-Observatory/DSC05019.JPG?m=1490635726
+
+% some images from the visit
+
+% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.jean.heuns
+
+% SOURCE: http://www.histoireinform.com/Histoire/+Infos/jmclcadr.htm
+

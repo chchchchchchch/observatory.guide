@@ -1,0 +1,30 @@
+% METHOD: Continuous integration
+
+% WHAT:  Continuous integration is a sophisticated form of responsibility management: it is the fascia of services. Continous integration picks up after all other services and identifies what needs to happen so that they can work in concert. Continuous integration is a way of observing the evolution of (micro)services through cybernetic (micro)management. 
+% HOW: Continuous integration keeps track of changes to all services and allows everyone to observe if they still can work together after all the moving parts are fitted together.
+% WHEN: Continuous integration comes to prominence in a world of distributed systems where there are many parts being organized simultaneously. Continuous integration is a form of observation that helps (micro)services maintain a false sense of independence and decentralization while constantly subjecting them to centralized feedback. 
+% WHO: Continuous integration assumes that all services will submit themselves to the feedback loops of continuous integration. This could be a democratic process or not. 
+%URGENCY: Continuous integration reconfigures divisions of labor in the shadows of automation. How can we surface and question its doings and undoings?
+% WARNING: When each service does one thing well, the service makers tend to assume everybody else is doing the things they do not want to do.
+
+% EXAMPLE: 
+At TGSO continuous integration was introduced as a service that responds to integration hell when putting together a number of TGSO services for a walk-in software clinic. Due to demand, the continuous integration service was extended to do "service discovery" and "load balancing" once the walk-in clinic was in operation. 
+
+Continuous integration worked by visiting the different services of the walk-in clinic to check for updates, test the functionality and think through implications of integration with other services. If the pieces didn't fit, continuous integration delivered error messages and solution options. 
+
+When we noticed that software curious persons visiting the walk-in clinic may have troubles finding the different services, and that some services may be overloaded with software curious persons, continuous integration was extended. We automated service registration using colored tape and provided a lookup registry for software curious persons. 
+% Add some images of the tape and color coded sheet.
+http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1404
+
+Load balancing meant that software curious persons were forwarded to services that had capacity. If all other services were full, the load balancer defaulted to sending the software curious person to the [Agile Sun Salutation](http://pad.constantvzw.org/p/observatory.guide.agile.yoga) service.
+
+% WARNING: At TGSO the bundling of different functionalities into the continuous integration service broke the "do one thing well" principle, but saved the day (we register this as technical debt for the next iteration of the walk-in clinic).
+
+% SEEALSO:
+% SOURCE: While continous integration held the day together, we are sorry to report that her work is only documented in images and in the choreography of the day but not in any of our writings. 
+
+% REMEMBER: Continous integration may be the string that holds your current software galaxy together.
+
+% Software Curious Person expressing her hopes for Continuous Integration
+"More technically, I am interested in how things bounce around in computer systems. I am not sure if these two things are relted, but I hope continuous integration will help me."
+

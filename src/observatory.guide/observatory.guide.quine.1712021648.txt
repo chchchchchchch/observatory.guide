@@ -1,0 +1,29 @@
+% METHOD: Quine
+% WHAT: A program whose function consists of displaying its own code. Also known as  "self-replicating program"
+% WHY: Quines show the tension between "software as language" and "software as operation".
+% HOW: By running a quine you will get your code back. You may do a step forward and wonder about functionality and aesthetics, uselessness and performativity, data and code. 
+
+% EXAMPLE:
+
+Example of a quine (Python). When executed it outputs the same text as the source:
+
+```python
+    s =  's = %r\nprint(s%%s)'
+    print(s%s)
+```
+
+Example of a oneline unibash/etherpad quine, created during relearn 2017:
+% QUAVERBATIM: https://gitlab.com/relearn/relearn2017/raw/master/complex.local/home/etherpad/etherdump/quine.raw.txt
+
+% WARNING: 
+The encounter with quines may deeply affect you. 
+You may want to write one and get lost in trying to make an ever shorter and more elegant one.
+You may also take quines as point of departure or limit-ideas for exploring software dualisms.
+% INCLUDE: http://observatory.constantvzw.org/etherdump/auqinas 79-82
+
+% REMEMBER: Although seemingly absolutely useless, quines can be used as exploits.
+% INCLUDE: http://observatory.constantvzw.org/etherdump/files.md 460-463
+
+% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.monopsychism
+% SOURCE: Part of Aquine, a discussion of and research into dualism in software http://observatory.constantvzw.org/etherdump/auqinas.diff.html
+

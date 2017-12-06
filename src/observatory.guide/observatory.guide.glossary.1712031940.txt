@@ -1,0 +1,35 @@
+% METHOD: Glossaries as an exercise
+
+% REMEMBER: 
+
+% WHAT: Use the technique of psychanalytic listening to compile (gather, collect, bring together) a list of key words for understanding software.
+% HOW: Create a shared document that participants can add words to as their importance emerges.To do pyschoanalytic listening, let your attention float freely, hovering evenly, over a conversation or a text until something catches its ear. Write down what your ear catches. When working in a collective context invite individuals to participate in this project and describe the practice to them. Each individual may move in and out of this mode of listening according to their interest and desire and may add as many words to the list as they want. Use this list to create an index of software observation.
+% WHEN: This is best done in a bounded context. In this context our examples of bounded contexts include the six day work session and the pages and process of this publication.
+% WHO: The so-inclined within the group
+% URGENCY: Creating and troubling categories 
+% NOTE: Do not remove someone else's word from the glossary during the accumulation phase. If an editing and cutting phase is desired this should be done after the collection through collective consensus. 
+
+% WARNING: This method is not exclusive to and was not developed for software observation. It may lead to awareness of unconscious processes and to shifts in structures of feeling and relation.
+
+
+% EXAMPLE:
+
+Colonial
+Connectivity 
+Galaxies
+Green
+Guide
+Imperial
+Issues
+Observation
+Production
+Power
+Red
+Software
+Survival
+Technology
+
+% SEEALSO:
+
+% SOURCE: Collective listeners
+

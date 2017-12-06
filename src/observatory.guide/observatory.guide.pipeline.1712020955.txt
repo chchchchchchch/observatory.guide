@@ -1,0 +1,20 @@
+% METHOD: make make do
+
+% REMEMBER:
+% WHAT: Makefile as a method for quick/collective assemblages + observing amalgamates/pipelines
+% HOW:
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE: Note:  http://observatory.constantvzw.org/etherdump/makefile.raw.html 
+etherpad->md->pdf->anything pipeline. 
+makefile as a method for quick/collective assemblages + observing amalgamates/pipelines CHRISTOPH
+
+% WARNING:
+
+% EXAMPLE:
+
+% SEEALSO:
+
+% SOURCE:
+
