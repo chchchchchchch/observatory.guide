@@ -204,7 +204,7 @@
   sed "s/\($BREAKFOO\)*[ ]*\[@/$CI1FOO/g"   | # ++ PROTECT (CITE OPEN)
  #sed "/^$CP1FOO/s/\]/$CP2FOO/"           | # PROTECT (CITEP OPTION OPEN)
  #sed "/^$CICOMMON/s/\]/$CI2FOO/"         | # PROTECT (CITE CLOSE)
-  sed "/$CP1FOO/s/\]/$CP2FOO/g"           | # PROTECT (CITEP OPTION OPEN)
+  sed "/$CP1FOO/s/\]/$CP2FOO/"           | # PROTECT (CITEP OPTION CLOSE)
   sed "/$CICOMMON/s/\]/$CI2FOO/g"         | # PROTECT (CITE CLOSE)
   sed "s/$BREAKFOO/\n/g"                  | # RESTORE LINEBREAKS
   sed "s/$CODEFOO/    /"                  | # RESTORE CODEFOO
