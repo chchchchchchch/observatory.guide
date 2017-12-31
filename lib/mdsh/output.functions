@@ -52,6 +52,7 @@
 
   cat $SRCDUMP                | #
   sed '/^%[ 0-9]*$/d'         | # RM STAMP (caused refsrc ??)
+  sed "/^${COMSTART}%.*${COMCLOSE}$/d" | # RM COMMENT LINES
   tidy -config ${TMPID}.tc    | #
   tee >> ${TMPID}.htmltmp
 
@@ -105,7 +106,6 @@
   sed -n "/<!--.*${FOOTMARK}.*-->$/,\$p" $OUTPUT >> ${TMPID}.htmltmp
 
   mv ${TMPID}.htmltmp $OUTPUT
-
 
  }
 # .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. #
