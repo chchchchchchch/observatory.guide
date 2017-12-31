@@ -2,7 +2,7 @@
  %\usepackage[utf8]{inputenc}
   
   \usepackage[defaultlines=5,all]{nowidow}
-  \newcommand{\setwidowstandard}{\setnowidow[5]\setnoclub[5]}
+  \newcommand{\setwidowstandard}{\setnowidow[2]\setnoclub[2]}
   \setwidowstandard
 
   \usepackage{graphicx}
@@ -71,24 +71,34 @@
 
 
 % PREVENT HYPHENATION FOR WORDS STARTING WITH UPPERCASE
-  \uchyph=0
+% \uchyph=0
 % PREVENT HYPHENATION OVER PAGE BREAK
   \brokenpenalty10000\relax
 % PREVENT PAGE BREAK WITHIN LISTS
-%  \let\ITEMIZE\itemize
-%  \let\ENDITEMIZE\enditemize
-%  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
-%                            {\ENDITEMIZE\end{samepage}}
+  \let\ITEMIZE\itemize
+  \let\ENDITEMIZE\enditemize
+  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
+                            {\ENDITEMIZE\end{samepage}}
 
 % --------------------------------------------------------------------------- %
 %  F O R M A T
 % --------------------------------------------------------------------------- %
 
-   \setlength\topmargin{-.07\paperheight}
-   \setlength\oddsidemargin{.09\paperwidth}
-   \setlength\evensidemargin{-.04\paperwidth}
-   \setlength\textheight{.76\paperheight}
-   \setlength\textwidth{.62\paperwidth}
+%  A5
+%  \setlength\topmargin{-.07\paperheight}
+%  \setlength\oddsidemargin{.09\paperwidth}
+%  \setlength\evensidemargin{-.04\paperwidth}
+%  \setlength\textheight{.76\paperheight}
+%  \setlength\textwidth{.62\paperwidth}
+
+
+% A6
+   \usepackage{geometry}
+   \setlength\textheight{.83\paperheight}
+   \setlength\textwidth{.72\paperwidth}
+   \setlength\topmargin{-.17\paperheight}
+   \setlength\oddsidemargin{-.05\paperwidth}
+   \setlength\evensidemargin{-.13\paperwidth}
 
    \setlength\marginparwidth{2.5cm}
    \setlength\marginparsep{4pt} % 6pt

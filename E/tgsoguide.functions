@@ -1,0 +1,91 @@
+# --------------------------------------------------------------------------- #
+
+function INCLUDE() {
+
+  echo "O INCLUDE STARTS ==================================================="
+
+  # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
+  # -------------------------------------------------------------- #
+    FID=`date +%s%N`; echo $FID >> ${TMPID}.fid
+  
+  # ADD MARK TO $SRCDUMP
+  # -------------------------------------------------------------- #
+    echo -e "\n% $FID\n" >> $SRCDUMP
+  
+  # PROCESS INPUT !!!!!
+  # -------------------------------------------------------------- #
+    mdsh2src $*
+  
+  # REMOVE ADDED FUNCTIONS
+  # -------------------------------------------------------------- #
+    if [ -f ${TMPID}.fid ]; then
+  
+    # LOAD LATEST FUNCTION ID
+      FID=`tail -n 1 ${TMPID}.fid`
+    # REMOVE FROM FUNCTIONS
+      sed -i "/${FID} -- START$/,/${FID} -- END$/d" ${FUNCTIONS}
+    # REMOVE FROM SAVED FUNCTIONS
+      sed -i "/$FID/d" ${TMPID}.fid
+    # RELOAD FUNCTIONS
+      source $FUNCTIONS
+  
+    fi
+
+  echo "O INCLUDE ENDS  ===================================================="
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function BASHCODE() {
+
+   # GET LINENUMBER FOR SEPARATOR IN (PROCESSED) $SRCDUMP
+   # ----
+     LNHEAD=`grep -nE "^${COMSTART}% [-]{4,}${COMCLOSE}$" $SRCDUMP | #
+             tail -n 1 | cut -d ":" -f 1` #
+
+   # GET LINENUMBER FOR TRIGGER FUNCTION IN (UNPROCESSED) MDSH SRC
+   # ----
+     LNFUNC=`grep -n "^% BASHCODE:" $MDSH | #
+             head -n 1 | cut -d ":" -f 1`   #
+
+   # EXTRACT PART UNTIL TRIGGER FUNCTION
+   # ----
+     head -n $LNFUNC $MDSH  > ${TMPID}.part
+
+   # GREP MARKER IN TMP PART
+   # ----
+     LNPART=`tac ${TMPID}.part          | # START FROM END
+             grep -nE "^% [-]{4,}$"     | # FIND MARKER
+             head -n 1 | cut -d ":" -f 1` # NUM FOR FIRST(=LAST) MATCH
+
+   # DISABLE TRIGGER COMMAND IN MDSH SRC (PREVENT DOUBLE MATCH)
+   # ----
+     sed -i "${LNFUNC}s/^% BASHCODE:/%XBASHCODE/" $MDSH
+
+   # EXTRACT TEXT PARTS ...
+   # ... PROCESSED BEFORE SECTION
+   # ----
+     head -n $LNHEAD $SRCDUMP | sed '$d'  > ${TMPID}.before
+
+   # ... UNPROCESSED EXTRACT
+   # ----
+     tac ${TMPID}.part | head -n $LNPART | #
+     tac | sed '$d' | sed '1d' > ${TMPID}.xtract
+
+   # WRITE TO DUMP
+   # ----
+     cat ${TMPID}.before >  $SRCDUMP
+
+     echo "<pre>"        >> $SRCDUMP
+     cat ${TMPID}.xtract >> $SRCDUMP
+     echo "</pre>"       >> $SRCDUMP
+
+   # CLEAN UP
+   # ----
+     rm ${TMPID}.before ${TMPID}.xtract ${TMPID}.part
+
+}
+
+# --------------------------------------------------------------------------- #
+

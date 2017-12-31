@@ -14,7 +14,7 @@
 % BIBREF: http://pad.constantvzw.org/p/observatory.bib/export/txt
 % ----
 % USEPACKAGE: ../lib/tex/conditions
-% USEPACKAGE: observatory
+% USEPACKAGE: tgsoguide
 % --------------------------------------------------------------------------- %
 % PDFXTITLE: a guide to techno-galactic software observation
 % PDFXORG: .
@@ -28,26 +28,8 @@
 % EXTENDFUNCTIONS: 171130_href.functions
 % HREF: OFF
 
-% EXTENDFUNCTIONS: observatory.functions
+% EXTENDFUNCTIONS: tgsoguide.functions
 
 
-
-
-
-
-%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 48
-
-% INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-160
-
-
-
-
-
-
-%!KEYWORDIZE: test.keywords
-
-%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/5061/export/txt 122-124
-%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide.quine/export/txt
-%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide/export/txt 1-9
-%!QUAVERBATIM: http://pad.constantvzw.org/p/observatory.guide/export/txt 171-270
+...
 
