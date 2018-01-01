@@ -36,6 +36,72 @@ function INCLUDE() {
 }
 
 # --------------------------------------------------------------------------- #
+  buildDescriptor() {
+
+   if [ `echo $* | sed 's/ //g' | wc -c` -gt 1 ];then
+
+       DOFORMAT=`echo "$*" | #
+                 $PANDOCACTION | #
+                 sed 's,</*p>,,g'`
+
+      if [ "$OUTPUTFORMAT" == pdf ];then 
+     
+             write2src "\descriptor${THISCLASS}{$DOFORMAT}" 
+     
+      elif [ "$OUTPUTFORMAT" == html ];then 
+     
+             write2src "<span class=\"$THISCLASS descriptor\">" 
+             write2src "<span>$THISDESCRIPTION</span> $DOFORMAT</span>" 
+      fi
+
+   else
+            echo "NOTHING TO DO"
+   fi
+
+  }
+
+# --------------------------------------------------------------------------- #
+
+function METHOD() {
+
+  THISCLASS="method";THISDESCRIPTION="Method:";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function WHAT() {
+
+  THISCLASS="what";THISDESCRIPTION="What(?)";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function HOW() {
+
+  THISCLASS="how";THISDESCRIPTION="How:";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function ABOUT() {
+
+  THISCLASS="about";THISDESCRIPTION="About:";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function NOTE() {
+
+  THISCLASS="note";THISDESCRIPTION="Note:";buildDescriptor $* 
+
+}
+
+
+# --------------------------------------------------------------------------- #
 
 function BASHCODE() {
 
