@@ -77,9 +77,21 @@ function BASHCODE() {
    # ----
      cat ${TMPID}.before >  $SRCDUMP
 
-     echo "<pre>"        >> $SRCDUMP
-     cat ${TMPID}.xtract >> $SRCDUMP
-     echo "</pre>"       >> $SRCDUMP
+   if [ "$OUTPUTFORMAT" == pdf ];then
+
+     #write2src "\lstsetBash"
+      write2src '\begin{lstlisting}'
+      cat ${TMPID}.xtract >> $SRCDUMP
+      write2src '\end{lstlisting}'
+
+   elif [ "$OUTPUTFORMAT" == html ];then
+
+      write2src '<pre><code class="bash">'
+      write2src "$BCNT"
+      cat ${TMPID}.xtract >> $SRCDUMP
+      write2src '</pre></code">'
+
+   fi
 
    # CLEAN UP
    # ----
