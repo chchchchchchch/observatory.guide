@@ -6,6 +6,7 @@
   \setwidowstandard
 
   \usepackage{graphicx}
+  \usepackage{pdfpages}
 
   \usepackage{seqsplit}
   \usepackage[hang,multiple]{footmisc}
@@ -247,4 +248,71 @@
   }
 
   \renewcommand{\headrulewidth}{0pt}
+
+% --------------------------------------------------------------------------- %
+%  P A G E   C O M M A N D S
+% --------------------------------------------------------------------------- %
+  \newcommand{\emptypage}{ % SOMEHOW HACKY
+   \twocolumn[]\thispagestyle{empty} %
+    \onecolumn %
+   }
+% --------------------------------------------------------------------------- %
+% MAKE PAGE AMOUNT DIVIDABLE BY FOUR
+% https://groups.google.com/forum/#!topic/de.comp.text.tex/j8wWMv8lZaM
+  \newcount\vs
+  \newcount\vsi
+  \newcommand\cleartofour{
+   \mbox{}\clearpage
+   \pagestyle{empty}
+   \vs\thepage
+   \advance\vs by 3
+   \vsi\vs
+   \divide\vs by 4
+   \multiply\vs by 4
+   \ifnum\vs=\vsi\else\cleartofour\fi
+  }
+% --------------------------------------------------------------------------- %
+  \newcommand\cleartoleft{%
+  \clearpage
+  \ifthispageodd{\emptypage}{}
+ }
+% --------------------------------------------------------------------------- %
+  \newcommand\cleartoright{%
+  \clearpage
+% http://tex.stackexchange.com/questions/6143/if-then-else-for-odd-page-even-page
+  \ifthispageodd{}{\emptypage}
+ }
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+% GRAPHICS
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+   \newcommand\spread[3]{%
+   #3
+   \includepdf[pagecommand={\thispagestyle{empty}},%
+               scale=1,pages=#2]{#1}
+  }
+% --------------------------------------------------------------------------- %
+   \newcommand\pdfpage[3]{%
+   \includepdf[pagecommand={\thispagestyle{fancy}},%
+               scale=1,pages=#2#3]{#1}
+  }
+% --------------------------------------------------------------------------- %
+   \newcommand\pdfpageplus[4]{%
+   \includepdf[pagecommand={\thispagestyle{fancy}#4},%
+               scale=1,pages=#2#3]{#1}
+  }
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+% MDSH TGSO GUIDE
+% --------------------------------------------------------------------------- %
+
+   \newcommand\grouping[1]{%
+    \cleartoleft
+     #1
+      \cleartoright
+   }
 
