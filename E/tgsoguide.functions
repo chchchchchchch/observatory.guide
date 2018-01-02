@@ -100,6 +100,40 @@ function NOTE() {
 
 }
 
+# --------------------------------------------------------------------------- #
+
+function GROUPING() {
+
+   GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
+               sed 's/[^a-z]//g'`
+
+   if [ ! -f ${TMPID}.grouping.pdf ];then
+   getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
+   svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
+   fi
+
+   PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
+            head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
+
+   if [ `echo $PAGENUM | wc -c` -gt 1 ];then
+         PDFCMD="\cleartoleft \
+                 \pdfpage{${TMPID}grouping.pdf}{$PAGENUM}{}"
+   else
+         PDFCMD="\grouping{$*}"
+        #echo "NO PAGENUM"
+   fi
+
+   if [ "$OUTPUTFORMAT" == pdf ];then 
+  
+          write2src "$PDFCMD" 
+  
+   elif [ "$OUTPUTFORMAT" == html ];then 
+  
+          HTMLCMD="<span class=\"grouping\">$*</span>"        
+          write2src "$HTMLCMD" 
+   fi
+
+}
 
 # --------------------------------------------------------------------------- #
 
