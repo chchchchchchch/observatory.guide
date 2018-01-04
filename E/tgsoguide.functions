@@ -1,3 +1,29 @@
+#!% ABOUT
+# % BOX
+# % BY
+# % CSSHERE
+# % EXAMPLE
+# % EXAMPLES
+# % HEADER
+#!% HOW
+#!% INCLUDE
+#!% METHOD
+#!% NOTE
+# % QUAVERBATIM
+# % REMEMBER
+# % SEEALSO
+# % SEEUNDER
+# % SHOW
+# % SOURCE
+# % URGENCY
+# % WARNING
+#!% WHAT
+#!% WHEN
+#!% WHO
+#!% WHY
+
+
+
 # --------------------------------------------------------------------------- #
 
 function INCLUDE() {
@@ -72,7 +98,31 @@ function METHOD() {
 
 function WHAT() {
 
-  THISCLASS="what";THISDESCRIPTION="What(?)";buildDescriptor $* 
+  THISCLASS="what";THISDESCRIPTION="What: ";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function WHO() {
+
+  THISCLASS="who";THISDESCRIPTION="Who: ";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function WHY() {
+
+  THISCLASS="why";THISDESCRIPTION="Why: ";buildDescriptor $* 
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function WHEN() {
+
+  THISCLASS="when";THISDESCRIPTION="When: ";buildDescriptor $* 
 
 }
 
@@ -102,6 +152,14 @@ function NOTE() {
 
 # --------------------------------------------------------------------------- #
 
+
+
+
+
+
+
+# --------------------------------------------------------------------------- #
+
 function GROUPING() {
 
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
@@ -109,7 +167,9 @@ function GROUPING() {
 
    if [ ! -f ${TMPID}.grouping.pdf ];then
    getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
+   if [ -f ${TMPID}.grouping.svg ];then
    svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
+   fi
    fi
 
    PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
