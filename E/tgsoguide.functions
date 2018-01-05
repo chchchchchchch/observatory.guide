@@ -197,19 +197,28 @@ function GROUPING() {
 
 # --------------------------------------------------------------------------- #
 
-function BASHCODE() {
+  getVerbatim() {  
+
+    THISCMD="$1"
+    SEPARATOR="^${COMSTART}% [-]{4,}${COMCLOSE}$"
 
    # GET LINENUMBER FOR SEPARATOR IN (PROCESSED) $SRCDUMP
    # ----
-     LNHEAD=`grep -nE "^${COMSTART}% [-]{4,}${COMCLOSE}$" $SRCDUMP | #
-             tail -n 1 | cut -d ":" -f 1` #
+     LNHEAD=`grep -nE "$SEPARATOR" $SRCDUMP | # FIND SEPARATOR LINE
+             tail -n 1 | cut -d ":" -f 1`     # SELECT LAST MATCH
 
-   # GET LINENUMBER FOR TRIGGER FUNCTION IN (UNPROCESSED) MDSH SRC
+   # EXTRACT TEXT PARTS PROCESSED BEFORE SEPARATOR
    # ----
-     LNFUNC=`grep -n "^% BASHCODE:" $MDSH | #
-             head -n 1 | cut -d ":" -f 1`   #
+     head -n $LNHEAD $SRCDUMP   | # DISPLAY UNTIL SEPARATOR LINE
+     sed '$d' > ${TMPID}.before    # REMOVE LAST LINE (= SEPARATOR)
+     cat ${TMPID}.before > $SRCDUMP # REWRITE $SRCDUMP
 
-   # EXTRACT PART UNTIL TRIGGER FUNCTION
+   # GET NUMBER FOR CMD LINE IN (UNPROCESSED) MDSH SRC
+   # ----
+     LNFUNC=`grep -n "^% $THISCMD:" $MDSH | # FIND CMD LINE
+             head -n 1 | cut -d ":" -f 1`   # SELECT LAST MATCH
+
+   # EXTRACT PART UNTIL CMD LINE
    # ----
      head -n $LNFUNC $MDSH  > ${TMPID}.part
 
@@ -219,23 +228,24 @@ function BASHCODE() {
              grep -nE "^% [-]{4,}$"     | # FIND MARKER
              head -n 1 | cut -d ":" -f 1` # NUM FOR FIRST(=LAST) MATCH
 
-   # DISABLE TRIGGER COMMAND IN MDSH SRC (PREVENT DOUBLE MATCH)
+   # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
    # ----
-     sed -i "${LNFUNC}s/^% BASHCODE:/%XBASHCODE/" $MDSH
+     sed -i "${LNFUNC}s/^% $THISCMD:/%X$THISCMD/" $MDSH
 
-   # EXTRACT TEXT PARTS ...
-   # ... PROCESSED BEFORE SECTION
-   # ----
-     head -n $LNHEAD $SRCDUMP | sed '$d'  > ${TMPID}.before
-
-   # ... UNPROCESSED EXTRACT
+   # EXTRACT UNPROCESSED SECTION
    # ----
      tac ${TMPID}.part | head -n $LNPART | #
      tac | sed '$d' | sed '1d' > ${TMPID}.xtract
 
-   # WRITE TO DUMP
-   # ----
-     cat ${TMPID}.before >  $SRCDUMP
+     rm ${TMPID}.part # CLEAN UP
+
+  }
+
+# --------------------------------------------------------------------------- #
+
+function BASHCODE() {
+
+   getVerbatim "BASHCODE"
 
    if [ "$OUTPUTFORMAT" == pdf ];then
 
@@ -253,9 +263,7 @@ function BASHCODE() {
 
    fi
 
-   # CLEAN UP
-   # ----
-     rm ${TMPID}.before ${TMPID}.xtract ${TMPID}.part
+   rm ${TMPID}.xtract # CLEAN UP
 
 }
 
