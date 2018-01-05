@@ -218,6 +218,10 @@ function GROUPING() {
      LNFUNC=`grep -n "^% $THISCMD:" $MDSH | # FIND CMD LINE
              head -n 1 | cut -d ":" -f 1`   # SELECT LAST MATCH
 
+   # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
+   # ----
+     sed -i "${LNFUNC}s/^% $THISCMD:/%X$THISCMD/" $MDSH
+
    # EXTRACT PART UNTIL CMD LINE
    # ----
      head -n $LNFUNC $MDSH  > ${TMPID}.part
@@ -228,14 +232,13 @@ function GROUPING() {
              grep -nE "^% [-]{4,}$"     | # FIND MARKER
              head -n 1 | cut -d ":" -f 1` # NUM FOR FIRST(=LAST) MATCH
 
-   # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
-   # ----
-     sed -i "${LNFUNC}s/^% $THISCMD:/%X$THISCMD/" $MDSH
-
    # EXTRACT UNPROCESSED SECTION
    # ----
-     tac ${TMPID}.part | head -n $LNPART | #
-     tac | sed '$d' | sed '1d' > ${TMPID}.xtract
+     tac ${TMPID}.part    | # SHOW FROM REVERT
+     head -n $LNPART      | # UNTIL LINE NUMBER
+     tac                  | # RE-REVERT 
+     sed '$d' | sed '1d'  | # RM FIRST/LAST (= SEPARATOR/CMD)
+     tee > ${TMPID}.xtract  # WRITE TO TMP FILE
 
      rm ${TMPID}.part # CLEAN UP
 
