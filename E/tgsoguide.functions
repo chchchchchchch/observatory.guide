@@ -257,9 +257,32 @@ function BASHCODE() {
    elif [ "$OUTPUTFORMAT" == html ];then
 
       write2src '<pre><code class="bash">'
-      write2src "$BCNT"
       cat ${TMPID}.xtract >> $SRCDUMP
-      write2src '</pre></code">'
+      write2src '</code></pre>'
+
+   fi
+
+   rm ${TMPID}.xtract # CLEAN UP
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function VERBATIM() {
+
+   getVerbatim "VERBATIM"
+
+   if [ "$OUTPUTFORMAT" == pdf ];then
+
+      write2src '\begin{verbatim}'
+      cat ${TMPID}.xtract >> $SRCDUMP
+      write2src '\end{verbatim}'
+
+   elif [ "$OUTPUTFORMAT" == html ];then
+
+      write2src '<pre class="verbatim">'
+      cat ${TMPID}.xtract >> $SRCDUMP
+      write2src '</pre>'
 
    fi
 
