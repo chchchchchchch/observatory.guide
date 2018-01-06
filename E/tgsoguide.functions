@@ -1,3 +1,5 @@
+# TODO:
+
 #!% ABOUT
 # % BOX
 # % BY
@@ -22,7 +24,9 @@
 #!% WHO
 #!% WHY
 
-
+# % SEEHERE: replaces % INCLUDE:
+# % SEEALSO: replaces % SEEUNDER:
+# % RELATESTO: replaces % SEEALSO:
 
 # --------------------------------------------------------------------------- #
 
@@ -60,6 +64,43 @@ function INCLUDE() {
   echo "O INCLUDE ENDS  ===================================================="
 
 }
+
+# --------------------------------------------------------------------------- #
+
+function SEEHERE() {
+
+  SRCBASE="$*";SRCPLUS="$SRCBASE/export/txt"
+  REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
+  if [ $REPLYPLUS == '200' ]; then
+       SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
+
+  TMPIDX=`echo $* | md5sum | cut -c 1-8`
+  getFile $SRCGET ${TMPID}.${TMPIDX}.mdsh
+
+  if [ -f ${TMPID}.${TMPIDX}.mdsh ];then
+  SEEID=`md5sum ${TMPID}.${TMPIDX}.mdsh | cut -c 1-8` #
+  SEETITLE=`grep "^% METHOD:" ${TMPID}.${TMPIDX}.mdsh | #
+            cut -d ":" -f 2-`
+  if [ `echo $SEETITLE | wc -c` -lt 1 ];then
+        SEETITLE="UNTITLED";
+  fi
+  echo "${SEEID}:$SEETITLE" >> ${TMPID}.toc
+
+  if [ "$OUTPUTFORMAT" == pdf ];then 
+         write2src "" 
+  elif [ "$OUTPUTFORMAT" == html ];then 
+         write2src "<span class=\"anchor\" id=\"$SEEID\"></span>" 
+  fi
+
+  INCLUDE $*
+
+  fi
+
+ #cp ${TMPID}.toc debug.toc
+
+}
+
+
 
 # --------------------------------------------------------------------------- #
   buildDescriptor() {
