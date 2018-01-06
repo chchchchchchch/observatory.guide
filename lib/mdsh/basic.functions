@@ -79,7 +79,7 @@
 
 # DEFINE FUNCTION SPECIFIC PLACEHOLDERS
 # --------------------------------------------------------------------------- #
-  TMPBREAK=NX${RANDOM}XL ; TMPID2=`echo $RANDOM$RANDOM | cut -c 1-4`
+  TMPBREAK="NX${RANDOM}XL";TMPIDX=`echo $* | md5sum | cut -c 1-8`
 
 # INCLUDE FUNCTIONS
 # --------------------------------------------------------------------------- #
@@ -106,7 +106,7 @@
 
 # MAKE LOCAL IF NECESSARY
 # --------------------------------------------------------------------------- #
-  MDSH=${TMPID}.${TMPID2}.mdsh
+  MDSH=${TMPID}.${TMPIDX}.mdsh
   getFile $INPUT $MDSH
   if [ X$SUCCESS == XYES ];then
        RUN="YES"
@@ -145,9 +145,9 @@
 
 # SAVE MDSH LINES TO PROTECT FROM PANDOC
 # --------------------------------------------------------------------------- #
-  BCKUPCOMM=${TMPID}.${TMPID2}.commented 
+  BCKUPCOMM=${TMPID}.${TMPIDX}.commented 
   if [ -f $BCKUPCOMM ]; then rm $BCKUPCOMM ; fi
-  PROTECTED=${TMPID}.${TMPID2}.mdshprotected
+  PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
   cp $MDSH $PROTECTED
  
   if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
@@ -164,7 +164,7 @@
 
 # CONVERT MARKDOWN WITH PANDOC (CUSTOM FOOTNOTES/BIBREFS)
 # --------------------------------------------------------------------------- #
-  MDSHMOD=${TMPID}.${TMPID2}.mdshmod
+  MDSHMOD=${TMPID}.${TMPIDX}.mdshmod
   if [ -f $MDSHMOD ]; then rm $MDSHMOD ; fi
 
   # TEMPORARY PROTECTORS (FOO)
