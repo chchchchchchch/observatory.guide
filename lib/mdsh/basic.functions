@@ -34,7 +34,7 @@
 # else
 
   IFHTTP=`echo $SOURCE | grep "http.\?://" | wc -l`
-  if [ $IFHTTP -ge 1 ] && [ !-f $TARGET ]; then
+  if [ $IFHTTP -ge 1 ] && [ ! -f "$TARGET" ]; then
        URL=$SOURCE;
        RESPONSE=`curl -s -o /dev/null -IL -w "%{http_code}" $URL`
        if [ $RESPONSE == '200' ]; then
