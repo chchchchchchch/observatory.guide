@@ -58,8 +58,9 @@
                      cut -d "{" -f 2   | #
                      cut -d "}" -f 1`    #
         ID=`echo $FOOTNOTETXT$COUNT    | #
-            md5sum | cut -c 1-8`         #
-        DI=`echo $ID | rev`              # ID BACKWARDS
+            md5sum | sed 's/[^a-z]//g' | # HASH WITHOUT NUMBERS
+            cut -c 1-8`                  # ONLY 8    
+        DI=`echo $ID | rev`              # ID BACKWARDS (DO NOT DOUBLE)
         FOOTNOTE=`echo $FOOTNOTE       | #
                   sed 's/\[/\\\[/g'    | #
                   sed 's/|/\\|/g'`
