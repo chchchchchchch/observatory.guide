@@ -92,7 +92,7 @@ function SEEHERE() {
          write2src "<span class=\"anchor\" id=\"$SEEID\"></span>" 
   fi
 
-  INCLUDE $*
+  INCLUDE $SRCGET
 
   fi
 
