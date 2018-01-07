@@ -8,12 +8,14 @@
 % -> markdown reference: http://daringfireball.net/projects/markdown
 
 % --------------------------------------------------------------------------- %
-% EXTENDFUNCTIONS: 170727_Book-A5.functions
-% USEPACKAGE: 170727_Book-A5
+% EXTENDFUNCTIONS: 171206_Book-A6.functions
 % EXTENDFUNCTIONS: ../lib/mdsh/bibref.functions
-% BIBREF: http://pad.constantvzw.org/p/observatory.bib/export/txt
+%!BIBREF: ../src/observatory.guide/observatory.bib.dev.txt
+% BIBREF: references.bib
 % ----
 % USEPACKAGE: ../lib/tex/conditions
+% USEPACKAGE: ../lib/tex/listingcustom
+% USEPACKAGE: tgsoguide
 % USEPACKAGE: tgsoguide
 % --------------------------------------------------------------------------- %
 % PDFXTITLE: a guide to techno-galactic software observation
@@ -21,15 +23,17 @@
 % PDFXAUTHOR: .
 % MKPDFXCOMPLIANT:
 % --------------------------------------------------------------------------- %
-% EXTENDFUNCTIONS: 171126_keywordize.functions
-% ADD2PREAMBLE: \usepackage{makeidx}
-% ADD2PREAMBLE: \makeindex
+%!EXTENDFUNCTIONS: 171126_keywordize.functions
+%!ADD2PREAMBLE: \usepackage{makeidx}
+%!ADD2PREAMBLE: \makeindex
 % --------------------------------------------------------------------------- %
 % EXTENDFUNCTIONS: 171130_href.functions
 % HREF: OFF
 
+
+% DOCUMENTCLASS: [9pt,cleardoubleempty]{scrbook}
 % EXTENDFUNCTIONS: tgsoguide.functions
 
+% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-145
 
-...
 
