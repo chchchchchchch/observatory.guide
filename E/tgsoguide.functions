@@ -78,7 +78,8 @@ function SEEHERE() {
   getFile $SRCGET ${TMPID}.${TMPIDX}.mdsh
 
   if [ -f ${TMPID}.${TMPIDX}.mdsh ];then
-  SEEID=`md5sum ${TMPID}.${TMPIDX}.mdsh | cut -c 1-8` #
+  SEEID=`md5sum ${TMPID}.${TMPIDX}.mdsh  | #
+         sed 's/[^a-z]//g' | cut -c 1-8`   #
   SEETITLE=`grep "^% METHOD:" ${TMPID}.${TMPIDX}.mdsh | #
             cut -d ":" -f 2-`
   if [ `echo $SEETITLE | wc -c` -lt 1 ];then
