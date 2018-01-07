@@ -39,38 +39,20 @@
 
  function mkHtml() {
 
-  # http://tidy.sourceforge.net/docs/quickref.html#show-body-only 
-  echo "show-body-only: y"     >  ${TMPID}.tc
-  echo "wrap-attributes: n"    >> ${TMPID}.tc
-  echo "quiet:y"               >> ${TMPID}.tc
-  echo "vertical-space:y"      >> ${TMPID}.tc
-
-  tac $OUTPUT | #
-  sed -n "/<!--.*${HEADMARK}.*-->$/,\$p" | #
-  tac      >   ${TMPID}.htmltmp
-  echo ""  >>  ${TMPID}.htmltmp
-
-  cat $SRCDUMP                | #
-  sed '/^%[ 0-9]*$/d'         | # RM STAMP (caused refsrc ??)
-  sed "/^${COMSTART}%.*${COMCLOSE}$/d" | # RM COMMENT LINES
-  tidy -config ${TMPID}.tc    | #
-  tee >> ${TMPID}.htmltmp
-
-
 # --------------------------------------------------------------------------- #
 # MAKE FOOTNOTES
 # --------------------------------------------------------------------------- #
   ( IFS=$'\n' ; COUNT=1
-    for FOOTNOTE in `sed "s/$FOOTNOTEOPEN/\n&/g" ${TMPID}.htmltmp | #
+    for FOOTNOTE in `sed "s/$FOOTNOTEOPEN/\n&/g" $SRCDUMP | #
                      sed "s/$FOOTNOTECLOSE/&\n/"         | #
                      grep "^$FOOTNOTEOPEN"`                #
      do
         if [ $COUNT -eq 1 ]; then
-             echo "<div class=\"footnotes\">"  >> ${TMPID}.htmltmp
-             echo "<ol>"                       >> ${TMPID}.htmltmp
+             echo "<div class=\"footnotes\">"  >> $SRCDUMP
+             echo "<ol>"                       >> $SRCDUMP
              FOOTNOTEBLOCKSTARTED="YES"
         fi
-        LNUM=`grep -n $FOOTNOTE ${TMPID}.htmltmp | head -n 1 | cut -d ":" -f 1`
+        LNUM=`grep -n $FOOTNOTE $SRCDUMP | head -n 1 | cut -d ":" -f 1`
   
         FOOTNOTETXT=`echo $FOOTNOTE    | #
                      cut -d "{" -f 2   | #
@@ -84,28 +66,59 @@
         OLDFOOTNOTE=$FOOTNOTE
         FC="class=\"f\""
         NEWFOOTNOTE="<sup id=\"$DI\" $FC><a href=\"#$ID\">$COUNT</a><\/sup>"
-        sed -i "$((LNUM))s|$OLDFOOTNOTE|$NEWFOOTNOTE|" ${TMPID}.htmltmp
+        sed -i "$((LNUM))s|$OLDFOOTNOTE|$NEWFOOTNOTE|" $SRCDUMP
         echo "<li id=\"$ID\">
                $FOOTNOTETXT
               <a href=\"#$DI\">-&gt;</a>
               </li>" | #
-        sed ':a;N;$!ba;s/\n//g' | tr -s ' ' >> ${TMPID}.htmltmp
+        sed ':a;N;$!ba;s/\n//g' | tr -s ' ' >> $SRCDUMP
         COUNT=`expr $COUNT + 1`
     done
   
     if [ "X${FOOTNOTEBLOCKSTARTED}" == "XYES" ]; then
-          echo "</ol>"              >> ${TMPID}.htmltmp
-          echo "</div>"             >> ${TMPID}.htmltmp
-          sed -i "s|$FOOTNOTECLOSE||g" ${TMPID}.htmltmp # WORKAROUND (BUG!!)
+          echo "</ol>"              >> $SRCDUMP
+          echo "</div>"             >> $SRCDUMP
+          sed -i "s|$FOOTNOTECLOSE||g" $SRCDUMP # WORKAROUND (BUG!!)
     fi
   )
 
+# --------------------------------------------------------------------------- #
+# WRITE OUTPUT
+# --------------------------------------------------------------------------- #
 
+# GET STATIC ABOVE
+# ----
+  tac $OUTPUT | #
+  sed -n "/<!--.*${HEADMARK}.*-->$/,\$p" | #
+  tac      >   ${TMPID}.htmltmp
+# ----
+  echo ""  >>  ${TMPID}.htmltmp
 
-  echo "" >> ${TMPID}.htmltmp
+# TIDY CONFIG
+# http://tidy.sourceforge.net/docs/quickref.html
+  echo "show-body-only: y"     >  ${TMPID}.tc
+  echo "wrap-attributes: n"    >> ${TMPID}.tc
+  echo "quiet:y"               >> ${TMPID}.tc
+  echo "vertical-space:y"      >> ${TMPID}.tc
+
+# WRITE/PROCESS MAIN
+  cat $SRCDUMP                | # START WITH PROCESSED DUMP
+  sed '/^%[ 0-9]*$/d'         | # RM STAMP (caused refsrc ??)
+  sed "/^${COMSTART}%.*${COMCLOSE}$/d" | # RM COMMENT LINES
+  tidy -config ${TMPID}.tc    | # OCD CLEAN UP
+  tee >> ${TMPID}.htmltmp       # WRITE TO TMP FILE
+
+# ----
+  echo "" >> ${TMPID}.htmltmp   #
+
+# GET STATIC BENEATH
+# ----
   sed -n "/<!--.*${FOOTMARK}.*-->$/,\$p" $OUTPUT >> ${TMPID}.htmltmp
 
-  mv ${TMPID}.htmltmp $OUTPUT
+# MOVE IN PLACE
+# ----
+  mv ${TMPID}.htmltmp $OUTPUT 
+
 
  }
 # .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. #
