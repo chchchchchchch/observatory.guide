@@ -80,14 +80,13 @@ function SEEHERE() {
   getFile $SRCGET ${TMPID}.${TMPIDX}.mdsh
 
   if [ -f ${TMPID}.${TMPIDX}.mdsh ];then
-  SEEID=`md5sum ${TMPID}.${TMPIDX}.mdsh  | #
-         sed 's/[^a-z]//g' | cut -c 1-8`   #
-  SEETITLE=`grep "^% METHOD:" ${TMPID}.${TMPIDX}.mdsh | #
-            cut -d ":" -f 2-`
-  if [ `echo $SEETITLE | wc -c` -lt 1 ];then
-        SEETITLE="UNTITLED";
+  SEEID=`md5sum ${TMPID}.${TMPIDX}.mdsh | cut -d " " -f 1 | #
+         base64 | tr  [:upper:] [:lower:] | cut -c 1-8`     #
+  SEETITLE=`egrep "^% METHOD:|^% TOCTITLE:" ${TMPID}.${TMPIDX}.mdsh | #
+            head -n 1 | cut -d ":" -f 2-`
+  if [ `echo $SEETITLE | wc -c` -gt 2 ];then
+        echo "${SEEID}:$SEETITLE" >> ${TMPID}.toc
   fi
-  echo "${SEEID}:$SEETITLE" >> ${TMPID}.toc
 
   if [ "$OUTPUTFORMAT" == pdf ];then 
          write2src "" 
@@ -98,8 +97,6 @@ function SEEHERE() {
   INCLUDE $SRCGET
 
   fi
-
- #cp ${TMPID}.toc debug.toc
 
 }
 
@@ -475,6 +472,64 @@ function QUAVERBATIM() {(
   if [ -f $SRCLIST ]; then rm $SRCLIST ;fi
 
 )}
+
+# --------------------------------------------------------------------------- #
+function TOC() {
+
+ # ------------------------------------------------------------------------- #
+   function mkTOC() {
+
+       echo "TOC NOW"
+    
+       if [ "$OUTPUTFORMAT" == pdf ];then
+    
+             sleep 0
+    
+       elif [ "$OUTPUTFORMAT" == html ];then
+    
+            echo '<div class="tov">' > ${TMPID}.tocprocessed
+          ( IFS=$'\n'
+            for C in `cat ${TMPID}.toc`
+             do
+                CID=`echo $C | cut -d ":" -f 1`
+                CTITLE=`echo $C | cut -d ":" -f 2-`
+                echo "<a href=\"#$CID\">$CTITLE</a>" >> ${TMPID}.tocprocessed
+            done; )
+            echo '</div>'           >> ${TMPID}.tocprocessed
+       fi
+    
+        LNTOC=`grep -n "^TOCHERE$" $OUTPUT | cut -d ":" -f 1`
+        head -n $LNTOC $OUTPUT | sed '$d'   >  ${OUTPUT}.tmp
+        cat ${TMPID}.tocprocessed           >> ${OUTPUT}.tmp
+        sed "1,${LNTOC}d" $OUTPUT           >> ${OUTPUT}.tmp 
+        mv ${OUTPUT}.tmp $OUTPUT
+
+   }
+ # ------------------------------------------------------------------------- #
+
+
+ # ------------------------------------------------------------------------- #
+ # DO IT AT THE END
+ # ------------------------------------------------------------------------- #
+   if [ "$OUTPUTFORMAT" == pdf ];then
+         sleep 0
+   elif [ "$OUTPUTFORMAT" == html ];then
+
+      # PLACE A MARKER
+      # --------------
+        write2src "TOCHERE"
+      # DO IT AT THE END
+      # ----------------
+        if [ `echo $postOutput | wc -c` -gt 1 ];then
+              postOutput="$postOutput mkTOC"
+        else
+              postOutput="mkTOC"
+        fi
+
+   fi
+ # ------------------------------------------------------------------------- #
+
+ }
 
 # --------------------------------------------------------------------------- #
 
