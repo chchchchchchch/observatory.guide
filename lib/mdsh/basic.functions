@@ -115,6 +115,13 @@
        RUN="NO"    
   fi
 
+# =========================================================================== #
+# TRANSFORM (IF POSSIBLE/NECESSARY)
+# --------------------------------------------------------------------------- #
+  if [ "$RUN" == "YES" ] && 
+     [ -f "$MDSH" ] &&
+     [ `wc -l "$MDSH" | cut -d " " -f 1` -gt 0 ]; then
+
 # REMEMBER LOCATION IF LOCAL (NOT WORKING FOR NESTING AT THE MOMENT???)
 # --------------------------------------------------------------------------- #
   if [ `echo $INCLUDEPATH | wc -c` -gt 1 ]; then
@@ -123,19 +130,9 @@
        INCLUDEPATH=""
   else INCLUDEPATH=`cd "$( dirname "${INPUT}" )" && pwd`; fi
 
-
-# =========================================================================== #
-# TRANSFORM (IF POSSIBLE/NECESSARY)
-# --------------------------------------------------------------------------- #
-  if [ "Y$RUN" == "YYES" ] && 
-     [ -f $MDSH ] &&
-     [ `wc -l $MDSH | cut -d " " -f 1` -gt 0 ]; then
-
 # GET LINERANGE
 # --------------------------------------------------------------------------- #
-  cat $MDSH | #
-  eval "$SELECTLINES" > tmp.tmp
-  mv tmp.tmp $MDSH
+  cat $MDSH | eval "$SELECTLINES" > tmp.tmp ; mv tmp.tmp $MDSH
 
 # PRE-PROCESSING
 # --------------------------------------------------------------------------- #
