@@ -1,0 +1,25 @@
+% METHOD: Useless scroll against productivity
+
+% REMEMBER:
+
+% WHAT:
+% HOW:
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE:
+
+% WARNING:
+
+% EXAMPLE:
+
+%!INCLUDE: http://observatory.constantvzw.org/etherdump/friday.md 165-236 
+
+% SEEALSO:
+
+% SOURCE:
+
+
+%      useless scroll against productivity
+% ---------------------------------------------------------------------------------------     
+%               * Source: friday pad, etherpad snippet

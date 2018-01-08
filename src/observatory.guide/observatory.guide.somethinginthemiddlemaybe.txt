@@ -1,0 +1,79 @@
+% METHOD: Something in the Middle Maybe (SitMM)
+
+% REMEMBER:
+
+% WHAT: The network traffic gets observed. There are different sniffing software out there which differ in granularity and how far the user can taylor the different functionality. SitMM builds on one of these tools called [scapy](http://www.secdev.org/projects/scapy/).
+% HOW: SitMM takes a closer look at the network traffic coming from/going to a software curious person's device. The software curious person using SitMM may ask to filter the traffic based on application or device of interest.
+% WHEN:
+% WHO: - 
+
+The software curious person gets to observe their own traffic. Ideally, observing ones own network traffic should be available to anyone, but using such software can be deemed illegal under different jurisdictions. 
+
+For example, in the US wiretap law limit packet-sniffing to parties owning the network that is being sniffed or the availability of consent from one of the communicating parties. Section 18 U.S. Code § 2511 (2) (a) (i) says:
+
+> It shall not be unlawful ... to intercept ... while engaged in any activity
+> which is a necessary incident to the rendition of his service or to the protection
+> of the rights or property of the provider of that service
+
+See here for a [paper](http://spot.colorado.edu/~sicker/publications/issues.pdf) on the topic.
+Google went on a big legal spree to defend their right to capture unencrypted wireless traffic with google street view cars. The courts were concerned about wiretapping and infringements on the privacy of users, and not with the leveraging of private and public WiFi infrastructure for the gain of a for profit company. The case raises hard questions about the state, ownership claims and material reality of WiFi signals.
+So, while WiFi sniffing is common and the tools like SitMM are widely available, it is not always possible for software curious persons to use them legally or to neatly filter out "their traffic" from that of "others". 
+
+% WHEN: SitMM can be used any time a software curious person feels the weight of the (invisible) networks.
+% WHY: SitMM is intended to be a tool that gives artists, designers and educators an easy to use custom WiFi router to work with networks and explore the aspects of our daily communications that are exposed when we use WiFi. The goal is to use the output to encourage open discussions about how we use our devices online.
+% URGENCY:
+% NOTE:
+
+% WARNING:
+% EXAMPLE: - 
+
+% Begin snippet of the SitMM dump for one of the Software Curious Persons
+
+Snippets of a Something In The Middle, Maybe - Report
+
+% ---------------
+
+UDP 192.168.42.32:53649 -> 8.8.8.8:53
+TCP 192.168.42.32:49250 -> 17.253.53.208:80
+TCP 192.168.42.32:49250 -> 17.253.53.208:80
+TCP/HTTP 17.253.53.208:80 GET http://captive.apple.com/mDQArB9orEii/Xmql6oYqtUtn/f6xY5snMJcW8/CEm0Ioc1d0d8/9OdEOfkBOY4y.html 
+TCP 192.168.42.32:49250 -> 17.253.53.208:80
+TCP 192.168.42.32:49250 -> 17.253.53.208:80
+TCP 192.168.42.32:49250 -> 17.253.53.208:80
+UDP 192.168.42.32:63872 -> 8.8.8.8:53
+UDP 192.168.42.32:61346 -> 8.8.8.8:53
+...
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+TCP 192.168.42.32:49260 -> 17.134.127.97:443
+
+##################################################
+Destination Address: 17.253.53.208
+Destination Name:    nlams2-vip-bx-008.aaplimg.com
+
+Port: Connection Count
+  80:    6
+
+##################################################
+Destination Address: 17.134.127.79
+Destination Name:    unknown
+
+Port: Connection Count
+ 443:    2
+##################################################
+Destination Address: 17.248.145.76
+Destination Name:    unknown
+
+Port: Connection Count
+ 443:   16
+
+% VERBATIM:
+
+
+% RELATESTO:
+% SOURCE: *Sitm* emerges from the collective practice of the Alternative Learning Tank and is heavily inspired by projects such as [Dowse](http://dowse.equipment/), [alt.exit](http://alternativelearningtank.net/) and the [NetAidKit](https://netaidkit.net/). http://observatory.constantvzw.org/SomethingInTheMiddle/
+

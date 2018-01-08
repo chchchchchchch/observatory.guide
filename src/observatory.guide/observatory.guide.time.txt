@@ -1,0 +1,67 @@
+% METHOD: Investigating how humans and machines negotiate the experience of time
+
+% REMEMBER:
+
+% WHAT:  - 
+
+% SHOW: http://observatory.constantvzw.org/images/Screenshot_from_2017-06-10_172547.png
+
+% HOW: python script
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE:
+
+% WARNING:
+
+% EXAMPLE: - 
+
+
+% -----------------------
+
+# ends of time
+
+https://en.wikipedia.org/wiki/Year_2038_problem
+
+Exact moment of the epoch:
+03:14:07 UTC on 19 January 2038
+
+## commands
+
+local UNIX time of this machine
+% BASHCODE: date +%s
+
+UNIX time + 1
+%BASHCODE: echo $((`date +%s` +1 ))
+
+
+## goodbye unix time
+
+    while :
+    do
+      sleep 1
+      figlet $((2147483647 - `date +%s`))
+    done
+
+# Sundial Time Protocol Group tweaks
+
+    printf 'Current Time in Millennium Unix Time: '
+    printf $((2147483647 - `date +%s`))
+    echo
+    sleep 2
+    echo $((`cat ends-of-times/idletime` + 2)) > ends-of-times/idletime
+    idletime=`cat ends-of-times/idletime`
+    echo
+    figlet "Thank you for having donated 2 seconds to our ${idletime} seconds of collective SSH  pause "
+    echo 
+    echo
+
+http://observatory.constantvzw.org/etherdump/ends-of-time.html
+
+% VERBATIM:
+
+
+
+
+% RELATESTO:
+% SOURCE:

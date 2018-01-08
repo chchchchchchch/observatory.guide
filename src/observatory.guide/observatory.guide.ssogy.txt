@@ -1,0 +1,42 @@
+% METHOD: Flowcharts (Flow of the chart – chart of the flow on demand!)
+
+% REMEMBER:
+
+% WHAT:
+% HOW:
+% WHEN:
+% WHO:
+% URGENCY:
+% NOTE:
+
+% WARNING:
+
+% EXAMPLE: - 
+
+% IBM Ruler
+% SHOW: ![]( http://observatory.constantvzw.org/images/symbols/ibm-ruler.jpg )
+
+% Burroughs ruler
+% SHOW: ![]( http://observatory.constantvzw.org/images/symbols/burroughs-ruler.jpg )
+
+% Flow chart symbols     
+% Rectangle (process)     
+% SHOW: ![]( http://observatory.constantvzw.org/images/symbols/rectangle.png )
+
+% Rhombus (decision)
+% SHOW: ![]( http://observatory.constantvzw.org/images/symbols/curly_rec.png )
+
+% Rhombus (document)
+% SHOW:![]( http://observatory.constantvzw.org/images/symbols/curly_rec-2.png )
+
+% Rhombus (punched Card)
+% SHOW: ![]( http://observatory.constantvzw.org/images/symbols/flag.png ) 
+% SHOW: ![]( http://observatory.constantvzw.org/images/symbols/trapec.png )
+
+% Blanking diagrams
+% SHOW: ![Claude Shannon Information Diagram Blanked: Silvio Lorusso]( http://silviolorusso.com/wp-content/uploads/2012/02/shannon_comm_channel.gif )
+
+
+% RELATESTO:
+% SOURCE: SSOGY (Software sketching observation group yuppies)
+
