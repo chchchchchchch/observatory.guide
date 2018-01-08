@@ -201,12 +201,12 @@ function BIBREF() {
    }
 
    if [ `echo $preOutput | wc -c` -gt 1 ];then
-         preOutput="$preOutput; htmlBibref"
+         preOutput="$preOutput ; htmlBibref"
    else
          preOutput="htmlBibref"
    fi
    if [ `echo $postOutput | wc -c` -gt 1 ];then
-         postOutput="$postOutput; insertCites"
+         postOutput="$postOutput ; insertCites"
    else
          postOutput="insertCites"
    fi
