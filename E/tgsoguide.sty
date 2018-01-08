@@ -34,8 +34,10 @@
   \usepackage{fancyhdr}
   \usepackage{fancyvrb}
 
+  \usepackage{alltt} % USED BY QUAVERBATIM
+  \usepackage{hyperref}
 
-  \newcommand{\descriptor}[1]{\smallskip\textbf{#1}}
+  %\newcommand{\descriptor}[1]{\smallskip\textbf{#1}}
 
 
 
@@ -306,13 +308,84 @@
   }
 % --------------------------------------------------------------------------- %
 
+  \newenvironment{quaverbatim}{%
+   \begin{alltt}%
+    \fontsize{6pt}{7pt}\selectfont
+  }{\end{alltt}}
+
+  \newenvironment{verbatimsmall}{%
+   \begin{alltt}%
+    \fontsize{6pt}{7pt}\selectfont
+  }{\end{alltt}}
+
 % --------------------------------------------------------------------------- %
 % MDSH TGSO GUIDE
 % --------------------------------------------------------------------------- %
 
    \newcommand\grouping[1]{%
     \cleartoleft
-     #1
+     {\LARGE #1}
       \cleartoright
    }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptormethod[1]{%
+    \newpage
+     \textbf{Method:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorwhat[1]{%
+
+    \textbf{What:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorwho[1]{%
+
+    \textbf{Who:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorwhy[1]{%
+
+    \textbf{Why:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorwhen[1]{%
+
+    \textbf{When:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorhow[1]{%
+
+    \textbf{How:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorabout[1]{%
+
+    \textbf{About:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptornote[1]{%
+
+    \textbf{Note:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorwarning[1]{%
+
+    \textbf{Warning:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorexample[1]{%
+
+    \textbf{Example:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorremember[1]{%
+
+    \textbf{Remember:} #1
+   }
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptorurgency[1]{%
+
+    \textbf{Urgency:} #1
+   }
+ % ------------------------------------------------------------------------- %
 

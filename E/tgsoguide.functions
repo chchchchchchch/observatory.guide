@@ -116,6 +116,7 @@ function SEEHERE() {
      fi
         if [ "$OUTPUTFORMAT" == pdf ];then 
        
+               THISCLASS=`echo $THISCLASS | cut -d " " -f 1`
                write2src "\descriptor${THISCLASS}{$DESCRIPTION}" 
        
         elif [ "$OUTPUTFORMAT" == html ];then 
@@ -133,9 +134,17 @@ function SEEHERE() {
 
 function METHOD() {
 
-  THISCLASS="method"
- #THISDESCRIPTION="Method:"
-  THISDESCRIPTION="<a href=\"$SRCHREF\">Method:</a>"
+   THISCLASS="method"
+
+  if [ "$OUTPUTFORMAT" == pdf ];then 
+
+   THISDESCRIPTION="Method:"
+ 
+  elif [ "$OUTPUTFORMAT" == html ];then 
+ 
+   THISDESCRIPTION="<a href=\"$SRCHREF\">Method:</a>"
+
+  fi 
 
   buildDescriptor $* 
 
@@ -238,21 +247,27 @@ function URGENCY() {
 
 
 function SHOW() {
-
-   write2src "<span class=\"tmp\">SHOW IMAGE HERE: $*</span>"
+  
+   if [ "$OUTPUTFORMAT" == html ];then 
+        write2src "<span class=\"tmp\">SHOW IMAGE HERE: $*</span>"
+   fi
 
 }
 
 
 function RELATESTO() {
 
+   if [ "$OUTPUTFORMAT" == html ];then 
    write2src "<span class=\"tmp\">TODO: RELATES TO $*</span>"
+   fi
 
 }
 
 function TODO() {
 
+   if [ "$OUTPUTFORMAT" == html ];then 
    write2src "<span class=\"tmp\">TODO: $*</span>"
+   fi
 
 }
 
@@ -264,23 +279,25 @@ function GROUPING() {
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
                sed 's/[^a-z]//g'`
 
-   if [ ! -f ${TMPID}.grouping.pdf ];then
-   getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
-   if [ -f ${TMPID}.grouping.svg ];then
-   svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
-   fi
-   fi
+#  if [ ! -f ${TMPID}.grouping.pdf ];then
+#  getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
+#  if [ -f ${TMPID}.grouping.svg ];then
+#  svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
+#  fi
+#  fi
 
-   PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
-            head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
+#  PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
+#           head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
 
-   if [ `echo $PAGENUM | wc -c` -gt 1 ];then
-         PDFCMD="\cleartoleft \
-                 \pdfpage{${TMPID}grouping.pdf}{$PAGENUM}{}"
-   else
-         PDFCMD="\grouping{$*}"
-        #echo "NO PAGENUM"
-   fi
+#  if [ `echo $PAGENUM | wc -c` -gt 1 ];then
+#        PDFCMD="\cleartoleft \
+#                \pdfpage{${TMPID}grouping.pdf}{$PAGENUM}{}"
+#  else
+#        PDFCMD="\grouping{$*}"
+#       #echo "NO PAGENUM"
+#  fi
+
+        PDFCMD="\grouping{$*}"
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
   
@@ -358,13 +375,13 @@ function BASHCODE() {
 
      #write2src "\lstsetBash"
       write2src '\begin{lstlisting}'
-      cat ${TMPID}.xtract >> $SRCDUMP
+       cat ${TMPID}.xtract >> $SRCDUMP
       write2src '\end{lstlisting}'
 
    elif [ "$OUTPUTFORMAT" == html ];then
 
       write2src '<pre><code class="bash">'
-      cat ${TMPID}.xtract >> $SRCDUMP
+       cat ${TMPID}.xtract >> $SRCDUMP
       write2src '</code></pre>'
 
    fi
@@ -394,9 +411,9 @@ function VERBATIM() {
 
    if [ "$OUTPUTFORMAT" == pdf ];then
 
-      write2src '\begin{verbatim}'
+      write2src '\begin{verbatimsmall}'
       cat ${TMPID}.xtract >> $SRCDUMP
-      write2src '\end{verbatim}'
+      write2src '\end{verbatimsmall}'
 
    elif [ "$OUTPUTFORMAT" == html ];then
 
@@ -452,17 +469,24 @@ function QUAVERBATIM() {(
      fi
 
   # ------------------------------------------------------------------------- #
-   #write2src "\begin{quaverbatim}"
-   #write2src "\begin{fitbatim}"
-    write2src "<pre class=\"quaverbatim\">"
-
+    if [ "$OUTPUTFORMAT" == pdf ];then
+ 
+    write2src "\begin{quaverbatim}"
      cat $COLLECTED      | # START ...
      cut -c ${INDENT}-   | # REMOVE INDENT
      tee >> $SRCDUMP       # WRITE TO FILE
-
+    write2src "\end{quaverbatim}"
+ 
+    elif [ "$OUTPUTFORMAT" == html ];then
+ 
+    write2src "<pre class=\"quaverbatim\">"
+     cat $COLLECTED      | # START ...
+     cut -c ${INDENT}-   | # REMOVE INDENT
+     tee >> $SRCDUMP       # WRITE TO FILE
     write2src "</pre>"
-   #write2src "\end{fitbatim}"
-   #write2src "\end{quaverbatim}"
+ 
+    fi
+
   # ------------------------------------------------------------------------- #
 
   rm $COLLECTED
