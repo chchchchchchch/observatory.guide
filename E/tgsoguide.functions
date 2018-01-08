@@ -478,8 +478,6 @@ function TOC() {
 
  # ------------------------------------------------------------------------- #
    function mkTOC() {
-
-       echo "TOC NOW"
     
        if [ "$OUTPUTFORMAT" == pdf ];then
     
@@ -487,26 +485,31 @@ function TOC() {
     
        elif [ "$OUTPUTFORMAT" == html ];then
     
-            echo '<div class="tov">' > ${TMPID}.tocprocessed
-          ( IFS=$'\n'
-            for C in `cat ${TMPID}.toc`
-             do
-                CID=`echo $C | cut -d ":" -f 1`
-                CTITLE=`echo $C | cut -d ":" -f 2-`
-                echo "<a href=\"#$CID\">$CTITLE</a>" >> ${TMPID}.tocprocessed
-            done; )
-            echo '</div>'           >> ${TMPID}.tocprocessed
-       fi
-    
-        LNTOC=`grep -n "^TOCHERE$" $OUTPUT | cut -d ":" -f 1`
-        head -n $LNTOC $OUTPUT | sed '$d'   >  ${OUTPUT}.tmp
-        cat ${TMPID}.tocprocessed           >> ${OUTPUT}.tmp
-        sed "1,${LNTOC}d" $OUTPUT           >> ${OUTPUT}.tmp 
-        mv ${OUTPUT}.tmp $OUTPUT
+          echo '<div class="toc">' > ${TMPID}.tocprocessed
+        ( IFS=$'\n'
+          for C in `cat ${TMPID}.toc`
+           do CID=`echo $C | cut -d ":" -f 1`
+              CTITLE=`echo $C            | #
+                      cut -d ":" -f 2-   | #
+                      eval $PANDOCACTION | # DISPLAY/TRANSLATE
+                      sed 's,</*p>,,g'`    # REMOVE <P> TAGS
+             echo "<a href=\"#$CID\">$CTITLE</a>" >> ${TMPID}.tocprocessed
+          done; )
+          echo '</div>'           >> ${TMPID}.tocprocessed
 
+       fi  
+           sed -i "s/$TOCMARKER/\n\n&\n\n/" $OUTPUT
+           LNTOC=`grep -n "$TOCMARKER" $OUTPUT | #
+                  head -n 1 | cut -d ":" -f 1`
+           if [ `echo $LNTOC | wc -c` -gt 1 ];then 
+                head -n $LNTOC $OUTPUT | sed '$d' >  ${OUTPUT}.tmp
+                cat ${TMPID}.tocprocessed         >> ${OUTPUT}.tmp
+                sed "1,${LNTOC}d" $OUTPUT         >> ${OUTPUT}.tmp 
+                mv ${OUTPUT}.tmp $OUTPUT
+                sed -i "s/$TOCMARKER//g" $OUTPUT
+           fi
    }
  # ------------------------------------------------------------------------- #
-
 
  # ------------------------------------------------------------------------- #
  # DO IT AT THE END
@@ -517,7 +520,9 @@ function TOC() {
 
       # PLACE A MARKER
       # --------------
-        write2src "TOCHERE"
+        TOCMARKER=`echo TOCHERE | md5sum | cut -c 1-16`
+        write2src "$TOCMARKER"
+
       # DO IT AT THE END
       # ----------------
         if [ `echo $postOutput | wc -c` -gt 1 ];then
