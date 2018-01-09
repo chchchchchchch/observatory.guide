@@ -78,10 +78,10 @@
 % PREVENT HYPHENATION OVER PAGE BREAK
   \brokenpenalty10000\relax
 % PREVENT PAGE BREAK WITHIN LISTS
-  \let\ITEMIZE\itemize
-  \let\ENDITEMIZE\enditemize
-  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
-                            {\ENDITEMIZE\end{samepage}}
+%  \let\ITEMIZE\itemize
+%  \let\ENDITEMIZE\enditemize
+%  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
+%                            {\ENDITEMIZE\end{samepage}}
 
 % --------------------------------------------------------------------------- %
 %  F O R M A T
@@ -225,11 +225,11 @@
   \setlist{noitemsep} % (P:enumitem)
 
 
-  \newcommand{\AtEndQuote}{}%
-  \AtEndEnvironment{quote}{\AtEndQuote}
-
-  \newcommand{\AtBeginQuote}{}%
-  \AtBeginEnvironment{quote}{\AtBeginQuote}
+%  \newcommand{\AtEndQuote}{}%
+%  \AtEndEnvironment{quote}{\AtEndQuote}
+%
+%  \newcommand{\AtBeginQuote}{}%
+%  \AtBeginEnvironment{quote}{\AtBeginQuote}
 
 
 % --------------------------------------------------------------------------- %
@@ -240,13 +240,13 @@
   \pagestyle{fancy}
   \fancyhead{} % CLEAR DEFAULT
   \fancyfoot{} % CLEAR DEFAULT
-  \fancyfoot[LO]{\vspace{1mm} \hspace{-13mm} {\scriptsize\thepage}}
-  \fancyfoot[RE]{\vspace{1mm} {\scriptsize\thepage} \hspace{-13mm}}
+  \fancyfoot[LO]{\vspace{-8mm} \hspace{-13mm} {\scriptsize\thepage}}
+  \fancyfoot[RE]{\vspace{-8mm} {\scriptsize\thepage} \hspace{-13mm}}
 
 % http://tex.stackexchange.com/questions/114956/how-to-insert-footer-in-first-pages-of-chapter 
   \fancypagestyle{plain}{%
-  \fancyfoot[LO]{\vspace{1mm} \hspace{-13mm} {\scriptsize\thepage}}
-  \fancyfoot[RE]{\vspace{1mm} {\scriptsize\thepage} \hspace{-13mm}}
+  \fancyfoot[LO]{\vspace{-8mm} \hspace{-13mm} {\scriptsize\thepage}}
+  \fancyfoot[RE]{\vspace{-8mm} {\scriptsize\thepage} \hspace{-13mm}}
   }
 
   \renewcommand{\headrulewidth}{0pt}
@@ -258,21 +258,6 @@
    \twocolumn[]\thispagestyle{empty} %
     \onecolumn %
    }
-% --------------------------------------------------------------------------- %
-% MAKE PAGE AMOUNT DIVIDABLE BY FOUR
-% https://groups.google.com/forum/#!topic/de.comp.text.tex/j8wWMv8lZaM
-  \newcount\vs
-  \newcount\vsi
-  \newcommand\cleartofour{
-   \mbox{}\clearpage
-   \pagestyle{empty}
-   \vs\thepage
-   \advance\vs by 3
-   \vsi\vs
-   \divide\vs by 4
-   \multiply\vs by 4
-   \ifnum\vs=\vsi\else\cleartofour\fi
-  }
 % --------------------------------------------------------------------------- %
   \newcommand\cleartoleft{%
   \clearpage
@@ -329,8 +314,9 @@
    }
  % ------------------------------------------------------------------------- %
    \newcommand\descriptormethod[1]{%
-    \newpage
-     \textbf{Method:} #1
+    \cleartoright
+     {\large\textbf{METHOD: #1}}
+       \medskip
    }
  % ------------------------------------------------------------------------- %
    \newcommand\descriptorwhat[1]{%

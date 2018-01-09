@@ -16,7 +16,6 @@
 % USEPACKAGE: ../lib/tex/conditions
 % USEPACKAGE: ../lib/tex/listingcustom
 % USEPACKAGE: tgsoguide
-% USEPACKAGE: tgsoguide
 % --------------------------------------------------------------------------- %
 % PDFXTITLE: a guide to techno-galactic software observation
 % PDFXORG: .
@@ -30,10 +29,27 @@
 % EXTENDFUNCTIONS: 171130_href.functions
 % HREF: OFF
 
-
-% DOCUMENTCLASS: [9pt,cleardoubleempty]{scrbook}
+%!DOCUMENTCLASS: [9pt,cleardoubleempty]{scrbook}
+% DOCUMENTCLASS: [8pt,cleardoubleempty]{scrbook}
 % EXTENDFUNCTIONS: tgsoguide.functions
 
-% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-145
+1801092339
+
+% NEWPAGE:
+
+%!INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-145
+
+% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-128
+% SEEHERE: ../src/observatory.guide/observatory.guide.visit.txt
+% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 133-145
+
+
+%!INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-39
+%!INCLUDE: observatory.guide.txt 1-39
+%!INCLUDE: observatory.guide.txt
+
+
+%!TOC:
+%!TOC:
 
 

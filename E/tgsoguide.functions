@@ -69,7 +69,7 @@ function INCLUDE() {
 
 function SEEHERE() {
 
-  SRCBASE="$*";SRCPLUS="$SRCBASE/export/txt"
+  SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
   REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
   if [ $REPLYPLUS == '200' ]; then
        SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
@@ -279,25 +279,25 @@ function GROUPING() {
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
                sed 's/[^a-z]//g'`
 
-#  if [ ! -f ${TMPID}.grouping.pdf ];then
-#  getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
-#  if [ -f ${TMPID}.grouping.svg ];then
-#  svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
-#  fi
-#  fi
+   if [ ! -f ${TMPID}.grouping.pdf ];then
+   getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
+   if [ -f ${TMPID}.grouping.svg ];then
+   svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
+   fi
+   fi
 
-#  PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
-#           head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
+   PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
+            head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
 
-#  if [ `echo $PAGENUM | wc -c` -gt 1 ];then
-#        PDFCMD="\cleartoleft \
-#                \pdfpage{${TMPID}grouping.pdf}{$PAGENUM}{}"
-#  else
-#        PDFCMD="\grouping{$*}"
-#       #echo "NO PAGENUM"
-#  fi
+   if [ `echo $PAGENUM | wc -c` -gt 1 ];then
+         PDFCMD="\cleartoleft \
+                 \pdfpage{${TMPID}grouping.pdf}{$PAGENUM}{}"
+   else
+         PDFCMD="\grouping{$*}"
+        #echo "NO PAGENUM"
+   fi
 
-        PDFCMD="\grouping{$*}"
+#       PDFCMD="\grouping{$*}"
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
   
@@ -308,6 +308,7 @@ function GROUPING() {
           HTMLCMD="<span class=\"grouping\">$*</span>"        
           write2src "$HTMLCMD" 
    fi
+
 
 }
 
@@ -561,6 +562,12 @@ function TOC() {
  }
 
 # --------------------------------------------------------------------------- #
+function NEWPAGE() {
 
+  if [ "$OUTPUTFORMAT" == pdf ];then
 
+        write2src '\newpage'
+  fi
+
+}
 
