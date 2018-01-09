@@ -1,23 +1,24 @@
 % __NOPUBLISH__
-% http://observatory.constantvzw.org/observatory.html
-% pdfs: http://observatory.constantvzw.org --> observatory_1712021326.pdf etc.
+% http://observatory.constantvzw.org/tgsoguide.html
+% pdfs: http://observatory.constantvzw.org --> tgsoguide_1801091008.pdf etc.
 % notes on the process: http://pad.constantvzw.org/p/observatory.methods
 
+
+% TOC:
 
 
 % INTRODUCTION
 % ------------
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.introduction
 
-% ESSENTIALS
-% ----------
-% (ref. SAS guide) What would be software essentials ? Kit ? Or part of the introduction? Peggy?
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.essentials
-
 % WARNING!
 % http://pad.constantvzw.org/p/observatory.guide.warning
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.warning/export/txt
 
+% ESSENTIALS
+% ----------
+% (ref. SAS guide) What would be software essentials ?
+%!SEEHERE: http://pad.constantvzw.org/p/observatory.guide.essentials
 
 
 % GROUPING: Close encounters
@@ -49,12 +50,14 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.silvio
 % Useless Scroll against Productivity
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.scrollresistance
-% Investigating how humans and machines negotiate the experience of time need to write Hans
+% Investigating how humans and machines negotiate the experience of time
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.time
 
 
 % GROUPING: Languaging
 % ====================
+% http://pad.constantvzw.org/p/observatory.guide.grouping.languaging
+
 
 % Quine
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.quine
@@ -78,9 +81,9 @@
 % Hand reading / blobservation
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.blobservation
 % Bug reporting for sharing observations
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.dirty 
-% Interface Détournement (There is nothing here yet ...)
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.detournement 
+% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.dirty
+% Interface Détournement (There is nothing here yet ...) /FS ASKS LOUP/
+% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.detournement
 
 
 % GROUPING: Embodiment / body techniques
@@ -96,11 +99,11 @@
 % ==================================================
 
 % Continuous Integration
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.continuousintegration 
+% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.continuousintegration
 % Fountain refreshment (see under: Embodiment / body techniques)
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.fountain
 % make make do /CHRISTOPH/
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.pipeline  
+% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.pipeline
 % Flowcharts (Flow of the chart – chart of the flow on demand!)
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.ssogy
 % What is it like to be <AN ELEVATOR>? (see under: Beingontheside/inthemiddle/behind)

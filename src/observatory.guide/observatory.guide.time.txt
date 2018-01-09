@@ -63,5 +63,5 @@ http://observatory.constantvzw.org/etherdump/ends-of-time.html
 
 
 
-% RELATESTO:
+% RELATESTO:  http://pad.constantvzw.org/p/observatory.guide.scrollresistance
 % SOURCE:
