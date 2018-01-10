@@ -32,6 +32,7 @@ What follows is an example of a possible diagnostic questionnaire.
 % http://observatory.constantvzw.org/etherdump/RelationalObservatoryInterviewGuide.md.diff.html
 
 **What to expect**
+
 You will obtain a cartography of software users profiles. It will help you to shape your own relation to software. You will be able to construct your own taxonomy and classifcation of software users that is needed in order to find a means of rescue in case of a software catastrophy. 
 
 * SKILLS          
