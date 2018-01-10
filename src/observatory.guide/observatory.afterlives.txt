@@ -1,0 +1,262 @@
+__NOPUBLISH__
+
+Meeting I
+
+12 October 14:00-16:30, Constant + on-line 
+Peggy, Michael, Femke, Martino, Anita (on-line?nope,irl!)
+
+16 October 18:00-20:30, Constant + on-line
+Carlin (on-line), Femke, Martino, Anita (can be there partially), Seda
+
+Gathering our thoughts, what to do with the TGSO afterlife/afterlives:
+
+Round I
+
+Feedback, review of TGSO 4 months after
+
+Hard to remember now what made the collective focus now.
+MM: second hand accounts of the Walk-in clinic. Experienced it through resurrecting the pi/etherbox -- CSI !
+Interesting to see what had happened, the dirty db issue. There are notes? [where?] That situation (during - after)
+it would be good to incoporate things like Jogi's (Yogi?") 's post event report (email)
+mm: Micro-moments of detour, hyper-focused moments. Sense of single shared effort with the transformation to service on monday..
+
+PP: different tasks, ideas for new projects ... so many new ideas, tasks. Linked to code, machines but also the socio(logical) issues. Super intense. Ways of looking at software over the days. Switching from observation to service interesting.
+I should do this.... I  should do this.... I should do this.... (thinking "Shouldn't you be working now" .... cf Silvio's presentation)
+The intensity of it: quite a Concentrated look at software over a few days ... 
+PP ideology of well-being for web-development ... Tim Ferris ... Future of work. MM remembers: getting things done. Infusing in web culture.
+Tim Ferriss: 4 hour week? https://en.wikipedia.org/wiki/Tim_Ferriss  https://en.wikipedia.org/wiki/The_4-Hour_Workweek
+Stephen CoveyThe 7 Habits of Highly Effective People
+Tom Rath  How Full Is Your Bucket? Positive Strategies for Work and Life & Eat Move Sleep: How Small Choices Lead to Big Changes
+Peggy would like to write something about it... (en francais??) ... many english sources 
+
+An Goldenberg? coming for Transmarcations... Hacking with Care.
+https://hackingwithcare.in/
+
+From Namur: most of all images (there are recordings -- FR better than EN). Leuven: recordings. Afterlife interview ?
+Hardware as a limit to abstraction. Reworked in dirty db experience and also as a service.
+
+The walk-in clinic as a collective performance. Could, should it be redone? Energy, intensity mainly from improvisation, together translating experience in service. 
+it was not 5 day research towards the public moment, rather the public moment was a day of research to add to the previous days..
+performance of 'service' is what makes it accessible. We could take that light at the clinic -- but if we would be doing it again, what would that mean?
+Intake super important.
+
+Guide: what does it promise to guide you through? The survival guide was interesting ... ideas of orienting, some parts were really about survival? Taking the survival litterally? (also the clinic services were super mixed). 
+From what you think is interesting, to making it interesting for others?
+
+Feedback from participants ... what has changed/shifted in working with software might have happened?
+
+-- we decide to collectively go through the files and traces. Many things we forgot about! Also finding back some notes on observation, what the guide could be, and how to structure it. 
+http://pad.constantvzw.org/p/observatory.inventory
+
+Some things for a second round:
+*Peggy: interested in doing an interview with Jean Huens, or make sure this gets reworked/made into a good document.
+*Anita: Find concrete ideas of ways/traces of how the conceptual structure of TGSO worked out, developed during the session. Fpr example: recover from the scattered notes the use of forensic tools.
+*Martino: ref. http://diversions.constantvzw.org/ but in this case, make different versions/readings of the material. Guided tours!
+*Femke: Would like to see/work on a "repackaging" of the Walk-in clinic, document the services + files etc.
+*In a text, a recorded/annotated discussion ... to discuss how we went from the call to what we are able to think now? Try to read back the week through the question we asked, and to see what happened, what steps we took. How did the blocks help? How did the group itself framed it? Different layers of discourse.
+
+After Monday: write to the list to see who wants to help/join?
+
+Meeting I Round 2
+
+Carlin: What do you remember? Conversations about power, political economies, colonial histories. 
+Notes from clinic -- collective performance. What would it mean? What would be constant, what iterative. Intake? Outtake? Should all the stations be repeated? Can it travel?
+
+The cargo cult discussion which disappeared from the clinic
+It wasn't there yet in Namur -- started in Leuven? All the terminology of Agile is in the clinic but the explicit reference to the political economies disappeared. A lot of humour (one way of critique) but maybe other things disappeared. If we think about a publication etc. etc. it is something to think about.
+
+
+discussing the issues with the dump -- a way to make the archive flow into the future ...
+
+Martino: Could the guide give different readings/guide through the dump?
+Can the "feed system" be a way ... (sth that is being developed for constant website). 
+A list of materials and a list of links. What systems could there be that allow for a list of materials and list of links as a kind of navigation that would allow multiple paths and multiple narratives
+How to make use of the fact that the post-processing is done by multiple people. The collective care-taking can be a way to keep things a bit more multi-narrative, heterogeneous.
+feeling of obligation towards all traces.but
+observation/critique/engagement relation
+
+Time capsule for group. 
+
+Reader
+(Guide as?) Documentation
+Reflection
+Next - Publication
+
+
+Reader as a pre-event
+"dump" as a doc of the event -- make something that is accessible to the group that participate
++ reflection -- write, make. It is another audience.
+
+Who are the different audiences for this material?
+not everything needs to be digestible to everyone
+
+themes -- for another audience?
+by going back you start to see what was there and not
+looking through dump for evidence of what we wanted to say
+
+Example: for relearn 2015 there was a trick to make an index together. The conversation of making the index is there too.
+http://relearn.be/2015/etherdump/appendindex.html
+
+A list of terms ... play .. concrete + common
+
+Peggy wanted to develop some material, getting some new material in. Infinite! Galactic!
+
+Framing texts should be not too hard now. 
+
+Seda: audiences -- 
+
+documentation vs. publication
+something that people who participated to can point to: appendindex is more a documentation, but not really a publication
+*documentation: communicates that something happened and that there is an urgency to the material
+*
+reperformance!??!
+*- people asked Femke, Donatella, Constants to do a reperformance/at a yearly festival.
+*- that would push production issues to the fore, not something that many of us feel excited about
+*
+questions could be:
+What happened?
+What is here?
+What is missing?
+What was missing?
+
+Performance -- ref. Public School, para-educational. Multi-subject. Platform. An instruction manual.
+https://publicschoolnyc.com and/or http://thepublicschool.org/
+
+what people found interesting, is the format. So maybe not so much about the material itself?
+
+Discussion: where did we start, and what happened?
+We are going to ask what it means to observe software? A critique of software studies. Is this the lens to look through the six days?
+
+Ref. toolclinic: to look together/to observe software. http://www.vj13.constantvzw.org/site/transmission/extended see: "EU in the making, an insider’s view through Parltrack and Pippilongstrings."
+
+Martino: What changes when you transform the research you are doing into something performative or something that is a service? It is in the tensions between the two modes (research and presentation/providing)
+
+What is performance? 99% uptime, agile yoga and runtime
+Making public through your presence
+Run-time as a performance .. self-conscious presentation. All services are performance? Yes.
+A shortcut to communicate with people. It was more like an open day? We could not really share what we wanted to share, AND have a good user experience. 
+
+Seda: thinking back of experiencing binary computing through enacting it. http://constantvzw.org/vj12/spip.php?article13 
+Sensation of bottlenecks for example.
+Different thinking of the observatory, the clinic, the service model, ... (these are metaphors/analogies of how knowing is/can be done)
+a way to experience agile ourselves, and with others.
+
+For some it was an interesting way of reflecting on software without it being complicated/embarassing
+And, for us, optimizing the machine as we went, Mia rerouting stuff, and the API failings, all the patching that happened
+
+Agile = experience, not knowledge (!!!??) because there is no document/situation/trace
+services are ephemeral.
+assumptions about what a service is: smiling face, good experience
+
+in the reader and discussions: services were a question
+it was no shared a discussion topic throughout the days
+
+I am saying that the isseus that became manifest in the clinic
+But they were not consciously placed there
+
+in a way it is a thing that is hard to observe through documents but as acting it out
+don;t you think by going into the services, people started specializing, which is what services is
+
+yes: the release with the agile yoga together at the end, and the laughing fits
+was also a reaction to being at the hands of the intake nad continuous integration, it was literally a release
+(seda note to self: bottleneck becomes the centralized frustration generator in a distributed world)
+
+the question is how would you get to the experience of observing software from the inside and the outside
+
+
+What is it possible to observe from an object, a machine, a network, a service? 
+
+
+our very first day in Namur
+historical objects: 
+we had not used them, distance to the objects that could be observed (because of not being familiar)
+it feels like the two poles: objects in a museum so that you can see them, totally taken out of use, and then the clinic
+know through play and use and improvisation and rhythm
+we didn't predict it, 
+the lines on the floor
+
+necessarily, in preparation you "optimize"
+it would be hard to repeat: it was in the pressure of turning something that was not defined into a service
+
+there is something in the question that martha is bringing up
+agile is not knowledge production as we know it
+if we want to observe it, we need to find other tricks to do it
+in shrink wrap software you could look at the documentation, the code, the vocabulary
+you would do more traditional forms of object observation
+and here, i think our intuition was right to go through it ourselves and embody it and understand it that way than by looking at it
+
+could we ask the other participants to comment, too?
+the specific mode of experiencing and make it experiencable
+and running into all the problems that we had
+i saw the pen up and pen down performed
+OSP has been working on curves and digital drawing
+and they were doing a performance
+they were trying to, by going through the 3 different ways of drawing a circle, their audience was able to understand that the way itis drawn is completely different and that has consequences for programming, drawing and what it means to make a curve
+that had nothing to do with agile or not
+it is about math, hardware, programming
+HPGL: the language for plotters
+Logo
+Metapost
+drawing a line ends up with the same result but with circles they split apart
+how you get from a to b, how you move and how you draw
+
+as a way to engage audiences with stuff that is usually left to the experts
+the performative: make experiencable is a method
+which we have been testing and trying in different ways
+
+do you mean our experience or those who visited the clinic?
+i mean both and this is where the concept of performance is useful
+
+Performance as a way of distributing the experience between those who make the movement and those who encounter(?) the movement/demonstration
+
+if we think about guide
+is this still relevant?
+
+
+instead of presenting ... different groups could be guided through thinking about software.
+bring a group together and maybe ask ... euhhhh
+
+the ghost of the guide gave framework for the week
+
+in the case of the clinic, performance = exercise?
+
+give the ghost a solid form by throwing a sheet over it
+
+The guide ... as a compendium/conversation on methods for observation. 
+The interest is: what ways of knowing? What gets documented? Not just the last day, but all conversations/presentations had elements of that. 
+
+
+i feel like there are two shifts:
+    documentation to "running code or software"
+    running shrink wrap code to running services
+    
+ok, if we want to do a guide, is it something we create from scratch or are there elements that could help us?
+
+the whole worksession as a series of ways of observing.
+if we go through the documentation, do we find some methods of observation
+
+
+Agile as the end of knowledge, looking at humans no longer does it. The idea of knowledge is that ?
+Universal action without knowledge
+
+
+Publication: Can we think of a way to continue from the session as "proximate practices of critique with and of software"? 
+Documentation: How to make the TGSO documentation legible and available, first of all to the participants and second to interested others? 
+http://pad.constantvzw.org/p/observatory.inventory
+http://pad.constantvzw.org/p/observatory.methods
+
+
+
+Meeting II
+
+1 + 2 December
+Meeting 2
+
+
+
+
+----
+
+Budget for TGSO afterlives: 2400,-- all in. 
+To be spent in 2017
+

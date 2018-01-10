@@ -1,0 +1,150 @@
+I. WHAT IS SOFTWARE
+II. WHEN AND WHERE IS SOFTWARE
+III. OBSERVATION AND ITS CONSEQUENCES
+
+Chronological list of methods has moved here: http://pad.constantvzw.org/p/observatory.methods
+
+To be added to the reader:
+
+*Jonathan Crary : 24/7 (also author of _Techniques of the Observer_ )  https://marcell.memoryoftheworld.org/Jonathan%20Crary/Techniques%20of%20the%20Observer%20(1814)/Techniques%20of%20the%20Observer%20-%20Jonathan%20Crary.pdf>  <https://slowrotation.memoryoftheworld.org/Jonathan%20Crary/24_7_%20Late%20Capitalism%20and%20the%20Ends%20(22478)/24_7_%20Late%20Capitalism%20and%20the%20E%20-%20Jonathan%20Crary.pdf>  
+
+
+Materials from the worksession
+*From etherbox: http://observatory.constantvzw.org/ 
+*etherdump: http://observatory.constantvzw.org/etherdump/_new_index.html
+*Pictures: http://images.constantvzw.org/Techno-Galactic-Software-Observatory/gallery.html ( http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory )
+*More Pictures: http://observatory.constantvzw.org/images/gallery.html ( http://observatory.constantvzw.org/images/ )
+*Mailinglist: https://tumulte.domainepublic.net/cgi-bin/mailman/private/observatory/
+*Videos: http://observatory.constantvzw.org/video/  [videos Michaela? MM: emailed asking about them 12 oct ...] also trying to track down wendy's videos (emailed 13 oct) -- FS has them, will upload? ... http://observatory.constantvzw.org/documents/michaela/
+*Sound recordings: http://observatory.constantvzw.org/audio/ (maybe not complete --- it's just from one source)
+
+Micro-?
+Jogi - [Observatory] When dirty.db get's dirty http://pad.constantvzw.org/p/observatory.inventory.jogi
+
+Close Encounters
+Touring the computermuseum in Namur
+*Notes:
+*Images: http://observatory.constantvzw.org/images/wednesday/ + gallery
+*Sound: http://observatory.constantvzw.org/audio/file0171.mp3
+
+Jean Huens: Tour Computermuseum KU Leuven http://www.etwie.be/database/actor/computermuseum-ku-leuven
+*Sound: Seda escorts us to the Computer Science department http://observatory.constantvzw.org/audio/file0172.mp3
+*Jan Huens I: http://observatory.constantvzw.org/audio/file0173.mp3
+*Jan Huens II: http://observatory.constantvzw.org/audio/file0174.mp3
+*Notes: http://observatory.constantvzw.org/etherdump/jean_huens.html
+*Images: http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3372 + 
+
+Mia Melvaer: The Relaxing Fountain
+*Manifesto http://observatory.constantvzw.org/documents/mia/technogalactic_text_only.pdf
+*Images: http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1303 + http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3436 + 
+      from mia:
+*          Image of fountain front face: http://observatory.constantvzw.org/documents/mia/FullSizeRender%2811%29.jpg
+*Timeline: http://observatory.constantvzw.org/documents/mia/IMG_5695.JPG
+*Cup "I hope you are comfortable" and name Sarah http://observatory.constantvzw.org/documents/mia/IMG_5698.JPG
+*       GIF-FOUNTAINS!!!
+*            http://observatory.constantvzw.org/documents/mia/mia6.gif
+*           http://observatory.constantvzw.org/documents/mia/mia7.gif
+
+Silvio Lorusso: The Entreprecariat
+*Images: http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3402 + 
+*Sound: http://observatory.constantvzw.org/audio/file0179.mp3 (audio cuts off when the recorder battery dies)
+*Notes: 
+*Videos: http://observatory.constantvzw.org/video/friday/P1010290.webm + http://observatory.constantvzw.org/video/friday/P1010295.webm +
+          COLLECTIVE CHAIR YOGA!!!! http://observatory.constantvzw.org/video/friday/P1010298.webm
+*
+*LINKS FROM SILVIO
+*- link to slides https://cryptpad.fr/slide/#/1/view/p8EiphzdeHeVf1yI3NJGEQ/hWWCDdvOB+ulWbxgpk9Y9Q2ixCSShE8TQRxjRoM80aA/
+*- Shouldn't You Be Working? http://networkcultures.org/entreprecariat/shouldnt-you-be-working/
+*- SYBW? stickers collection http://silviolorusso.com/work/shouldnt-you-be-working/
+*- Overnight or Night is Over — F.lux and the Absolute Temporality of the Internet http://networkcultures.org/entreprecariat/overnight-or-night-is-over/
+*- "This website is available 23 hours a day, 7 days a week" by Mario Santamaria http://www.twenty-three-seven.com/
+*- a tweet about Slack rhetoric https://twitter.com/briecode/status/785398404155338752
+*- chair yoga with breakpal https://www.youtube.com/watch?v=vuOd_xB-SAM
+*- Mood Hacking http://networkcultures.org/entreprecariat/mood-hacking/
+*- The New Psycho-Cybernetics by Maxwell Maltz https://archive.org/details/TheNewPsychoCyberneticsByMaxwellMaltz1
+*- interview with Maltz https://www.youtube.com/watch?v=JfVWWX2s7KE
+*- Maltz and Dali https://www.youtube.com/watch?v=0eV1X6PR1-w
+*- noproblemos http://noproblemos.me/
+*- The Mismanaged Heart by Will Davies http://reallifemag.com/the-mismanaged-heart/
+
+etherbox-markdown sprint: http://observatory.constantvzw.org/etherdump/etherboxmanual.pdf + http://observatory.constantvzw.org/tmp/
+
+Thomas Cnudde: Side-Channel Attacks https://www.esat.kuleuven.be/cosic/1018-2/
+*Images: http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3381
+*Notes: 
+
+
+Mapping/Glossing for guide
+http://observatory.constantvzw.org/etherdump/multiple-software-axes.html --> 
+Zeljko Blace : map software axis matrix
+http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/PWFU3393.JPG?m=1497084667
+map http://observatory.constantvzw.org/images/thursday/P1050551.JPG http://observatory.constantvzw.org/images/thursday/138874.jpg http://observatory.constantvzw.org/images/thursday/138875.jpg
+gloss/keywords/definitions: http://observatory.constantvzw.org/etherdump/vocabulary.html
+    http://observatory.constantvzw.org/etherdump/observatory.keywords.diff.html
+    http://observatory.constantvzw.org/etherdump/problematization_of_definitions.md.diff.html
+on sunday http://gallery3.constantvzw.org/var/albums/Techno-Galactic-Software-Observatory/IMAG1402.jpg
+seamlessly resulting in http://observatory.constantvzw.org/etherdump/clinic.introduction.pdf
+    
+TOC/Guide (started on thursday in leuven)
+http://observatory.constantvzw.org/etherdump/toc.md.diff.html
+
+Files/exercises/debugging/aquinas
+What is a stored program? Where is it stored? (and meta)? Looking at files in different ways (Anita + Martino)
+*Notes: http://observatory.constantvzw.org/etherdump/files.html
+*Images
+*Sound (?) 
+*Reworked exercise in Leuven:
+
+from Joseph/a/a:
+"aquine - searching paranoia and serendipity"
+
+it was about software that observes the execution of software. not the
+output. not the structure. it was about the process it self, therefore
+the reference to Thomas of Aquin.
+Once during the great technogalactic software observatory I compiled
+cryptic notes from the pad to a man page(in the attachment called
+"aquine.1"). you can run it with "$ man -l aquine.1"
+
+See: http://observatory.constantvzw.org/documents/joseph/aquine.1
+
+The Walk-in clinic
+Do you  suffer from the disappearance of your software into the cloud, feel  oppressed by unequal user privilege, or experience the torment of  software-ransom of any sort? Bring your devices and interfaces to the  World Trade Center! With the help of a clear and in-depth session, at  the Techno-Galactic Walk-In Clinic we guarantee immediate results.
+The  Walk-In Clinic provides free hands-on observations to software curious  people of all kinds. A wide range of professional and amateur  practitioners will provide you with Software-as-a-Critique-as-a-Service  on the spot. Available services range from immediate interface critique,  collaborative code inspection, data dowsing, various forms of network  analyses, unusability testing, identification of unknown viruses, risk  assessment, opening of black-boxes and more.
+Free software observations provided. Last intake at 16:45
+
+List of services http://observatory.constantvzw.org/etherdump/clinic.allservices.pdf (is this final?) 
+or http://observatory.constantvzw.org/etherdump/clinic.services.pdf ?
+http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1401
+
+What is it like to be an Elevator (Flowchart used during performance)
+Joseph Knierzinger
+http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
+http://observatory.constantvzw.org/documents/joseph/flowchart.dia
+
+
+*Intake
+*Intake script: http://observatory.constantvzw.org/etherdump/clinic.intake.html
+*Something In The Middle Maybe (SiTMM)
+*Rsoc - Relational software observatory Consultancy service
+*"What is it like to be an elevator?"
+*Interface Détournement
+*File therapy
+*Agile Sun Salutation http://observatory.constantvzw.org/documents/anne/agile_sun_salutation.txt
+*Continuous integration
+*Techno-galactic software walk-in clinic
+*Reception
+*Future Blobservation Booth
+*Retrospection
+*Refreshment
+*WTC-time
+*http://observatory.constantvzw.org/etherdump/negotiating-time.html 
+*http://observatory.constantvzw.org/etherdump/ends-of-time.html
+*Flow of the chart - chart of the flow on demand!
+
+
+Preparations
+*Programme: http://pad.constantvzw.org/p/observatory.programme
+*The Techno-Galactic Software Observatory Reader: http://pad.constantvzw.org/p/observatory.reader + make scan/pdf of the original ?
+*Call for participants (deadline: April 23, 2017) http://constantvzw.org/site/Open-Call-for-The-Techno-Galactic-Software-Observatory.html
+*Participants: http://pad.constantvzw.org/p/observatory.participants ---> When Travelling from Namur back to Brussels, we made an exercise to use the (portable) etherpad to make observations of each other: http://observatory.constantvzw.org/etherdump/participants.diff.html
+

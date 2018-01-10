@@ -1,0 +1,750 @@
+http://pad.constantvzw.org/p/observatory.afterlives
+http://pad.constantvzw.org/p/observatory.inventory
+http://pad.constantvzw.org/p/observatory.guide --> 1-2 December
+
+9 JANUARY MEETING
+
+TO DO BEFORE 9 FEBRUARY
+
+Christoph: Style guide, new pdf
+Christoph: take care of backup
+Femke SEND EMAIL BEFORE THE WEEKEND WITH MESSY PDF
+Carlin + Seda see if they can do something for the intro (Femke maybe joins/looks over [will do!])
+Anita sends editors a proposal for punchcards, afterwards add on-line
+Martino + Femke + Anita (rescue, also): intros, 14h CET 31/01
+Martino re-ask Hans
+All: go through methods we started/adopted
+[Carlin rereads Peggy's transcription]
+
+--
+
+Agenda for tonight meeting: 
+THE INTERNATIONAL MEETING
+- See what still needs to be done
+- Send out e-mail to TGSO list: deadline 29 January
+
+Meet here at 20h CET https://meet.jit.si/observatory
+
+Editing
+Carlin has been reading, working on some items. Editing glossary.
+Question: what about this warning:
+http://pad.constantvzw.org/p/observatory.guide.warning -- it is a meta-warning that should go first? (now under the essentials)
+She Does Not Feel Lost.
+What scale of conversation? Intro could do with some tweaking, but in general works.
+Read through half of the methods. Feels familiar. Need to hand it to interested people that were not at the workshop.
+Send this to people that were at TGSO first.
+Likes the mix: Conversational and some more 'technical'.
+
+Seda also had a look -- some things to add and remove ... introduction (stops with freelancer-utopia, but what about turkers, clickworkers, on-line task workers ...)
+Might need something on services in the clinic description. Some humor!
+In general: we could be funnier and more surreal! Funny + sharp. Could use some edge. "We cannot be funny with software right now"
+Databases of populations (El Salvadoreans about to be deported, India's biometric database being sold to journalists etc)
+Emergency ... games of words. Needs some push.
+Continuous integration missing from html?
+
+https://pad.constantvzw.org/p/observatory.guide.introduction
+Tension in the introduction. First: critical distance, then entanglement. Need to name it/connect it. Helps to tie in the quote?
+Later: "going beyond" ... MMo -- need to reformulate. Make quote (why it is there) more xplicit.
+Distance can be critical but not always. 
+
+
+Work a bit more on the introduction, this can work on its own?
+So the text should be a text to be read that stands on its own and does work on its own. 
+Maybe the introduction needs to be more explicitly political.
+
+Seda looked for methods -- there are some missing. Christoph will make them appear!
+Also: if we open to others, they will bring new energy.
+Calendar App Collapsing!
+Peggy: we can do this on the 9th? Or maybe not. 
+Seda: separate time for sharpening the introduction, to keep serioussnes and humor together.
+
+Cluster descriptions not done yet/not in the html. Should we write them or use quotes?
+Some Humor Can Go Here.
+Needs writing -- we tried using quotes only, but it does not work for all.
+
+http://pad.constantvzw.org/p/observatory.guide.grouping.temporality
+http://pad.constantvzw.org/p/observatory.guide.grouping.languaging
+illustrations to open the groupings
+Works well with the design! So, make mixes of images/quotes and some writing.
+Carlin: it does not need to be a lot ... one or two words. Titles already do a lot.
+
+Appendix
+Peggy has done the interview and will do the transciption by next week
+Meeting was very nice! New stories added. Anecdotes.
+(CH: what about the interview, where/how to put it?)
+Let's just put it into the https://pad.constantvzw.org/p/observatory.guide.jean.heuns pad
+don't mind the formatting right now.
+An hour of conversation. Keeping all of it? An excerpt? Use extracts through the quide.
+Decide on the 9th of February 2018 ?
+Peggy will do the transcription anyways. CH + FS think it could work well, different pace.
+
+What other extra materials could go in an Appendix?
+the full interview Peggy did
+Jogi's email
+What else?
+Hans text on time: wanted to work on the text -- finished by 9th of February
+Anita: wrote on punchcards, needs to be finished ... a short version would be nice!!
+
+Christoph advanced on processing the pads:
+Christoph is "pretty fine"
+
+different parts, different treatments. Now very basic.
+
+http://observatory.constantvzw.org/tgsoguide.html
+http://observatory.constantvzw.org/
+-> tgsoguide_1801091008.pdf
+
+To get an overview regarding the current state of editing the html output works better as the pdf requires more work on the details and layout, which still needs to be done. To keep track of things to be done I added a temporary '% TODO:' 
+
+FYI: http://gitlab.constantvzw.org/ch/observatory.guide
+
+Tech question: intake form ... could we link it, how does it work? How to integrate documents (like pdfs)?
+write in your pad ...
+% TODO: include pdf here linktothepdf
+and CH will look :-)
+
+Including other TGSO people: an email!
+- specific questions
+- general call
+- make little howto (until next week?)
+- make a back-up of the current version before the email goes out to the larger group
+
+Subject: Call for contributions TGSO guide (deadline 29/1)
+
+Dear all,
+
+It has been a while since we ended the Walk-in clinic with agile yoga! In the mean time, Anita, Martino, Carlin, Peggy, Seda, Michael, Femke have been joined by Christoph to work on The Guide To Techno-Galactic Software Observation.
+
+We have been trying to put together a collection that works both as a documentation of the session and as a /new/ publication. As part of this we have created a list of methods for software observation that are drawn from the worksession documentation. We chose to show the materials in terms of methods for observation, hoping this loose frame can welcome irony and bending.
+While we are trying to reach some density and coherence, the guide does not aim for completeness. Rather we hope to give an impression of the variety of tones and materials that were manifested during our 6 days together. Now that there is some basic structure for the guide, we would like to invite you, our fellow observers, to add materials and/or add methods you feel must be in THE guide to techno-galactic software observation!
+
+Here is a first pdf: [LINK HERE]. 
+You can find the live index to all methods so far: 
+    http://pad.constantvzw.org/p/observatory.guide
+    There is some markup added for generating the guide directly from pads, obviously. A few of the things missing from this pdf: A transcription from an interview with Jean Huens (Peggy), Hans' text on time, Anita contribution on punchcards. And a thousand other small things.
+
+You are welcome to update/complete/correct existing items or to add new ones. Some examples of more or less 'complete' methods that you can copy from: 
+    https://pad.constantvzw.org/p/observatory.guide.agile.yoga , 
+    https://pad.constantvzw.org/p/observatory.guide.somethinginthemiddlemaybe , 
+    https://pad.constantvzw.org/p/observatory.guide.visit , 
+    https://pad.constantvzw.org/p/observatory.guide.monopsychism
+
+Style guide below!
+
+If you would like to make use of the notes from the worksession, you can find the pages indexed here: 
+    http://observatory.constantvzw.org/etherdump/_new_index.html
+
+We have only a short window of time to put this together so that we can meet the publication deadline. The deadline for your contributions is January 29
+
+If you want to commit to a contribution, or have questions, or comments, please send an e-mail to the mailinglist [observatory@lists.constantvzw.org] in the coming days so we can all coordinate.
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+= HOWTOEDIT = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+The Techno-Galactic Software Observation Guide uses an extended
+dialect of markdown. Next to classic markdown ( http://lfkn.de/md )
+you may write `instruction lines` that tell the translator about the
+desired output. An `instruction line` starts with `%` and takes
+everything after the first colon as input e.g.
+
+% SUPERLARGETEXT: Something all should know
+
+will insert 'Something all should know' using whatever is considered
+a superlarge textsize.
+
+
+CURRENT INSTRUCTIONS
+====================
+
+% METHOD: sum up the method
+
+The main description of the software observation method
+
+% WHAT: what it is
+% WHEN: when it was
+% WHO:  who has done it
+% WHY:  the big question
+% HOW:  how to do it
+% URGENCY: why it is urgent
+% WARNING: what to beware of
+% REMEMBER: never forget
+% NOTE: a note is a note is a note
+% EXAMPLE: real or not so real world example
+% RELATESTO: http://link/to/a/pad
+
+Standard descriptors of the method.
+Somehow self-explanatory?
+
+Empty descriptors will be ignored. To force an empty
+descriptor, maybe as a headline, if the content requires
+more space, use a dash e.g.
+
+% EXAMPLE: - 
+
+===========
+
+% SEEHERE: http://link/to/a/pad
+% SEEALSO: http://link/to/a/pad
+
+Used for adding methods to the index
+https://pad.constantvzw.org/p/observatory.guide
+% SEEHERE will directly include a document.
+% SEEALSO will put a reference.
+
+===========
+
+To mark up sections you can use separators `% ------` e.g.
+
+% -----------
+
+ tac ${TMPID}.part |
+ grep -nE "^% [-]{4,} *$" |
+ head -n 1 | cut -d ":" -f 1
+
+% BASHCODE:
+
+will display the section between the command
+and the separator as bash source code.
+
+At the moment there exist following section markups:
+
+% BASHCODE:     <- Bourne-Again Source Code
+% VERBATIM:     <- Includes Text as it is in a mono-spaced font.
+                   No linebreaks -> long lines (>80c) will overshoot
+% VERBATIMWRAP: <- same as verbatim but does linebreaks.
+
+For requests see 'FUTURE INSTRUCTIONS'
+
+
+
+FUTURE INSTRUCTIONS
+===================
+
+The markup vocabulary is meant to develop during the editing process.
+If you have an idea about some instruction that should be added,
+you may write a `% TODO:` instruction as a request for future implementation e.g.
+
+% TODO: include pdf here: http://linktopdf
+% TODO: gigantic exclamation mark here
+% TODO: draw a box with 'some warning'
+
+
+Current instruction set to be found here:
+https://gitlab.constantvzw.org/ch/observatory.guide/blob/master/E/tgsoguide.functions
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+
+
+LAST ROUNDS 2 DECEMBER
+
+Planning
+
+Before January 9:
+- Finish descriptions of clusters (Martino? + Femke?) NOT DONE
+- Finish introduction (Done for now? Maybe another round on Feb. 9?) DONE
+- Interview Jean Huens + transcription (Peggy) interview DONE, transcription next week Wed
+- Establish a level of editing that shows a balance between documentation and guidance (all of us try to finish the entries we took on)
+- Finish pdf to a point that no content is missing and we can start discussing design (Christoph) DONE!
+
+Meet January 9, 20h CET (1.5 hr meeting max)
+- See what still needs to be done
+- Send out e-mail to TGSO list: deadline 29 January
+
+[Carlin starts editing]
+
+9 February 12h CET: we meet to finish whatever needs to be done 
+Carlin joins at 16h CET
+
+End February: print
+Main pads:
+http://pad.constantvzw.org/p/observatory.methods
+http://pad.constantvzw.org/p/observatory.guide
+
+---
+
+Carlin's questions
+- editing process
+*- different approach for primary materials (taken from workshop) vs framing materials created now
+*- in order to respect the documentation of the primary material (michael)
+*- how can this be a document that oscillates between "look what cool methods we used and "here are some things you could try out yourself"
+"If you are writing, you have liberties" - if necessary, ask people who were involved in the thing to 
+- order of entries
+http://pad.constantvzw.org/p/observatory.guide
+- incorporation of photographs, diagrams, etc
+YES!
+- small note (visit computer collections appears twice in the current html)
+(probably ok now?)
+
+look for phrases / ways for introducing the chapters/groupings. Could be just a line? A task for someone?
+Test: http://pad.constantvzw.org/p/observatory.guide.grouping.temporality
+
+Introduction http://pad.constantvzw.org/p/observatory.guide.introduction Peggy + FS + Seda first round
+
+Add reference to the walk-in clinic? A description. Unlike normal guides: we have not removed the process. WARNING: there will be a mix of abstractions and concrete experiences.
+
+Carlin works on 3 entries
+
+The interview needs to be done -> Peggy
+
+Hans e-mail -> Martino
+Ana + Ricardo -> Femke
+
+For each of the chapter descriptions: quote from the materials/reader? Could be an image. Or a short inspirational phrase? -> Martino tries
+http://pad.constantvzw.org/p/observatory.guide
+
+An email to other TGSO participants, call for help/see if further material is available (once the PDF is more stable)
+
+WARNING: pad fatigue might occur
+
+latex todo:
+* be able to force empty new lines  (f.ex to put back lines in scrollresistance)
+* differentiate code quotes from pad quotes
+
+
+
+
+
+SAS Survival Handbook: The Ultimate Guide to Surviving Anywhere 
+https://archive.org/stream/SASSurvivalHandbookTheUltimateGuideToSurvivingAnywhere/AppNee.com.SAS.Survival.Handbook.2nd.Edition#page/n359/mode/2up
+The  Rudiments Of Wisdom encyclopaedia by Tim Hunkin.
+http://www.rudimentsofwisdom.com
+
+issue: different materials. works well to situate the week. fr an interview, a good way to introduce. but with folders, code ... so brought the SAS guide. What is good about that it is very loose ... different layers, zooms ... 
+flowing things from one into the other .. not too formulaic. find ways to jump different tones.
+multiplicity of tones. so ... something in-between the two
+
+template as a way to make the connection back to the original questions ... what are the things to pay attention to, to give space to it.
+
+we did not do any grouping, but maybe that could be interesting to try?
+
+we were testing observatory method, the chronological order to prevent us from paying too much attention to the clinic and would also look at the exercises and thinking from the first days. 
+
+could each method then propose its form/content?
+
+even to have chapters that have no entry or only an introduction and no methods, to play the templating without feeling that we have to fulfil that template 
+
+http://observatory.constantvzw.org/documents/mia/mia6.gif
+
+noise is back,
+
+test: make a round of groupings / hierarchies affinities
+test: make more methods
+test: other templates
+
+seda wondering about us defining different types of participants: stationary (that's us), migratory (but some stayed), walk-in (visitors to the clinic), sedentary ... was that a method?
+do all the methods need to be related to software? YES but WHAT IS SOFTWARE
+
+sing through and to the hardware and software
+
+what is the 'entrypoint'(element from inventory?)-method relation
+methods as a way to label and address things, still keeping open to other materials to enter (ie interview..)
+
+Everything in the guide is a METHOD, but how do we group and groom the methods???
+
+Do we do a publication, an event .. the fact that we have been through an event, and even that we describe it, means we are developing the methods.<- is this like observation transforms the method!?
+So: is this documentation, or will we open it to new input. Ongoing.
+
+Difference between documentation and publication
+
+Exampe: e-mail of jogi. 
+That report is already published and structured? It is an easier ongoingness -- to accept other contrib
+
+ongoingness? thinking it structured around the week, and its participants. if you have not been involved, it is difficult to understand?
+
+Who is it for? Do we want it to be of use? The difference between documentation and publication is the imagined audience
+documentation: audience is the participants, does not have the ambition to be legible to non-participants
+publication: a broader audience (with contributions from other participants but not from those who did not participate in the work session) who would be able to pick it up and understand the techno-galactic condition
+
+
+Can we decide on a few kinds of formats and test them
+- one can be a breakdown like on the methods list
+- one can be more just description/summary/exericse
+
+we look at the methods
+and other forms of documentation
+see if the proposed structure works
+specifically:
+*test: make a round of groupings / hierarchies affinities
+*test: make more methods
+*test: other templates
+*
+7:20 CET back to discuss
+
+Peggy:
+
+For the interview ... something that could be easily done, short bio interview with 2-3 q to the participants. Easy to do, and a bit is already done in the introductions. Would be good to have it in the guide for people that have not been involved. Carlin likes this too!
+P. still likes to do long interview with mr. Huens.
+Would like to write down the visit to the museum as an 19th century explorer .
+
+Martino: groupings can certainly work. It can work, and connections are interesting. Two ways to go through? -- going to the groupings now -- 
+
+Templates
+Groupings
+
+Seda filled her own template ... now on line 116 .. "Testing the testbed"
+
+Anita: liked the grouping. Tension between formal and conceptual groupings. 
+In case of doubt, turn to the SAS survival handbook.
+
+How will we get this done?
+[[WARNING: This is epic and may take the rest of our lives.]]
+
+2 days *full on* will intensively generate lot of material. 
+where would we be after?
+ what do we need before then?
+
+Carlin joins Friday afternoon CET
+
+THE WEEKEND (DEC 1/2, 2017)
+
+A beginning of an introduction
+
+A certain amount of methods (common and uncommon)
+
+A structure
+
+--
+AFTERWARDS
+
+Peggy: the interview 
+
+open up to contributions from participants [what space remains?]
+facilitate a response
+
+Transcription
+QR code in paper publication?
+
+Marking up
+Design/production
+Editing
+
+paper publication: small but many
+pocket guide
+
+let's not worry now about the level of editing/publication ... a publication or documentation?
+not sure yet what to do with non-text materials
+how to make sure there is also sth accessible on-line
+
+2400
+
+BUDGET UPDATED 14/11/2017
+Printing/binding 375 (+ print on demand) [so that's 125 copies or so? depends]
+Design 1000 -- Christoph Haag!
+Train Christoph -- 200
+Transcription interview 200 -- Peggy
+Editing 400 -- Carlin
+Translation (intro?) -- we do it ourselves
+train tickets 150 -- Peggy, Anita
+food weekend -- 75
+
+(can Christoph come?) YES
+
+
+
+- contact Christoph before 1 december DONE
+- peggy records interview before 1 december
+
+start Friday 10h
+Concentrate most of the work
+Carlin joins 4pm - 6pm
+
+Saturday start 12h stop at 18h
+Handover with Carlin at 17h
+[FS meeting Christoph in the morning, and evening]
+
+
+CARLIN's AVAILABILITY
+4pm - 6pm CET (7am - 9am PST)
+(PST Friday afternoon and evening)
+4pm CET onwards on Saturday (7am PST)
+<3 <3 <3
+
+
+
+Methods for (engaged) observation of software
+
+An inclusive list of methods that appeared during the worksession. 
+Question: are we validating if they are "interesting or even "engaged"? If the object is produced by the mode of observation. or what if the mode of observation is produced by the object ...
+Are we producing a guide that we want to exist or producing a document of what happened (a bit of both?)
+Name the things that we might otherwise take for granted.
+How do we name what's different about software and observation across time, without rendering the new or the old into an ideal?
+A quite litteral, chronological list: based on the week, based on the observations of/that were experimented with the week
+*we follow the methods of observation day by day, session by session and list them. 
+*follow the program, but all the different things that started to happen.
+*Trying to stay chronological so we force ourselves to consider the different experiments/methods that happened.
+
+[[warning: "our methods for observation, like mapping, come with their luggage." from Thursday afternoon section of http://observatory.constantvzw.org/etherdump/toc.md.diff.html ]]
+[[warning: some of these methods are not suitable for agile software/SaaS observation]]
+
+TEMPLATE FOR DESCRIBING PROPOSED METHODS:
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+*Mode of engagement: 
+*Warning:
+
+##BEFOREHAND
+
+*Method: Prepare a reader to think theory with software
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+*Method: Testing the testbed: testing software with observatory ambitions (SWOA)
+*By/history/source/origin/process: the "original testbed" was proposed by researchers/collaborators in Princeton. Testing this testbed at a local Constant workshop led to the meta-project of testing software meant for testing software. 
+*How: The interwebs hosts many projects that aim to produce software for observing software, (from now on Software With Observatory Ambitions (SWOA)). A comparative methodology can be produced by using different SWOA to observe software of interest. Example: use different sniffing software to observe wireless networks. Doing so reveals what is seen as worthy of observation (e.g., what protocols, what space, which devices), the granularity of the observation (e.g., how is the observation captured, in what detail), the logo and conceptual framework of choice etc. 
+*Where/when/situation?: Ideally, SWOA can be used everywhere. In reality, institutions, laws and administrators like to control the use of SWOA on infrastructures not also run by the people running it. Hence, we get distinctions like researchers and pen testers (e.g., they were hired) vs. hackers. 
+*What: Deep philosophical moment: most software has a recursive observatory ambition (it wants to be observed in its execution, output etc.). Debuggers, logs, dashboards are all instances of software with observatory ambitions and can not be separated from software itself. So, what separates SWOA from software itself? HELP! 
+*Who/with: If you can run the SWOA (many of these are promises more than running software/available code), you can do it. The question is: will people like it if you observe their SWOA?
+*Why/urgency/ [this is maybe related to the engagement question?]: If critical engagement in software is a thing, it follows that people would develop software to observe. 
+*Note: [anything that did not fit above.]
+*WARNING: 
+*REMEMBER: Good SWOA software usually uses an animal as a logo.:D
+*See also: making a bestiary of visual cultures/logos around it
+
+*Method: Rearranging space as conditioning observations (WTC vs. Museum vs. University vs. Startup Office vs. Shifting Walls that became Water Fountains)
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+##WEDNESDAY:
+
+*Method: Visit a computer museum
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+*Method: tinyPersonalCASES
+*By: 
+*How: personal narratives through different roles ... meAsHardwareOwnerSoftwareUSER http://observatory.constantvzw.org/etherdump/TowardsRelationalObservatories.diff.html
+*Where: Everywhere
+*When: Anytime
+*What:
+*Why:
+*Who:
+*Note: When Travelling from Namur back to Brussels, we made an exercise to use the (portable) etherpad to make observations of each other: http://observatory.constantvzw.org/etherdump/participants.diff.html ]
+
+##THURSDAY:
+
+*Method: ask the same question to people from different fields (e.g. Jan(above) and Thomas:    "Hardware for me is made of silicon, software a sequence of bits      in a file     . But naturally I am biased: I'm a hardware desginer so I like to consider it as unique and special".)
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+*Method: making a bestiary of visual cultures/logos around it 
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+*Method: makefile as a method for quick/collective assemblages + observing amalgamates/pipelines
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note:  http://observatory.constantvzw.org/etherdump/makefile.raw.html
+
+##FRIDAY:
+
+*Method: observing how software observes the user
+*By: 
+*How:
+*Where:
+*When:
+*What: is it important to take a fundamental piece of software? Could it be the clock? (production of time/production of space as a pair of software applications that explore different constructions and conceptions and practices and techniques of time and space) 
+*Why: how are you imagined by the software as a user (pre-consieved image of the user by the software). how is the concept of time is a piece of software anyway?
+*Who: Who is the subject, or is there even a who?\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
+*Note:  -> time in software (for full list see: http://observatory.constantvzw.org/etherdump/friday.md.diff.html )
+
+*Method: otspos
+*By: Developed by the software sketching observation group yuppies [ssogy]
+*How: observing the sketching process of software
+*Where:
+*When:
+*What:
+*Why:
+*Who:
+*Note: It seems that they selected an object which then produced a certain kind of observation, is this included in what we mean by methods of engaged observation? OBJECT SELECTION AS METHOD (FOR SELECTING METHOD)
+
+##SATURDAY
+
+*Method: Comportments of software observation (or how to observe comportments of software?)
+*By:
+*How:
+*Where:
+*When:
+*What: Could this be put together with the agile yoga and become something that explores different kinds of injuries, occupational therapy, etc?
+*Why:
+*Who: Users/workers
+*Note: Etherbox observation by Becky (..."A familiar feeling hits me: a resignation to the fact that a lot of computing labor looks the same. People hunched in front of folding  objects, boring their eyes into an expanded universe invisible to the  observer.") http://observatory.constantvzw.org/etherdump/cargocultGalore.md.diff.html
+
+##SUNDAY
+
+
+
+##MONDAY
+
+*Persist in calling anyone A Software Curious Person
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: at a techno-galactic software clinic
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?] Persistance in naming is a method for changing a person's relationship to software by (forcibly?) persisting in calling everyone a Software Curious Person.
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+*Method: Engaging with code through collective reading, reading out loud (elevator performance)
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: [in what situation, space, circumstances does the observation take place]
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+*Method: searching "software" through software
+*so software exists only outside your computer? only in general terms? checking for the word software in all man pages: 
+*grep -nr software /usr/local/man       !!!!       
+*software appears only in terms of license:  This program is free software        This software is copyright (c)      we don't run software..we still run programs         nevertheless software is everywhere   http://observatory.constantvzw.org/etherdump/files.md.diff.html
+
+*Method: Rsoc - Relational software observatory Consultancy service
+*By: [who developed, tested, proposed this method]
+*How: [ideas for how the observation method can be applied]
+*Where/when: at a techno-galactic software clinic
+*What: [what/who gets observed. What software category does it apply to agile/SaaS?]
+*Who: [who/what gets to observe]
+*Why: [what is the engagement, of the observer with the observed and vice versa]
+*Note: [anything that did not fit above.]
+
+
+##POST
+
+
+
+
+*useless scroll against productivity (only if you go to the end of this pad here:  http://observatory.constantvzw.org/etherdump/friday.md.diff.html  )
+*forensics tools for studying software (or what it is?) <--- This seems too general? Agreed
+*`` I am less interested in the critical practice of reflection, of showing once-again that emperor has no clothes, than in finding a way to diffract critical inquiry in order to make difference patterns in a more worldly way. ” p429, Haraway, modest witness, 1996  from: http://observatory.constantvzw.org/etherdump/friday.md.diff.html
+*Bringing a moral, ethical, or otherwise evaluative/adjectival/validating lens: "This morning, Jan had difficulties to answer the question "what is software", but he said that he could answer the question "what is good software". What is good software? The more adjectives, the easier the answering?
+*A qualifier like "good", "bad", "spy", "queer", "proletarian", "bourgeisoie" can help narrow down definitions." http://observatory.constantvzw.org/etherdump/multiple-software-axes.html
+*Good and bad also came up with Thomas, dividing the world into good guys and bad guys
+*And we came up with a list of core values that we were working from/with - http://observatory.constantvzw.org/etherdump/toc.md.diff.html
+*"leakage of boundaries" continuum http://observatory.constantvzw.org/etherdump/side-channel-analysis.diff.html + http://observatory.constantvzw.org/etherdump/multiple-software-axes.md.diff.html
+
+An overview of related software observation experiments with co-presence, experience, movement, performance.
+
+*Human calculation machine
+*Print Parties (2006-....)
+*Cqrrelations/pipelines algorithms
+*Joana Chicau https://jobcb.github.io/
+*Pen up pen down (2010-....) http://osp.kitchen/live/up-pen-down/
+*Software as a critique (2016)  https://wiki.laglab.org/Software_as_a_Critique
+*Piksels and Lines @ The Libre Graphics Research Unit (2011-2013) http://gallery3.constantvzw.org/index.php/LGRU-Piksels-and-Lines + xxxx
+
+
+Methods for inadequate observation of software?
+
+
+
+I think about methods as ways of knowing. One way to handle the publication/documentation tension would be to structure a publication around a set of ways of knowing/methods and then select and shape documentation from the worksession as samples of these methods or taking moments from the workshop as prompts for reflection on these methods. Some of the play would come in from the mix of recognizable and common methods (visit a museum (ie. Namur and Leuven), conduct interviews (ie. with Jean Heuns but also as Relational software observatory consultancy service), organize and hold a worksession (ie. what we did), listen to an expert (ie. sidechannel)) with the less common ones (ie. create a bestiary of software logos, engaging with code through collective reading/performance, etc). 
+
+
+
+
+Chapters/sections
+
+-possible groupings..
+
+FLOWS
+flow-regulation, logistics, seamlessness
+continuous integration
+fountains (refreshment)
+etherpad->md->pdf->anything pipeline
+flowcharts excercise (Flow of the chart - chart of the flow on demand!)
+embodied flowchart-elevator
+
+temporality
+flux
+time-piece 
+tempo of agile software/SaaS
+
+resistance
+useless scroll against productivity
+Interface Détournement
+
+languaging
+aquine 
+glossary-excercise?
+qualifiers (secure, bad, bourgeois, queer..)
+
+healing
+relational software observatory consultancy service
+retrospection
+Agile Sun Salutation
+hand reading
+when dirty.db gets dirty
+
+close encounters
+visiting a museum
+interviews
+asking the same question
+getting down in your computer functioning (files/processes/ram)
+relational software observatory consultancy service
+with your future?blobservation
+
+embodiment/body techniques
+Agile Sun Salutation: see Healing
+COLLECTIVE CHAIR YOGA!!!
+fountain 
+comportment of software (occupational hazards)
+
+collections
+bestiary of software logos (we collect)
+computer history museum (institutional collection)
+jean heuns collection at leuven (personal/institutional)
+Testing the testbed: testing software with observatory ambitions
+
+
+beingontheside/inthemiddle/behind
+somethinginthemiddlemaybe
+elevator
+side channel attacks
+
+Methods for inadequate observation of software [inadequate methods?]
+
+but then the things in these groupings can be arranged/divided by form? like descrptive entries/ exercises/ diagrams/ conversation with/ gloss/
+
+WARNINGS
+[[warning: "our methods for observation, like mapping, come with their luggage." from Thursday afternoon section of http://observatory.constantvzw.org/etherdump/toc.md.diff.html ]]
+[[warning: some of these methods are not suitable for agile software/SaaS observation]]
+
+
