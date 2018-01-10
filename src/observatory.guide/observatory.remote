@@ -1,4 +1,14 @@
-% DUMP PADS.
+% META PADS -----------------------------------
+
+http://pad.constantvzw.org/p/observatory.methods/export/txt         -> observatory.methods.txt
+http://pad.constantvzw.org/p/observatory.methods/export/etherpad    -> observatory.methods.ep
+http://pad.constantvzw.org/p/observatory.inventory/export/txt       -> observatory.inventory.txt
+http://pad.constantvzw.org/p/observatory.inventory/export/etherpad  -> observatory.inventory.ep
+http://pad.constantvzw.org/p/observatory.afterlives/export/txt      -> observatory.afterlives.txt
+http://pad.constantvzw.org/p/observatory.afterlives/export/etherpad -> observatory.afterlives.ep
+
+
+% DUMP PADS -----------------------------------
 
 http://pad.constantvzw.org/p/observatory.guide/export/txt                            -> observatory.guide.txt
 
@@ -41,7 +51,7 @@ http://pad.constantvzw.org/p/observatory.guide.colophon/export/txt              
 http://pad.constantvzw.org/p/observatory.inventory.jogi/export/txt                   -> observatory.inventory.jogi.txt
 
 
-% BACKUP PADS.
+% BACKUP PADS -----------------------------------
 
 http://pad.constantvzw.org/p/observatory.guide/export/etherpad                            -> observatory.guide.ep
 http://pad.constantvzw.org/p/observatory.guide.introduction/export/etherpad               -> observatory.guide.introduction.ep
