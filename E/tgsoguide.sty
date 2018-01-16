@@ -293,6 +293,83 @@
   }
 % --------------------------------------------------------------------------- %
 
+  \usepackage{wrapfig}
+
+  % r R right side of the text
+  % l L left side of the text
+  % i I inside edge–near the binding (in a twoside document)
+  % o O outside edge–far from the binding
+  % The uppercase version allows the figure to float.
+  % The lowercase version means exactly here.
+
+  \newcommand{\showsmall}[2]{
+   \begin{wrapfigure}{I}{.25\textwidth}
+   \vspace{-.02\textwidth}
+    \includegraphics[width=.25\textwidth]{#1}
+    \footnotemark
+   \end{wrapfigure}
+   \footnotetext{#2}
+  }
+
+  \newcommand{\showlandscape}[2]{
+   \begin{figure}
+    \includegraphics[width=\textwidth]{#1}
+     \end{figure}
+  }
+
+
+%% VERTICAL SPACE HACK
+%% http://tex.stackexchange.com/questions/61627/prevent-action-if-top-of-page
+%  \newcommand\vspacenotonpagetop{%
+%     \par % make sure we end a paragraph
+%     \vskip10pt % space above the rule
+%     \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
+%     \nointerlineskip % disable interline glue here
+%     \vskip10pt % space below the rule
+%  }
+%   \reversemarginpar
+%    \newcommand\exclamationmargin[2]{%
+%    %\vspacenotonpagetop
+%      \marginpar{
+%        ~ \\ % NOTHING NEEDED
+%        \vspace{0mm}\\
+%         \includegraphics[width=\marginparwidth]{exclamation}
+%          \smallskip\smallskip
+%    }%\vspace{-1.5\baselineskip}
+%   }
+
+
+
+% WAS \fullpagefloat[3] (170727_hilxalsh.sty)
+% ------------------------------------------
+% \newcommand\fullpagefloat[3]{%
+%   see p.\pageref{#3}
+
+%   \afterpage{\AddThispageHook{ %
+%   \includepdf[pages=#2, %
+%    pagecommand={\thispagestyle{fancy}}] %
+%   {#1}}\label{#3}
+%   ~
+%   \newpage}%
+% }
+  \newcommand\showpageasap[3]{%
+    see p.\pageref{#2}
+
+    \afterpage{\AddThispageHook{ %
+    \includepdf[pages=-, %
+     pagecommand={\thispagestyle{fancy}}] %
+    {#1}}\label{#2}
+    ~
+    \newpage}%
+  }
+
+
+
+
+
+
+
+
   \newenvironment{quaverbatim}{%
    \begin{alltt}%
     \fontsize{6pt}{7pt}\selectfont
