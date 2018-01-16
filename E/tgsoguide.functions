@@ -326,6 +326,9 @@ function SHOW() {
 
     if [ "$SHOWTHIS" != "" ];then
 
+        # IF POSSIBLE KEEP THE FILE IN THE SAME LOCATION #
+        # TO NOT BREAK IMAGE LINKS                       #
+        # ---------------------------------------------- #
           TMPPATH=`realpath $INCLUDEPATH/$SHOWTHIS \
                    2> /dev/null | rev | cut -d "/" -f 2- | rev`
           if [ `echo $TMPPATH | wc -c` -gt 1 ]
@@ -333,42 +336,92 @@ function SHOW() {
           else  TMPPATH="${TMPID}." ; fi
           TMPSVG="${TMPPATH}"`echo $SHOWTHIS | #
                               md5sum | cut -c 1-12`.svg
-
+        # TRY TO GET THE FILE                           #
+        # ---------------------------------------------- #
           getFile $INCLUDEPATH/$SHOWTHIS ${TMPSVG}
 
+        # KEEP ON GOING (IF SUCCESSFUL)                  #
+        # ---------------------------------------------- #
           if [ -f "$TMPSVG" ];then
      
-               echo "$TMPSVG DOES EXIST"
-               NTOCHECK=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-                         grep -v "$SHOWTHIS"      | # IGNORE $SHOWTHIS
-                         sed 's/^/e:label="/'     | # ADD LABEL ATTRIBUTE
-                         sed 's/$/"/'             | # CLOSE LABEL ATTRIBUTE
-                         sed ':a;N;$!ba;s/\n/|/g'`  # COMBINE FOR EGREP
-               LNAME=`egrep "$NTOCHECK" $TMPSVG     | # SEARCH IN SVG
-                      head -n 1 | sed 's/="/\n="/g' | # EXTRACT FIRST MATCH
-                      grep "^=" | cut -d "\"" -f 2`   # EXTRACT NAME
+          # echo "$TMPSVG DOES EXIST"
+            NTOCHECK=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
+                      grep -v "$SHOWTHIS"      | # IGNORE $SHOWTHIS
+                      sed 's/^/e:label="/'     | # ADD LABEL ATTRIBUTE
+                      sed 's/$/"/'             | # CLOSE LABEL ATTRIBUTE
+                      sed ':a;N;$!ba;s/\n/|/g'`  # COMBINE FOR EGREP
+            LNAME=`egrep "$NTOCHECK" $TMPSVG     | # SEARCH IN SVG
+                   head -n 1 | sed 's/="/\n="/g' | # EXTRACT FIRST MATCH
+                   grep "^=" | cut -d "\"" -f 2`   # EXTRACT NAME
 
-               if [ "$LNAME" != "" ];then
-               extractLayer $TMPSVG $TMPSVG.$LNAME.svg $LNAME
-               cropArea $TMPSVG.$LNAME.svg $TMPSVG.$LNAME.crop.svg
+            if [ "$LNAME" != "" ];then
 
-              #cp $TMPSVG.$LNAME.crop.svg debug.$LNAME.crop.svg
-               inkscape --export-pdf=debug.$LNAME.crop.pdf \
-               $TMPSVG.$LNAME.crop.svg 
-               conformColor debug.$LNAME.crop.pdf
-               fi
-          else
-               echo "$TMPSVG DOES NOT EXIST"
+             extractLayer $TMPSVG $TMPSVG.$LNAME.svg $LNAME
+             cropArea $TMPSVG.$LNAME.svg $TMPSVG.$LNAME.crop.svg
+ 
+             PDFID=`echo $* | md5sum | cut -c 1-12`
+             inkscape --export-pdf=${TMPID}${PDFID}.pdf \
+             $TMPSVG.$LNAME.crop.svg
+             conformColor ${TMPID}${PDFID}.pdf
+ 
+             cp ${TMPID}${PDFID}.pdf debug-${PDFID}.pdf
+
+         # AND NOW LOOK CLOSER ...                                        #
+         # -------------------------------------------------------------- #
+           PDFSIZE=`pdfinfo ${TMPID}${PDFID}.pdf | #
+                    grep "Page size:"            | #
+                    sed 's/[^0-9.x]*//g'`          #
+           PDFW=`echo $PDFSIZE | cut -d "x" -f 1 | #
+                 cut -d "." -f 1`                  #
+           PDFH=`echo $PDFSIZE | cut -d "x" -f 2 | #
+                 cut -d "." -f 1`                  #
+           THISIS="" # RESET
+
+         # ... AND CLOSER ...                                             #
+         # -------------------------------------------------------------- #
+
+           if   [ "$PDFW" -lt 300 ];then THISIS="BIG $THISIS"
+           elif [ "$PDFW" -gt 300 ];then THISIS="HUGE $THISIS"
+           elif [ "$PDFW" -lt 100 ];then THISIS="TINY $THISIS"
+           elif [ "$PDFW" -lt 200 ];then THISIS="SMALL $THISIS"
+           fi
+           if   [ "$PDFH" -eq "$PDFW" ];then THISIS="SQUARE $THISIS"
+           elif [ "$PDFH" -gt "$PDFW" ];then THISIS="PORTRAIT $THISIS"
+           elif [ "$PDFW" -gt "$PDFH" ];then THISIS="LANDSCAPE $THISIS"
+           fi
+
+         # ... AND DRAW THE CONSEQUENCES                                  #
+         # -------------------------------------------------------------- #
+         # echo "$THISIS"
+
+           if   [[ $THISIS == *HUGE* ]] && [[ $THISIS == *PORTRAIT* ]];then
+                echo "PUT ON A SINGLE PAGE"
+           elif [[ $THISIS != *TINY* ]] && [[ $THISIS == *LANDSCAPE* ]];then
+                echo "STRETCH OVER TEXTWIDTH" 
+           elif [[ $THISIS == *TINY* ]] && [[ $THISIS == *SQUARE* ]];then
+                echo "MAKE A SMALL WRAPFIGURE"
+           else
+                echo "MAKE A DECENT WRAPFIGURE"  
+           fi
+
+           sleep 2
+            fi
+        # else
+        #     # echo "$TMPSVG DOES NOT EXIST"
+        #     # DO NOTHING
+        #     # sleep 0
           fi
     else
           echo "NO INPUT PROVIDED"
     fi
 
-  if [ -f "$TMPSVG" ];then rm "$TMPSVG"; fi
-  if [ -f "$TMPSVG.$LNAME.svg" ];then rm "$TMPSVG.$LNAME.svg"; fi
-  if [ -f "$TMPSVG.$LNAME.crop.svg" ];then rm "$TMPSVG.$LNAME.crop.svg"; fi
+ # FINALLY CLEANUP
+ # ------------------------------------------------------------------------ #
+   if [ -f "$TMPSVG" ];then rm "$TMPSVG"; fi
+   if [ -f "$TMPSVG.$LNAME.svg" ];then rm "$TMPSVG.$LNAME.svg"; fi
+   if [ -f "$TMPSVG.$LNAME.crop.svg" ];then rm "$TMPSVG.$LNAME.crop.svg"; fi
 
-  #sleep 10
+ # sleep 10
 
 }
 
