@@ -272,6 +272,9 @@ function TODO() {
 }
 
 
+
+
+
 # --------------------------------------------------------------------------- #
 
 function GROUPING() {
@@ -311,6 +314,71 @@ function GROUPING() {
 
 
 }
+
+# --------------------------------------------------------------------------- #
+
+function SHOW() {
+
+  # EXTRACT FILE ARGUMENT
+  # ------------------------------------ #
+    SHOWTHIS=`echo $* | sed 's/ /\n/g' | # DISPLAY ALL / ON SEP LINES
+              grep "\.svg$" | head -n 1` # FIND .svg / TAKE FIRST
+
+    if [ "$SHOWTHIS" != "" ];then
+
+          TMPPATH=`realpath $INCLUDEPATH/$SHOWTHIS \
+                   2> /dev/null | rev | cut -d "/" -f 2- | rev`
+          if [ `echo $TMPPATH | wc -c` -gt 1 ]
+          then  TMPPATH="${TMPPATH}/"
+          else  TMPPATH="${TMPID}." ; fi
+          TMPSVG="${TMPPATH}"`echo $SHOWTHIS | #
+                              md5sum | cut -c 1-12`.svg
+
+          getFile $INCLUDEPATH/$SHOWTHIS ${TMPSVG}
+
+          if [ -f "$TMPSVG" ];then
+     
+               echo "$TMPSVG DOES EXIST"
+               NTOCHECK=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
+                         grep -v "$SHOWTHIS"      | # IGNORE $SHOWTHIS
+                         sed 's/^/e:label="/'     | # ADD LABEL ATTRIBUTE
+                         sed 's/$/"/'             | # CLOSE LABEL ATTRIBUTE
+                         sed ':a;N;$!ba;s/\n/|/g'`  # COMBINE FOR EGREP
+               LNAME=`egrep "$NTOCHECK" $TMPSVG     | # SEARCH IN SVG
+                      head -n 1 | sed 's/="/\n="/g' | # EXTRACT FIRST MATCH
+                      grep "^=" | cut -d "\"" -f 2`   # EXTRACT NAME
+
+               if [ "$LNAME" != "" ];then
+               extractLayer $TMPSVG $TMPSVG.$LNAME.svg $LNAME
+               cropArea $TMPSVG.$LNAME.svg $TMPSVG.$LNAME.crop.svg
+
+              #cp $TMPSVG.$LNAME.crop.svg debug.$LNAME.crop.svg
+               inkscape --export-pdf=debug.$LNAME.crop.pdf \
+               $TMPSVG.$LNAME.crop.svg 
+               conformColor debug.$LNAME.crop.pdf
+               fi
+          else
+               echo "$TMPSVG DOES NOT EXIST"
+          fi
+    else
+          echo "NO INPUT PROVIDED"
+    fi
+
+  if [ -f "$TMPSVG" ];then rm "$TMPSVG"; fi
+  if [ -f "$TMPSVG.$LNAME.svg" ];then rm "$TMPSVG.$LNAME.svg"; fi
+  if [ -f "$TMPSVG.$LNAME.crop.svg" ];then rm "$TMPSVG.$LNAME.crop.svg"; fi
+
+  #sleep 10
+
+}
+
+# --------------------------------------------------------------------------- #
+
+
+
+
+
+
 
 # --------------------------------------------------------------------------- #
 # TODO: MAXIMUM INDENT (RM SPACES)
