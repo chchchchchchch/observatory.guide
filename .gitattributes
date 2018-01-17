@@ -3,4 +3,4 @@
 
   *.functions gitlab-language=bash
   *.functions linguist-language=bash
-
+*.functions linguist-language=sh
