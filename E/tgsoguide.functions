@@ -28,6 +28,10 @@
 # % SEEALSO: replaces % SEEUNDER:
 # % RELATESTO: replaces % SEEALSO:
 
+  PAGEW="314"
+  PAGEH="436"
+
+
 # --------------------------------------------------------------------------- #
 
 function INCLUDE() {
@@ -368,54 +372,79 @@ function SHOW() {
                 cropArea $TMPSVG.$LNAME.svg $TMPSVG.$LNAME.crop.svg
     
                 PDFID=`echo $* | md5sum | cut -c 1-12`
-                inkscape --export-pdf=${TMPID}${PDFID}.pdf \
-                $TMPSVG.$LNAME.crop.svg
-                conformColor ${TMPID}${PDFID}.pdf
+                PDFHERE="${TMPID}${PDFID}.pdf"
+                inkscape --export-pdf=$PDFHERE $TMPSVG.$LNAME.crop.svg
+                conformColor $PDFHERE
     
               # cp ${TMPID}${PDFID}.pdf debug-${PDFID}.pdf
    
             # AND NOW LOOK CLOSER ...                                     #
             # ----------------------------------------------------------- #
-              PDFSIZE=`pdfinfo ${TMPID}${PDFID}.pdf | #
-                       grep "Page size:"            | #
-                       sed 's/[^0-9.x]*//g'`          #
+              PDFSIZE=`pdfinfo $PDFHERE    | #
+                       grep "Page size:"   | #
+                       sed 's/[^0-9.x]*//g'` #
               PDFW=`echo $PDFSIZE | cut -d "x" -f 1 | #
                     cut -d "." -f 1`                  #
               PDFH=`echo $PDFSIZE | cut -d "x" -f 2 | #
                     cut -d "." -f 1`                  #
-              THISIS="" # RESET
+              THISIS="";PDFCMD="";PDFSHIFT="0";CNT="0" # RESET
    
             # ... AND CLOSER ...                                          #
             # ----------------------------------------------------------- #
    
-              if   [ "$PDFW" -lt 300 ];then THISIS="BIG $THISIS"
-              elif [ "$PDFW" -gt 300 ];then THISIS="HUGE $THISIS"
-              elif [ "$PDFW" -lt 100 ];then THISIS="TINY $THISIS"
-              elif [ "$PDFW" -lt 200 ];then THISIS="SMALL $THISIS"
-              fi
-              if   [ "$PDFH" -eq "$PDFW" ];then THISIS="SQUARE $THISIS"
-              elif [ "$PDFH" -gt "$PDFW" ];then THISIS="PORTRAIT $THISIS"
-              elif [ "$PDFW" -gt "$PDFH" ];then THISIS="LANDSCAPE $THISIS"
-              fi
-   
+             if   [ "$PDFW" -ge "$PAGEW" ] &&
+                  [ "$PDFH" -ge "$PAGEH" ];then THISIS="FULL"
+             elif [ "$PDFW" -lt 100 ];     then THISIS="TINY"
+             elif [ "$PDFW" -lt 200 ];     then THISIS="SMALL"
+             elif [ "$PDFW" -lt 300 ];     then THISIS="BIG"
+             elif [ "$PDFW" -gt 300 ];     then THISIS="HUGE"
+             fi
+             if   [ "$PDFH" -eq "$PDFW" ];then THISIS="SQUARE $THISIS"
+             elif [ "$PDFH" -gt "$PDFW" ];then THISIS="PORTRAIT $THISIS"
+             elif [ "$PDFW" -gt "$PDFH" ];then THISIS="LANDSCAPE $THISIS"
+             fi
+
             # ... AND DRAW THE CONSEQUENCES                               #
             # ----------------------------------------------------------- #
             # echo "$THISIS"
    
-             if   [[ $THISIS == *HUGE* ]] && [[ $THISIS == *PORTRAIT* ]];then
-              echo "PUT ON A SINGLE PAGE"
-              write2src "\showpageasap{${TMPID}${PDFID}.pdf}{$REF}{$CAPTION}"
-             elif [[ $THISIS != *TINY* ]] && [[ $THISIS == *LANDSCAPE* ]];then
-              echo "STRETCH OVER TEXTWIDTH" 
-              write2src "\showlandscape{${TMPID}${PDFID}.pdf}"
-             elif [[ $THISIS == *TINY* ]] && [[ $THISIS == *SQUARE* ]];then
-              echo "MAKE A SMALL WRAPFIGURE"
-              write2src "\showsmall{${TMPID}${PDFID}.pdf}{$CAPTION}"
+             if   [[ $THISIS == *FULL* ]];then
+
+                     while [ "$PDFSHIFT" -lt "$PDFW" ];
+                      do
+                         PDFCMD="$PDFCMD\showshift{$PDFHERE}{$CNT}"
+                         CNT=`expr $CNT + 1`
+                         PDFSHIFT=`expr $PAGEW \* $CNT`
+                     done
+
+             elif [[ $THISIS == *HUGE* ]] && 
+                  [[ $THISIS == *PORTRAIT* ]];then
+                     echo "PUT ON A SINGLE PAGE"
+                     PDFCMD="\showpageasap{$PDFHERE}{$REF}{$CAPTION}"
+             elif [[ $THISIS != *TINY* ]] && 
+                  [[ $THISIS == *LANDSCAPE* ]];then
+                     echo "STRETCH OVER TEXTWIDTH" 
+                     PDFCMD="\showlandscape{$PDFHERE}"
+             elif [[ $THISIS == *TINY* ]] && 
+                  [[ $THISIS == *SQUARE* ]];then
+                     echo "MAKE A SMALL WRAPFIGURE"
+                     PDFMCD="\showsmall{$PDFHERE}{$CAPTION}"
              else
-              echo "MAKE A DECENT WRAPFIGURE"  
-              write2src "\showsmall{${TMPID}${PDFID}.pdf}{$CAPTION}"
+                     echo "MAKE A DECENT WRAPFIGURE"  
+                     PDFCMD="\showsmall{$PDFHERE}{$CAPTION}"
              fi
-                  #sleep 2
+
+             if [ "$OUTPUTFORMAT" == pdf ];then 
+
+                    write2src "$PDFCMD" 
+
+             elif [ "$OUTPUTFORMAT" == html ];then 
+            
+                    write2src "<span class=\"$THISCLASS descriptor\">" 
+                    write2src "<span>$THISDESCRIPTION</span>"
+                    write2src "$DESCRIPTION</span>" 
+             fi 
+
             fi
         # else
         #     # echo "$TMPSVG DOES NOT EXIST"
