@@ -2,3 +2,6 @@
 *.*.[0-9]+
 E/*.pdf
 E/*.html
+
+src/*
+!src/*.remote
