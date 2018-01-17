@@ -392,12 +392,14 @@ function SHOW() {
             # ... AND CLOSER ...                                          #
             # ----------------------------------------------------------- #
    
-             if   [ "$PDFW" -ge "$PAGEW" ] &&
+             if   [ "$PDFW" -gt 500 ] &&
+                  [ "$PDFH" -gt 600 ];     then THISIS="HUGE"
+             elif [ "$PDFW" -ge "$PAGEW" ] &&
                   [ "$PDFH" -ge "$PAGEH" ];then THISIS="FULL"
              elif [ "$PDFW" -lt 100 ];     then THISIS="TINY"
              elif [ "$PDFW" -lt 200 ];     then THISIS="SMALL"
              elif [ "$PDFW" -lt 300 ];     then THISIS="BIG"
-             elif [ "$PDFW" -gt 300 ];     then THISIS="HUGE"
+
              fi
              if   [ "$PDFH" -eq "$PDFW" ];then THISIS="SQUARE $THISIS"
              elif [ "$PDFH" -gt "$PDFW" ];then THISIS="PORTRAIT $THISIS"
@@ -406,7 +408,7 @@ function SHOW() {
 
             # ... AND DRAW THE CONSEQUENCES                               #
             # ----------------------------------------------------------- #
-            # echo "$THISIS"
+              echo "$THISIS"; sleep 4
    
              if   [[ $THISIS == *FULL* ]];then
 
@@ -420,7 +422,8 @@ function SHOW() {
              elif [[ $THISIS == *HUGE* ]] && 
                   [[ $THISIS == *PORTRAIT* ]];then
                      echo "PUT ON A SINGLE PAGE"
-                     PDFCMD="\showpageasap{$PDFHERE}{$REF}{$CAPTION}"
+                    #PDFCMD="\showpageasap{$PDFHERE}{$REF}{$CAPTION}"
+                     PDFCMD="\showhuge{$PDFHERE}"
              elif [[ $THISIS != *TINY* ]] && 
                   [[ $THISIS == *LANDSCAPE* ]];then
                      echo "STRETCH OVER TEXTWIDTH" 

@@ -325,27 +325,16 @@
      \twocolumn[]\thispagestyle{fancy}\onecolumn
   }
 
-
-
-%% VERTICAL SPACE HACK
-%% http://tex.stackexchange.com/questions/61627/prevent-action-if-top-of-page
-%  \newcommand\vspacenotonpagetop{%
-%     \par % make sure we end a paragraph
-%     \vskip10pt % space above the rule
-%     \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
-%     \nointerlineskip % disable interline glue here
-%     \vskip10pt % space below the rule
-%  }
-%   \reversemarginpar
-%    \newcommand\exclamationmargin[2]{%
-%    %\vspacenotonpagetop
-%      \marginpar{
-%        ~ \\ % NOTHING NEEDED
-%        \vspace{0mm}\\
-%         \includegraphics[width=\marginparwidth]{exclamation}
-%          \smallskip\smallskip
-%    }%\vspace{-1.5\baselineskip}
-%   }
+  \newcommand{\showhuge}[1]{
+   \newpage
+    \AddToShipoutPicture*{%
+      \put(0,0){%
+        \includegraphics[width=\paperwidth]
+          {#1}}
+    }
+   % FORCE BLANK PAGE
+     \twocolumn[]\thispagestyle{fancy}\onecolumn
+  }
 
 
 % WAS \fullpagefloat[3] (170727_hilxalsh.sty)
@@ -370,6 +359,27 @@
     ~
     \newpage}%
   }
+
+
+%% VERTICAL SPACE HACK
+%% http://tex.stackexchange.com/questions/61627/prevent-action-if-top-of-page
+%  \newcommand\vspacenotonpagetop{%
+%     \par % make sure we end a paragraph
+%     \vskip10pt % space above the rule
+%     \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
+%     \nointerlineskip % disable interline glue here
+%     \vskip10pt % space below the rule
+%  }
+%   \reversemarginpar
+%    \newcommand\exclamationmargin[2]{%
+%    %\vspacenotonpagetop
+%      \marginpar{
+%        ~ \\ % NOTHING NEEDED
+%        \vspace{0mm}\\
+%         \includegraphics[width=\marginparwidth]{exclamation}
+%          \smallskip\smallskip
+%    }%\vspace{-1.5\baselineskip}
+%   }
 
 
 
