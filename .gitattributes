@@ -1,0 +1,5 @@
+
+# https://docs.gitlab.com/ee/user/project/highlighting.html
+
+  *.functions gitlab-language=bash
+
