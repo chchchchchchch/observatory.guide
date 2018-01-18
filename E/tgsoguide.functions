@@ -335,6 +335,10 @@ function SHOW() {
         # ---------------------------------------------- #
           TMPPATH=`realpath $INCLUDEPATH/$SHOWTHIS \
                    2> /dev/null | rev | cut -d "/" -f 2- | rev`
+          if [ `echo $TMPPATH | wc -c` -le 1 ];then
+          TMPPATH=`realpath $MAINPATH/$SHOWTHIS \
+                   2> /dev/null | rev | cut -d "/" -f 2- | rev`
+          fi
           if [ `echo $TMPPATH | wc -c` -gt 1 ]
           then  TMPPATH="${TMPPATH}/"
           else  TMPPATH="${TMPID}." ; fi
@@ -356,7 +360,7 @@ function SHOW() {
         # ---------------------------------------------- #
           if [ -f "$TMPSVG" ];then
      
-          # echo "$TMPSVG DOES EXIST"
+          # EXTRACT AND CHECK LAYER FLAGS
             NTOCHECK=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
                       grep -v "$SHOWTHIS"      | # IGNORE $SHOWTHIS
                       sed 's/^/e:label="/'     | # ADD LABEL ATTRIBUTE
@@ -365,6 +369,10 @@ function SHOW() {
             LNAME=`egrep "$NTOCHECK" $TMPSVG     | # SEARCH IN SVG
                    head -n 1 | sed 's/="/\n="/g' | # EXTRACT FIRST MATCH
                    grep "^=" | cut -d "\"" -f 2`   # EXTRACT NAME
+          # EXTRACT PLACEMENT FLAGS
+            PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
+                   egrep '^N$|^b$'          | # EXTRACT VALID FLAGS
+                   head -n 1`                 # TAKE FIRST ONE
 
             if [ "$LNAME" != "" ];then
 
@@ -401,52 +409,55 @@ function SHOW() {
              elif [ "$PDFW" -lt 300 ];     then THISIS="BIG"
 
              fi
+             if   [[ $THISIS != *FULL* ]];then
              if   [ "$PDFH" -eq "$PDFW" ];then THISIS="SQUARE $THISIS"
              elif [ "$PDFH" -gt "$PDFW" ];then THISIS="PORTRAIT $THISIS"
              elif [ "$PDFW" -gt "$PDFH" ];then THISIS="LANDSCAPE $THISIS"
              fi
+             fi
 
             # ... AND DRAW THE CONSEQUENCES                               #
             # ----------------------------------------------------------- #
-              echo "$THISIS"; sleep 4
+            # echo "$THISIS"; sleep 4
    
-             if   [[ $THISIS == *FULL* ]];then
-
-                     while [ "$PDFSHIFT" -lt "$PDFW" ];
-                      do
-                         PDFCMD="$PDFCMD\showshift{$PDFHERE}{$CNT}"
-                         CNT=`expr $CNT + 1`
-                         PDFSHIFT=`expr $PAGEW \* $CNT`
-                     done
-
-             elif [[ $THISIS == *HUGE* ]] && 
-                  [[ $THISIS == *PORTRAIT* ]];then
-                     echo "PUT ON A SINGLE PAGE"
-                    #PDFCMD="\showpageasap{$PDFHERE}{$REF}{$CAPTION}"
-                     PDFCMD="\showhuge{$PDFHERE}"
-             elif [[ $THISIS != *TINY* ]] && 
-                  [[ $THISIS == *LANDSCAPE* ]];then
-                     echo "STRETCH OVER TEXTWIDTH" 
-                     PDFCMD="\showlandscape{$PDFHERE}"
-             elif [[ $THISIS == *TINY* ]] && 
-                  [[ $THISIS == *SQUARE* ]];then
-                     echo "MAKE A SMALL WRAPFIGURE"
-                     PDFMCD="\showsmall{$PDFHERE}{$CAPTION}"
-             else
-                     echo "MAKE A DECENT WRAPFIGURE"  
-                     PDFCMD="\showsmall{$PDFHERE}{$CAPTION}"
-             fi
-
-             if [ "$OUTPUTFORMAT" == pdf ];then 
-
-                    write2src "$PDFCMD" 
-
-             elif [ "$OUTPUTFORMAT" == html ];then 
-            
-                    write2src "<span class=\"$THISCLASS descriptor\">" 
-                    write2src "<span>$THISDESCRIPTION</span>"
-                    write2src "$DESCRIPTION</span>" 
-             fi 
+              if   [[ $THISIS == *FULL* ]];then
+ 
+                      while [ "$PDFSHIFT" -lt "$PDFW" ];
+                       do
+                          PDFCMD="$PDFCMD\imgshift{$PDFHERE}{$CNT}"
+                          CNT=`expr $CNT + 1`
+                          PDFSHIFT=`expr $PAGEW \* $CNT`
+                      done
+ 
+              elif [[ $THISIS == *HUGE* ]] && 
+                   [[ $THISIS == *PORTRAIT* ]];then
+                      echo "PUT ON A SINGLE PAGE"
+                      PDFCMD="\imghuge{$PDFHERE}{$CAPTION}{$REF}"
+              elif [[ $THISIS != *TINY* ]] && 
+                   [[ $THISIS == *LANDSCAPE* ]];then
+                      echo "STRETCH OVER TEXTWIDTH" 
+                      if [ "$PFLAG" == "N" ];then
+                           PDFCMD="\imgwide{$PDFHERE}{$CAPTION}{$REF}"
+                      else PDFCMD="\imgwidefloat{$PDFHERE}{$CAPTION}{$REF}";fi
+              elif [[ $THISIS == *TINY* ]] && 
+                   [[ $THISIS == *SQUARE* ]];then
+                      echo "MAKE A SMALL WRAPFIGURE"
+                      PDFMCD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"
+              else
+                      echo "MAKE A DECENT WRAPFIGURE"  
+                      PDFCMD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"
+              fi
+ 
+              if [ "$OUTPUTFORMAT" == pdf ];then 
+ 
+                     write2src "$PDFCMD" 
+ 
+              elif [ "$OUTPUTFORMAT" == html ];then 
+             
+                     write2src "<span class=\"$THISCLASS descriptor\">" 
+                     write2src "<span>$THISDESCRIPTION</span>"
+                     write2src "$DESCRIPTION</span>" 
+              fi 
 
             fi
         # else

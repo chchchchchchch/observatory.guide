@@ -298,7 +298,7 @@
   % The uppercase version allows the figure to float.
   % The lowercase version means exactly here.
 
-  \newcommand{\showsmall}[2]{
+  \newcommand{\imgsmall}[2]{
    \begin{wrapfigure}{I}{.25\textwidth}
    \vspace{-.02\textwidth}
     \includegraphics[width=.25\textwidth]{#1}
@@ -307,14 +307,34 @@
    \footnotetext{#2}
   }
 
-  \newcommand{\showlandscape}[2]{
-   \begin{figure}
+
+  \usepackage{float}
+
+  \newcommand{\imgwide}[3]{
+   \vfill
     \includegraphics[width=\textwidth]{#1}
-     \end{figure}
+     \vfill
   }
 
-  \newcommand{\showshift}[2]{
+  \newcommand{\imgwidefloat}[3]{
+   \begin{figure}%
+    \includegraphics[width=\textwidth]{#1}%
+     \end{figure}%
+  }
+
+  \newcommand{\imghuge}[1]{
    \newpage
+    \AddToShipoutPicture*{%
+      \put(0,0){%
+        \includegraphics[width=\paperwidth]
+          {#1}}
+    }
+   % FORCE BLANK PAGE
+     \twocolumn[]\thispagestyle{fancy}\onecolumn
+  }
+
+  \newcommand{\imgshift}[2]{
+   \clearpage\newpage
     \AddToShipoutPicture*{%
      \setlength{\unitlength}{.95\paperwidth}%
       \put(-#2,0){%
@@ -325,16 +345,6 @@
      \twocolumn[]\thispagestyle{fancy}\onecolumn
   }
 
-  \newcommand{\showhuge}[1]{
-   \newpage
-    \AddToShipoutPicture*{%
-      \put(0,0){%
-        \includegraphics[width=\paperwidth]
-          {#1}}
-    }
-   % FORCE BLANK PAGE
-     \twocolumn[]\thispagestyle{fancy}\onecolumn
-  }
 
 
 % WAS \fullpagefloat[3] (170727_hilxalsh.sty)
