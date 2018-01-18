@@ -58,7 +58,7 @@ function INCLUDE() {
       FID=`tail -n 1 ${TMPID}.fid`
     # REMOVE FROM FUNCTIONS
       sed -i "/${FID} -- START$/,/${FID} -- END$/d" ${FUNCTIONS}
-    # REMOVE FROM SAVED FUNCTIONS
+    # REMOVE FROM SAVED IDS
       sed -i "/$FID/d" ${TMPID}.fid
     # RELOAD FUNCTIONS
       source $FUNCTIONS
