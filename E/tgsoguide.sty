@@ -367,11 +367,11 @@
   % EMPTY -> DO NOTHING
   \else
   #4, % NON-EMPTY
-  \fi
-  \if\relax\detokenize{#5}\relax
-  % EMPTY -> DO NOTHING
-  \else
-  see p. \pageref{#5} % NON-EMPTY
+     \if\relax\detokenize{#5}\relax
+     % EMPTY -> DO NOTHING
+     \else
+     see p. \pageref{#5} % NON-EMPTY
+     \fi
   \fi
   \afterpage{
   \includepdf[pagecommand={\thispagestyle{fancy}}\label{#5},%
