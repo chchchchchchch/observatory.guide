@@ -483,15 +483,17 @@ function SHOW() {
 
 function PDF() {
 
-        PAGES=`echo $* | sed 's/ /\n/g'     | # DISPAY ON SEPARATE LINES
-               grep '^[0-9]\{1,\}-*[0-9]*$' | # MATCH PATTERN
-               head -n 1`                     # TAKE FIRST
-        if [ "$PAGES" == "" ];then PAGES="-"; fi
-
-       LAYOUT=`echo $* | sed 's/ /\n/g'         | # DISPAY ON SEPARATE LINES
-               grep '^[0-9]\{1,\}x[0-9]\{1,\}$' | # MATCH PATTERN
-               head -n 1`                         # TAKE FIRST
-         if [ "$LAYOUT" == "" ];then LAYOUT="1x1"; fi
+       # GET/SET PAGES/LAYOUT
+       # ---------------------------------------------- #
+         PAGES=`echo $* | sed 's/ /\n/g'     | # DISPAY ON SEPARATE LINES
+                grep '^[0-9]\{1,\}-*[0-9]*$' | # MATCH PATTERN
+                head -n 1`                     # TAKE FIRST
+         if [ "$PAGES" == "" ];then PAGES="-"; fi # FALLBACK
+ 
+        LAYOUT=`echo $* | sed 's/ /\n/g'         | # DISPAY ON SEPARATE LINES
+                grep '^[0-9]\{1,\}x[0-9]\{1,\}$' | # MATCH PATTERN
+                head -n 1`                         # TAKE FIRST
+          if [ "$LAYOUT" == "" ];then LAYOUT="1x1"; fi # FALLBACK
 
        # CHECK/EXTRACT CAPTION
        # ---------------------------------------------- #
@@ -500,7 +502,14 @@ function PDF() {
                   grep "^% INFO:" | cut -d ":" -f 2- | #
                   $PANDOCACTION   | # DISPLAY/TRANSLATE
                   sed 's,</*p>,,g'` # REMOVE <P> TAGS
+       # DISABLE CAPTION
+       # ---------------------------------------------- #
+         LNCMD=`grep -n "^% PDF:$*" $MDSH | # FIND CMD LINE
+                head -n 1 | cut -d ":" -f 1` # SELECT LAST MATCH
+         sed -i "${LNCMD}s/^% PDF:/%X${THISCMD}:/" $MDSH
 
+       # CHECK/EXTRACT REF
+       # ---------------------------------------------- #
          REF=`echo $* | sed 's/ /\n/g'  | # DISPAY ON SEPARATE LINES
               grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
               cut -d ":" -f 2-`           # CUT AFTER :
