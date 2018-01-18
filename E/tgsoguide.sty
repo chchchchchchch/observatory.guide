@@ -35,7 +35,7 @@
   \usepackage{fancyvrb}
 
   \usepackage{alltt} % USED BY QUAVERBATIM
-  \usepackage{hyperref}
+ %\usepackage{hyperref}
 
 % --------------------------------------------------------------------------- %
 %  B A S I C
@@ -45,7 +45,8 @@
   \let\oldhref=\href
   \renewcommand{\href}[2]{#2\footnote{#1}}
 
-% http://tex.stackexchange.com/questions/167823/multiply-define-a-label-on-purpose
+% http://tex.stackexchange.com/questions/167823/
+% -> multiply-define-a-label-on-purpose
   \makeatletter
   \def\@newl@bel#1#2#3{{%
     \@ifundefined{#1@#2}%
@@ -382,7 +383,7 @@
   \if\relax\detokenize{#5}\relax
   % EMPTY -> DO NOTHING
   \else
-  see p.\pageref{#5} % NON-EMPTY
+  see p. \pageref{#5} % NON-EMPTY
   \fi
   \afterpage{
   \includepdf[pagecommand={\thispagestyle{fancy}}\label{#5},%
