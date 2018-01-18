@@ -37,13 +37,18 @@
   \usepackage{alltt} % USED BY QUAVERBATIM
  %\usepackage{hyperref}
 
+  \usepackage{float}
+  \usepackage{wrapfig}
+
+
 % --------------------------------------------------------------------------- %
 %  B A S I C
 % --------------------------------------------------------------------------- %
 
 % https://groups.google.com/forum/#!topic/pandoc-discuss/O-N0H1eBnVU
-  \let\oldhref=\href
-  \renewcommand{\href}[2]{#2\footnote{#1}}
+% \let\oldhref=\href
+% \renewcommand{\href}[2]{#2\footnote{#1}}
+  \newcommand{\href}[2]{#2\footnote{#1}}
 
 % http://tex.stackexchange.com/questions/167823/
 % -> multiply-define-a-label-on-purpose
@@ -290,8 +295,9 @@
 %!   }
 %! % --------------------------------------------------------------------------- %
 
-  \usepackage{wrapfig}
 
+  % \usepackage{wrapfig}
+  %
   % r R right side of the text
   % l L left side of the text
   % i I inside edge–near the binding (in a twoside document)
@@ -308,8 +314,6 @@
    \footnotetext{#2}
   }
 
-
-  \usepackage{float}
 
   \newcommand{\imgwide}[3]{
    \vfill
