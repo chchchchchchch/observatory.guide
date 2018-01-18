@@ -481,12 +481,47 @@ function SHOW() {
 
 # --------------------------------------------------------------------------- #
 
+function PDF() {
 
+        PAGES=`echo $* | sed 's/ /\n/g'     | # DISPAY ON SEPARATE LINES
+               grep '^[0-9]\{1,\}-*[0-9]*$' | # MATCH PATTERN
+               head -n 1`                     # TAKE FIRST
+        if [ "$PAGES" == "" ];then PAGES="-"; fi
 
+       LAYOUT=`echo $* | sed 's/ /\n/g'         | # DISPAY ON SEPARATE LINES
+               grep '^[0-9]\{1,\}x[0-9]\{1,\}$' | # MATCH PATTERN
+               head -n 1`                         # TAKE FIRST
+         if [ "$LAYOUT" == "" ];then LAYOUT="1x1"; fi
 
+       # CHECK/EXTRACT CAPTION
+       # ---------------------------------------------- #
+         CAPTION="" # RESET
+         CAPTION=`grep -A 1 "% PDF:$*" $MDSH | #
+                  grep "^% INFO:" | cut -d ":" -f 2- | #
+                  $PANDOCACTION   | # DISPLAY/TRANSLATE
+                  sed 's,</*p>,,g'` # REMOVE <P> TAGS
 
+         REF=`echo $* | sed 's/ /\n/g'  | # DISPAY ON SEPARATE LINES
+              grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
+              cut -d ":" -f 2-`           # CUT AFTER :
+         if [ "$REF" != "" ];then         # IF REF IS SET
+               REF=`echo $REF | md5sum  | # MAKE HASH
+                    cut -c 1-16`          # CUT HASH
+         fi 
 
+     PDFNOW=`echo $* | sed 's/ /\n/g' | # DISPAY ON SEPARATE LINES
+             grep '\.pdf$' | head -n 1` # MATCH PATTERN/TAKE FIRST
+     TMPPDF="${TMPID}"`echo $PDFNOW | md5sum | cut -c 1-12`.pdf
 
+     if [ ! -f "$TMPPDF" ];then
+          getFile $PDFNOW $TMPPDF
+          conformColor $TMPPDF
+     fi
+     if [ -f "$TMPPDF" ];then
+        write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}{$REF}"
+     fi
+
+ }
 
 # --------------------------------------------------------------------------- #
 # TODO: MAXIMUM INDENT (RM SPACES)
