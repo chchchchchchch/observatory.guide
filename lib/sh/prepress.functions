@@ -81,11 +81,9 @@
                  -format '%[fx:maxima.g]' info: | sed 's/[^0-9]//g'`
         if [ $HASCOLOR -eq 0 ]; then
               pdfxgs $CHECK
-             #sleep 0
         else
-              pdfxcmyk $CHECK
-             #pdfxgs $CHECK
-             #sleep 0
+             #pdfxcmyk $CHECK
+              pdfxgs $CHECK
         fi
         rm checkcolor.jpg
       )
