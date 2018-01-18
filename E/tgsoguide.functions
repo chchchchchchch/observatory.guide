@@ -524,7 +524,9 @@ function PDF() {
 
      if [ ! -f "$TMPPDF" ];then
           getFile $PDFNOW $TMPPDF
-          conformColor $TMPPDF
+          if [ -f "$TMPPDF" ];then
+               conformColor $TMPPDF
+          fi
      fi
      if [ -f "$TMPPDF" ];then
         write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}{$REF}"
