@@ -347,16 +347,6 @@
 
 % WAS \fullpagefloat[3] (170727_hilxalsh.sty)
 % ------------------------------------------
-% \newcommand\fullpagefloat[3]{%
-%   see p.\pageref{#3}
-
-%   \afterpage{\AddThispageHook{ %
-%   \includepdf[pages=#2, %
-%    pagecommand={\thispagestyle{fancy}}] %
-%   {#1}}\label{#3}
-%   ~
-%   \newpage}%
-% }
   \newcommand\showpageasap[3]{%
     see p.\pageref{#2}
 
@@ -367,6 +357,7 @@
     ~
     \newpage}%
   }
+
 
   % https://tex.stackexchange.com/questions/53068/
   % -> how-to-check-if-a-macro-value-is-empty
