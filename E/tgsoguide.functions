@@ -564,10 +564,10 @@ function PDF() {
    # ----
      head -n $LNCMD $MDSH > ${TMPID}.part
 
-   # GREP MARKER IN TMP PART
+   # GREP SEPARATOR/MARKER IN TMP PART
    # ----
-     LNPART=`tac ${TMPID}.part        | # START FROM END
-             grep -nE "^% [-]{4,} *$"  | # FIND MARKER
+     LNPART=`tac ${TMPID}.part          | # START FROM END
+             grep -nE "^% [-]{4,} *$"   | # FIND SEPARATOR
              head -n 1 | cut -d ":" -f 1` # NUM FOR FIRST(=LAST) MATCH
 
    # EXTRACT UNPROCESSED SECTION
@@ -578,7 +578,7 @@ function PDF() {
      sed '$d' | sed '1d'         | # RM FIRST/LAST (= SEPARATOR/CMD)
      sed -n '/^.\{1\}/,$p' | tac | # FROM FIRST NON-EMPTY LINE TO END/REVERT
      sed -n '/^.\{1\}/,$p' | tac | # FROM FIRST NON-EMPTY LINE TO END/REVERT
-     tee > ${TMPID}.xtract  # WRITE TO TMP FILE
+     tee > ${TMPID}.xtract         # WRITE TO TMP FILE
 
      rm ${TMPID}.part # CLEAN UP
 
