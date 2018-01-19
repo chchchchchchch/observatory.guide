@@ -37,11 +37,17 @@
 % --------------------------------------------------------------------------- %
 %  B A S I C
 % --------------------------------------------------------------------------- %
+  \newcommand\urlf[1]{{\tt #1}}
+  \newcommand\urlsplit[1]{\seqsplit{\tt #1}}
 
 % https://groups.google.com/forum/#!topic/pandoc-discuss/O-N0H1eBnVU
 % \let\oldhref=\href
 % \renewcommand{\href}[2]{#2\footnote{#1}}
-  \newcommand{\href}[2]{#2\footnote{#1}}
+% \newcommand{\href}[2]{#2\footnote{#1}}
+  \newcommand{\href}[2]{
+   \iffootnote #2 ({\tt\tiny\seqsplit{#1}})
+   \else #2\footnote{#1} \fi
+   }
 
 % http://tex.stackexchange.com/questions/167823/
 % -> multiply-define-a-label-on-purpose
@@ -114,9 +120,6 @@
   \newcommand{\ttstandard}{grm}
   \newcommand{\rmstandard}{phv}
   \newcommand{\sfstandard}{phv}
-
-  \newcommand\urlf[1]{{\tt #1}}
-  \newcommand\urlsplit[1]{\seqsplit{\tt #1}}
 
  % ttneu
   \let\OldTexttt\texttt
