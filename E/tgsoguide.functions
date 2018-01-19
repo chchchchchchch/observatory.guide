@@ -104,7 +104,13 @@ function SEEHERE() {
 
 }
 
+# --------------------------------------------------------------------------- #
+# MAKE MARGIN ICONS (ONCE)
 
+  if [ ! -f ${TMPID}.marginicon.pdf ];then
+  inkscape --export-pdf=${TMPID}marginicon.pdf ${INCLUDEPATH}/tgsoicons.svg
+  MARGINICON="${TMPID}marginicon.pdf"
+  fi
 
 # --------------------------------------------------------------------------- #
   buildDescriptor() {
@@ -537,7 +543,7 @@ function PDF() {
             head -n 1`                 # TAKE FIRST ONE
 
   if [ -f "$TMPPDF" ];then
-  write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}{$REF}{$PFLAG}"
+  write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}{$REF}{$PFLAG}{$MARGINICON}"
   fi
 
  }

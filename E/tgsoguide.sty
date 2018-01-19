@@ -96,8 +96,8 @@
    \setlength\oddsidemargin{-.05\paperwidth}
    \setlength\evensidemargin{-.13\paperwidth}
 
-   \setlength\marginparwidth{2.5cm}
-   \setlength\marginparsep{4pt} % 6pt
+   \setlength\marginparwidth{1.0cm}
+   \setlength\marginparsep{5pt} % 6pt
 
    \parindent=0pt
    \setlength{\parskip}{5pt plus 5pt minus 5pt}
@@ -286,6 +286,25 @@
 %!   }
 %! % --------------------------------------------------------------------------- %
 
+ % VERTICAL SPACE HACK
+ % http://tex.stackexchange.com/questions/61627/
+ % -> prevent-action-if-top-of-page
+% \newcommand\vspacenotonpagetop{%
+%    \par % make sure we end a paragraph
+%    \vskip10pt % space above the rule
+%    \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
+%    \nointerlineskip % disable interline glue here
+%    \vskip10pt % space below the rule
+% }
+   \reversemarginpar
+    \newcommand{\marginicon}[1]{%
+      \marginpar{
+        ~ \\ % NOTHING NEEDED
+        \vspace{-1mm}\\
+         \includegraphics[width=\marginparwidth]{#1}
+    }%\vspace{-3mm}
+   }
+
 
   % \usepackage{wrapfig}
   %
@@ -377,14 +396,15 @@
       \fi
     }
 
-  \newcommand\pdfpagesplus[6]{%
+  \newcommand\pdfpagesplus[7]{%
   \if\relax\detokenize{#6}\relax
   % #6 EMPTY -> DO NOTHING IN PLACE
   \else
   % #6 NON-EMPTY -> CREATE ANCHOR IN PLACE
+    \marginicon{#7}
     \if\relax\detokenize{#4}\relax
     % #4 EMPTY -> INSERT ANCHOR ONLY
-    \marginpar{p.~\pageref{#5}} % NON-EMPTY
+    \marginpar{\tiny p.~\pageref{#5}} % NON-EMPTY
     \else
     % #4 NON-EMPTY -> INSERT INFO + ANCHOR
     {\scriptsize
@@ -399,31 +419,6 @@
               scale=.75,frame,pages=#2,nup=#3]{#1}
   }
  }
-
-
-
-
-
-%% VERTICAL SPACE HACK
-%% http://tex.stackexchange.com/questions/61627/prevent-action-if-top-of-page
-%  \newcommand\vspacenotonpagetop{%
-%     \par % make sure we end a paragraph
-%     \vskip10pt % space above the rule
-%     \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
-%     \nointerlineskip % disable interline glue here
-%     \vskip10pt % space below the rule
-%  }
-%   \reversemarginpar
-%    \newcommand\exclamationmargin[2]{%
-%    %\vspacenotonpagetop
-%      \marginpar{
-%        ~ \\ % NOTHING NEEDED
-%        \vspace{0mm}\\
-%         \includegraphics[width=\marginparwidth]{exclamation}
-%          \smallskip\smallskip
-%    }%\vspace{-1.5\baselineskip}
-%   }
-
 
 
 
