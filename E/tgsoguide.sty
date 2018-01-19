@@ -66,7 +66,6 @@
 %  \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 %  \makeatother
 
-
 % PREVENT HYPHENATION FOR WORDS STARTING WITH UPPERCASE
 % \uchyph=0
 % PREVENT HYPHENATION OVER PAGE BREAK
@@ -76,7 +75,6 @@
 %  \let\ENDITEMIZE\enditemize
 %  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
 %                            {\ENDITEMIZE\end{samepage}}
-
 
 % --------------------------------------------------------------------------- %
 %  F O R M A T
@@ -359,6 +357,15 @@
   }
 
 
+% BESCHRIFTUNG FÜR PDFPAGES
+  \newcommand\annotation[1]{
+  \deffootnote[1.5em]{1.5em}{1em}{\textsuperscript{}}
+  \renewcommand{\footnoterule}{\rule{0pt}{0pt}}
+  \footnotetext{\footnotesize{#1}}
+  }
+
+  \newcommand\tmpcaption[1]{#1}
+
   % https://tex.stackexchange.com/questions/53068/
   % -> how-to-check-if-a-macro-value-is-empty
 
@@ -366,23 +373,27 @@
   \if\relax\detokenize{#6}\relax
   % #6 EMPTY
     \if\relax\detokenize{#4}\relax
-    % #4 EMPTY -> DO NOTHING
+    % #4 EMPTY -> CLEAR COMMAND
+    \renewcommand{\tmpcaption}{}
     \else
-    % #4 NON-EMPTY -> INSERT INFO ON PAGE
-    insert caption on page
+    % #4 NON-EMPTY -> SAVE TO INSERT INFO ON PAGE
+    \renewcommand{\tmpcaption}{#4}
     \fi
   \else
   % #6 NON-EMPTY
     \if\relax\detokenize{#4}\relax
     % #4 EMPTY -> INSERT ANCHOR ONLY
-    p. \pageref{#5} % NON-EMPTY
+    \marginpar{p.~\pageref{#5}} % NON-EMPTY
     \else
     % #4 NON-EMPTY -> INSERT INFO + ANCHOR
-    #4,see p. \pageref{#5} % NON-EMPTY
+    {\scriptsize
+    #4, see p.~\pageref{#5}} % NON-EMPTY
     \fi
   \fi
   \afterpage{
-  \includepdf[pagecommand={\thispagestyle{fancy}}\label{#5},%
+  \renewcommand{\footnoterule}{\rule{0pt}{0pt}}
+  \includepdf[pagecommand={\thispagestyle{fancy}}%
+              \label{#5}\annotation{#4},%
               offset=10 10, delta=5 5,
               scale=.75,frame,pages=#2,nup=#3]{#1}
   }
