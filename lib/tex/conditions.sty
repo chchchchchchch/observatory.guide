@@ -26,3 +26,12 @@
   \footnotetrue\Footnote{#1}%
   \bodytexttrue%
   \endgroup}
+
+  \let\Footnotetext\footnotetext
+  \renewcommand\footnotetext[1]{%
+  \begingroup%
+  \bodytextfalse%
+  \footnotetrue\Footnotetext{#1}%
+  \bodytexttrue%
+  \endgroup}
+
