@@ -254,17 +254,6 @@ function URGENCY() {
 
 
 
-
-
-function SHOW() {
-  
-   if [ "$OUTPUTFORMAT" == html ];then 
-        write2src "<span class=\"tmp\">SHOW IMAGE HERE: $*</span>"
-   fi
-
-}
-
-
 function RELATESTO() {
 
    if [ "$OUTPUTFORMAT" == html ];then 
@@ -446,17 +435,20 @@ function SHOW() {
    
               if   [[ $THISIS == *FULL* ]];then
  
-                      while [ "$PDFSHIFT" -lt "$PDFW" ];
-                       do
-                          PDFCMD="$PDFCMD\imgshift{$PDFHERE}{$CNT}"
-                          CNT=`expr $CNT + 1`
-                          PDFSHIFT=`expr $PAGEW \* $CNT`
-                      done
+              RFC="{$REF}{$PFLAG}{$CAPTION}"
+              while [ "$PDFSHIFT" -lt "$PDFW" ];
+               do
+                  IMGSHIFT="\imgshift{$PDFHERE}{$CNT}$RFC"
+                  PDFCMD="$PDFCMD$IMGSHIFT"
+                  CNT=`expr $CNT + 1`
+                  PDFSHIFT=`expr $PAGEW \* $CNT`
+                  RFC="{}{}{}"
+              done
  
               elif [[ $THISIS == *HUGE* ]] && 
                    [[ $THISIS == *PORTRAIT* ]];then
                       echo "PUT ON A SINGLE PAGE (HUGE)"
-                      PDFCMD="\imghuge{$PDFHERE}{$CAPTION}{$REF}"
+                      PDFCMD="\imghuge{$PDFHERE}{$REF}{$PFLAG}{$CAPTION}"
               elif [[ $THISIS != *TINY* ]] && 
                    [[ $THISIS == *LANDSCAPE* ]];then
                       echo "STRETCH OVER TEXTWIDTH" 
