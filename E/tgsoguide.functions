@@ -356,11 +356,19 @@ function SHOW() {
 
         # CHECK/EXTRACT CAPTION
         # ---------------------------------------------- #
-          CAPTION=`grep -A 1 "% SHOW:$*" $MDSH | #
+        # GET LN NUM FOR CMD IN (UNPROCESSED) MDSH SRC
+          LNCMD=`grep -n "^% SHOW:$*" $MDSH | # FIND CMD LINE
+                 head -n 1 | cut -d ":" -f 1` # SELECT FIRST MATCH
+        # ----
+        # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
+          T="$RANDOM"
+          sed -i "${LNCMD}s/^% SHOW:$*/%${T}SHOW:$*/" $MDSH
+        # ----
+        # EXTRACT CAPTION FOR TAGGED '% SHOW'
+          CAPTION=`grep -A 1 "%${T}SHOW:$*" $MDSH | #
                    grep "^% INFO:" | cut -d ":" -f 2- | #
                    $PANDOCACTION   | # DISPLAY/TRANSLATE
                    sed 's,</*p>,,g'` # REMOVE <P> TAGS
-         #echo $CAPTION
 
         # KEEP ON GOING (IF SUCCESSFUL)                  #
         # ---------------------------------------------- #
@@ -375,6 +383,16 @@ function SHOW() {
             LNAME=`egrep "$NTOCHECK" $TMPSVG     | # SEARCH IN SVG
                    head -n 1 | sed 's/="/\n="/g' | # EXTRACT FIRST MATCH
                    grep "^=" | cut -d "\"" -f 2`   # EXTRACT NAME
+          # CHECK/EXTRACT REF
+            REF=`echo $* | sed 's/ /\n/g'  | # DISPAY ON SEPARATE LINES
+                 grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
+                 cut -d ":" -f 2-`           # CUT AFTER :
+            if [ "$REF" != "" ];then         # IF REF IS SET
+                  REF=`echo $REF | md5sum  | # MAKE HASH
+                       cut -c 1-16`          # CUT HASH
+            else  REF=`echo $PDFNOW | md5sum | # MAKE HASH
+                       cut -c 1-16`            # CUT HASH               
+            fi 
           # EXTRACT PLACEMENT FLAGS
             PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
                    egrep '^N$|^b$'          | # EXTRACT VALID FLAGS
@@ -391,7 +409,7 @@ function SHOW() {
                 conformColor $PDFHERE
     
               # cp ${TMPID}${PDFID}.pdf debug-${PDFID}.pdf
-   
+ 
             # AND NOW LOOK CLOSER ...                                     #
             # ----------------------------------------------------------- #
               PDFSIZE=`pdfinfo $PDFHERE    | #
@@ -437,7 +455,7 @@ function SHOW() {
  
               elif [[ $THISIS == *HUGE* ]] && 
                    [[ $THISIS == *PORTRAIT* ]];then
-                      echo "PUT ON A SINGLE PAGE"
+                      echo "PUT ON A SINGLE PAGE (HUGE)"
                       PDFCMD="\imghuge{$PDFHERE}{$CAPTION}{$REF}"
               elif [[ $THISIS != *TINY* ]] && 
                    [[ $THISIS == *LANDSCAPE* ]];then
@@ -445,10 +463,10 @@ function SHOW() {
                       if [ "$PFLAG" == "N" ];then
                            PDFCMD="\imgwide{$PDFHERE}{$CAPTION}{$REF}"
                       else PDFCMD="\imgwidefloat{$PDFHERE}{$CAPTION}{$REF}";fi
-              elif [[ $THISIS == *TINY* ]] && 
+              elif [[ $THISIS == *TINY* ]] || 
                    [[ $THISIS == *SQUARE* ]];then
                       echo "MAKE A SMALL WRAPFIGURE"
-                      PDFMCD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"
+                      PDFCMD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"
               else
                       echo "MAKE A DECENT WRAPFIGURE"  
                       PDFCMD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"

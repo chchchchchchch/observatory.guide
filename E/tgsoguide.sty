@@ -308,6 +308,7 @@
     }%\vspace{-3mm}
    }
 
+% ------------------------------------------------------- %
 
   % \usepackage{wrapfig}
   %
@@ -318,66 +319,129 @@
   % The uppercase version allows the figure to float.
   % The lowercase version means exactly here.
 
-  \newcommand{\imgsmall}[2]{
-   \begin{wrapfigure}{I}{.25\textwidth}
-   \vspace{-.02\textwidth}
-    \includegraphics[width=.25\textwidth]{#1}
-    \footnotemark
+  % https://tex.stackexchange.com/questions/120926/
+  % -> prevent-wrapfigure-from-wrapping-the-next-section
+
+  \newcommand{\imgsmall}[3]{
+   \begin{wrapfigure}{I}{.25\textwidth}%
+    \vspace{-.02\textwidth}%
+     \includegraphics[width=.25\textwidth]{#1}
+     \if\relax\detokenize{#2}\relax
+      \else \footnotemark \fi
+        \vspace{-5mm}
    \end{wrapfigure}
-   \footnotetext{#2}
-  }
-
-
-  \newcommand{\imgwide}[3]{
    \vfill
-    \includegraphics[width=\textwidth]{#1}
-     \vfill
+    \if\relax\detokenize{#2}\relax
+     \else \footnotetext{#2} \fi
   }
 
+% ------------------------------------------------------- %
+  \newcommand{\imgwide}[3]{
+  \bigskip
+   \vfill
+
+     \includegraphics[width=\textwidth]{#1}
+      \label{#3}
+       \if\relax\detokenize{#2}\relax
+      % EMPTY
+        \else
+        % NON-EMPTY
+          {\tiny#2}
+       \fi
+   \vfill
+  }
+% ------------------------------------------------------- %
   \newcommand{\imgwidefloat}[3]{
    \begin{figure}%
     \includegraphics[width=\textwidth]{#1}%
-     \end{figure}%
+     \label{#3}
+      \if\relax\detokenize{#2}\relax
+      % EMPTY
+        \else
+        % NON-EMPTY
+          {\tiny#2}
+      \fi
+   \end{figure}%
   }
+% ------------------------------------------------------- %
 
-  \newcommand{\imghuge}[1]{
-   \newpage
-    \AddToShipoutPicture*{%
-      \put(0,0){%
-        \includegraphics[width=\paperwidth]
-          {#1}}
+
+
+
+  \newcommand\pageinfo[1]{%
+     \makebox[\textwidth][l]{%
+      \hspace{-1.2\textwidth}%
+       \parbox{\textwidth}{%
+        \vspace{-.2\textheight}
+         \colorbox{black}{%
+         {\small\parbox{\textwidth}{
+           \smallskip
+            \color{white}#1 %
+             \smallskip}
+       }
+      }
+     }
     }
-   % FORCE BLANK PAGE
-     \twocolumn[]\thispagestyle{fancy}\onecolumn
+   }
   }
 
+
+% ------------------------------------------------------- %
+% \newcommand{\imgshift}[2]{
+%   \afterpage{ \clearpage %
+%    \AddToShipoutPicture*{%
+%     \setlength{\unitlength}{.95\paperwidth}%
+%      \put(-#2,0){%
+%       \includegraphics[height=\paperheight]{#1}}
+%   } % FORCE BLANK PAGE
+%    \twocolumn[]\thispagestyle{fancy}\onecolumn
+%  }
+% }
   \newcommand{\imgshift}[2]{
-   \clearpage\newpage
-    \AddToShipoutPicture*{%
-     \setlength{\unitlength}{.95\paperwidth}%
-      \put(-#2,0){%
-        \includegraphics[height=\paperheight]
-          {#1}}
-    }
-   % FORCE BLANK PAGE
-     \twocolumn[]\thispagestyle{fancy}\onecolumn
+  % PLACE FULL SIZE IMAGE (+SHIFT) ASAP
+   \begin{figure}[p] 
+  % https://tex.stackexchange.com/a/44176
+    \vspace*{\dimexpr-1in-\topmargin-\headsep-\headheight}%
+     \hspace*{\dimexpr-1in-\evensidemargin-\parindent}%
+      \makebox[\paperwidth][l]{
+       \setlength{\unitlength}{.95\paperwidth}%
+        \put(-#2,0){%
+         \includegraphics[height=\paperheight]{#1}%
+        }%
+      }%
+    \pageinfo{sfdsfds sfd dsf  sfddsf}
+    \end{figure}
   }
-
-
-
-% WAS \fullpagefloat[3] (170727_hilxalsh.sty)
-% ------------------------------------------
-  \newcommand\showpageasap[3]{%
-    see p.\pageref{#2}
-
-    \afterpage{\AddThispageHook{ %
-    \includepdf[pages=-, %
-     pagecommand={\thispagestyle{fancy}}] %
-    {#1}}\label{#2}
-    ~
-    \newpage}%
+% ------------------------------------------------------- %
+% \newcommand{\imghuge}[3]{
+%   \afterpage{\clearpage %
+%    \AddToShipoutPicture*{%
+%     \put(0,0){%
+%      \includegraphics[width=\paperwidth]{#1}}
+%   } % FORCE BLANK PAGE
+%    \twocolumn[]\thispagestyle{fancy}\onecolumn
+%  }
+% }
+  \newcommand{\imghuge}[3]{
+  % PLACE IMAGE ASAP
+   \begin{figure}[p] 
+   \includegraphics[width=\textwidth]{#1}%
+   \end{figure}
   }
+% ------------------------------------------------------- %
 
+%!%% WAS \fullpagefloat[3] (170727_hilxalsh.sty)
+%!%% ------------------------------------------
+%!%  \newcommand\showpageasap[3]{%
+%!%    see p.\pageref{#2}
+%!%
+%!%    \afterpage{\AddThispageHook{ %
+%!%    \includepdf[pages=-, %
+%!%     pagecommand={\thispagestyle{fancy}}] %
+%!%    {#1}}\label{#2}
+%!%    ~
+%!%    \newpage}%
+%!%  }
 
   % https://tex.stackexchange.com/questions/53068/
   % -> how-to-check-if-a-macro-value-is-empty
