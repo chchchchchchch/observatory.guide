@@ -107,7 +107,8 @@ function SEEHERE() {
 # --------------------------------------------------------------------------- #
 # MAKE MARGIN ICONS (ONCE)
 # --------------------------------------------------------------------------- #
-  ICONSRC=`realpath "${INCLUDEPATH}/tgsoicons.svg"`
+  ICONSRC=`realpath "${INCLUDEPATH}/tgsoicons.svg" 2>/dev/null`
+  if [ -f "$ICONSRC" ];then
   LAYERNAMES=`sed ':a;N;$!ba;s/\n//g' $ICONSRC  | # SVG WITHOUT LINEBREAKS
               sed 's/>/&\n/g'                   | # ALL '>' ON NEWLINE
               sed '/<g/s/scape:label/\nlabel/'  | # PUT NAME LABEL ON NL
@@ -117,14 +118,14 @@ function SEEHERE() {
               cut -d '"' -f 2`                    # EXTRACT NAMES
   for L in $LAYERNAMES
    do
-       TARGETNAME="${TMPID}"`echo $L | md5sum | cut -c 1-10`
-       if [ ! -f "${TARGETNAME}.svg" ];then
-       echo $L
-       extractLayer $ICONSRC ${TARGETNAME}.svg $L
-       inkscape --export-pdf=${TARGETNAME}.pdf ${TARGETNAME}.svg
-       echo "\newcommand{\icon${L}}{${TARGETNAME}.pdf}" >> ${TMPID}.preamble
-       fi
+      TARGETNAME="${TMPID}"`echo $L | md5sum | cut -c 1-10`
+      if [ ! -f "${TARGETNAME}.svg" ];then
+      extractLayer $ICONSRC ${TARGETNAME}.svg $L
+      inkscape --export-pdf=${TARGETNAME}.pdf ${TARGETNAME}.svg
+      echo "\newcommand{\icon${L}}{${TARGETNAME}.pdf}" >> ${TMPID}.preamble
+      fi
   done
+  fi
 # --------------------------------------------------------------------------- #
 
 # --------------------------------------------------------------------------- #
