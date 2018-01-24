@@ -106,11 +106,26 @@ function SEEHERE() {
 
 # --------------------------------------------------------------------------- #
 # MAKE MARGIN ICONS (ONCE)
-
-  if [ ! -f ${TMPID}.marginicon.pdf ];then
-  inkscape --export-pdf=${TMPID}marginicon.pdf ${INCLUDEPATH}/tgsoicons.svg
-  MARGINICON="${TMPID}marginicon.pdf"
-  fi
+# --------------------------------------------------------------------------- #
+  ICONSRC=`realpath "${INCLUDEPATH}/tgsoicons.svg"`
+  LAYERNAMES=`sed ':a;N;$!ba;s/\n//g' $ICONSRC  | # SVG WITHOUT LINEBREAKS
+              sed 's/>/&\n/g'                   | # ALL '>' ON NEWLINE
+              sed '/<g/s/scape:label/\nlabel/'  | # PUT NAME LABEL ON NL
+              grep -n ^label | cut -d " " -f 1  | # SELECT/EXTRACT LABELS
+              sort -t= -k 2 -u | sort           | # SORT/UNIQ + SORT NUM
+              grep -v "=\"XX_"                  | # IGNORE XX LAYERS
+              cut -d '"' -f 2`                    # EXTRACT NAMES
+  for L in $LAYERNAMES
+   do
+       TARGETNAME="${TMPID}"`echo $L | md5sum | cut -c 1-10`
+       if [ ! -f "${TARGETNAME}.svg" ];then
+       echo $L
+       extractLayer $ICONSRC ${TARGETNAME}.svg $L
+       inkscape --export-pdf=${TARGETNAME}.pdf ${TARGETNAME}.svg
+       echo "\newcommand{\icon${L}}{${TARGETNAME}.pdf}" >> ${TMPID}.preamble
+       fi
+  done
+# --------------------------------------------------------------------------- #
 
 # --------------------------------------------------------------------------- #
   buildDescriptor() {
@@ -379,7 +394,7 @@ function SHOW() {
             if [ "$REF" != "" ];then         # IF REF IS SET
                   REF=`echo $REF | md5sum  | # MAKE HASH
                        cut -c 1-16`          # CUT HASH
-            else  REF=`echo $PDFNOW | md5sum | # MAKE HASH
+            else  REF=`echo $RANDOM | md5sum | # MAKE HASH
                        cut -c 1-16`            # CUT HASH               
             fi 
           # EXTRACT PLACEMENT FLAGS

@@ -35,6 +35,9 @@
   \usepackage{refcount}   % USED BY \imgshift
   \usepackage{float}
   \usepackage{wrapfig}
+  \usepackage{pifont}
+
+
 
 % --------------------------------------------------------------------------- %
 %  F O R M A T
@@ -43,7 +46,7 @@
   % A6
   \setlength\textheight{.83\paperheight}
   \setlength\textwidth{.72\paperwidth}
-  \setlength\topmargin{-.17\paperheight}
+  \setlength\topmargin{-.15\paperheight}
   \setlength\oddsidemargin{-.05\paperwidth}
   \setlength\evensidemargin{-.13\paperwidth}
 
@@ -55,7 +58,7 @@
 
   \parindent=0pt
   \setlength{\parskip}{5pt plus 5pt minus 5pt}
-  \setstretch{1.3} % LINEHEIGHT % (P:setspace)
+  \setstretch{1.1} % LINEHEIGHT % (P:setspace)
 
   \renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
   \renewcommand*{\chapterheadendvskip}{\vspace{0pt}}
@@ -308,9 +311,10 @@
    \begin{wrapfigure}{I}{.25\textwidth}%
     \vspace{-.02\textwidth}%
      \includegraphics[width=.25\textwidth]{#1}
-     \if\relax\detokenize{#2}\relax
-      \else \footnotemark \fi
-        \vspace{-5mm}
+      \if\relax\detokenize{#2}\relax
+       \vspace{-2\baselineskip}
+        \else \footnotemark \\
+         \vspace{-2.2\baselineskip} \fi
    \end{wrapfigure}
    \vfill
     \if\relax\detokenize{#2}\relax
@@ -350,23 +354,30 @@
       \marginpar{
         ~ \\ % NOTHING NEEDED
         \vspace{-1\baselineskip}\\
-         \includegraphics[width=\marginparwidth]{#1}
+         \mbox{\hspace{-.5\marginparwidth} %
+          \includegraphics[width=1.5\marginparwidth]{#1} %
+     }
     }
   }
 % --------------------------------------------------------------------------- % 
   \newcommand{\anchorinlineicon}[1]{%
-    \vspace{.5\baselineskip}%
-    \includegraphics[height=1.5\baselineskip]{#1}
+   % http://www.weinelt.de/latex/raisebox.html
+   \raisebox{-.4\baselineskip}[\baselineskip][\baselineskip]{ %
+   \includegraphics[height=1.5\baselineskip]{#1}}\hspace{-.8em} %
   }
 % --------------------------------------------------------------------------- % 
   \newcommand\anchorinfo[2]{%
-       {\footnotesize
-        \color{black}
-       {\hspace{-1em}\anchorinlineicon{exclamation}%
-        \vspace{-.5\baselineskip}%
-        \setstretch{1.2} p.\pageref{#2}
-        -- #1 \par}}
-       \smallskip\vfill
+  \begin{figure}[htb] % 
+     {\footnotesize
+      \color{black}
+     {\hspace{-1em}\anchorinlineicon{\iconseeinline} % DEFINED FROM FUNCTIONS
+      \vspace{-.5\baselineskip} %
+      \setstretch{1.2} P.\pageref{#2}
+      \rotatebox{180}{%
+      \raisebox{-.6\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
+      {\large\ding{228}}}} #1 \par}}
+  %  \smallskip\vfill
+  \end{figure}
   }
 % --------------------------------------------------------------------------- % 
   \newcommand\anchor[3]{%
@@ -376,14 +387,13 @@
     % #3 NON-EMPTY -> CREATE ANCHOR IN PLACE
       \if\relax\detokenize{#1}\relax
       % #1 EMPTY -> INSERT ANCHOR ONLY
-       \anchormarginicon{margin}
-       \marginpar{\centering\tiny p.~\pageref{#2}} % NON-EMPTY
+       \anchormarginicon{\iconseemargin} % DEFINED FROM FUNCTIONS
+       \marginpar{\centering\tiny P.\pageref{#2}} % NON-EMPTY
       \else
       % #1 NON-EMPTY -> INSERT INFO + ANCHOR
        \anchorinfo{#1}{#2}
       \fi
     \fi
-
   }
 % --------------------------------------------------------------------------- %
   \newcommand\pageinfo[4]{%

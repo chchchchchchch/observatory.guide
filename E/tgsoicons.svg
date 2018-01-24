@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- CLEANED: 1516807515/9bafe98f0b14ae8c349cb115adb7d79f -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200"
+   height="100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="tgsoicons.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffe6"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:document-units="px"
+     showgrid="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="seeinline"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none">
+    <path
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 170,50 c 0,16.568543 -13.43146,30 -30,30 -16.56854,0 -30,-13.431457 -30,-30 0,-16.568543 13.43146,-30.000001 30,-30.000001 16.56854,0 30,13.431458 30,30.000001 z"
+       id="path2985" />
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 140.01741,34.946661 154.25745,49.186703 140.01741,63.426739 125.77737,49.186697 z"
+       id="rect2991" />
+  </g>
+  <g
+     id="g2984"
+     inkscape:groupmode="layer"
+     inkscape:label="seemargin"
+     style="display:none">
+    <path
+       id="path2988"
+       d="m 70,46 c 0,-16.568543 13.43146,-30.000001 30,-30.000001 16.56854,0 30,13.431458 30,30.000001 z"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cscc" />
+    <path
+       sodipodi:nodetypes="cscc"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 70,55.999999 C 70,72.568542 83.43146,86 100,86 c 16.56854,0 30,-13.431458 30,-30.000001 z"
+       id="path2994" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="warning"
+     style="display:inline">
+    <path
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 167.44619,12.566027 19.06031,0 0,40.162788 -19.06031,0 z"
+       id="rect2996" />
+    <path
+       id="path2999"
+       d="m 167.44619,62.566027 19.06031,0 0,20.162788 -19.06031,0 z"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.31693268px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:3.69398785px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Space Mono;-inkscape-font-specification:Space Mono"
+       x="8.7324066"
+       y="43.427219"
+       id="text3001"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3003"
+         x="8.7324066"
+         y="43.427219">THIS IS</tspan><tspan
+         sodipodi:role="line"
+         x="8.7324066"
+         y="72.074097"
+         id="tspan3005">A WARNING</tspan></text>
+  </g>
+</svg>
