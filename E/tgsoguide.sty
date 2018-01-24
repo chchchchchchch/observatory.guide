@@ -405,10 +405,10 @@
       \hspace{#1}%
        \parbox{\textwidth}{%
         \vspace{#2}
-         \colorbox{black}{%
-         {\small\parbox{.97\textwidth}{
+         \colorbox{white}{%
+         {\footnotesize\parbox{.97\textwidth}{
            \smallskip
-            \color{white} #4 %
+            \color{black} #4 %
              \smallskip}
      }}}}
      \fi
@@ -455,6 +455,15 @@
       % ------------------------------------ %
   }
 % --------------------------------------------------------------------------- %
+  \newcommand{\boxinfo}[2]{
+      \if\relax\detokenize{#1}\relax
+         \colorbox{white}{%
+         {\footnotesize\parbox{.97\textwidth}{
+           \smallskip
+            \color{black} #2 %
+             \smallskip}
+       }} \fi
+  }
   \newcommand{\imghuge}[4]{
       % ------------------------------------ %
       % INSERT ANCHOR (OPTIONAL)
@@ -469,11 +478,7 @@
       % PLACE IMAGE ---------
         \includegraphics[width=\textwidth]{#1}%
       % PLACE INFO  -------- 
-         \ifodd\value{pagenow} %
-          \pageinfo{-.0\textwidth}{.25\textheight}{#3}{#4}
-           \else %
-            \pageinfo{-1\textwidth}{.55\textheight}{#3}{#4}
-          \fi
+        \boxinfo{#3}{#4}
       % ---------
         \label{#2}
         \end{figure}
