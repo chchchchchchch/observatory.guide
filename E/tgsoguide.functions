@@ -128,27 +128,36 @@ function SEEHERE() {
   fi
 # --------------------------------------------------------------------------- #
 
+
+
+
+
+
+
+
 # --------------------------------------------------------------------------- #
   buildDescriptor() {
 
    if [ `echo $* | sed 's/ //g' | wc -c` -gt 1 ];then
      if [ `echo $* | sed 's/[- ]//g' | wc -c` -le 1 ];then
-           DESCRIPTION="" # DE-FACTO EMPTY
-             THISCLASS="$THISCLASS empty "
-           THISDESCRIPTION=`echo $THISDESCRIPTION | # PROVIDED
+           DESCRIPTIONINFO="" # DE-FACTO EMPTY
+          DESCRIPTIONCLASS="$DESCRIPTIONCLASS empty "
+           DESCRIPTIONNAME=`echo $DESCRIPTIONNAME | # PROVIDED
                             sed 's/:[ ]*$//'`       # RM COLON
-     else  DESCRIPTION=`echo "$*" | $PANDOCACTION   | # DISPLAY/TRANSLATE
-                        sed 's,</*p>,,g'`             # REMOVE <P> TAGS
+     else  DESCRIPTIONINFO=`echo "$*" | $PANDOCACTION | # DISPLAY/TRANSLATE
+                            sed 's,</*p>,,g'`           # REMOVE <P> TAGS
      fi
         if [ "$OUTPUTFORMAT" == pdf ];then 
        
-               THISCLASS=`echo $THISCLASS | cut -d " " -f 1`
-               write2src "\descriptor${THISCLASS}{$DESCRIPTION}" 
+         DESCRIPTIONCLASS=`echo $DESCRIPTIONCLASS | cut -d " " -f 1`
+         D="\descriptor${DESCRIPTIONCLASS}{$DESCRIPTIONINFO}{$DESCRIPTIONPLUS}" 
+         write2src "$D" 
        
         elif [ "$OUTPUTFORMAT" == html ];then 
        
-               write2src "<span class=\"$THISCLASS descriptor\">" 
-               write2src "<span>$THISDESCRIPTION</span> $DESCRIPTION</span>" 
+         write2src "<span class=\"$DESCRIPTIONCLASS descriptor\">" 
+         write2src "<span>$DESCRIPTIONNAME</span>"
+         write2src "$DESCRIPTIONINFO</span>" 
 
         fi 
      else   echo "NOTHING TO DO"
@@ -160,15 +169,15 @@ function SEEHERE() {
 
 function METHOD() {
 
-   THISCLASS="method"
+   DESCRIPTIONCLASS="method"
 
   if [ "$OUTPUTFORMAT" == pdf ];then 
 
-   THISDESCRIPTION="Method:"
+   DESCRIPTIONNAME="Method:"
  
   elif [ "$OUTPUTFORMAT" == html ];then 
  
-   THISDESCRIPTION="<a href=\"$SRCHREF\">Method:</a>"
+   DESCRIPTIONNAME="<a href=\"$SRCHREF\">Method:</a>"
 
   fi 
 
@@ -180,7 +189,7 @@ function METHOD() {
 
 function WHAT() {
 
-  THISCLASS="what";THISDESCRIPTION="What: ";buildDescriptor $* 
+  DESCRIPTIONCLASS="what";DESCRIPTIONNAME="What: ";buildDescriptor $* 
 
 }
 
@@ -188,7 +197,7 @@ function WHAT() {
 
 function WHO() {
 
-  THISCLASS="who";THISDESCRIPTION="Who: ";buildDescriptor $* 
+  DESCRIPTIONCLASS="who";DESCRIPTIONNAME="Who: ";buildDescriptor $* 
 
 }
 
@@ -196,7 +205,7 @@ function WHO() {
 
 function WHY() {
 
-  THISCLASS="why";THISDESCRIPTION="Why: ";buildDescriptor $* 
+  DESCRIPTIONCLASS="why";DESCRIPTIONNAME="Why: ";buildDescriptor $* 
 
 }
 
@@ -204,7 +213,7 @@ function WHY() {
 
 function WHEN() {
 
-  THISCLASS="when";THISDESCRIPTION="When: ";buildDescriptor $* 
+  DESCRIPTIONCLASS="when";DESCRIPTIONNAME="When: ";buildDescriptor $* 
 
 }
 
@@ -212,7 +221,7 @@ function WHEN() {
 
 function HOW() {
 
-  THISCLASS="how";THISDESCRIPTION="How:";buildDescriptor $* 
+  DESCRIPTIONCLASS="how";DESCRIPTIONNAME="How:";buildDescriptor $* 
 
 }
 
@@ -220,7 +229,7 @@ function HOW() {
 
 function ABOUT() {
 
-  THISCLASS="about";THISDESCRIPTION="About:";buildDescriptor $* 
+  DESCRIPTIONCLASS="about";DESCRIPTIONNAME="About:";buildDescriptor $* 
 
 }
 
@@ -228,7 +237,7 @@ function ABOUT() {
 
 function NOTE() {
 
-  THISCLASS="note";THISDESCRIPTION="Note:";buildDescriptor $* 
+  DESCRIPTIONCLASS="note";DESCRIPTIONNAME="Note:";buildDescriptor $* 
 
 }
 
@@ -236,7 +245,7 @@ function NOTE() {
 
 function WARNING() {
 
-  THISCLASS="warning";THISDESCRIPTION="WARNING:";buildDescriptor $* 
+  DESCRIPTIONCLASS="warning";DESCRIPTIONNAME="WARNING:";buildDescriptor $* 
 
 }
 
@@ -244,15 +253,34 @@ function WARNING() {
 
 function EXAMPLE() {
 
-  THISCLASS="example";THISDESCRIPTION="Example:";buildDescriptor $* 
+ # ----
+ # GET LN NUM FOR CMD IN (UNPROCESSED) MDSH SRC
+   LNCMD=`grep -n "^% EXAMPLE:$*" $MDSH | # FIND CMD LINE
+          head -n 1 | cut -d ":" -f 1`    # SELECT FIRST MATCH
+ # ----
+ # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
+   T="$RANDOM"
+   sed -i "${LNCMD}s/^% EXAMPLE:$*/%${T}EXAMPLE:$*/" $MDSH
+ # ----
+ # EXTRACT CAPTION FOR TAGGED '% SHOW'
+   NEXT=`grep -A 60 "%${T}EXAMPLE:$*" $MDSH | # 60 LINES AFTER MATCH
+         sed '1d' | sed '/^[ \t]*$/d' | # NOT SELF, NOT EMPTY
+         head -n 1 | grep "^%"`         # FIRST NON-EMPTY, STARTS WITH %
 
+   if [ "$NEXT" == "" ]
+   then  DESCRIPTIONPLUS="21"
+   else  DESCRIPTIONPLUS="31"
+   fi
+
+   DESCRIPTIONCLASS="example";DESCRIPTIONNAME="Example:";buildDescriptor $* 
+   echo $D
 }
 
 # --------------------------------------------------------------------------- #
 
 function REMEMBER() {
 
-  THISCLASS="remember";THISDESCRIPTION="Remember:";buildDescriptor $* 
+  DESCRIPTIONCLASS="remember";DESCRIPTIONNAME="Remember:";buildDescriptor $* 
 
 }
 
@@ -261,7 +289,7 @@ function REMEMBER() {
 
 function URGENCY() {
 
-  THISCLASS="urgency";THISDESCRIPTION="Urgency:";buildDescriptor $* 
+  DESCRIPTIONCLASS="urgency";DESCRIPTIONNAME="Urgency:";buildDescriptor $* 
 
 }
 
@@ -269,6 +297,17 @@ function URGENCY() {
 
 
 
+
+
+
+
+
+
+
+# TODO: % TEXIN
+#       % TEXFIX
+
+# TODO:
 
 function RELATESTO() {
 
@@ -285,6 +324,15 @@ function TODO() {
    fi
 
 }
+
+
+
+
+
+
+
+
+
 
 
 

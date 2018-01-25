@@ -38,6 +38,8 @@
   \usepackage{pifont}
 
 
+  \newcounter{floats}  % COUNT FLOATS TO ADD LABELS
+  \newcounter{pagenow} % MOSTLY EMPTY/USED TO STORE
 
 % --------------------------------------------------------------------------- %
 %  F O R M A T
@@ -54,7 +56,12 @@
 %  B A S I C
 % --------------------------------------------------------------------------- %
   \setlength\marginparwidth{1.0cm}
-  \setlength\marginparsep{5pt} % 6pt
+ %\setlength\marginparsep{5pt} % 6pt
+  \setlength\marginparsep{2pt} % 6pt
+ % http://www.weinelt.de/latex/marginparpush.html
+  \setlength{\marginparpush}{2\baselineskip}
+  \reversemarginpar
+
 
   \parindent=0pt
   \setlength{\parskip}{5pt plus 5pt minus 5pt}
@@ -137,13 +144,6 @@
   \newcommand{\rmstandard}{phv}
   \newcommand{\sfstandard}{phv}
 
- % ttneu
-  \let\OldTexttt\texttt
-  \renewcommand{\texttt}[1]{%
-  \OldTexttt{\fontfamily{\ttstandard}%
-              \selectfont{%
-              %\relscale{1.05}{#1}}}}
-               \relscale{.95}{#1}}}}
 
    \newcommand{\embody}{}
  % CHANGE \emph FOR BODYTEXT
@@ -153,21 +153,22 @@
      \else\em %
      \fi%
     }
+  %\renewcommand{\embody}{\fontfamily{pju}\fontshape{it}%
+  %                       \selectfont\relscale{1.2}}
+   \renewcommand{\embody}{\it}
 
    \renewcommand*{\ttdefault}{\ttstandard}\selectfont
    \renewcommand*{\rmdefault}{\rmstandard}\selectfont
    \renewcommand*{\sfdefault}{\sfstandard}\selectfont
+
+%  \let\OldTexttt\texttt
+%  \renewcommand{\texttt}[1]{%
+%  \OldTexttt{\fontfamily{\ttstandard}%
+%              \selectfont{%
+%               \relscale{.95}{##1}}}}
+
    \renewcommand\urlsplit[1]{\seqsplit{\tt\tiny ##1}}
    \renewcommand\urlf[1]{{\scalefont{.8}\tt ##1}}
-  %\renewcommand{\embody}{\fontfamily{pju}\fontshape{it}%
-  %                       \selectfont\relscale{1.2}}
-   \renewcommand{\embody}{\it}
-   \renewcommand{\texttt}[1]{%
-   \OldTexttt{\fontfamily{\ttstandard}%
-               \selectfont{%
-                \relscale{.95}{##1}}}}
-   \fontsize{8pt}{8pt}
-
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
@@ -184,7 +185,6 @@
   \renewcommand\subsection[1]{\newpage\Subsection*{#1}}
   \let\Subsubsection\subsubsection
   \renewcommand\subsubsection[1]{\newpage\Subsubsection*{#1}}
-
 
 % --------------------------------------------------------------------------- % 
 %  F O O T N O T E S  
@@ -279,21 +279,22 @@
  % VERTICAL SPACE HACK
  % http://tex.stackexchange.com/questions/61627/
  % -> prevent-action-if-top-of-page
-% \newcommand\vspacenotonpagetop{%
+% \newcommand\vspacenotonpagetop[1]{%
 %    \par % make sure we end a paragraph
-%    \vskip10pt % space above the rule
+%    \vskip#1 % space above the rule
 %    \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
 %    \nointerlineskip % disable interline glue here
-%    \vskip10pt % space below the rule
+%    \vskip#1 % space below the rule
 % }
-   \reversemarginpar
-    \newcommand{\marginicon}[1]{%
-      \marginpar{
-        ~ \\ % NOTHING NEEDED
-        \vspace{-1mm}\\
-         \includegraphics[width=\marginparwidth]{#1}
-    }%\vspace{-3mm}
-   }
+
+  \newcommand{\marginicon}[1]{%
+     \marginpar{
+       ~ \\ % NOTHING NEEDED
+       \vspace{-1mm}\\
+        \includegraphics[width=\marginparwidth]{#1}
+   }%\vspace{-3mm}
+  }
+
 % --------------------------------------------------------------------------- % 
   % \usepackage{wrapfig}
   %
@@ -304,22 +305,46 @@
   % The uppercase version allows the figure to float.
   % The lowercase version means exactly here.
 
-  % https://tex.stackexchange.com/questions/120926/
-  % -> prevent-wrapfigure-from-wrapping-the-next-section
+  % https://tex.stackexchange.com/questions/111393/
+  % -> too-much-space-around-wrap-figure
+  \setlength{\intextsep}{.1\baselineskip}
+
+% \newcommand{\imgsmall}[3]{
+%  \begin{wrapfigure}{I}{.25\textwidth}%
+%    \includegraphics[width=.25\textwidth]{#1}
+%      \if\relax\detokenize{#2}\relax
+%        \else \footnotemark 
+%        \vspace{-1\baselineskip}
+%      \fi
+%  \end{wrapfigure}
+%  \vfill
+%     \if\relax\detokenize{#2}\relax
+%     \else \footnotetext{#2} \fi
+% }
 
   \newcommand{\imgsmall}[3]{
    \begin{wrapfigure}{I}{.25\textwidth}%
-    \vspace{-.02\textwidth}%
+        \stepcounter{floats}  % INCREASE COUNTER ..
+        \label{FF:\thefloats} % .. TO CREATE A UNIQ LABEL
+        \setcounterpageref{pagenow}{FF:\thefloats}
      \includegraphics[width=.25\textwidth]{#1}
-      \if\relax\detokenize{#2}\relax
-       \vspace{-2\baselineskip}
-        \else \footnotemark \\
-         \vspace{-2.2\baselineskip} \fi
+       \if\relax\detokenize{#2}\relax
+         \else \footnotemark 
+         \vspace{-1\baselineskip}
+       \fi
    \end{wrapfigure}
    \vfill
-    \if\relax\detokenize{#2}\relax
-     \else \footnotetext{#2} \fi
+     \if\relax\detokenize{#2}\relax
+     \else 
+    % https://groups.google.com/d/msg/comp.text.tex/bkikh7bww_s/7ZPXiKMh7REJ
+           \ifnum\value{pagenow}>\thepage
+           \afterpage{\footnotetext{#2}}
+           \else
+           \footnotetext{#2}
+           \fi
+     \fi
   }
+
 % --------------------------------------------------------------------------- % 
   \newcommand{\imgwide}[3]{
    \bigskip
@@ -415,8 +440,8 @@
     \fi
   }
 % --------------------------------------------------------------------------- %
-   \newcounter{floats}
-   \newcounter{pagenow}
+   % \newcounter{floats}
+   % \newcounter{pagenow}
  % ------------------------------------------------------------------------ %
    \newcommand{\imgshift}[5]{
       % ------------------------------------ %
@@ -529,73 +554,107 @@
   }
 
 % --------------------------------------------------------------------------- %
-% MDSH TGSO GUIDE
+% MDSH TGSO GUIDE (VERY SPECIFIC)
 % --------------------------------------------------------------------------- %
 
+  % FALLBACK
    \newcommand\grouping[1]{%
     \cleartoleft
      {\LARGE #1}
       \cleartoright
    }
+
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptormethod[1]{%
+   \newlength{\abovedescriptor}
+   \setlength{\abovedescriptor}{5pt plus 10pt minus 10pt}
+   \newcommand{\descriptorskip}{\vspace{\abovedescriptor}
+                                 \pagebreak[1]}
+
+
+ % ------------------------------------------------------------------------- %
+   \newcommand\descriptormethod[2]{%
     \cleartoright
-     {\large\textbf{METHOD: #1}}
-       \medskip
+%    \begin{wrapfigure}{L}{.25\textwidth}
+%    {\large\textbf{METHOD:}}\end{wrapfigure} 
+%   %\begin{flushleft}
+%    {\large\textbf{#1}}
+%      \medskip
+%      %\end{flushleft}
+%
+     \begin{flushleft}
+      \renewcommand\baselinestretch{1.2}
+       \large\textbf{METHOD: #1}
+        \descriptorskip
+         \end{flushleft}%
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorwhat[1]{%
-
+   \newcommand\descriptorwhat[2]{%
+    \descriptorskip
     \textbf{What:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorwho[1]{%
-
+   \newcommand\descriptorwho[2]{%
+    \descriptorskip
     \textbf{Who:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorwhy[1]{%
-
+   \newcommand\descriptorwhy[2]{%
+    \descriptorskip
     \textbf{Why:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorwhen[1]{%
-
+   \newcommand\descriptorwhen[2]{%
+    \descriptorskip
     \textbf{When:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorhow[1]{%
-
-    \textbf{How:} #1
+   \newcommand\descriptorhow[2]{%
+    \descriptorskip
+     \if\relax\detokenize{#1}\relax
+      % #1 EMPTY -> EMPTY
+      \addtolength{\marginparsep}{-.1em}  % CHANGE MARGIN DISTANCE
+      \marginpar{\vspace{.5\baselineskip}
+                 {\large\underline{HOW}}}
+      \addtolength{\marginparsep}{.1em}   % RESET
+      \vspace{-.5\baselineskip}
+     \else
+      \textbf{HOW:} #1
+     \fi
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorabout[1]{%
-
+   \newcommand\descriptorabout[2]{%
+    \descriptorskip
     \textbf{About:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptornote[1]{%
-
-    \textbf{Note:} #1
+   \newcommand\descriptornote[2]{%
+    \descriptorskip
+    \underline{NOTE:}: #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorwarning[1]{%
-
+   \newcommand\descriptorwarning[2]{%
+    \descriptorskip
     \textbf{Warning:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorexample[1]{%
+   \newcommand\descriptorexample[2]{%
+    \descriptorskip
 
-    \textbf{Example:} #1
+    \ifnum \numexpr#2 < 30
+    {\color{red}{Example:} #1}
+    \else
+    {\color{green}{Example:} #1}
+    \fi
+
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorremember[1]{%
-
+   \newcommand\descriptorremember[2]{%
+    \descriptorskip
     \textbf{Remember:} #1
    }
  % ------------------------------------------------------------------------- %
-   \newcommand\descriptorurgency[1]{%
-
+   \newcommand\descriptorurgency[2]{%
+    \descriptorskip
     \textbf{Urgency:} #1
    }
  % ------------------------------------------------------------------------- %
