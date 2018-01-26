@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1516995390/fb63c1ad7e15f30665994ecc23d8c987 -->
+<!-- CLEANED: 1517007676/5a800cce5b60038cbd91e97a8d32cfdb -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -42,7 +42,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="XX_REFERENZ"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
        id="path3022"
@@ -135,7 +135,7 @@
          id="tspan3005">A WARNING</tspan></text>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="g3008"
      inkscape:groupmode="layer"
      inkscape:label="exampleinline">
@@ -160,13 +160,13 @@
        transform="matrix(0,-1,1,0,0,0)"
        xml:space="preserve"
        style="font-size:25.15323067px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:2px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
-       x="-206.90561"
+       x="-219.90561"
        y="90.637817"
        id="text3145"
        sodipodi:linespacing="141%"><tspan
          sodipodi:role="line"
          id="tspan3147"
-         x="-206.90561"
+         x="-219.90561"
          y="90.637817">EXAMPLE</tspan></text>
   </g>
   <g
@@ -302,5 +302,75 @@
          x="18.731964"
          id="tspan3141"
          sodipodi:role="line">LARGE</tspan></text>
+  </g>
+  <g
+     inkscape:label="whatinline"
+     inkscape:groupmode="layer"
+     id="g3031"
+     style="display:none">
+    <text
+       xml:space="preserve"
+       style="font-size:25.15323067px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:4.57331467px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
+       x="115.79674"
+       y="105.42026"
+       id="text3033"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         x="115.79674"
+         y="105.42026"
+         id="tspan3037">WHAT</tspan></text>
+  </g>
+  <g
+     style="display:none"
+     id="g3041"
+     inkscape:groupmode="layer"
+     inkscape:label="whatmargin">
+    <text
+       sodipodi:linespacing="141%"
+       id="text3043"
+       y="107.60672"
+       x="-172.87451"
+       style="font-size:25.15323067px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:4.57331467px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         id="tspan3045"
+         y="107.60672"
+         x="-172.87451"
+         sodipodi:role="line">WHAT</tspan></text>
+  </g>
+  <g
+     style="display:none"
+     id="g3047"
+     inkscape:groupmode="layer"
+     inkscape:label="tmpinline">
+    <text
+       sodipodi:linespacing="141%"
+       id="text3049"
+       y="105.42026"
+       x="115.79674"
+       style="font-size:25.15323067px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:4.57331467px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA Medium"
+       xml:space="preserve"><tspan
+         id="tspan3051"
+         y="105.42026"
+         x="115.79674"
+         sodipodi:role="line">TMP</tspan></text>
+  </g>
+  <g
+     inkscape:label="tmpmargin"
+     inkscape:groupmode="layer"
+     id="g3053"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-size:25.15323067px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:4.57331467px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:OCRA;-inkscape-font-specification:OCRA Medium"
+       x="-149.25732"
+       y="108.27235"
+       id="text3055"
+       sodipodi:linespacing="141%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         x="-149.25732"
+         y="108.27235"
+         id="tspan3057">TMP</tspan></text>
   </g>
 </svg>

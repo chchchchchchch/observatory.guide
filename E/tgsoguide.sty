@@ -243,14 +243,19 @@
 % ENVIRONMENTS
 % --------------------------------------------------------------------------- %
   \newenvironment{quaverbatim}{%
+  \vfill
    \begin{alltt}%
-    \fontsize{6pt}{7pt}\selectfont
-  }{\end{alltt}}
+    \fontsize{8pt}{8pt}\selectfont
+  }{\end{alltt}
+    \vfill}
 
   \newenvironment{verbatimsmall}{%
+  \vfill\medskip
    \begin{alltt}%
-    \fontsize{6pt}{7pt}\selectfont
-  }{\end{alltt}}
+    \fontsize{8pt}{8pt}\selectfont
+  }{\end{alltt}
+     \medskip
+      \vfill}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
@@ -275,6 +280,11 @@
 
 % --------------------------------------------------------------------------- %
 % GRAPHICS
+% --------------------------------------------------------------------------- %
+   \newcommand\pdfpage[3]{%
+   \includepdf[pagecommand={\thispagestyle{fancy}},%
+               scale=1,pages=#2#3]{#1}
+  }
 % --------------------------------------------------------------------------- %
 
  % VERTICAL SPACE HACK
@@ -588,18 +598,23 @@
 
  % ------------------------------------------------------------------------- %
    \newlength{\abovedescriptor}
-   \setlength{\abovedescriptor}{8pt plus 10pt minus 6pt}
-   \newcommand{\descriptorskip}{\vspace{\abovedescriptor}
-                                 \pagebreak[1]}
+   \setlength{\abovedescriptor}{0pt plus 0pt minus 0pt}
+   \newcommand{\descriptorskip}{\pagebreak[2] %
+                                \vspace{\abovedescriptor} %
+                                 \pagebreak[0]}
 
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %
    \newcommand\descriptormethod[3]{%
-    \cleartoright
+   %\cleartoright
+
+   \vfill
+    \bigskip
+    \pagebreak[2]
      \begin{flushleft}
       \renewcommand\baselinestretch{1.2}
        \large\textbf{METHOD: #3}
-        \descriptorskip
+        \vspace{-2\abovedescriptor}
          \end{flushleft}%
    }
  % ------------------------------------------------------------------------- %
@@ -672,54 +687,127 @@
                        \end{flushleft} %
          \fi
        \fi
-
    }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorwhat[2]{%
-%    \descriptorskip
-%    \textbf{What:} #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorwho[2]{%
-%    \descriptorskip
-%    \textbf{Who:} #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorwhy[2]{%
-%    \descriptorskip
-%    \textbf{Why:} #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorwhen[2]{%
-%    \descriptorskip
-%    \textbf{When:} #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorabout[2]{%
-%    \descriptorskip
-%    \textbf{About:} #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptornote[2]{%
-%    \descriptorskip
-%    \underline{NOTE:}: #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorwarning[2]{%
-%    \descriptorskip
-%     \medskip
-%      \fbox{\underline{WARNING:}: #1}
-%     \medskip\vfill
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorremember[2]{%
-%    \descriptorskip
-%    \textbf{Remember:} #1
-%   }
-% % ------------------------------------------------------------------------- %
-%   \newcommand\descriptorurgency[2]{%
-%    \descriptorskip
-%    \textbf{Urgency:} #1
-%   }
-% % ------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorwhat[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+      \ifnum\numexpr#2 < 150
+       \grafikinline{\iconwhatmargin}{}%
+       \vspace{-1.2\baselineskip}       
+      \else
+        \ifnum\numexpr#2 < 250
+         \grafikinline{\iconwhatmargin}{}%
+         \vspace{-1.2\baselineskip}       
+        \else
+         \grafikinline{\iconwhatmargin}{}%
+         \vspace{-1.2\baselineskip}       
+        \fi
+      \fi
+    \else % DMODE = 2 = INLINE CONTENT 
+      \ifnum\numexpr#2 < 50 % NOT MUCH
+      \begin{flushleft}
+      \grafikinline{\iconwhatinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+      \else % MORE
+      \begin{flushleft}
+      \grafikinline{\iconwhatinline}{\hspace{-1.5em}}%
+                   {\color{red}#3} %
+                    \end{flushleft} %
+      \fi
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorwho[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+       \grafikinline{\icontmpmargin}{}%
+       \vspace{-1.2\baselineskip}       
+    \else % DMODE = 2 = INLINE CONTENT 
+      \begin{flushleft}
+      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorwhy[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+       \grafikinline{\icontmpmargin}{}%
+       \vspace{-1.2\baselineskip}       
+    \else % DMODE = 2 = INLINE CONTENT 
+      \begin{flushleft}
+      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorwhen[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+       \grafikinline{\icontmpmargin}{}%
+       \vspace{-1.2\baselineskip}       
+    \else % DMODE = 2 = INLINE CONTENT 
+      \begin{flushleft}
+      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorabout[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+       \grafikinline{\icontmpmargin}{}%
+       \vspace{-1.2\baselineskip}       
+    \else % DMODE = 2 = INLINE CONTENT 
+      \begin{flushleft}
+      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorremember[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+       \grafikinline{\icontmpmargin}{}%
+       \vspace{-1.2\baselineskip}       
+    \else % DMODE = 2 = INLINE CONTENT 
+      \begin{flushleft}
+      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorurgency[3]{%
+    \descriptorskip
+    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+       \grafikinline{\icontmpmargin}{}%
+       \vspace{-1.2\baselineskip}       
+    \else % DMODE = 2 = INLINE CONTENT 
+      \begin{flushleft}
+      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+                   {\color{green}#3} %
+                    \end{flushleft} %
+    \fi
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptornote[3]{%
+   \descriptorskip
+   \underline{NOTE:}: #3
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorwarning[3]{%
+  \vfill
+   \descriptorskip
+    \medskip
+     \fbox{\underline{WARNING:}:#3}
+    \medskip\vfill
+  }
+% ------------------------------------------------------------------------- %
 

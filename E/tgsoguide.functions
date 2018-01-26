@@ -220,10 +220,8 @@ function SEEHERE() {
            PDFCMD=""
           HTMLCMD=""
    fi 
-
   #echo "$PDFCMD"
    write2src "$PDFCMD"
-   sleep 2
 
   }
 # --------------------------------------------------------------------------- #
@@ -262,51 +260,66 @@ function HOW() {
 # --------------------------------------------------------------------------- #
 
 function WHAT() {
-
   analyseDescriptor WHAT $*
     buildDescriptor WHAT $* 
 }
 
 # --------------------------------------------------------------------------- #
 
-#function WHO() {
-#}
+function WHO() {
+  analyseDescriptor WHO $*
+    buildDescriptor WHO $* 
+}
 
 # --------------------------------------------------------------------------- #
 
-#function WHY() {
-#}
+function WHY() {
+  analyseDescriptor WHY $*
+    buildDescriptor WHY $* 
+}
 
 # --------------------------------------------------------------------------- #
 
-#function WHEN() {
-#}
+function WHEN() {
+  analyseDescriptor WHEN $*
+    buildDescriptor WHEN $* 
+}
 
 # --------------------------------------------------------------------------- #
 
-#function ABOUT() {
-#}
+function ABOUT() {
+  analyseDescriptor ABOUT $*
+    buildDescriptor ABOUT $* 
+}
 
 # --------------------------------------------------------------------------- #
 
-#function NOTE() {
-#}
+function NOTE() {
+  analyseDescriptor NOTE $*
+    buildDescriptor NOTE $* 
+}
 
 # --------------------------------------------------------------------------- #
 
-#function WARNING() {
-#}
+function WARNING() {
+  analyseDescriptor WARNING $*
+    buildDescriptor WARNING $* 
+}
 
 # --------------------------------------------------------------------------- #
 
-#function REMEMBER() {
-#}
+function REMEMBER() {
+  analyseDescriptor REMEMBER $*
+    buildDescriptor REMEMBER $* 
+}
 
 # --------------------------------------------------------------------------- #
 
 
-#function URGENCY() {
-#}
+function URGENCY() {
+  analyseDescriptor URGENCY $*
+    buildDescriptor URGENCY $* 
+}
 
 # --------------------------------------------------------------------------- #
 
@@ -361,9 +374,9 @@ function GROUPING() {
                sed 's/[^a-z]//g'`
 
    if [ ! -f ${TMPID}.grouping.pdf ];then
-   getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
+        getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
    if [ -f ${TMPID}.grouping.svg ];then
-   svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
+        svglayers2pdfpages ${TMPID}.grouping.svg ${TMPID}grouping.pdf
    fi
    fi
 
@@ -895,4 +908,12 @@ function NEWPAGE() {
   fi
 
 }
+# --------------------------------------------------------------------------- #
+function SHOW() {
+
+   # DISABLE FOR NOW
+     sleep 0
+
+}
+# --------------------------------------------------------------------------- #
 
