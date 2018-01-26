@@ -121,7 +121,10 @@ function SEEHERE() {
       TARGETNAME="${TMPID}"`echo $L | md5sum | cut -c 1-10`
       if [ ! -f "${TARGETNAME}.svg" ];then
       extractLayer $ICONSRC ${TARGETNAME}.svg $L
-      inkscape --export-pdf=${TARGETNAME}.pdf ${TARGETNAME}.svg
+      inkscape --export-text-to-path \
+               --export-pdf=${TARGETNAME}.pdf \
+               ${TARGETNAME}.svg
+      conformColor ${TARGETNAME}.pdf
       echo "\newcommand{\icon${L}}{${TARGETNAME}.pdf}" >> ${TMPID}.preamble
       fi
   done
@@ -131,121 +134,111 @@ function SEEHERE() {
 
 
 
+# --------------------------------------------------------------------------- #
+# TODO: SHORT INTRODUCTION WHAT IS CALLED A DESCRIPTOR IN THIS CONTEXT
+# ...
+# ...
+# ...
+# --------------------------------------------------------------------------- #
+  analyseDescriptor() {
 
+    DNAME="$1" # DESCRIPTOR NAME PASSED AS ARGUMENT
+    DCONTENT=`echo $* | sed "s/^[ ]*$DNAME//"`
 
+  # ----
+  # GET LN NUM FOR CMD (FIRST APPEARANCE) IN (RAW) MDSH SRC
+    LNCMD=`grep -n "^% ${DNAME}" $MDSH | # FIND CMD LINE
+           head -n 1 | cut -d ":" -f 1`  # SELECT FIRST MATCH
+  # ----
+  # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT MATCH NEXT TIME)
+    T="$RANDOM"
+    sed -i "${LNCMD}s/^% ${DNAME}:/%${T}${DNAME}:/" $MDSH
 
+  # PREREQUISITE: DESCRIPTOR IS NOT EMPTY
+  # ----
+    if [ `echo $DCONTENT | #
+          sed 's/ //g'   | #
+          wc -c` -gt 1 ];then
 
+       NEXT=`grep -A 60 "%${T}$DNAME" $MDSH  | # 60 LINES AFTER MATCH
+             sed '1d' | sed '/^[ \t]*$/d'    | # NOT SELF, NOT EMPTY
+             head -n 1 | grep "^%"` # FIRST NON-EMPTY, STARTS WITH %
+
+       if [ `echo $DCONTENT | sed 's/[- ]*//g' | wc -c` -le 1 ];then
+
+             DCONTENT=""
+
+       if [ "$NEXT" == "" ];then
+ 
+      # CASE 1: DESCRIPTOR IS FOLLOWED BY NON-DESCRIPTOR
+      # ======
+         DMODE="1"
+       # COUNT WHAT FOLLOWS (CHARS)
+         DNFO=`grep -A 60 "%${T}$DNAME" $MDSH | # 60 LINES AFTER MATCH
+               sed '1d'                       | # NOT SELF
+               sed -n '/^%/,$!p'              | # UNTIL FIRST DESCRIPTOR
+               wc -c`                           # COUNT CHARACTERS
+       else
+
+      # CASE 0: DESCRIPTOR IS EMPTY AND NOT FOLLOWED BY NON-DESCRIPTOR
+      # ======
+         DMODE="0"
+       fi
+
+      else
+
+      # CASE 2: DESCRIPTOR IS ONELINE AND NOT EMPTY
+      # ======
+         DMODE="2"
+       # COUNT CONTENT (CHARS)
+         DNFO=`echo $DCONTENT | wc -c` # COUNT CHARACTERS
+      fi
+
+    else
+         DMODE="0"
+         echo "DO NOTHING"
+    fi
+
+  }
 # --------------------------------------------------------------------------- #
   buildDescriptor() {
 
-   if [ `echo $* | sed 's/ //g' | wc -c` -gt 1 ];then
-     if [ `echo $* | sed 's/[- ]//g' | wc -c` -le 1 ];then
-           DESCRIPTIONINFO="" # DE-FACTO EMPTY
-          DESCRIPTIONCLASS="$DESCRIPTIONCLASS empty "
-           DESCRIPTIONNAME=`echo $DESCRIPTIONNAME | # PROVIDED
-                            sed 's/:[ ]*$//'`       # RM COLON
-     else  DESCRIPTIONINFO=`echo "$*" | $PANDOCACTION | # DISPLAY/TRANSLATE
-                            sed 's,</*p>,,g'`           # REMOVE <P> TAGS
-     fi
-        if [ "$OUTPUTFORMAT" == pdf ];then 
-       
-         DESCRIPTIONCLASS=`echo $DESCRIPTIONCLASS | cut -d " " -f 1`
-         D="\descriptor${DESCRIPTIONCLASS}{$DESCRIPTIONINFO}{$DESCRIPTIONPLUS}" 
-         write2src "$D" 
-       
-        elif [ "$OUTPUTFORMAT" == html ];then 
-       
-         write2src "<span class=\"$DESCRIPTIONCLASS descriptor\">" 
-         write2src "<span>$DESCRIPTIONNAME</span>"
-         write2src "$DESCRIPTIONINFO</span>" 
+   DNAME="$1"
+   DCLASS=`echo $DNAME | tr [:upper:] [:lower:]`
+   DCONTENT=`echo $*               | # DISPLAY
+             sed "s/^[ ]*$DNAME//" | # REMOVE DNAME BLANKS
+             $PANDOCACTION         | # TRANSLATE TO OUTPUT FORMAT
+             sed 's,</*p>,,g'`       # RM <p> TAGS (HTML ONLY, DO ANYWAY)
 
-        fi 
-     else   echo "NOTHING TO DO"
-   fi
+   if   [ "$DMODE" == "1" ];then 
+            PDFCMD="\descriptor${DCLASS}{$DMODE}{$DNFO}{}"
+           HTMLCMD=""
+   elif [ "$DMODE" != "0" ];then 
+            PDFCMD="\descriptor${DCLASS}{$DMODE}{$DNFO}{$DCONTENT}"
+           HTMLCMD=""
+   else
+           PDFCMD=""
+          HTMLCMD=""
+   fi 
+
+  #echo "$PDFCMD"
+   write2src "$PDFCMD"
+   sleep 2
 
   }
-
 # --------------------------------------------------------------------------- #
 
 function METHOD() {
 
-   DESCRIPTIONCLASS="method"
+# DESCRIPTIONCLASS="method"
+# if [ "$OUTPUTFORMAT" == pdf ];then 
+#  DESCRIPTIONNAME="Method:"
+# elif [ "$OUTPUTFORMAT" == html ];then 
+#  DESCRIPTIONNAME="<a href=\"$SRCHREF\">Method:</a>"
+# fi 
 
-  if [ "$OUTPUTFORMAT" == pdf ];then 
-
-   DESCRIPTIONNAME="Method:"
- 
-  elif [ "$OUTPUTFORMAT" == html ];then 
- 
-   DESCRIPTIONNAME="<a href=\"$SRCHREF\">Method:</a>"
-
-  fi 
-
-  buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function WHAT() {
-
-  DESCRIPTIONCLASS="what";DESCRIPTIONNAME="What: ";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function WHO() {
-
-  DESCRIPTIONCLASS="who";DESCRIPTIONNAME="Who: ";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function WHY() {
-
-  DESCRIPTIONCLASS="why";DESCRIPTIONNAME="Why: ";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function WHEN() {
-
-  DESCRIPTIONCLASS="when";DESCRIPTIONNAME="When: ";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function HOW() {
-
-  DESCRIPTIONCLASS="how";DESCRIPTIONNAME="How:";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function ABOUT() {
-
-  DESCRIPTIONCLASS="about";DESCRIPTIONNAME="About:";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function NOTE() {
-
-  DESCRIPTIONCLASS="note";DESCRIPTIONNAME="Note:";buildDescriptor $* 
-
-}
-
-# --------------------------------------------------------------------------- #
-
-function WARNING() {
-
-  DESCRIPTIONCLASS="warning";DESCRIPTIONNAME="WARNING:";buildDescriptor $* 
+  analyseDescriptor METHOD $*
+    buildDescriptor METHOD $* 
 
 }
 
@@ -253,45 +246,67 @@ function WARNING() {
 
 function EXAMPLE() {
 
- # ----
- # GET LN NUM FOR CMD IN (UNPROCESSED) MDSH SRC
-   LNCMD=`grep -n "^% EXAMPLE:$*" $MDSH | # FIND CMD LINE
-          head -n 1 | cut -d ":" -f 1`    # SELECT FIRST MATCH
- # ----
- # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
-   T="$RANDOM"
-   sed -i "${LNCMD}s/^% EXAMPLE:$*/%${T}EXAMPLE:$*/" $MDSH
- # ----
- # EXTRACT CAPTION FOR TAGGED '% SHOW'
-   NEXT=`grep -A 60 "%${T}EXAMPLE:$*" $MDSH | # 60 LINES AFTER MATCH
-         sed '1d' | sed '/^[ \t]*$/d' | # NOT SELF, NOT EMPTY
-         head -n 1 | grep "^%"`         # FIRST NON-EMPTY, STARTS WITH %
-
-   if [ "$NEXT" == "" ]
-   then  DESCRIPTIONPLUS="21"
-   else  DESCRIPTIONPLUS="31"
-   fi
-
-   DESCRIPTIONCLASS="example";DESCRIPTIONNAME="Example:";buildDescriptor $* 
-   echo $D
-}
-
-# --------------------------------------------------------------------------- #
-
-function REMEMBER() {
-
-  DESCRIPTIONCLASS="remember";DESCRIPTIONNAME="Remember:";buildDescriptor $* 
+  analyseDescriptor EXAMPLE $*
+    buildDescriptor EXAMPLE $* 
 
 }
 
 # --------------------------------------------------------------------------- #
 
+function HOW() {
 
-function URGENCY() {
-
-  DESCRIPTIONCLASS="urgency";DESCRIPTIONNAME="Urgency:";buildDescriptor $* 
-
+  analyseDescriptor HOW $*
+    buildDescriptor HOW $* 
 }
+
+# --------------------------------------------------------------------------- #
+
+function WHAT() {
+
+  analyseDescriptor WHAT $*
+    buildDescriptor WHAT $* 
+}
+
+# --------------------------------------------------------------------------- #
+
+#function WHO() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+#function WHY() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+#function WHEN() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+#function ABOUT() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+#function NOTE() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+#function WARNING() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+#function REMEMBER() {
+#}
+
+# --------------------------------------------------------------------------- #
+
+
+#function URGENCY() {
+#}
 
 # --------------------------------------------------------------------------- #
 
