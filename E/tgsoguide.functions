@@ -184,16 +184,26 @@ function SEEHERE() {
       # ======
          DMODE="0"
        fi
-
       else
 
-      # CASE 2: DESCRIPTOR IS ONELINE AND NOT EMPTY
-      # ======
-         DMODE="2"
-       # COUNT CONTENT (CHARS)
-         DNFO=`echo $DCONTENT | wc -c` # COUNT CHARACTERS
-      fi
+      # DESCRIPTOR IS NOT DE-FACTO EMPTY
+      # COUNT CONTENT (CHARS)
+        DNFO=`echo $DCONTENT | wc -c` # COUNT CHARACTERS
 
+       if [ "$NEXT" == "" ];then
+
+      # CASE 2: DESCRIPTOR IS FOLLOWED BY NON-DESCRIPTOR
+      # ======
+        DMODE="2"
+
+        else
+
+      # CASE 3: DESCRIPTOR IS FOLLOWED BY DESCRIPTOR
+      # ======
+        DMODE="3"
+
+       fi
+      fi
     else
          DMODE="0"
          echo "DO NOTHING"
@@ -909,7 +919,7 @@ function NEWPAGE() {
 
 }
 # --------------------------------------------------------------------------- #
-function SHOW() {
+function SXHOW() {
 
    # DISABLE FOR NOW
      sleep 0

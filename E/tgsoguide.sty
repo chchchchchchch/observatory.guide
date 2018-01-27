@@ -36,7 +36,7 @@
   \usepackage{float}
   \usepackage{wrapfig}
   \usepackage{pifont}
-
+  \usepackage{framed}
 
   \newcounter{floats}  % COUNT FLOATS TO ADD LABELS
   \newcounter{pagenow} % MOSTLY EMPTY/USED TO STORE
@@ -48,7 +48,7 @@
   % A6
   \setlength\textheight{.83\paperheight}
   \setlength\textwidth{.72\paperwidth}
-  \setlength\topmargin{-.15\paperheight}
+  \setlength\topmargin{-.16\paperheight}
   \setlength\oddsidemargin{-.05\paperwidth}
   \setlength\evensidemargin{-.13\paperwidth}
 
@@ -64,7 +64,8 @@
 
 
   \parindent=0pt
-  \setlength{\parskip}{5pt plus 5pt minus 5pt}
+ %\setlength{\parskip}{5pt plus 5pt minus 5pt}
+  \setlength{\parskip}{8pt plus 5pt minus 5pt}
   \setstretch{1.1} % LINEHEIGHT % (P:setspace)
 
   \renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
@@ -124,14 +125,14 @@
   \pagestyle{fancy}
   \fancyhead{} % CLEAR DEFAULT
   \fancyfoot{} % CLEAR DEFAULT
-  \fancyfoot[LO]{\vspace{-8mm} \hspace{-13mm} {\scriptsize\thepage}}
-  \fancyfoot[RE]{\vspace{-8mm} {\scriptsize\thepage} \hspace{-13mm}}
+  \fancyfoot[LO]{\vspace{-8mm} \hspace{-11mm} {\scriptsize\thepage}}
+  \fancyfoot[RE]{\vspace{-8mm} {\scriptsize\thepage} \hspace{-11mm}}
 
   % http://tex.stackexchange.com/questions/114956/
   % -> how-to-insert-footer-in-first-pages-of-chapter 
   \fancypagestyle{plain}{%
-  \fancyfoot[LO]{\vspace{-8mm} \hspace{-13mm} {\scriptsize\thepage}}
-  \fancyfoot[RE]{\vspace{-8mm} {\scriptsize\thepage} \hspace{-13mm}}
+  \fancyfoot[LO]{\vspace{-8mm} \hspace{-11mm} {\scriptsize\thepage}}
+  \fancyfoot[RE]{\vspace{-8mm} {\scriptsize\thepage} \hspace{-11mm}}
   }
 
   \renewcommand{\headrulewidth}{0pt}
@@ -141,8 +142,24 @@
 % --------------------------------------------------------------------------- %
 
   \newcommand{\ttstandard}{grm}
-  \newcommand{\rmstandard}{phv}
-  \newcommand{\sfstandard}{phv}
+ %\newcommand{\rmstandard}{phv}
+ %\newcommand{\sfstandard}{phv}
+ %\newcommand{\rmstandard}{grm} % https://fontain.org/roboto-mono 
+ %\newcommand{\rmstandard}{aut} % https://fontain.org/titillium
+ %\newcommand{\sfstandard}{aut}
+ %\newcommand{\rmstandard}{dai} % https://fontain.org/aileron
+ %\newcommand{\sfstandard}{dai}
+  \newcommand{\rmstandard}{mar} % https://fontain.org/arimo
+  \newcommand{\sfstandard}{mar}
+
+  \raggedright % FLATTERSATZ
+
+  \raggedbottom
+  % Ohne die folgenden drei Zeilen funktioniert es nur fast:
+  \newcommand*\origfootnoterule{}
+  \let\origfootnoterule\footnoterule
+  \renewcommand*{\footnoterule}{\vskip 0pt plus .01fil\origfootnoterule}
+
 
 
    \newcommand{\embody}{}
@@ -260,9 +277,12 @@
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
 % --------------------------------------------------------------------------- %
-  \newcommand{\emptypage}{ % SOMEHOW HACKY
-   \twocolumn[]\thispagestyle{empty} %
-    \onecolumn %
+  \newcommand{\emptypage}{
+  % https://tex.stackexchange.com/questions/36880/
+  % -> insert-a-blank-page-after-current-page
+    \null
+    \thispagestyle{empty}%
+    \newpage
    }
 % --------------------------------------------------------------------------- %
   \newcommand\cleartoleft{%
@@ -421,6 +441,7 @@
 % }
 
   \newcommand{\imgsmall}[3]{
+   \smallskip
    \begin{wrapfigure}{I}{.25\textwidth}%
         \stepcounter{floats}  % INCREASE COUNTER ..
         \label{FF:\thefloats} % .. TO CREATE A UNIQ LABEL
@@ -585,6 +606,7 @@
    }
   }
 
+
 % --------------------------------------------------------------------------- %
 % MDSH TGSO GUIDE (VERY SPECIFIC)
 % --------------------------------------------------------------------------- %
@@ -598,24 +620,26 @@
 
  % ------------------------------------------------------------------------- %
    \newlength{\abovedescriptor}
-   \setlength{\abovedescriptor}{0pt plus 0pt minus 0pt}
-   \newcommand{\descriptorskip}{\pagebreak[2] %
-                                \vspace{\abovedescriptor} %
-                                 \pagebreak[0]}
+   \setlength{\abovedescriptor}{5pt plus 0pt minus 5pt}
+  %\newcommand{\descriptorskip}{\vspace{\abovedescriptor}}
+%  \newcommand{\descriptorskip}{ %
+%  %\fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
+%   \fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
+%  }
+   \newcommand{\descriptorskip}{\vspace*{\abovedescriptor}}
 
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %
    \newcommand\descriptormethod[3]{%
-   %\cleartoright
-
-   \vfill
-    \bigskip
-    \pagebreak[2]
-     \begin{flushleft}
-      \renewcommand\baselinestretch{1.2}
-       \large\textbf{METHOD: #3}
-        \vspace{-2\abovedescriptor}
-         \end{flushleft}%
+  
+       \vfill
+        \pagebreak[2]
+        \bigskip
+         \begin{flushleft}
+          \renewcommand\baselinestretch{1.2}
+           \large\textbf{METHOD: #3}
+           %\vspace{-1.2\medskipamount}
+             \end{flushleft}%
    }
  % ------------------------------------------------------------------------- %
    \newcommand\descriptorhow[3]{%
@@ -634,33 +658,29 @@
            \fi
          \fi
        \else % DMODE = 2 = INLINE CONTENT 
-         \ifnum\numexpr#2 < 50 % NOT MUCH
-         \begin{flushleft}
-         \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
-                      {\color{green}#3} %
-                       \end{flushleft} %
-         \else % MORE
-         \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
-                      {\color{red}#3} %
-         \fi
+         \ifnum\numexpr#1 < 3 % DMODE = 2 = INLINE CONTENT
+           \ifnum\numexpr#2 < 50 % NOT MUCH
+           \begin{flushleft}
+           \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
+                        {\color{green}#3} %
+                         \end{flushleft} %
+           \else % MORE
+           \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
+                        {\color{red}#3} %
+           \fi
+          \else
+          \begin{flushleft}
+          \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
+                       {\footnotesize
+                        \color{blue}#3} %
+                        \end{flushleft} %
+          \fi
        \fi
    }
  % ------------------------------------------------------------------------- %
    \newcommand\descriptorexample[3]{%
-%     \descriptorskip
-%     \ifnum \numexpr#2 < 30 
-%     \begin{flushleft}
-%     \grafikinline{\iconexampleinline}{\hspace{-1em}}%
-%                  {\color{blue}#1} %
-%                   \end{flushleft} %
-%     \else
-%     \medskip
-%     \begin{flushleft}
-%     {\color{green}{EXAMPLE} #1}
-%     \end{flushleft}
-%     \fi
-%     \pagebreak[0]
-       \descriptorskip
+     %\descriptorskip
+      \pagebreak[2]
        \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
          \ifnum\numexpr#2 < 150
           \grafikinline{\iconexamplemargin}{}%
@@ -675,17 +695,26 @@
            \fi
          \fi
        \else % DMODE = 2 = INLINE CONTENT 
-         \ifnum\numexpr#2 < 50 % NOT MUCH
-         \begin{flushleft}
-         \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
-                      {\color{green}#3} %
-                       \end{flushleft} %
-         \else % MORE
-         \begin{flushleft}
-         \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
-                      {\color{red}#3} %
-                       \end{flushleft} %
-         \fi
+         \ifnum\numexpr#1 < 3 % DMODE = 2 = INLINE CONTENT
+           \ifnum\numexpr#2 < 50 % NOT MUCH
+           \begin{flushleft}
+           \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
+                        {\underline{#3}} %
+                         \end{flushleft} %
+           \vspace{-.2\medskipamount}
+           \else % MORE
+           \begin{flushleft}
+           \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
+                        {\color{red}#3} %
+                         \end{flushleft} %
+           \vspace{-.2\medskipamount}
+           \fi
+          \else
+          \begin{flushleft}
+          \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
+                       {\color{blue}#3} %
+                        \end{flushleft} %
+          \fi
        \fi
    }
 % ------------------------------------------------------------------------- %
@@ -772,16 +801,22 @@
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorremember[3]{%
-    \descriptorskip
-    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
-       \vspace{-1.2\baselineskip}       
-    \else % DMODE = 2 = INLINE CONTENT 
-      \begin{flushleft}
-      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
-                   {\color{green}#3} %
-                    \end{flushleft} %
-    \fi
+%   \descriptorskip
+%   \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+%      \grafikinline{\icontmpmargin}{}%
+%      \vspace{-1.2\baselineskip}       
+%   \else % DMODE = 2 = INLINE CONTENT 
+%     \begin{flushleft}
+%     \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+%                  {\color{green}#3} %
+%                   \end{flushleft} %
+%   \fi
+   \vfill
+   \vspace{2\bigskipamount}
+   \makebox[\textwidth][s]{\LARGE R E M E M B E R !\thinspace\footnotemark}
+   \footnotetext{#3}
+   \vspace{3\bigskipamount}
+   \vfill
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorurgency[3]{%
@@ -806,8 +841,12 @@
   \vfill
    \descriptorskip
     \medskip
-     \fbox{\underline{WARNING:}:#3}
+     \begin{framed}
+       \underline{WARNING:}: #3
+        \smallskip
+       \end{framed}
     \medskip\vfill
   }
 % ------------------------------------------------------------------------- %
+
 
