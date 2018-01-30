@@ -26,11 +26,12 @@
   TMPIDBASE=`basename $TMPID`
   cd $TMPDIR
   makeindex -s ${TMPIDBASE}.ist ${TMPIDBASE}.idx
-  cd -
+  cd - > /dev/null 2>&1
+  ROUND=0;while [ "$ROUND" -lt 5 ];do
   pdflatex -interaction=nonstopmode  \
-           -output-directory $TMPDIR $TMPTEX    # > /dev/null
-  pdflatex -interaction=nonstopmode  \
-           -output-directory $TMPDIR $TMPTEX    # > /dev/null
+           -output-directory $TMPDIR $TMPTEX > /dev/null
+  ROUND=`expr $ROUND + 1`; # echo $ROUND
+  done
   mv ${TMPID}.pdf $OUTPUT
 
  }
