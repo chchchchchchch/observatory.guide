@@ -7,49 +7,30 @@
 % -> bibtex references: http://freeze.sh/etherpad/bibref
 % -> markdown reference: http://daringfireball.net/projects/markdown
 
+% DOCUMENTCLASS: [8pt,cleardoubleempty]{scrbook}
+% EXTENDFUNCTIONS: tgsoguide.functions
+
 % --------------------------------------------------------------------------- %
-% EXTENDFUNCTIONS: 171206_Book-A6.functions
-% EXTENDFUNCTIONS: ../lib/mdsh/bibref.functions
-%!BIBREF: ../src/observatory.guide/observatory.bib.dev.txt
-% BIBREF: references.bib
-% ----
+% EXTENDFUNCTIONS: ../lib/mdsh/book-A6.functions
+% PDFXTITLE: a guide to techno-galactic software observation
+% PDFXORG: Constant VZW
+% PDFXAUTHOR: TGSO Editorial Team
+% MKPDFXCOMPLIANT:
+% --------------------------------------------------------------------------- %
 % USEPACKAGE: ../lib/tex/conditions
 % USEPACKAGE: ../lib/tex/listingcustom
 % USEPACKAGE: tgsoguide
 % --------------------------------------------------------------------------- %
-% PDFXTITLE: a guide to techno-galactic software observation
-% PDFXORG: .
-% PDFXAUTHOR: .
-% MKPDFXCOMPLIANT:
+% EXTENDFUNCTIONS: ../lib/mdsh/keywordize.functions
+% ADD2PREAMBLE: \usepackage{makeidx}
+% ADD2PREAMBLE: \makeindex
 % --------------------------------------------------------------------------- %
-%!EXTENDFUNCTIONS: 171126_keywordize.functions
-%!ADD2PREAMBLE: \usepackage{makeidx}
-%!ADD2PREAMBLE: \makeindex
-% --------------------------------------------------------------------------- %
-% EXTENDFUNCTIONS: 171130_href.functions
+% EXTENDFUNCTIONS: ../lib/mdsh/bibref.functions
+% BIBREF: references.bib
+% ----
 % HREF: OFF
-
-%!DOCUMENTCLASS: [9pt,cleardoubleempty]{scrbook}
-% DOCUMENTCLASS: [8pt,cleardoubleempty]{scrbook}
-% EXTENDFUNCTIONS: tgsoguide.functions
-
-1801092339
-
-% NEWPAGE:
-
-%!INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-145
-
-% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-128
-% SEEHERE: ../src/observatory.guide/observatory.guide.visit.txt
-% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 133-145
+% --------------------------------------------------------------------------- %
 
 
-%!INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-39
-%!INCLUDE: observatory.guide.txt 1-39
-%!INCLUDE: observatory.guide.txt
-
-
-%!TOC:
-%!TOC:
-
+% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-40
 
