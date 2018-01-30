@@ -313,8 +313,11 @@
  # sed -i "/^%/s/\(%\)\(.*\)[%]*$/$COMSTART \2 $COMCLOSE/" $SRCDUMP
 
   sed -i -e :a  \
-     -i -e "\$!N;s/\(<[/]*.\{1,10\}>\)*\n\(<[/]*.\{1,10\}>\)*[ \t]*$APND//;ta" \
+      -i -e "\$!N;s/\(<[/]*.\{1,10\}>\)*\n\(<[/]*.\{1,10\}>\)*[ \t]*$APND//;ta" \
       -i -e 'P;D'                    $SRCDUMP  # APPEND & RM APPEND IDS
+  sed -i -e :a \
+      -i -e "\$!N;s/[ \t]*$APND.//;ta" \
+      -i -e 'P;D'                    $SRCDUMP  # APPEND THE $APND
   sed -i "s/[ \t]*$APND//g"          $SRCDUMP  # RM REMAINING APPEND IDS +SPACE
   sed -i "s/[ \t]*$ESC//g"           $SRCDUMP  # RM ESC IDS +SPACE 
 

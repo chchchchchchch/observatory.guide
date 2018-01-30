@@ -221,7 +221,7 @@ function SEEHERE() {
              sed 's,</*p>,,g'`       # RM <p> TAGS (HTML ONLY, DO ANYWAY)
 
    if   [ "$DMODE" == "1" ];then 
-            PDFCMD="\descriptor${DCLASS}{$DMODE}{$DNFO}{}"
+            PDFCMD="\descriptor${DCLASS}{$DMODE}{$DNFO}{}${APND}"
            HTMLCMD=""
    elif [ "$DMODE" != "0" ];then 
             PDFCMD="\descriptor${DCLASS}{$DMODE}{$DNFO}{$DCONTENT}"
