@@ -1,8 +1,8 @@
 
- %\usepackage[utf8]{inputenc}
+  \usepackage[utf8]{inputenc}
   
   \usepackage[defaultlines=5,all]{nowidow}
-  \newcommand{\setwidowstandard}{\setnowidow[2]\setnoclub[2]}
+  \newcommand{\setwidowstandard}{\setnowidow[5]\setnoclub[5]}
   \setwidowstandard
 
   \usepackage{geometry}
@@ -13,6 +13,7 @@
   \usepackage{everypage}
   \usepackage{setspace}
   \usepackage{relsize}
+  \usepackage{scalefnt}
   \usepackage{sectsty}
   \usepackage{titlesec}
   \usepackage[activate={true,nocompatibility},
@@ -141,7 +142,7 @@
 %  F O N T S
 % --------------------------------------------------------------------------- %
 
-  \newcommand{\ttstandard}{grm}
+  \newcommand{\ttstandard}{tfi} % https://fontain.org/fira-code
  %\newcommand{\rmstandard}{phv}
  %\newcommand{\sfstandard}{phv}
  %\newcommand{\rmstandard}{grm} % https://fontain.org/roboto-mono 
@@ -152,7 +153,7 @@
   \newcommand{\rmstandard}{mar} % https://fontain.org/arimo
   \newcommand{\sfstandard}{mar}
 
-  \raggedright % FLATTERSATZ
+ %\raggedright % FLATTERSATZ
 
   \raggedbottom
   % Ohne die folgenden drei Zeilen funktioniert es nur fast:
@@ -243,6 +244,11 @@
                 {\endlist}
   \makeatother
 
+  % \newcommand{\AtEndQuote}{}%
+  % \AtEndEnvironment{quote}{\AtEndQuote}
+  % \newcommand{\AtBeginQuote}{}%
+  % \AtBeginEnvironment{quote}{\AtBeginQuote}
+
 % --------------------------------------------------------------------------- %
 % L I S T S
 % --------------------------------------------------------------------------- %
@@ -250,29 +256,23 @@
   \setitemize[0]{leftmargin=10pt,rightmargin=10pt} % (P:enumitem)
   \setlist{noitemsep} % (P:enumitem)
 
-%  \newcommand{\AtEndQuote}{}%
-%  \AtEndEnvironment{quote}{\AtEndQuote}
-%
-%  \newcommand{\AtBeginQuote}{}%
-%  \AtBeginEnvironment{quote}{\AtBeginQuote}
-
 % --------------------------------------------------------------------------- %
 % ENVIRONMENTS
 % --------------------------------------------------------------------------- %
   \newenvironment{quaverbatim}{%
-  \vfill
+  \medskip
    \begin{alltt}%
-    \fontsize{8pt}{8pt}\selectfont
+    \fontsize{7pt}{9pt}\selectfont
   }{\end{alltt}
     \vfill}
 
   \newenvironment{verbatimsmall}{%
-  \vfill\medskip
    \begin{alltt}%
-    \fontsize{8pt}{8pt}\selectfont
+    \fontsize{7pt}{9pt}\selectfont
   }{\end{alltt}
      \medskip
-      \vfill}
+      \vfill
+}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
@@ -347,8 +347,7 @@
      \raisebox{-14\baselineskip}[\baselineskip]   % 
                                 [.4\baselineskip] % ??
      {\hspace{-1.3\marginparwidth} %
-     \includegraphics[height=17\baselineskip]{#1}}
-     #2
+     \includegraphics[height=17\baselineskip]{#1}#2} %
   }
 % --------------------------------------------------------------------------- % 
  % \newcommand\anchorinfo[2]{%
@@ -574,7 +573,7 @@
       % #2 (=SWITCH) EMPTY
       % -> ANCHOR WAS NOT SET
       % -> INSERT TEXT HERE
-      \footnotetext{\footnotesize{#1}}
+      \footnotetext{\centering#1}
       \else
       % #2 (=SWITCH) NON-EMPTY
       % -> ANCHOR WAS SET
@@ -620,25 +619,40 @@
 
  % ------------------------------------------------------------------------- %
    \newlength{\abovedescriptor}
-   \setlength{\abovedescriptor}{5pt plus 0pt minus 5pt}
+   \setlength{\abovedescriptor}{10pt plus 4pt minus 4pt}
   %\newcommand{\descriptorskip}{\vspace{\abovedescriptor}}
 %  \newcommand{\descriptorskip}{ %
 %  %\fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
 %   \fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
 %  }
-   \newcommand{\descriptorskip}{\vspace*{\abovedescriptor}}
+   \newcommand{\descriptorskip}{\pagebreak[0]\vspace*{\abovedescriptor}}
+   \newcommand{\betweendq}{\vspace{-1\parskip}%
+                           \vspace{-2pt}%
+                           \vspace{-1\baselineskip}}
+
 
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %
+ %  \newcommand\descriptormethod[3]{%
+ % 
+ %      \vfill
+ %       \pagebreak[2]
+ %       \bigskip
+ %        \begin{flushleft}
+ %         \renewcommand\baselinestretch{1.2}
+ %          \large\textbf{METHOD:#3}
+ %          %\vspace{-1.2\medskipamount}
+ %            \end{flushleft}%
+ %  }
    \newcommand\descriptormethod[3]{%
   
        \vfill
         \pagebreak[2]
         \bigskip
          \begin{flushleft}
-          \renewcommand\baselinestretch{1.2}
-           \large\textbf{METHOD: #3}
-           %\vspace{-1.2\medskipamount}
+          \begin{spacing}{1.0}
+           \scalefont{3}#3
+            \end{spacing}%
              \end{flushleft}%
    }
  % ------------------------------------------------------------------------- %
@@ -646,15 +660,12 @@
        \descriptorskip
        \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
          \ifnum\numexpr#2 < 150
-          \grafikinline{\iconhowmarginsmall}{}%
-          \vspace{-1.2\baselineskip}       
+          \grafikinline{\iconhowmarginsmall}{\hspace{-7.3em}}%
          \else
            \ifnum\numexpr#2 < 250
-            \grafikinline{\iconhowmarginmedium}{}%
-            \vspace{-1.2\baselineskip}       
+            \grafikinline{\iconhowmarginmedium}{\hspace{-7.3em}}%
            \else
-            \grafikinline{\iconhowmarginlarge}{}%
-            \vspace{-1.2\baselineskip}       
+            \grafikinline{\iconhowmarginlarge}{\hspace{-7.3em}}%
            \fi
          \fi
        \else % DMODE = 2 = INLINE CONTENT 
@@ -683,15 +694,12 @@
       \pagebreak[2]
        \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
          \ifnum\numexpr#2 < 150
-          \grafikinline{\iconexamplemargin}{}%
-          \vspace{-1.2\baselineskip}       
+          \grafikinline{\iconexamplemargin}{\hspace{-7.3em}}%
          \else
            \ifnum\numexpr#2 < 250
-            \grafikinline{\iconexamplemargin}{}%
-            \vspace{-1.2\baselineskip}       
+            \grafikinline{\iconexamplemargin}{\hspace{-7.3em}}%
            \else
-            \grafikinline{\iconexamplemargin}{}%
-            \vspace{-1.2\baselineskip}       
+            \grafikinline{\iconexamplemargin}{\hspace{-7.3em}}%
            \fi
          \fi
        \else % DMODE = 2 = INLINE CONTENT 
@@ -722,15 +730,12 @@
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
       \ifnum\numexpr#2 < 150
-       \grafikinline{\iconwhatmargin}{}%
-       \vspace{-1.2\baselineskip}       
+       \grafikinline{\iconwhatmargin}{\hspace{-7.3em}}%
       \else
         \ifnum\numexpr#2 < 250
-         \grafikinline{\iconwhatmargin}{}%
-         \vspace{-1.2\baselineskip}       
+         \grafikinline{\iconwhatmargin}{\hspace{-7.3em}}%
         \else
-         \grafikinline{\iconwhatmargin}{}%
-         \vspace{-1.2\baselineskip}       
+         \grafikinline{\iconwhatmargin}{\hspace{-7.3em}}%
         \fi
       \fi
     \else % DMODE = 2 = INLINE CONTENT 
@@ -751,8 +756,7 @@
   \newcommand\descriptorwho[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
-       \vspace{-1.2\baselineskip}       
+       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
       \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
@@ -764,8 +768,7 @@
   \newcommand\descriptorwhy[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
-       \vspace{-1.2\baselineskip}       
+       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
       \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
@@ -777,8 +780,7 @@
   \newcommand\descriptorwhen[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
-       \vspace{-1.2\baselineskip}       
+       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%           
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
       \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
@@ -790,8 +792,7 @@
   \newcommand\descriptorabout[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
-       \vspace{-1.2\baselineskip}       
+       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%           
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
       \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
@@ -811,19 +812,28 @@
 %                  {\color{green}#3} %
 %                   \end{flushleft} %
 %   \fi
-   \vfill
-   \vspace{2\bigskipamount}
-   \makebox[\textwidth][s]{\LARGE R E M E M B E R !\thinspace\footnotemark}
-   \footnotetext{#3}
-   \vspace{3\bigskipamount}
-   \vfill
+   \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+    \vfill
+     \makebox[\textwidth][s]{\scalefont{2}%
+     \fontfamily{vpi}\selectfont R E M E M B E R !}%
+     \vspace{2\bigskipamount}
+     \vfill
+   \else
+     \vfill
+     \vspace{2\bigskipamount}
+     \makebox[\textwidth][s]{\scalefont{3}%
+     \fontfamily{vpi}\selectfont R E M E M B E R !}%
+              \raisebox{.5\baselineskip}{\hspace{1em}\footnotemark}
+     \footnotetext{#3}
+     \vspace{3\bigskipamount}
+     \vfill
+   \fi
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorurgency[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
-       \vspace{-1.2\baselineskip}       
+       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
       \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
@@ -838,14 +848,18 @@
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorwarning[3]{%
-  \vfill
-   \descriptorskip
-    \medskip
-     \begin{framed}
-       \underline{WARNING:}: #3
-        \smallskip
-       \end{framed}
-    \medskip\vfill
+   \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
+   \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
+   \else
+      \vfill
+       \descriptorskip
+        \medskip
+         \begin{framed}
+           \underline{WARNING:}: #3
+            \smallskip
+           \end{framed}
+        \medskip\vfill
+   \fi
   }
 % ------------------------------------------------------------------------- %
 

@@ -31,7 +31,6 @@
   PAGEW="314"
   PAGEH="436"
 
-
 # --------------------------------------------------------------------------- #
 
 function INCLUDE() {
@@ -919,13 +918,6 @@ function NEWPAGE() {
 
 }
 # --------------------------------------------------------------------------- #
-function SXHOW() {
-
-   # DISABLE FOR NOW
-     sleep 0
-
-}
-# --------------------------------------------------------------------------- #
 
 
 
@@ -999,5 +991,52 @@ function FLUSHQRURLS(){
 
 }
 
+# --------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
+# MODIFY $TMPTEX BEFORE COMPILING PDF
+# --------------------------------------------------------------------------- #
+  function modTeX() {
+ 
+ # APPEND LINE CONTAIN *quote* IF AFTER ^\descriptor
+ # ---- 
+   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*quote.*\)/\1\2/ }" \
+          $SRCDUMP
+
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
+ # ----
+   sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
+          $SRCDUMP
+
+ # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
+ # ----
+   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
+
+ # WRAP PARAGRAPHS IN \begin{samepage} \end{samepage}
+ # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{samepage}&\n\\\end{samepage}/' \
+           $SRCDUMP
+   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+
+
+  }
+
+ # ------------------------------------------------------------------------- #
+ # DO IT AT THE END
+ # ------------------------------------------------------------------------- #
+   if [ "$OUTPUTFORMAT" == pdf ];then
+
+       # ADD ONLY ONCE
+         if [ `echo $preOutput | grep modTeX | wc -l ` -lt 1 ];then
+               preOutput="$preOutput modTeX"
+         fi
+
+   elif [ "$OUTPUTFORMAT" == html ];then
+
+         sleep 0
+
+   fi
+ # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
