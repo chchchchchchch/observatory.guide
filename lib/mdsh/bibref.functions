@@ -8,18 +8,21 @@ function BIBREF() {
   if [ "$OUTPUTFORMAT" == "pdf" ];then
 
      echo '\usepackage{twoopt,ifmtarg}'          >> ${TMPID}.preamble
-     echo '\usepackage[style=fiwi,
-                       natbib=true, 
+    #echo '\usepackage[style=fiwi,
+    #                  natbib=true, 
+    #                  backend=biber]{biblatex}' >> ${TMPID}.preamble
+     echo '\usepackage[natbib=true,
                        backend=biber]{biblatex}' >> ${TMPID}.preamble
      echo '\usepackage{bibentry}'                >> ${TMPID}.preamble
      echo '\AtEveryCitekey{\clearfield{url}}
            \AtEveryCitekey{\clearfield{note}}
          
-           \renewbibmacro*{director}{
-           \ifpunct{}{}\printnames[director]{author}
-           }
-           \DeclareFieldFormat{season}{ {\textsc\emph{season}} #1}
-           \DeclareFieldFormat{episode}{ {\textsc\emph{episode}} #1}
+%          \renewbibmacro*{director}{
+%          \ifpunct{}{}\printnames[director]{author}
+%          }
+%          \DeclareFieldFormat{season}{ {\textsc\emph{season}} #1}
+%          \DeclareFieldFormat{episode}{ {\textsc\emph{episode}} #1}
+
            \renewcommand\cite[1]{%
             \iffootnote 
              { \mbox{\tiny\fullcite{#1}}}
