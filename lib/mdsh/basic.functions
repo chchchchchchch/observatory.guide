@@ -286,7 +286,8 @@
        # IF COMMAND EXISTS 
          if [ $CMDMATCH -ge 1 ]; then
             # EXECUTE COMMAND
-              $CMD "$ARG"
+            # $CMD "$ARG"
+              $CMD $ARG
        # else
        #      echo "% ${CMD} ${ARG}" >> $SRCDUMP
          else
