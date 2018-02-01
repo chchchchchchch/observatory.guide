@@ -347,7 +347,7 @@
      \raisebox{-14\baselineskip}[\baselineskip]   % 
                                 [.4\baselineskip] % ??
      {\hspace{-1.3\marginparwidth} %
-     \includegraphics[height=17\baselineskip]{#1}#2} %
+     \includegraphics[height=17\baselineskip]{#1}\hspace{-7.3em}#2} %
   }
 % --------------------------------------------------------------------------- % 
  % \newcommand\anchorinfo[2]{%
@@ -626,6 +626,11 @@
 %   \fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
 %  }
    \newcommand{\descriptorskip}{\pagebreak[0]\vspace*{\abovedescriptor}}
+   \newcommand{\descriptorlabel}[1]{%
+              {\scalefont{.75} %
+               \fontfamily{cgt}\selectfont %
+               \underline{#1:}\hspace{-.5em}:}\hspace{.75em} %
+   }
    \newcommand{\betweendq}{\vspace{-1\parskip}%
                            \vspace{-2pt}%
                            \vspace{-1\baselineskip}}
@@ -660,28 +665,31 @@
        \descriptorskip
        \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
          \ifnum\numexpr#2 < 150
-          \grafikinline{\iconhowmarginsmall}{\hspace{-7.3em}}%
+          \grafikinline{\iconhowmarginsmall}{}%
          \else
            \ifnum\numexpr#2 < 250
-            \grafikinline{\iconhowmarginmedium}{\hspace{-7.3em}}%
+            \grafikinline{\iconhowmarginmedium}{}%
            \else
-            \grafikinline{\iconhowmarginlarge}{\hspace{-7.3em}}%
+            \grafikinline{\iconhowmarginlarge}{}%
            \fi
          \fi
        \else % DMODE = 2 = INLINE CONTENT 
          \ifnum\numexpr#1 < 3 % DMODE = 2 = INLINE CONTENT
            \ifnum\numexpr#2 < 50 % NOT MUCH
            \begin{flushleft}
-           \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
+           \grafikinline{\iconhowinline}{}%
+           \descriptorlabel{HOW} %
                         {\color{green}#3} %
                          \end{flushleft} %
            \else % MORE
-           \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
+           \grafikinline{\iconhowinline}{}%
+           \descriptorlabel{HOW} %
                         {\color{red}#3} %
            \fi
           \else
           \begin{flushleft}
-          \grafikinline{\iconhowinline}{\hspace{-4.0em}}%
+          \grafikinline{\iconhowinline}{}%
+          \descriptorlabel{HOW} %
                        {\footnotesize
                         \color{blue}#3} %
                         \end{flushleft} %
@@ -694,34 +702,36 @@
       \pagebreak[2]
        \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
          \ifnum\numexpr#2 < 150
-          \grafikinline{\iconexamplemargin}{\hspace{-7.3em}}%
+          \grafikinline{\iconexamplemargin}{}%
          \else
            \ifnum\numexpr#2 < 250
-            \grafikinline{\iconexamplemargin}{\hspace{-7.3em}}%
+            \grafikinline{\iconexamplemargin}{}%
            \else
-            \grafikinline{\iconexamplemargin}{\hspace{-7.3em}}%
+            \grafikinline{\iconexamplemargin}{}%
            \fi
          \fi
        \else % DMODE = 2 = INLINE CONTENT 
          \ifnum\numexpr#1 < 3 % DMODE = 2 = INLINE CONTENT
            \ifnum\numexpr#2 < 50 % NOT MUCH
            \begin{flushleft}
-           \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
+           \grafikinline{\iconexampleinline}{}%
+           \descriptorlabel{EXAMPLE} %
                         {\underline{#3}} %
                          \end{flushleft} %
            \vspace{-.2\medskipamount}
            \else % MORE
            \begin{flushleft}
-           \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
+           \grafikinline{\iconexampleinline}{}%
+           \descriptorlabel{EXAMPLE} %
                         {\color{red}#3} %
                          \end{flushleft} %
            \vspace{-.2\medskipamount}
            \fi
           \else
           \begin{flushleft}
-          \grafikinline{\iconexampleinline}{\hspace{-1.5em}}%
-                       {\color{blue}#3} %
-                        \end{flushleft} %
+          \grafikinline{\iconexampleinline}{}%
+          \descriptorlabel{EXAMPLE} %
+                       {#3}\end{flushleft} %
           \fi
        \fi
    }
@@ -730,25 +740,26 @@
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
       \ifnum\numexpr#2 < 150
-       \grafikinline{\iconwhatmargin}{\hspace{-7.3em}}%
+       \grafikinline{\iconwhatmargin}{}%
       \else
         \ifnum\numexpr#2 < 250
-         \grafikinline{\iconwhatmargin}{\hspace{-7.3em}}%
+         \grafikinline{\iconwhatmargin}{}%
         \else
-         \grafikinline{\iconwhatmargin}{\hspace{-7.3em}}%
+         \grafikinline{\iconwhatmargin}{}%
         \fi
       \fi
     \else % DMODE = 2 = INLINE CONTENT 
       \ifnum\numexpr#2 < 50 % NOT MUCH
       \begin{flushleft}
-      \grafikinline{\iconwhatinline}{\hspace{-1.5em}}%
+      \grafikinline{\iconwhatinline}{}%
+      \descriptorlabel{WHAT} %
                    {\color{green}#3} %
                     \end{flushleft} %
       \else % MORE
       \begin{flushleft}
-      \grafikinline{\iconwhatinline}{\hspace{-1.5em}}%
-                   {\color{red}#3} %
-                    \end{flushleft} %
+      \grafikinline{\iconwhatinline}{}%
+      \descriptorlabel{WHAT} %
+                   {#3}\end{flushleft} %
       \fi
     \fi
   }
@@ -756,10 +767,11 @@
   \newcommand\descriptorwho[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
+       \grafikinline{\icontmpmargin}{}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+      \grafikinline{\icontmpinline}{}%
+      \descriptorlabel{WHO} %
                    {\color{green}#3} %
                     \end{flushleft} %
     \fi
@@ -768,10 +780,11 @@
   \newcommand\descriptorwhy[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
+       \grafikinline{\icontmpmargin}{}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+      \grafikinline{\icontmpinline}{}%
+      \descriptorlabel{WHY} %
                    {\color{green}#3} %
                     \end{flushleft} %
     \fi
@@ -780,10 +793,11 @@
   \newcommand\descriptorwhen[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%           
+       \grafikinline{\icontmpmargin}{}%           
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+      \grafikinline{\icontmpinline}{}%
+      \descriptorlabel{WHEN} %
                    {\color{green}#3} %
                     \end{flushleft} %
     \fi
@@ -792,10 +806,11 @@
   \newcommand\descriptorabout[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%           
+       \grafikinline{\icontmpmargin}{}%           
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+      \grafikinline{\icontmpinline}{}%
+      \descriptorlabel{ABOUT} %
                    {\color{green}#3} %
                     \end{flushleft} %
     \fi
@@ -821,8 +836,8 @@
    \else
      \vfill
      \vspace{2\bigskipamount}
-     \makebox[\textwidth][s]{\scalefont{3}%
-     \fontfamily{vpi}\selectfont R E M E M B E R !}%
+     \makebox[\textwidth][s]{\scalefont{1.7}%
+     \fontfamily{cgt}\selectfont R E M E M B E R !}%
               \raisebox{.5\baselineskip}{\hspace{1em}\footnotemark}
      \footnotetext{#3}
      \vspace{3\bigskipamount}
@@ -833,10 +848,11 @@
   \newcommand\descriptorurgency[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
+       \grafikinline{\icontmpmargin}{}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
+      \grafikinline{\icontmpinline}{}%
+      \descriptorlabel{URGENCY} %
                    {\color{green}#3} %
                     \end{flushleft} %
     \fi
@@ -844,18 +860,18 @@
 % ------------------------------------------------------------------------- %
   \newcommand\descriptornote[3]{%
    \descriptorskip
-   \underline{NOTE:}: #3
+   \descriptorlabel{NOTE} #3 %
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorwarning[3]{%
    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-   \grafikinline{\icontmpmargin}{\hspace{-7.3em}}%
+   \grafikinline{\iconwarningmargin}{}%
    \else
       \vfill
        \descriptorskip
         \medskip
          \begin{framed}
-           \underline{WARNING:}: #3
+           \descriptorlabel{WARNING} #3 %
             \smallskip
            \end{framed}
         \medskip\vfill
