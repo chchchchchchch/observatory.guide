@@ -103,32 +103,32 @@ function SEEHERE() {
 
 }
 
-## --------------------------------------------------------------------------- #
-## MAKE MARGIN ICONS (ONCE)
-## --------------------------------------------------------------------------- #
-#  ICONSRC=`realpath "${INCLUDEPATH}/tgsoicons.svg" 2>/dev/null`
-#  if [ -f "$ICONSRC" ];then
-#  LAYERNAMES=`sed ':a;N;$!ba;s/\n//g' $ICONSRC  | # SVG WITHOUT LINEBREAKS
-#              sed 's/>/&\n/g'                   | # ALL '>' ON NEWLINE
-#              sed '/<g/s/scape:label/\nlabel/'  | # PUT NAME LABEL ON NL
-#              grep -n ^label | cut -d " " -f 1  | # SELECT/EXTRACT LABELS
-#              sort -t= -k 2 -u | sort           | # SORT/UNIQ + SORT NUM
-#              grep -v "=\"XX_"                  | # IGNORE XX LAYERS
-#              cut -d '"' -f 2`                    # EXTRACT NAMES
-#  for L in $LAYERNAMES
-#   do
-#      TARGETNAME="${TMPID}"`echo $L | md5sum | cut -c 1-10`
-#      if [ ! -f "${TARGETNAME}.svg" ];then
-#      extractLayer $ICONSRC ${TARGETNAME}.svg $L
-#      inkscape --export-text-to-path \
-#               --export-pdf=${TARGETNAME}.pdf \
-#               ${TARGETNAME}.svg
-#      conformColor ${TARGETNAME}.pdf
-#      echo "\newcommand{\icon${L}}{${TARGETNAME}.pdf}" >> ${TMPID}.preamble
-#      fi
-#  done
-#  fi
-## --------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
+# MAKE MARGIN ICONS (ONCE)
+# --------------------------------------------------------------------------- #
+  ICONSRC=`realpath "${INCLUDEPATH}/tgsoicons.svg" 2>/dev/null`
+  if [ -f "$ICONSRC" ];then
+  LAYERNAMES=`sed ':a;N;$!ba;s/\n//g' $ICONSRC  | # SVG WITHOUT LINEBREAKS
+              sed 's/>/&\n/g'                   | # ALL '>' ON NEWLINE
+              sed '/<g/s/scape:label/\nlabel/'  | # PUT NAME LABEL ON NL
+              grep -n ^label | cut -d " " -f 1  | # SELECT/EXTRACT LABELS
+              sort -t= -k 2 -u | sort           | # SORT/UNIQ + SORT NUM
+              grep -v "=\"XX_"                  | # IGNORE XX LAYERS
+              cut -d '"' -f 2`                    # EXTRACT NAMES
+  for L in $LAYERNAMES
+   do
+      TARGETNAME="${TMPID}"`echo $L | md5sum | cut -c 1-10`
+      if [ ! -f "${TARGETNAME}.svg" ];then
+      extractLayer $ICONSRC ${TARGETNAME}.svg $L
+      inkscape --export-text-to-path \
+               --export-pdf=${TARGETNAME}.pdf \
+               ${TARGETNAME}.svg
+      conformColor ${TARGETNAME}.pdf
+      echo "\newcommand{\icon${L}}{${TARGETNAME}.pdf}" >> ${TMPID}.preamble
+      fi
+  done
+  fi
+# --------------------------------------------------------------------------- #
 
 
 
@@ -600,6 +600,7 @@ function SHOW() {
 
 function PDF() {
 
+     THISCMD="PDF"
      PDFNOW=`echo $* | sed 's/ /\n/g' | # DISPAY ON SEPARATE LINES
              grep '\.pdf$' | head -n 1` # MATCH PATTERN/TAKE FIRST
      TMPPDF="${TMPID}"`echo $PDFNOW | md5sum | cut -c 1-12`.pdf
@@ -660,29 +661,19 @@ function PDF() {
  }
 
 # --------------------------------------------------------------------------- #
+# TODO: ALLOW TeX CODE WITHIN QUAVERBATIM
 
 function SRCCODE() {
 
  # ------------------------------------------------------------------------ #
  # CHECK/SET LANGUAGE ARGUMENT
  # ------------------------------------------------------------------------ #
-   ALL="$*";SRCLANG=`echo $1 | sed 's/ //g'`
-
- # SUPPORT HERITAGE
- # ----------------
-   OVERWRITETHISCMD=`echo $* | #
-                     sed 's/ /\n/g' | #
-                     grep "^THISCMD:" | #
-                     cut -d ":" -f 2`                     
-   if [ "$OVERWRITETHISCMD" == "" ];then
-         THISCMD="SRCCODE"
-   else  THISCMD="$OVERWRITETHISCMD"
-         ALL=`echo $* | sed "s/THISCMD:$OVERWRITETHISCMD//g"`;fi
- # ----------------
+   ALL="$*";THISCMD="SRCCODE";SRCLANG=`echo $1 | sed 's/ //g'`
 
    if [ "$SRCLANG" != "" ];then
-         ENVIRONMENT=`grep -i "newenvironment{$SRCLANG" ${TMPID}*.sty | #
-                      grep -v "^%" | cut -d "{" -f 2 | cut -d "}" -f 1`
+         ENVIRONMENT=`grep -ih "newenvironment{$SRCLANG" ${TMPID}*.sty | #
+                      grep -v "^%" | head -n 1 | #
+                      cut -d "{" -f 2 | cut -d "}" -f 1`
    fi
    if [ `echo $ALL | sed "s/^[ ]*$SRCLANG[ ]*//" | wc -c` -gt 1 ];then
       if [ "$ENVIRONMENT" != "" ];then
@@ -690,6 +681,12 @@ function SRCCODE() {
        else
             echo $ALL                               > ${TMPID}.xtract
       fi
+         # GET NUMBER FOR CMD LINE IN (UNPROCESSED) MDSH SRC AND
+         # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
+         # ----
+           LNCMD=`grep -n "^% $THISCMD:" $MDSH | # FIND CMD LINE
+                  head -n 1 | cut -d ":" -f 1`   # SELECT LAST MATCH
+           sed -i "${LNCMD}s/^% $THISCMD:/%X${THISCMD}:/" $MDSH 
     else
          getVerbatim "$THISCMD" ${TMPID}.xtract 
    fi
@@ -699,32 +696,34 @@ function SRCCODE() {
  # LOOP THROUGH EXTRACT AND BRUTE FORCE getFile
  # ------------------------------------------------------------------------ #
  ( IFS=$'\n'
-   for L in `cat ${TMPID}.xtract`
-    do   if [ `echo $L | grep "^[ ]*%[ ]*F:" | wc -l` -gt 0 ];then
+   for L in `grep -n "" ${TMPID}.xtract`
+    do L=`echo $L | cut -d ":" -f 2-` # cat SKIPPED EMPTY LINES?
+       if [ `echo $L | grep "^[ ]*%[ ]*F:" | wc -l` -gt 0 ];then
 
-           TRY=`echo $L | cut -d ":" -f 2- | #
-                sed 's/^[ ]*//' | cut -d " " -f 1`
-           getFile $TRY tmp.tmp
+         TRY=`echo $L | cut -d ":" -f 2- | #
+              sed 's/^[ ]*//' | cut -d " " -f 1`
+         getFile $TRY tmp.tmp
 
-           if [ "$SUCCESS" == "YES" ];then
-                 LINES=`echo $L | sed "s/ /\n/g" | # SPACES TO NEWLINES 
-                        sed "/[^0-9\\-]/d"       | # NUMBERS AND - ONLY
-                        grep -v "^[ ]*$"         | # NO EMPTY LINES
-                        egrep -v "^-|-$"         | # IGNORE ISOLATED - 
-                        tail -n 1`                 # LAST LINE ONLY
-                 if [ "$LINES" != "" ];then
-                       LINES=`echo $LINES | sed 's/-/,/'`
-                       SELECTLINES="sed -n \"${LINES}p\" "
-                  else
-                       SELECTLINES="tee"
-                 fi
-                 cat   tmp.tmp       | # START WITH ALL
-                 eval "$SELECTLINES" | # DO SELECT LINE RANGE
-                 tee                 >> ${TMPID}SRCCODE.tmp
-           fi
-         else
-              echo $L                >> ${TMPID}SRCCODE.tmp
+         if [ "$SUCCESS" == "YES" ];then
+               LINES=`echo $L | sed "s/ /\n/g" | # SPACES TO NEWLINES 
+                      sed "/[^0-9\\-]/d"       | # NUMBERS AND - ONLY
+                      grep -v "^[ ]*$"         | # NO EMPTY LINES
+                      egrep -v "^-|-$"         | # IGNORE ISOLATED - 
+                      tail -n 1`                 # LAST LINE ONLY
+               if [ "$LINES" != "" ];then
+                     LINES=`echo $LINES | sed 's/-/,/'`
+                     SELECTLINES="sed -n \"${LINES}p\" "
+                else
+                     SELECTLINES="tee"
+               fi
+               cat   tmp.tmp       | # START WITH ALL
+               eval "$SELECTLINES" | # DO SELECT LINE RANGE
+               tee                 >> ${TMPID}SRCCODE.tmp
+               rm tmp.tmp
          fi
+       else
+            echo "$L"               >> ${TMPID}SRCCODE.tmp
+       fi
    done;)
 
    mv ${TMPID}SRCCODE.tmp ${TMPID}.xtract
@@ -753,36 +752,6 @@ function SRCCODE() {
    rm ${TMPID}.xtract # CLEAN UP
 
 }
-
-# --------------------------------------------------------------------------- #
-# HERITAGE ??
-# --------------------------------------------------------------------------- #
-
-function BASHCODE() {
-
-  SRCCODE bash THISCMD:BASHCODE
-
-}
-
-function VERBATIM() {
-
-  SRCCODE plain THISCMD:VERBATIM
-
-}
-
-function VERBATIMWRAP() {
-
-  SRCCODE quaverbatim THISCMD:VERBATIMWRAP
-
-}
-   
-  # function QUAVERBATIM() {
-  # 
-  #   SRCCODE quaverbatim THISCMD:QUAVERBATIM
-  # }
-
-# --------------------------------------------------------------------------- #
-
 
 
 # --------------------------------------------------------------------------- #
@@ -960,6 +929,8 @@ function FLUSHQRURLS(){
            $SRCDUMP
    sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
 
+ # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
+   sed -i 's/{lstlisting}/{plain}/' $SRCDUMP
 
   }
 
@@ -980,4 +951,9 @@ function FLUSHQRURLS(){
    fi
  # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
+
+function SHOW() {
+     sleep 0
+}
+
 

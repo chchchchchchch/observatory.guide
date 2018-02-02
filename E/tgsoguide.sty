@@ -38,6 +38,7 @@
   \usepackage{wrapfig}
   \usepackage{pifont}
   \usepackage{framed}
+  \usepackage{needspace} % USEDY BY listing
 
   \newcounter{floats}  % COUNT FLOATS TO ADD LABELS
   \newcounter{pagenow} % MOSTLY EMPTY/USED TO STORE
@@ -142,7 +143,7 @@
 %  F O N T S
 % --------------------------------------------------------------------------- %
 
-  \newcommand{\ttstandard}{tfi} % https://fontain.org/fira-code
+  \newcommand{\ttstandard}{ipm} % https://fontain.org/fira-code
  %\newcommand{\rmstandard}{phv}
  %\newcommand{\sfstandard}{phv}
  %\newcommand{\rmstandard}{grm} % https://fontain.org/roboto-mono 
@@ -195,14 +196,24 @@
   \sectionfont{\relscale{0.9}\setstretch{0.9}}
   \subsectionfont{\relscale{0.9}}
 
+ %\let\Chapter\chapter
+ %\renewcommand\chapter[1]{\Chapter*{#1}}
+ %\let\Section\section
+ %\renewcommand\section[1]{\newpage\Section*{#1}}
+ %\let\Subsection\subsection
+ %\renewcommand\subsection[1]{\newpage\Subsection*{#1}}
+ %\let\Subsubsection\subsubsection
+ %\renewcommand\subsubsection[1]{\newpage\Subsubsection*{#1}}
+
   \let\Chapter\chapter
-  \renewcommand\chapter[1]{\Chapter*{#1}}
+  \renewcommand\chapter[1]{\textbf{#1}\\}
   \let\Section\section
-  \renewcommand\section[1]{\newpage\Section*{#1}}
+  \renewcommand\section[1]{\textbf{#1}\\}
   \let\Subsection\subsection
-  \renewcommand\subsection[1]{\newpage\Subsection*{#1}}
+  \renewcommand\subsection[1]{\textbf{#1}\\}
   \let\Subsubsection\subsubsection
-  \renewcommand\subsubsection[1]{\newpage\Subsubsection*{#1}}
+  \renewcommand\subsubsection[1]{\textbf{#1}\\}
+
 
 % --------------------------------------------------------------------------- % 
 %  F O O T N O T E S  
@@ -257,22 +268,17 @@
   \setlist{noitemsep} % (P:enumitem)
 
 % --------------------------------------------------------------------------- %
-% ENVIRONMENTS
+% C O D E   E N V I R O N M E N T S
 % --------------------------------------------------------------------------- %
 
   \renewcommand{\kwa}{\bfseries}
   \renewcommand{\kwb}{\kwa}
   \renewcommand{\kwc}{}
 
-  \newcommand{\lstsetBash}{\lstset{language=Bash+,
-               morekeywords = [2]{write2src,getFile,
-                                  mkqr,getVerbatim
-             }}}
-  \newcommand{\lstsetTeX}{\lstset{language=TeX+}}
-  \newcommand{\lstReset}{\lstset{language={}}}
-
-  \lstset{ 
-    basicstyle=\linespread{1.5}\fontfamily{ipm}\selectfont\footnotesize, 
+  \newcommand{\lstsetCode}[1]{%
+  \lstset{ %
+    basicstyle=\fontencoding{T1}\linespread{#1}
+               \fontfamily{ipm}\selectfont\footnotesize, 
     commentstyle=\scalefont{1}, 
     keywordstyle = \kwa, 
     keywordstyle = [2]{\kwb}, 
@@ -284,36 +290,61 @@
     numbers=none, 
     frame=none, 
     numberstyle=\tiny, 
-    breaklines=true, 
+    breaklines=flase, 
     showstringspaces=false, 
     aboveskip=1em, 
     xleftmargin=0cm, 
     upquote=true, 
     escapechar=° 
+   }\renewcommand{\emptylinelst}{\vspace{-1\baselineskip}
+                                \vfill\pagebreak[0]}
   }
 
-  \renewcommand{\emptylinelst}{\vspace{-1\baselineskip}\vfill}
+  \newcommand{\lstsetQuaverbatim}{%
+  \lstset{ %
+    basicstyle=\fontencoding{T1}\linespread{1.5}
+               \fontfamily{iad}\selectfont\small, 
+    breaklines=true,
+    breakautoindent=false,
+    breakindent=1em,
+    aboveskip=1em,xleftmargin=0cm,
+    showspaces=false,showtabs=false,columns=fixed,
+    numbers=none,frame=none,showstringspaces=false,
+    upquote=true,escapechar=°}
+   \renewcommand{\emptylinelst}{\vspace{1\baselineskip}}
+   }
 
-  \lstnewenvironment{plain}{\vfil\vfill\lstReset}
-                           {\vfill\vfill\vfill\vfill}
 
-  \lstnewenvironment{bashcode}{\vfil\vfill\lstsetBash}
-                              {\vfill\vfill\vfill\vfill}
+  \newcommand{\lstReset}{\lstset{language={}}}
+  \newcommand{\lstsetBash}{\lstset{language=Bash+,
+               morekeywords = [2]{write2src,getFile,
+                                  mkqr,getVerbatim
+             }}}
+  \newcommand{\lstsetPython}{\lstset{language=Python,
+                                     basicstyle=\fontencoding{T1}\linespread{1.5}
+                                                 \fontfamily{ipm}\selectfont\normalsize}
+                              \renewcommand{\emptylinelst}{%
+                               \vspace{-.4\baselineskip}}
+  }
 
-  \newenvironment{quaverbatim}{%
-  \medskip
-   \begin{alltt}%
-    \fontsize{7pt}{9pt}\selectfont
-  }{\end{alltt}
-    \vfill}
-
-% \newenvironment{verbatimsmall}{%
-%  \begin{alltt}%
-%   \fontsize{7pt}{9pt}\selectfont
-% }{\end{alltt}
-%    \medskip
-%     \vfill
-%}
+  % https://tex.stackexchange.com/a/215331
+  % -> widow-orphan-lstlisting
+  \lstnewenvironment{plain}{\vfill%
+                            \needspace{4\baselineskip}%
+                            \lstsetCode{1}
+                            \lstReset}
+                           {\vfill\vfill\vfill}
+  \lstnewenvironment{bashcode}{\vfill%
+                               \needspace{4\baselineskip}%
+                               \lstsetCode{1.5}
+                               \lstsetBash}
+                              {\vfill\vfill\vfill}
+  \lstnewenvironment{pythoncode}{\vfill%
+                                 \needspace{4\baselineskip}%
+                                 \lstsetCode{1}
+                                 \lstsetPython}
+                                {\vfill\vfill\vfill}
+  \lstnewenvironment{quaverbatim}{\lstsetQuaverbatim}{}
 
 
 % --------------------------------------------------------------------------- %
@@ -872,14 +903,14 @@
    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
     \vfill
      \makebox[\textwidth][s]{\scalefont{2}%
-     \fontfamily{vpi}\selectfont R E M E M B E R !}%
+     \fontfamily{vpi}\selectfont R E M E M B E R}%
      \vspace{2\bigskipamount}
      \vfill
    \else
      \vfill
      \vspace{2\bigskipamount}
-     \makebox[\textwidth][s]{\scalefont{1.7}%
-     \fontfamily{cgt}\selectfont R E M E M B E R !}%
+     \makebox[\textwidth][s]{\scalefont{1.9}%
+     \fontfamily{cgt}\selectfont R E M E M B E R}%
               \raisebox{.5\baselineskip}{\hspace{1em}\footnotemark}
      \footnotetext{#3}
      \vspace{3\bigskipamount}
