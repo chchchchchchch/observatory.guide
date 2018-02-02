@@ -46,6 +46,7 @@ http://pad.constantvzw.org/p/observatory.guide.bestiary/export/txt              
 http://pad.constantvzw.org/p/observatory.guide.visit/export/txt                      -> observatory.guide.visit.txt
 http://pad.constantvzw.org/p/observatory.guide.testingtestbed/export/txt             -> observatory.guide.testingtestbed.txt
 http://pad.constantvzw.org/p/observatory.guide.reader/export/txt                     -> observatory.guide.reader.txt
+http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/txt           -> observatory.guide.experiencingtime.txt
 http://pad.constantvzw.org/p/observatory.guide.colophon/export/txt                   -> observatory.guide.colophon.txt
 
 http://pad.constantvzw.org/p/observatory.inventory.jogi/export/txt                   -> observatory.inventory.jogi.txt
@@ -89,5 +90,6 @@ http://pad.constantvzw.org/p/observatory.guide.visit/export/etherpad            
 http://pad.constantvzw.org/p/observatory.guide.testingtestbed/export/etherpad             -> observatory.guide.testingtestbed.ep
 http://pad.constantvzw.org/p/observatory.guide.reader/export/etherpad                     -> observatory.guide.reader.ep
 http://pad.constantvzw.org/p/observatory.guide.colophon/export/etherpad                   -> observatory.guide.colophon.ep
+http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/etherpad           -> observatory.guide.experiencingtime.ep
 http://pad.constantvzw.org/p/observatory.inventory.jogi/export/etherpad                   -> observatory.inventory.jogi.ep
 
