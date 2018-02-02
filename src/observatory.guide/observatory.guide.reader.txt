@@ -27,7 +27,7 @@ Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015 www.memcon.co
 
 Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015 http://palms.ee.princeton.edu/system/files/SP_vfinal.pdf
 
-% VERBATIMWRAP:
+% SRCCODE: quaverbatim
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion

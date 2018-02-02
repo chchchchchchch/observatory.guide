@@ -71,7 +71,7 @@ Destination Name:    unknown
 Port: Connection Count
  443:   16
 
-% VERBATIM:
+% SRCCODE:
 
 
 % RELATESTO:

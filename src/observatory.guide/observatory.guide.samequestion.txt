@@ -11,16 +11,23 @@
 % WARNING:
 % EXAMPLE: - 
 
-Jean Huens (system administrator at the department of Computer Science, KULeuven): "_It is difficult to answer the question 'what is software', but I know what is good software_"
+"_It is difficult to answer the question 'what is software', but I know what is good software_"
+[^]{Jean Huens (system administrator at the department of Computer Science, KULeuven)}
 
-Thomas Cnudde (hardware designer at ESAT - COSIC, Computer Security and Industrial Cryptography, KULeuven): "_Software is a list of sequential instructions! Hardware for me is made of silicon, software a sequence of bits in a file. But naturally I am biased: I'm a hardware designer so I like to consider it as unique and special_". 
+"_Software is a list of sequential instructions! Hardware for me is made of silicon,
+software a sequence of bits in a file. But naturally I am biased: I'm a hardware designer
+so I like to consider it as unique and special_".
+[^]{Thomas Cnudde (hardware designer at ESAT - COSIC, Computer Security and Industrial Cryptography, KULeuven)}
 
-Amal Mahious (Director of NAM-IP, Namur): "_This, you have to ask the specialists._"
+"_This, you have to ask the specialists._"
+[^]{Amal Mahious (Director of NAM-IP, Namur)}
+
 
 % ------
 
 *what is software?
---the unix filesystem says: it's a file----what is a file?
+--the unix filesystem says: it's a file
+----what is a file?
 ----in the filesystem, if you ask xxd:
 ------ it's a set of hexadecimal bytes
 -------what is hexadecimal bytes? 
@@ -33,7 +40,9 @@ Amal Mahious (Director of NAM-IP, Namur): "_This, you have to ask the specialist
 ----it's a computer's programs, plus the procedure for their use http://etherbox.local/home/pi/video/A_Computer_Glossary.webm#t=02:26 
 ------ a computer's programs is a set of instrutions for performing computer operations
 
-% VERBATIM:
+% SRCCODE: quaverbatim
+
+
 % SOURCE: Pad on [fileflowchart.raw.html](http://observatory.constantvzw.org/etherdump/fileflowchart.raw.html)
 
 % REMEMBER: To answer the question "_what is software_" depends on the situation, goal, time, and other contextual influences.

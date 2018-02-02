@@ -1,4 +1,4 @@
-% METHOD: Investigating how humans and machines negotiate the experience of time
+% METHOD: Investigating the ends of time
 
 % REMEMBER:
 
@@ -29,22 +29,25 @@ Exact moment of the epoch:
 ## commands
 
 local UNIX time of this machine
-% BASHCODE: date +%s
+% SRCCODE: bash date +%s
 
 UNIX time + 1
-%BASHCODE: echo $((`date +%s` +1 ))
+% SRCCODE: bash echo $((`date +%s` +1 ))
 
 
 ## goodbye unix time
 
+% -------
     while :
     do
       sleep 1
       figlet $((2147483647 - `date +%s`))
     done
+% SRCCODE: bash
 
 # Sundial Time Protocol Group tweaks
 
+% -------
     printf 'Current Time in Millennium Unix Time: '
     printf $((2147483647 - `date +%s`))
     echo
@@ -55,13 +58,11 @@ UNIX time + 1
     figlet "Thank you for having donated 2 seconds to our ${idletime} seconds of collective SSH  pause "
     echo 
     echo
+% SRCCODE: bash
 
 http://observatory.constantvzw.org/etherdump/ends-of-time.html
 
-% VERBATIM:
-
-
-
-
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.timepiece
 % RELATESTO:  http://pad.constantvzw.org/p/observatory.guide.scrollresistance
 % SOURCE:
+

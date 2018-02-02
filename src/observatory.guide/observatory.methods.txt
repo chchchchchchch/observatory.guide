@@ -143,11 +143,12 @@ If you want to commit to a contribution, or have questions, or comments, please 
 = HOWTOEDIT = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-The Techno-Galactic Software Observation Guide uses an extended
-dialect of markdown. Next to classic markdown ( http://lfkn.de/md )
+The Techno-Galactic Software Observation Guide is generated from etherpads and uses an extended
+dialect of markdown. The markup vocabulary is meant to develop during the editing process.
+Next to classic markdown ( http://lfkn.de/md )
 you may write `instruction lines` that tell the translator about the
 desired output. An `instruction line` starts with `%` and takes
-everything after the first colon as input e.g.
+everything after the first colon as input, e.g.:
 
 % SUPERLARGETEXT: Something all should know
 
@@ -155,8 +156,10 @@ will insert 'Something all should know' using whatever is considered
 a superlarge textsize.
 
 
-CURRENT INSTRUCTIONS
+EDITORIAL INSTRUCTIONS
 ====================
+
+Instructions are part of the editorial template developed to structure the content of the guide.
 
 % METHOD: sum up the method
 
@@ -172,7 +175,7 @@ The main description of the software observation method
 % REMEMBER: never forget
 % NOTE: a note is a note is a note
 % EXAMPLE: real or not so real world example
-% RELATESTO: http://link/to/a/pad
+% RELATESTO: http://link/to/another/pad
 
 Standard descriptors of the method.
 Somehow self-explanatory?
@@ -185,11 +188,12 @@ more space, use a dash e.g.
 
 ===========
 
-% SEEHERE: http://link/to/a/pad
-% SEEALSO: http://link/to/a/pad
-
-Used for adding methods to the index
+Descriptors used to add methods to the index
 https://pad.constantvzw.org/p/observatory.guide
+
+% SEEHERE: http://link/to/another/pad
+% SEEALSO: http://link/to/another/pad
+
 % SEEHERE will directly include a document.
 % SEEALSO will put a reference.
 
@@ -222,7 +226,6 @@ For requests see 'FUTURE INSTRUCTIONS'
 FUTURE INSTRUCTIONS
 ===================
 
-The markup vocabulary is meant to develop during the editing process.
 If you have an idea about some instruction that should be added,
 you may write a `% TODO:` instruction as a request for future implementation e.g.
 

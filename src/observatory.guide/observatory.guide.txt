@@ -2,7 +2,7 @@
 % http://observatory.constantvzw.org/tgsoguide.html
 % pdfs: http://observatory.constantvzw.org --> tgsoguide_1801091008.pdf etc.
 % notes on the process: http://pad.constantvzw.org/p/observatory.methods
-
+% https://pad.constantvzw.org/p/observatory.bib
 
 % TOC:
 
@@ -21,8 +21,9 @@
 %!SEEHERE: http://pad.constantvzw.org/p/observatory.guide.essentials
 
 
-% GROUPING: Close encounters
+% GROUPING: Close encounters -- Meetings between people, software and hardware
 % ==========================
+% http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers
 
 % Encounter several collections of historical hardware back-to-back
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.visit
@@ -40,7 +41,7 @@
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.blobservation
 
 
-% GROUPING: Temporality
+% GROUPING: Temporality -- Constellations of time and locality
 % =====================
 % http://pad.constantvzw.org/p/observatory.guide.grouping.temporality
 
@@ -50,14 +51,15 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.silvio
 % Useless Scroll against Productivity
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.scrollresistance
-% Investigating how humans and machines negotiate the experience of time
+% Investigating the ends of time
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.time
+% How humans and machines negotiate the experience of time (see under: Appendixes)
+% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.timepiece
 
 
-% GROUPING: Languaging
+% GROUPING: Languaging -- Observing software as/through writing
 % ====================
 % http://pad.constantvzw.org/p/observatory.guide.grouping.languaging
-
 
 % Quine
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.quine
@@ -71,8 +73,10 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.everyonescp
 
 
-% GROUPING: Healing
+% GROUPING: Healing and embodiment -- Feeling software
+% !! mm + FS + Anice merged chapters on healing and embodiment
 % =================
+% http://pad.constantvzw.org/p/observatory.guide.grouping.healing
 
 % Setup a Relational software observatory consultancy
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.relational
@@ -82,36 +86,31 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.blobservation
 % Bug reporting for sharing observations
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.dirty
-% Interface Détournement (There is nothing here yet ...) /FS ASKS LOUP/
+% Interface Détournement
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.detournement
-
-
-% GROUPING: Embodiment / body techniques
-% ======================================
-
 % Comportment of software (occupational hazards) /CARLIN/
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.occupational
-% Agile Sun Salutation (see under: Healing)
-% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.agile.yoga
 
 
-% GROUPING: Flow-regulation, logistics, seamlessness
+% GROUPING: Flows -- Flow-regulation, logistics and seamlessness
 % ==================================================
+% http://pad.constantvzw.org/p/observatory.guide.grouping.flows
 
 % Continuous Integration
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.continuousintegration
-% Fountain refreshment (see under: Embodiment / body techniques)
+% Fountain refreshment (see under: Healing and embodiment)
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.fountain
 % make make do /CHRISTOPH/
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.pipeline
 % Flowcharts (Flow of the chart – chart of the flow on demand!)
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.ssogy
+%!SEEHERE: https://pad.constantvzw.org/p/observatory.guide.flowchart
 % What is it like to be <AN ELEVATOR>? (see under: Beingontheside/inthemiddle/behind)
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.whatisitliketobeanelevator
 
 
-% GROUPING: Beingontheside/inthemiddle/behind
+% GROUPING: Invasive observations -- Being on the side, in the middle or behind
 % ===========================================
+% http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle
 
 % somethinginthemiddlemaybe
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.somethinginthemiddlemaybe
@@ -121,15 +120,16 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.sidechannel
 
 
-% GROUPING: Collections / collecting
+% GROUPING: Collections -- Compiling observations
 % ==================================
+% http://pad.constantvzw.org/p/observatory.guide.grouping.collections
 
 % Compiling a bestiary of software logos
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.bestiary
 % Glossaries as an exercise
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.glossary
 % Encounter several collections of historical hardware back-to-back
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.visit
+% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.visit
 % Testing the testbed: testing software with observatory ambitions (SWOA)
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.testingtestbed
 % Prepare a reader to think theory with software
@@ -137,16 +137,20 @@
 % Compiling a constellation of <PRODUCTIVITY>-Wares
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.silvio
 
+% APPENDIXES
+% ===============================
+% How humans and machines negotiate the experience of time
+% NEWPAGE:
+% SEEHERE: https://pad.constantvzw.org/p/observatory.guide.experiencingtime
+% Interview with Jean Huens
 
 % COLOPHON:
 % =========
+% NEWPAGE:
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.colophon
 
 
-
-
-
-
+% https://pad.constantvzw.org/p/observatory.bib
 
 
 

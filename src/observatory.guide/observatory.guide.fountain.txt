@@ -9,7 +9,9 @@
 % NOTE:
 % WARNING:
 
-% EXAMPLE:
+
+% NEWPAGE:
+% EXAMPLE: - 
 
 The Technogalactic Software Observatory – Comfortable silence, one way mirrors
 
@@ -35,11 +37,17 @@ Should you chose to drink from the fountain, then I urge you to write your name 
 
 I do want you to be comfortable.
 
-% SHOW: http://observatory.constantvzw.org/documents/mia/mia6.gif
-% SHOW: http://observatory.constantvzw.org/documents/mia/FullSizeRender%2811%29.jpg
-% SHOW: http://observatory.constantvzw.org/documents/mia/IMG_5695.JPG
-% SHOW: http://observatory.constantvzw.org/documents/mia/IMG_5698.JPG
+% http://observatory.constantvzw.org/documents/mia/mia6.gif
+% http://observatory.constantvzw.org/documents/mia/FullSizeRender%2811%29.jpg
+% http://observatory.constantvzw.org/documents/mia/IMG_5695.JPG
+% http://observatory.constantvzw.org/documents/mia/IMG_5698.JPG
+% TODO: % SHOW: tgsoimages.svg fountainrefreshment
+
+
 
 % RELATESTO:
 % SOURCE: Mia Melvaer
+% http://www.miamelvaer.com/technogalactic
+
+
 

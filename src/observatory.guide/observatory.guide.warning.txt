@@ -19,13 +19,12 @@ Sleep deprivation
 Forgetting about eating    
 Loss of time tracking    
 
-**Can you cope with software ? You have to.**
+**Can you cope with software? You have to.**
 
 
-> our methods for observation, like mapping, come with their luggage.
+> our methods for observation, like mapping,    
+> come with their luggage.
+
 
 % SEEALSO: http://observatory.constantvzw.org/etherdump/toc.md.diff.html
-
-
-% CSSHERE: section warning
 

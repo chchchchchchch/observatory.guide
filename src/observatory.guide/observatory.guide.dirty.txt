@@ -3,17 +3,19 @@
 % REMEMBER:
 
 % WHAT: Etherpad had stopped working but it was unclear why. Where does etherpad 'live'?
-% HOW: Started by looking around the pi's filesystem by reading  /var/log/syslog  in /opt/etherpad and in a subdirectory named var/ there was dirty.db, and dirty it was.   
+% HOW: Started by looking around the pi's filesystem by reading `/var/log/syslog`  in `/opt/etherpad` and in a subdirectory named `var/` there was `dirty.db`, and dirty it was.   
 % WHEN: Monday morning
 % WHO:
 % URGENCY: Software (etherpad) not working and the Walk-in Clinic was about to start.
 % NOTE: http://pad.constantvzw.org/p/observatory.inventory.jogi
-
 % WARNING:
 
-% EXAMPLE:
-% INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/export/txt
+% EXAMPLE: - 
 
-% SEEALSO:
+% INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/9/export/txt 1-7
+% INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/9/export/txt 9-100
+% INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/9/export/txt 102-105
 
+
+% RELATESTO:
 % SOURCE: jogi, http://pad.constantvzw.org/p/observatory.inventory.jogi

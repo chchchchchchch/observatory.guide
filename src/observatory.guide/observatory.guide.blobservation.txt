@@ -47,8 +47,10 @@
 > whenever possible.
 
 
-% SHOW: http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMAG1407.jpg?m=1497344230
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1407
+% TODO: % SHOW: tgsoimages.svg blobservation
 
 % SOURCE:
 % RELATESTO:
+
 

@@ -47,7 +47,7 @@ Test
 Warning
 WhiteBoard
 Yoga
-% VERBATIM:
+% SRCCODE:
 
 
 % RELATESTO:

@@ -16,7 +16,7 @@ tools to explore processes stored in the memory
    ps ax | grep process
    cd /proc/numberoftheprocess
    cat maps
-% BASHCODE:
+% SRCCODE: bash
 
 --> check what it is using
 
@@ -29,14 +29,14 @@ dump to a file-->change something in the file-->dump new to a file-->diff oldfil
 "where am i?"
 
 to find read/write memory addresses of a certain process    
-% BASHCODE: awk -F "-| " '$3 ~ /rw/ { print $1 " " $2}' /proc/PID/maps
+% SRCCODE: bash awk -F "-| " '$3 ~ /rw/ { print $1 " " $2}' /proc/PID/maps
 
 take the range and drop it to hexdump
 
 % ----- 
 sudo dd if=/dev/mem bs=1 skip=$(( 16#b7526000 - 1 )) \
         count=$(( 16#b7528000 - 16#7b7526000 + 1)) | hexdump -C
-% BASHCODE:
+% SRCCODE: bash
 
 % SOURCE:  http://observatory.constantvzw.org/etherdump/files.md 511-535
 
@@ -47,8 +47,8 @@ You can open it as a raw image, you can play it as a sound or perhaps send it di
     
 % EXAMPLE: - 
 % ![Binary visualization example]( http://observatory.constantvzw.org/images/Screenshot_from_2017-06-07_164407.png)
-% SHOW: http://observatory.constantvzw.org/images/Screenshot_from_2017-06-07_164407.png
-% TODO: BOX: Forensic and debuggung tools can be used to explore and problematize the layers of abstraction of computing. 
+% TODO: SHOW: tgsoimages.svg binvis
+% TODO: % BOX: Forensic and debuggung tools can be used to explore and problematize the layers of abstraction of computing. 
     
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.monopsychism

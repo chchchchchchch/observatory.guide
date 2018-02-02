@@ -11,7 +11,7 @@
 % ??? **Strategy**: Case study    
 % ??? **Tool**: Qualitative interview
 
-% SHOW: ![Reading the signs. From: John "Lofty" Wiseman, SAS Survival Handbook: The Ultimate Guide to Surviving Anywhere]( http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1319 )
+% ![Reading the signs. From: John "Lofty" Wiseman, SAS Survival Handbook: The Ultimate Guide to Surviving Anywhere]( http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1319 )
 
 % WHEN:
 % WHO:
@@ -20,9 +20,10 @@
 
 % WARNING: - 
 
-% SHOW: have a advertising blob for the RSOC with a smiling doctor welcoming image
 % http://cdn2.holytaco.com/wp-content/uploads/2011/11/163.jpg %
 % content of the advertising bloc % 
+% TODO: % SHOW: have a advertising blob for the RSOC with a smiling doctor welcoming image
+
 
 % EXAMPLE: - 
 

@@ -5,6 +5,7 @@
 % HOW: - 
 
 Compile a collection of logos and note the metaphors for observation:
+
 * stethoscope
 * magnifying glass
 * long neck (giraffe)
@@ -20,7 +21,8 @@ Compile a collection of logos and note the metaphors for observation:
 % [check Testing the testbed pads for examples]
 % [something on bestiaries]
 
-% VERBATIM:
+% SRCCODE:
+
 
 % RELATESTO:
 % SOURCE:

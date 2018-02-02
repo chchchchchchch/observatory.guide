@@ -5,14 +5,19 @@
 
 % EXAMPLE: A quine (Python). When executed it outputs the same text as the source:
 
-```python
+% ----------
     s =  's = %r\nprint(s%%s)'
     print(s%s)
-```
+% SRCCODE: python
 
 % EXAMPLE: A oneline unibash/etherpad quine, created during relearn 2017:
 
-% QUAVERBATIM: https://gitlab.com/relearn/relearn2017/raw/master/complex.local/home/etherpad/etherdump/quine.raw.txt
+% https://gitlab.com/relearn/relearn2017/raw/master/complex.local/home/etherpad/etherdump/quine.raw.txt
+% --------
+    wget -qO- "http://192.168.73.188:9001/p/quine/export/txt" | \
+     curl -F  "file=@-;type=text/plain" \
+              "http://192.168.73.188:9001/p/quine/import"
+% SRCCODE: bash
 
 % WARNING: - 
 
@@ -20,10 +25,23 @@ The encounter with quines may deeply affect you.
 You may want to write one and get lost in trying to make an ever shorter and more elegant one.
 You may also take quines as point of departure or limit-ideas for exploring software dualisms.
 
-% INCLUDE: http://observatory.constantvzw.org/etherdump/auqinas 79-82
+% http://observatory.constantvzw.org/etherdump/auqinas 79-82
+
+"A quine is without why. It prints because it prints. It pays no attention to itself, nor does it asks whether anyone sees it."    
+"Aquine is aquine is aquine. "    
+Aquine is not a quine    
+This is not aquine    
+
 
 % REMEMBER: Although seemingly absolutely useless, quines can be used as exploits.
-% INCLUDE: http://observatory.constantvzw.org/etherdump/files.md 460-463
+
+% http://observatory.constantvzw.org/etherdump/files.md 460-463
+
+Exploring boundaries/tensions    
+
+databases treat their content as data (database punctualization)    
+some exploits manage to include operations in a database
+
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.monopsychism
 % SOURCE: Part of Aquine, a discussion of and research into dualism in software http://observatory.constantvzw.org/etherdump/auqinas.diff.html

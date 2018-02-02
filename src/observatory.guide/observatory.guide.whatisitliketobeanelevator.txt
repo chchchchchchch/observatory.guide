@@ -65,12 +65,14 @@ play sound opening sequence
 end
 update floor indicator
 
-% VERBATIM:
+% SRCCODE: quaverbatim
 
 
-% SHOW: http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
+% TODO: flowchart
+% http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
 % http://observatory.constantvzw.org/documents/joseph/flowchart.svg
-% include Images from performance?
+% TODO: include Images from performance?
+
 
 % RELATESTO:
 % SOURCE: Developed by Joseph Knierzinger, Michaela Lakova + Other Members of the SSOGY Group

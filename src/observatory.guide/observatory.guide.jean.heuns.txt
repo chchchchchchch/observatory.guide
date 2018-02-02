@@ -16,15 +16,17 @@
 Jean Heuns has been collecting servers, calculators, softwares, magnetic tapes hard disks for xxx years. Found an agreement for them to be displayed in the department hallways.
 Department of Computer sciences - Kul Leuven.
 
+% [a few quotes to the interview transcription go here, interview in appendix]
 
-% [interview transcription goes here]
 
-% SHOW: http://gallery.constantvzw.org/var/albums/Techno-Galactic-Software-Observatory/PWFU3350.JPG
-% SHOW: http://gallery.constantvzw.org/var/albums/Techno-Galactic-Software-Observatory/PWFU3361.JPG
-% SHOW: http://gallery.constantvzw.org/var/albums/Techno-Galactic-Software-Observatory/PWFU3356.JPG
-% SHOW: http://gallery.constantvzw.org/var/albums/Techno-Galactic-Software-Observatory/PWFU3343.JPG
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3350
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3361
+% TODO: % SHOW: tgsoimages.svg kuleuven1
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3356
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3343
+% TODO: % SHOW: tgsoimages.svg kuleuven2
+
 
 % RELATESTO:
-
 % SOURCE:
 
