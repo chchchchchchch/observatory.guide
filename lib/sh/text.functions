@@ -1,75 +1,79 @@
-  SRCLIST=${TMPID}X.list
 # =========================================================================== #
 
- function getLines() {
+  function getVerbatim() {
 
-  if [ `echo $* | wc -c` -lt 2 ]; then   # = NO PARAMETERS PROVIDED 
-       SEP="% ------------"              # THIS IS THE SEPARATOR
-      SEPN=`grep -n "" $SRCDUMP             | # NUMBER LINES
-            egrep "$SEP|^[0-9]*:$EMPTYLINE" | # LOCATE SEPARATOR OR EMPTY LINE
-            tail -n 1                       | # SELECT LAST 
-            cut -d ":" -f 1`                  # SELECT FIRST FIELD
-       sed "1,${SEPN}d" $SRCDUMP   | # PRINT FROM LINE NUM TO END
-      #grep -v "^% QUAVERBATIM"    | # IGNORE COMMAND ITSELF
-       grep -v "^% [A-Z]*:"        | # IGNORE COMMAND ITSELF
-       sed "s/^%//"                | # REMOVE LEADING %
-       sed "s/^[ ]*//"             | # REMOVE ALL LEADING BLANKS
-       sed "/^[ \t]*$/d"           | # REMOVE EMPTY LINES
-       tee      > $SRCLIST
-  else
-       echo $*  > $SRCLIST
-  fi
+    THISCMD="$1"
+     TARGET="$2"; if [ "$2" == "" ];then TARGET="${TMPID}.xtract"; fi
 
- }
+    SEPARATOR="^${COMSTART}% [-]{4,} *${COMCLOSE}$"
+
+   # GET LINENUMBER FOR SEPARATOR IN (PROCESSED) $SRCDUMP
+   # ----
+     LNSTART=`grep -nE "$SEPARATOR" $SRCDUMP | # FIND SEPARATOR LINE
+              tail -n 1 | cut -d ":" -f 1`     # SELECT LAST MATCH
+
+   # EXTRACT TEXT PARTS PROCESSED BEFORE SEPARATOR
+   # ----
+     head -n $LNSTART $SRCDUMP  | # DISPLAY UNTIL SEPARATOR LINE
+     sed '$d' > ${TMPID}.before    # REMOVE LAST LINE (= SEPARATOR)
+     cat ${TMPID}.before > $SRCDUMP # REWRITE $SRCDUMP
+
+   # GET NUMBER FOR CMD LINE IN (UNPROCESSED) MDSH SRC
+   # ----
+     LNCMD=`grep -n "^% $THISCMD:" $MDSH | # FIND CMD LINE
+            head -n 1 | cut -d ":" -f 1`   # SELECT LAST MATCH
+
+   # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
+   # ----
+     sed -i "${LNCMD}s/^% $THISCMD:/%X${THISCMD}:/" $MDSH
+
+   # EXTRACT PART UNTIL CMD LINE
+   # ----
+     head -n $LNCMD $MDSH > ${TMPID}.part
+
+   # GREP SEPARATOR/MARKER IN TMP PART
+   # ----
+     LNPART=`tac ${TMPID}.part          | # START FROM END
+             grep -nE "^% [-]{4,} *$"   | # FIND SEPARATOR
+             head -n 1 | cut -d ":" -f 1` # NUM FOR FIRST(=LAST) MATCH
+
+   # EXTRACT UNPROCESSED SECTION
+   # ----
+     tac ${TMPID}.part           | # SHOW REVERT
+     head -n $LNPART             | # UNTIL LINE NUMBER
+     tac                         | # RE-REVERT 
+     sed '$d' | sed '1d'         | # RM FIRST/LAST (= SEPARATOR/CMD)
+     sed -n '/^.\{1\}/,$p' | tac | # FROM FIRST NON-EMPTY LINE TO END/REVERT
+     sed -n '/^.\{1\}/,$p' | tac | # FROM FIRST NON-EMPTY LINE TO END/REVERT
+     tee > ${TARGET}               # WRITE TO TARGET FILE
+
+     rm ${TMPID}.part # CLEAN UP
+
+  }
 
 # =========================================================================== #
 
- function getFileRange() {
+  function unIndent() {
 
-   COLLECTED="$TMPID.srccollected"
+   INDENTTHIS="$1"
 
- ( IFS=$'\n'
-
-  if [ -f $SRCLIST ]; then
-   for THISSRC in `cat $SRCLIST`
-    do
-       SRCURL=`echo $THISSRC | sed 's/ /\n/g'   | # SPACES TO NEWLINES
-              #sed "/\.functions$/s/^/XXX/g"    | # MARK LINES WITH .functions EXTENSION
-              #sed "/\.[a-z]\{2,4\}$/s/^/XXX/g" | # MARK LINES WITH 2-4 CHAR EXT
-              #grep "^XXX" | sed 's/^XXX//'     | # SELECT AND REMOVE MARK
-               head -n 1`                         # SELECT FIRST
-        LINES=`echo $THISSRC | sed "s/ /\n/g"   | # SPACES TO NEWLINES
-               sed "/[^0-9\\-]/d"               | # NO LINES WITH MORE THAN NUMS AND -
-               egrep -v "^-|-$"                 | # IGNORE ISOLATED -
-               grep -v "^[ ]*$" | tail -n 1`      # LAST LINE ONLY
-       if [ `echo $LINES | wc -c` -gt 1 ]; then   # IF LINE OPTION IS SET
-             LINES=`echo $LINES | sed 's/-/,/'`
-             SELECTSRCLINES="sed -n \"${LINES}p\" "
-       else                                       # IF LINE OPTION IS NOT SET
-             SELECTSRCLINES="tee"
-       fi
-       SRCGET=${TMPID}SRC`echo $SRCURL | md5sum | cut -c 1-3`.txt
-       if [ ! -f $SRCGET ]; then
-            getFile $SRCURL $SRCGET
-       fi;  if [ -f $SRCGET ]; then
-            cat   $SRCGET                 | # START WITH ALL
-            eval "$SELECTSRCLINES"        | # DO SELECT LINE RANGE
-            tee                           >> $COLLECTED
-     fi
-   done
-  fi
- )
-   if [ -f $COLLECTED ]; then
-   INDENT=`cat $COLLECTED        | # START PIPE WITH COLLECTION
+   if [ -f "$INDENTTHIS" ]; then
+   INDENT=`cat $INDENTTHIS       | # START PIPE WITH COLLECTION
            sed '/^[ \t]*$/d'     | # IGNORE/DELETE EMPTY LINES
            sed -E 's/([^ ]).*//' | # KEEP ONLY LEADING BLANK
            sort -r               | # REVERSE SORT
            tail -n 1             | # SELECT LAST (=SHORTEST)
            wc -c`                  # COUNT  
    if [ $INDENT -eq 0 ]; then INDENT=1 ; fi
+
+     cat $INDENTTHIS     | # START ...
+     cut -c ${INDENT}-  | # REMOVE INDENT
+     tee > tmp.tmp        # WRITE TO FILE 
+     mv tmp.tmp $INDENTTHIS
+
    fi
 
- }
+  }
 
 # =========================================================================== #
 

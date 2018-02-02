@@ -259,6 +259,44 @@
 % --------------------------------------------------------------------------- %
 % ENVIRONMENTS
 % --------------------------------------------------------------------------- %
+
+  \renewcommand{\kwa}{\bfseries}
+  \renewcommand{\kwb}{\kwa}
+  \renewcommand{\kwc}{}
+
+  \newcommand{\lstsetBash}{\lstset{language=Bash+,
+               morekeywords = [2]{write2src,getFile,
+                                  mkqr,getVerbatim
+             }}}
+  \newcommand{\lstsetTeX}{\lstset{language=TeX+}}
+  \newcommand{\lstReset}{\lstset{language={}}}
+
+  \lstset{ 
+    basicstyle=\linespread{1.5}\fontfamily{ipm}\selectfont\footnotesize, 
+    commentstyle=\scalefont{1}, 
+    keywordstyle = \kwa, 
+    keywordstyle = [2]{\kwb}, 
+    keywordstyle = [3]{\kwc}, 
+    stringstyle=\scalefont{1}, 
+    showspaces=false, 
+    showtabs=false, 
+    columns=fixed, 
+    numbers=none, 
+    frame=none, 
+    numberstyle=\tiny, 
+    breaklines=true, 
+    showstringspaces=false, 
+    aboveskip=1em, 
+    xleftmargin=0cm, 
+    upquote=true, 
+    escapechar=° 
+  }
+
+  \renewcommand{\emptylinelst}{\vspace{-1\baselineskip}\vfill}
+
+  \lstnewenvironment{bashcode}{\vfil\vfill\lstsetBash}
+                              {\vfill\vfill\vfill\vfill}
+
   \newenvironment{quaverbatim}{%
   \medskip
    \begin{alltt}%
@@ -266,13 +304,14 @@
   }{\end{alltt}
     \vfill}
 
-  \newenvironment{verbatimsmall}{%
-   \begin{alltt}%
-    \fontsize{7pt}{9pt}\selectfont
-  }{\end{alltt}
-     \medskip
-      \vfill
-}
+% \newenvironment{verbatimsmall}{%
+%  \begin{alltt}%
+%   \fontsize{7pt}{9pt}\selectfont
+% }{\end{alltt}
+%    \medskip
+%     \vfill
+%}
+
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
