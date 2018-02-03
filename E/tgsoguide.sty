@@ -373,6 +373,20 @@
                                      \color{red}
                                      \fi}
                                     {}
+% --------------------------------------------------------------------------- %
+%  TABLE OF CONTENTS
+% --------------------------------------------------------------------------- %
+  \newcommand{\tocitem}[3]{ %
+  \ifnum\numexpr#1 < 2 
+  \textbf{#2} \textbf{\pageref{#3}} %
+  \else
+  {\small #2 \textbf{\pageref{#3}}} %
+  \fi
+  }
+
+  \newenvironment{tocpage}
+  {\pagebreak[4]}{\pagebreak[4]}
+
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
@@ -403,6 +417,11 @@
 % --------------------------------------------------------------------------- %
    \newcommand\pdfpage[3]{%
    \includepdf[pagecommand={\thispagestyle{fancy}},%
+               scale=1,pages=#2#3]{#1}
+  }
+% --------------------------------------------------------------------------- %
+   \newcommand\pdfpageplus[4]{%
+   \includepdf[pagecommand={\thispagestyle{fancy}#4},%
                scale=1,pages=#2#3]{#1}
   }
 % --------------------------------------------------------------------------- %
