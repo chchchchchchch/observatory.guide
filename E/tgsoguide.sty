@@ -463,6 +463,15 @@
  % %  \smallskip\vfill
  % \end{figure}
  % }
+  \newcommand\pointright{% 
+      \raisebox{-.1\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
+      {\large\ding{228}}} %
+  }
+  \newcommand\pointleft{% 
+      \raisebox{-.6\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
+      {\large\ding{228}}} %
+  }
+
   \newcommand\anchorinfo[2]{%
   \begin{figure}[htb] % 
      {\grafikinline{\iconseeinline} % DEFINED FROM MDSH FUNCTIONS
@@ -471,8 +480,7 @@
       \vspace{-.5\baselineskip} %
       \setstretch{1.2} P.\pageref{#2}
       \rotatebox{180}{%
-      \raisebox{-.6\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
-      {\large\ding{228}}}} #1 \par}}
+      \pointleft} #1 \par}}
   \end{figure}
   }
 
@@ -932,7 +940,7 @@
      \makebox[\textwidth][s]{\scalefont{2}%
      \fontfamily{vpi}\selectfont R E M E M B E R}%
      \vspace{2\bigskipamount}
-     \vfill
+    %\vfill
    \else
      \vfill
      \vspace{2\bigskipamount}
@@ -978,5 +986,9 @@
    \fi
   }
 % ------------------------------------------------------------------------- %
-
+  \newcommand\descriptorrelates[2]{%
+   \descriptorlabel{SEE ALSO}\hspace{-.75em}%
+   #2 (\pointright \underline{P.\pageref{#1}} )\\
+  }
+% ------------------------------------------------------------------------- %
 
