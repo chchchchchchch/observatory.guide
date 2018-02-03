@@ -733,11 +733,11 @@ function SRCCODE() {
  # ------------------------------------------------------------------------ #
    unIndent ${TMPID}.xtract
    sed -i 's/^[ \t]*$/°\\emptylinelst°/' ${TMPID}.xtract
-
+   LN=`wc -l ${TMPID}.xtract | cut -d " " -f 1`
  # ------------------------------------------------------------------------ #
    if [ "$OUTPUTFORMAT" == pdf ];then
 
-      write2src "\begin{$ENVIRONMENT}"
+      write2src "\begin{$ENVIRONMENT}{$LN}"
        cat ${TMPID}.xtract >> $SRCDUMP
       write2src "\end{$ENVIRONMENT}"
 
@@ -930,7 +930,8 @@ function FLUSHQRURLS(){
    sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
 
  # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
-   sed -i 's/{lstlisting}/{plain}/' $SRCDUMP
+   sed -i 's/\\begin{lstlisting}/\\begin{plain}{}/' $SRCDUMP
+   sed -i 's/{lstlisting}/{plain}/'                 $SRCDUMP
 
   }
 

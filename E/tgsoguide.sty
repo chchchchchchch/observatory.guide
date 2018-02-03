@@ -163,7 +163,6 @@
   \renewcommand*{\footnoterule}{\vskip 0pt plus .01fil\origfootnoterule}
 
 
-
    \newcommand{\embody}{}
  % CHANGE \emph FOR BODYTEXT
    \DeclareTextFontCommand{\emph}{%
@@ -206,13 +205,13 @@
  %\renewcommand\subsubsection[1]{\newpage\Subsubsection*{#1}}
 
   \let\Chapter\chapter
-  \renewcommand\chapter[1]{\textbf{#1}\\}
+  \renewcommand\chapter[1]{\needspace{4}\textbf{#1}}
   \let\Section\section
-  \renewcommand\section[1]{\textbf{#1}\\}
+  \renewcommand\section[1]{\needspace{4}\textbf{#1}}
   \let\Subsection\subsection
-  \renewcommand\subsection[1]{\textbf{#1}\\}
+  \renewcommand\subsection[1]{\needspace{4}\textbf{#1}}
   \let\Subsubsection\subsubsection
-  \renewcommand\subsubsection[1]{\textbf{#1}\\}
+  \renewcommand\subsubsection[1]{\needspace{4}\textbf{#1}}
 
 
 % --------------------------------------------------------------------------- % 
@@ -264,7 +263,7 @@
 % L I S T S
 % --------------------------------------------------------------------------- %
 
-  \setitemize[0]{leftmargin=10pt,rightmargin=10pt} % (P:enumitem)
+  \setitemize[0]{leftmargin=-1pt,rightmargin=-1pt} % (P:enumitem)
   \setlist{noitemsep} % (P:enumitem)
 
 % --------------------------------------------------------------------------- %
@@ -303,7 +302,7 @@
   \newcommand{\lstsetQuaverbatim}{%
   \lstset{ %
     basicstyle=\fontencoding{T1}\linespread{1.5}
-               \fontfamily{iad}\selectfont\small, 
+               \fontfamily{iad}\selectfont\footnotesize, 
     breaklines=true,
     breakautoindent=false,
     breakindent=1em,
@@ -322,30 +321,58 @@
              }}}
   \newcommand{\lstsetPython}{\lstset{language=Python,
                                      basicstyle=\fontencoding{T1}\linespread{1.5}
-                                                 \fontfamily{ipm}\selectfont\normalsize}
+                                                 \fontfamily{ipm}\selectfont\footnotesize}
                               \renewcommand{\emptylinelst}{%
                                \vspace{-.4\baselineskip}}
   }
 
   % https://tex.stackexchange.com/a/215331
   % -> widow-orphan-lstlisting
-  \lstnewenvironment{plain}{\vfill%
-                            \needspace{4\baselineskip}%
-                            \lstsetCode{1}
-                            \lstReset}
-                           {\vfill\vfill\vfill}
-  \lstnewenvironment{bashcode}{\vfill%
-                               \needspace{4\baselineskip}%
-                               \lstsetCode{1.5}
-                               \lstsetBash}
-                              {\vfill\vfill\vfill}
-  \lstnewenvironment{pythoncode}{\vfill%
-                                 \needspace{4\baselineskip}%
-                                 \lstsetCode{1}
-                                 \lstsetPython}
-                                {\vfill\vfill\vfill}
-  \lstnewenvironment{quaverbatim}{\lstsetQuaverbatim}{}
+%  \lstnewenvironment{plain}{\vfill%
+%                            \needspace{4\baselineskip}%
+%                            \lstsetCode{1}
+%                            \lstReset}
+%                           {\vfill\vfill\vfill}
+%  \lstnewenvironment{bashcode}{\vfill%
+%                               \needspace{4\baselineskip}%
+%                               \lstsetCode{1.5}
+%                               \lstsetBash}
+%                              {\vfill\vfill\vfill}
+%  \lstnewenvironment{pythoncode}{\vfill%
+%                                 \needspace{4\baselineskip}%
+%                                 \lstsetCode{1}
+%                                 \lstsetPython}
+%                                {\vfill\vfill\vfill}
+%  \lstnewenvironment{quaverbatim}{\lstsetQuaverbatim}{}
 
+  \lstnewenvironment{plain}[1]{\lstsetCode{1}\lstReset
+                               \ifnum\numexpr#1 < 5
+                               \color{green}
+                               \else
+                               \color{red}
+                               \fi}
+                              {}
+  \lstnewenvironment{bashcode}[1]{\lstsetCode{1.5}\lstsetBash
+                                  \ifnum\numexpr#1 < 5
+                                  \color{green}
+                                  \else
+                                  \color{red}
+                                  \fi}
+                                 {}
+  \lstnewenvironment{pythoncode}[1]{\lstsetCode{1}\lstsetPython
+                                    \ifnum\numexpr#1 < 5
+                                    \color{green}
+                                    \else
+                                    \color{red}
+                                    \fi}
+                                   {}
+  \lstnewenvironment{quaverbatim}[1]{\lstsetQuaverbatim
+                                     \ifnum\numexpr#1 < 5
+                                     \color{green}
+                                     \else
+                                     \color{red}
+                                     \fi}
+                                    {}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
