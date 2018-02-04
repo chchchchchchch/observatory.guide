@@ -385,8 +385,10 @@
   }
 
   \newenvironment{tocpage}
-  {\pagebreak[4]}{\pagebreak[4]}
-
+  {\pagebreak[4] %
+   \cleartoleft\cleartoright %
+   \thispagestyle{empty}}
+  {\pagebreak[4]}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
@@ -739,9 +741,10 @@
 
   % FALLBACK
    \newcommand\grouping[1]{%
-    \cleartoleft
-     {\LARGE #1}
-      \cleartoright
+    \cleartoleft %
+    {\thispagestyle{empty} %
+      \LARGE #1} %
+     \cleartoright %
    }
 
  % ------------------------------------------------------------------------- %
@@ -778,8 +781,9 @@
  %  }
    \newcommand\descriptormethod[3]{%
   
-       \vfill
-        \pagebreak[2]
+     \clearpage
+      \vfill
+       \pagebreak[2]
         \bigskip
          \begin{flushleft}
           \begin{spacing}{1.0}

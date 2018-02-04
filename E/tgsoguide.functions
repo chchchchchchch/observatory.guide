@@ -480,7 +480,8 @@ function SHOW() {
         # ----
         # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
           T="$RANDOM"
-          sed -i "${LNCMD}s/^% SHOW:$*/%${T}SHOW:$*/" $MDSH
+         #sed -i "${LNCMD}s/^% SHOW:$*/%${T}SHOW:$*/" $MDSH
+          sed -i "${LNCMD}s/^% SHOW:/%${T}SHOW:/" $MDSH
         # ----
         # EXTRACT CAPTION FOR TAGGED '% SHOW'
           CAPTION=`grep -A 1 "%${T}SHOW:$*" $MDSH | #
@@ -491,7 +492,7 @@ function SHOW() {
         # KEEP ON GOING (IF SUCCESSFUL)                  #
         # ---------------------------------------------- #
           if [ -f "$TMPSVG" ];then
-     
+
           # EXTRACT AND CHECK LAYER FLAGS
             NTOCHECK=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
                       grep -v "$SHOWTHIS"      | # IGNORE $SHOWTHIS
@@ -949,7 +950,7 @@ function TODO() {
  # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
-function SHOW() {
+function SXHOW() {
      sleep 0
 }
 
