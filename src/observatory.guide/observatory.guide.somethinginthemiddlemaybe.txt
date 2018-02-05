@@ -1,27 +1,33 @@
 % METHOD: Something in the Middle Maybe (SitMM)
 
-% REMEMBER:
+% REMEMBER: In the sexist and militarized language of computer security a "man in the middle" attack refers to a kind of surveillance where an attacker relays and possibly even alters the communications of two peers that believe they are communicating directly to each other. These peers might or might not be human.
 
-% WHAT: The network traffic gets observed. There are different sniffing software out there which differ in granularity and how far the user can taylor the different functionality. SitMM builds on one of these tools called [scapy](http://www.secdev.org/projects/scapy/).
-% HOW: SitMM takes a closer look at the network traffic coming from/going to a software curious person's device. The software curious person using SitMM may ask to filter the traffic based on application or device of interest.
+% WHAT: SitMM allows the software curious person to observe the network connections that your software makes to the outside world. Software running in a device isolated might be powerful, but when the device is networked it becomes a peer in a wilderness of millions of agencies, some bening, some less so. It is in the network that machines touch, fluctuate and penetrate each other in a promiscuous non-stop bath of data packets, some real, some spoofed.
+
+SitMM builds on a tool called [scapy](http://www.secdev.org/projects/scapy/) to implement what is called a network packet sniffer.
+
+% HOW: SitMM takes a closer look at the network traffic coming from/going to a software curious person's device. The software curious person using SitMM may start the sniffer functionality with a single click of a button, perform the interaction with their device that they wish to observe and SitMM will issue a report at the end of that interaction.
+
 % WHEN:
 % WHO: - 
 
-The software curious person gets to observe their own traffic. Ideally, observing ones own network traffic should be available to anyone, but using such software can be deemed illegal under different jurisdictions. 
+The software curious person gets to observe their own traffic. Ideally, observing ones own network traffic should be available to anyone, but using such software may be deemed illegal in some jurisdictions. 
 
-For example, in the US wiretap law limit packet-sniffing to parties owning the network that is being sniffed or the availability of consent from one of the communicating parties. Section 18 U.S. Code § 2511 (2) (a) (i) says:
+For example, in the US, Wiretap Law limits packet-sniffing to parties that own the network that is being sniffed. Alternatively the party that sniffs the network must have consent from communicating parties. Section 18 U.S. Code § 2511 (2) (a) (i) says:
 
 > It shall not be unlawful ... to intercept ... while engaged in any activity
 > which is a necessary incident to the rendition of his service or to the protection
 > of the rights or property of the provider of that service
 
 See here for a [paper](http://spot.colorado.edu/~sicker/publications/issues.pdf) on the topic.
-Google went on a big legal spree to defend their right to capture unencrypted wireless traffic with google street view cars. The courts were concerned about wiretapping and infringements on the privacy of users, and not with the leveraging of private and public WiFi infrastructure for the gain of a for profit company. The case raises hard questions about the state, ownership claims and material reality of WiFi signals.
-So, while WiFi sniffing is common and the tools like SitMM are widely available, it is not always possible for software curious persons to use them legally or to neatly filter out "their traffic" from that of "others". 
+Google went on a big legal spree to defend their right to capture unencrypted wireless traffic with Google StreetView cars. The courts were concerned about wiretapping and infringements on the privacy of users, and not with the leveraging of private and public WiFi infrastructure for the gain of a for profit company. The case raises hard questions about the state, ownership claims and material reality of WiFi signals. So, while WiFi sniffing is common and the tools like SitMM are widely available, it is not always possible for software curious persons to use them legally or to neatly filter out the network "traffic" of one specific individual from that of "others", as networks often act as carriers to the interactions of many people. 
 
-% WHEN: SitMM can be used any time a software curious person feels the weight of the (invisible) networks.
+% WHEN: SitMM can be used any time a software curious person might suspect that their software is connecting to external parties, perhaps by "calling home", as is called whena  piece of software contacts its manufacturer to gather usage metrics or device details that they might be collecting illegitimately. For example untill 2014, when a user first signed up to WhatsApp they entire list of contacts in the user's phone was sent to WhatsApp servers, which allowed WhatsApp the company to build the largest (yet invisible) social network in the world, ven bigger than Facebook was at the time.
+
 % WHY: SitMM is intended to be a tool that gives artists, designers and educators an easy to use custom WiFi router to work with networks and explore the aspects of our daily communications that are exposed when we use WiFi. The goal is to use the output to encourage open discussions about how we use our devices online.
-% URGENCY:
+
+% URGENCY: "Something in the Middle Maybe" wants to be a *sousveillance* software with various goals, perhaps the most important goal is to demilitarize and emasculate the language of computer security, by introducing gender -neutral terminologies as well as ambiguity, SitMM brings poetry where before there only was room for engineered surveillance. SitMM aims to be usable and accessible to non-experts and is meant as a working tool for artists and designers alike.
+
 % NOTE:
 
 % WARNING:
@@ -71,9 +77,9 @@ Destination Name:    unknown
 Port: Connection Count
  443:   16
 
-% SRCCODE:
+% SRCCODE: https://github.com/AlternativeLearningTank/SomethingInTheMiddle/
 
 
 % RELATESTO:
-% SOURCE: *Sitm* emerges from the collective practice of the Alternative Learning Tank and is heavily inspired by projects such as [Dowse](http://dowse.equipment/), [alt.exit](http://alternativelearningtank.net/) and the [NetAidKit](https://netaidkit.net/). http://observatory.constantvzw.org/SomethingInTheMiddle/
+% SOURCE: *SitMM* emerges from the itinerating practice of Luis Rodil-Fernandez. With Jogi Hofmueller, BalkonTactics and the Alternative Learning Tank. *SitMM* is deeply indepted to projects that have served as inpiration such as [Dowse](http://dowse.equipment/), [alt.exit](http://alternativelearningtank.net/) and the [NetAidKit](https://netaidkit.net/). http://observatory.constantvzw.org/SomethingInTheMiddle/
 
