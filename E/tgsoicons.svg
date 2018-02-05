@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1517490066/dbc7fae32aaa2a0c9a9f865c7496e374 -->
+<!-- CLEANED: 1517859106/343e6e031d1b1bad135a5bdb35de5ebc -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -42,7 +42,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="XX_REFERENZ"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        id="path3022"
@@ -172,7 +172,7 @@
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
        x="-263.96582"
-       y="97.465851"
+       y="89.465851"
        id="text3093-3"
        sodipodi:linespacing="100%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
@@ -180,7 +180,7 @@
          sodipodi:role="line"
          id="tspan3095-6"
          x="-263.96582"
-         y="97.465851"
+         y="89.465851"
          dx="0 -4.3048134 -1.17404 -2.3480799 0 -2.7394266 -2.3480799 -3.52212 -12.131748">EXAMPLE::<tspan
    id="tspan3097-7"
    style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:2px;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin" /></tspan></text>
@@ -955,7 +955,7 @@
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
        x="-203.96582"
-       y="97.465851"
+       y="89.465851"
        id="text3093-3-9-1"
        sodipodi:linespacing="100%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
@@ -963,11 +963,11 @@
          sodipodi:role="line"
          id="tspan3095-6-0-7"
          x="-203.96582"
-         y="97.465851"
+         y="89.465851"
          dx="0 0 0 0 -3.52212 -12.131748">WHAT::</tspan></text>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="g3047"
      inkscape:groupmode="layer"
      inkscape:label="tmpinline">
@@ -996,7 +996,7 @@
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
        x="-183.96582"
-       y="97.465851"
+       y="89.465851"
        id="text3093-3-9"
        sodipodi:linespacing="100%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
@@ -1004,7 +1004,71 @@
          sodipodi:role="line"
          id="tspan3095-6-0"
          x="-183.96582"
-         y="97.465851"
+         y="89.465851"
          dx="0 0 0 -3.52212 -12.131748">TMP::</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g3195"
+     inkscape:label="XX_charrect"
+     style="display:none">
+    <path
+       id="path3197"
+       d="M 150,264 150,29.999998"
+       style="color:#000000;fill:none;stroke:#ff00ff;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path3199"
+       d="m 161.01695,97.220345 c 0,6.084495 -4.93246,11.016945 -11.01695,11.016945 -6.08449,0 -11.01695,-4.93245 -11.01695,-11.016945 0,-6.084493 4.93246,-11.016949 11.01695,-11.016949 6.08449,0 11.01695,4.932456 11.01695,11.016949 z"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:label="charrect"
+     id="g3156"
+     inkscape:groupmode="layer">
+    <path
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 134,87.720343 32,0 0,18.999997 -32,0 z"
+       id="rect3201"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g3167"
+     inkscape:label="charrhombus"
+     style="display:none">
+    <path
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 150,80.21875 -13.03125,17 L 150,114.25 163.03125,97.21875 z"
+       id="path3173"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:label="chartrapez"
+     id="g3175"
+     inkscape:groupmode="layer">
+    <path
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 152.79016,108.0105 -18.58032,0 10,-21.580316 18.58032,10e-7 z"
+       id="path3181"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g3183"
+     inkscape:label="chararrowright"
+     style="display:inline">
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3191"
+       d="m 137,91.999998 17,0 0,11.000002 -17,0 z"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999994;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999994;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 149.5,86.650757 162.34924,97.499999 149.5,108.34924 z"
+       id="path3193"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>
