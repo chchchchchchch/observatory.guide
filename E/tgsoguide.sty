@@ -23,7 +23,7 @@
 
   % https://groups.google.com/forum/#!topic/pandoc-discuss/_tssxEsT0eg
   \usepackage{enumerate}
-  \usepackage{enumitem}
+  \usepackage[shortlabels]{enumitem}
   \usepackage{afterpage}
   \usepackage{etoolbox}
   \usepackage{marginnote}
@@ -185,8 +185,10 @@
 %              \selectfont{%
 %               \relscale{.95}{##1}}}}
 
-   \renewcommand\urlsplit[1]{\seqsplit{\tt\tiny ##1}}
-   \renewcommand\urlf[1]{{\scalefont{.8}\tt ##1}}
+  \renewcommand\urlsplit[1]{\seqsplit{\tt\tiny ##1}}
+  \renewcommand\urlf[1]{{\scalefont{.8}\tt ##1}}
+  \newcommand{\http}[1]{\textcolor{red}{#1}XX} % STILL TESTING
+
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
@@ -264,6 +266,7 @@
 % --------------------------------------------------------------------------- %
 
   \setitemize[0]{leftmargin=4pt,rightmargin=4pt} % (P:enumitem)
+  \setlist[enumerate]{leftmargin=1.2em}
   \setlist{noitemsep} % (P:enumitem)
 
 % --------------------------------------------------------------------------- %
@@ -273,6 +276,13 @@
   \renewcommand{\kwa}{\bfseries}
   \renewcommand{\kwb}{\kwa}
   \renewcommand{\kwc}{}
+
+  \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
+  \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
+  \newcommand{\symtrapez}{\grafikinline{\iconchartrapez}{}}
+  \newcommand{\symarrowright}{\grafikinline{\iconchararrowright}{}}
+
+  \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
 
   \newcommand{\lstsetCode}[1]{%
   \lstset{ %
@@ -294,6 +304,13 @@
     aboveskip=1em, 
     xleftmargin=0cm, 
     upquote=true, 
+  % https://tex.stackexchange.com/a/24532
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={▭}{{\symrect}}1 
+             {♢ }{{\symrhombus}}1 
+             {⏢}{{\symtrapez}}1 
+             {→}{{\symarrowright}}1,
     escapechar=° 
    }\renewcommand{\emptylinelst}{\vspace{-1\baselineskip}
                                 \vfill\pagebreak[0]}
@@ -314,7 +331,8 @@
    }
 
 
-  \newcommand{\lstReset}{\lstset{language={}}}
+  \newcommand{\lstReset}{\lstset{language={}}
+                         \renewcommand{\emptylinelst}{\vspace{.5\baselineskip}}}
   \newcommand{\lstsetBash}{\lstset{language=Bash+,
                morekeywords = [2]{write2src,getFile,
                                   mkqr,getVerbatim

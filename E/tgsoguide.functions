@@ -123,7 +123,7 @@ function SEEHERE() {
 
   SRCHREF=`echo $SRCBASE | sed 's/^[ ]*//'` # LINK TO SRC, EASIFY EDIT
 
-  IDX=`echo "$*" | sed 's/ //g' | md5sum | cut -c 1-8`
+  IDX=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
   SEEID=`echo ${IDX} | md5sum | cut -d " " -f 1 | #
          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
 
@@ -156,7 +156,7 @@ function SEEHERE() {
 
 function SEEALSO() {
 
-  IDA=`echo "$*" | sed 's/ //g' | md5sum | cut -c 1-8`
+  IDA=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
   SEAID=`echo ${IDA} | md5sum | cut -d " " -f 1 | #
          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
   echo "${SEAID}:3:$*" >> ${TMPID}.index
@@ -168,15 +168,15 @@ function RELATESTO() {
 
   if [ `echo $* | sed 's/ //g' | wc -c` -gt 1 ];then
 
-        IDR=`echo $* | sed 's/ //g' | md5sum | cut -c 1-8`
-        RELID=`echo ${IDR} | md5sum | cut -d " " -f 1 | #
-               base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
+   IDR=`echo $* | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
+   RELID=`echo ${IDR} | md5sum | cut -d " " -f 1 | #
+          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
 
-        if [ "$OUTPUTFORMAT" == pdf ];then 
-               write2src "\descriptorrelates{$RELID}{TTTTITLE}" 
-        elif [ "$OUTPUTFORMAT" == html ];then 
-               sleep 0
-        fi
+   if [ "$OUTPUTFORMAT" == pdf ];then 
+          write2src "\descriptorrelates{$RELID}{TTTTITLE}" 
+   elif [ "$OUTPUTFORMAT" == html ];then 
+          sleep 0
+   fi
   fi
 
 }
@@ -930,6 +930,9 @@ function TODO() {
    sed -i 's/\\begin{lstlisting}/\\begin{plain}{}/' $SRCDUMP
    sed -i 's/{lstlisting}/{plain}/'                 $SRCDUMP
 
+ # WRAP URLS IN COMMAND
+   sed -i 's,\bhttp.\?://[^ ]*,\\http{&},' $SRCDUMP
+
   }
 
  # ------------------------------------------------------------------------- #
@@ -950,7 +953,7 @@ function TODO() {
  # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
-function SXHOW() {
+function SHOW() {
      sleep 0
 }
 
