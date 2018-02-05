@@ -9,10 +9,13 @@
 % URGENCY:  Side Channel attacks are possible by disregarding the abstraction of software into pure logic: the physical effects of the running of the software become backdoors to observe its functioning, both threatening the control of processes and the re-affirming the materiality of software.
 % NOTE:
 % WARNING: **engineers are good guys!**       
+
 % EXAMPLE: - 
 
-% SHOW: https://www.tek.com/sites/default/files/media/image/119-4146-00%20Near%20Field%20Probe%20Set.png.jpg
-% SHOW: http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3377
+% https://www.tek.com/sites/default/files/media/image/119-4146-00%20Near%20Field%20Probe%20Set.png.jpg
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3377
+
+% SHOW: ../../E/tgsoimages.svg sidechannelanalysis
 
 % RELATESTO:
 % SOURCE:

@@ -4,8 +4,6 @@
 % notes on the process: http://pad.constantvzw.org/p/observatory.methods
 % https://pad.constantvzw.org/p/observatory.bib
 
-% TOC:
-
 
 % INTRODUCTION
 % ------------
@@ -21,9 +19,12 @@
 %!SEEHERE: http://pad.constantvzw.org/p/observatory.guide.essentials
 
 
+% TOC:
+
+
 % GROUPING: Close encounters -- Meetings between people, software and hardware
 % ==========================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers
+%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers
 
 % Encounter several collections of historical hardware back-to-back
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.visit
@@ -137,7 +138,7 @@
 % Compiling a constellation of <PRODUCTIVITY>-Wares
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.silvio
 
-% APPENDIXES
+% APPENDIXES:
 % ===============================
 % How humans and machines negotiate the experience of time
 % NEWPAGE:

@@ -73,6 +73,7 @@ update floor indicator
 % http://observatory.constantvzw.org/documents/joseph/flowchart.svg
 % TODO: include Images from performance?
 
+% SHOW: tgosimages.svg doingelevator
 
 % RELATESTO:
 % SOURCE: Developed by Joseph Knierzinger, Michaela Lakova + Other Members of the SSOGY Group

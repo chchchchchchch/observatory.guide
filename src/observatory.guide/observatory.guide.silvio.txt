@@ -94,6 +94,8 @@ Nannyware is a form of Content-control software: software designed to restrict o
 % ![](https://pbs.twimg.com/media/C6oKTduWcAEruIE.jpg:large)
 
 
+% SHOW: tgsoimages.svg nannyware
+
 % RELATESTO:
 
 % SOURCE: Silvio Lorusso

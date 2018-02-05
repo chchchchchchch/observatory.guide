@@ -46,7 +46,8 @@
 % LINK TO PDF PAGES 5-10
 % https://mfr.osf.io/render?url=https://osf.io/ufdvb/?action=download%26direct%26mode=render&initialWidth=450&childId=mfrIframe
 
-% PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf 5-9 2x2
+% PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf   5 1x1
+% PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf 6-9 2x2
 % PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf  10 1x1
 
 % EDITED TEXT STARTS
@@ -95,7 +96,7 @@ Now to finish this session, let's do a sprint together in the corridor !
 % ![]( http://observatory.constantvzw.org/guide/agileyoga/8-Poses-Yoga-Your-Desk.contours.png )
 % ![]( http://observatory.constantvzw.org/guide/agileyoga/gayolab-office-chair-for-yoga.contours.png )
 
-
+% SHOW: tgsoimages.svg agileyoga
 
 % RELATESTO:
 % SOURCE: Developed by: Anne Laforet, performed by: Allegra

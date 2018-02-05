@@ -7,7 +7,8 @@
 > mere matter-of-fact apprehension of reality--or whatever it is
 > you want to call what we apprehend merely and matter-of-factly--and down-to-earth,
 > colloquial wisdom, judgements, and assessments of it.
-% Clifford Geertz, "Common Sense as a Cultural System," Local Knowledge: Further Essays in Interpretive Anthropology, Basic Books, 1983 [[or find a quote from Addicted by Design]]
+> [@geertz:1975:commonsense]
+
 
 % WHAT: Observe and catalog the common gestures, common comportments, and common sense(s) surrounding software.
 % HOW: This can be done through observation of yourself or others. Separate the apprehended and matter of fact from the meanings, actions, reactions, judgements, and assessments that the apprehension occasions. Step 1: Begin by assembling a list of questions such as: When you see a software application icon what are you most likely to do? When a software application you are using presents you with a user agreement what are you most likely to do? When a software applciation does something that frustrates you what are you most likely to do? When a software application you are using crashes what are you most likely to do? Step 2: Write down your responses and the responses of any subjects you are observing. Step 3: For each question, think up three other possible responses. Write these down. Step 4: (this step is only for the very curious) Try the other possible responses out the next time you encounter each of the given scenarios.

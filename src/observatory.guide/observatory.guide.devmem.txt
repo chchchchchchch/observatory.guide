@@ -47,8 +47,8 @@ You can open it as a raw image, you can play it as a sound or perhaps send it di
     
 % EXAMPLE: - 
 % ![Binary visualization example]( http://observatory.constantvzw.org/images/Screenshot_from_2017-06-07_164407.png)
-% TODO: SHOW: tgsoimages.svg binvis
-% TODO: % BOX: Forensic and debuggung tools can be used to explore and problematize the layers of abstraction of computing. 
+% SHOW: tgsoimages.svg binvis
+% BOX: Forensic and debuggung tools can be used to explore and problematize the layers of abstraction of computing. 
     
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.monopsychism

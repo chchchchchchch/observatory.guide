@@ -41,13 +41,11 @@ I do want you to be comfortable.
 % http://observatory.constantvzw.org/documents/mia/FullSizeRender%2811%29.jpg
 % http://observatory.constantvzw.org/documents/mia/IMG_5695.JPG
 % http://observatory.constantvzw.org/documents/mia/IMG_5698.JPG
-% TODO: % SHOW: tgsoimages.svg fountainrefreshment
-
+% SHOW: tgsoimages.svg fountainrefreshment N
 
 
 % RELATESTO:
-% SOURCE: Mia Melvaer
-% http://www.miamelvaer.com/technogalactic
+% SOURCE: Mia Melvaer http://www.miamelvaer.com/technogalactic
 
 
 

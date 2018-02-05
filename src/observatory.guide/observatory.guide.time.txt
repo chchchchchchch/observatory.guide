@@ -62,7 +62,8 @@ UNIX time + 1
 
 http://observatory.constantvzw.org/etherdump/ends-of-time.html
 
-% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.timepiece
-% RELATESTO:  http://pad.constantvzw.org/p/observatory.guide.scrollresistance
+
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.experiencingtime
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.scrollresistance
 % SOURCE:
 

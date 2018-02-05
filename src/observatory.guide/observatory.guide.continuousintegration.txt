@@ -20,10 +20,12 @@ Load balancing meant that software curious persons were forwarded to services th
 
 % WARNING: At TGSO the bundling of different functionalities into the continuous integration service broke the "do one thing well" principle, but saved the day (we register this as technical debt for the next iteration of the walk-in clinic).
 
-% SEEALSO:
+% RELATESTO:
 % SOURCE: While continous integration held the day together, we are sorry to report that her work is only documented in images and in the choreography of the day but not in any of our writings. 
 % REMEMBER: Continous integration may be the string that holds your current software galaxy together.
 
-% Software Curious Person expressing her hopes for Continuous Integration
-"More technically, I am interested in how things bounce around in computer systems. I am not sure if these two things are relted, but I hope continuous integration will help me."
+> More technically, I am interested in how things bounce around in
+> computer systems. I am not sure if these two things are relted,
+> but I hope continuous integration will help me.
+> [^]{Software Curious Person expressing her hopes for Continuous Integration}
 

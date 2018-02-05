@@ -19,12 +19,13 @@ Department of Computer sciences - Kul Leuven.
 % [a few quotes to the interview transcription go here, interview in appendix]
 
 
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3350
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3361
-% TODO: % SHOW: tgsoimages.svg kuleuven1
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3356
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3343
-% TODO: % SHOW: tgsoimages.svg kuleuven2
+% SHOW: tgsoimages.svg kuleuven2
+
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3350
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3361
+% SHOW: tgsoimages.svg kuleuven1
 
 
 % RELATESTO:

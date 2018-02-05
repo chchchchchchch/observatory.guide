@@ -12,7 +12,7 @@
 % SOURCE: By/history/source/origin/process: the "original testbed" was proposed by researchers/collaborators at Princeton University. Testing this testbed at a local Constant workshop led to the meta-project on testing software meant for testing software.
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.bestiary
-% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.sitmm
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.somethinginthemiddlemaybe
 
 
 % - don't start with source

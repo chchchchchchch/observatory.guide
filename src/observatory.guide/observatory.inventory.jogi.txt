@@ -100,7 +100,6 @@ unwanted side effect, but so far there is no obvious reason for what
 had happened.
 </md>
 -- 
-J.Hofmüller
-
-           http://thesix.mur.at/
+J.Hofmüller     
+`http://thesix.mur.at/`
 
