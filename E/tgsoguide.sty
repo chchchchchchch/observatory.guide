@@ -128,7 +128,7 @@
 %                          {\fontfamily{\ttzwo}%
 %                             \selectfont %
 %                              \seqsplit{#1}} %
-                         \fi}
+%                         \fi}
    \newcommand{\http}[1]{{\fontfamily{\ttzwo}%
                            \selectfont\seqsplit{#1}}} %
 
@@ -211,13 +211,13 @@
  %\renewcommand\subsubsection[1]{\newpage\Subsubsection*{#1}}
 
   \let\Chapter\chapter
-  \renewcommand\chapter[1]{\needspace{4}\textbf{#1}}
+  \renewcommand\chapter[1]{\Chapter*{#1}}
   \let\Section\section
-  \renewcommand\section[1]{\needspace{4}\textbf{#1}}
+  \renewcommand\section[1]{\Section*{#1}}
   \let\Subsection\subsection
-  \renewcommand\subsection[1]{\needspace{4}\textbf{#1}}
+  \renewcommand\subsection[1]{\Subsection*{#1}}
   \let\Subsubsection\subsubsection
-  \renewcommand\subsubsection[1]{\needspace{4}\textbf{#1}}
+  \renewcommand\subsubsection[1]{\Subsubsection*{#1}}
 
 
 % --------------------------------------------------------------------------- % 

@@ -931,8 +931,8 @@ function TODO() {
    sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
 
  # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
-   sed -i 's/\\begin{lstlisting}/\\begin{plain}{}/' $SRCDUMP
-   sed -i 's/{lstlisting}/{plain}/'                 $SRCDUMP
+   sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
+   sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
 
  # WRAP URLS IN COMMAND
    sed -i 's,\bhttp.\?://[^ ]*,\\http{&},' $SRCDUMP
