@@ -48,8 +48,16 @@ http://pad.constantvzw.org/p/observatory.guide.testingtestbed/export/txt        
 http://pad.constantvzw.org/p/observatory.guide.reader/export/txt                     -> observatory.guide.reader.txt
 http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/txt           -> observatory.guide.experiencingtime.txt
 http://pad.constantvzw.org/p/observatory.guide.colophon/export/txt                   -> observatory.guide.colophon.txt
-
 http://pad.constantvzw.org/p/observatory.inventory.jogi/export/txt                   -> observatory.inventory.jogi.txt
+
+http://pad.constantvzw.org/p/observatory.guide.flowchart/export/txt                  -> observatory.guide.flowchart.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers/export/txt  -> observatory.guide.grouping.closeencounteers.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/txt       -> observatory.guide.grouping.temporality.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/txt        -> observatory.guide.grouping.languaging.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.healing/export/txt           -> observatory.guide.grouping.healing.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.flows/export/txt             -> observatory.guide.grouping.flows.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle/export/txt      -> observatory.guide.grouping.inthemidddle.txt
+http://pad.constantvzw.org/p/observatory.guide.grouping.collections/export/txt       -> observatory.guide.grouping.collections.txt
 
 
 % BACKUP PADS -----------------------------------
@@ -92,4 +100,13 @@ http://pad.constantvzw.org/p/observatory.guide.reader/export/etherpad           
 http://pad.constantvzw.org/p/observatory.guide.colophon/export/etherpad                   -> observatory.guide.colophon.ep
 http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/etherpad           -> observatory.guide.experiencingtime.ep
 http://pad.constantvzw.org/p/observatory.inventory.jogi/export/etherpad                   -> observatory.inventory.jogi.ep
+
+http://pad.constantvzw.org/p/observatory.guide.flowchart/export/etherpad                  -> observatory.guide.flowchart.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers/export/etherpad  -> observatory.guide.grouping.closeencounteers.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/etherpad       -> observatory.guide.grouping.temporality.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/etherpad        -> observatory.guide.grouping.languaging.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.healing/export/etherpad           -> observatory.guide.grouping.healing.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.flows/export/etherpad             -> observatory.guide.grouping.flows.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle/export/etherpad      -> observatory.guide.grouping.inthemidddle.ep
+http://pad.constantvzw.org/p/observatory.guide.grouping.collections/export/etherpad       -> observatory.guide.grouping.collections.ep
 
