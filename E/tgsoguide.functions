@@ -764,11 +764,15 @@ function SRCCODE() {
    sed -i 's/^[ \t]*$/°\\emptylinelst°/' ${TMPID}.xtract
    LN=`wc -l ${TMPID}.xtract | cut -d " " -f 1`
  # ------------------------------------------------------------------------ #
+   VERBATIM=${TMPID}.`md5sum ${TMPID}.xtract | cut -c 1-8`.verbatim
+   mv ${TMPID}.xtract $VERBATIM
+
    if [ "$OUTPUTFORMAT" == pdf ];then
 
-      write2src "\begin{$ENVIRONMENT}{$LN}"
-       cat ${TMPID}.xtract >> $SRCDUMP
-      write2src "\end{$ENVIRONMENT}"
+     #write2src "\begin{$ENVIRONMENT}{$LN}"
+     # cat ${TMPID}.xtract >> $SRCDUMP
+     #write2src "\end{$ENVIRONMENT}"
+      write2src "\lstinput${ENVIRONMENT}{$VERBATIM}"
 
    elif [ "$OUTPUTFORMAT" == html ];then
 
@@ -778,7 +782,7 @@ function SRCCODE() {
 
    fi
  # ------------------------------------------------------------------------ #
-   rm ${TMPID}.xtract # CLEAN UP
+ # rm ${TMPID}.xtract # CLEAN UP
 
 }
 
