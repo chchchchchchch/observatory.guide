@@ -70,10 +70,10 @@ file looked like this now:
 00013780: 3a66 616c 7365 7d7d 7d0a                 :false}}}.
 ```
 
-Martino asked about the trailing '.' character and I checked a
-different copy of the file.  No '.' there, so that had to go too.  My
-biggest mistake in a long time!  The '.' we were seeing in Martino's
-copy of the file was in fact a '\n' (0a)!  We did not realize that,
+Martino asked about the trailing '`.`' character and I checked a
+different copy of the file.  No '`.`' there, so that had to go too.  My
+biggest mistake in a long time!  The '`.`' we were seeing in Martino's
+copy of the file was in fact a '`\n`' (`0a`)!  We did not realize that,
 copied the file back to etherbox.local and waited for etherpad to
 resume it's work.  But no luck there, for obvious reasons.
 

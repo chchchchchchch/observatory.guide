@@ -13,7 +13,7 @@
 % EXAMPLE: - 
 
 % INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/9/export/txt 1-7
-% INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/9/export/txt 9-100
+% INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/21/export/txt 9-100
 % INCLUDE: http://pad.constantvzw.org/p/observatory.inventory.jogi/20/export/txt 102-105
 
 
