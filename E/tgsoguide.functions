@@ -697,7 +697,8 @@ function SRCCODE() {
  # ------------------------------------------------------------------------ #
  # CHECK/SET LANGUAGE ARGUMENT
  # ------------------------------------------------------------------------ #
-   ALL="$*";THISCMD="SRCCODE";SRCLANG=`echo $1 | sed 's/ //g'`
+   ALL="$*";THISCMD="SRCCODE";
+   SRCLANG=`echo $1 | sed 's/ //g' | sed 's/[^a-z]//g'`
 
    if [ "$SRCLANG" != "" ];then
          ENVIRONMENT=`grep -ih "newenvironment{$SRCLANG" ${TMPID}*.sty | #
