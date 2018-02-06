@@ -965,7 +965,7 @@ function TODO() {
    sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
 
  # WRAP URLS IN COMMAND
-   sed -i '/^\\!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
+   sed -i '/^[\%]/!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
 
   }
 
