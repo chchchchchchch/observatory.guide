@@ -73,7 +73,10 @@ function INCLUDE() {
 function GROUPING() {
 
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
+               cut -d "-" -f 1 | cut -d " " -f 1 | #
                sed 's/[^a-z]//g'`
+   echo $GROUPINGID >> debug.groupings
+
 
    if [ ! -f ${TMPID}.grouping.pdf ];then
         getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
@@ -702,6 +705,7 @@ function SRCCODE() {
  # CHECK/SET LANGUAGE ARGUMENT
  # ------------------------------------------------------------------------ #
    ALL="$*";THISCMD="SRCCODE";
+   ENVIRONMENT="" # RESET
    SRCLANG=`echo $1 | sed 's/ //g' | sed 's/[^a-z]//g'`
 
    if [ "$SRCLANG" != "" ];then
@@ -895,6 +899,27 @@ function NEWPAGE() {
 
 }
 # --------------------------------------------------------------------------- #
+function QUOTESTYLE() {
+
+  LNBEGIN=`tail -n 80 $SRCDUMP        | # LOOK NOT TO FAR
+           grep -n 'begin{quote}'     | # FIND MATCH
+           tail -n 1 | cut -d ":" -f 1` # TAKE LAST/EXTRACT
+    LNEND=`tail -n 80 $SRCDUMP        | # LOOK NOT TOO FAR
+           grep -n 'end{quote}'       | # FIND MATCH
+           tail -n 1 | cut -d ":" -f 1` # TAKE LAST/EXTRACT
+  STYLE=`echo $* | cut -d " " -f 1 | sed 's/[^a-z]*//g'`
+    ENVIRONENT="" # RESET
+   ENVIRONMENT=`grep -ih "newenvironment{$STYLE" ${TMPID}*.sty | #
+                grep -v "^%" | head -n 1 | #
+                cut -d "{" -f 2 | cut -d "}" -f 1`
+  if [ "$ENVIRONMENT" != "" ] && 
+     [ "$LNBEGIN"     != "" ] &&
+     [ "$LNEND"       != "" ];then
+       sed -i "${LNBEGIN}s/begin{quote}/begin{$ENVIRONMENT}/" $SRCDUMP
+       sed -i "${LNEND}s/end{quote}/end{$ENVIRONMENT}/" $SRCDUMP
+  fi
+}
+# --------------------------------------------------------------------------- #
   # TODO: % TEXIN
   #       % TEXFIX
 
@@ -962,7 +987,7 @@ function TODO() {
  # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
-function SXHOW() {
+function SHOW() {
      sleep 0
 }
 
