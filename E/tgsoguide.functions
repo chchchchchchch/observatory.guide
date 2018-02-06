@@ -899,11 +899,13 @@ function NEWPAGE() {
 # --------------------------------------------------------------------------- #
 function QUOTESTYLE() {
 
-  LNBEGIN=`tail -n 80 $SRCDUMP        | # LOOK NOT TO FAR
-           grep -n 'begin{quote}'     | # FIND MATCH
+  LNBEGIN=`grep -n "" $SRCDUMP        | # NUMBER ALL LINES
+           tail -n 80                 | # LOOK NOT TO FAR
+           grep 'begin{quote}'        | # FIND MATCH
            tail -n 1 | cut -d ":" -f 1` # TAKE LAST/EXTRACT
-    LNEND=`tail -n 80 $SRCDUMP        | # LOOK NOT TOO FAR
-           grep -n 'end{quote}'       | # FIND MATCH
+    LNEND=`grep -n "" $SRCDUMP        | # NUMBER ALL LINES
+           tail -n 80                 | # LOOK NOT TOO FAR
+           grep 'end{quote}'          | # FIND MATCH
            tail -n 1 | cut -d ":" -f 1` # TAKE LAST/EXTRACT
   STYLE=`echo $* | cut -d " " -f 1 | sed 's/[^a-z]*//g'`
     ENVIRONENT="" # RESET
