@@ -48,7 +48,8 @@
 % --------------------------------------------------------------------------- %
 
   % A6
-  \setlength\textheight{.83\paperheight}
+  %\setlength\textheight{.83\paperheight}
+  \setlength\textheight{.81\paperheight}
   \setlength\textwidth{.72\paperwidth}
   \setlength\topmargin{-.16\paperheight}
   \setlength\oddsidemargin{-.05\paperwidth}
@@ -132,10 +133,9 @@
    \newcommand{\http}[1]{{\fontfamily{\ttzwo}%
                            \selectfont\seqsplit{#1}}} %
 
-
  %\raggedright % FLATTERSATZ
+ %\raggedbottom
 
-  \raggedbottom
   % Ohne die folgenden drei Zeilen funktioniert es nur fast:
   \newcommand*\origfootnoterule{}
   \let\origfootnoterule\footnoterule
@@ -755,7 +755,7 @@
    \newcommand{\descriptorlabel}[1]{%
               {\scalefont{.75} %
                \fontfamily{cgt}\selectfont %
-               \underline{#1:}\hspace{-.5em}:}\hspace{.75em} %
+               \underline{#1:}\hspace{-.5em}:}\hspace{.25em} %
    }
    \newcommand{\betweendq}{\vspace{-1\parskip}%
                            \vspace{-2pt}%
@@ -884,9 +884,8 @@
                     \end{flushleft} %
       \else % MORE
       \begin{flushleft}
-      \grafikinline{\iconwhatinline}{}%
-      \descriptorlabel{WHAT} %
-                   {#3}\end{flushleft} %
+      \grafikinline{\iconwhatinline}{\hspace{.5em}}%
+      \descriptorlabel{WHAT}{#3}\hspace{-.5em}\end{flushleft} %
       \fi
     \fi
   }
