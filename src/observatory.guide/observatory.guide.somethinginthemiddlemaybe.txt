@@ -77,7 +77,9 @@ Destination Name:    unknown
 Port: Connection Count
  443:   16
 
-% SRCCODE: https://github.com/AlternativeLearningTank/SomethingInTheMiddle/
+% SRCCODE:
+
+% SOURCE: https://github.com/AlternativeLearningTank/SomethingInTheMiddle/
 
 
 % RELATESTO:

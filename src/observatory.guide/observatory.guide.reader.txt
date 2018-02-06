@@ -8,26 +8,38 @@
 % NOTE:
 % WARNING:
 % EXAMPLE: - 
-% ----------
 
-Pull some quotes from the reader, for example from the chapter: Observation and its consequences
+% Pull some quotes from the reader, for example from the chapter: Observation and its consequences
 
-Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015 http://sci-hub.bz/10.1177/0162243915578486
+% Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015
+% http://sci-hub.bz/10.1177/0162243915578486
 
-Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014, https://www.nngroup.com/articles/talking-to-users/
+% Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014,
+% https://www.nngroup.com/articles/talking-to-users/
 
-Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive. 2004 http://texttechnology.mcmaster.ca/pdf/vol13_2_06.pdf
+% Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive. 2004
+% http://texttechnology.mcmaster.ca/pdf/vol13_2_06.pdf
+% PDF: http://observatory.constantvzw.org/books/vol13_2_06.pdf 1-2 1x2
 
-Alexander R. Galloway, The Poverty of Philosophy: Realism and Post-Fordism, Critical Inquiry. 2013, http://cultureandcommunication.org/galloway/pdf/Galloway,%20Poverty%20of%20Philosophy.pdf
-Edward Alcosser, James P. Phillips, Allen M. Wolk, How to Build a Working Digital Computer. Hayden Book Company, 1968. https://archive.org/details/howtobuildaworkingdigitalcomputer_jun67
+% Alexander R. Galloway, The Poverty of Philosophy: Realism and Post-Fordism, Critical Inquiry. 2013,
+% http://cultureandcommunication.org/galloway/pdf/Galloway,%20Poverty%20of%20Philosophy.pdf
 
-Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000. https://library.memoryoftheworld.org/b/xpDrXE_VQeeuDDpc5RrywyTJwbzD8eatYGHKmyT2A_HnIHKb
+% Edward Alcosser, James P. Phillips, Allen M. Wolk, How to Build a Working Digital Computer. Hayden Book Company, 1968.
+% https://archive.org/details/howtobuildaworkingdigitalcomputer_jun67
 
-Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015 www.memcon.com/pdfs/proceedings2015/SAT104_FuturePlus.pdf
+% Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000.
+% https://library.memoryoftheworld.org/b/xpDrXE_VQeeuDDpc5RrywyTJwbzD8eatYGHKmyT2A_HnIHKb
 
-Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015 http://palms.ee.princeton.edu/system/files/SP_vfinal.pdf
+% Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015
+% www.memcon.com/pdfs/proceedings2015/SAT104_FuturePlus.pdf
 
-% SRCCODE: quaverbatim
+% Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015
+% http://palms.ee.princeton.edu/system/files/SP_vfinal.pdf
+
+% Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+% http://observatory.constantvzw.org/books/US395781.pdf
+% PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
+% INFO: Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion

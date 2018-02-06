@@ -24,7 +24,7 @@
 
 % GROUPING: Close encounters -- Meetings between people, software and hardware
 % ==========================
-%!INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers/export/txt
 
 % Encounter several collections of historical hardware back-to-back
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.visit
@@ -44,7 +44,7 @@
 
 % GROUPING: Temporality -- Constellations of time and locality
 % =====================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.temporality
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/txt
 
 % Fountain refreshment
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.fountain
@@ -60,7 +60,7 @@
 
 % GROUPING: Languaging -- Observing software as/through writing
 % ====================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.languaging
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/txt
 
 % Quine
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.quine
@@ -77,7 +77,7 @@
 % GROUPING: Healing and embodiment -- Feeling software
 % !! mm + FS + Anice merged chapters on healing and embodiment
 % =================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.healing
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.healing/export/txt
 
 % Setup a Relational software observatory consultancy
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.relational
@@ -95,7 +95,7 @@
 
 % GROUPING: Flows -- Flow-regulation, logistics and seamlessness
 % ==================================================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.flows
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.flows/export/txt
 
 % Continuous Integration
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.continuousintegration
@@ -104,14 +104,14 @@
 % make make do /CHRISTOPH/
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.pipeline
 % Flowcharts (Flow of the chart – chart of the flow on demand!)
-%!SEEHERE: https://pad.constantvzw.org/p/observatory.guide.flowchart
+% SEEHERE: https://pad.constantvzw.org/p/observatory.guide.flowchart
 % What is it like to be <AN ELEVATOR>? (see under: Beingontheside/inthemiddle/behind)
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.whatisitliketobeanelevator
 
 
 % GROUPING: Invasive observations -- Being on the side, in the middle or behind
 % ===========================================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle/export/txt
 
 % somethinginthemiddlemaybe
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.somethinginthemiddlemaybe
@@ -123,7 +123,7 @@
 
 % GROUPING: Collections -- Compiling observations
 % ==================================
-% http://pad.constantvzw.org/p/observatory.guide.grouping.collections
+% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.collections/export/txt
 
 % Compiling a bestiary of software logos
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.bestiary

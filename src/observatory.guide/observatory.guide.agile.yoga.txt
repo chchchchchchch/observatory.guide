@@ -50,6 +50,12 @@
 % PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf 6-9 2x2
 % PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf  10 1x1
 
+
+% ![]( http://observatory.constantvzw.org/guide/agileyoga/8-Poses-Yoga-Your-Desk.contours.png )
+% ![]( http://observatory.constantvzw.org/guide/agileyoga/gayolab-office-chair-for-yoga.contours.png )
+
+% SHOW: tgsoimages.svg agileyoga
+
 % EDITED TEXT STARTS
 
 Hello and welcome to the presentation of the agile yoga methodology. I am Allegra, and today I'm going to be your personal guide to YOGA, an acronym for why organize? Go agile! I'll be part of your team today and we'll do a few exercises together as an introduction to a new path into your professional and personal life towards creativity, focus and health.
@@ -92,11 +98,6 @@ and then the second movement thinking about the fourth and last mantra : Respond
 Now to finish this session, let's do a sprint together in the corridor !
 
 % EDITED TEXT ENDS
-
-% ![]( http://observatory.constantvzw.org/guide/agileyoga/8-Poses-Yoga-Your-Desk.contours.png )
-% ![]( http://observatory.constantvzw.org/guide/agileyoga/gayolab-office-chair-for-yoga.contours.png )
-
-% SHOW: tgsoimages.svg agileyoga
 
 % RELATESTO:
 % SOURCE: Developed by: Anne Laforet, performed by: Allegra

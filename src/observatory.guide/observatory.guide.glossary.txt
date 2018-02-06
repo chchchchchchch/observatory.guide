@@ -47,7 +47,7 @@ Test
 Warning
 WhiteBoard
 Yoga
-% SRCCODE:
+% SRCCODE: bash
 
 
 % RELATESTO:
