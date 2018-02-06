@@ -73,7 +73,7 @@ function INCLUDE() {
 function GROUPING() {
 
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
-               cut -d "-" -f 1 | cut -d " " -f 1 | #
+               cut -d "-" -f 1 | sed 's/ //g' | #
                sed 's/[^a-z]//g'`
 
    if [ ! -f ${TMPID}.grouping.pdf ];then
@@ -92,14 +92,12 @@ function GROUPING() {
    echo "${GID}:$*"   >> ${TMPID}.toc
    echo "${GID}:1:$*" >> ${TMPID}.index
 
-
    if [ `echo $PAGENUM | wc -c` -gt 1 ];then
          PDFCMD="\cleartoleft \
                  \pdfpageplus{${TMPID}grouping.pdf}{$PAGENUM}{}{\label{$GID}}"
    else
          PDFCMD="\grouping{$*\label{$GID}}"
    fi
-
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
   
@@ -942,10 +940,17 @@ function TODO() {
  # ---- 
    sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*quote.*\)/\1\2/ }" \
           $SRCDUMP
-
  # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
  # ----
    sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
+          $SRCDUMP
+ # APPEND LINE CONTAIN *enumerate* IF AFTER ^\descriptor
+ # ---- 
+   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
+          $SRCDUMP
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
+ # ----
+   sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
           $SRCDUMP
 
  # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
@@ -987,7 +992,7 @@ function TODO() {
  # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
-function SHOW() {
+function SXHOW() {
      sleep 0
 }
 
