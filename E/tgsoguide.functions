@@ -75,8 +75,6 @@ function GROUPING() {
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
                cut -d "-" -f 1 | cut -d " " -f 1 | #
                sed 's/[^a-z]//g'`
-   echo $GROUPINGID >> debug.groupings
-
 
    if [ ! -f ${TMPID}.grouping.pdf ];then
         getFile $INCLUDEPATH/tgsogroupings.svg ${TMPID}.grouping.svg
@@ -965,7 +963,7 @@ function TODO() {
    sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
 
  # WRAP URLS IN COMMAND
-   sed -i 's,\bhttp.\?://[^ ]*,\\http{&},' $SRCDUMP
+   sed -i '/^\\!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
 
   }
 
