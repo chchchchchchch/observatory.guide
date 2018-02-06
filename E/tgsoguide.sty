@@ -739,23 +739,20 @@
  % VERTICAL SPACE HACK
  % http://tex.stackexchange.com/questions/61627/
  % -> prevent-action-if-top-of-page
-   \newcommand\vspacenotonpagetop[1]{%
-      \par % make sure we end a paragraph
-      \vskip#1 % space above the rule
-      \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
-      \nointerlineskip % disable interline glue here
-      \vskip#1 % space below the rule
-   }
+ % \newcommand\vspacenotonpagetop[1]{%
+ %    \par % make sure we end a paragraph
+ %    \vskip#1 % space above the rule
+ %    \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
+ %    \nointerlineskip % disable interline glue here
+ %    \vskip#1 % space below the rule
+ % }
  % ------------------------------------------------------------------------- %
    \newlength{\abovedescriptor}
    \setlength{\abovedescriptor}{10pt plus 4pt minus 4pt}
-  %\newcommand{\descriptorskip}{\vspace{\abovedescriptor}}
-%  \newcommand{\descriptorskip}{ %
-%  %\fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
-%   \fbox{\parbox[c][\abovedescriptor][s]{\textwidth}{...}} %
-%  }
+  %\newcommand{\descriptorskip}{\pagebreak[0]%
+  %                             \vspace*{\abovedescriptor}}
    \newcommand{\descriptorskip}{\pagebreak[0]%
-                                \vspacenotonpagetop{\abovedescriptor}}
+                                \vspace{\abovedescriptor}}
    \newcommand{\descriptorlabel}[1]{%
               {\scalefont{.75} %
                \fontfamily{cgt}\selectfont %
