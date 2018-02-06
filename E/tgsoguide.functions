@@ -475,7 +475,7 @@ function SHOW() {
         # CHECK/EXTRACT CAPTION
         # ---------------------------------------------- #
         # GET LN NUM FOR CMD IN (UNPROCESSED) MDSH SRC
-          LNCMD=`grep -n "^% SHOW:$*" $MDSH | # FIND CMD LINE
+          LNCMD=`grep -n "^% SHOW: $*" $MDSH | # FIND CMD LINE
                  head -n 1 | cut -d ":" -f 1` # SELECT FIRST MATCH
         # ----
         # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
@@ -484,10 +484,12 @@ function SHOW() {
           sed -i "${LNCMD}s/^% SHOW:/%${T}SHOW:/" $MDSH
         # ----
         # EXTRACT CAPTION FOR TAGGED '% SHOW'
-          CAPTION=`grep -A 1 "%${T}SHOW:$*" $MDSH | #
-                   grep "^% INFO:" | cut -d ":" -f 2- | #
-                   $PANDOCACTION   | # DISPLAY/TRANSLATE
-                   sed 's,</*p>,,g'` # REMOVE <P> TAGS
+          CAPTION=`grep -A 1 "%${T}SHOW: $*" $MDSH | # FIND CMD + CONTEXT
+                   grep "^% INFO:"                 | # GET INFO
+                    head -n 1                      | # ONLY FIRST
+                   cut -d ":" -f 2-                | # CUT INFO
+                   $PANDOCACTION                   | # DISPLAY/TRANSLATE
+                   sed 's,</*p>,,g'`                 # REMOVE <P> TAGS
 
         # KEEP ON GOING (IF SUCCESSFUL)                  #
         # ---------------------------------------------- #
@@ -656,13 +658,15 @@ function PDF() {
    # CHECK/EXTRACT CAPTION
    # ------------------------------------------------ #
      CAPTION="" # RESET
-     CAPTION=`grep -A 1 "% PDF:$*" $MDSH | #
-              grep "^% INFO:" | cut -d ":" -f 2- | #
-              $PANDOCACTION   | # DISPLAY/TRANSLATE
-              sed 's,</*p>,,g'` # REMOVE <P> TAGS
+     CAPTION=`grep -A 1 "% PDF: $*" $MDSH | # FIND CMD + CONTEXT
+              grep "^% INFO:"             | # GET INFO
+              head -n 1                   | # ONLY FIRST
+              cut -d ":" -f 2-            | # CUT INFO
+              $PANDOCACTION               | # DISPLAY/TRANSLATE
+              sed 's,</*p>,,g'`             # REMOVE <P> TAGS
    # DISABLE CAPTION
    # ------------------------------------------------ #
-     LNCMD=`grep -n "^% PDF:$*" $MDSH | # FIND CMD LINE
+     LNCMD=`grep -n "^% PDF: $*" $MDSH | # FIND CMD LINE
             head -n 1 | cut -d ":" -f 1` # SELECT LAST MATCH
      sed -i "${LNCMD}s/^% PDF:/%X${THISCMD}:/" $MDSH
 
@@ -958,7 +962,7 @@ function TODO() {
  # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
-function SHOW() {
+function SXHOW() {
      sleep 0
 }
 
