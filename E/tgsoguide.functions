@@ -1,35 +1,3 @@
-# TODO:
-
-#!% ABOUT
-# % BOX
-# % BY
-# % CSSHERE
-# % EXAMPLE
-# % EXAMPLES
-# % HEADER
-#!% HOW
-#!% INCLUDE
-#!% METHOD
-#!% NOTE
-# % QUAVERBATIM
-# % REMEMBER
-# % SEEALSO
-# % SEEUNDER
-# % SHOW
-# % SOURCE
-# % URGENCY
-# % WARNING
-#!% WHAT
-#!% WHEN
-#!% WHO
-#!% WHY
-
-# % SEEHERE: replaces % INCLUDE:
-# % SEEALSO: replaces % SEEUNDER:
-# % RELATESTO: replaces % SEEALSO:
-
-  PAGEW="314"
-  PAGEH="436"
 
 # --------------------------------------------------------------------------- #
 
@@ -436,13 +404,27 @@ function REMEMBER() {
 
 # --------------------------------------------------------------------------- #
 
-
 function URGENCY() {
   analyseDescriptor URGENCY $*
     buildDescriptor URGENCY $* 
 }
 
 # --------------------------------------------------------------------------- #
+
+function SOURCE() {
+  analyseDescriptor SOURCE $*
+    buildDescriptor SOURCE $* 
+}
+
+# --------------------------------------------------------------------------- #
+
+function BOX() {
+  analyseDescriptor BOX $*
+    buildDescriptor BOX $* 
+}
+
+# --------------------------------------------------------------------------- #
+  PAGEW="314";PAGEH="436"
 
 function SHOW() {
 

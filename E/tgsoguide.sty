@@ -266,8 +266,10 @@
   % \AtBeginEnvironment{quote}{\AtBeginQuote}
 
   \newenvironment{introquote}{%
+   \begin{flushleft}
     \color{red}
-  }{}
+  }{\end{flushleft}}
+
 
 
 % --------------------------------------------------------------------------- %
@@ -803,15 +805,13 @@
            \begin{flushleft}
            \grafikinline{\iconexampleinline}{\hspace{.3em}}%
            \descriptorlabel{EXAMPLE} %
-           {\hspace{-.4em}\underline{#3}} %
-                         \end{flushleft} %
+              \hspace{-.4em}#3\end{flushleft} %
            \vspace{-.2\medskipamount}
            \else % MORE
            \begin{flushleft}
-           \grafikinline{\iconexampleinline}{}%
-           \descriptorlabel{EXAMPLE} %
-                        {\color{red}#3} %
-                         \end{flushleft} %
+          \grafikinline{\iconexampleinline}{\hspace{.3em}}%
+          \descriptorlabel{EXAMPLE} %
+             \hspace{-.4em}{#3}\end{flushleft} %
            \vspace{-.2\medskipamount}
            \fi
           \else
@@ -993,5 +993,16 @@
    \end{flushleft}
   }
 
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorsource[3]{%
+  \descriptorskip
+  \descriptorlabel{SOURCE}\hspace{-.3em} #3
+  }
+% ------------------------------------------------------------------------- %
+  \newcommand\descriptorbox[3]{%
+   \begin{framed}
+    \smallskip #3
+     \end{framed}
+  }
 % ------------------------------------------------------------------------- %
 
