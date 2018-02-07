@@ -731,9 +731,10 @@
                \fontfamily{cgt}\selectfont %
                \underline{#1:}\hspace{-.5em}:}\hspace{.25em} %
    }
-   \newcommand{\betweendq}{\vspace{-1\parskip}%
-                           \vspace{-2pt}%
-                           \vspace{-1\baselineskip}}
+  % \vspace{} IS DELETED AT AT THE TOP OF A PAGE \vspace*{} IS NOT !!
+   \newcommand{\betweendq}{\vspace*{-1\parskip}%
+                           \vspace*{-2pt}%
+                           \vspace*{-1\baselineskip}}
 
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %
@@ -941,14 +942,12 @@
       \vfill
        \descriptorskip
         \medskip
-      \begin{samepage}
         \grafikinline{\iconwarningmargin}{}%
          \vspace{-2\parskip}
          \begin{framed}
            \descriptorlabel{WARNING} #3 %
             \smallskip
            \end{framed}
-       \end{samepage}
         \medskip\vfill
    \fi
   }
