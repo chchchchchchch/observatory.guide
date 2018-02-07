@@ -282,21 +282,24 @@
 % C O D E   E N V I R O N M E N T S
 % --------------------------------------------------------------------------- %
 
-  \renewcommand{\kwa}{\bfseries}
-  \renewcommand{\kwb}{\kwa}
-  \renewcommand{\kwc}{}
-
   \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
   \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
   \newcommand{\symtrapez}{\grafikinline{\iconchartrapez}{}}
   \newcommand{\symarrowright}{\grafikinline{\iconchararrowright}{}}
+  \newcommand{\symarrowleft}{\grafikinline{\iconchararrowleft}{}}
 
   \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
+
+
+  \renewcommand{\kwa}{\bfseries}
+  \renewcommand{\kwb}{\kwa}
+  \renewcommand{\kwc}{}
 
   \newcommand{\lstsetCode}[1]{%
   \lstset{ %
     basicstyle=\fontencoding{T1}\linespread{#1}
-               \fontfamily{ipm}\selectfont\footnotesize, 
+               \fontfamily{ipm}\selectfont%
+               \footnotesize,
     commentstyle=\scalefont{1}, 
     keywordstyle = \kwa, 
     keywordstyle = [2]{\kwb}, 
@@ -460,37 +463,18 @@
      \includegraphics[height=17\baselineskip]{#1}\hspace{-7.3em}#2} %
   }
 % --------------------------------------------------------------------------- % 
- % \newcommand\anchorinfo[2]{%
- % \begin{figure}[htb] % 
- %    {\footnotesize
- %     \color{black}
- %    {\hspace{-1em}\anchorinlineicon{\iconseeinline} % DEFINED FROM FUNCTIONS
- %     \vspace{-.5\baselineskip} %
- %     \setstretch{1.2} P.\pageref{#2}
- %     \rotatebox{180}{%
- %     \raisebox{-.6\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
- %     {\large\ding{228}}}} #1 \par}}
- % %  \smallskip\vfill
- % \end{figure}
- % }
-  \newcommand\pointright{% 
-      \raisebox{-.1\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
-      {\large\ding{228}}} %
-  }
-  \newcommand\pointleft{% 
-      \raisebox{-.6\baselineskip}[.8\baselineskip][.8\baselineskip]{ %
-      {\large\ding{228}}} %
-  }
-
   \newcommand\anchorinfo[2]{%
   \begin{figure}[htb] % 
      {\grafikinline{\iconseeinline} % DEFINED FROM MDSH FUNCTIONS
-                   {\hspace{-3em}} %
+                   {\hspace{.5em}} %
+      \symarrowleft
      {\footnotesize %
       \vspace{-.5\baselineskip} %
-      \setstretch{1.2} P.\pageref{#2}
-      \rotatebox{180}{%
-      \pointleft} #1 \par}}
+      \hspace{4em} P.\pageref{#2} 
+      \hspace{1.0em} 
+      \symarrowleft 
+      \setstretch{1.2} 
+      \hspace{2.5em} #1\par}}
   \end{figure}
   }
 
@@ -543,19 +527,6 @@
   % https://tex.stackexchange.com/questions/111393/
   % -> too-much-space-around-wrap-figure
   \setlength{\intextsep}{.1\baselineskip}
-
-% \newcommand{\imgsmall}[3]{
-%  \begin{wrapfigure}{I}{.25\textwidth}%
-%    \includegraphics[width=.25\textwidth]{#1}
-%      \if\relax\detokenize{#2}\relax
-%        \else \footnotemark 
-%        \vspace{-1\baselineskip}
-%      \fi
-%  \end{wrapfigure}
-%  \vfill
-%     \if\relax\detokenize{#2}\relax
-%     \else \footnotetext{#2} \fi
-% }
 
   \newcommand{\imgsmall}[3]{
    \smallskip
@@ -718,7 +689,7 @@
    \renewcommand{\footnoterule}{\rule{0pt}{0pt}}
    \includepdf[pagecommand={\thispagestyle{fancy}}%
                \label{#5}\pdfpagesplusinfo{#4}{#6},%
-               offset=10 10, delta=5 5,
+               offset=10 20, delta=5 5,
                scale=.75,frame,pages=#2,nup=#3]{#1}
    }
   }
@@ -764,17 +735,6 @@
 
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %
- %  \newcommand\descriptormethod[3]{%
- % 
- %      \vfill
- %       \pagebreak[2]
- %       \bigskip
- %        \begin{flushleft}
- %         \renewcommand\baselinestretch{1.2}
- %          \large\textbf{METHOD:#3}
- %          %\vspace{-1.2\medskipamount}
- %            \end{flushleft}%
- %  }
    \newcommand\descriptormethod[3]{%
   
      \clearpage
@@ -805,21 +765,21 @@
            \ifnum\numexpr#2 < 50 % NOT MUCH
            \begin{flushleft}
            \grafikinline{\iconhowinline}{}%
+           \hspace{.2em} %
            \descriptorlabel{HOW} %
-                        {\color{green}#3} %
-                         \end{flushleft} %
+             {\hspace{-.5em}#3}\end{flushleft} %
            \else % MORE
            \grafikinline{\iconhowinline}{}%
+           \hspace{.2em} %
            \descriptorlabel{HOW} %
-                        {\color{red}#3} %
+             {\hspace{-.5em}#3}\end{flushleft} %
            \fi
           \else
           \begin{flushleft}
-          \grafikinline{\iconhowinline}{}%
+          \grafikinline{\iconhowinline}{} %
+          \hspace{.2em} %
           \descriptorlabel{HOW} %
-                       {\footnotesize
-                        \color{blue}#3} %
-                        \end{flushleft} %
+            {\hspace{-.5em}#3}\end{flushleft} %
           \fi
        \fi
    }
@@ -841,9 +801,9 @@
          \ifnum\numexpr#1 < 3 % DMODE = 2 = INLINE CONTENT
            \ifnum\numexpr#2 < 50 % NOT MUCH
            \begin{flushleft}
-           \grafikinline{\iconexampleinline}{}%
+           \grafikinline{\iconexampleinline}{\hspace{.3em}}%
            \descriptorlabel{EXAMPLE} %
-                        {\underline{#3}} %
+           {\hspace{-.4em}\underline{#3}} %
                          \end{flushleft} %
            \vspace{-.2\medskipamount}
            \else % MORE
@@ -856,9 +816,9 @@
            \fi
           \else
           \begin{flushleft}
-          \grafikinline{\iconexampleinline}{}%
+          \grafikinline{\iconexampleinline}{\hspace{.3em}}%
           \descriptorlabel{EXAMPLE} %
-                       {#3}\end{flushleft} %
+             \hspace{-.4em}{#3}\end{flushleft} %
           \fi
        \fi
    }
@@ -878,10 +838,8 @@
     \else % DMODE = 2 = INLINE CONTENT 
       \ifnum\numexpr#2 < 50 % NOT MUCH
       \begin{flushleft}
-      \grafikinline{\iconwhatinline}{}%
-      \descriptorlabel{WHAT} %
-                   {\color{green}#3} %
-                    \end{flushleft} %
+      \grafikinline{\iconwhatinline}{\hspace{.5em}}%
+      \descriptorlabel{WHAT}{#3}\hspace{-.5em}\end{flushleft} %
       \else % MORE
       \begin{flushleft}
       \grafikinline{\iconwhatinline}{\hspace{.5em}}%
@@ -893,10 +851,10 @@
   \newcommand\descriptorwho[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
+       \grafikinline{\iconwhomargin}{}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{}%
+      \grafikinline{\iconwhoinline}{}%
       \descriptorlabel{WHO} %
                    {\color{green}#3} %
                     \end{flushleft} %
@@ -906,53 +864,40 @@
   \newcommand\descriptorwhy[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
+       \grafikinline{\iconwhyinline}{}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{}%
+      \grafikinline{\iconwhyinline}{}%
       \descriptorlabel{WHY} %
-                   {\color{green}#3} %
-                    \end{flushleft} %
+        {\hspace{-.3em}#3}\end{flushleft} %
     \fi
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorwhen[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%           
+       \grafikinline{\iconwhyinline}{}%           
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{}%
+      \grafikinline{\iconwhyinline}{}%
       \descriptorlabel{WHEN} %
-                   {\color{green}#3} %
-                    \end{flushleft} %
+        {\hspace{-.3em}#3}\end{flushleft} %
     \fi
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorabout[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%           
+       \grafikinline{\iconwhyinline}{}%           
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{}%
+      \grafikinline{\iconwhyinline}{}%
       \descriptorlabel{ABOUT} %
-                   {\color{green}#3} %
-                    \end{flushleft} %
+        {\hspace{-.3em}#3}\end{flushleft} %
     \fi
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorremember[3]{%
-%   \descriptorskip
-%   \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-%      \grafikinline{\icontmpmargin}{}%
-%      \vspace{-1.2\baselineskip}       
-%   \else % DMODE = 2 = INLINE CONTENT 
-%     \begin{flushleft}
-%     \grafikinline{\icontmpinline}{\hspace{-1.5em}}%
-%                  {\color{green}#3} %
-%                   \end{flushleft} %
-%   \fi
    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
     \vfill
      \makebox[\textwidth][s]{\scalefont{2}%
@@ -974,39 +919,80 @@
   \newcommand\descriptorurgency[3]{%
     \descriptorskip
     \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-       \grafikinline{\icontmpmargin}{}%
+       \grafikinline{\iconurgencymargin}{}%
     \else % DMODE = 2 = INLINE CONTENT 
       \begin{flushleft}
-      \grafikinline{\icontmpinline}{}%
-      \descriptorlabel{URGENCY} %
-                   {\color{green}#3} %
+      \grafikinline{\iconurgencyinline}{}%
+      \descriptorlabel{URGENCY} \hspace{-.5em}#3
                     \end{flushleft} %
     \fi
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptornote[3]{%
    \descriptorskip
-   \descriptorlabel{NOTE} #3 %
+   \grafikinline{\iconnote}{}%
+   \hspace{.2em}\descriptorlabel{NOTE}
+   \hspace{-.5em} #3 %
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorwarning[3]{%
    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-   \grafikinline{\iconwarningmargin}{}%
+   \grafikinline{\iconwarninginline}{}%
    \else
       \vfill
        \descriptorskip
         \medskip
+      \begin{samepage}
+        \grafikinline{\iconwarningmargin}{}%
+         \vspace{-2\parskip}
          \begin{framed}
            \descriptorlabel{WARNING} #3 %
             \smallskip
            \end{framed}
+       \end{samepage}
         \medskip\vfill
    \fi
   }
 % ------------------------------------------------------------------------- %
+% \newcommand\descriptorrelates[2]{%
+%  \begin{flushleft}
+%  \grafikinline{\iconseeinline} %
+%               {\hspace{-.5em}} %
+%    \symarrowleft \hspace{2em}
+%    \descriptorlabel{SEE ALSO}\hspace{.5em}%
+%    #2 \mbox{(\hspace{-.5em}
+%              \symarrowright\hspace{2em}
+%              \underline{P.\pageref{#1}} )}\\
+%  \end{flushleft}
+% }
+% \newcommand\descriptorrelates[2]{%
+%  \begin{flushleft}
+%  \grafikinline{\iconseeinline} %
+%               {\hspace{.2em}} %
+%    \descriptorlabel{SEE ALSO}\hspace{.1em}%
+%    #2 
+
+%    \vspace{-1\baselineskip}
+%    \mbox{\hspace{-4em}
+%          \symarrowright\hspace{2em}
+%          \underline{P.\pageref{#1}}}\\
+%    \vspace{-1\parskip}
+%  \end{flushleft}
+% }
   \newcommand\descriptorrelates[2]{%
-   \descriptorlabel{SEE ALSO}\hspace{-.75em}%
-   #2 (\pointright \underline{P.\pageref{#1}} )\\
+   \begin{flushleft}
+   \grafikinline{\iconrelatepages} %
+                {\hspace{0em}} %
+   \raisebox{-1.7\baselineskip}[\baselineskip][\baselineskip]{ %
+   \hspace{-2.5em} %
+    \mbox{{\footnotesize %
+           \symarrowright\hspace{2em} %
+           \underline{P.\pageref{#1}}} %
+    }} %
+   \hspace{-.6em}\vspace{-.7\baselineskip}
+   \descriptorlabel{SEE ALSO}\hspace{-.3em} #2     
+   \end{flushleft}
   }
+
 % ------------------------------------------------------------------------- %
 
