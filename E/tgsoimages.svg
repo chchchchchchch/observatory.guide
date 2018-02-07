@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1517785024/10e05d187564cc6ad51c9ff02306d70e -->
+<!-- CLEANED: 1518027554/9771673572b2fb69e42a592539dae89b -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -331,10 +331,10 @@
        x="41.120373"
        y="125.27625" />
     <path
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 44.677,147.99994 333.30725,0 0,237.66931 -333.30725,0 z"
-       id="path3210"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       id="path3064-36"
+       d="m 12.677,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
+       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
   <g
      style="display:none"
@@ -352,8 +352,8 @@
        y="20.692202" />
     <path
        sodipodi:nodetypes="ccccc"
-       id="path3294"
-       d="m 48.677,25.99994 320.30725,0 0,379.66931 -320.30725,0 z"
+       id="path3064-7"
+       d="m 12.677,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
   <g
@@ -418,16 +418,16 @@
     <image
        xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
        checksum="afd8853015e5738c"
-       width="326.43277"
-       height="183.52879"
+       width="645.51056"
+       height="362.92242"
        id="image3536"
        x="39.772972"
-       y="202.98695" />
+       y="73.290138" />
     <path
-       sodipodi:nodetypes="ccccc"
-       id="path3457"
-       d="m 36.335732,198.4167 333.307248,0 0,192.66931 -333.307248,0 z"
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 775.96875,545.65625 0,-545.65624951171878 -765.34375,0 L 10.625,545.65625 z"
+       id="path3108-3-7-5"
+       sodipodi:nodetypes="ccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -584,6 +584,25 @@
   </g>
   <g
      style="display:none"
+     inkscape:label="blobservation"
+     id="g3122"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3124"
+       d="m -7.323,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
+       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <image
+       y="155.40088"
+       x="6.7656236"
+       id="image3189"
+       xlink:href="../src/images/IMAG1407.jpg"
+       checksum="4606be8efd055f00"
+       height="216.71555"
+       width="381.03833" />
+  </g>
+  <g
+     style="display:none"
      inkscape:label="probdox"
      id="g4458"
      inkscape:groupmode="layer">
@@ -605,7 +624,7 @@
      inkscape:groupmode="layer"
      id="g4552"
      inkscape:label="uigrievink"
-     style="display:inline">
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:2px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
@@ -628,7 +647,7 @@
      inkscape:groupmode="layer"
      id="g4562"
      inkscape:label="doingelevator"
-     style="display:none">
+     style="display:inline">
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 775.96875,545.65625 775.96875,0 10.625,0 l 0,545.65625 z"
