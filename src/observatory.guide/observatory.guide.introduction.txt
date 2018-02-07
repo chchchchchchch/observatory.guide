@@ -36,7 +36,6 @@ You may want to just throw all your devices away, but before you do so, wouldn't
 You may think about retreating to a natural reserve, and live a software free life, but even then, do you think you could manage without talking about your past software troubles.
 And, how about those drawings at the nearby cave, that look eerily similar to an ancient flowchart, you think you can just ignore its poetry?
 
-
 % http://observatory.constantvzw.org/images/friday/P1010328.JPG
 % SHOW: tgsoimages.svg tgsoteam N
 % INFO: Techno-Galactic Software Observation team, WTC Brussels, June 2017
@@ -49,9 +48,9 @@ The first two days of The Techno-Galactic Software Observatory included visits t
 
 The second two days we focused on the space-time dimension of IT development. The way computer programs and operating systems are manufactured changed tremendously through time, and so did its production times and places. From military labs via the mega-corporation cubicles to the open-space freelancer utopia, what ruptures and continuities can be traced in the production, deployment, maintenance and destruction of software? From time-sharing to user-space partitions and containerization, what separations were and are at work? Where and when is software made today?
 
-% SHOW: tgsoimages.svg tgsoview N
+%!SHOW: tgsoimages.svg tgsoview N
 
-
+% Let's have one page with more images
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1399
 % SHOW: tgsoimages.svg scppath
 % INFO: Documenting the path of a Software Curious Person going through the Walk-in Clinic

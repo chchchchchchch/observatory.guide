@@ -67,13 +67,12 @@ update floor indicator
 
 % SRCCODE: quaverbatim
 
-
 % TODO: flowchart
 % http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
 % http://observatory.constantvzw.org/documents/joseph/flowchart.svg
 % TODO: include Images from performance?
 
-% SHOW: tgosimages.svg doingelevator
+% SHOW: tgsoimages.svg doingelevator
 
 % RELATESTO:
 % SOURCE: Developed by Joseph Knierzinger, Michaela Lakova + Other Members of the SSOGY Group

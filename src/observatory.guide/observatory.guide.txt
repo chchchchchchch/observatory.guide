@@ -23,7 +23,7 @@
 
 
 % GROUPING: Close encounters -- Meetings between people, software and hardware
-% ==========================
+% ============================================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers/export/txt
 
 % Encounter several collections of historical hardware back-to-back
@@ -43,7 +43,7 @@
 
 
 % GROUPING: Temporality -- Constellations of time and locality
-% =====================
+% ============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/txt
 
 % Fountain refreshment
@@ -59,7 +59,7 @@
 
 
 % GROUPING: Languaging -- Observing software as/through writing
-% ====================
+% =============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/txt
 
 % Quine
@@ -72,11 +72,12 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.softwarethrough
 % Persist in calling anyone A Software Curious Person
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.everyonescp
-
+% make up mark up
+% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.makeupmarkup
 
 % GROUPING: Healing and embodiment -- Feeling software
 % !! mm + FS + Anice merged chapters on healing and embodiment
-% =================
+% ============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.healing/export/txt
 
 % Setup a Relational software observatory consultancy
@@ -94,7 +95,7 @@
 
 
 % GROUPING: Flows -- Flow-regulation, logistics and seamlessness
-% ==================================================
+% ==============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.flows/export/txt
 
 % Continuous Integration
@@ -110,7 +111,7 @@
 
 
 % GROUPING: Invasive observations -- Being on the side, in the middle or behind
-% ===========================================
+% =============================================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle/export/txt
 
 % somethinginthemiddlemaybe
@@ -122,7 +123,7 @@
 
 
 % GROUPING: Collections -- Compiling observations
-% ==================================
+% ===============================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.collections/export/txt
 
 % Compiling a bestiary of software logos
@@ -144,6 +145,8 @@
 % NEWPAGE:
 % SEEHERE: https://pad.constantvzw.org/p/observatory.guide.experiencingtime
 % Interview with Jean Huens
+% NEWPAGE:
+% SEEHERE: https://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended
 
 % COLOPHON:
 % =========

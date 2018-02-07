@@ -20,9 +20,9 @@ Preserving old hardware in order to observe physical manifestation of software.
 See software here : we did experienced the incredible possibility of actually touching software.
 
 % http://observatory.constantvzw.org/images/wednesday/IMG_20170607_113634_585.jpg
-% SHOW: tgsoimages.svg spaghetticode
+% SHOW: tgsoimages.svg spaghetticode N
 % http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMG_1163.JPG?m=1496916927
-% SHOW: tgsoimages.svg softwareboxes
+% SHOW: tgsoimages.svg softwareboxes N
 
 
 % EXAMPLE: Playing with the binary. Bull cards. Happy operator! Punch card plays.
@@ -30,9 +30,9 @@ See software here : we did experienced the incredible possibility of actually to
 "The highlight of the collection is to revive a real punch card workshop of the 1960s."
 
 % http://observatory.constantvzw.org/images/wednesday/P1040696.JPG
-% SHOW: tgsoimages.svg punchcard
+% SHOW: tgsoimages.svg punchcard N
 % http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMG_1131.JPG?m=1496916914
-% SHOW: tgsoimages.svg bull
+% SHOW: tgsoimages.svg bull N
 % Atelier mécanographique Bull complet http://www.histoireinform.com/Histoire/+Infos/perf_atldenis.jpg
 
 % TODO: visual research bull
@@ -44,7 +44,7 @@ The particularity of the collection lies in the fact that it's the conservation 
 The idea of introducing informatics into the work of working with/on the Bible (versions in Hebrew, Greek, Latin, and French) dates back to 1971, via punch card recordings and their memorization on magnetic tape. Then came the step of analyzing texts using computers.
 
 % http://gallery.constantvzw.org/var/resizes/Preparing-the-Techno-galactic-Software-Observatory/DSC05019.JPG?m=1490635726
-% SHOW: tgsoimages.svg maredsous
+% SHOW: tgsoimages.svg maredsous N
 
 % TODO: some images from the visit
 

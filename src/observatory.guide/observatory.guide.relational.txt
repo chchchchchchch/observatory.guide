@@ -29,51 +29,43 @@
 
 What follows is an example of a possible diagnostic questionnaire.
 
-**Sample Questionnaire**
+% **Sample Questionnaire**
 % http://observatory.constantvzw.org/etherdump/RelationalObservatoryInterviewGuide.md.diff.html
 
 **What to expect**
 
 You will obtain a cartography of software users profiles. It will help you to shape your own relation to software. You will be able to construct your own taxonomy and classifcation of software users that is needed in order to find a means of rescue in case of a software catastrophy. 
 
-* SKILLS          
+* **Skills**
   *  What kind of user would you say that you are? 
   *  What is your most frequently used type of software?
   * How often do you install/experiment/learn new software?
-
 * History
   * What is your first recollection of software use? 
   * How often do / when did you last purchase software or pay for a software service?
-
-* Ethics 
+* **Ethics** 
   * What is the software feature you care about the most?
   * Do you use any free software? 
     -  if yes than
       *  do you remember your first attempt at using this software service? Do you still use it? If not why? 
-
   * Do you pay for media distribution/streaming services?
   * Do you remember your first attempt at using free software and how did that make you feel?
   * Have you used any of these software services : facebook, dating app (grindr, tinder, etc.), twitter, instagram or equivalent. 
-    
   * Can you talk about your favorite apps or webtools that you use regularly?
   *  What is most popular software your friends use?
-
-* SKILL
+* **Skill**
   * Would you say that you are a specilised user? 
-
   *  Have you ever used the command line? 
   *  Do you know about scripting? 
   *  Have you ever edited an HTML page? A CSS file? A PHP file? A configuration file?
   *  Can you talk about your most technical encounter with your computer / telephone? 
-    
-* ECONOMY          
+* **Economy**          
   *  How do you pay for your software use?
     * Please elaborate (for example, do you buy the software? / contribute in kind / deliver services or support)
     * What is the last software that you paid for using? 
     * What online services are you currently paying for?
     * Is someone paying for your use of service? 
-
-* Personal
+* **Personal**
   *  What stories do you have concerning contracts and administration in relation to your software, Internet or computer?
   *  How does software help you shape your relations with other people?
   *  From which countries does your softwares come from / reside? How do you feel about that?

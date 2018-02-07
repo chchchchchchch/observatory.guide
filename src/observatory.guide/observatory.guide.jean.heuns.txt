@@ -1,15 +1,15 @@
 % METHOD: Interview people about their histories with software
 
-% REMEMBER:
+% REMEMBER: 
 
 % WHAT: Observe personnal narratives around software history. Retrace the path of relation to software, how it changed during the years and what are the human access memories that surrounds it. To look at software through personal relations and emotions.
 % HOW:  Interviews are a good way to do it. Informal conversations also.
-% WHEN: 
-% WHO:
-% URGENCY:
-% NOTE:
+% WHEN: 21/12/2018
+% WHO: http://www.huens.be/JH/
+% URGENCY: high
+% NOTE: 
 
-% WARNING:
+% WARNING:  If not recorded the oral history will be lost
 
 % EXAMPLE:
 
@@ -17,6 +17,15 @@ Jean Heuns has been collecting servers, calculators, softwares, magnetic tapes h
 Department of Computer sciences - Kul Leuven.
 
 % [a few quotes to the interview transcription go here, interview in appendix]
+
+" At the time computers were mainframes and you did fed them with programms by punch cards. Programing was writing down the program, than you punched it and the next day you get results, mostly errors, that the way it worked at that time. To teach us programing, they used the langage of that time, fortran and some kind of invented assembly langage, it didn't really exist, it was simplified."
+
+"I remember punchcards were a block of papers, we were jealous of the people who came in the computer center with huge stacks of cards. That were really small programs, not complicated one. The fact you had to learn to use the computer from scratch, everything was new, you couldn't rely on previous experiences, everything was new. And to start with small programms was difficult enough. 
+That was also the time when Edsger W. Dijkstra who forked the goto... i still remember him, in an audience, giving us a lecture on modernisation in programming at the International computing symposium 1977 in Liège (programming: from craft to scientific discipline https://www.cs.utexas.edu/users/EWD/transcriptions/EWD05xx/EWD566.html). He told usxx (i'll complete it as soon as possible. i need Jean's input)"
+
+
+"I remember the first program i had to work on. You got three numbers, you had to make the program decide if you caxn construct a triangle with the numbers being the sides of the triangle."
+
 
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3356
