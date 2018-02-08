@@ -103,6 +103,8 @@
   \setlength{\marginparpush}{2\baselineskip}
   \reversemarginpar
 
+ %\raggedright % FLATTERSATZ
+ %\raggedbottom
 
   \parindent=0pt
  %\setlength{\parskip}{5pt plus 5pt minus 5pt}
@@ -116,13 +118,6 @@
  %\newcommand\urlf[1]{{\tt #1}}
  %\newcommand\urlsplit[1]{\seqsplit{\tt #1}}
 
-  % https://groups.google.com/forum/#!topic/pandoc-discuss/O-N0H1eBnVU
-  % \let\oldhref=\href
-  % \renewcommand{\href}[2]{#2\footnote{#1}}
-   \newcommand{\href}[2]{
-    \iffootnote #2 (#1)
-    \else #2\footnote{#1} \fi
-    }
  % sed -i 's,\bhttp.\?://[^ ]*,\\http{&},' $SRCDUMP
 %  \newcommand{\http}[1]{\iffootnote #1
 %                         \else
@@ -133,8 +128,13 @@
    \newcommand{\http}[1]{{\fontfamily{\ttzwo}%
                            \selectfont\seqsplit{#1}}} %
 
- %\raggedright % FLATTERSATZ
- %\raggedbottom
+  % https://groups.google.com/forum/#!topic/pandoc-discuss/O-N0H1eBnVU
+  % \let\oldhref=\href
+  % \renewcommand{\href}[2]{#2\footnote{#1}}
+   \newcommand{\href}[2]{
+    \iffootnote #2 (#1)
+    \else #2\footnote{#1} \fi
+    }
 
   % Ohne die folgenden drei Zeilen funktioniert es nur fast:
   \newcommand*\origfootnoterule{}
@@ -267,7 +267,8 @@
 
   \newenvironment{introquote}{%
    \begin{flushleft}
-    \color{red}
+   %\color{red}
+     \fontfamily{iad}\selectfont
   }{\end{flushleft}}
 
 
@@ -360,9 +361,9 @@
 
   \lstnewenvironment{plain}[1]{\lstsetCode{1}\lstReset
                                \ifnum\numexpr#1 < 5
-                               \color{green}
+                              %\color{green}
                                \else
-                               \color{red}
+                              %\color{red}
                                \fi}
                               {}
   \lstnewenvironment{bashcode}[1]{\lstsetCode{1.5}\lstsetBash}{}
@@ -473,10 +474,15 @@
      {\footnotesize %
       \vspace{-.5\baselineskip} %
       \hspace{4em} P.\pageref{#2} 
-      \hspace{1.0em} 
-      \symarrowleft 
-      \setstretch{1.2} 
-      \hspace{2.5em} #1\par}}
+      \if\relax\detokenize{#1}\relax
+      % #1 EMPTY -> DO NOTHING IN PLACE
+      \else
+        \hspace{1.0em} 
+        \symarrowleft 
+        \setstretch{1.2} 
+        \hspace{2.5em} #1\par %
+      \fi
+      }}
   \end{figure}
   }
 
@@ -488,8 +494,9 @@
     % #3 NON-EMPTY -> CREATE ANCHOR IN PLACE
       \if\relax\detokenize{#1}\relax
       % #1 EMPTY -> INSERT ANCHOR ONLY
-       \anchormarginicon{\iconseemargin} % DEFINED FROM FUNCTIONS
-       \marginpar{\centering\tiny P.\pageref{#2}} % NON-EMPTY
+      %\anchormarginicon{\iconseemargin} % DEFINED FROM FUNCTIONS
+      %\marginpar{\centering\tiny P.\pageref{#2}} % NON-EMPTY
+ %     \anchorinfo{}{#2}
       \else
       % #1 NON-EMPTY -> INSERT INFO + ANCHOR
        \anchorinfo{#1}{#2}
