@@ -234,7 +234,7 @@
   \setlength{\footskip}{15mm} 
  % ABSTAND TRENNLINIE FUSSNOTEN 
    \renewcommand{\footnoterule}{ 
-    \vspace*{5mm} 
+    \vspace*{5mm} % * NOTWÄNDIG?
      \noindent 
       \rule{\textwidth}{0.5pt}{ 
        \vspace*{-3pt} 
@@ -437,7 +437,7 @@
   \newcommand{\marginicon}[1]{%
      \marginpar{
        ~ \\ % NOTHING NEEDED
-       \vspace{-1mm}\\
+       \vspace*{-1mm}\\
         \includegraphics[width=\marginparwidth]{#1}
    }%\vspace{-3mm}
   }
@@ -446,7 +446,7 @@
     \newcommand{\anchormarginicon}[1]{%
       \marginpar{
         ~ \\ % NOTHING NEEDED
-        \vspace{-1\baselineskip}\\
+        \vspace*{-1\baselineskip}\\
          \mbox{\hspace{-.5\marginparwidth} %
           \includegraphics[width=1.5\marginparwidth]{#1} %
      }
@@ -472,7 +472,7 @@
                    {\hspace{.5em}} %
       \symarrowleft
      {\footnotesize %
-      \vspace{-.5\baselineskip} %
+      \vspace*{-.5\baselineskip} %
       \hspace{4em} P.\pageref{#2} 
       \if\relax\detokenize{#1}\relax
       % #1 EMPTY -> DO NOTHING IN PLACE
@@ -512,7 +512,7 @@
      \makebox[\textwidth][l]{%
       \hspace{#1}%
        \parbox{\textwidth}{%
-        \vspace{#2}
+        \vspace*{#2}
          \colorbox{white}{%
          {\footnotesize\parbox{.97\textwidth}{
            \smallskip
@@ -546,7 +546,7 @@
      \includegraphics[width=.25\textwidth]{#1}
        \if\relax\detokenize{#2}\relax
          \else \footnotemark 
-         \vspace{-1\baselineskip}
+         \vspace*{-1\baselineskip}
        \fi
    \end{wrapfigure}
    \vfill
@@ -814,13 +814,13 @@
            \grafikinline{\iconexampleinline}{\hspace{.3em}}%
            \descriptorlabel{EXAMPLE} %
               \hspace{-.4em}#3\end{flushleft} %
-           \vspace{-.2\medskipamount}
+           \vspace*{-.2\medskipamount}
            \else % MORE
            \begin{flushleft}
           \grafikinline{\iconexampleinline}{\hspace{.3em}}%
           \descriptorlabel{EXAMPLE} %
              \hspace{-.4em}{#3}\end{flushleft} %
-           \vspace{-.2\medskipamount}
+           \vspace*{-.2\medskipamount}
            \fi
           \else
           \begin{flushleft}
@@ -950,7 +950,7 @@
        \descriptorskip
         \medskip
         \grafikinline{\iconwarningmargin}{}%
-         \vspace{-2\parskip}
+         \vspace*{-2\parskip}
          \begin{framed}
            \descriptorlabel{WARNING} #3 %
             \smallskip
@@ -994,7 +994,7 @@
            \symarrowright\hspace{2em} %
            \underline{P.\pageref{#1}}} %
     }} %
-   \hspace{-.6em}\vspace{-.7\baselineskip}
+   \hspace{-.6em}\vspace*{-.7\baselineskip}
    \descriptorlabel{SEE ALSO}\hspace{-.3em} #2     
    \end{flushleft}
   }
