@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1518027554/9771673572b2fb69e42a592539dae89b -->
+<!-- CLEANED: 1518086658/46bb66c38acf65a8e6ef6ea3e514d038 -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -44,6 +44,50 @@
          d="m -8.66924,26.398574 18.999995,17.744068 0,33.981634 -18,0 z"
          id="path3333"
          sodipodi:nodetypes="ccccc" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3221">
+      <path
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 378,290.66925 19,0 0,260 -19,0 z"
+         id="path3223"
+         sodipodi:nodetypes="ccccc" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3232">
+      <path
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -38,242.66925 60,0 0,320 -60,0 z"
+         id="path3234"
+         sodipodi:nodetypes="ccccc" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3260">
+      <path
+         sodipodi:nodetypes="ccccc"
+         id="path3262"
+         d="m 395.10979,242.66925 4.89021,0 0,320 -4.89021,0 z"
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3269">
+      <path
+         style="opacity:0.5;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 267,50.66925 465,0 0,400 -465,0 z"
+         id="path3271"
+         sodipodi:nodetypes="ccccc" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3149">
+      <path
+         style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 368.00618,-17.578731 17.07601,0.08444 -3.0013,606.974326 -17.07601,-0.0844 z"
+         id="path3151" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -251,12 +295,7 @@
      id="layer15"
      inkscape:label="tgsoview"
      style="display:none"
-     sodipodi:insensitive="true">
-    <path
-       style="color:#000000;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 41.672539,274.79773 325.277311,0 0,218.78084 -325.277311,0 z"
-       id="rect3281" />
-  </g>
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="layer14"
@@ -273,17 +312,17 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="scppath"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:none">
     <image
        xlink:href="../src/images/IMAG1399.jpg"
        checksum="3dc6b8cb6e2c72be"
-       width="395.98392"
-       height="225.40622"
+       width="686.26703"
+       height="390.64429"
        id="image3239"
-       x="380.84805"
-       y="-1.0811297"
-       style="display:inline" />
+       x="-559.89709"
+       y="386.99136"
+       style="display:inline"
+       transform="matrix(0,-1,1,0,0,0)" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -324,20 +363,34 @@
     <image
        xlink:href="../src/images/IMG_1131.JPG"
        checksum="9f1f613b0918950d"
-       transform="matrix(0.99842833,0.0560435,-0.0560435,0.99842833,0,0)"
-       width="363.58563"
-       height="272.68924"
+       transform="matrix(0.99999673,-0.00255927,0.00255927,0.99999673,0,0)"
+       width="421.42197"
+       height="316.06647"
        id="image3289"
-       x="41.120373"
-       y="125.27625" />
-    <path
-       sodipodi:nodetypes="ccccc"
-       id="path3064-36"
-       d="m 12.677,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       x="-24.53957"
+       y="-5.0911989" />
+    <image
+       y="280.46902"
+       x="3.8746886"
+       id="image3190"
+       xlink:href="../src/images/P1040696.JPG"
+       checksum="0e71bdfcbb83eac0"
+       height="263.61859"
+       width="394.45148" />
   </g>
   <g
      style="display:none"
+     inkscape:label="bull"
+     id="g3125"
+     inkscape:groupmode="layer">
+    <path
+       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 12.677,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
+       id="path3129"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     style="display:inline"
      inkscape:label="maredsous"
      id="g3292"
      inkscape:groupmode="layer">
@@ -345,16 +398,27 @@
        xlink:href="../src/images/DSC05019.JPG"
        checksum="ac6505995147c708"
        transform="matrix(0.99998778,-0.00494462,0.00494462,0.99998778,0,0)"
-       width="338.97662"
-       height="508.06802"
+       width="369.48804"
+       height="553.79932"
        id="image3357"
-       x="31.974367"
-       y="20.692202" />
+       x="7.713809"
+       y="-1.2110234" />
+    <image
+       xlink:href="../src/images/DSC05019.JPG"
+       checksum="ac6505995147c708"
+       clip-path="url(#clipPath3149)"
+       y="-1.215968"
+       x="6.7138214"
+       id="image3142"
+       height="553.79932"
+       width="369.48804"
+       transform="matrix(3.6777365,-0.00494462,0.01818523,0.99998778,-984.19529,0)" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3064-7"
-       d="m 12.677,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
+       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:insensitive="true" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -364,24 +428,45 @@
     <image
        xlink:href="../src/images/PWFU3350.JPG"
        checksum="4f7396444f6a3427"
-       width="410.42154"
-       height="273.61435"
+       width="417.9613"
+       height="278.64084"
        id="image3420"
-       x="-21.698002"
-       y="273.38831" />
+       x="-17.237755"
+       y="268.38831" />
+    <image
+       xlink:href="../src/images/PWFU3350.JPG"
+       checksum="4f7396444f6a3427"
+       y="268.38831"
+       x="-23.237755"
+       id="image3230"
+       height="278.64084"
+       width="417.9613"
+       clip-path="url(#clipPath3232)"
+       transform="matrix(2.3148369,0,0,1,-22.926411,0)" />
+    <image
+       xlink:href="../src/images/PWFU3350.JPG"
+       checksum="4f7396444f6a3427"
+       y="268.38831"
+       x="-21.237755"
+       id="image3258"
+       height="278.64084"
+       width="417.9613"
+       clip-path="url(#clipPath3260)"
+       transform="matrix(5.4463955,0,0,1,-1752.8144,0)" />
     <image
        xlink:href="../src/images/PWFU3361.JPG"
        checksum="08a224c7759e285a"
-       y="-0.10051727"
-       x="-21.698009"
+       y="-4.3782883"
+       x="-17.614666"
        id="image3423"
-       height="273.61435"
-       width="410.42154" />
+       height="282.89212"
+       width="424.3382" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3064-3"
-       d="m -7.323,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
+       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:insensitive="true" />
   </g>
   <g
      style="display:none"
@@ -391,24 +476,35 @@
     <image
        xlink:href="../src/images/PWFU3343.JPG"
        checksum="c1bce0141d96ba9c"
-       y="293.38831"
-       x="2.8872662"
+       y="296.69687"
+       x="9.7951136"
        id="image3445"
-       height="255.89084"
-       width="383.83627" />
+       height="250.10085"
+       width="375.15128" />
+    <image
+       xlink:href="../src/images/PWFU3343.JPG"
+       checksum="c1bce0141d96ba9c"
+       width="375.15128"
+       height="250.10085"
+       id="image3204"
+       x="9.7951136"
+       y="296.69687"
+       clip-path="url(#clipPath3221)"
+       transform="matrix(3.8944543,0,0,1,-1094.1037,0)" />
     <image
        xlink:href="../src/images/PWFU3356.JPG"
        checksum="4c2cbbc430693ec0"
-       width="410.42154"
-       height="273.61435"
+       width="453.2262"
+       height="302.15079"
        id="image3447"
-       x="-23.698009"
-       y="19.899483" />
+       x="-41.211761"
+       y="-0.63695717" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -7.323,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
+       d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
        id="path3449"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       sodipodi:insensitive="true" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -418,16 +514,27 @@
     <image
        xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
        checksum="afd8853015e5738c"
-       width="645.51056"
-       height="362.92242"
+       width="661.24231"
+       height="371.76718"
        id="image3536"
-       x="39.772972"
-       y="73.290138" />
+       x="39.851521"
+       y="58.609978" />
+    <image
+       xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
+       checksum="afd8853015e5738c"
+       y="58.609978"
+       x="39.851521"
+       id="image3264"
+       height="371.76718"
+       width="661.24231"
+       clip-path="url(#clipPath3269)"
+       transform="translate(62,0)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 775.96875,545.65625 0,-545.65624951171878 -765.34375,0 L 10.625,545.65625 z"
        id="path3108-3-7-5"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       sodipodi:insensitive="true" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -435,34 +542,35 @@
      inkscape:label="fountainrefreshment"
      style="display:none">
     <image
+       xlink:href="../src/images/IMG_5698.JPG"
+       checksum="0d95ded8668710b2"
+       width="153.43138"
+       height="204.57515"
+       id="image3789"
+       x="194.69002"
+       y="79.851082" />
+    <image
        xlink:href="../src/images/FullSizeRender.jpg"
        checksum="6712807c85e466ec"
-       width="133.7381"
-       height="191.70889"
+       width="142.68857"
+       height="204.53908"
        id="image3665"
-       x="44.708164"
-       y="57.322987" />
+       x="43.860924"
+       y="79.140106" />
     <image
        xlink:href="../src/images/IMG_5695.JPG"
        checksum="5a3153309d215d7e"
-       width="317.25055"
-       height="139.38029"
+       width="304.49121"
+       height="133.77464"
        id="image3727"
-       x="43.743496"
-       y="254.05289" />
-    <image
-       xlink:href="../src/images/IMG_5698.JPG"
-       checksum="0d95ded8668710b2"
-       width="143.80704"
-       height="191.74271"
-       id="image3789"
-       x="184.91545"
-       y="56.989361" />
+       x="43.898617"
+       y="292.29794" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -7.323,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
+       d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
        id="path3449-5-6"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       sodipodi:insensitive="true" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -593,11 +701,11 @@
        d="m -7.323,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <image
+       xlink:href="../src/images/IMAG1407.jpg"
+       checksum="4606be8efd055f00"
        y="155.40088"
        x="6.7656236"
        id="image3189"
-       xlink:href="../src/images/IMAG1407.jpg"
-       checksum="4606be8efd055f00"
        height="216.71555"
        width="381.03833" />
   </g>
@@ -625,9 +733,14 @@
      id="g4552"
      inkscape:label="uigrievink"
      style="display:none">
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3279"
+       d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
+       style="color:#000000;fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <text
        xml:space="preserve"
-       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:2px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:2px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cccccc;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
        x="126.26071"
        y="-59.434067"
        id="text4558"
@@ -639,7 +752,7 @@
          y="-59.434067">Example of an interface template study by Henrik Jan Grievink</tspan></text>
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -7.323,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
+       d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
        id="path3449-5-2"
        sodipodi:nodetypes="ccccc" />
   </g>
@@ -647,7 +760,12 @@
      inkscape:groupmode="layer"
      id="g4562"
      inkscape:label="doingelevator"
-     style="display:inline">
+     style="display:none">
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3273"
+       d="M 775.96875,545.65625 775.96875,0 10.625,0 l 0,545.65625 z"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 775.96875,545.65625 775.96875,0 10.625,0 l 0,545.65625 z"
@@ -655,15 +773,15 @@
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
-       style="font-size:40.57180023px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:7.37669086px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
-       x="124.73238"
-       y="265.84348"
+       style="font-size:26.21179199px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:4.76577997px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ececec;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
+       x="125.6227"
+       y="255.01602"
        id="text4568"
        sodipodi:linespacing="141%"><tspan
          sodipodi:role="line"
          id="tspan4570"
-         x="124.73238"
-         y="265.84348">elevator performance</tspan></text>
+         x="125.6227"
+         y="255.01602">images of elevator performance</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
