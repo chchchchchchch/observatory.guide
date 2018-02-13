@@ -5,6 +5,7 @@
   \newcommand{\setwidowstandard}{\setnowidow[5]\setnoclub[5]}
   \setwidowstandard
 
+  \usepackage[color=yellow,opacity=0.5,open=true]{pdfcomment}
   \usepackage{geometry}
   \usepackage{graphicx}
   \usepackage{pdfpages}
@@ -1011,4 +1012,10 @@
      \end{framed}
   }
 % ------------------------------------------------------------------------- %
+   \newcommand\carlinsays[1]{ %
+   {\color{yellow}+} %
+    \pdfmargincomment{#1} %
+   }
+% ------------------------------------------------------------------------- %
+
 
