@@ -21,7 +21,6 @@
               final,tracking=true,kerning=true,
               spacing=true,factor=1100,
               stretch=10,shrink=10]{microtype}
-
   % https://groups.google.com/forum/#!topic/pandoc-discuss/_tssxEsT0eg
   \usepackage{enumerate}
   \usepackage[shortlabels]{enumitem}
@@ -33,13 +32,13 @@
   \usepackage{fancyhdr}
   \usepackage{fancyvrb}
   \usepackage{alltt}      % USED BY QUAVERBATIM
- %\usepackage{hyperref}
+  \usepackage[hyperfootnotes=false,draft]{hyperref}
   \usepackage{refcount}   % USED BY \imgshift
   \usepackage{float}
   \usepackage{wrapfig}
   \usepackage{pifont}
   \usepackage{framed}
-  \usepackage{needspace} % USEDY BY listing
+  \usepackage{needspace}  % USEDY BY listing
 
   \newcounter{floats}  % COUNT FLOATS TO ADD LABELS
   \newcounter{pagenow} % MOSTLY EMPTY/USED TO STORE
@@ -116,31 +115,23 @@
   \renewcommand*{\chapterheadendvskip}{\vspace{0pt}}
   \titlespacing\section{0pt}{20pt plus 30pt minus 15pt}{2pt plus 3pt minus 0pt}
 
- %\newcommand\urlf[1]{{\tt #1}}
- %\newcommand\urlsplit[1]{\seqsplit{\tt #1}}
-
- % sed -i 's,\bhttp.\?://[^ ]*,\\http{&},' $SRCDUMP
-%  \newcommand{\http}[1]{\iffootnote #1
-%                         \else
-%                          {\fontfamily{\ttzwo}%
-%                             \selectfont %
-%                              \seqsplit{#1}} %
-%                         \fi}
-   \newcommand{\http}[1]{{\fontfamily{\ttzwo}%
-                           \selectfont\seqsplit{#1}}} %
+  \newcommand{\http}[1]{{\fontfamily{\ttzwo}\selectfont\seqsplit{#1}}} %
+ %\newcommand{\http}[1]{{\fontfamily{\ttzwo}\selectfont#1}} %
 
   % https://groups.google.com/forum/#!topic/pandoc-discuss/O-N0H1eBnVU
-  % \let\oldhref=\href
-  % \renewcommand{\href}[2]{#2\footnote{#1}}
-   \newcommand{\href}[2]{
+  %\renewcommand{\href}[2]{#2\footnote{\http{#1}}}
+  %\renewcommand{\href}[2]{%
+  % \iffootnote #2 (\http{#1})
+  % \else #2\footnote{\http{#1}} \fi
+  %}
+  %\renewcommand{\href}[2]{%
+  % \iffootnote #2 (\http{#1})
+  % \else #2\footnote{\http{#1}} \fi
+  %}
+   \renewcommand{\href}[2]{%
     \iffootnote #2 (#1)
     \else #2\footnote{#1} \fi
-    }
-
-  % Ohne die folgenden drei Zeilen funktioniert es nur fast:
-  \newcommand*\origfootnoterule{}
-  \let\origfootnoterule\footnoterule
-  \renewcommand*{\footnoterule}{\vskip 0pt plus .01fil\origfootnoterule}
+   }
 
   % http://tex.stackexchange.com/questions/167823/
   % -> multiply-define-a-label-on-purpose
@@ -159,6 +150,11 @@
   }}
   \def\@testdef #1#2#3{}
   \makeatother
+
+  % Ohne die folgenden drei Zeilen funktioniert es nur fast:
+  \newcommand*\origfootnoterule{}
+  \let\origfootnoterule\footnoterule
+  \renewcommand*{\footnoterule}{\vskip 0pt plus .01fil\origfootnoterule}
 
 % DON'T START CHAPTER ON NEW PAGE AUTOMATICALLY
 %  \makeatletter
