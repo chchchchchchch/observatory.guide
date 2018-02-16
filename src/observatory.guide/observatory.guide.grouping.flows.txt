@@ -1,0 +1,39 @@
+%!HEADER: Flows
+%!SUBH: Flow-regulation, logistics and seamlessness
+
+> Contentious meetings. Users trying to articulate needs
+> that don’t fit neatly into all the flowcharts and drawings.
+> Compromises. Promises of “future development” to take
+> unaddressed needs into account. “Then it moves to programming,”
+> said the vice president.
+> [@[pg.48]ullman:2012:close]
+
+% QUOTESTYLE: intro
+
+> To get to the demo in five days, the people coming together
+> had to be sufficiently similar, sufficiently flexible, and
+> sufficiently few. The participants all spoke English fluently,
+> had obtained at least college undergraduate degrees, and had
+> trained as engineers — with the exception of the anthropologist, Prem.
+> [@[pg.13]irani:2015:hackathons]
+
+% QUOTESTYLE: intro
+
+> The “Agile Manifesto” and related commentaries read as a peculiar
+> combination of working methods with moral values, yielding a work
+> ethic tuned towards efficiency, productivity, and customer satisfaction.
+> While emphasizing categories such as “individuality,” “freedom,” and “respect,”
+> many of the recommended principles and methods are in fact reminiscent of the
+> theory of “egoless programming” (...).
+> [@[pg.33]kaldrack:2015:there]
+
+% QUOTESTYLE: intro
+
+> Adrift in the doped lattices of a silicon crystal, a hole is a positive
+> particle before it is the absence of a negatively charged electron,
+> and the movement of electrons toward the positive terminal is also a flow
+> of holes streaming the other way.
+> [@[pg.57]plant:1997:zeroes]
+
+% QUOTESTYLE: intro
+

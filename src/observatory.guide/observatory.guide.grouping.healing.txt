@@ -1,0 +1,47 @@
+%!HEADER: Healing and embodiment
+%!SUBH: Feeling software.
+
+
+> Giving some meaning / emotion to the time of "nothing happening",
+> the moment of pause when logging in to a service, a return to the
+> experience of the body.
+> [@observatory:2017:saturday]
+
+% QUOTESTYLE: intro
+
+> The programmer, who needs clarity, who must talk all day to a machine
+> that demands declarations, hunkers down into a low-grade annoyance.
+> It is here that the stereotype of the programmer, sitting in a dim room,
+> growling from behind Coke cans, has its origins. The dis-order of the desk,
+> the floor; the yellow Post-it notes everywhere; the whiteboards covered with
+> scrawl: all this is the outward manifestation of the messiness of human thought.
+> The messiness cannot go into the program; it piles up around the programmer.
+> Soon the programmer has no choice but to retreat into some private interior space,
+> closer to the machine, where things can be accomplished.
+> [@[pg.23]ullman:2012:close]
+
+% QUOTESTYLE: intro
+
+> The list of things machines are good at continually expands, and assertions
+> about the things humans are said to be good at generally consider only whether
+> a human can physically or cognitively accomplish a task, rather than whether
+> the task is morally and ethically defensible or desirable. [...] Assuming a timeless,
+> natural division of labor in which we divvy up the work for humans and the work for
+> machines each according to their abilities, deflects attention from the specific
+> conditions under which humans labor, and the changing systems of compensation and
+> reward in which they contribute value to the projects of others.
+> [@ekbia:2014:heteromation]
+
+% QUOTESTYLE: intro
+
+> Our therapeutic approach is inspired by the unix file system paradigm
+> in which every component of a computer can be represented by a file,
+> be it your hard drive, memory or sound card. Going together through
+> the affordances and limitations of such a paradigm, we hope to provide
+> a more intimate access to your software. Wheter it is about specific
+> problematic situations with your computer, or to address a general
+> curiosity about filesystems, we will take you by the hand through an
+> extensive intake.
+> [@observatory:2017:clinicfiletherapy]
+
+% QUOTESTYLE: intro

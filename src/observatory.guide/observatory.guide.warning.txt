@@ -1,7 +1,6 @@
 % NEWPAGE: Dirty Hack (For now)
 
-**WARNING**
-
+% WARNING:
 The survival techniques described in the following guide are to be used at  your own risk in case of emergency regarding software curiosity.
 The publisher will not accept any responsability in case of damages caused by misuse, misundestanding of instruction or lack of curiosity. 
 By trying the action exposed in the guide, you accept the responsability of loosing data or altering hardware, including hard disks, usb key, cloud storage, screens by throwing them on the floor, or even when falling on the floor with your laptop by tangling your feet in an entanglement of cables.
@@ -21,10 +20,7 @@ Loss of time tracking
 
 **Can you cope with software? You have to.**
 
-
 > our methods for observation, like mapping,    
 > come with their luggage.
 
-
-% SEEALSO: http://observatory.constantvzw.org/etherdump/toc.md.diff.html
-
+% RELATESTO: http://observatory.constantvzw.org/etherdump/toc.md.diff.html

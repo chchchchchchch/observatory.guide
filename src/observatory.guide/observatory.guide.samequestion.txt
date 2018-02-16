@@ -1,8 +1,7 @@
 % METHOD: Ask several people from different fields and age-groups the same question: "_**What is software?**_"
-
-% REMEMBER: The answers to this question will vary depending on who is asking it to who.
-
 % WHAT: By paying close attention to the answers, and possibly logging them, observations on the ambiguous place and nature of software can be made.
+% REMEMBER: The answer to this question will vary depending on who is asking it to who.
+
 % HOW:
 % WHEN:
 % WHO:
@@ -47,6 +46,6 @@ so I like to consider it as unique and special_".
 
 % REMEMBER: To answer the question "_what is software_" depends on the situation, goal, time, and other contextual influences.
 
-% SOURCE: Pad on [Multiple Software Axes](http://observatory.constantvzw.org/etherdump/multiple-software-axes.md.raw.html)
+% SOURCE: Notes on [Multiple Software Axes](http://observatory.constantvzw.org/etherdump/multiple-software-axes.md.raw.html)
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.everyonescp

@@ -1,9 +1,10 @@
 %!METHOD: What is it like to be <AN ELEVATOR>?
-% METHOD: What is it like to be AN ELEVATOR?
+% METHOD: What is it like to be AN ELEVATOR*?
+
+% NOTE: (*) Where this method refers to AN ELEVATOR, the name of any comparable software system may be substituted.
 
 % REMEMBER:
 % WHAT: Understanding software systems by becoming them
-% TODO: extend this text .... how to observe software in the world around you. How to observe an everyday software experience and translate this into a flowchart )
 % HOW: Creating a flowchart to incarnate a software system you use everyday
 % WHEN:
 % WHO:
@@ -68,12 +69,10 @@ update floor indicator
 % SRCCODE: quaverbatim
 
 % TODO: flowchart
-% http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
-% http://observatory.constantvzw.org/documents/joseph/flowchart.svg
-% TODO: include Images from performance?
 
+% http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
 % SHOW: tgsoimages.svg doingelevator
 
 % RELATESTO:
-% SOURCE: Developed by Joseph Knierzinger, Michaela Lakova + Other Members of the SSOGY Group
+% SOURCE: _What is it like to be <AN ELEVATOR>?_ was developed by Joseph Knierzinger, Michaela Lakova + other members of the SSOGY group.
 

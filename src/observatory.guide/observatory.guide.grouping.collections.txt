@@ -1,0 +1,17 @@
+%!HEADER: Collections
+%!SUBH: Compiling observations
+
+
+> Each group will thus contain all the records pertaining to
+> or embracing a particular statistical item, and by counting
+> the cards the numerical value of that item can be readily
+> ascertained. Having thus separated the record-cards into
+> general divisions, (and, if desired, subdivided each group
+> on the same plan.) any additional series of statistical items
+> can be compiled either by the further division or subdivision
+> of the record-cards or by passing all the cards or certain groups
+> only through the electrical apparatus.
+> [@[pg.4]hollerith:1889:art]
+
+% QUOTESTYLE: intro
+

@@ -1,0 +1,409 @@
+% .MDSH IS MARKDOWN +X -> http://freeze.sh/2015/mdsh
+%
+% A COMMENT MAY BE FUNCTIONAL (= ignored/interpreted during export)
+% A text [^]{a footnote} and some more text
+% A citation reference [@haraway:1996:witness]
+% A citation reference with pagenumber [@[1-8]haraway:1996:witness]
+
+% __NOPUBLISH__
+
+@incollection{ haraway:1996:witness,
+ title     = {Modest Witness: Feminist Diffractions in Science Studies},
+ author    = {Donna Haraway},
+ publisher = {Stanford University Press},
+ editor    = {Peter Galison and David J. Stump},
+ booktitle = {The Disunity of Science: Boundaries, Contexts, and Power},
+ year      = {1996},
+ pages     = {428--442}
+}
+
+@incollection{ kaldrack:2015:there,
+        title = {The Tail on the Hardware Dog},
+        author = {Christoph Neubert},
+        address = {Lüneburg},
+        booktitle = {There is no {Software}, there are just {Services}},
+        isbn = {978-3-95796-055-9},
+        language = {English},
+        publisher = {meson press eG},
+        editor = {Kaldrack, Irina and Leeker, Martina},
+        month = sep,
+        year = {2015},
+        pages ={21 -- 37}
+}
+
+@book{ harwood:2011:interface,
+        address = {Minneapolis, MN},
+        edition = {1 edition},
+        title = {The {Interface}: {IBM} and the {Transformation} of {Corporate} {Design}, 1945–1976},
+        isbn = {978-0-8166-7039-0},
+        shorttitle = {The {Interface}},
+        language = {English},
+        publisher = {Univ Of Minnesota Press},
+        author = {Harwood, John},
+        month = nov,
+        year = {2011}
+}
+
+@book{ plant:1997:zeroes,
+        address = {New York},
+        edition = {1st edition},
+        title = {Zeroes and {Ones}: {Digital} {Women} and the {New} {Technoculture}},
+        isbn = {978-0-385-48260-8},
+        shorttitle = {Zeroes and {Ones}},
+        language = {English},
+        publisher = {Doubleday},
+        author = {Plant, Sadie},
+        month = sep,
+        year = {1997}
+}
+
+@article{ kirschenbaum:2004:extreme,
+        title = {Extreme {Inscription}: {Towards} a {Grammatology} of the {Hard} {Drive}},
+        shorttitle = {Extreme {Inscription}},
+        url = {http://texttechnology.mcmaster.ca/pdf/vol13_2_06.pdf},
+        number = {2},
+        urldate = {2018-01-31},
+        journal = {TEXT Technology},
+        author = {Kirschenbaum, Matthew},
+        year = {2004}
+}
+
+@book{ fuller:2003:behind,
+        address = {Brooklyn, NY},
+        title = {Behind the {Blip}: {Essays} on the {Culture} of {Software}},
+        isbn = {978-1-57027-139-7},
+        shorttitle = {Behind the {Blip}},
+        language = {English},
+        publisher = {Autonomedia},
+        author = {Fuller, Matthew},
+        month = mar,
+        year = {2003}
+}
+
+@article{ nofre:2014:when,
+        title = {When {Technology} {Became} {Language}: {The} {Origins} of the {Linguistic} {Conception} of {Computer} {Programming}, 1950–1960},
+        volume = {55},
+        issn = {1097-3729},
+        shorttitle = {When {Technology} {Became} {Language}},
+        url = {https://muse.jhu.edu/article/538908},
+        doi = {10.1353/tech.2014.0031},
+        language = {en},
+        number = {1},
+        urldate = {2018-01-31},
+        journal = {Technology and Culture},
+        author = {Nofre, David and Priestley, Mark and Alberts, Gerard},
+        month = mar,
+        year = {2014},
+        pages = {40--75}
+}
+
+@article{irani:2015:hackathons,
+        title = {Hackathons and the {Making} of {Entrepreneurial} {Citizenship}},
+        volume = {40},
+        issn = {0162-2439, 1552-8251},
+        url = {http://journals.sagepub.com/doi/10.1177/0162243915578486},
+        doi = {10.1177/0162243915578486},
+        language = {en},
+        number = {5},
+        urldate = {2018-01-31},
+        journal = {Science, Technology, \& Human Values},
+        author = {Irani, Lilly},
+        month = sep,
+        year = {2015},
+        pages = {799--824}
+}
+
+@patent{hollerith:1889:art,
+        title = {Art of compiling statistics},
+        url = {http://www.google.com/patents/US395781},
+        nationality = {United States},
+        assignee = {Herman Hollerith},
+        number = {US395781 A},
+        urldate = {2018-01-31},
+        author = {Hollerith, Herman},
+        month = jan,
+        year = {1889},
+        note = {Cooperative Classification G06F7/42}
+}
+
+
+@inproceedings{liu:2015:last-level,
+        title = {Last-{Level} {Cache} {Side}-{Channel} {Attacks} are {Practical}},
+        doi = {10.1109/SP.2015.43},
+        booktitle = {2015 {IEEE} {Symposium} on {Security} and {Privacy}},
+        author = {Liu, F. and Yarom, Y. and Ge, Q. and Heiser, G. and Lee, R. B.},
+        month = may,
+        year = {2015},
+        pages = {605--622}
+}
+
+@book{ patterson:2013:computer,
+        address = {Amsterdam ; Boston},
+        edition = {5 edition},
+        title = {Computer {Organization} and {Design} {MIPS} {Edition}, {Fifth} {Edition}: {The} {Hardware}/{Software} {Interface}},
+        isbn = {978-0-12-407726-3},
+        shorttitle = {Computer {Organization} and {Design} {MIPS} {Edition}, {Fifth} {Edition}},
+        language = {English},
+        publisher = {Morgan Kaufmann},
+        author = {Patterson, David A. and Hennessy, John L.},
+        month = oct,
+        year = {2013}
+}
+
+@misc{pernice:2014:talking,
+        title = {Talking with {Users} in a {Usability} {Test}},
+        url = {https://www.nngroup.com/articles/talking-to-users/},
+        abstract = {Three sound and practical usability test facilitation techniques for interrupting or answering users during a behavioral research study. Talk less, learn more.},
+        language = {en},
+        urldate = {2018-01-31},
+        journal = {Nielsen Norman Group},
+        author = {Pernice, Kara},
+        year = {2014}
+}
+
+@incollection{chun:2008:programmability,
+        title = {Programmability},
+        isbn = {978-0-262-06274-9},
+        url = {http://mitpress.universitypressscholarship.com/view/10.7551/mitpress/9780262062749.001.0001/upso-9780262062749-chapter-32},
+        urldate = {2018-01-31},
+        booktitle = {Software {Studies}},
+        publisher = {The MIT Press},
+        author = {Kyong Chun, Wendy Hui},
+        editor = {Fuller, Matthew},
+        month = apr,
+        year = {2008},
+        note = {DOI: 10.7551/mitpress/9780262062749.003.0032},
+        pages = {225--228}
+}
+
+@article{ ekbia:2014:heteromation,
+        title = {Heteromation and its (dis)contents: {The} invisible division of labor between humans and machines},
+        volume = {19},
+        copyright = {Copyright (c)},
+        issn = {13960466},
+        shorttitle = {Heteromation and its (dis)contents},
+        url = {http://firstmonday.org/ojs/index.php/fm/article/view/5331},
+        language = {en},
+        number = {6},
+        urldate = {2018-01-31},
+        journal = {First Monday},
+        author = {Ekbia, Hamid and Nardi, Bonnie},
+        month = may,
+        year = {2014}
+}
+
+@book{ ullman:2012:close,
+        address = {New York},
+        edition = {Reprint edition},
+        title = {Close to the {Machine}: {Technophilia} and {Its} {Discontents}},
+        isbn = {978-1-250-00248-8},
+        shorttitle = {Close to the {Machine}},
+        language = {English},
+        publisher = {Picador},
+        author = {Ullman, Ellen},
+        month = feb,
+        year = {2012}
+}
+
+@misc{ stallman:2012:what,
+        title = {What {Does} {That} {Server} {Really} {Serve}?},
+        url = {http://bostonreview.net/richard-stallman-free-software-DRM},
+        abstract = {How programs like Google Docs rob users of their freedom},
+        language = {en},
+        urldate = {2018-01-31},
+        journal = {Boston Review},
+        author = {Stallman, Richard},
+        month = jun,
+        year = {2012}
+}
+
+@misc{ observatory:2017:vocabulary,
+	title = {Notes from the Observatory on glossaries and vocabularies},
+	author = {Techno-Galactic Software Observatory},
+	url = {http://observatory.constantvzw.org/etherdump/vocabulary.md.diff.html},
+	year = {2017}
+}
+
+@misc{ observatory:2017:saturday,
+	title = {Notes from the Observatory on When and Where is Software},
+	author = {Techno-Galactic Software Observatory},
+	url = {http://observatory.constantvzw.org/etherdump/saturday.diff.html},
+	year = {2017}
+}
+
+@misc{ observatory:2017:clinicfiletherapy,
+	title = {Introduction to file therapy},
+	author = {Techno-Galactic Software Observatory},
+	url = {http://observatory.constantvzw.org/etherdump/clinic.file_therapy.md.diff.html},
+	year = {2017}
+}
+
+@article{lammerant:2017:tgsotime,
+	author = {Lammerant, Hans},
+	title = {How Humans and Machines negotiate the Experience of Time},
+	url = {http://etherdump.constantvzw.org/p/observatory.guide.experiencingtime.diff.html},
+	year = {2017}
+}
+
+@misc{observatory:2017:constellation,
+	title = {Notes from the Observatory on A Constellation of Wares}, 
+	author = {Techno-Galactic Software Observatory},
+	url = {http://observatory.constantvzw.org/etherdump/constellationofwares.md.diff.html},
+	year = {2017}
+}
+
+@misc{ linuxmanual:2018:time,
+	title = {???}, 
+	author = {???},
+	url = {???},
+	year = {???}
+}
+
+
+@misc{ wikipedia:2018:contentcontrolsoftware,
+ author = {Wikipedia contributors},
+ title  = {Content-control software --- Wikipedia{,} The Free Encyclopedia},
+ year   = {2018},
+ url    = {https://en.wikipedia.org/w/index.php?title=Content-control_software&oldid=818780033},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ urbanministry:2018:accountabilitysoftware,
+ author = {TechMission UrbanMinistry.org},
+ title  = {SafeFamilies.org | Accountability Software: Encyclopedia of Urban Ministry},
+ year   = {2018},
+ url    = {http://www.urbanministry.org/node/4902},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ netnanny:2018:protecting,
+ author = {Content Watch Holdings, Inc.},
+ title  = {Protecting Your Family},
+ year   = {2018},
+ url    = {https://www.netnanny.com/products/netnanny/protecting-your-family},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ websense:2012:proxy,
+ author = {websense.com},
+ title  = {Explicit and transparent proxy deployments},
+ year   = {2012},
+ url    = {https://web.archive.org/web/20120418150020/http://www.websense.com/content/support/library/web/v75/wcg_deploy/WCG_Deploy.1.3.aspx},
+ note   = {accessed 7.1.2018 via waybackmachine (18.4.2012)}
+}
+
+@misc{ workrave:2018:faq,
+ author = {workrave.org},
+ title  = {Frequently Asked Questions},
+ year   = {2018},
+ url    = {http://www.workrave.org/documentation/faq},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ wikipedia:2018:agilesoftwaredevelopment,
+ author = {Wikipedia contributors},
+ title  = {Agile software development --- Wikipedia{,} The Free Encyclopedia},
+ year   = {2018},
+ url    = {https://en.wikipedia.org/w/index.php?title=Agile_software_development&oldid=818894701},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ wikipedia:2018:scrum,
+ author = {Wikipedia contributors},
+ title  = {Scrum (software development) --- Wikipedia{,} The Free Encyclopedia},
+ year   = {2018},
+ url    = {https://en.wikipedia.org/w/index.php?title=Scrum_(software_development)&oldid=816207177},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ wikipedia:2018:agilemanifesto,
+ author = {{Wikipedia contributors}},
+ title  = {The Manifesto for Agile Software Development},
+ year   = {2018},
+ url    = {https://en.wikipedia.org/w/index.php?title=Agile_software_development&oldid=818894701#The_Agile_Manifesto},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ flanagan:2014:values,
+ author = {Flanagan, Mary and  Nissenbaum, Helen},
+ title  = {Values at Play in Digital Games},
+ year   = {2014}
+}
+
+@misc{ kruchten:2011:as,
+ author = {Kruchten, Philippe},
+ title  = {Agile's Teenage Crisis?},
+ year   = {2011},
+ url    = {https://www.infoq.com/articles/agile-teenage-crisis},
+ note   = {accessed 7.1.2018}
+}
+
+@misc{ wikipedia:2018:hydra,
+ author = {Wikipedia contributors},
+ title  = {Lernaean Hydra --- Wikipedia{,} The Free Encyclopedia},
+ year   = {2018},
+ url    = {https://en.wikipedia.org/w/index.php?title=Lernaean_Hydra&oldid=812030608},
+ note   = {accessed 7.2.2018}
+}
+
+@article{ geertz:1975:commonsense,
+ author = {Clifford Geertz},
+ journal = {The Antioch Review},
+ number = {1},
+ pages = {5-26},
+ publisher = {Antioch Review, Inc.},
+ title = {Common Sense as a Cultural System},
+ volume = {33},
+ year = {1975},
+ ISSN = {00035769}
+}
+
+@misc{ dijksra:1972:goto,
+ author = {Edsger W. Dijkstra},
+ title  = {A Case against the GOTO Statement},
+ year   = {1972},
+ url    = {https://www.cs.utexas.edu/users/EWD/transcriptions/EWD02xx/EWD215.html},
+ note   = {accessed 9.2.2018}
+}
+
+@misc{ dijksra:1977:craft,
+ author = {Edsger W. Dijkstra},
+ title  = {Programming:  from craft to scientific discipline},
+ year   = {1977},
+ url    = { https://www.cs.utexas.edu/users/EWD/transcriptions/EWD05xx/EWD566.html},
+ note   = {accessed 9.2.2018}
+}
+
+@article{ haigh:2001:soft60,
+  title={Software in the 1960s as Concept, Service, and Product},
+  author={Haigh, Thomas},
+  journal={IEEE Annals of the History of Computing},
+  volume={24},
+  number={1},
+  pages={5--13},
+  year={2002},
+  publisher={IEEE}
+}
+
+
+@misc{ meltdown:2018:spectre17,
+ author = {Jann Horn et al.},
+ title  = {Meltdown and Spectre Attack},
+ year   = {2018},
+ url    = { https://meltdownattack.com},
+ note   = {accessed 9.2.2018}
+}
+
+
+%This needs to be corrected.
+@book{ marx:1848:cmanifesto,
+  title={The communist manifesto},
+  author={Marx, Karl and Engels, Friedrich},
+  year={2002},
+  publisher={Penguin}
+}
+
+
+
+
+

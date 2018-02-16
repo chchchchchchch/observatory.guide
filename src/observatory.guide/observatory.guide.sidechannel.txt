@@ -1,12 +1,13 @@
 % METHOD: Side Channel Analysis
 
-% REMEMBER:
 
-% WHAT:
-% HOW:
+% WHAT:    "Leakage from boundaries" is what is considered a side channel attack
+% HOW:  As software runs on hardware it emanates radio-magnetic waves. You can build an antenna and use it to capture these waves and reconstruct what the software is doing.
 % WHEN:
-% WHO:
-% URGENCY:  Side Channel attacks are possible by disregarding the abstraction of software into pure logic: the physical effects of the running of the software become backdoors to observe its functioning, both threatening the control of processes and the re-affirming the materiality of software.
+% REMEMBER:     "Hardware lives in the real world and real world properties lead to side channels"          
+% WHO: bad guys/good guys
+% URGENCY:  Side Channel attacks are possible by disregarding the abstraction of software into pure logic: the physical effects of the running of software become backdoors to observe its functioning, hence re-affirming the materiality of software.
+
 % NOTE:
 % WARNING: **engineers are good guys!**       
 
@@ -14,8 +15,9 @@
 
 % https://www.tek.com/sites/default/files/media/image/119-4146-00%20Near%20Field%20Probe%20Set.png.jpg
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3377
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3381
 
 % SHOW: ../../E/tgsoimages.svg sidechannelanalysis
 
 % RELATESTO:
-% SOURCE:
+% SOURCE: This method is inspired by a talk by Thomas De Cnudde from the COSIC research group at the department of Electrical Engineering, KULeuven. Notes from the presentation: http://observatory.constantvzw.org/etherdump/side-channel-analysis.diff.html

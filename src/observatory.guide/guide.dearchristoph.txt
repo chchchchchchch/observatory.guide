@@ -1,0 +1,125 @@
+--- Comments based on this pdf http://observatory.constantvzw.org/tgsoguide_1802081708-CROP.pdf ---
+
+New markup for Carlin's comments
+
+% CARLINSAYS: 
+
+we'll need this for the final editing to appear in the pdf (but without changing text flow?!)
+
+Should be feasible.
+
+
+Pagenumbers
+
+Pagenumbers on the inside, intentionally?
+Intentionally. 
+Chapter beginnings seem to be on the left side, intentionally?
+Intentionally. The groupings begin on the left side. Less 'cover', more starting the part.
+OK!
+
+
+Spaces between paragraphs
+
+Spaces between paragraphs seem to vary, is this because of the way the pads are formatted or something to do with the processing after?
+
+Due to processing after. TeX uses flexible spaces and tries to find the most optimal way to do the page breaks
+
+
+Contents page / p.13
+
+Not sure this is meant to be like this; we would like a bit more structure/readability/space for it
+
+Yes.
+
+
+Chapter intros
+
+Loving the illustrations. Wondering about the quotes, if there is a way to treat them a bit more like ... citations; make more difference between them (a line? something?)
+
+OK. I'll try somethig
+
+
+Method icons
+
+Very much liking the different styles (sometimes going inside, sometimes in the margin) but we would like to stabilize them, ie. HOW is always treated the same, even if different from URGENCY (but all appearances of URGENCY are treated the same). It seems you are using the '-' to make it do something else if what is follows longer but maybe this is more the problem of the editing, not to be solved graphically.
+
+OK. The icons are not superfinished. I'll try to stabilize.
+
+the word METHOD now disappears from the title. Is there a way to bring it back so you read the title-as-a-method.
+
+
+REMEMBER
+
+We don't think the text for 'REMEMBER' should go into a note. Somehow a style related to WARNING but ehm ... different?
+REMEMBER seems to show up on every page, even if empty
+
+
+Code blocks
+
+p.32-33 for example ...
+Feels like code blocks inside running text need an indent?
+
+
+Useless scroll ... 
+
+p.55 needs three empty wide pages added. [% NEWPAGE added]
+
+
+make make make
+
+Make up mark up ... (p.74) and make make do (p.119) are related?
+Make up mark up needs some introduction/framing
+
+
+lists
+
+Markdown hierarchies seem not to be processed correctly? p.80-81
+
+
+attachments
+
+We invented something called ATACHMENTS, for longer/autonomous texts that we first wanted to add to the appendix, but we decided they needed to be closer to the methods.
+ATTACHMENTS will need a style to differentiate them from the methods somehow; for sure starting on a new page.
+
+
+bibliography
+
+We think it could be nice to gather the bibtex references in a bibliography at the back of the guide?
+
+
+Index
+
+We haven't done any work on this yet.
+
+> One thing that would be nice to do (at least start) tomorrow, 
+> would be the keyword index. Femke knows the process from conversations 
+> (https://pad.constantvzw.org/p/conversations.keywords). 
+
+Bibtex reference and foot note reference
+Is it ok to do it that way ? 
+
+bib tex
+@misc{ text:1972:goto,
+ author = {Edsger W. Dijkstra},
+ title  = {A Case against the GOTO Statement},
+ year   = {1972},
+ url    = {https://www.cs.utexas.edu/users/EWD/transcriptions/EWD02xx/EWD215.html},
+ note   = {accessed 9.2.2018}
+}
+
+and the footnote reference
+ex: on but bad constructs [@[dijksra:1972:goto]. I still remem
+
+A citation reference [@haraway:1996:witness]
+A citation reference with pagenumber [@[1-8]haraway:1996:witness]
+
+This means NOT [@[dijksra:1972:goto] BUT [@dijksra:1972:goto]
+
+
+txt and %INCLUDE lines
+is it working at the moment? does it make sense citing/including like that? it looks like we just copypasted directly the passages from pads in this last round
+
+p.76 overlap of title and image ... we like the image!! but wondering about legibility
+
+
+

@@ -1,9 +1,8 @@
 % __NOPUBLISH__
 
 % METHOD: Hand reading
-% BY: 
-% HOW: Visit  the Future Blobservation Booth to have your fortunes read and derive life insight from the wisdom of software.
-% WHAT: Put your hand in the reading booth and get your line read.
+% WHAT: Have your fortunes read and derive life insight from the wisdom of software.
+% HOW: Put your hand in the nearest Future Blobservation Booth, and get your command lines read.
 % WHY: The hand which holds your mouse everyday hides many secrets.
 
 % EXAMPLE: - 
@@ -43,6 +42,7 @@
 
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1407
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMG_0844
 % SHOW: tgsoimages.svg blobservation
 
 % SOURCE:

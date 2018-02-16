@@ -13,13 +13,17 @@
 
 % EXAMPLE: -
 
-% INCLUDE: http://observatory.constantvzw.org/etherdump/friday.md 165-236 
+% EMPTYPAGE:
+% EMPTYPAGE:
+% EMPTYPAGE:
 
-% SEEALSO:
+% INCLUDE: http://observatory.constantvzw.org/etherdump/friday.md 201-236 
+
+% RELATESTO:
 
 % SOURCE:
 
 
 % useless scroll against productivity
 % ---------------------------------------------------------------------------------------     
-% * Source: friday pad, etherpad snippet
+% SOURCE: This method was discovered at the end of a Etherpad that contained collective notes from Technogalatic Observation sessions taking place on [Friday 8 June, 2017](http://observatory.constantvzw.org/etherdump/friday.md.diff.html).

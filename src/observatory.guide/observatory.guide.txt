@@ -3,23 +3,19 @@
 % pdfs: http://observatory.constantvzw.org --> tgsoguide_1801091008.pdf etc.
 % notes on the process: http://pad.constantvzw.org/p/observatory.methods
 % https://pad.constantvzw.org/p/observatory.bib
+% Questions for Christoph https://pad.constantvzw.org/p/guide.dearchristoph
 
 
 % INTRODUCTION
 % ------------
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.introduction
+% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.introduction
 
 % WARNING!
 % http://pad.constantvzw.org/p/observatory.guide.warning
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.warning/export/txt
 
-% ESSENTIALS
-% ----------
-% (ref. SAS guide) What would be software essentials ?
-%!SEEHERE: http://pad.constantvzw.org/p/observatory.guide.essentials
-
-
 % TOC:
+
 
 
 % GROUPING: Close encounters -- Meetings between people, software and hardware
@@ -30,13 +26,17 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.visit
 % Interview people about their histories with software
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.jean.heuns
+% --------------------
+% Interview with Jean Huens
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended
+% --------------------
 % Ask several people from different fields and age-groups the same question: "_**What is software?**_"
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.samequestion
-% FMEM and /DEV/MEM
+% FMEM and /DEV/MEM OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.devmem
-% Pan/Monopsychism
+% Pan/Monopsychism OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.monopsychism
-% Setup a Relational software observatory consultancy (see under: Healing)
+% Setup a Relational software observatory consultancy (see under: Healing) NEED SEPARATION?
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.relational
 % Hand reading / blobservation (see under: Healing)
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.blobservation
@@ -46,51 +46,64 @@
 % ============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/txt
 
-% Fountain refreshment
+% Fountain refreshment OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.fountain
-% Compiling a constellation of <PRODUCTIVITY>-Wares
+% --------------------
+% I hope you are comfortable, [insert name] OK
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.ihopeyouarecomfortable
+% --------------------
+% Compiling a constellation of <PRODUCTIVITY>-Wares OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.silvio
-% Useless Scroll against Productivity
+% Useless Scroll against Productivity OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.scrollresistance
-% Investigating the ends of time
+% Investigating the ends of time OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.time
-% How humans and machines negotiate the experience of time (see under: Appendixes)
-% SEEALSO: http://pad.constantvzw.org/p/observatory.guide.timepiece
+% --------------------
+% How humans and machines negotiate the experience of time OK
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.experiencingtime
 
 
 % GROUPING: Languaging -- Observing software as/through writing
 % =============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/txt
 
-% Quine
+% Quine OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.quine
-% Glossaries as an exercise /CARLIN/
+% Glossaries as an exercise /CARLIN/ OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.glossary
-% Adding qualifiers (secure, bad, bourgeois, queer...) /CARLIN/
+% Adding qualifiers (secure, bad, bourgeois, queer...) /CARLIN/ OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.validation
-% Searching "software" through software
+% Searching "software" through software OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.softwarethrough
 % Persist in calling anyone A Software Curious Person
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.everyonescp
 % make up mark up
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.makeupmarkup
 
+
 % GROUPING: Healing and embodiment -- Feeling software
-% !! mm + FS + Anice merged chapters on healing and embodiment
 % ============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.healing/export/txt
 
-% Setup a Relational software observatory consultancy
+% Setup a Relational software observatory consultancy OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.relational
-% Agile Sun Salutation
+% Agile Sun Salutation OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.agile.yoga
-% Hand reading / blobservation
+% --------------------
+% Agile Sun Salutation
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.agilesunsalutation
+% --------------------
+% Hand reading / blobservation OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.blobservation
-% Bug reporting for sharing observations
+% Bug reporting for sharing observations OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.dirty
-% Interface Détournement
+% --------------------
+% When dirty.db get's dirty OK
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.inventory.jogi
+% --------------------
+% Interface Détournement OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.detournement
-% Comportment of software (occupational hazards) /CARLIN/
+% Comportment of software (occupational hazards) /CARLIN/ OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.occupational
 
 
@@ -98,13 +111,13 @@
 % ==============================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.flows/export/txt
 
-% Continuous Integration
+% Continuous Integration OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.continuousintegration
-% Fountain refreshment (see under: Healing and embodiment)
+% Fountain refreshment (see under: Healing and embodiment) OK
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.fountain
 % make make do /CHRISTOPH/
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.pipeline
-% Flowcharts (Flow of the chart – chart of the flow on demand!)
+% Flowcharts (Flow of the chart – chart of the flow on demand!) NEEDS SEPARATION
 % SEEHERE: https://pad.constantvzw.org/p/observatory.guide.flowchart
 % What is it like to be <AN ELEVATOR>? (see under: Beingontheside/inthemiddle/behind)
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.whatisitliketobeanelevator
@@ -114,44 +127,34 @@
 % =============================================================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.inthemidddle/export/txt
 
-% somethinginthemiddlemaybe
+% somethinginthemiddlemaybe OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.somethinginthemiddlemaybe
 % What is it like to be <AN ELEVATOR>?
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.whatisitliketobeanelevator
-% Side Channel Analysis
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.sidechannel
+% Side Channel Analysis OK
+% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.sidechannel 
 
 
 % GROUPING: Collections -- Compiling observations
 % ===============================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.collections/export/txt
 
-% Compiling a bestiary of software logos
+% Compiling a bestiary of software logos CONTENT MISSING
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.bestiary
-% Glossaries as an exercise
+% Glossaries as an exercise OK
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.glossary
-% Encounter several collections of historical hardware back-to-back
+% Encounter several collections of historical hardware back-to-back OK
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.visit
 % Testing the testbed: testing software with observatory ambitions (SWOA)
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.testingtestbed
 % Prepare a reader to think theory with software
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.reader
-% Compiling a constellation of <PRODUCTIVITY>-Wares
+% Compiling a constellation of <PRODUCTIVITY>-Wares - OK????
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.silvio
-
-% APPENDIXES:
-% ===============================
-% How humans and machines negotiate the experience of time
-% NEWPAGE:
-% SEEHERE: https://pad.constantvzw.org/p/observatory.guide.experiencingtime
-% Interview with Jean Huens
-% NEWPAGE:
-% SEEHERE: https://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended
 
 % COLOPHON:
 % =========
-% NEWPAGE:
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.colophon
+% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.colophon
 
 
 % https://pad.constantvzw.org/p/observatory.bib
@@ -258,4 +261,64 @@ How to think about image aesthetics such as:
 
 SAS handbook reference: 
  https://ia801305.us.archive.org/26/items/SASSurvivalHandbookTheUltimateGuideToSurvivingAnywhere/AppNee.com.SAS.Survival.Handbook.2nd.Edition.pdf
+ 
+ 
+ 
+ 
+/////////////////////
+ things to do:
+     
+fix sources
+fix appendix
+fix headers consistency
+ things to ask christoph: 
+     quote
+     headers consistency
+     remember issue
+     lists
+
+size good!
+intro is in process
+group picture at the end
+full poster intead
+remove p.7 pics
+p.9 big pics of poster
+warning fucked
+index not readable
+QUOTE style--make more clear
+CONSISTENT how/what
+HEADERS USE
+p.18
+space between paragraphs 
+REMEMBER
+SOURCE mess consistency----pad snippets//links to pad
+pan/monop why/urgency
+A mia's text to end p.47
+useless scroll need white pages p.55 
+p.56 miss what/info
+p.62
+p.73
+p.74 merge or links with make do
+p.79 generalize "our" make shorter?
+LISTS handling
+p.89 agile yoga select quotes and put text in appendix--
+in agile yoga-->include caption of paper frrom reader
+p.97 rethink
+morre images
+A p.100 jogi to end,generalize
+p.105 headers/example confusion
+p.110, nothing to remember
+A flowchart mess/appendix ***
+links
+p.140 quotes/generalize elevator
+p.145 Side-channel needs editing ***
+collection misisng
+p.154 reader: more stuff
+Appendix
+	needs a start page
+	think headers/style
+colophon name all paticipants and group picture
+
+FLOWCHART/TESTBED
+
 

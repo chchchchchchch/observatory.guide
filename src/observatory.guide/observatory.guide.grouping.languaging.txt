@@ -1,0 +1,47 @@
+%    __NOPUBLISH__
+%!HEADER: Languaging
+%!SUBH: Observing software as/through writing.
+
+> Motivation:    
+> - capitalism as sorcery (Isabelle Stengers): we are under the black magic of capitalist wor(l)d making    
+> - reclaim a power of saying: we have the feeling that some words are imposed on us 
+> [@observatory:2017:vocabulary]
+
+% QUOTESTYLE: intro
+
+> She is in search of "a different al­phabet, a different language,"
+> a means of communication which would be "constantly in the process
+> of weaving itself, at the same time ceaselessly embracing words and
+> yet casting them off to avoid becoming fixed, immobilized.
+> [@[pg.140]plant:1997:zeroes]
+
+% QUOTESTYLE: intro
+
+> It is surprising how rarely language appears in the list of relevant
+> programming metaphors, despite periodic attempts to envisage program
+> code as a form of literary expression. It is as if we have become so
+> accustomed to think of programming languages as languages - that we
+> forget that this analogy has its own history.
+> [@[pg.43]nofre:2014:when]
+
+% QUOTESTYLE: intro
+
+> We write on paper, but we write to a magnetic disk (or tape). Part of
+> what the preposition contributes here is a sense of interiority;
+> because we cannot see anything on its surface, the disk is semantically
+> refigured as a volumetric receptacle, a black box with a closed lid.
+> If we were writing on the disk we would be able to see the text, like a
+> label. Instead, the preposition of choice, “to,” becomes a marker for our
+> intuition that the verb “write” is not altogether appropriate, a rough fit at best.
+> [@[pg.101]kirschenbaum:2004:extreme]
+
+% QUOTESTYLE: intro
+
+>Just as freedom of speech is a convenient myth under which something else
+> entirely can safely be left to occur, the ideal of a word processor is
+> that it creates an enunciative framework that remains the same whether what
+> is being written is a love letter or a tax return. What kind of language is
+> the language of Word?
+> [@[pg.146]fuller:2003:behind]
+
+% QUOTESTYLE: intro

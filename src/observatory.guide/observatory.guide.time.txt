@@ -1,12 +1,10 @@
-% METHOD: Investigating the ends of time
+% METHOD: The ends of time
 
 % REMEMBER:
 
-% WHAT:  - 
+% WHAT: Command line scripts to investigate computer clocks, system cycles and software temporalities.
 
-% SHOW: http://observatory.constantvzw.org/images/Screenshot_from_2017-06-10_172547.png
-
-% HOW: python script
+% HOW:
 % WHEN:
 % WHO:
 % URGENCY:
@@ -14,19 +12,11 @@
 
 % WARNING:
 
-% EXAMPLE: - 
-
-
-% -----------------------
-
-# ends of time
+% EXAMPLE: The Year 2038 problem
 
 https://en.wikipedia.org/wiki/Year_2038_problem
-
 Exact moment of the epoch:
 03:14:07 UTC on 19 January 2038
-
-## commands
 
 local UNIX time of this machine
 % SRCCODE: bash date +%s
@@ -34,8 +24,7 @@ local UNIX time of this machine
 UNIX time + 1
 % SRCCODE: bash echo $((`date +%s` +1 ))
 
-
-## goodbye unix time
+% EXAMPLE: Goodbye unix time
 
 % -------
     while :
@@ -45,7 +34,7 @@ UNIX time + 1
     done
 % SRCCODE: bash
 
-# Sundial Time Protocol Group tweaks
+% EXAMPLE:  Sundial Time Protocol Group tweaks
 
 % -------
     printf 'Current Time in Millennium Unix Time: '
@@ -60,10 +49,11 @@ UNIX time + 1
     echo
 % SRCCODE: bash
 
-http://observatory.constantvzw.org/etherdump/ends-of-time.html
-
+% http://observatory.constantvzw.org/images/Screenshot_from_2017-06-10_172547.png
+% SHOW: tgsoimages.svg timeimg
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.experiencingtime
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.scrollresistance
-% SOURCE:
+% SOURCE: Method extracted from notes on [the ends of time](http://observatory.constantvzw.org/etherdump/ends-of-time.html). On the following pages a reflection by Hans Lammerant, _How humans and machines negotiate the experience of time_.
+
 

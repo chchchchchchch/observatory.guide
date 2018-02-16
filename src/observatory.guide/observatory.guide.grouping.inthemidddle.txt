@@ -1,0 +1,41 @@
+%!HEADER: Invasive observations
+%!SUBH: Being on the side, in the middle or behind
+
+
+> looking away from the 'center', towards peripheries;
+> observe the 'negative' space of software. whats around it
+> [@observatory:2017:vocabulary]
+
+% QUOTESTYLE: intro
+
+> Infrastructure-as-a-service (IaaS) cloud-computing services
+> provide virtualized system resources to end users, supporting
+> each tenant in a separate virtual machine (VM). Fundamental to
+> the economy of clouds is high resource utilization achieved by
+> sharing: providers co-host multiple VMs on a single hardware 
+> platform, relying on the underlying virtual-machine monitor (VMM)
+> to isolate VMs and schedule system resources.
+> While virtualization creates the illusion of strict isolation and
+> exclusive resource access, in reality the virtual resources map to
+> shared physical resources, creating the potential of interference
+> between co-hosted VMs. A malicious VM may learn information on data
+> processed by a victim VM and even conduct side-channel attacks on
+> cryptographic implementations.
+> [@[pg.605]liu:2015:last-level]
+
+% QUOTESTYLE: intro
+
+> Unlike proprietary software, SaaSS does not require covert code to
+> obtain the user's data.  Instead, users must send their data to the
+> server in order to use it.  This has the same effect as spyware:
+> the server operator gets the data—with no special effort, by the nature
+> of SaaSS [...] With SaaSS, the server operator can change the software
+> in use on the server.  He ought to be able to do this, since it's his
+> computer; but the result is the same as using a proprietary application
+> program with a universal back door: someone has the power to silently
+> impose changes in how the user's computing gets done.
+> [@stallman:2012:what]
+
+% QUOTESTYLE: intro
+
+% NEEDS ONE MORE QUOTE FROM THE READER

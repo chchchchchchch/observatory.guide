@@ -1,6 +1,31 @@
 http://pad.constantvzw.org/p/observatory.afterlives
 http://pad.constantvzw.org/p/observatory.inventory
 http://pad.constantvzw.org/p/observatory.guide --> 1-2 December
+https://pad.constantvzw.org/p/guide.dearchristoph --> notes to Christoph
+
+
+There are still some editorial things to do:
+
+Review notes, sources and references to follow the same style (Peggy)
+Finish intro (Carlin + Seda)
+Review methods of that are not marked ok (Martino + Anita)
+Add content/expand as much as possible, for example:
+	* http://pad.constantvzw.org/p/observatory.guide.everyonescp
+	* http://pad.constantvzw.org/p/observatory.guide.sidechannel 
+	* http://pad.constantvzw.org/p/observatory.guide.bestiary
+	* http://pad.constantvzw.org/p/observatory.guide.reader
+Finish editing Jean Huens interview (Peggy + Carlin)
+Indexing (??)
+Finish Colophon (Femke)
+
+
+FINISHING THE GUIDE [planning made + e-mailed 09/02]
+
+In the coming weeks, Carlin will be editing. She'll either edit or use comments, %CARLINSAYS:
+In the first week of March, she'll send an e-mail to say she's ready ;-)
+At that time, Christoph will have produced a final pdf as well.
+After that, reponses and fixing, deadline: 23 March
+Final pdf, check and print April 1! not a joke.
 
 9 JANUARY MEETING
 

@@ -5,11 +5,11 @@
 % WHEN:
 % WHO:
 % URGENCY:
-% NOTE:
+% NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide.
 % WARNING:
-% EXAMPLE: - 
+% EXAMPLE: -
 
-% Pull some quotes from the reader, for example from the chapter: Observation and its consequences
+% Pull some quotes from the reader, for example from the chapter: Observation and its consequences.
 
 % Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015
 % http://sci-hub.bz/10.1177/0162243915578486
@@ -39,9 +39,12 @@
 % Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
 % http://observatory.constantvzw.org/books/US395781.pdf
 % PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
-% INFO: Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+% INFO: Sample from the Techno Galactic Software Observatory reader: Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+
+
+
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion
-% SOURCE: http://pad.constantvzw.org/p/observatory.reader
+% SOURCE: The reader for the _Technogalactic Software Observatory_ can be consulted here: http://pad.constantvzw.org/p/observatory.reader
 

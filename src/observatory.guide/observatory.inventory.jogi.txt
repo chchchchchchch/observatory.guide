@@ -1,3 +1,5 @@
+% TOCITEM: When dirty.db get's dirty
+
 from jogi@mur.at to [Observatory] When dirty.db get's dirty
 
 Dear all,
@@ -102,4 +104,5 @@ had happened.
 -- 
 J.Hofmüller     
 `http://thesix.mur.at/`
+
 

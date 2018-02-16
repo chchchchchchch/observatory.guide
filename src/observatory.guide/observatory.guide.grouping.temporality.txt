@@ -1,6 +1,6 @@
 %    __NOPUBLISH__
-% HEADER: Temporality
-% SUBH: Constellations of time and locality
+%!HEADER: Temporality
+%!SUBH: Constellations of time and locality
 
 >[T]he railroad, which worked a revolutionary change in civilization.
 > It increased the tempo of business activities [...]

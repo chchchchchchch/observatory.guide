@@ -1,12 +1,12 @@
 % METHOD: make make do
 
 % REMEMBER:
-% WHAT: Makefile as a method for a promiscuous publication
+% WHAT: Makefile as a method for a promiscuous publication.
 % HOW:
 % WHEN:
 % WHO:
 % URGENCY:
-
+    
 % WARNING: - 
 
 > It possessed many heads, the exact number of which
@@ -134,7 +134,6 @@ print-%:
 
 
 
-%!SOURCE: http://observatory.constantvzw.org/etherdump/makefile.raw.html
-%!SOURCE: https://gitlab.com/fs/pppp
-
+%!SOURCE: [Etherdump makefile](http://observatory.constantvzw.org/etherdump/makefile.raw.html)
+%!SOURCE: Earlier versions of _Make Make Do_ where developed in the context of the [_Promiscuous Pipelines Publication_](https://gitlab.com/fs/pppp)
 

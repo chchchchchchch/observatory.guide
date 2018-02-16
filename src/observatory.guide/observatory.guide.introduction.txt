@@ -1,26 +1,46 @@
-% TOCTITLE: Introduction
+% TOCITEM: Introduction
 
-A guide to techno-galactic software observation
+A Guide to Techno-Galactic Software Observation
 ==========================================
 
-> I am less interested in the critical practice of reflection, of showing once-again
-> that the emperor has no clothes, than in finding a way to _diffract_ critical inquiry
-> in order to make difference patterns in a more worldly way.
+> I am less interested in the critical practice of reflection,
+> of showing once-again that the emperor has no clothes, than in
+> finding a way to diffract critical inquiry in order to make
+> difference patterns in a more worldly way.
 > [@haraway:1996:witness]
 % p429, Haraway, modest witness, 1996 from: http://observatory.constantvzw.org/etherdump/friday.md.diff.html
 
+ 
+A spectre is haunting the galaxy. It is neither revolutionary [@marx:1848:cmanifesto] nor is it a global scale vulnerability [@meltdown:2018:spectre17], but no matter where you happen to be, there is the spectre of a software running somewhere in the background. Look! There it is, looking right back at you. Be it your phone screen or a passing satellite, software's observation and entanglement in the everyday feels complete. 
 
-A spectre is haunting the galaxy. No matter where you happen to be, if you are looking at the worlds around you, there is software running somewhere in the background. Look! There it is, looking right back at you. Be it your phone screen or a passing satellite, software's observation feels complete. Or, is it? The techno-galactic software survival guide that you are reading right now turns this image of a totally observed world on its head, and sets it dancing.
+But is it really? The Techno-Galactic Software Survival Guide is an obsessive fantasy of optimization turned on its head, and stuck to the ceiling of a self-reflecting elevator. It is the ultimate book of dos and don'ts, of forgotten histories and un-inevitable futures, of mindful agile presences and improvisational service architectures, and all that you can and cannot imagine needing in a techno-galaxy. Reading is not enough, software is not just a text, observation is one potential beginning, engagement is tickling.
 
-With the rise of online services, the use of software has increasingly been knitted into the production of software, even while the rhetoric, rights and procedures continue to suggest that use and production constitute separate realms. This knitting together and its corresponding disavowal has an effect on the way software is used and produced that radically alters its operative role in society. The shifts ripple across galaxies, through social structures, working conditions and personal relations, resulting in a profusion of apparatuses aspiring to be seamless while optimizing and monetizing individual and collective flows of information in line with the interests of a handful of actors. The diffusion of software services affects the personal, in the form of intensified identity shaping and self-management. It also affects the public, as more and more libraries, universities and public infrastructures as well as the management of public life rely on "solutions" provided by private companies. Centralizing data flows in the clouds, services blur the last traces of the thin line that separates bio- from necro-politics.
+With the rediscovery of online services in the 1990s [@haigh:2001:soft60], the use of software has increasingly been knitted into the production of software, even while the rhetoric, rights and procedures continue to suggest that use and production constitute separate realms. This knitting together and its corresponding disavowal has an effect on the way software is used and produced that radically alters its operative role in society. The shifts ripple across galaxies, through social structures, working conditions and personal relations, resulting in a profusion of apparatuses aspiring to be seamless while optimizing and monetizing individual and collective flows of information in line with the interests of a handful of actors. The diffusion of software services affects the personal, in the form of intensified identity shaping and self-management. It also affects the public, as more and more libraries, universities and public infrastructures as well as the management of public life rely on "solutions" provided by private companies. Centralizing data flows in the clouds, services blur the last traces of the thin line that separates bio- from necro-politics.
 
-Given how fast these changes resonate and reproduce, there is a growing urgency to engage in a critique of software that goes beyond taking a distance, and that deals with the fact that we are inevitably already entangled. How can we interact, intervene, respond and think with software? What approaches can allow us to recognize the agency of different actors, their ways of functioning and their politics? What methods of observation enable critical inquiry and affirmative discord? What techniques can we apply to resurface software where it has melted into the infrastructure and into the everyday? How can we remember that software is always at work, especially where it is designed to disappear into the background?
 
-We pick up the word "observation", turning it over and around. We bring it right up to our noses and hold it outstretched to get a better look, holding all of the histories of people looking at other people in mind, holding terminals and keyboards in hand. We regard observation as a way to approach software, as one way to organize engagement with its implications. Observation, and the enabling of it through intensive data-centric feedback mechanisms, is part of  the cybernetic principles that underpin present day software production. Our aim was to scrutinize this methodology in its many manifestations, including in "observatories" -- high cost infrastructures of observation troubled by colonial, imperial, empirical traditions and their problematic divisions of nature and culture. And through scrutiny, we hope to open up a set of questions about who gets to observe software (and how) and who is being observed by software (and with what impact)? It is a question of power, one that we answer, at least in part, with critical play. But also with slow pedagogy.
+Given how fast software resonates and reproduces, there is a growing urgency to engage with it in manners that goes beyond taking a distance, and that deal with the fact that we are inevitably already entangled. (% CARLINSAYS: repetitive?) How can we interact, respond and think with software? What approaches can we use to recognize the agency of different actors, their ways of working and their politics? What methods of observation are conducive to critical inquiry and affirmative discord? What techniques can we apply to resurface software, finding the sites where their infrastructures are reconfiguring the everyday? How can we remember that software is always at work, especially where it is designed to disappear into the background? 
 
-or:
+We pick up the word "observation", turning it over and around. (% CARLINSAYS: use past tense?) We are looking forward to a better look , holding all of the stories of people looking at people in mind, holding terminals and keyboards in hand. We sync our breath to the rhythm of our software. We look at this wholistic observation as a way to approach software, as one way to organize engagement with its implications. Observation, and the Enabling of it intensively through data-centric Feedback Mechanisms, is share of the cybernetic spell That underpin s present day software production. Our aim was ??to scrutinize this methodology in its many manifestations, including in "observatories" - high cost infrastructures of observation troubled by colonial, imperial, empirical traditions and their problematic divisions of nature and culture. And through scrutiny, what do you think about who gets to watch software (and how) and who is being observed by software (and with what impact)? It is a question of power, one that we answer, at least in part, with critical play. But also with slow pedagogy.
 
-Together we picked up the word "observation", turning it over and around. We brought it right up to our noses and held it outstretched to get a better look, holding all of the histories of people looking at other people in mind, holding terminals and keyboards in hand. We regarded observation as a way to approach software, as one way to organize engagement with its implications. Observation, and the enabling of it through intensive data-centric feedback mechanisms, is part of  the cybernetic principles that underpin present day software production.
+We pick up the word "observation", turning it over and around. We bring it right up to our noses and hold it outstretched to get a better look, holding all of the histories of people looking at other people in mind, holding terminals and keyboards in hand. We sync our breath to the rhythm of our software. We propose holistic observation as a way to approach software, as one way to organize engagement with its implications. Observation, and the enabling of it through intensive data-centric feedback mechanisms, is part of the cybernetic spells that underpin present day software production.
+
+We respond by cargo cult programming 
+we name the actors, we reject the hierarchies of knowledge, deflect erasures, 
+some call this cargo-culting, we call it method, rejecting their colonial presumption that functionality is the only purpose, and expertise is the only source of knowlede misunderstanding
+criteria for inclusion
+ritual includsion of code with no real purpose, we reject optimization as the only value 
+ritual of shotgun debugging or deep magic
+We question the naming of the non functional as unnecessary, we question the description of code as self-explanatory 
+
+
+Our aim was to scrutinize this methodology in its many manifestations, including in "observatories" -- high cost infrastructures of observation troubled by colonial, imperial, empirical traditions and their problematic divisions of nature and culture. And through scrutiny, we hope to open up a set of questions about who gets to observe software (and how) and who is being observed by software (and with what impact)? It is a question of power, one that we answer, at least in part, with critical play. But also with slow pedagogy.
+
+
+
+
+gold:
+
+Together we picked up the word "observation", turning it over and around. We are here to help you get a better look, holding all of the stories of people looking for people in mind, holding terminals and keyboards in hand. We see how to approach the software, how to organize and engage with its implications. Observation, and the enabling of it through intensive data-centric feedback mechanisms, is part of the cybernetic principles that underpin present day software production.
 
 
 We are techno-galactic as we meet the contemporary paradigms of computation that proudly announce their capability for "scaling up to the universe." We stand here as modest witnesses to the scales of software communities and related political economies that involve and require observation.
@@ -33,12 +53,40 @@ The techno-galactic software survival guide was collectively produced as an outc
 
 Remaining thoughts/notes for inspiration:
 You may want to just throw all your devices away, but before you do so, wouldn't you want to, for once poke them back?
-You may think about retreating to a natural reserve, and live a software free life, but even then, do you think you could manage without talking about your past software troubles.
+You may think about retreating to a wooden cabin, and live a software-free life, but even then, do you think you could manage without talking about your past software troubles.
 And, how about those drawings at the nearby cave, that look eerily similar to an ancient flowchart, you think you can just ignore its poetry?
 
-% http://observatory.constantvzw.org/images/friday/P1010328.JPG
-% SHOW: tgsoimages.svg tgsoteam N
-% INFO: Techno-Galactic Software Observation team, WTC Brussels, June 2017
+kostas axelos, planetary interlude, maybe some bits fit with the intro?:
+
+%  We open ourselves to abysses and we are swallowed up in sys-
+%  tems and totalizations - for these are fragments and segments of
+%  "totality" which establish themselves as total and/or partial totali-
+%  tarisms - without foreseeing what might be the home, the house, the
+%  habitat of living, thinking man, an unfinished, unfinishable being in a
+%  history which is equally so, neither a shell stuck fast to a rock, nor a
+%  simple nomad or vagabond. Mortals wish for the familiar and for
+%  adventure, the known and the unknown, undecided as to who decides
+%  and to what he decides, chosen rather than choosing. Since they are
+%  unable to be their own master, they allow themselves to be fixed,
+%  tossed about, carried away, scattered and put to flight, incapable of
+%  choosing - if choice there be - between success in and in relation to
+%  the world, and the World. All this does not constitute an error; wan-
+%  dering (errance) commands it. 
+ Galactic irony is watching us. 
+%  Dream of a shadow and dispenser of light, conquistador and
+%  deserter of the World, pawn and pioneer, man sets out to conquer
+%  the stars and he ploughs the sea. The assault he launches against the
+%  astral earth and against the celestial stars is not without disaster.
+ Whether he delves into analysis and disintegration -- since he needs
+ analyses, concrete and tangible solutions and experimentations -- or
+ whether he plunges into syntheses -- since the abstracting power and
+ the ungraspable attract him equally --, as precisely and as far as he
+ may cast his nets, what his nets catch and what passes through them
+ communicate. Never quite awake and never quite beclouded, will we
+ learn to live and to see beings and things simultaneously from close
+ up and far away, large and small, in their and in our wandering
+ (errance), in the great World which is at the same time small, where
+ there are no victors - would there be vanquished?
 
 ## The Techno-Galactic Software Observatory
 
@@ -47,13 +95,6 @@ In the summer of 2017, around thirty people gathered in Brussels to explore prac
 The first two days of The Techno-Galactic Software Observatory included visits to the Musée de l'Informatique Pionnière en Belgique [^]{http://www.nam-ip.be} in Namur and the Computermuseum KULeuven[^]{http://www.etwie.be/database/actor/computermuseum-ku-leuven}. In the surroundings of these collections of historical ’numerical artefacts’, we started viewing software in a long-term context. It was an occasion to reflect on the conditions of its appearance, and allowed us to take on current-day questions from a genealogical perspective. What is software? How did it appear as a concept, in what industrial and governmental circumstances? What happens to the material conditions of its production (minerals, factory labor, hardware) when it evaporates into a cloud?
 
 The second two days we focused on the space-time dimension of IT development. The way computer programs and operating systems are manufactured changed tremendously through time, and so did its production times and places. From military labs via the mega-corporation cubicles to the open-space freelancer utopia, what ruptures and continuities can be traced in the production, deployment, maintenance and destruction of software? From time-sharing to user-space partitions and containerization, what separations were and are at work? Where and when is software made today?
-
-%!SHOW: tgsoimages.svg tgsoview N
-
-% Let's have one page with more images
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1399
-% SHOW: tgsoimages.svg scppath
-% INFO: Documenting the path of a Software Curious Person going through the Walk-in Clinic
 
 ## The Walk-in Clinic
 
@@ -80,11 +121,14 @@ The last two days at the Techno-galactic software observatory were dedicated to 
 % Software as a Critique as a Service (SaaCaaS) Directory
 % and intake forms for Software Curious People (SCP)
 
-% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1x2 REF:masterlist
+% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1 1x1
+% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 2 1x1
 % INFO: Software as a Critique as a Service (SaaCaaS) Directory
+
 
 % PDF: http://observatory.constantvzw.org/documents/scprecord_FINAL.pdf 1x1 REF:scprecord
 % INFO: Intake Forms for Software Curious People (SCP)
+
 
 
 

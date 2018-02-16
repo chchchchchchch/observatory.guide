@@ -1,4 +1,4 @@
-% METHOD: Create "nannyware": Software that observes and addresses the user
+% METHOD: "Nannyware": Software that observes and addresses the user
 % REMEMBER:
 
 % WHAT: - 
@@ -31,7 +31,7 @@ Nannyware is a form of Content-control software: software designed to restrict o
 > However, it can be an effective aid in personal accountability for adults.
 > There are several available products out there.
 > [@urbanministry:2018:accountabilitysoftware]
-% from ACCOUNTABILITY AND MONITORING SOFTWARE REVIEWS http://www.urbanministry.org/node/4902
+% [from ACCOUNTABILITY AND MONITORING SOFTWARE REVIEWS](http://www.urbanministry.org/node/4902)
 
 
 % URGENCY: - 
@@ -89,7 +89,6 @@ Nannyware is a form of Content-control software: software designed to restrict o
 % Facebook is working on an app to stop you from drunk-posting
 % "Yann LeCun, who overseas the lab, told Wired magazine that the program would be like someone asking you, 'Uh, this is being posted  publicly. Are you sure you want your boss and your mother to see this?'"
 
-% ![This Terminal Dashboard Reminds You to Take a Break When You're Lost Deep Inside the Command Line](https://i.kinja-img.com/gawker-media/image/upload/s--_of0PoM2--/c_fit,fl_progressive,q_80,w_636/eegvqork0qizokwrlemz.png)
 % ![](http://waterlog.gd/images/homescreen.png)
 % ![](https://pbs.twimg.com/media/C6oKTduWcAEruIE.jpg:large)
 
@@ -98,7 +97,7 @@ Nannyware is a form of Content-control software: software designed to restrict o
 
 % RELATESTO:
 
-% SOURCE: Silvio Lorusso
+% SOURCE: This method was developed by Silvio Lorusso, and presented during the worksession. Excerpts taken from his presentation (and related websites): A Constellation of -Wares, Some Thoughts on Mandatory Entrepreneurialism, Work Ethic Dystopia, Psycho-Cybernetics, Nannyware, and the Rhetoric of Software. The full source can be found at: https://cryptpad.fr/slide/#/1/view/p8EiphzdeHeVf1yI3NJGEQ/hWWCDdvOB+ulWbxgpk9Y9Q2ixCSShE8TQRxjRoM80aA/ 
 
-% Excerpts taken from presentation (and related websites): A Constellation of -Wares, Some Thoughts on Mandatory Entrepreneurialism, Work Ethic Dystopia, Psycho-Cybernetics, Nannyware, and the Rhetoric of Software. The full source can be found at: https://cryptpad.fr/slide/#/1/view/p8EiphzdeHeVf1yI3NJGEQ/hWWCDdvOB+ulWbxgpk9Y9Q2ixCSShE8TQRxjRoM80aA/ .
+
 

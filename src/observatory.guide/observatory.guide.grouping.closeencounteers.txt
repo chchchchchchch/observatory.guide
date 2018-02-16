@@ -1,0 +1,42 @@
+%    __NOPUBLISH__
+%!HEADER: Close encounters
+%!SUBH: Meetings between people, software and hardware.
+
+> Descending into the depths of any hardware reveals insights into the computer.
+> [@[pg.19]patterson:2013:computer]
+
+% QUOTESTYLE: intro
+
+> Admittedly, facilitating a usability study is not a natural way
+> to interact with other human beings. So it is totally understandable
+> why most of us have trouble facilitating, making classic **mistakes**
+> such as:[...] **Treat the test session as a conversation rather than
+> an observation**. Talking too much, at inappropriate times, or leading
+> the user can affect what he does and says, which can invalidate part or
+> all of the research findings. Interviewing methods are different from
+> observational methods.
+> [@pernice:2014:talking]
+
+% QUOTESTYLE: intro
+
+> [T]he ENIAC's "master programmer" was not a person, but a machine component,
+> responsible for executing loops and linking sequences together. That is, the
+> master programmer handled the "program control" signal that each unit
+> produced after it successfully executed a function.
+> [@[pg.225]chun:2008:programmability]
+
+% QUOTESTYLE: intro
+
+> I participated in the hackathon much in the spirit of a critique that had
+> run out of steam. I concerned myself to coconstruct knowledge — to make a thing.
+> Although the hackathon did draw people together in a Latourian spirit around
+> a matter of concern, in a very Latourian spirit, this actually existing site
+> of design practice revealed that its politics were in its forms and norms —
+> in its manufactured urgency, in the distance between the studio and the world,
+> and the media ecologies that made it possible to promise to cross that distance
+> without walking it.
+> [@[pg.20]irani:2015:hackathons]
+
+% QUOTESTYLE: intro
+
+

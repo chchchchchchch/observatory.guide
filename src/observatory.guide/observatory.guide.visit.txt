@@ -1,9 +1,7 @@
 % METHOD: Encounter several collections of historical hardware back-to-back
 % REMEMBER:
 % WHAT:
-% HOW: -
-
-This can be done by identifying one or more computer museums and visit them with little time in-between. Visiting a friend with a large basement and lots of left-over computer equipment can help. Seeing and possibly touching hardware from different contexts (state-administration, business, research, ...), periods of time, cultural contexts (California, Germany, French-speaking Belgium) and price ranges allows you to sense the interactions between hardware and software development.
+% HOW: This can be done by identifying one or more computer museums and visit them with little time in-between. Visiting a friend with a large basement and lots of left-over computer equipment can help. Seeing and possibly touching hardware from different contexts (state-administration, business, research, ...), periods of time, cultural contexts (California, Germany, French-speaking Belgium) and price ranges allows you to sense the interactions between hardware and software development.
 
 % WHEN:
 % WHO:
@@ -16,18 +14,24 @@ This can be done by identifying one or more computer museums and visit them with
 
 At one point during the demonstration of a Bull computer, the guide revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression about early code usign many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
 
-Preserving old hardware in order to observe physical manifestation of software. 
-See software here : we did experienced the incredible possibility of actually touching software.
+Preserving old hardware is a means of observing the physical manifestation of software. Operating older computers can result in actually touching software.
 
 % http://observatory.constantvzw.org/images/wednesday/IMG_20170607_113634_585.jpg
 % SHOW: tgsoimages.svg spaghetticode N
 % http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMG_1163.JPG?m=1496916927
 % SHOW: tgsoimages.svg softwareboxes N
 
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3244
+% SHOW: tgsoimages.svg touchingsoftware N
 
-% EXAMPLE: Playing with the binary. Bull cards. Happy operator! Punch card plays.
+
+% EXAMPLE: Play with binary. Create punch cards.
 
 "The highlight of the collection is to revive a real punch card workshop of the 1960s."
+
+% http://observatory.constantvzw.org/images/wednesday/P1010145.JPG
+% http://observatory.constantvzw.org/images/wednesday/P1010254.JPG
+% SHOW: tgsoimages.svg commandpunch N
 
 % http://observatory.constantvzw.org/images/wednesday/P1040696.JPG
 % SHOW: tgsoimages.svg punchcard N
@@ -35,8 +39,8 @@ See software here : we did experienced the incredible possibility of actually to
 % SHOW: tgsoimages.svg bull N
 % Atelier mécanographique Bull complet http://www.histoireinform.com/Histoire/+Infos/perf_atldenis.jpg
 
-% TODO: visual research bull
 
+% TODO: visual research bull
 
 % EXAMPLE: Collection de la Maison des Écritures d'Informatique & Bible, Maredsous  
 
@@ -46,11 +50,17 @@ The idea of introducing informatics into the work of working with/on the Bible (
 % http://gallery.constantvzw.org/var/resizes/Preparing-the-Techno-galactic-Software-Observatory/DSC05019.JPG?m=1490635726
 % SHOW: tgsoimages.svg maredsous N
 
-% TODO: some images from the visit
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3267
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3271
+% SHOW: tgsoimages.svg lexique N
 
-
-
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3273
+% http://observatory.constantvzw.org/images/thursday/IMG_20170607_111954_122.jpg
+% SHOW: tgsoimages.svg glitchlogo N
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.jean.heuns
-% SOURCE: http://www.histoireinform.com/Histoire/+Infos/jmclcadr.htm
+% SOURCE: [Machines à cartes perforées de marque Bull](http://www.histoireinform.com/Histoire/+Infos/jmclcadr.htm)
+
+
+
 

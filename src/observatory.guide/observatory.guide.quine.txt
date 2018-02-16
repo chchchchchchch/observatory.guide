@@ -44,5 +44,5 @@ some exploits manage to include operations in a database
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.monopsychism
-% SOURCE: Part of Aquine, a discussion of and research into dualism in software http://observatory.constantvzw.org/etherdump/auqinas.diff.html
+% SOURCE: This method is part of _Aquine_, a discussion of and research into dualism in software. Notes: http://observatory.constantvzw.org/etherdump/auqinas.diff.html
 

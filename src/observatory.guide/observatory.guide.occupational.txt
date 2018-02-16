@@ -9,14 +9,18 @@
 > colloquial wisdom, judgements, and assessments of it.
 > [@geertz:1975:commonsense]
 
-
 % WHAT: Observe and catalog the common gestures, common comportments, and common sense(s) surrounding software.
-% HOW: This can be done through observation of yourself or others. Separate the apprehended and matter of fact from the meanings, actions, reactions, judgements, and assessments that the apprehension occasions. Step 1: Begin by assembling a list of questions such as: When you see a software application icon what are you most likely to do? When a software application you are using presents you with a user agreement what are you most likely to do? When a software applciation does something that frustrates you what are you most likely to do? When a software application you are using crashes what are you most likely to do? Step 2: Write down your responses and the responses of any subjects you are observing. Step 3: For each question, think up three other possible responses. Write these down. Step 4: (this step is only for the very curious) Try the other possible responses out the next time you encounter each of the given scenarios.
+
+% NOTE: The common senses and comportments of software are of course informed and conditioned by those of hardware and so perhaps this is more accurately a method for articulating comportments of computing. 
+% WARNING: Software wears on both individual and collective bodies and selves. Software may harm your physical and emotional health and that of your society both by design and by accident.
+% HOW: - 
+This can be done through observation of yourself or others. Separate the apprehended and matter of fact from the meanings, actions, reactions, judgements, and assessments that the apprehension occasions. 
+1. Begin by assembling a list of questions such as: When you see a software application icon what are you most likely to do? When a software application you are using presents you with a user agreement what are you most likely to do? When a software applciation does something that frustrates you what are you most likely to do? When a software application you are using crashes what are you most likely to do?
+2. Write down your responses and the responses of any subjects you are observing. 
+3. For each question, think up three other possible responses. Write these down. 
+4. (this step is only for the very curious) Try the other possible responses out the next time you encounter each of the given scenarios.
 % WHO:
 % URGENCY: 
-% NOTE: The common senses and comportments of software are of course informed and conditioned by those of hardware and so perhaps this is more accurately a method for articulating comportments of computing. 
-
-% WARNING: Software wears on both individual and collective bodies and selves. Software may harm your physical and emotional health and that of your society both by design and by accident.
 
 % EXAMPLE: 
 

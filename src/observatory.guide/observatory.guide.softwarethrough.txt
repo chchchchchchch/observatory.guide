@@ -1,6 +1,6 @@
 % METHOD: Searching "software" through software
 % WHAT: A quick way to sense the ambiguity of the term 'software', is to go through the manual files on your hard drive and observe in which cases is the term used.
-% HOW: command-line oneliner
+% HOW: Command-line oneliner
 % WHY: Software is a polymorphic term that take different meanings and comes with different assumptions for the different agents involved in its production, usage and all other forms of encounter and subjection. From the situated point of view of the software present on your machine, when and why does software call itself as such?
 
 % EXAMPLE: - 
@@ -21,6 +21,6 @@ we don't run software. we still run programs.
 nevertheless software is everywhere     
 
 
-% SOURCE: [Day1], etherpad snippet, line 574-589 http://observatory.constantvzw.org/etherdump/files.md.diff.html
+% SOURCE: See notes line 574-589 [Day1](http://observatory.constantvzw.org/etherdump/files.md.diff.html)
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion
 

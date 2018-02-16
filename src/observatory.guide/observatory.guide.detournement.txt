@@ -1,9 +1,16 @@
 % METHOD: Interface Détournement
 
-% URGENCY:  Warning ! Warning ! We are under the black magic of capitalism digital interface making ! SOS, SOS ! Our critical radar detected some conceptual gibberish over here ! 
-% WHAT: Tired of the digital economy jargon and Silicon Valley excessive rhetorics ? If you have the feeling that some words are imposed to you and want to reclaim a power of saying/naming, here you will learn how to do a satirical détournement by adding parody and poetry to your favorite bullshit website interface. Heal your eyes and brain by scratching and diffracting the surface of eveyday browsing. 
+% WARNING: We are under the black magic of capitalist digital interface making! Critical radars will detect some conceptual gibberish over here!
+% WHAT: Satirical détournement of your favorite bullshit website interface, through parody and poetry. Heal your eyes and brain by scratching and diffracting the surface of eveyday browsing. 
 
-% HOW: - 
+% URGENCY:  If you have the feeling that some words are imposed to you and want to reclaim a power of saying/naming. 
+
+% WHEN: When your reach the limit of tolerance for the jargon of digital economy and Silicon Valley rethorics.
+% WHO:
+% NOTE:
+% REMEMBER: Be careful in planning your interface hoax, you might get caught for fake news design and circulation. 
+
+% HOW: -
 
 1. Choose a particular website where you want to intervene. You can pick an interface in relation to:  
   * contestable content: bullshit slogans and jargon, problematic rhetoric, unnecessary content interesting to reframe, etc.
@@ -14,13 +21,6 @@
   * The layout and template observation: study the interface layout by removing all the textual content. The layout will appear, after having done this exercise on several interfaces you will be able to compare the regularities between websites. Then feel free to move elements and reconstruct the interface the way you want. 
 4. After having done your détournement, you can share the outcome of your work as a hoax: present the new interface you have done just as if it was a mundane and "real" one. Observe the reactions of the tested credulous and refine your détournement with their insights. You can also take a screenshot of your work and send it to an audience.
 
-% WHEN: When your realize that all the interfaces around you and the digital economy jargon makes you anxious. 
-% WHO:
-% NOTE:
-% WARNING: Be careful in planning your interface hoax, you might get caught for fake news design and circulation. 
-
-%!EXAMPLE: - 
-
 %!EXAMPLE: Example of an interface template study by Henrik Jan Grievink: 
 % https://www.flickr.com/photos/hendrikjangrievink/sets/72157614340281527
 % SHOW: tgsoimages.svg uigrievink
@@ -30,5 +30,5 @@
 % SHOW: tgsoimages.svg probdox
 % INFO: Example of an interface detournement of the dropbox website
 
-% SOURCE: Loup Cellard
+% SOURCE: The _Interface Détournement_-method was developed by Loup Cellard.
 

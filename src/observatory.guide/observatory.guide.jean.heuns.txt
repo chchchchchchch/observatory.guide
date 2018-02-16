@@ -2,41 +2,48 @@
 
 % REMEMBER: 
 
-% WHAT: Observe personnal narratives around software history. Retrace the path of relation to software, how it changed during the years and what are the human access memories that surrounds it. To look at software through personal relations and emotions.
-% HOW:  Interviews are a good way to do it. Informal conversations also.
-% WHEN: 21/12/2018
-% WHO: http://www.huens.be/JH/
-% URGENCY: high
+% WHAT: Observing personal narratives around software history. Retracing the path of relation to software, how it changed during the years and what are the human access memories that surrounds it. Looking at software through personal relations and emotions.
+% HOW: Interviews are a good way to do it, but informal conversations work, too.
+% WHEN: Whenever (retirement period is a plus)
+% WHO: Anyone with any kind of experience with softwares for more than ten years
+% URGENCY: High.
 % NOTE: 
 
-% WARNING:  If not recorded the oral history will be lost
+% WARNING: If not recorded the oral history will be lost
 
-% EXAMPLE:
+
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3350
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3343
+% SHOW: tgsoimages.svg kuleuven2
+
+% EXAMPLE: - 
 
 Jean Heuns has been collecting servers, calculators, softwares, magnetic tapes hard disks for xxx years. Found an agreement for them to be displayed in the department hallways.
 Department of Computer sciences - Kul Leuven.
 
 % [a few quotes to the interview transcription go here, interview in appendix]
 
-" At the time computers were mainframes and you did fed them with programms by punch cards. Programing was writing down the program, than you punched it and the next day you get results, mostly errors, that the way it worked at that time. To teach us programing, they used the langage of that time, fortran and some kind of invented assembly langage, it didn't really exist, it was simplified."
+"At the time computers were mainframes and you did feed them with programms by punch cards. Programming was writing down the program, then you punched it and the next day you get results, mostly error. That's the 
+way it worked at that time. To teach us programming, they used the langage of that time, Fortran and some kind of invented assembly langage, it didn't really exist, it was simplified.."
 
-"I remember punchcards were a block of papers, we were jealous of the people who came in the computer center with huge stacks of cards. That were really small programs, not complicated one. The fact you had to learn to use the computer from scratch, everything was new, you couldn't rely on previous experiences, everything was new. And to start with small programms was difficult enough. 
-That was also the time when Edsger W. Dijkstra who forked the goto... i still remember him, in an audience, giving us a lecture on modernisation in programming at the International computing symposium 1977 in Liège (programming: from craft to scientific discipline https://www.cs.utexas.edu/users/EWD/transcriptions/EWD05xx/EWD566.html). He told usxx (i'll complete it as soon as possible. i need Jean's input)"
+*% ![http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3304]
 
-
-"I remember the first program i had to work on. You got three numbers, you had to make the program decide if you caxn construct a triangle with the numbers being the sides of the triangle."
-
+No. As an anecdocte, i remember punchcards were a block of papers, we were jealous of the people who came into the computer center with huge stacks of cards. They were really small programs, not complicated one. In fact you had to learn to use the computer from scratch, everything was new, you couldn't rely on previous experiences, everything was new. And to start with small programs was difficult enough. "
 
 
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3356
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3343
-% SHOW: tgsoimages.svg kuleuven2
+"I remember the first program i had to work on. You got three numbers, you had to make the program decide if you can construct a triangle with the numbers being the sides of the triangle."
 
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3350
+**How did you see the rise of personnal computer and the software that goes with?**
+"I have to admit that we missed it. We didn't see that what was new was powerful. We were not impressed by the software. I remember windows 95, the news on TV, people sleeping on the street to get it. I remember when i get my first windows version, with a box of 22 floppies or so. Then i wanted to do something, to compile a program, but there was no compiler."
+
+"For me software is the magic that make computer usable."
+
+
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3361
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3355
 % SHOW: tgsoimages.svg kuleuven1
 
+% RELATESTO: 
+% SOURCE: Quotes taken from the interview with Jan Huens, see following pages.
 
-% RELATESTO:
-% SOURCE:
 
