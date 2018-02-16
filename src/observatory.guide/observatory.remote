@@ -1,12 +1,17 @@
 % META PADS -----------------------------------
 
-http://pad.constantvzw.org/p/observatory.methods/export/txt         -> observatory.methods.txt
-http://pad.constantvzw.org/p/observatory.methods/export/etherpad    -> observatory.methods.ep
-http://pad.constantvzw.org/p/observatory.inventory/export/txt       -> observatory.inventory.txt
-http://pad.constantvzw.org/p/observatory.inventory/export/etherpad  -> observatory.inventory.ep
-http://pad.constantvzw.org/p/observatory.afterlives/export/txt      -> observatory.afterlives.txt
-http://pad.constantvzw.org/p/observatory.afterlives/export/etherpad -> observatory.afterlives.ep
-
+https://pad.constantvzw.org/p/observatory.methods/export/txt          -> observatory.methods.txt
+https://pad.constantvzw.org/p/observatory.methods/export/etherpad     -> observatory.methods.ep
+https://pad.constantvzw.org/p/observatory.inventory/export/txt        -> observatory.inventory.txt
+https://pad.constantvzw.org/p/observatory.inventory/export/etherpad   -> observatory.inventory.ep
+https://pad.constantvzw.org/p/observatory.reader/export/txt           -> observatory.reader.txt
+https://pad.constantvzw.org/p/observatory.reader/export/etherpad      -> observatory.reader.ep
+https://pad.constantvzw.org/p/observatory.afterlives/export/txt       -> observatory.afterlives.txt
+https://pad.constantvzw.org/p/observatory.afterlives/export/etherpad  -> observatory.afterlives.ep
+https://pad.constantvzw.org/p/observatory.bib/export/txt              -> observatory.bib.txt
+https://pad.constantvzw.org/p/observatory.bib/export/etherpad         -> observatory.bib.ep
+https://pad.constantvzw.org/p/guide.dearchristoph/export/txt          -> guide.dearchristoph.txt
+https://pad.constantvzw.org/p/guide.dearchristoph/export/etherpad     -> guide.dearchristoph.ep
 
 % DUMP PADS -----------------------------------
 
@@ -46,11 +51,16 @@ http://pad.constantvzw.org/p/observatory.guide.bestiary/export/txt              
 http://pad.constantvzw.org/p/observatory.guide.visit/export/txt                      -> observatory.guide.visit.txt
 http://pad.constantvzw.org/p/observatory.guide.testingtestbed/export/txt             -> observatory.guide.testingtestbed.txt
 http://pad.constantvzw.org/p/observatory.guide.reader/export/txt                     -> observatory.guide.reader.txt
-http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/txt           -> observatory.guide.experiencingtime.txt
-http://pad.constantvzw.org/p/observatory.guide.colophon/export/txt                   -> observatory.guide.colophon.txt
-http://pad.constantvzw.org/p/observatory.inventory.jogi/export/txt                   -> observatory.inventory.jogi.txt
-
 http://pad.constantvzw.org/p/observatory.guide.flowchart/export/txt                  -> observatory.guide.flowchart.txt
+http://pad.constantvzw.org/p/observatory.guide.makeupmarkup/export/txt               -> observatory.guide.makeupmarkup.txt
+
+http://pad.constantvzw.org/p/observatory.guide.agilesunsalutation/export/txt         -> observatory.guide.agilesunsalutation.txt
+http://pad.constantvzw.org/p/observatory.guide.ihopeyouarecomfortable/export/txt     -> observatory.guide.ihopeyouarecomfortable.txt
+http://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended/export/txt       -> observatory.guide.jeanhuensitvextended.txt
+http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/txt           -> observatory.guide.experiencingtime.txt
+http://pad.constantvzw.org/p/observatory.inventory.jogi/export/txt                   -> observatory.inventory.jogi.txt
+http://pad.constantvzw.org/p/observatory.guide.colophon/export/txt                   -> observatory.guide.colophon.txt
+
 http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers/export/txt  -> observatory.guide.grouping.closeencounteers.txt
 http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/txt       -> observatory.guide.grouping.temporality.txt
 http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/txt        -> observatory.guide.grouping.languaging.txt
@@ -97,11 +107,14 @@ http://pad.constantvzw.org/p/observatory.guide.bestiary/export/etherpad         
 http://pad.constantvzw.org/p/observatory.guide.visit/export/etherpad                      -> observatory.guide.visit.ep
 http://pad.constantvzw.org/p/observatory.guide.testingtestbed/export/etherpad             -> observatory.guide.testingtestbed.ep
 http://pad.constantvzw.org/p/observatory.guide.reader/export/etherpad                     -> observatory.guide.reader.ep
-http://pad.constantvzw.org/p/observatory.guide.colophon/export/etherpad                   -> observatory.guide.colophon.ep
+http://pad.constantvzw.org/p/observatory.guide.flowchart/export/etherpad                  -> observatory.guide.flowchart.ep
+http://pad.constantvzw.org/p/observatory.guide.makeupmarkup/export/etherpad               -> observatory.guide.makeupmarkup.ep
+http://pad.constantvzw.org/p/observatory.guide.agilesunsalutation/export/etherpad         -> observatory.guide.agilesunsalutation.ep
+http://pad.constantvzw.org/p/observatory.guide.ihopeyouarecomfortable/export/etherpad     -> observatory.guide.ihopeyouarecomfortable.ep
+http://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended/export/etherpad       -> observatory.guide.jeanhuensitvextended.ep
 http://pad.constantvzw.org/p/observatory.guide.experiencingtime/export/etherpad           -> observatory.guide.experiencingtime.ep
 http://pad.constantvzw.org/p/observatory.inventory.jogi/export/etherpad                   -> observatory.inventory.jogi.ep
-
-http://pad.constantvzw.org/p/observatory.guide.flowchart/export/etherpad                  -> observatory.guide.flowchart.ep
+http://pad.constantvzw.org/p/observatory.guide.colophon/export/etherpad                   -> observatory.guide.colophon.ep
 http://pad.constantvzw.org/p/observatory.guide.grouping.closeencounteers/export/etherpad  -> observatory.guide.grouping.closeencounteers.ep
 http://pad.constantvzw.org/p/observatory.guide.grouping.temporality/export/etherpad       -> observatory.guide.grouping.temporality.ep
 http://pad.constantvzw.org/p/observatory.guide.grouping.languaging/export/etherpad        -> observatory.guide.grouping.languaging.ep
