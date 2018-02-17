@@ -739,11 +739,13 @@
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %
    \newcommand\descriptormethod[3]{%
-  
-     \clearpage
-      \vfill
-       \pagebreak[2]
-        \bigskip
+     ~
+     \vfill
+      \clearpage
+
+      \pagebreak[2]
+       \grafikinline{\iconmethod}{}%
+        \vspace*{-3\baselineskip}%  
          \begin{flushleft}
           \begin{spacing}{1.0}
            \scalefont{3}#3
@@ -942,13 +944,13 @@
     \vfill
      \descriptorskip
       \medskip
-         \begin{framed}
+       \begin{framed}
         \hspace{-1.5em}%
          \grafikinline{\iconwarningmargin}{\hspace{1.5em}}%
           \descriptorlabel{WARNING}%
            \hspace{-.5em} #3 %
             \smallskip
-         \end{framed}
+        \end{framed}
         \medskip\vfill
    \fi
   }
