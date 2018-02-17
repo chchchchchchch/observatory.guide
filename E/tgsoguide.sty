@@ -85,6 +85,7 @@
   \renewcommand*{\rmdefault}{\rmstandard}\selectfont
   \renewcommand*{\sfdefault}{\sfstandard}\selectfont
 
+
   % https://tex.stackexchange.com/questions/83440/
   % -> inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex
   \DeclareUnicodeCharacter{00A0}{~}
@@ -936,17 +937,18 @@
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorwarning[3]{%
    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
-   \grafikinline{\iconwarninginline}{}%
+    \grafikinline{\iconwarninginline}{}%
    \else
-      \vfill
-       \descriptorskip
-        \medskip
-        \grafikinline{\iconwarningmargin}{}%
-         \vspace*{-2\parskip}
+    \vfill
+     \descriptorskip
+      \medskip
          \begin{framed}
-           \descriptorlabel{WARNING} #3 %
+        \hspace{-1.5em}%
+         \grafikinline{\iconwarningmargin}{\hspace{1.5em}}%
+          \descriptorlabel{WARNING}%
+           \hspace{-.5em} #3 %
             \smallskip
-           \end{framed}
+         \end{framed}
         \medskip\vfill
    \fi
   }
