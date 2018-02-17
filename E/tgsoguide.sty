@@ -73,25 +73,29 @@
 
    \newcommand{\embody}{}
  % CHANGE \emph FOR BODYTEXT
-   \DeclareTextFontCommand{\emph}{%
+  \DeclareTextFontCommand{\emph}{%
      \ifbodytext%
      \embody
      \else\em %
      \fi%
-    }
-  %\renewcommand{\embody}{\fontfamily{pju}\fontshape{it}%
-  %                       \selectfont\relscale{1.2}}
-   \renewcommand{\embody}{\it}
+   }
+  \renewcommand{\embody}{\it}
 
-   \renewcommand*{\ttdefault}{\ttstandard}\selectfont
-   \renewcommand*{\rmdefault}{\rmstandard}\selectfont
-   \renewcommand*{\sfdefault}{\sfstandard}\selectfont
+  \renewcommand*{\ttdefault}{\ttstandard}\selectfont
+  \renewcommand*{\rmdefault}{\rmstandard}\selectfont
+  \renewcommand*{\sfdefault}{\sfstandard}\selectfont
 
-%  \let\OldTexttt\texttt
-%  \renewcommand{\texttt}[1]{%
-%  \OldTexttt{\fontfamily{\ttstandard}%
-%              \selectfont{%
-%               \relscale{.95}{##1}}}}
+  % https://tex.stackexchange.com/questions/83440/
+  % -> inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex
+  \DeclareUnicodeCharacter{00A0}{~}
+  \DeclareUnicodeCharacter{00AD}{\allowbreak}
+  \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
+
+  \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
+  \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
+  \newcommand{\symtrapez}{\grafikinline{\iconchartrapez}{}}
+  \newcommand{\symarrowright}{\grafikinline{\iconchararrowright}{}}
+  \newcommand{\symarrowleft}{\grafikinline{\iconchararrowleft}{}}
 
 % --------------------------------------------------------------------------- %
 %  B A S I C
@@ -281,15 +285,6 @@
 % --------------------------------------------------------------------------- %
 % C O D E   E N V I R O N M E N T S
 % --------------------------------------------------------------------------- %
-
-  \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
-  \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
-  \newcommand{\symtrapez}{\grafikinline{\iconchartrapez}{}}
-  \newcommand{\symarrowright}{\grafikinline{\iconchararrowright}{}}
-  \newcommand{\symarrowleft}{\grafikinline{\iconchararrowleft}{}}
-
-  \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
-
 
   \renewcommand{\kwa}{\bfseries}
   \renewcommand{\kwb}{\kwa}
