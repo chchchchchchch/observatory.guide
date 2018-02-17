@@ -1108,4 +1108,38 @@ function A(){
 
 # --------------------------------------------------------------------------- #
 
+function PP() {
+
+  PPASKS=`echo $*            | #
+          eval $PANDOCACTION | # DISPLAY/TRANSLATE
+          sed 's,</*p>,,g'`    # REMOVE <P> TAGS
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src ""
+        write2src "\medskip"
+        write2src "\bf"
+        echo "$PPASKS" >> $SRCDUMP
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function JH() {
+
+  JHSAYS=`echo $*            | #
+          eval $PANDOCACTION | # DISPLAY/TRANSLATE
+          sed 's,</*p>,,g'`    # REMOVE <P> TAGS
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src ""
+        write2src "\nopagebreak[4]"
+        write2src "\smallskip"
+        write2src "\normalfont"
+        echo "$JHSAYS" >> $SRCDUMP
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
 
