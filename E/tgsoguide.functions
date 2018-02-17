@@ -87,7 +87,6 @@ function SEEHERE() {
   REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
   if [ $REPLYPLUS == '200' ]; then
        SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
-
   SRCHREF=`echo $SRCBASE | sed 's/^[ ]*//'` # LINK TO SRC, EASIFY EDIT
 
   IDX=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
@@ -98,7 +97,7 @@ function SEEHERE() {
 
   if [ -f "${TMPID}.${IDX}.mdsh" ];then
 
-     SEETITLE=`egrep "^% METHOD:|^% TOCTITLE:" ${TMPID}.${IDX}.mdsh | #
+     SEETITLE=`egrep "^% METHOD:|^% TOCITEM:" ${TMPID}.${IDX}.mdsh | #
                head -n 1 | cut -d ":" -f 2-`
      if [ `echo $SEETITLE | wc -c` -gt 2 ];then
            echo "${SEEID}:$SEETITLE" >> ${TMPID}.toc
@@ -113,6 +112,48 @@ function SEEHERE() {
      fi
 
      echo "${SEEID}:2:$*" >> ${TMPID}.index
+     INCLUDE $SRCGET 
+
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function ATTACHMENT() {
+
+  SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
+  REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
+  if [ $REPLYPLUS == '200' ]; then
+       SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
+  SRCHREF=`echo $SRCBASE | sed 's/^[ ]*//'` # LINK TO SRC, EASIFY EDIT
+
+  IDT=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
+  ATTID=`echo ${IDT} | md5sum | cut -d " " -f 1 | #
+         base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
+
+  getFile $SRCGET ${TMPID}.${IDT}.mdsh
+
+  if [ -f "${TMPID}.${IDT}.mdsh" ];then
+
+     ATTTITLE=`egrep "^% TOCITEM:|^% HEADER:" ${TMPID}.${IDT}.mdsh | #
+               head -n 1 | cut -d ":" -f 2-`
+     if [ `echo $ATTTITLE | wc -c` -gt 2 ];then
+           echo "${ATTID}:$ATTTITLE" >> ${TMPID}.toc
+     else 
+           echo "${ATTID}: Untitled" >> ${TMPID}.toc
+     fi
+
+     if [ "$OUTPUTFORMAT" == pdf ];then 
+            ANCHOR="\label{$ATTID}" 
+     elif [ "$OUTPUTFORMAT" == html ];then 
+            ANCHOR="<span class=\"anchor\" id=\"$ATTID\"></span>" 
+     fi
+
+     echo "${ATTID}:3:$*" >> ${TMPID}.index
+
+    #write2src "$ANCHOR"
+     write2src "\cleartoright"
      INCLUDE $SRCGET 
 
   fi
@@ -150,7 +191,7 @@ function RELATESTO() {
 
 # --------------------------------------------------------------------------- #
 
-function TOCTITLE() {
+function TOCITEM() {
 
   # ANCHOR SET IN % SEEHERE
     write2src "$ANCHOR"
@@ -873,6 +914,26 @@ function NEWPAGE() {
   if [ "$OUTPUTFORMAT" == pdf ];then
 
         write2src '\newpage'
+  fi
+
+}
+# --------------------------------------------------------------------------- #
+function EMPTYPAGE() {
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+
+       write2src '\emptypage'
+
+  fi
+
+}
+# --------------------------------------------------------------------------- #
+function HEADER() {
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+
+        write2src "\section{$*}"
+        write2src "$ANCHOR"
   fi
 
 }
