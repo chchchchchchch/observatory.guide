@@ -1049,4 +1049,63 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
+function MEAS() {
+
+  MEASWHAT=`echo $* | sed 's/ //g'`
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\textbf{...meAs${MEASWHAT}:}"
+  fi
+}
+
+# --------------------------------------------------------------------------- #
+
+function WWAS() {
+
+  WWASWHAT=`echo $* | cut -d ":" -f 1 | sed 's/ //g'`
+  WWASWHATIS=`echo $* | cut -d ":" -f 2- | #
+              cut -d ":" -f 2-           | #
+              eval $PANDOCACTION         | # DISPLAY/TRANSLATE
+              sed 's,</*p>,,g'`            # REMOVE <P> TAGS
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\textbf{...ww.As${WWASWHAT}:}"
+        write2src "{\em"
+        echo $WWASWHATIS >> $SRCDUMP
+        write2src "}"
+  fi
+}
+
+# --------------------------------------------------------------------------- #
+
+function Q(){
+
+  QIS=`echo $*            | #
+       cut -d ":" -f 2-   | #
+       eval $PANDOCACTION | # DISPLAY/TRANSLATE
+       sed 's,</*p>,,g'`    # REMOVE <P> TAGS
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\newline\textbf{Q:}"
+        echo "$QIS" >> $SRCDUMP
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function A(){
+
+  AIS=`echo $*            | #
+       cut -d ":" -f 2-   | #
+       eval $PANDOCACTION | # DISPLAY/TRANSLATE
+       sed 's,</*p>,,g'`    # REMOVE <P> TAGS
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\newline\textbf{A:}"
+        echo "$AIS" >> $SRCDUMP
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
 
