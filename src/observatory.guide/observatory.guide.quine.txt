@@ -24,7 +24,6 @@
 The encounter with quines may deeply affect you. 
 You may want to write one and get lost in trying to make an ever shorter and more elegant one.
 You may also take quines as point of departure or limit-ideas for exploring software dualisms.
-
 % http://observatory.constantvzw.org/etherdump/auqinas 79-82
 
 "A quine is without why. It prints because it prints. It pays no attention to itself, nor does it asks whether anyone sees it."    

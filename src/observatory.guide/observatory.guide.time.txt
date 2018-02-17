@@ -41,19 +41,22 @@ UNIX time + 1
     printf $((2147483647 - `date +%s`))
     echo
     sleep 2
-    echo $((`cat ends-of-times/idletime` + 2)) > ends-of-times/idletime
+    echo $((`cat ends-of-times/idletime` + 2)) \
+         > ends-of-times/idletime
     idletime=`cat ends-of-times/idletime`
     echo
-    figlet "Thank you for having donated 2 seconds to our ${idletime} seconds of collective SSH  pause "
+    figlet "Thank you for having donated 2 seconds to \
+           our ${idletime} seconds of collective SSH  pause "
     echo 
     echo
 % SRCCODE: bash
+
 
 % http://observatory.constantvzw.org/images/Screenshot_from_2017-06-10_172547.png
 % SHOW: tgsoimages.svg timeimg
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.experiencingtime
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.scrollresistance
-% SOURCE: Method extracted from notes on [the ends of time](http://observatory.constantvzw.org/etherdump/ends-of-time.html). On the following pages a reflection by Hans Lammerant, _How humans and machines negotiate the experience of time_.
+% SOURCE: Method extracted from notes on [the ends of time.](http://observatory.constantvzw.org/etherdump/ends-of-time.html) On the following pages a reflection by Hans Lammerant, _How humans and machines negotiate the experience of time_.
 
 

@@ -5,20 +5,20 @@
 
 % EXAMPLE: - 
 
-so software exists only outside your computer?
-only in general terms?
-checking for the word software in all man pages:     
+So software exists only outside your computer?
+Only in general terms?
+Checking for the word software in all man pages:     
 
     grep -nr software /usr/local/man
     !!!!     
 
-software appears only in terms of license:      
+Software appears only in terms of license:      
    
     This program is free software
     This software is copyright (c)
     
-we don't run software. we still run programs.     
-nevertheless software is everywhere     
+We don't run software. We still run programs.     
+Nevertheless software is everywhere.  
 
 
 % SOURCE: See notes line 574-589 [Day1](http://observatory.constantvzw.org/etherdump/files.md.diff.html)

@@ -44,7 +44,7 @@ so I like to consider it as unique and special_".
 
 % SOURCE: Pad on [fileflowchart.raw.html](http://observatory.constantvzw.org/etherdump/fileflowchart.raw.html)
 
-% REMEMBER: To answer the question "_what is software_" depends on the situation, goal, time, and other contextual influences.
+%!REMEMBER: To answer the question "_what is software_" depends on the situation, goal, time, and other contextual influences.
 
 % SOURCE: Notes on [Multiple Software Axes](http://observatory.constantvzw.org/etherdump/multiple-software-axes.md.raw.html)
 

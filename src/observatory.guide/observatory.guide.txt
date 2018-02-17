@@ -6,6 +6,7 @@
 % Questions for Christoph https://pad.constantvzw.org/p/guide.dearchristoph
 
 
+
 % INTRODUCTION
 % ------------
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.introduction
@@ -14,8 +15,8 @@
 % http://pad.constantvzw.org/p/observatory.guide.warning
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.warning/export/txt
 
-% TOC:
 
+% TOC:
 
 
 % GROUPING: Close encounters -- Meetings between people, software and hardware
@@ -77,8 +78,8 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.softwarethrough
 % Persist in calling anyone A Software Curious Person
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.everyonescp
-% make up mark up
-% SEEHERE: http://pad.constantvzw.org/p/observatory.guide.makeupmarkup
+%!make up mark up /CANCELLED/
+%!SEEHERE: http://pad.constantvzw.org/p/observatory.guide.makeupmarkup
 
 
 % GROUPING: Healing and embodiment -- Feeling software

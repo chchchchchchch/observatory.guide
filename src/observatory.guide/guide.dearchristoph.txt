@@ -6,7 +6,7 @@ New markup for Carlin's comments
 
 we'll need this for the final editing to appear in the pdf (but without changing text flow?!)
 
-Should be feasible.
+Should be feasible. (% CARLINSAYS: things to say)
 
 
 Pagenumbers

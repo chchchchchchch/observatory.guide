@@ -368,9 +368,9 @@
 
 @misc{ dijksra:1977:craft,
  author = {Edsger W. Dijkstra},
- title  = {Programming:  from craft to scientific discipline},
+ title  = {Programming: From craft to scientific discipline},
  year   = {1977},
- url    = { https://www.cs.utexas.edu/users/EWD/transcriptions/EWD05xx/EWD566.html},
+ url    = {https://www.cs.utexas.edu/users/EWD/transcriptions/EWD05xx/EWD566.html},
  note   = {accessed 9.2.2018}
 }
 

@@ -1,7 +1,6 @@
 % METHOD: Useless scroll against productivity
 
 % REMEMBER:
-
 % WHAT:
 % HOW:
 % WHEN:
@@ -11,19 +10,19 @@
 
 % WARNING:
 
-% EXAMPLE: -
-
+% EXAMPLE: - 
+    
 % EMPTYPAGE:
 % EMPTYPAGE:
 % EMPTYPAGE:
+% EMPTYPAGE:
+% CLEARTORIGHT:
 
 % INCLUDE: http://observatory.constantvzw.org/etherdump/friday.md 201-236 
 
 % RELATESTO:
-
 % SOURCE:
-
 
 % useless scroll against productivity
 % ---------------------------------------------------------------------------------------     
-% SOURCE: This method was discovered at the end of a Etherpad that contained collective notes from Technogalatic Observation sessions taking place on [Friday 8 June, 2017](http://observatory.constantvzw.org/etherdump/friday.md.diff.html).
+% SOURCE: This method was discovered at the end of a Etherpad that contained collective notes from Technogalatic Observation sessions taking place on [Friday 8 June, 2017.](http://observatory.constantvzw.org/etherdump/friday.md.diff.html)
