@@ -902,19 +902,21 @@
   \newcommand\descriptorremember[3]{%
    \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
     \vfill
+     \grafikinline{\iconremembernobox}{\hspace{1.6em}}%
      \makebox[\textwidth][s]{\scalefont{2}%
      \fontfamily{vpi}\selectfont R E M E M B E R}%
-     \vspace{2\bigskipamount}
+     \bigskip
     %\vfill
    \else
-     \vfill
-     \vspace{2\bigskipamount}
-     \makebox[\textwidth][s]{\scalefont{1.9}%
-     \fontfamily{cgt}\selectfont R E M E M B E R}%
-              \raisebox{.5\baselineskip}{\hspace{1em}\footnotemark}
-     \footnotetext{#3}
-     \vspace{3\bigskipamount}
-     \vfill
+     \begin{framed}
+      \hspace{-1.5em}%
+       \grafikinline{\iconrememberbox}{\hspace{1.6em}}%
+       \makebox[\textwidth][s]{\scalefont{2}%
+        \fontfamily{vpi}\selectfont R E M E M B E R}
+         \smallskip
+          \hspace{-.5em} #3 %
+           \smallskip
+        \end{framed}
    \fi
   }
 % ------------------------------------------------------------------------- %
