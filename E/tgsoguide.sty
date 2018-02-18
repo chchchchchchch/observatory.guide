@@ -200,8 +200,7 @@
 
 % --------------------------------------------------------------------------- % 
 %  F O O T N O T E S  
-% --------------------------------------------------------------------------- % 
- 
+% --------------------------------------------------------------------------- %  
   \renewcommand{\footnotelayout}{\raggedright} 
  
 % SMALLER DISTANCE FOOTNOTENUMBER AND TEXT 
@@ -220,6 +219,7 @@
 % SAVE FOR RESET 
   \newlength{\SKIPFOOTINS} 
   \setlength{\SKIPFOOTINS}{\skip\footins}
+
 
 % --------------------------------------------------------------------------- %
 % Q U O T E
@@ -249,6 +249,7 @@
      \fontfamily{iad}\selectfont
   }{\end{flushleft}\smallskip}
 
+
 % --------------------------------------------------------------------------- %
 % L I S T S
 % --------------------------------------------------------------------------- %
@@ -262,6 +263,7 @@
   %  \let\ENDITEMIZE\enditemize
   %  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
   %                            {\ENDITEMIZE\end{samepage}}
+
 
 % --------------------------------------------------------------------------- %
 % C O D E   E N V I R O N M E N T S
@@ -370,6 +372,7 @@
    \thispagestyle{empty}}
   {\pagebreak[4]}
 
+
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
 % --------------------------------------------------------------------------- %
@@ -391,8 +394,8 @@
   % http://tex.stackexchange.com/questions/6143/
   % -> if-then-else-for-odd-page-even-page
   \ifthispageodd{}{\emptypage}
- }
-% --------------------------------------------------------------------------- %
+  }
+
 
 % --------------------------------------------------------------------------- %
 % GRAPHICS
@@ -407,11 +410,6 @@
                scale=1,pages=#2#3]{#1}
   }
 % --------------------------------------------------------------------------- %
- % \newcommand{\anchorinlineicon}[1]{%
- %  % http://www.weinelt.de/latex/raisebox.html
- %  \raisebox{-.4\baselineskip}[\baselineskip][\baselineskip]{ %
- %  \includegraphics[height=1.5\baselineskip]{#1}}\hspace{-.8em} %
- % }
   \newcommand{\grafikinline}[2]{%
      % http://www.weinelt.de/latex/raisebox.html
      \raisebox{-14\baselineskip}[\baselineskip]   % 
@@ -458,7 +456,6 @@
       }}
   \end{figure}
   }
-
 % --------------------------------------------------------------------------- % 
   \newcommand\anchor[3]{%
     \if\relax\detokenize{#3}\relax
@@ -475,26 +472,37 @@
        \anchorinfo{#1}{#2}
       \fi
     \fi
-  }
-% --------------------------------------------------------------------------- %
-  \newcommand\pageinfo[4]{%
-   \if\relax\detokenize{#4}\relax
-    % #4 EMPTY -> DO NOTHING
-    \else % #4 NON-EMPTY
-    \if\relax\detokenize{#3}\relax
-     \makebox[\textwidth][l]{%
-      \hspace{#1}%
-       \parbox{\textwidth}{%
-        \vspace*{#2}
-         \colorbox{white}{%
-         {\footnotesize\parbox{.97\textwidth}{
-           \smallskip
-            \color{black} #4 %
-             \smallskip}
-     }}}}
+   }
+ % ------------------------------------------------------------------------ %
+   \newcommand\pageinfo[4]{%
+    \if\relax\detokenize{#4}\relax
+     % #4 EMPTY -> DO NOTHING
+     \else % #4 NON-EMPTY
+     \if\relax\detokenize{#3}\relax
+      \makebox[\textwidth][l]{%
+       \hspace{#1}%
+        \parbox{\textwidth}{%
+         \vspace*{#2}
+          \colorbox{white}{%
+          {\footnotesize\parbox{.97\textwidth}{
+            \smallskip
+             \color{black} #4 %
+              \smallskip}
+      }}}}
+      \fi
      \fi
-    \fi
-  }
+    }
+ % ------------------------------------------------------------------------ %
+   \newcommand{\boxinfo}[2]{
+       \if\relax\detokenize{#1}\relax
+          \colorbox{white}{%
+          {\footnotesize\parbox{.97\textwidth}{
+            \smallskip
+             \color{black} #2 %
+              \smallskip}
+        }} \fi
+   }
+ % ------------------------------------------------------------------------ %
 
 % --------------------------------------------------------------------------- % 
   % \usepackage{wrapfig}
@@ -603,15 +611,6 @@
       % ------------------------------------ %
   }
 % --------------------------------------------------------------------------- %
-  \newcommand{\boxinfo}[2]{
-      \if\relax\detokenize{#1}\relax
-         \colorbox{white}{%
-         {\footnotesize\parbox{.97\textwidth}{
-           \smallskip
-            \color{black} #2 %
-             \smallskip}
-       }} \fi
-  }
   \newcommand{\imghuge}[4]{
       % ------------------------------------ %
       % INSERT ANCHOR (OPTIONAL)
