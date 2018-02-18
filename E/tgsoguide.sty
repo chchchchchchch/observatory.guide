@@ -46,9 +46,7 @@
 % --------------------------------------------------------------------------- %
 %  F O R M A T
 % --------------------------------------------------------------------------- %
-
   % A6
-  %\setlength\textheight{.83\paperheight}
   \setlength\textheight{.81\paperheight}
   \setlength\textwidth{.72\paperwidth}
   \setlength\topmargin{-.16\paperheight}
@@ -141,7 +139,7 @@
   \renewcommand*{\footnoterule}{\vskip 0pt plus .01fil\origfootnoterule}
 
   % PREVENT HYPHENATION FOR WORDS STARTING WITH UPPERCASE
-  %\uchyph=0
+  \uchyph=0
   % PREVENT HYPHENATION OVER PAGE BREAK
   \brokenpenalty10000\relax
 
@@ -175,6 +173,30 @@
   }
 
   \renewcommand{\headrulewidth}{0pt}
+
+% --------------------------------------------------------------------------- %
+%  T A B L E   O F   C O N T E N T S
+% --------------------------------------------------------------------------- %
+  \newcommand{\tocitem}[3]{ %
+  \ifnum\numexpr#1 < 2 
+
+  \textbf{\pageref{#3}} %
+  \textbf{#2} %
+  \else
+   \ifnum\numexpr#1 < 3 
+    {\small #2 \textbf{\pageref{#3}}} %
+   \else
+    {\small #2 \textbf{\pageref{#3}}} %
+   \fi
+  \fi
+  }
+
+  \newenvironment{tocpage}
+  {\pagebreak[4] %
+   \begin{samepage}
+   \cleartoleft\cleartoright %
+   \thispagestyle{empty}}
+  {\end{samepage}\pagebreak[4]}
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
@@ -220,7 +242,7 @@
   \setlength{\SKIPFOOTINS}{\skip\footins}
 
 % --------------------------------------------------------------------------- %
-% Q U O T E
+%  Q U O T E
 % --------------------------------------------------------------------------- %
   \makeatletter
   \renewenvironment{quote}
@@ -249,7 +271,7 @@
 
 
 % --------------------------------------------------------------------------- %
-% L I S T S
+%  L I S T S
 % --------------------------------------------------------------------------- %
 
   \setitemize[0]{leftmargin=4pt,rightmargin=4pt} % (P:enumitem)
@@ -264,7 +286,7 @@
 
 
 % --------------------------------------------------------------------------- %
-% C O D E   E N V I R O N M E N T S
+%  C O D E   E N V I R O N M E N T S
 % --------------------------------------------------------------------------- %
 
   \renewcommand{\kwa}{\bfseries}
@@ -318,7 +340,6 @@
    \renewcommand{\emptylinelst}{\vspace{1\baselineskip}}
    }
 
-
   \newcommand{\lstReset}{\lstset{language={}}
                          \renewcommand{\emptylinelst}{\vspace{.5\baselineskip}}}
   \newcommand{\lstsetBash}{\lstset{language=Bash+,
@@ -358,24 +379,6 @@
 
 
 % --------------------------------------------------------------------------- %
-%  TABLE OF CONTENTS
-% --------------------------------------------------------------------------- %
-  \newcommand{\tocitem}[3]{ %
-  \ifnum\numexpr#1 < 2 
-  \textbf{#2} \textbf{\pageref{#3}} %
-  \else
-  {\small #2 \textbf{\pageref{#3}}} %
-  \fi
-  }
-
-  \newenvironment{tocpage}
-  {\pagebreak[4] %
-   \cleartoleft\cleartoright %
-   \thispagestyle{empty}}
-  {\pagebreak[4]}
-
-
-% --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
 % --------------------------------------------------------------------------- %
   \newcommand{\emptypage}{
@@ -400,7 +403,7 @@
 
 
 % --------------------------------------------------------------------------- %
-% GRAPHICS
+%  G R A P H I C S
 % --------------------------------------------------------------------------- %
    \newcommand\pdfpage[3]{%
    \includepdf[pagecommand={\thispagestyle{fancy}},%
@@ -679,7 +682,7 @@
 
 
 % --------------------------------------------------------------------------- %
-% MDSH TGSO GUIDE (VERY SPECIFIC)
+%  MDSH TGSO GUIDE (VERY SPECIFIC)
 % --------------------------------------------------------------------------- %
 
   % FALLBACK
