@@ -1084,7 +1084,8 @@ function Q(){
        sed 's,</*p>,,g'`    # REMOVE <P> TAGS
 
   if [ "$OUTPUTFORMAT" == pdf ];then
-        write2src "\newline\textbf{Q:}"
+        write2src ""
+        write2src "\textbf{Q:}"
         echo "$QIS" >> $SRCDUMP
   fi
 
