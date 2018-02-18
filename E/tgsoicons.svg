@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1518877393/b448c0ab825a797f3f46b53c17c1255d -->
+<!-- CLEANED: 1518961266/6270513e6761a4bba9a30ca16200c49f -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -2256,8 +2256,7 @@
      inkscape:label="rememberbox"
      inkscape:groupmode="layer"
      id="g3412"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:none">
     <path
        sodipodi:nodetypes="ccccccccccc"
        id="path4025-7-3"
@@ -2288,7 +2287,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="g3419"
      inkscape:groupmode="layer"
      inkscape:label="remembernobox">
@@ -2345,6 +2344,31 @@
        d="m 101.375,78.03687 0,195.17626"
        style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
        id="path3414" />
+  </g>
+  <g
+     inkscape:label="source"
+     inkscape:groupmode="layer"
+     id="g3439"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
+       x="-222.96582"
+       y="97.465851"
+       id="text3410-3"
+       sodipodi:linespacing="100%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         style="font-size:22px;letter-spacing:2px"
+         sodipodi:role="line"
+         id="tspan3412-6"
+         x="-222.96582"
+         y="97.465851"
+         dx="0 0 0 0 0 0 -3.52212 -12.131748">SOURCE::</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       d="m 109.375,44.03687 0,195.17626"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
+       id="path3414-7" />
   </g>
   <g
      inkscape:groupmode="layer"

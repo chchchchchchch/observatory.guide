@@ -134,7 +134,8 @@
   % \else #2\footnote{\http{#1}} \fi
   %}
    \renewcommand{\href}[2]{%
-    \iffootnote #2 (#1)
+    \iffootnote #2
+    \hspace{.5em}\symarrowright\hspace{2.5em}~#1
     \else #2\footnote{#1} \fi
    }
 
@@ -454,7 +455,7 @@
   \newcommand{\grafikinline}[2]{%
      % http://www.weinelt.de/latex/raisebox.html
      \raisebox{-14\baselineskip}[\baselineskip]   % 
-                                [.4\baselineskip] % ??
+                                [-1\baselineskip] % ??
      {\hspace{-1.3\marginparwidth} %
      \includegraphics[height=17\baselineskip]{#1}\hspace{-7.3em}#2} %
   }
@@ -999,8 +1000,16 @@
 
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorsource[3]{%
-  \descriptorskip
-  \descriptorlabel{SOURCE}\hspace{-.3em} #3
+    \vfill
+     \descriptorskip
+      \begin{framed}%
+       \bodytextfalse\footnotetrue%
+        \vspace*{-1.5em}\hspace{-1.5em}%
+         \grafikinline{\iconsource}{\hspace{1.8em}}%
+         {\small#3} %
+           \smallskip %
+        \end{framed}
+    \medskip\vfill
   }
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorbox[3]{%
