@@ -140,14 +140,9 @@
   \let\origfootnoterule\footnoterule
   \renewcommand*{\footnoterule}{\vskip 0pt plus .01fil\origfootnoterule}
 
-% DON'T START CHAPTER ON NEW PAGE AUTOMATICALLY
-%  \makeatletter
-%  \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-%  \makeatother
-
-% PREVENT HYPHENATION FOR WORDS STARTING WITH UPPERCASE
-% \uchyph=0
-% PREVENT HYPHENATION OVER PAGE BREAK
+  % PREVENT HYPHENATION FOR WORDS STARTING WITH UPPERCASE
+  %\uchyph=0
+  % PREVENT HYPHENATION OVER PAGE BREAK
   \brokenpenalty10000\relax
 
   % https://tex.stackexchange.com/questions/83440/
@@ -197,15 +192,19 @@
   \let\Subsubsection\subsubsection
   \renewcommand\subsubsection[1]{\Subsubsection*{#1}}
 
+  % DON'T START CHAPTER ON NEW PAGE AUTOMATICALLY
+  % \makeatletter
+  % \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+  % \makeatother
 
 % --------------------------------------------------------------------------- % 
 %  F O O T N O T E S  
 % --------------------------------------------------------------------------- %  
   \renewcommand{\footnotelayout}{\raggedright} 
  
-% SMALLER DISTANCE FOOTNOTENUMBER AND TEXT 
+  % SMALLER DISTANCE FOOTNOTENUMBER AND TEXT 
   \let\oldfootnote\footnote 
-% \, = small non-breaking space 
+  % \, = small non-breaking space 
   \renewcommand\footnote[1]{\,\oldfootnote{#1}} 
   \setlength{\footnotemargin}{1em} 
   \setlength{\footskip}{15mm} 
@@ -216,10 +215,9 @@
       \rule{\textwidth}{0.5pt}{ 
        \vspace*{-3pt} 
   }} 
-% SAVE FOR RESET 
+  % SAVE FOR RESET 
   \newlength{\SKIPFOOTINS} 
   \setlength{\SKIPFOOTINS}{\skip\footins}
-
 
 % --------------------------------------------------------------------------- %
 % Q U O T E
