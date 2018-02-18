@@ -236,9 +236,11 @@
   \let\Section\section
   \renewcommand\section[1]{\Section*{#1}}
   \let\Subsection\subsection
-  \renewcommand\subsection[1]{\Subsection*{#1}}
+ %\renewcommand\subsection[1]{\Subsection*{#1}}
+  \renewcommand\subsection[1]{\Subsection*{#1}\vspace{-1\medskipamount}}
   \let\Subsubsection\subsubsection
-  \renewcommand\subsubsection[1]{\Subsubsection*{#1}}
+ %\renewcommand\subsubsection[1]{\Subsubsection*{#1}}
+  \renewcommand\subsubsection[1]{\Subsubsection*{#1}\vspace{-1\medskipamount}}
 
   % DON'T START CHAPTER ON NEW PAGE AUTOMATICALLY
   % \makeatletter
