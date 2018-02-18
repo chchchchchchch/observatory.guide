@@ -346,7 +346,9 @@
   \lstnewenvironment{quaverbatim}[1]{\lstsetQuaverbatim}{}
 
   \newcommand{\lstinputplain}[1]{\lstsetCode{1}\lstReset %
-                                  \lstinputlisting{#1}}
+                                  \smallskip
+                                   \lstinputlisting{#1}
+                                    \smallskip}
   \newcommand{\lstinputbashcode}[1]{\lstsetCode{1.5}\lstsetBash %
                                     \lstinputlisting{#1}}
   \newcommand{\lstinputpythoncode}[1]{\lstsetCode{1}\lstsetPython %
@@ -961,8 +963,11 @@
 % ------------------------------------------------------------------------- %
   \newcommand\descriptorbox[3]{%
    \begin{framed}
-    \smallskip #3
-     \end{framed}
+    #3
+     \medskip
+      ~
+      \vfill
+   \end{framed}
   }
 % ------------------------------------------------------------------------- %
    \newcommand\carlinsays[1]{ %
