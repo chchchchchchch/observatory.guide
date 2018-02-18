@@ -181,7 +181,7 @@ function RELATESTO() {
           base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
-          write2src "\descriptorrelates{$RELID}{TTTTITLE}" 
+          write2src "\descriptorrelates{$RELID}{CCCHAR}{TTTTITLE}" 
    elif [ "$OUTPUTFORMAT" == html ];then 
           sleep 0
    fi
@@ -207,12 +207,13 @@ function TOCITEM() {
         REFID=`echo $REF | sed 's/\(.*\)\([a-z0-9]\{8\}\).*/\2/'`
         REFTITLE=`grep $REFID ${TMPID}.toc     | #
                   head -n 1 | cut -d ":" -f 2- | #
-                 #$PANDOCACTION         | # TRANSLATE TO OUTPUT FORMAT
                   pandoc --no-wrap -r markdown -w plain | #
                   sed 's,</*p>,,g'      | # RM <p> TAGS (HTML ONLY, DO ANYWAY)
                   sed 's/\\\/\\\\\\\/g' | # THE GREAT ... 
                   sed 's/\//\\\\\//g'`    # ... ESCAPE
+        REFCHARNUM=`echo $REFTITLE | wc -c`
         sed -i "${REFLN}s/TTTTITLE/$REFTITLE/" $SRCDUMP
+        sed -i "${REFLN}s/CCCHAR/$REFCHARNUM/" $SRCDUMP
     done
   }
  # ------------------------------------------------------------------------- #
@@ -1014,6 +1015,7 @@ function TODO() {
 
  # WRAP URLS IN COMMAND
    sed -i '/^[\%]/!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
+ # TEST:  '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},'
 
   }
 

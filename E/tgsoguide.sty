@@ -958,32 +958,7 @@
    \fi
   }
 % ------------------------------------------------------------------------- %
-% \newcommand\descriptorrelates[2]{%
-%  \begin{flushleft}
-%  \grafikinline{\iconseeinline} %
-%               {\hspace{-.5em}} %
-%    \symarrowleft \hspace{2em}
-%    \descriptorlabel{SEE ALSO}\hspace{.5em}%
-%    #2 \mbox{(\hspace{-.5em}
-%              \symarrowright\hspace{2em}
-%              \underline{P.\pageref{#1}} )}\\
-%  \end{flushleft}
-% }
-% \newcommand\descriptorrelates[2]{%
-%  \begin{flushleft}
-%  \grafikinline{\iconseeinline} %
-%               {\hspace{.2em}} %
-%    \descriptorlabel{SEE ALSO}\hspace{.1em}%
-%    #2 
-
-%    \vspace{-1\baselineskip}
-%    \mbox{\hspace{-4em}
-%          \symarrowright\hspace{2em}
-%          \underline{P.\pageref{#1}}}\\
-%    \vspace{-1\parskip}
-%  \end{flushleft}
-% }
-  \newcommand\descriptorrelates[2]{%
+  \newcommand\descriptorrelates[3]{%
    \begin{flushleft}
    \grafikinline{\iconrelatepages} %
                 {\hspace{0em}} %
@@ -993,8 +968,13 @@
            \symarrowright\hspace{2em} %
            \underline{P.\pageref{#1}}} %
     }} %
-   \hspace{-.6em}\vspace*{-.7\baselineskip}
-   \descriptorlabel{SEE ALSO}\hspace{-.3em} #2     
+   \hspace{-.6em}\vspace*{-.8\baselineskip}
+   \descriptorlabel{SEE ALSO}\hspace{-.4em}
+   \ifnum\numexpr#2 < 75 % CHARS FIT ONE LINE
+     \\\hspace{.2em}#3   
+   \else
+     #3
+   \fi
    \end{flushleft}
   }
 
