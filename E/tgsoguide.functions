@@ -167,7 +167,7 @@ function SEEALSO() {
   IDA=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
   SEAID=`echo ${IDA} | md5sum | cut -d " " -f 1 | #
          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
-  echo "${SEAID}:3:$*" >> ${TMPID}.index
+  echo "${SEAID}:2:$*" >> ${TMPID}.index
 }
 
 # --------------------------------------------------------------------------- #
