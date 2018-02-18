@@ -275,7 +275,7 @@
   \lstset{ %
     basicstyle=\fontencoding{T1}\linespread{#1}
                \fontfamily{ipm}\selectfont%
-               \footnotesize,
+               \small,
     commentstyle=\scalefont{1}, 
     keywordstyle = \kwa, 
     keywordstyle = [2]{\kwb}, 
@@ -290,7 +290,7 @@
     breaklines=flase, 
     showstringspaces=false, 
     aboveskip=1em, 
-    xleftmargin=0cm, 
+    xleftmargin=1em, 
     upquote=true, 
   % https://tex.stackexchange.com/a/24532
     inputencoding=utf8,
@@ -323,8 +323,10 @@
                          \renewcommand{\emptylinelst}{\vspace{.5\baselineskip}}}
   \newcommand{\lstsetBash}{\lstset{language=Bash+,
                morekeywords = [2]{write2src,getFile,
-                                  mkqr,getVerbatim
-             }}}
+                                  mkqr,getVerbatim},
+               basicstyle=\fontencoding{T1}\linespread{1.5}
+                          \fontfamily{ipm}\selectfont\scriptsize}
+              }
   \newcommand{\lstsetPython}{\lstset{language=Python,
                                      basicstyle=\fontencoding{T1}\linespread{1.5}
                                                  \fontfamily{ipm}\selectfont\footnotesize}
