@@ -58,15 +58,7 @@
 % --------------------------------------------------------------------------- %
 %  F O N T S
 % --------------------------------------------------------------------------- %
-
   \newcommand{\ttstandard}{ipm} % https://fontain.org/fira-code
- %\newcommand{\rmstandard}{phv}
- %\newcommand{\sfstandard}{phv}
- %\newcommand{\rmstandard}{grm} % https://fontain.org/roboto-mono 
- %\newcommand{\rmstandard}{aut} % https://fontain.org/titillium
- %\newcommand{\sfstandard}{aut}
- %\newcommand{\rmstandard}{dai} % https://fontain.org/aileron
- %\newcommand{\sfstandard}{dai}
   \newcommand{\rmstandard}{mar} % https://fontain.org/arimo
   \newcommand{\sfstandard}{mar}
   \newcommand{\ttzwo}{iad}
@@ -79,24 +71,11 @@
      \else\em %
      \fi%
    }
-  \renewcommand{\embody}{\it}
 
   \renewcommand*{\ttdefault}{\ttstandard}\selectfont
   \renewcommand*{\rmdefault}{\rmstandard}\selectfont
   \renewcommand*{\sfdefault}{\sfstandard}\selectfont
-
-
-  % https://tex.stackexchange.com/questions/83440/
-  % -> inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex
-  \DeclareUnicodeCharacter{00A0}{~}
-  \DeclareUnicodeCharacter{00AD}{\allowbreak}
-  \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
-
-  \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
-  \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
-  \newcommand{\symtrapez}{\grafikinline{\iconchartrapez}{}}
-  \newcommand{\symarrowright}{\grafikinline{\iconchararrowright}{}}
-  \newcommand{\symarrowleft}{\grafikinline{\iconchararrowleft}{}}
+  \renewcommand{\embody}{\it}
 
 % --------------------------------------------------------------------------- %
 %  B A S I C
@@ -121,7 +100,6 @@
   \titlespacing\section{0pt}{20pt plus 30pt minus 15pt}{2pt plus 3pt minus 0pt}
 
   \newcommand{\http}[1]{{\fontfamily{\ttzwo}\selectfont\seqsplit{#1}}} %
- %\newcommand{\http}[1]{{\fontfamily{\ttzwo}\selectfont#1}} %
 
   % https://groups.google.com/forum/#!topic/pandoc-discuss/O-N0H1eBnVU
   %\renewcommand{\href}[2]{#2\footnote{\http{#1}}}
@@ -171,16 +149,22 @@
 % \uchyph=0
 % PREVENT HYPHENATION OVER PAGE BREAK
   \brokenpenalty10000\relax
-% PREVENT PAGE BREAK WITHIN LISTS
-%  \let\ITEMIZE\itemize
-%  \let\ENDITEMIZE\enditemize
-%  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
-%                            {\ENDITEMIZE\end{samepage}}
+
+  % https://tex.stackexchange.com/questions/83440/
+  % -> inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex
+  \DeclareUnicodeCharacter{00A0}{~}
+  \DeclareUnicodeCharacter{00AD}{\allowbreak}
+  \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
+
+  \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
+  \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
+  \newcommand{\symtrapez}{\grafikinline{\iconchartrapez}{}}
+  \newcommand{\symarrowright}{\grafikinline{\iconchararrowright}{}}
+  \newcommand{\symarrowleft}{\grafikinline{\iconchararrowleft}{}}
 
 % --------------------------------------------------------------------------- %
 % P A G E   H E A D E R /  F O O T E R
 % --------------------------------------------------------------------------- %
-
   % http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr
   \pagestyle{fancy}
   \fancyhead{} % CLEAR DEFAULT
@@ -203,15 +187,6 @@
   \chapterfont{\large\setstretch{1.0}}
   \sectionfont{\relscale{0.9}\setstretch{0.9}}
   \subsectionfont{\relscale{0.9}}
-
- %\let\Chapter\chapter
- %\renewcommand\chapter[1]{\Chapter*{#1}}
- %\let\Section\section
- %\renewcommand\section[1]{\newpage\Section*{#1}}
- %\let\Subsection\subsection
- %\renewcommand\subsection[1]{\newpage\Subsection*{#1}}
- %\let\Subsubsection\subsubsection
- %\renewcommand\subsubsection[1]{\newpage\Subsubsection*{#1}}
 
   \let\Chapter\chapter
   \renewcommand\chapter[1]{\Chapter*{#1}}
@@ -274,8 +249,6 @@
      \fontfamily{iad}\selectfont
   }{\end{flushleft}}
 
-
-
 % --------------------------------------------------------------------------- %
 % L I S T S
 % --------------------------------------------------------------------------- %
@@ -283,6 +256,12 @@
   \setitemize[0]{leftmargin=4pt,rightmargin=4pt} % (P:enumitem)
   \setlist[enumerate]{leftmargin=1.2em}
   \setlist{noitemsep} % (P:enumitem)
+
+  % PREVENT PAGE BREAK WITHIN LISTS
+  %  \let\ITEMIZE\itemize
+  %  \let\ENDITEMIZE\enditemize
+  %  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
+  %                            {\ENDITEMIZE\end{samepage}}
 
 % --------------------------------------------------------------------------- %
 % C O D E   E N V I R O N M E N T S
@@ -710,19 +689,9 @@
      \cleartoright %
    }
 
- % VERTICAL SPACE HACK
- % http://tex.stackexchange.com/questions/61627/
- % -> prevent-action-if-top-of-page
- % \newcommand\vspacenotonpagetop[1]{%
- %    \par % make sure we end a paragraph
- %    \vskip#1 % space above the rule
- %    \leaders\vrule width \textwidth\vskip0pt % rule thickness is 0pt
- %    \nointerlineskip % disable interline glue here
- %    \vskip#1 % space below the rule
- % }
  % ------------------------------------------------------------------------- %
    \newlength{\abovedescriptor}
-   \setlength{\abovedescriptor}{10pt plus 10pt minus 15pt}
+   \setlength{\abovedescriptor}{15pt plus 10pt minus 15pt}
    \newcommand{\descriptorskip}{\pagebreak[1]%
                                 \vspace{\abovedescriptor}}
    \newcommand{\descriptorlabel}[1]{%
@@ -750,7 +719,7 @@
            \scalefont{3}#3
             \end{spacing}%
              \end{flushleft}%
-      \vspace{-2\abovedescriptor}\vfill
+      \vspace{-1.5\abovedescriptor}\vfill
    }
  % ------------------------------------------------------------------------- %
    \newcommand\descriptorhow[3]{%
