@@ -722,9 +722,7 @@
  % }
  % ------------------------------------------------------------------------- %
    \newlength{\abovedescriptor}
-   \setlength{\abovedescriptor}{10pt plus 4pt minus 4pt}
-  %\newcommand{\descriptorskip}{\pagebreak[0]%
-  %                             \vspace*{\abovedescriptor}}
+   \setlength{\abovedescriptor}{10pt plus 10pt minus 15pt}
    \newcommand{\descriptorskip}{\pagebreak[0]%
                                 \vspace{\abovedescriptor}}
    \newcommand{\descriptorlabel}[1]{%
@@ -752,6 +750,7 @@
            \scalefont{3}#3
             \end{spacing}%
              \end{flushleft}%
+      \vspace{-2\abovedescriptor}\vfill
    }
  % ------------------------------------------------------------------------- %
    \newcommand\descriptorhow[3]{%
@@ -913,10 +912,10 @@
       \hspace{-1.5em}%
        \grafikinline{\iconrememberbox}{\hspace{1.6em}}%
        \makebox[\textwidth][s]{\scalefont{2}%
-        \fontfamily{vpi}\selectfont R E M E M B E R}
-         \smallskip
-          \hspace{-.5em} #3 %
-           \smallskip
+        \fontfamily{vpi}\selectfont R E M E M B E R}%
+         \vspace{\smallskipamount}%
+          \hspace{-.5em}#3%
+           \vspace{\bigskipamount}%
         \end{framed}
    \fi
   }
