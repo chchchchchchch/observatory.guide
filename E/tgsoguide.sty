@@ -156,7 +156,7 @@
   \newcommand{\symarrowleft}{\grafikinline{\iconchararrowleft}{}}
 
 % --------------------------------------------------------------------------- %
-% P A G E   H E A D E R /  F O O T E R
+%  P A G E   H E A D E R /  F O O T E R
 % --------------------------------------------------------------------------- %
   % http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr
   \pagestyle{fancy}
@@ -177,26 +177,52 @@
 % --------------------------------------------------------------------------- %
 %  T A B L E   O F   C O N T E N T S
 % --------------------------------------------------------------------------- %
+  \newcounter{toccheck}\setcounter{toccheck}{1}
   \newcommand{\tocitem}[3]{ %
   \ifnum\numexpr#1 < 2 
+   \setcounter{toccheck}{1}
 
-  \textbf{\pageref{#3}} %
-  \textbf{#2} %
-  \else
-   \ifnum\numexpr#1 < 3 
-    {\small #2 \textbf{\pageref{#3}}} %
+  {\small\textbf{\pageref{#3}}~~%
+  %\hspace{1.5em}\symarrowleft\hspace{3.5em}%
+   \textbf{#2}~::~}%               % 1 = GROUPING
    \else
-    {\small #2 \textbf{\pageref{#3}}} %
-   \fi
+    \ifnum\numexpr#1 < 3 
+     \setcounter{toccheck}{1}
+      {\small#2~~\textbf{\pageref{#3}}}     % 2 = METHOD
+    \else
+     \ifnum\numexpr#1 < 4 
+      \setcounter{toccheck}{1}
+      {\small{\fontfamily{iad}\selectfont%
+       #2~}\textbf{\pageref{#3}}}           % 3 = ATTACHMENT
+     \else
+       \ifnum\value{toccheck} < 2
+ 
+      {{\small#2~~\textbf{\pageref{#3}}}}   % 4 = INTRO/COLOPHON/=STANDARDS
+       \else
+      {{\small#2~~\textbf{\pageref{#3}}}}   % 4 = INTRO/COLOPHON/=STANDARDS
+       \fi
+      \stepcounter{toccheck}  % INCREASE COUNTER ..
+     \fi
+    \fi
   \fi
   }
 
   \newenvironment{tocpage}
   {\pagebreak[4] %
-   \begin{samepage}
-   \cleartoleft\cleartoright %
-   \thispagestyle{empty}}
-  {\end{samepage}\pagebreak[4]}
+   \pagecolor{black}
+   \cleartoright %
+   \vspace*{-1cm}
+   \thispagestyle{empty}
+   \color{white}
+   \enlargethispage{1cm}
+   \uchyph=1
+   \setstretch{.9}
+  }
+  {\pagebreak[4]
+   \newpage
+   \nopagecolor{}
+   \uchyph=0
+  }
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
