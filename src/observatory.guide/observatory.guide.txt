@@ -12,8 +12,7 @@
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.introduction
 
 % WARNING!
-% http://pad.constantvzw.org/p/observatory.guide.warning
-% INCLUDE: http://pad.constantvzw.org/p/observatory.guide.warning/export/txt
+% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.warning
 
 
 % TOC:

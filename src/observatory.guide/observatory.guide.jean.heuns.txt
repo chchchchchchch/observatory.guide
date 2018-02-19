@@ -2,14 +2,14 @@
 
 % REMEMBER: 
 
-% WHAT: Observing personal narratives around software history. Retracing the path of relation to software, how it changed during the years and what are the human access memories that surrounds it. Looking at software through personal relations and emotions.
+% WHAT: Collect personal narratives around software history. Retrace the path of an individual's relation to software, how it changed during the years, and what human access memories surround it. Look at software through personal relations and emotions.
 % HOW: Interviews are a good way to do it, but informal conversations work, too.
-% WHEN: Whenever (retirement period is a plus)
-% WHO: Anyone with any kind of experience with softwares for more than ten years
+% WHEN: Whenever (retirement period is a plus). (% CARLINSAYS: retirement as in speaking to people who are retired or retirement as in talking to people while they are on a break or resting?)
+% WHO: Anyone with ten years or more of any kind of experience with software.
 % URGENCY: High.
 % NOTE: 
 
-% WARNING: If not recorded the oral history will be lost
+% WARNING: Oral histories will be lost if they are not recorded.
 
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3350
@@ -18,23 +18,22 @@
 
 % EXAMPLE: - 
 
-Jean Heuns has been collecting servers, calculators, softwares, magnetic tapes hard disks for xxx years. Found an agreement for them to be displayed in the department hallways.
-Department of Computer sciences - Kul Leuven.
+Jean Heuns has been collecting servers, calculators, softwares, magnetic tapes hard disks for xxx years (% CARLINSAYS: add the number of years). He came to an agreement with the Department of Computer Sciences (% CARLINSAYS: Kul Leuven? at the University of Leuven?) for them to be displayed in the department hallways.
 
 % [a few quotes to the interview transcription go here, interview in appendix]
 
-"At the time computers were mainframes and you did feed them with programms by punch cards. Programming was writing down the program, then you punched it and the next day you get results, mostly error. That's the 
-way it worked at that time. To teach us programming, they used the langage of that time, Fortran and some kind of invented assembly langage, it didn't really exist, it was simplified.."
+"At the time computers were mainframes and you did feed them with programs by punch cards. Programming was writing down the program, then you punched it, and the next day you get results, mostly error. That's the 
+way it worked at that time. To teach us programming, they used the langage of that time, Fortran and some kind of invented assembly langage, it didn't really exist, it was simplified."
 
 *% ![http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3304]
 
-No. As an anecdocte, i remember punchcards were a block of papers, we were jealous of the people who came into the computer center with huge stacks of cards. They were really small programs, not complicated one. In fact you had to learn to use the computer from scratch, everything was new, you couldn't rely on previous experiences, everything was new. And to start with small programs was difficult enough. "
-
+No. (% CARLINSAYS: The "no" doesn't seem to be necessary for the quote.) "As an anecdocte, i remember punchcards were a block of papers, we were jealous of the people who came into the computer center with huge stacks of cards. They were really small programs, not complicated ones. In fact you had to learn to use the computer from scratch, everything was new, you couldn't rely on previous experiences. And to start with small programs was difficult enough."
 
 "I remember the first program i had to work on. You got three numbers, you had to make the program decide if you can construct a triangle with the numbers being the sides of the triangle."
 
-**How did you see the rise of personnal computer and the software that goes with?**
-"I have to admit that we missed it. We didn't see that what was new was powerful. We were not impressed by the software. I remember windows 95, the news on TV, people sleeping on the street to get it. I remember when i get my first windows version, with a box of 22 floppies or so. Then i wanted to do something, to compile a program, but there was no compiler."
+**How did you see the rise of personal computer and the software that goes with?**
+
+"I have to admit that we missed it. We didn't see that what was new was powerful. We were not impressed by the software. I remember windows 95, the news on TV, people sleeping on the street to get it. I remember when I got my first windows version, with a box of 22 floppies or so. Then i wanted to do something, to compile a program, but there was no compiler."
 
 "For me software is the magic that make computer usable."
 

@@ -1,9 +1,10 @@
 % HEADER: Interview with Jean Huens
 
-[short intro, when where ... interview with Jan Heuns, xxxx Peggy ... ]
+(% CARLINSAYS: Peggy can you fill in the when and where for this intro and add or change it as you see fit?)
+The following is a transcript of an interview with Jean Huens conducted by Peggy at X date and Y place.
 
-% PP: You have been using computers since a long time, as you explained us during the tour we had the joy of attending during the TGSO.
-I heard that that until recently, let's say the late 1990s, when learning computer programming you had to start by  writing down the program on paper... 
+% PP: You have been using computers since a long time, as you explained to us during the tour we had the joy of attending during the TGSO.
+I heard that until recently, let's say the late 1990s, that to learn computer programming you had to start by writing down the program on paper... (% CARLINSAYS: I want to put a period or a question mark here?) 
 % JH: In 1973, I did study computer sciences, it was the second year of the Computer Sciense course, here in Leuven. At the time computers were mainframes and you did feed them with programms by punch cards. Programming was writing down the program, then you punched it and the next day you get results, mostly error. That's the way it worked at that time. To teach us programming, they used the language of that time, Fortran and some kind of invented assembly language, it didn't really exist, it was simplified.
 
 Most of the time you did write down your program, the teacher and the assistant would have to tell you what is wrong or good, you didn't had much practical experience.

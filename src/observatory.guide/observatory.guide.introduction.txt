@@ -1,6 +1,6 @@
-% TOCITEM: Introduction
+% TOCITEM: Introduction T:4
 
-A Guide to Techno-Galactic Software Observation
+A Guide to Techno-Galactic Software Observation (% CARLINSAYS: is this our title or is our title The Techno-Galactic Guide to Software Observations?)
 ==========================================
 
 > I am less interested in the critical practice of reflection,
@@ -90,15 +90,15 @@ kostas axelos, planetary interlude, maybe some bits fit with the intro?:
 
 ## The Techno-Galactic Software Observatory
 
-In the summer of 2017, around thirty people gathered in Brussels to explore practices of proximate critique with and of software in the context of a worksession entitled "Techno-Galactic Software Observatory".[^]{Worksessions are intensive transdisciplinary moments, organised twice a year by Constant. They aim to provide conditions for participants with different experiences and capabilities to temporarily link their practice and to  develop ideas, prototypes and  research projects together. For the worksessions, primarily Free, Libre and Open Source software is used and material that is available under Open Content Licenses.} The worksession called for software-curious people of all kinds to ask questions about software. The intuition behind such a call was that different types of engagement requires a heterogeneous group of participants with different levels of expertise,  skill and background. During three sessions of two days, participants collectively inspected the space-time of computation and probed the universe of hardware-software separations through excursions, exercises and conversations. They tried out various perspectives and methods to look at the larger picture of software as a concept, as a practice, and as a set of techniques.
+In the summer of 2017, thirty or so people gathered in Brussels to explore practices of proximate critique with and of software in the context of a worksession entitled "Techno-Galactic Software Observatory".[^]{Worksessions are intensive transdisciplinary moments, organised twice a year by Constant. They aim to provide conditions for participants with different experiences and capabilities to temporarily link their practice and to  develop ideas, prototypes and  research projects together. For the worksessions, primarily Free, Libre and Open Source software is used and material that is available under Open Content Licenses.} The worksession called for software-curious people of all kinds to ask questions about software. The intuition behind such a call was that developing different types of engagement requires a heterogeneous group of participants with different levels of expertise,  skill and background. During three sessions that were two days each, participants collectively inspected the space-time of computation and probed the universe of hardware-software separations through excursions, exercises and conversations. They tried out various perspectives and methods to look at the larger picture of software as a concept, as a practice, and as a set of techniques.
 
-The first two days of The Techno-Galactic Software Observatory included visits to the Musée de l'Informatique Pionnière en Belgique [^]{http://www.nam-ip.be} in Namur and the Computermuseum KULeuven[^]{http://www.etwie.be/database/actor/computermuseum-ku-leuven}. In the surroundings of these collections of historical ’numerical artefacts’, we started viewing software in a long-term context. It was an occasion to reflect on the conditions of its appearance, and allowed us to take on current-day questions from a genealogical perspective. What is software? How did it appear as a concept, in what industrial and governmental circumstances? What happens to the material conditions of its production (minerals, factory labor, hardware) when it evaporates into a cloud?
+The first two days of The Techno-Galactic Software Observatory included visits to the Musée de l'Informatique Pionnière en Belgique [^]{http://www.nam-ip.be} in Namur and the Computermuseum KULeuven[^]{http://www.etwie.be/database/actor/computermuseum-ku-leuven}. Surrounded by these collections of historical ’numerical artefacts’, we started considering software in a long-term context (% CARLINSAYS: Do we mean a long historical context or longue duree or something else?). The museum visits provided an occasion to reflect on the conditions of software's appearance (% CARLINSAYS: appearances?) and to take on current-day questions from a genealogical perspective. What is software? How did it appear as a concept, in what industrial and governmental circumstances? What happens to the material conditions of its production (minerals, factory labor, hardware) when it evaporates into a cloud?
 
-The second two days we focused on the space-time dimension of IT development. The way computer programs and operating systems are manufactured changed tremendously through time, and so did its production times and places. From military labs via the mega-corporation cubicles to the open-space freelancer utopia, what ruptures and continuities can be traced in the production, deployment, maintenance and destruction of software? From time-sharing to user-space partitions and containerization, what separations were and are at work? Where and when is software made today?
+The second two days were spent focusing on the space-time dimension of IT development. The way computer programs and operating systems are manufactured has changed tremendously over the last seventy years, as has its production times and places. From military labs to the mega-corporation cubicles to the open-space freelancer utopia, what ruptures and continuities can be traced in the production, deployment, maintenance and destruction of software? From time-sharing to user-space partitions and containerization, what separations were and are at work? Where and when is software made today?
 
-## The Walk-in Clinic
+The last two days at the Techno-Galactic Software Observatory were dedicated to observation and its consequences. The development of software encompasses a series of practices whose evocative names are increasingly familiar: feedback, report, probe, audit, inspect, scan, diagnose, explore, test. What are the systems of knowledge and power within which these activities take place, and what other types of observation are possible? As a practical set for our investigations, we set up a walk-in clinic on the 25th floor of the World Trade Center, where users and developers could arrive with software-questions of all kinds.
 
-The last two days at the Techno-galactic software observatory were dedicated to observation and its consequences. The development of software encompasses a series of practices whose evocative names are increasingly familiar: feedback, report, probe, audit, inspect, scan, diagnose, explore, test ... What are the systems of knowledge and power within which these activities take place, and what other types of observation are possible? As a practical set for our investigations, we set up a walk-in clinic on the 25th floor of the World Trade Center, where users and developers could arrive with software-questions of all kinds.
+## The Walk-in Clinic (% CARLINSAYS: I think this title should go below the description of the walk-in clinic as the last two days of the observatory worksession and should come instead right above the invitation to the clinic so I have moved it there)
 
 > Do you suffer from the disappearance of your software into the cloud,
 > feel oppressed by unequal user privilege, or experience the torment of
@@ -121,14 +121,14 @@ The last two days at the Techno-galactic software observatory were dedicated to 
 % Software as a Critique as a Service (SaaCaaS) Directory
 % and intake forms for Software Curious People (SCP)
 
-% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1 1x1
-% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 2 1x1
-% INFO: Software as a Critique as a Service (SaaCaaS) Directory
-
-
 % PDF: http://observatory.constantvzw.org/documents/scprecord_FINAL.pdf 1x1 REF:scprecord
 % INFO: Intake Forms for Software Curious People (SCP)
 
+% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1 1x1
+% INFO: Software as a Critique as a Service (SaaCaaS) Directory
+% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 2 1x1
+% INFO: Software as a Critique as a Service (SaaCaaS) Directory
 
+(% CARLINSAYS: I would suggest switching the order of these pages so the intake form is first and the list of services poster is second. It also seems important to make sure that the two page list of services poster for the clinic is printed on pages that are facing each other. If they are already set to do that then maybe nix my suggestion of moving the intake form up, but if they are not then that would be one way to shift the pages to make that happen.)
 
 

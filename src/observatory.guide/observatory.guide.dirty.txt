@@ -16,16 +16,19 @@ On monday morning, with the Walk-in Clinic about to open, Etherpad had stopped w
 A detailed bug report was filed, starting by looking around the pi's filesystem by reading `/var/log/syslog`  in `/opt/etherpad` and in a subdirectory named `var/` there was `dirty.db`, and dirty it was.
 
 > After some getting used to the various commands to navigate
-in hexedit the unwanted zeroes were gone in an instant.
+> in hexedit the unwanted zeroes were gone in an instant.
 
 > Martino asked about the trailing '`.`' character and I checked a
-different copy of the file.  No '`.`' there, so that had to go too.  My
-biggest mistake in a long time!  The '`.`' we were seeing in Martino's
-copy of the file was in fact a '`\n`' (`0a`)! 
+> different copy of the file.  No '`.`' there, so that had to go too.  My
+> biggest mistake in a long time!  The '`.`' we were seeing in Martino's
+> copy of the file was in fact a '`\n`' (`0a`)! 
 
 > We still don't know why exactly etherpad stopped working sometime
-Sunday evening or how the zeroes got into the file dirty.db
-   
+> Sunday evening or how the zeroes got into the file dirty.db
 
 
 % SOURCE: The example was extracted from an e-mail sent by J.Hofmüller to the Technogalactic Software Observatory mailinglist. Full text on the following pages.
+
+
+
+

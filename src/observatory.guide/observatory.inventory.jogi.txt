@@ -7,7 +7,6 @@ Dear all,
 as promised yesterday, here my little report regarding the broken
 etherpad.
 
-<md>
 ### When dirty.db get's dirty   
 
 When I got to WTC on Monday morning the etherpad on etherbox.local was disfunct.  Later someone said that in fact etherpad had stopped working
@@ -24,7 +23,8 @@ A first look at the file revealed no apparent problem.  The last lines looked li
 ":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true,"secure":false}}}                                                         
 {"key":"sessionstorage:_H5SdUlDvQ3XCuPaZEXQ5lx0K6aAEJ9m","val":{"cookie
 ":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true,"se
-cure":false}}}```
+cure":false}}}
+```
 
 What I did not see at the time was that there were some (AFAIR
 something around 150) binary zeroes at the end of the file.  I used
@@ -100,9 +100,9 @@ could btw explain why etherpad was working somewhat slugishly after
 some days.  There is still a chance that the time adjustment had an
 unwanted side effect, but so far there is no obvious reason for what
 had happened.
-</md>
+
 -- 
 J.Hofmüller     
-`http://thesix.mur.at/`
+http://thesix.mur.at/
 
 

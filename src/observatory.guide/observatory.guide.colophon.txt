@@ -1,4 +1,4 @@
-% TOCITEM: Colophon
+% TOCITEM: Colophon T:4
 % =================
 
 The Guide to technogalactic software observing was compiled by Carlin Wing, Martino Morandi, Peggy Pierrot, Anita, Christoph Haag, Michael Murtaugh, Femke Snelting, Seda Gürses and includes contributions from Andrea, Manetta Berends, Zeljko Blace, Larisa Blazic, Freyja van den Boom, Anna Carvalho, Loup Cellard, Joana Chicau, Cristina Cochior, Pieter Heremans, Joak, Jogi Hofmueller, Becky Kazansky, Anne Laforet, Ricardo Lafuente, Michaela Lakova , Hans Lammerant, Silvio Lorusso, Mia Melvaer, An Mertens, Lidia Pereira, Donatella Portoghese, Luis Rodil-Fernandez, Natacha Roussel, Lonneke van der Velden, Ruben van de Ven, Kym Ward, Wendy Van Wynsberghe, and Peter Westenberg.

@@ -1,10 +1,12 @@
 % NEWPAGE: Dirty Hack (For now)
 
+% TOCITEM: Warning T:4
+
 % WARNING:
-The survival techniques described in the following guide are to be used at  your own risk in case of emergency regarding software curiosity.
-The publisher will not accept any responsability in case of damages caused by misuse, misundestanding of instruction or lack of curiosity. 
-By trying the action exposed in the guide, you accept the responsability of loosing data or altering hardware, including hard disks, usb key, cloud storage, screens by throwing them on the floor, or even when falling on the floor with your laptop by tangling your feet in an entanglement of cables.
-No harm has been done to human, animal, computers or plants while creating the guide. No firearms or any kind of weapon is needed in order to survive software.    
+The survival techniques described in the following guide are to be used at your own risk in cases of emergency (%CARLINSAYS: as well as in cases of nonurgent) software curiosities.
+The publisher will not accept any responsability in case of damages caused by misuse, misunderstanding of instruction, or lack of curiosity. 
+By trying the methods described in the guide, you accept responsability for losing or loosing data and for altering hardware, including hard disks, usb key, cloud storage, and screens perhaps by throwing them on the floor, or by falling on the floor yourself upon tangling your feet in an entaglement of cables such that your laptop goes flying.
+No harm has been done to humans, animals, computers or plants while creating the guide. No firearms or any kind of weapon is needed in order to survive software.    
 Just a little bit of patience.
 
 **Software observation survival stresses**
@@ -22,5 +24,7 @@ Loss of time tracking
 
 > our methods for observation, like mapping,    
 > come with their luggage.
+
+(%CARLINSAYS: Does the bottom part of the warning look OK on the PDF? The last line, which I think is mine from a while back, seems like it could be cut?)
 
 % RELATESTO: http://observatory.constantvzw.org/etherdump/toc.md.diff.html
