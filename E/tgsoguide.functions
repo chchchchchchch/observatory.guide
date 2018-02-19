@@ -514,7 +514,7 @@ function SHOW() {
         # EXTRACT CAPTION FOR TAGGED '% SHOW'
           CAPTION=`grep -A 1 "%${T}SHOW: $*" $MDSH | # FIND CMD + CONTEXT
                    grep "^% INFO:"                 | # GET INFO
-                    head -n 1                      | # ONLY FIRST
+                   head -n 1                       | # ONLY FIRST
                    cut -d ":" -f 2-                | # CUT INFO
                    $PANDOCACTION                   | # DISPLAY/TRANSLATE
                    sed 's,</*p>,,g'`                 # REMOVE <P> TAGS
@@ -556,8 +556,6 @@ function SHOW() {
                 PDFHERE="${TMPID}${PDFID}.pdf"
                 inkscape --export-pdf=$PDFHERE $TMPSVG.$LNAME.crop.svg
                 conformColor $PDFHERE
-    
-              # cp ${TMPID}${PDFID}.pdf debug-${PDFID}.pdf
  
             # AND NOW LOOK CLOSER ...                                     #
             # ----------------------------------------------------------- #
@@ -569,32 +567,9 @@ function SHOW() {
               PDFH=`echo $PDFSIZE | cut -d "x" -f 2 | #
                     cut -d "." -f 1`                  #
               THISIS="";PDFCMD="";PDFSHIFT="0";CNT="0" # RESET
-   
-            # ... AND CLOSER ...                                          #
-            # ----------------------------------------------------------- #
-   
-             if   [ "$PDFW" -gt 500 ] &&
-                  [ "$PDFH" -gt 600 ];     then THISIS="HUGE"
-             elif [ "$PDFW" -ge "$PAGEW" ] &&
-                  [ "$PDFH" -ge "$PAGEH" ];then THISIS="FULL"
-             elif [ "$PDFW" -lt 100 ];     then THISIS="TINY"
-             elif [ "$PDFW" -lt 200 ];     then THISIS="SMALL"
-             elif [ "$PDFW" -lt 300 ];     then THISIS="BIG"
-
-             fi
-             if   [[ $THISIS != *FULL* ]];then
-             if   [ "$PDFH" -eq "$PDFW" ];then THISIS="SQUARE $THISIS"
-             elif [ "$PDFH" -gt "$PDFW" ];then THISIS="PORTRAIT $THISIS"
-             elif [ "$PDFW" -gt "$PDFH" ];then THISIS="LANDSCAPE $THISIS"
-             fi
-             fi
-
-            # ... AND DRAW THE CONSEQUENCES                               #
-            # ----------------------------------------------------------- #
-            # echo "$THISIS"; sleep 4
-   
-              if   [[ $THISIS == *FULL* ]];then
  
+            # CREATE TEX MACRO                                            #
+            # ----------------------------------------------------------- #
               RFC="{$REF}{$PFLAG}{$CAPTION}"
               while [ "$PDFSHIFT" -lt "$PDFW" ];
                do
@@ -604,26 +579,9 @@ function SHOW() {
                   PDFSHIFT=`expr $PAGEW \* $CNT`
                   RFC="{}{}{}"
               done
- 
-              elif [[ $THISIS == *HUGE* ]] && 
-                   [[ $THISIS == *PORTRAIT* ]];then
-                      echo "PUT ON A SINGLE PAGE (HUGE)"
-                      PDFCMD="\imghuge{$PDFHERE}{$REF}{$PFLAG}{$CAPTION}"
-              elif [[ $THISIS != *TINY* ]] && 
-                   [[ $THISIS == *LANDSCAPE* ]];then
-                      echo "STRETCH OVER TEXTWIDTH" 
-                      if [ "$PFLAG" == "N" ];then
-                           PDFCMD="\imgwide{$PDFHERE}{$CAPTION}{$REF}"
-                      else PDFCMD="\imgwidefloat{$PDFHERE}{$CAPTION}{$REF}";fi
-              elif [[ $THISIS == *TINY* ]] || 
-                   [[ $THISIS == *SQUARE* ]];then
-                      echo "MAKE A SMALL WRAPFIGURE"
-                      PDFCMD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"
-              else
-                      echo "MAKE A DECENT WRAPFIGURE"  
-                      PDFCMD="\imgsmall{$PDFHERE}{$CAPTION}{$REF}"
-              fi
- 
+
+            # WRITE TO SRC                                                #
+            # ----------------------------------------------------------- #
               if [ "$OUTPUTFORMAT" == pdf ];then 
  
                      write2src "$PDFCMD" 
@@ -634,15 +592,10 @@ function SHOW() {
                      write2src "<span>$THISDESCRIPTION</span>"
                      write2src "$DESCRIPTION</span>" 
               fi 
-
             fi
-        # else
-        #     # echo "$TMPSVG DOES NOT EXIST"
-        #     # DO NOTHING
-        #     # sleep 0
           fi
     else
-          echo "NO INPUT PROVIDED"
+          echo "NO INPUT PROVIDED (SOMETHING WENT WRONG?)"
     fi
 
  # FINALLY CLEANUP
@@ -650,8 +603,6 @@ function SHOW() {
    if [ -f "$TMPSVG" ];then rm "$TMPSVG"; fi
    if [ -f "$TMPSVG.$LNAME.svg" ];then rm "$TMPSVG.$LNAME.svg"; fi
    if [ -f "$TMPSVG.$LNAME.crop.svg" ];then rm "$TMPSVG.$LNAME.crop.svg"; fi
-
- # sleep 10
 
 }
 

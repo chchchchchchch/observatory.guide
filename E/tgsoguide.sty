@@ -535,74 +535,6 @@
               \smallskip}
         }} \fi
    }
- % ------------------------------------------------------------------------ %
-
-% --------------------------------------------------------------------------- % 
-  % \usepackage{wrapfig}
-  %
-  % r R right side of the text
-  % l L left side of the text
-  % i I inside edge–near the binding (in a twoside document)
-  % o O outside edge–far from the binding
-  % The uppercase version allows the figure to float.
-  % The lowercase version means exactly here.
-
-  % https://tex.stackexchange.com/questions/111393/
-  % -> too-much-space-around-wrap-figure
-  \setlength{\intextsep}{.1\baselineskip}
-
-  \newcommand{\imgsmall}[3]{
-   \smallskip
-   \begin{wrapfigure}{I}{.25\textwidth}%
-        \stepcounter{floats}  % INCREASE COUNTER ..
-        \label{FF:\thefloats} % .. TO CREATE A UNIQ LABEL
-        \setcounterpageref{pagenow}{FF:\thefloats}
-     \includegraphics[width=.25\textwidth]{#1}
-       \if\relax\detokenize{#2}\relax
-         \else \footnotemark 
-         \vspace*{-1\baselineskip}
-       \fi
-   \end{wrapfigure}
-   \vfill
-     \if\relax\detokenize{#2}\relax
-     \else 
-   % https://groups.google.com/d/msg/comp.text.tex/bkikh7bww_s/7ZPXiKMh7REJ
-           \ifnum\value{pagenow}>\thepage
-           \afterpage{\footnotetext{#2}}
-           \else
-           \footnotetext{#2}
-           \fi
-     \fi
-  }
-
-% --------------------------------------------------------------------------- % 
-  \newcommand{\imgwide}[3]{
-   \bigskip
-    \vfill
-
-     \includegraphics[width=\textwidth]{#1}
-      \label{#3}
-       \if\relax\detokenize{#2}\relax
-      % EMPTY
-        \else
-        % NON-EMPTY
-          {\tiny#2}
-       \fi
-   \vfill
-  }
-% --------------------------------------------------------------------------- % 
-  \newcommand{\imgwidefloat}[3]{
-   \begin{figure}%
-    \includegraphics[width=\textwidth]{#1}%
-     \label{#3}
-      \if\relax\detokenize{#2}\relax
-      % EMPTY
-        \else
-        % NON-EMPTY
-          {\tiny#2}
-      \fi
-   \end{figure}%
-  }
 % --------------------------------------------------------------------------- %
    % \newcounter{floats}
    % \newcounter{pagenow}
@@ -642,26 +574,6 @@
         \label{#3}
         \end{figure}
       % ------------------------------------ %
-  }
-% --------------------------------------------------------------------------- %
-  \newcommand{\imghuge}[4]{
-      % ------------------------------------ %
-      % INSERT ANCHOR (OPTIONAL)
-        \anchor{#4}{#2}{#3}
-      % ------------------------------------ %
-      % PLACE IMAGE ASAP
-       \begin{figure}[p]
-      % ---------
-        \stepcounter{floats}  % INCREASE COUNTER ..
-        \label{FF:\thefloats} % .. TO CREATE A UNIQ LABEL
-        \setcounterpageref{pagenow}{FF:\thefloats}
-      % PLACE IMAGE ---------
-        \includegraphics[width=\textwidth]{#1}%
-      % PLACE INFO  -------- 
-        \boxinfo{#3}{#4}
-      % ---------
-        \label{#2}
-        \end{figure}
   }
 % --------------------------------------------------------------------------- %
 
@@ -707,7 +619,6 @@
                scale=.75,frame,pages=#2,nup=#3]{#1}
    }
   }
-
 
 % --------------------------------------------------------------------------- %
 %  MDSH TGSO GUIDE (VERY SPECIFIC)
