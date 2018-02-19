@@ -175,6 +175,12 @@
 
     SVGSRC="$1";TARGET="$2"
     AREACOLOR="ffd5e5"
+    TINFO=$TMPID`echo $SVGSRC$TARGET | #
+                 md5sum | cut -c 1-10`.info
+
+    if [ ! -f $TINFO ];then
+    inkscape --query-all $SVGSRC > $TINFO
+    fi
 
   # GET AREA
   # ------------------------------------------------------- #
@@ -182,15 +188,16 @@
             sed 's/</\n&/g' | grep "fill:#$AREACOLOR" | # 
             sed 's/\bid=/\nX&/g' | grep "^Xid=" | #
             head -n 1 | cut -d "\"" -f 2` #
+    INFOAREA=`grep $IDAREA $TINFO`
 
-    if [ "$IDAREA" !=  "" ];then
+    if [ "$INFOAREA" !=  "" ];then
 
   # echo "CROPAREA IS SET"
 
-    XAREA=`inkscape --query-id $IDAREA -X $SVGSRC`
-    YAREA=`inkscape --query-id $IDAREA -Y $SVGSRC`
-    WAREA=`inkscape --query-id $IDAREA -W $SVGSRC`
-    HAREA=`inkscape --query-id $IDAREA -H $SVGSRC`
+    XAREA=`echo $INFOAREA | cut -d "," -f 2`
+    YAREA=`echo $INFOAREA | cut -d "," -f 3`
+    WAREA=`echo $INFOAREA | cut -d "," -f 4`
+    HAREA=`echo $INFOAREA | cut -d "," -f 5`
 
     XSHIFT=`python -c "print $XAREA * -1"`
     YSHIFT=`python -c "print $YAREA * -1"`
