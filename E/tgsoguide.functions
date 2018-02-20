@@ -868,7 +868,6 @@ function TOC() {
 function NEWPAGE() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
-
         write2src '\newpage'
   fi
 
@@ -877,9 +876,23 @@ function NEWPAGE() {
 function EMPTYPAGE() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
-
        write2src '\emptypage'
+  fi
 
+}
+# --------------------------------------------------------------------------- #
+function CLEARTOLEFT() {
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src '\cleartoleft'
+  fi
+
+}
+# --------------------------------------------------------------------------- #
+function CLEARTORIGHT() {
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src '\cleartoright'
   fi
 
 }
