@@ -415,12 +415,25 @@
     \null
     \thispagestyle{empty}%
     \newpage
-   }
+  }
+% --------------------------------------------------------------------------- %
+  \newcommand{\blackpage}{
+    \null
+    \thispagestyle{empty}%
+    \pagecolor{black}
+    \newpage
+    \nopagecolor
+  }
 % --------------------------------------------------------------------------- %
   \newcommand\cleartoleft{%
   \clearpage
   \ifthispageodd{\emptypage}{}
- }
+  }
+% --------------------------------------------------------------------------- %
+  \newcommand\cleartoleftblack{%
+  \clearpage
+  \ifthispageodd{\blackpage}{}
+  }
 % --------------------------------------------------------------------------- %
   \newcommand\cleartoright{%
   \clearpage
@@ -428,7 +441,6 @@
   % -> if-then-else-for-odd-page-even-page
   \ifthispageodd{}{\emptypage}
   }
-
 
 % --------------------------------------------------------------------------- %
 %  G R A P H I C S
@@ -624,13 +636,19 @@
 % --------------------------------------------------------------------------- %
 %  MDSH TGSO GUIDE (VERY SPECIFIC)
 % --------------------------------------------------------------------------- %
-
-  % FALLBACK
-   \newcommand\grouping[1]{%
-    \cleartoleft %
+   \newcommand\grouping[3]{%
+    \cleartoleftblack
+    \pdfpageplus{#1}{#2}{}{#3}
+   }
+ % ------------------------------------------------------------------------- %
+  % FALLBACK (IF NO GRAPHIC EXISTS)
+   \newcommand\groupingfallback[1]{ %
+    \cleartoleftblack %
     {\thispagestyle{empty} %
-      \LARGE #1} %
+      \pagecolor{black} %
+       \color{white}\LARGE #1} %
      \cleartoright %
+     \nopagecolor
    }
 
  % ------------------------------------------------------------------------- %

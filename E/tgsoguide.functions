@@ -61,10 +61,9 @@ function GROUPING() {
    echo "${GID}:1:$*" >> ${TMPID}.index
 
    if [ `echo $PAGENUM | wc -c` -gt 1 ];then
-         PDFCMD="\cleartoleft \
-                 \pdfpageplus{${TMPID}grouping.pdf}{$PAGENUM}{}{\label{$GID}}"
+         PDFCMD="\grouping{${TMPID}grouping.pdf}{$PAGENUM}{}{\label{$GID}}"
    else
-         PDFCMD="\grouping{$*\label{$GID}}"
+         PDFCMD="\groupingfallback{$*\label{$GID}}"
    fi
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
