@@ -549,8 +549,8 @@ function SHOW() {
 
             if [ "$LNAME" != "" ];then
 
-                extractLayer $TMPSVG $TMPSVG.$LNAME.svg $LNAME
-                cropArea $TMPSVG.$LNAME.svg $TMPSVG.$LNAME.crop.svg
+                extractLayer $TMPSVG $TMPSVG.l.svg $LNAME Q
+                cropArea $TMPSVG.l.svg $TMPSVG.$LNAME.crop.svg
     
                 PDFID=`echo $* | md5sum | cut -c 1-12`
                 PDFHERE="${TMPID}${PDFID}.pdf"
@@ -601,7 +601,7 @@ function SHOW() {
  # FINALLY CLEANUP
  # ------------------------------------------------------------------------ #
    if [ -f "$TMPSVG" ];then rm "$TMPSVG"; fi
-   if [ -f "$TMPSVG.$LNAME.svg" ];then rm "$TMPSVG.$LNAME.svg"; fi
+   if [ -f "$TMPSVG.l.svg" ];then rm "$TMPSVG.l.svg"; fi
    if [ -f "$TMPSVG.$LNAME.crop.svg" ];then rm "$TMPSVG.$LNAME.crop.svg"; fi
 
 }

@@ -165,6 +165,13 @@
      tee                    >>  ${TARGET}
      echo "</svg>"          >>  ${TARGET}
 
+     if [ "$4" == Q ];then
+          SRCQUERY=$TMPID`basename ${TARGET}`.query
+          if [ ! -f $SRCQUERY ];then
+          inkscape --query-all $SVGSRC > $SRCQUERY
+          fi
+     fi
+
     fi
 
  }
@@ -175,11 +182,10 @@
 
     SVGSRC="$1";TARGET="$2"
     AREACOLOR="ffd5e5"
-    TINFO=$TMPID`echo $SVGSRC$TARGET | #
-                 md5sum | cut -c 1-10`.info
 
-    if [ ! -f $TINFO ];then
-    inkscape --query-all $SVGSRC > $TINFO
+    SRCQUERY=$TMPID`basename ${SVGSRC}`.query
+    if [ ! -f "$SRCQUERY" ];then
+    inkscape --query-all $SVGSRC > $SRCQUERY
     fi
 
   # GET AREA
@@ -188,7 +194,7 @@
             sed 's/</\n&/g' | grep "fill:#$AREACOLOR" | # 
             sed 's/\bid=/\nX&/g' | grep "^Xid=" | #
             head -n 1 | cut -d "\"" -f 2` #
-    INFOAREA=`grep $IDAREA $TINFO`
+    INFOAREA=`grep $IDAREA $SRCQUERY | head -n 1`
 
     if [ "$INFOAREA" !=  "" ];then
 
