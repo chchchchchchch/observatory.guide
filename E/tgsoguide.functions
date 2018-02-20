@@ -121,7 +121,10 @@ function SEEHERE() {
 
 function ATTACHMENT() {
 
-  SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
+  SRCBASE=`echo $* | sed 's/ [A-Z]\b//g' | sed 's/ //g'`
+  SRCPLUS="$SRCBASE/export/txt"
+
+
   REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
   if [ $REPLYPLUS == '200' ]; then
        SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
@@ -155,10 +158,13 @@ function ATTACHMENT() {
 
      echo "${ATTID}:${ATTTYPE}:$*" >> ${TMPID}.index
 
-    #write2src "$ANCHOR"
-     write2src "\cleartoright"
-     INCLUDE $SRCGET 
-
+     if [ `echo $* | sed 's/ /\n/g' | #
+           grep "^L$" | wc -l` -ge 1 ];then
+           write2src "\cleartoleft"
+     else
+           write2src "\cleartoright"
+     fi
+           INCLUDE $SRCGET 
   fi
 
 }
