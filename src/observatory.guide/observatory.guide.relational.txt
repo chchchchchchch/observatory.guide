@@ -108,11 +108,15 @@ I got one feature request implemented by a prominent dating website  (to search 
 My only two attempts to get into the software company failed as they  insisted on full time commitments. Later I found out ones were  intimidated in interview and other gave it to a person that negotiated  to work part time with friend!  My relation to professionalism is likely  equally complex and pervert as one to the software.
 
 
+% SOURCE: This method was developed by The RSOC Group.
 
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMG_0892
-% TODO: tgsoimages.svg foilpeople
 
 % Rsoc - Relational software observatory Consultancy service
+
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMG_0892
+% SHOW: tgsoimages.svg foilpeople N
+
+% NEWPAGE:
 
 ## Case study : W. W.
 
@@ -185,7 +189,7 @@ My only two attempts to get into the software company failed as they  insisted o
 
 
 % RELATESTO:
-% SOURCE: This method was developed by The RSOC Group.
+
 
 % TODO: [Intake form, SCP: See](http://observatory.constantvzw.org/etherdump/SCP.see.html)
 % TODO: [Intake form, SCP: Ayanoa](http://observatory.constantvzw.org/etherdump/SCP.ayanoa.html)

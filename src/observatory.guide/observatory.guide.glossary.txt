@@ -13,7 +13,7 @@
 
 % WARNING: This method is not exclusive to and was not developed for software observation. It may lead to awareness of unconscious processes and to shifts in structures of feeling and relation.
 
-% TODO: http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/PWFU3393.JPG?m=1497084667
+% SOURCE: Notes on [vocabulary](http://observatory.constantvzw.org/etherdump/vocabulary.md.diff.html)
 
 % NEWPAGE:
 
@@ -53,10 +53,14 @@ Test
 Warning
 WhiteBoard
 Yoga
-% SRCCODE: bash
+% SRCCODE: plain
+
+
+% http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/PWFU3393.JPG?m=1497084667
+% SHOW: tgsoimages.svg glossaries
 
 
 % RELATESTO:
-% SOURCE: Notes on [vocabulary](http://observatory.constantvzw.org/etherdump/vocabulary.md.diff.html)
+
 
 

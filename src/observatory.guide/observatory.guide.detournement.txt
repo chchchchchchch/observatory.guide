@@ -9,7 +9,7 @@
 % WHO:
 % NOTE:
 % REMEMBER: Be careful in planning your interface hoax, you might get caught for fake news design and circulation. 
-
+% SOURCE: The _Interface Détournement_-method was developed by Loup Cellard.
 % HOW: -
 
 1. Choose a particular website where you want to intervene. You can pick an interface in relation to:  
@@ -30,5 +30,5 @@
 % SHOW: tgsoimages.svg probdox
 % INFO: Example of an interface detournement of the dropbox website
 
-% SOURCE: The _Interface Détournement_-method was developed by Loup Cellard.
+
 

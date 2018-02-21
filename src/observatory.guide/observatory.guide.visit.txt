@@ -31,18 +31,22 @@ Preserving old hardware is a means of observing the physical manifestation of so
 
 "The highlight of the collection is to revive a real punch card workshop of the 1960s." (% CARLINSAYS: I don't want to change this because it is a quote but the right way to say it would be "is a recreation of a real punch card workshop"...it is not grammatically correct right now and also does not totally make sense in English at least)
 
-
 % http://observatory.constantvzw.org/images/wednesday/P1010145.JPG
 % http://observatory.constantvzw.org/images/wednesday/P1010254.JPG
 % SHOW: tgsoimages.svg commandpunch N
+% INFO: Create punchcards "À la table des manipulations"
 
 % http://observatory.constantvzw.org/images/wednesday/P1040696.JPG
 % SHOW: tgsoimages.svg punchcard N
+% INFO: TGSO Punchcards
+
 % http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/IMG_1131.JPG?m=1496916914
 % SHOW: tgsoimages.svg bull N
 % INFO: Atelier mécanographique Bull
 
-% TODO: visual research bull
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3273
+% http://observatory.constantvzw.org/images/thursday/IMG_20170607_111954_122.jpg
+%!SHOW: tgsoimages.svg glitchlogo N
 
 
 % EXAMPLE: Collection de la Maison des Écritures d'Informatique & Bible, Maredsous  
@@ -52,16 +56,18 @@ The idea of introducing informatics as a method for working with/on the Bible (v
 
 % http://gallery.constantvzw.org/var/resizes/Preparing-the-Techno-galactic-Software-Observatory/DSC05019.JPG?m=1490635726
 % SHOW: tgsoimages.svg maredsous N
+% INFO: Maredsous 89. 15 ans d'Informatique et Bible
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3267
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3271
 % SHOW: tgsoimages.svg lexique N
+% INFO: Lexique description Needed
 
-% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3273
-% http://observatory.constantvzw.org/images/thursday/IMG_20170607_111954_122.jpg
-% SHOW: tgsoimages.svg glitchlogo N
 
-(% CARLINSAYS: These two images seem like they should go with the Bull example and up top since the second one is the sign for the Computer Museum and should be kept separate from the images that illustrate the Bible software example)
+% (% CARLINSAYS: These two images seem like they should go with the Bull example and up top since the second one is the
+% sign for the Computer Museum and should be kept separate from the images that illustrate the Bible software example)
+
+
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.jean.heuns
 % SOURCE: [Machines à cartes perforées de marque Bull](http://www.histoireinform.com/Histoire/+Infos/jmclcadr.htm)

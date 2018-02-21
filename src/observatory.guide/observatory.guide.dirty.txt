@@ -30,5 +30,6 @@ A detailed bug report was filed, starting by looking around the pi's filesystem 
 % SOURCE: The example was extracted from an e-mail sent by J.Hofmüller to the Technogalactic Software Observatory mailinglist. Full text on the following pages.
 
 
+% SHOW: tgsoimages.svg jogi
 
 

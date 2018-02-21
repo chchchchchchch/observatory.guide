@@ -24,6 +24,8 @@ This can be done through observation of yourself or others. Separate the apprehe
 
 % EXAMPLE: 
 
-% RELATESTO: Agile Sun Salutation, Natasha Schull's Addicted by Design
+%!RELATESTO: Agile Sun Salutation, Natasha Schull's Addicted by Design
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.agile.yoga
+
 
 % SOURCE: 

@@ -1,7 +1,17 @@
 % TOCITEM: Colophon T:4
 % =================
 
-The Guide to technogalactic software observing was compiled by Carlin Wing, Martino Morandi, Peggy Pierrot, Anita, Christoph Haag, Michael Murtaugh, Femke Snelting, Seda Gürses and includes contributions from Andrea, Manetta Berends, Zeljko Blace, Larisa Blazic, Freyja van den Boom, Anna Carvalho, Loup Cellard, Joana Chicau, Cristina Cochior, Pieter Heremans, Joak, Jogi Hofmueller, Becky Kazansky, Anne Laforet, Ricardo Lafuente, Michaela Lakova , Hans Lammerant, Silvio Lorusso, Mia Melvaer, An Mertens, Lidia Pereira, Donatella Portoghese, Luis Rodil-Fernandez, Natacha Roussel, Lonneke van der Velden, Ruben van de Ven, Kym Ward, Wendy Van Wynsberghe, and Peter Westenberg.
+% TEXIN: \begin{flushleft}
+
+The Guide to technogalactic software observing was compiled by Carlin Wing, Martino Morandi, Peggy Pierrot, Anita, Christoph Haag, Michael Murtaugh, Femke Snelting, Seda Gürses and includes contributions from Andrea, Manetta Berends, Željko Blaće, Larisa Blazic, Freyja van den Boom, Anna Carvalho, Loup Cellard, Joana Chicau, Cristina Cochior, Pieter Heremans, Joak, Jogi Hofmüller, Becky Kazansky, Anne Laforet, Ricardo Lafuente, Michaela Lakova, Hans Lammerant, Silvio Lorusso, Mia Melvaer, An Mertens, Lidia Pereira, Donatella Portoghese, Luis Rodil-Fernandez, Natacha Roussel, Lonneke van der Velden, Ruben van de Ven, Kym Ward, Wendy Van Wynsberghe and Peter Westenberg.
+
+% TEXIN: \end{flushleft}
+
+% http://observatory.constantvzw.org/images/friday/P1010328.JPG
+% SHOW: tgsoimages.svg tgsoteam N
+% INFO: Techno-Galactic Software Observation team, WTC Brussels, June 2017
+
+
 
 License: Free Art License
 
@@ -9,9 +19,48 @@ Support:
 
 Sources:
 
+http://observatory.constantvzw.org    
+https://gitlab.constantvzw.org/ch/observatory.guide    
+
+
+
+## Notes on Layout:
+
+Typesetting this guide is part of an ongoing exploration of document engineering
+from within and without interfaces of digital edit modes. Moving along ideas of lightweight
+markup and infinite rubber lengths, transplanting paradigms, experiencing limitations and possibilities
+no end is in sight. To put it in the spirit of illiterate programming:
+_When was the last time you spent a pleasant evening in a comfortable chair,
+cuddling with a multi-headed monster._[@bentley:1986:literate]
+
+
+## Fonts:
+
+The fonts ...
+
+Arimo by [Steve Matteson](http://www.monotype.com/people/steve-matteson)
+...
+
+IBM Plex Mono for Monospace ....
+
+IA Writer Duospace is an adaptation of Plex Mono aiming at
+better readability while keeping the
+[look and feel](https://ia.net/topics/in-search-of-the-perfect-writing-font)
+of a monospaced font.
+
+CGA Thin is a 8x8 pixel font in truetype format created
+by [VileR](http://int10h.org) based on text mode fonts
+shipped on the character ROM of IBM's first video solutions.
+
+
+All fonts are available under free licenses and were prepared
+to be used within the Techno-Galactic LaTeX Toolchain
+
+https://fontain.org/arimo     
+
+
+
 Constant, February 2018
 
-% http://observatory.constantvzw.org/images/friday/P1010328.JPG
-% SHOW: tgsoimages.svg tgsoteam N
-% INFO: Techno-Galactic Software Observation team, WTC Brussels, June 2017
+
 

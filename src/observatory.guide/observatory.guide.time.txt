@@ -1,3 +1,7 @@
+% http://observatory.constantvzw.org/images/Screenshot_from_2017-06-10_172547.png
+% SHOW: tgsoimages.svg unixtime
+
+
 % METHOD: The ends of time
 
 % REMEMBER:
@@ -24,6 +28,7 @@ local UNIX time of this machine
 UNIX time + 1
 % SRCCODE: bash echo $((`date +%s` +1 ))
 
+
 % EXAMPLE: Goodbye unix time
 
 % -------
@@ -33,6 +38,7 @@ UNIX time + 1
       figlet $((2147483647 - `date +%s`))
     done
 % SRCCODE: bash
+
 
 % EXAMPLE:  Sundial Time Protocol Group tweaks
 
@@ -52,8 +58,6 @@ UNIX time + 1
 % SRCCODE: bash
 
 
-% http://observatory.constantvzw.org/images/Screenshot_from_2017-06-10_172547.png
-% SHOW: tgsoimages.svg timeimg
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.experiencingtime
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.scrollresistance

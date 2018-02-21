@@ -403,7 +403,24 @@
   publisher={Penguin}
 }
 
-
+@article{ bentley:1986:literate,
+  title      = {Programming Pearls: Literate Programming},
+  author     = {Bentley, Jon and Knuth, Don},
+  publisher  = {ACM},
+  address    = {New York, NY, USA},
+  year       = {1986},
+  journal    = {Commun. ACM},
+  issue_date = {May 1986},
+  volume     = {29},
+  number     = {5},
+  month      = may,
+  issn       = {0001-0782},
+  pages      = {384--369},
+  numpages   = {-14},
+  url        = {http://doi.acm.org/10.1145/5689.315644},
+  doi        = {10.1145/5689.315644},
+  acmid      = {315644}
+}
 
 
 

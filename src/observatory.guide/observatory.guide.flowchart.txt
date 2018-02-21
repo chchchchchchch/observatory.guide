@@ -1,7 +1,8 @@
 % METHOD: Flowcharts (Flow of the chart –> chart of the flow: on demand!) 
 
-% WHAT:  A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.
-[^]{https://en.wikipedia.org/wiki/Flowchart}
+% WHAT:  - 
+
+A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.[^]{https://en.wikipedia.org/wiki/Flowchart}
 
 % WHY: Through flowcharts one will be able to analyse and reflect on one's own software situation. 
 % URGENCY: Using flowchart observation methods towards analysis and self-reflection of software situation.
@@ -42,7 +43,7 @@ According to your answer go to question 4.
         Done                        o. How does that make you feel?
 (end of this questionnaire)              (jump to the beginning)
 
-% SRCCODE: plain
+% SRCCODE: small
 
 % SOURCE: The SOFTWARE SKETCHING OBSERVATION YUPPIES (SSoGY).
 
@@ -60,7 +61,7 @@ http://observatory.constantvzw.org/etherdump/clinic.newflow.diff.html
 More info → see Rafaella flowchart pic 
 
 
-**Apendix A:**
+## Apendix A:
 
 * IBM ruler:
     * http://etherbox.local/home/pi/images/wednesday/P1040728.JPG
@@ -107,9 +108,10 @@ More info → see Rafaella flowchart pic
     * Card Deck
 
 
-**Apendix B**
-    
-Friday:    
+## Apendix B
+
+### Friday:
+
 15:30 - 16:15    
 We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the ruler with specific shape has special meaning. There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without description. We try to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols. The specific literature explained us that engineer have a kind of standard for these symbols. These symbols are vocabulary 
 
@@ -139,7 +141,8 @@ iconographic analyses of flow chart symbols
 
 call-flow && zenit modeling template for the drop-in clinic interview
 
-Saturday:    
+### Saturday:
+
 11:00 - 11:40    
 We updated our research follower about our undertakings.
 
@@ -166,7 +169,7 @@ Michaela helping out the flow chart of the elevator as a case study
 
 Here are the flowchart symbols: http://etherbox.local:9001/p/flowchartsymbols.md
 
-**Sources:**
+## Sources:
 
 https://en.wikipedia.org/wiki/Software_design
 https://en.wikipedia.org/wiki/Flowchart
@@ -176,7 +179,7 @@ http://www.iausdj.ac.ir/ostad/DocLib71/J._C._Cirlot_Dictionary_of_Symbols__1990.
 Flowchart humour: http://etherbox.local/home/pi/video/A_Computer_Glossary.webm#t=02:26
 Power Point as Knowledge Communication - http://computationalculture.net/article/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech
 
-**Blank diagrams:**
+## Blank diagrams:
 
 http://silviolorusso.com/see-nothing-volume-three/
 http://silviolorusso.com/blank-diagrams-4-nsa-slides-of-prism-program/
@@ -187,7 +190,7 @@ http://vanseodesign.com/web-design/visual-grammar-shapes/
 
 
 
-**How to create browser add on /or browser extension:**    
+## How to create browser add on /or browser extension:
 
 1. Make a new dir at your local machine lets called it adds-on & and a folder called icons
 2. Make an icon for your browser extension
@@ -221,6 +224,6 @@ manifest.json:
 % SRCCODE: plain
 
 
-**Apendix C**
+## Apendix C
 
 %SOURCE: Version 3384 Saved June 10, 2017. Authors: m, lara, carlin + 5 unnamed authors

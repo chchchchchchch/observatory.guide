@@ -1,7 +1,8 @@
 % TOCITEM: Introduction T:4
 
-A Guide to Techno-Galactic Software Observation (% CARLINSAYS: is this our title or is our title The Techno-Galactic Guide to Software Observations?)
-==========================================
+# A Guide to Techno-Galactic Software Observation 
+
+% CARLINSAYS: is this our title or is our title The Techno-Galactic Guide to Software Observations?
 
 > I am less interested in the critical practice of reflection,
 > of showing once-again that the emperor has no clothes, than in
@@ -124,9 +125,9 @@ The last two days at the Techno-Galactic Software Observatory were dedicated to 
 % PDF: http://observatory.constantvzw.org/documents/scprecord_FINAL.pdf 1x1 REF:scprecord
 % INFO: Intake Forms for Software Curious People (SCP)
 
-% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1 1x1
-% INFO: Software as a Critique as a Service (SaaCaaS) Directory
 % PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 2 1x1
+% INFO: Software as a Critique as a Service (SaaCaaS) Directory
+% PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1 1x1
 % INFO: Software as a Critique as a Service (SaaCaaS) Directory
 
 (% CARLINSAYS: I would suggest switching the order of these pages so the intake form is first and the list of services poster is second. It also seems important to make sure that the two page list of services poster for the clinic is printed on pages that are facing each other. If they are already set to do that then maybe nix my suggestion of moving the intake form up, but if they are not then that would be one way to shift the pages to make that happen.)

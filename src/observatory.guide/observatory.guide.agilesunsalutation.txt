@@ -1,3 +1,4 @@
+
 % HEADER: Agile Sun Salutation
 
 Hello and welcome to the presentation of the agile yoga methodology. I am Allegra, and today I'm going to be your personal guide to YOGA, an acronym for why organize? Go agile! I'll be part of your team today and we'll do a few exercises together as an introduction to a new path into your professional and personal life towards creativity, focus and health.
@@ -42,4 +43,7 @@ and then the second movement thinking about the fourth and last mantra : Respond
 % ![]( http://observatory.constantvzw.org/guide/agileyoga/gayolab-office-chair-for-yoga.contours.png )
 % SHOW: tgsoimages.svg agileyoga
 
-Now to finish this session, let's do a sprint together in the corridor !
+Now to finish this session, let's do a sprint together in the corridor!
+
+
+

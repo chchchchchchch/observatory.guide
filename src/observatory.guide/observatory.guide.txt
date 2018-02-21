@@ -6,13 +6,18 @@
 % Questions for Christoph https://pad.constantvzw.org/p/guide.dearchristoph
 
 
+% TODO: OPENER PAGES
+% EMPTYPAGE:
+% EMPTYPAGE:
+
+
 
 % INTRODUCTION
 % ------------
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.introduction
 
 % WARNING!
-% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.warning
+% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.warning L
 
 
 % TOC:

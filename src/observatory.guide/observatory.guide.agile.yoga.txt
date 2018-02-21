@@ -39,10 +39,8 @@
 > past, just because it is from the  past, adopting fads and new jargon,
 > at times cocky and arrogant. But I have no doubts that it will mature further,
 > become more open to the outside world, more reflective, and also therefore more effective.
-> [@kruchten:2011:agileteenagecrisis]
+> [@kruchten:2011:as]
 
-% http://observatory.constantvzw.org/documents/anne/agileyoga.jpg
-% SHOW: tgsoimages.svg agileyogaperformance
 
 % EXAMPLE: - 
 
@@ -54,6 +52,8 @@
 % PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf  10 1x1
 % INFO: Privacy After the Agile Turn [Page 10], Seda Gürses and Joris van Hoboken, 2017.
 
-
 % RELATESTO:
-% SOURCE: _Agile Sun Salutation_ was developed by Anne Laforet and performed by Allegra. See following pages for the full script
+% SOURCE: _Agile Sun Salutation_ was developed by Anne Laforet and performed by Allegra. See following pages for the full script.
+
+% SHOW: tgsoimages.svg agilefloor
+

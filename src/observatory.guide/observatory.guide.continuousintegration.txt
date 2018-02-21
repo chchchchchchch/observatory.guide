@@ -15,7 +15,7 @@ Continuous integration worked by visiting the different services of the walk-in 
 When we noticed that software curious persons visiting the walk-in clinic may have troubles finding the different services, and that some services may be overloaded with software curious persons, continuous integration was extended. We automated service registration using colored tape and provided a lookup registry for software curious persons. 
 
 % Add some images of the tape and color coded sheet.
-%http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1404
+% http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1404
 % SHOW: tgsoimages.svg orientationtape
 
 Load balancing meant that software curious persons were forwarded to services that had capacity. If all other services were full, the load balancer defaulted to sending the software curious person to the [Agile Sun Salutation](http://pad.constantvzw.org/p/observatory.guide.agile.yoga) service.
