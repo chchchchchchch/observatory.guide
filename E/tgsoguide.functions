@@ -941,8 +941,14 @@ function QUOTESTYLE() {
   fi
 }
 # --------------------------------------------------------------------------- #
-  # TODO: % TEXIN
-  #       % TEXFIX
+# % TEXFIX
+function TEXIN() {
+
+   if [ "$OUTPUTFORMAT" == html ];then 
+   write2src "$*"
+   fi
+
+}
 
 function TODO() {
 
