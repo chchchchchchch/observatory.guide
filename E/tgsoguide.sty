@@ -382,6 +382,10 @@
                               \renewcommand{\emptylinelst}{%
                                \vspace{-.4\baselineskip}}
   }
+  \newcommand{\lstsetMake}{\lstset{language=Make,
+                                   basicstyle=\fontencoding{T1}\linespread{1.5}
+                                              \fontfamily{ipm}\selectfont\footnotesize}
+  }
 
   \lstnewenvironment{plain}[1]{\lstsetCode{1}\lstReset
                                \ifnum\numexpr#1 < 5
@@ -397,6 +401,7 @@
                               {}
   \lstnewenvironment{bashcode}[1]{\lstsetCode{1.5}\lstsetBash}{}
   \lstnewenvironment{pythoncode}[1]{\lstsetCode{1}\lstsetPython}{}
+  \lstnewenvironment{makecode}[1]{\lstsetCode{1}\lstsetMake}{}
   \lstnewenvironment{quaverbatim}[1]{\lstsetQuaverbatim}{}
 
   \newcommand{\lstinputplain}[1]{\lstsetCode{1}\lstReset %
@@ -414,6 +419,15 @@
                                  \fontfamily{ipm}\selectfont%
                                  \scriptsize}
                                  \lstinputlisting{#1}}
+  \newcommand{\lstinputmakecode}[1]{\lstsetCode{1.5}\lstsetMake %
+                                    \lstinputlisting{#1}}
+
+ % https://tex.stackexchange.com/questions/44702/
+ % -> can-you-change-lstinline-without-changing-the-global-lstset
+ %\def\inline{\lstReset % 
+ %            \lstinline[basicstyle=\fontencoding{T1}\fontfamily{ipm} %
+ %                                  \selectfont\large,
+ %                       keywordstyle={}]}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
