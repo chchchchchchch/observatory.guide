@@ -942,9 +942,10 @@ function QUOTESTYLE() {
 }
 # --------------------------------------------------------------------------- #
 # % TEXFIX
+
 function TEXIN() {
 
-   if [ "$OUTPUTFORMAT" == html ];then 
+   if [ "$OUTPUTFORMAT" == pdf ];then 
    write2src "$*"
    fi
 
