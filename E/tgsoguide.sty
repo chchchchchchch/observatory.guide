@@ -390,6 +390,11 @@
                               %\color{red}
                                \fi}
                               {}
+  \lstnewenvironment{small}[1]{\lstsetCode{1}\lstReset
+                               \lstset{basicstyle=\fontencoding{T1}
+                               \fontfamily{ipm}\selectfont%
+                               \scriptsize}}
+                              {}
   \lstnewenvironment{bashcode}[1]{\lstsetCode{1.5}\lstsetBash}{}
   \lstnewenvironment{pythoncode}[1]{\lstsetCode{1}\lstsetPython}{}
   \lstnewenvironment{quaverbatim}[1]{\lstsetQuaverbatim}{}
@@ -404,7 +409,11 @@
                                        \lstinputlisting{#1}}
   \newcommand{\lstinputquaverbatim}[1]{\lstsetQuaverbatim %
                                        \lstinputlisting{#1}}
-
+  \newcommand{\lstinputsmall}[1]{\lstsetCode{1}\lstReset
+                                 \lstset{basicstyle=\fontencoding{T1}
+                                 \fontfamily{ipm}\selectfont%
+                                 \scriptsize}
+                                 \lstinputlisting{#1}}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
