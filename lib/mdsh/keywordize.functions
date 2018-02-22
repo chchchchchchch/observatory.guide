@@ -58,9 +58,12 @@ function KEYWORDIZE() {
                postamble "\n\n\\end{theindex}\n"' > ${TMPID}.ist
         ADD2PREAMBLE "\usepackage{fancyhdr}"
         ADD2PREAMBLE "\usepackage{fancyvrb}"
-       #write2src "\cleartoleft"
+        ADD2PREAMBLE "\usepackage{makeidx}"
+        ADD2PREAMBLE "\makeindex"
+
         write2src "\renewcommand\chapter[1]{}" # NOT SAFE!
-        write2src "\renewcommand{\indexname}{}"
+        write2src "\renewcommand{\indexname}{\label{$2}}"
+
         write2src "\printindex"
 
    elif [ "$OUTPUTFORMAT" == "html" ];then

@@ -884,6 +884,22 @@ function BIBLIST() {
 
 }
 # --------------------------------------------------------------------------- #
+function KEYWORDINDEX() {
+
+  SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
+  REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
+  if [ $REPLYPLUS == '200' ]; then
+       SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
+  KWID=`echo keywords | md5sum | cut -c 1-8`
+  echo "${KWID}:Keyword Index" >> ${TMPID}.toc
+  echo "${KWID}:4:$*"          >> ${TMPID}.index
+
+  # AND ACTION
+    KEYWORDIZE $SRCGET $KWID
+
+}
+# --------------------------------------------------------------------------- #
+
 function LICENSE() {
 
   LURL="https://github.com/chchchchchchch/licenses/raw/master/pdf/FAL_1.3.pdf"
