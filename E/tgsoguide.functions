@@ -1003,6 +1003,10 @@ function TODO() {
  # sed -i '/^[\%]/!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
    sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},' $SRCDUMP
 
+ # CUSTOM STYLE FOR \lstinline
+   sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
+
+
   }
 
  # ------------------------------------------------------------------------- #

@@ -321,6 +321,8 @@
   \renewcommand{\kwb}{\kwa}
   \renewcommand{\kwc}{}
 
+  \lstdefinestyle{inline}{basicstyle=\small\ttfamily}
+
   \newcommand{\lstsetCode}[1]{%
   \lstset{ %
     basicstyle=\fontencoding{T1}\linespread{#1}
@@ -422,12 +424,6 @@
   \newcommand{\lstinputmakecode}[1]{\lstsetCode{1.5}\lstsetMake %
                                     \lstinputlisting{#1}}
 
- % https://tex.stackexchange.com/questions/44702/
- % -> can-you-change-lstinline-without-changing-the-global-lstset
- %\def\inline{\lstReset % 
- %            \lstinline[basicstyle=\fontencoding{T1}\fontfamily{ipm} %
- %                                  \selectfont\large,
- %                       keywordstyle={}]}
 
 % --------------------------------------------------------------------------- %
 %  P A G E   C O M M A N D S
