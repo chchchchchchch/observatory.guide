@@ -3,6 +3,7 @@
 
 function INCLUDE() {
 
+echo "MDSH: $MDSH"
   echo "O INCLUDE STARTS ==================================================="
 
   # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
@@ -15,7 +16,9 @@ function INCLUDE() {
   
   # PROCESS INPUT !!!!!
   # -------------------------------------------------------------- #
-    mdsh2src $*
+    mdsh2src $*  
+
+echo "MDSH: $MDSH"
   
   # REMOVE ADDED FUNCTIONS
   # -------------------------------------------------------------- #
@@ -29,11 +32,17 @@ function INCLUDE() {
       sed -i "/$FID/d" ${TMPID}.fid
     # RELOAD FUNCTIONS
       source $FUNCTIONS
+
+      echo "FID: $FID"
+    # RESET FID
+      FID=`tail -n 1 ${TMPID}.fid`
+      echo "FID: $FID"
+      MDSH=`grep -l $FID ${TMPID}.*.mdsh`
   
     fi
 
   echo "O INCLUDE ENDS  ===================================================="
-
+echo "MDSH: $MDSH"
 }
 
 # --------------------------------------------------------------------------- #

@@ -9,6 +9,7 @@
         ESC=ES${RANDOM}C
         SHORTURLBASE="http://lfkn.de"
           SHORTURLOG="shorturls.log"
+        FID=`date +%s%N`; echo $FID >> ${TMPID}.fid
   fi
 
 # --------------------------------------------------------------------------- #
@@ -135,6 +136,10 @@
 # GET LINERANGE
 # --------------------------------------------------------------------------- #
   cat $MDSH | eval "$SELECTLINES" > tmp.tmp ; mv tmp.tmp $MDSH
+
+# WRITE FID TO MDSH
+# --------------------------------------------------------------------------- #
+  echo -e "\n% $FID\n" >> $MDSH
 
 # PRE-PROCESSING
 # --------------------------------------------------------------------------- #
