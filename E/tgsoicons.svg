@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1519236894/7dbc5c54d3b643b6d3aad304de632727 -->
+<!-- CLEANED: 1519299040/47ba16a4fe3630c84f9aa36326910da8 -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -530,10 +530,10 @@
      inkscape:groupmode="layer"
      id="g3450"
      inkscape:label="seeinline"
-     style="display:none">
+     style="display:inline">
     <g
        style="stroke-width:1.48753774;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
-       transform="matrix(1.0104606,0,0,1.0062992,5.034823,-146.25822)"
+       transform="matrix(1.0104606,0,0,1.0062992,35.034823,-137.25822)"
        id="g3452">
       <g
          style="stroke-width:1.48753774;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
@@ -595,26 +595,6 @@
            d="m 371.44016,420.1812 c -0.23928,0.1012 -0.50235,0.15717 -0.77849,0.15717 -1.10457,0 -2,-0.89543 -2,-2 0,-0.27615 0.056,-0.53922 0.15717,-0.77849"
            style="color:#000000;fill:none;stroke:#000000;stroke-width:1.59120309;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
-    </g>
-    <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
-       d="m 129.42847,127.64574 3.65351,7.84218 3.92284,-2.06373 -3.70806,-7.4065 5.94002,-0.48155 -14.40618,-14.67543 0,21.46282 z"
-       id="path3475"
-       sodipodi:nodetypes="cccccccc" />
-    <g
-       style="display:inline"
-       id="g3477"
-       transform="matrix(0,-1,-1,0,212.125,189.125)">
-      <path
-         sodipodi:nodetypes="ccccc"
-         d="m 50.911873,124.5 68.176257,0 0,-14 -68.176257,0 z"
-         style="fill:#ffffff;stroke:none;display:inline"
-         id="path3479" />
-      <path
-         id="path3481"
-         style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
-         d="m 119.08813,110.5 -68.176257,0"
-         sodipodi:nodetypes="cc" />
     </g>
   </g>
   <g
@@ -1599,7 +1579,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="howmarginlarge">
+     inkscape:label="howmarginlarge"
+     style="display:none">
     <text
        transform="matrix(0,-1,1,0,0,0)"
        sodipodi:linespacing="100%"
