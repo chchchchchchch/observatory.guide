@@ -29,6 +29,7 @@
   if [ `echo $TARGET | wc -c` -lt 2 ]; then SUCCESS="NO"
        #echo "No target provided! Skipping." 
   else
+
 # if [ -f $TARGET ]; then SUCCESS="YES"
 #      #echo "$TARGET already here"
 # else
@@ -64,7 +65,10 @@
   fi
 
 #   fi
+
   fi
+
+  cp $TARGET debug.`date +%s`
 
   }
 
