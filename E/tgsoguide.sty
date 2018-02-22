@@ -370,6 +370,7 @@
 
   \newcommand{\lstReset}{\lstset{language={}}
                          \renewcommand{\emptylinelst}{\vspace{.5\baselineskip}}}
+
   \newcommand{\lstsetBash}{\lstset{language=Bash+,
                morekeywords = [2]{write2src,getFile,
                                   mkqr,getVerbatim},
@@ -386,7 +387,6 @@
                                    basicstyle=\fontencoding{T1}\linespread{1.5}
                                               \fontfamily{ipm}\selectfont\footnotesize}
   }
-
   \lstnewenvironment{plain}[1]{\lstsetCode{1}\lstReset
                                \ifnum\numexpr#1 < 5
                               %\color{green}
@@ -394,10 +394,10 @@
                               %\color{red}
                                \fi}
                               {}
-  \lstnewenvironment{small}[1]{\lstsetCode{1}\lstReset
-                               \lstset{basicstyle=\fontencoding{T1}
-                               \fontfamily{ipm}\selectfont%
-                               \scriptsize}}
+  \lstnewenvironment{smallcode}[1]{\lstsetCode{1}\lstReset
+                                   \lstset{basicstyle=\fontencoding{T1}
+                                   \fontfamily{ipm}\selectfont%
+                                   \scriptsize}}
                               {}
   \lstnewenvironment{bashcode}[1]{\lstsetCode{1.5}\lstsetBash}{}
   \lstnewenvironment{pythoncode}[1]{\lstsetCode{1}\lstsetPython}{}
@@ -414,11 +414,11 @@
                                        \lstinputlisting{#1}}
   \newcommand{\lstinputquaverbatim}[1]{\lstsetQuaverbatim %
                                        \lstinputlisting{#1}}
-  \newcommand{\lstinputsmall}[1]{\lstsetCode{1}\lstReset
-                                 \lstset{basicstyle=\fontencoding{T1}
-                                 \fontfamily{ipm}\selectfont%
-                                 \scriptsize}
-                                 \lstinputlisting{#1}}
+  \newcommand{\lstinputsmallcode}[1]{\lstsetCode{1}\lstReset
+                                     \lstset{basicstyle=\fontencoding{T1}
+                                     \fontfamily{ipm}\selectfont%
+                                     \scriptsize}
+                                     \lstinputlisting{#1}}
   \newcommand{\lstinputmakecode}[1]{\lstsetCode{1.5}\lstsetMake %
                                     \lstinputlisting{#1}}
 
