@@ -869,7 +869,20 @@ function TOC() {
  # ------------------------------------------------------------------------- #
 
  }
+# --------------------------------------------------------------------------- #
+function BIBLIST() {
 
+  BIBID=`echo bibliography | md5sum | cut -c 1-8`
+
+  echo "${BIBID}:Bibliography" >> ${TMPID}.toc
+  echo "${BIBID}:4:$*"         >> ${TMPID}.index
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\label{$BIBID}"
+        write2src '\printbibliography[title=Read Further!]'
+  fi
+
+}
 # --------------------------------------------------------------------------- #
 function NEWPAGE() {
 

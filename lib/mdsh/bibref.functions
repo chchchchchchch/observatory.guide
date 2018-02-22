@@ -11,9 +11,9 @@ function BIBREF() {
     #echo '\usepackage[style=fiwi,
     #                  natbib=true, 
     #                  backend=biber]{biblatex}' >> ${TMPID}.preamble
-     echo '\usepackage[natbib=true,hyperref=false,
-                       backend=biber]{biblatex}' >> ${TMPID}.preamble
-     echo '\usepackage{bibentry}'                >> ${TMPID}.preamble
+#    echo '\usepackage[natbib=true,hyperref=false,
+#                      backend=biber]{biblatex}' >> ${TMPID}.preamble
+#    echo '\usepackage{bibentry}'                >> ${TMPID}.preamble
      echo '\AtEveryCitekey{\clearfield{url}}
            \AtEveryCitekey{\clearfield{note}}
          

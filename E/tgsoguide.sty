@@ -39,6 +39,9 @@
   \usepackage{pifont}
   \usepackage{framed}
   \usepackage{needspace}  % USEDY BY listing
+  \usepackage[natbib=true,hyperref=false,
+              style=musuos,backend=biber]{biblatex}
+  \usepackage{bibentry}
 
   \newcounter{floats}  % COUNT FLOATS TO ADD LABELS
   \newcounter{pagenow} % MOSTLY EMPTY/USED TO STORE
@@ -223,6 +226,13 @@
    \nopagecolor{}
    \uchyph=0
   }
+% --------------------------------------------------------------------------- % 
+%  B I B L I O G R A P H Y 
+% --------------------------------------------------------------------------- %  
+  \defbibheading{bibliography}[\bibname]{% 
+   \newpage\subsection{#1}%
+    \markboth{#1}{#1}}
+
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
@@ -268,6 +278,9 @@
   % SAVE FOR RESET 
   \newlength{\SKIPFOOTINS} 
   \setlength{\SKIPFOOTINS}{\skip\footins}
+
+
+
 
 % --------------------------------------------------------------------------- %
 %  Q U O T E
