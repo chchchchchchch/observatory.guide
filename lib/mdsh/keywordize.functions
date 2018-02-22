@@ -1,6 +1,5 @@
 # --------------------------------------------------------------------------- #
 
-
 function KEYWORDIZE() {
 
   KEYWORDSRC=$1;IDSTAMP=`echo $KEYWORDSRC | md5sum | cut -c 1-10`
@@ -11,7 +10,7 @@ function KEYWORDIZE() {
   ( # A SUBSHELL => PROTECT VARIABLES
 
    UN=U`echo $RANDOM | cut -c 1-2`N
-   S=S`echo $RANDOM | cut -c 1-2`P
+    S=S`echo $RANDOM | cut -c 1-2`P
 
 
    IFS=$'\n'
@@ -41,15 +40,18 @@ function KEYWORDIZE() {
              # solved via LaTeX (for section so far ...)
                set +H;
                sed -i "/^\\\/!s/\b$K\b/K${UN}&K${UN}\\\index{$MAINFOO}/I" $SRCDUMP
+               sed -i "/^\\\/!s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
 
          done
-        sed -i "s/K$UN//g" $SRCDUMP    # NORMALIZE PROTECTED KEYWORD
+        sed -i "s/K$UN//g" $SRCDUMP ${TMPID}*.verbatim # NORMALIZE PROTECTED KEYWORD
    done
 
-   sed -i "s/M$UN//g"    $SRCDUMP  # NORMALIZE PROTECTED KEYWORD ANCHOR
-   sed -i "s/M$S/ /g"    $SRCDUMP  # NORMALIZE PROTECTED KEYWORD ANCHOR
+   sed -i "s/M$UN//g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
+   sed -i "s/M$S/ /g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
+
 
    ) # END SUBSHELL
+
 
    if [ "$OUTPUTFORMAT" == "pdf" ];then
 
@@ -84,8 +86,8 @@ function KEYWORDIZE() {
        done
 
        sed -i 's/\\index{[^}]*}//g' $SRCDUMP
-
   fi
+
 }
 
 # --------------------------------------------------------------------------- ##
