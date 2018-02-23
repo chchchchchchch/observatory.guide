@@ -6,16 +6,14 @@ function KEYWORDIZE() {
   getFile $KEYWORDSRC ${TMPID}.${IDSTAMP}.tmp
   cat ${TMPID}.${IDSTAMP}.tmp >> ${TMPID}.keywords
 
-
   ( # A SUBSHELL => PROTECT VARIABLES
 
    UN=U`echo $RANDOM | cut -c 1-2`N
     S=S`echo $RANDOM | cut -c 1-2`P
 
-
    IFS=$'\n'
    for INDEXTHIS in `cat ${TMPID}.keywords         | # TAKE LIST
-                     grep -v "^#"                  | # IGNORE SOMETHING
+                     egrep -v "^#|^%"              | # IGNORE SOMETHING
                      awk 'BEGIN { FS = "|" } ; \
                      { print length($1) ":" $0; }' | # ADD LENGTH OF FIELD 1
                      sort -n                       | # NUMERIC SORT (=LENGTH)
@@ -49,7 +47,6 @@ function KEYWORDIZE() {
    sed -i "s/M$UN//g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
    sed -i "s/M$S/ /g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
 
-
    ) # END SUBSHELL
 
 
@@ -58,15 +55,8 @@ function KEYWORDIZE() {
         echo 'preamble
              "\\begin{theindex}\n\\pagestyle{fancy}\n"
                postamble "\n\n\\end{theindex}\n"' > ${TMPID}.ist
-        ADD2PREAMBLE "\usepackage{fancyhdr}"
-        ADD2PREAMBLE "\usepackage{fancyvrb}"
-        ADD2PREAMBLE "\usepackage{makeidx}"
-        ADD2PREAMBLE "\makeindex"
 
-        write2src "\renewcommand\chapter[1]{}" # NOT SAFE!
-        write2src "\renewcommand{\indexname}{\label{$2}}"
-
-        write2src "\printindex"
+        write2src "\insertindex"
 
    elif [ "$OUTPUTFORMAT" == "html" ];then
 

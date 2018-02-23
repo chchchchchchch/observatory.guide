@@ -234,6 +234,22 @@
    \newpage\subsection{#1}%
     \markboth{#1}{#1}}
 
+% --------------------------------------------------------------------------- % 
+%  I N D E X I N G
+% --------------------------------------------------------------------------- %  
+  \usepackage{fancyhdr}
+  \usepackage{fancyvrb}
+  \usepackage{makeidx}
+  \makeindex
+ %\renewcommand\chapter[1]{}
+  \renewcommand{\indexname}{\label{$2}}
+
+  \newcommand{\insertindex}{
+  \let\CHAPTERSAVE\chapter
+  \renewcommand\chapter[1]{}
+  \printindex
+  \renewcommand\chapter[1]{\CHAPTERSAVE{#1}}
+  }
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
