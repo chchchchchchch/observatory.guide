@@ -56,7 +56,7 @@ function KEYWORDIZE() {
              "\\begin{theindex}\n\\pagestyle{fancy}\n"
                postamble "\n\n\\end{theindex}\n"' > ${TMPID}.ist
 
-        write2src "\insertindex"
+        write2src "\insertindex{$KWID}"
 
    elif [ "$OUTPUTFORMAT" == "html" ];then
 
