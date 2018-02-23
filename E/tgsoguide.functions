@@ -995,7 +995,6 @@ function QUOTESTYLE() {
   fi
 }
 # --------------------------------------------------------------------------- #
-# % TEXFIX
 
 function TEXIN() {
 
@@ -1004,6 +1003,22 @@ function TEXIN() {
    fi
 
 }
+
+# --------------------------------------------------------------------------- #
+  PDFVERSION="1"
+
+function PDFFIX() {
+
+   FIXIT=`echo $* | grep "\b$PDFVERSION\b" | #
+          sed "s/\b${PDFVERSION}\b//g"`
+   if [ "$FIXIT" != "" ];then
+      if [ "$OUTPUTFORMAT" == pdf ];then 
+            write2src "$FIXIT" 
+      fi
+   fi
+}
+
+# --------------------------------------------------------------------------- #
 
 function TODO() {
 
