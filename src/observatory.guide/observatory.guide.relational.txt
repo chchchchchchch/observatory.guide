@@ -31,7 +31,7 @@
 
 ## What to expect
 
-Through administration of this questionnaire, you will obtain a cartographic view of software users profiles. It will help you to shape your own relation to software. You will be able to construct your own taxonomy and classifcation of software users which is necessary in order to find a means of rescue in case of a software catastrophe. 
+Through administration of this questionnaire, you will obtain a cartographic view of software users profiles. It will help you to shape your own relation to software. You will be able to construct your own taxonomy and classification of software users which is necessary in order to find a means of rescue in case of a software catastrophe. 
 
 ### User Habits
 * What kind of user would you say that you are? 

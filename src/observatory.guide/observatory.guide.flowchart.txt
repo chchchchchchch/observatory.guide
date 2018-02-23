@@ -61,9 +61,9 @@ http://observatory.constantvzw.org/etherdump/clinic.newflow.diff.html
 More info → see Rafaella flowchart pic 
 
 
-## Apendix A:
+## Appendix A:
 
-* IBM ruler:
+* **IBM ruler:**
     * http://etherbox.local/home/pi/images/wednesday/P1040728.JPG
     * left to right
     * process  - rectange
@@ -82,7 +82,7 @@ More info → see Rafaella flowchart pic
     * manual input -
     * Punched Card - rectangle with left cut edge 
     * Punched tape - like a flag
-* Burroughs:
+* **Burroughs:**
     * http://etherbox.local/home/pi/images/wednesday/P1040730.JPG
     * Left to right, top to bottom:
     * input/output = parallelogram
@@ -108,49 +108,52 @@ More info → see Rafaella flowchart pic
     * Card Deck
 
 
-## Apendix B
+% PDFFIX: 1 \newpage 
+
+## Appendix B
 
 ### Friday:
 
-15:30 - 16:15    
+**15:30 - 16:15**    
 We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the ruler with specific shape has special meaning. There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without description. We try to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols. The specific literature explained us that engineer have a kind of standard for these symbols. These symbols are vocabulary 
 
-16:15 - 16:40    
+**16:15 - 16:40**    
 We started with analysing a educational flow chart as our case example (https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg). We could figure out what the arrows on the ruler means, they are used in compination with the decision symbol. In shape studies Triangles can direct movement based which way they point.Triangles can direct movement based which way they point. In the flowchart the options are represented by rectangles and quares in shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
 
-16:45 - 17:00    
+**16:45 - 17:00**    
 We analysed a flow chart of a multiplication algorithm. Its content illustrating to shift left or right the number. The decision box instructing you to repeat it 32 times for the whole number! 
 The rectangles are again representing options, while the flexible factors are illustrated by the rhombus, the symbol for Decision. The final symbol with the title "Done" is illustrated by something inbetween a circle and a rectangle. 
 
-17:00 - 17:15    
+**17:00 - 17:15**    
 We realised in our undertaking we have to jump into an endo perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to go with the elevator to the 1st floor in the perspective of the elevator. To achieve this task we agreed to do field research and go to the 1st floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. 
 
 Documentary short Lift by Marc Isaacs / UK / 2001    
 https://www.youtube.com/watch?v=FJNAvyLCTik
 
-17:15 - 17:40    
+**17:15 - 17:40**    
 To round off the day we ended on some general reflections. It seems that the different interpretations of symbols have been integrated in the early flowcharts of the 1920's until now [^]{http://odec.ca/projects/2009/xing9t2/hist.htm}. To put this knowledge into practice we started to sketch out the flowchart on the wall using post-its.
 
-Current research goals:
+**Current research goals:**
 
-Flowchart or intervention: what is it like to be a elevator
+* Flowchart or intervention: what is it like to be a elevator
+* zenit browser extension
+* iconographic analyses of flow chart symbols
+* call-flow && zenit modeling template for the drop-in clinic interview
 
-zenit browser extension
 
-iconographic analyses of flow chart symbols
-
-call-flow && zenit modeling template for the drop-in clinic interview
+% PDFFIX: 1 \newpage
 
 ### Saturday:
 
-11:00 - 11:40    
+**11:00 - 11:40**    
 We updated our research follower about our undertakings.
 
-14:45-18:00    
+**14:45-18:00**    
 Zenit (h)modeling/analysis    
 A method derived from a removal of textual informating from flowcharts - related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam ) an early 20th Century movement and zenith - an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith).
 
-Connection inspiration: https://helios.gsfc.nasa.gov/flowchart.html
+Connection inspiration:     
+https://helios.gsfc.nasa.gov/flowchart.html
 
 Some historical experimetation examples:    
 http://www.e-w-n-s.net/minis-html/futuremillionaire/transition/v.gif
@@ -161,11 +164,12 @@ Material:
 https://commons.wikimedia.org/wiki/Flow_chart
 
 
-Afternoon:    
-Josef working on all the ideas at the same time 
-continue with flow chart elevator 
-Lara working on Zenit(h) modeling/analysis leading to call-flow template, and zenit browser plugin
-Michaela helping out the flow chart of the elevator as a case study
+
+**Afternoon**    
+Josef working on all the ideas at the same time    
+continue with flow chart elevator    
+Lara working on Zenit(h) modeling/analysis leading to call-flow template, and zenit browser plugin   
+Michaela helping out the flow chart of the elevator as a case study   
 
 Here are the flowchart symbols: http://etherbox.local:9001/p/flowchartsymbols.md
 
@@ -176,8 +180,8 @@ https://en.wikipedia.org/wiki/Flowchart
 https://en.wikipedia.org/wiki/Software_design_description
 https://www.w3schools.com/charsets/ref_utf_geometric.asp
 http://www.iausdj.ac.ir/ostad/DocLib71/J._C._Cirlot_Dictionary_of_Symbols__1990.pdf
-Flowchart humour: http://etherbox.local/home/pi/video/A_Computer_Glossary.webm#t=02:26
-Power Point as Knowledge Communication - http://computationalculture.net/article/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech
+**Flowchart humour:** http://etherbox.local/home/pi/video/A_Computer_Glossary.webm#t=02:26
+**Power Point as Knowledge Communication:** http://computationalculture.net/article/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech
 
 ## Blank diagrams:
 
@@ -185,7 +189,7 @@ http://silviolorusso.com/see-nothing-volume-three/
 http://silviolorusso.com/blank-diagrams-4-nsa-slides-of-prism-program/
 http://silviolorusso.com/blank-diagrams-1-claude-shannon-schematic-diagram-of-a-general-communication-system/
 
-The Grammar of Shapes:
+**The Grammar of Shapes:**
 http://vanseodesign.com/web-design/visual-grammar-shapes/
 
 
@@ -224,6 +228,6 @@ manifest.json:
 % SRCCODE: plain
 
 
-## Apendix C
+## Appendix C
 
-%SOURCE: Version 3384 Saved June 10, 2017. Authors: m, lara, carlin + 5 unnamed authors
+% SOURCE: Version 3384 Saved June 10, 2017. Authors: m, lara, carlin + 5 unnamed authors

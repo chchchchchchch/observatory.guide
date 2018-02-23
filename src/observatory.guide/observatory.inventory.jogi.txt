@@ -5,12 +5,11 @@ from jogi@mur.at to [Observatory]
 When dirty.db get's dirty
 % SRCCODE: quaverbatim
 
-Dear all,
-
+Dear all,    
 as promised yesterday, here my little report regarding the broken
 etherpad.
 
-### When dirty.db get's dirty   
+## When dirty.db get's dirty   
 
 When I got to WTC on Monday morning the etherpad on etherbox.local was disfunct.
 Later someone said that in fact etherpad had stopped working the evening before,

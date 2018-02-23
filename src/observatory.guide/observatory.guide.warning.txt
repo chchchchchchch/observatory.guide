@@ -1,6 +1,9 @@
 % TOCITEM: Warning T:4
 
-% WARNING:
+% WARNING: - 
+
+**WARNING**
+
 The survival techniques described in the following guide are to be used at your own risk in cases of emergency (% CARLINSAYS: as well as in cases of nonurgent) software curiosities.
 
 The publisher will not accept any responsibility in case of damages caused by misuse, misunderstanding of instruction, or lack of curiosity. 
@@ -27,7 +30,10 @@ Loss of time tracking
 > our methods for observation,    
 > like mapping, come with their luggage.
 
-% CARLINSAYS: Does the bottom part of the warning look OK on the PDF? The last line, which I think is mine from a while back, seems like it could be cut?
 
+% PDF: http://observatory.constantvzw.org/documents/2017_techno_galactic_Poster_films_A2_V2.pdf 1x1
+
+
+% CARLINSAYS: Does the bottom part of the warning look OK on the PDF? The last line, which I think is mine from a while back, seems like it could be cut?
 
 %!RELATESTO: http://observatory.constantvzw.org/etherdump/toc.md.diff.html

@@ -219,26 +219,26 @@
 
 @misc{ observatory:2017:vocabulary,
 	title = {Notes from the Observatory on glossaries and vocabularies},
-	author = {Techno-Galactic Software Observatory},
+	author = {{Techno-Galactic Software Observatory}},
 	url = {http://observatory.constantvzw.org/etherdump/vocabulary.md.diff.html},
 	year = {2017}
 }
 
 @misc{ observatory:2017:saturday,
 	title = {Notes from the Observatory on When and Where is Software},
-	author = {Techno-Galactic Software Observatory},
+	author = {{Techno-Galactic Software Observatory}},
 	url = {http://observatory.constantvzw.org/etherdump/saturday.diff.html},
 	year = {2017}
 }
 
 @misc{ observatory:2017:clinicfiletherapy,
 	title = {Introduction to file therapy},
-	author = {Techno-Galactic Software Observatory},
+	author = {{Techno-Galactic Software Observatory}},
 	url = {http://observatory.constantvzw.org/etherdump/clinic.file_therapy.md.diff.html},
 	year = {2017}
 }
 
-@article{lammerant:2017:tgsotime,
+@misc{lammerant:2017:tgsotime,
 	author = {Lammerant, Hans},
 	title = {How Humans and Machines negotiate the Experience of Time},
 	url = {http://etherdump.constantvzw.org/p/observatory.guide.experiencingtime.diff.html},
@@ -247,21 +247,21 @@
 
 @misc{observatory:2017:constellation,
 	title = {Notes from the Observatory on A Constellation of Wares}, 
-	author = {Techno-Galactic Software Observatory},
+	author = {{Techno-Galactic Software Observatory}},
 	url = {http://observatory.constantvzw.org/etherdump/constellationofwares.md.diff.html},
 	year = {2017}
 }
 
 @misc{ linuxmanual:2018:time,
-	title = {???}, 
-	author = {???},
-	url = {???},
-	year = {???}
+	title = {{TIME(1) General Commands Manual}}, 
+	author = {{time was written by David MacKenzie.
+	           The man page was added by DirkEddelbuettel}},
+	url = {http://freeze.sh/man/time}
 }
 
 
 @misc{ wikipedia:2018:contentcontrolsoftware,
- author = {Wikipedia contributors},
+ author = {{Wikipedia contributors}},
  title  = {Content-control software --- Wikipedia{,} The Free Encyclopedia},
  year   = {2018},
  url    = {https://en.wikipedia.org/w/index.php?title=Content-control_software&oldid=818780033},
@@ -269,7 +269,7 @@
 }
 
 @misc{ urbanministry:2018:accountabilitysoftware,
- author = {TechMission UrbanMinistry.org},
+ author = {{TechMission UrbanMinistry.org}},
  title  = {SafeFamilies.org | Accountability Software: Encyclopedia of Urban Ministry},
  year   = {2018},
  url    = {http://www.urbanministry.org/node/4902},
@@ -277,7 +277,7 @@
 }
 
 @misc{ netnanny:2018:protecting,
- author = {Content Watch Holdings, Inc.},
+ author = {{Content Watch Holdings, Inc.}},
  title  = {Protecting Your Family},
  year   = {2018},
  url    = {https://www.netnanny.com/products/netnanny/protecting-your-family},
@@ -301,7 +301,7 @@
 }
 
 @misc{ wikipedia:2018:agilesoftwaredevelopment,
- author = {Wikipedia contributors},
+ author = {{Wikipedia contributors}},
  title  = {Agile software development --- Wikipedia{,} The Free Encyclopedia},
  year   = {2018},
  url    = {https://en.wikipedia.org/w/index.php?title=Agile_software_development&oldid=818894701},
@@ -309,7 +309,7 @@
 }
 
 @misc{ wikipedia:2018:scrum,
- author = {Wikipedia contributors},
+ author = {{Wikipedia contributors}},
  title  = {Scrum (software development) --- Wikipedia{,} The Free Encyclopedia},
  year   = {2018},
  url    = {https://en.wikipedia.org/w/index.php?title=Scrum_(software_development)&oldid=816207177},
@@ -339,7 +339,7 @@
 }
 
 @misc{ wikipedia:2018:hydra,
- author = {Wikipedia contributors},
+ author = {{Wikipedia contributors}},
  title  = {Lernaean Hydra --- Wikipedia{,} The Free Encyclopedia},
  year   = {2018},
  url    = {https://en.wikipedia.org/w/index.php?title=Lernaean_Hydra&oldid=812030608},
@@ -347,7 +347,7 @@
 }
 
 @article{ geertz:1975:commonsense,
- author = {Clifford Geertz},
+ author = {Geertz, Clifford},
  journal = {The Antioch Review},
  number = {1},
  pages = {5-26},
@@ -387,7 +387,7 @@
 
 
 @misc{ meltdown:2018:spectre17,
- author = {Jann Horn et al.},
+ author = {Horn, Jann  et al.},
  title  = {Meltdown and Spectre Attack},
  year   = {2018},
  url    = { https://meltdownattack.com},

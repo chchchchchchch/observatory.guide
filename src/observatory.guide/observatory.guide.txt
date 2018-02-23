@@ -161,11 +161,11 @@
 % =========
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.colophon
 
+% BIBLIST:
+% KEYWORDINDEX: https://pad.constantvzw.org/p/observatory.keywords
 
-% https://pad.constantvzw.org/p/observatory.bib
 
-
-
+% LICENSE: FAL
 
 
 
