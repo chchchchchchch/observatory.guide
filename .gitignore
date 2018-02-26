@@ -3,5 +3,7 @@
 E/*.pdf
 E/*.html
 
-src/*
-!src/*.remote
+src/**/*.*
+!src/**/*.xmp
+!src/**/*.remote
+
