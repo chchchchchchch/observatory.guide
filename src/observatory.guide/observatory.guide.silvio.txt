@@ -5,16 +5,16 @@
     
 Nannyware is software meant to protect users while limiting their space of activity. It is software that passive-aggressively suggests or enforces some kind of discipline. In other words, create a form of parental control extended to adults by means of user experience / user interfaces.
 
-Nannyware is a form of Content-control software: software designed to restrict or control the content a reader is authorised to  access, especially when utilised to restrict material delivered over the Internet via the Web, e-mail, or other means. Content-control software determines what content will be available or be blocked.
+Nannyware is a form of Content-control software: software designed to restrict or control the content a reader is authorised to access, especially when utilized to restrict material delivered over the Internet via the Web, e-mail, or other means. Content-control software determines what content will be available or be blocked.
 
 
 % HOW: - 
 
 > [...Restrictions] can be applied at various levels: a government
 > can attempt to apply them nationwide (see Internet censorship),
-> or they can, for example, be applied by an ISP  to its clients,
-> by an employer to its personnel, by a school to its  students,
-> by a library to its visitors, by a parent to a child's  computer,
+> or they can, for example, be applied by an ISP to its clients,
+> by an employer to its personnel, by a school to its students,
+> by a library to its visitors, by a parent to a child's computer,
 > or by an individual user to his or her own computer.
 > [@wikipedia:2018:contentcontrolsoftware]
 
@@ -65,7 +65,7 @@ Nannyware is a form of Content-control software: software designed to restrict o
 % EXAMPLE: - 
 
 > The main problem here is that the settings that are required
-> are different from person to person. For example, I use workrave
+> are different from person to person. For example, I use Workrave
 > with a 25 second micropause every two and a half minute, and a
 > 10 minute restbreak every 20 minutes. I need these frequent breaks,
 > because I'm recovering from RSI. And as I recover, I change the
@@ -87,7 +87,7 @@ Nannyware is a form of Content-control software: software designed to restrict o
 % ![](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fi0.wp.com%2Fatherbeg.com%2Fwp-content%2Fuploads%2F2015%2F06%2FWorkrave-Restbreak-Shoulder.png&f=1)
 
 % Facebook is working on an app to stop you from drunk-posting
-% "Yann LeCun, who overseas the lab, told Wired magazine that the program would be like someone asking you, 'Uh, this is being posted  publicly. Are you sure you want your boss and your mother to see this?'"
+% "Yann LeCun, who overseas the lab, told Wired magazine that the program would be like someone asking you, 'Uh, this is being posted publicly. Are you sure you want your boss and your mother to see this?'"
 
 % ![](http://waterlog.gd/images/homescreen.png)
 % ![](https://pbs.twimg.com/media/C6oKTduWcAEruIE.jpg:large)

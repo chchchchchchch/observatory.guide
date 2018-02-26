@@ -4,7 +4,7 @@
 > development under which requirements and solutions evolve through the collaborative
 > effort of self-organizing cross-functional teams. It advocates adaptive planning,
 > evolutionary development, early  delivery, and continuous improvement, and it encourages
-> rapid and  flexible response to change. These principles support the definition and
+> rapid and flexible response to change. These principles support the definition and
 > continuing evolution of many software development methods.
 > [@wikipedia:2018:agilesoftwaredevelopment]
 
@@ -12,7 +12,7 @@
 % HOW: - 
 > Scrum is a framework for managing software development.
 > It is designed for teams of three to nine developers who
-> break their  work into actions that can be completed within
+> break their work into actions that can be completed within
 > fixed duration cycles  (called "sprints"), track progress
 > and re-plan in daily 15-minute stand-up meetings, and collaborate
 > to deliver workable software every sprint. Approaches to coordinating
@@ -30,7 +30,7 @@
 > fundamental concept.
 > [@wikipedia:2018:agilemanifesto]
 
-% URGENCY: Using Agile software development methods to develop a new path into your professional and personal life towards creativity, focus and health.
+% URGENCY: Use Agile software development methods to develop a new path into your professional and personal life towards creativity, focus and health. (%CARLINSAYS: Was it ok to go from "Using" to "Use"? If the imperative is not quite right then we could substitute "encourages" in place of "towards" to make it a complete sentence.)
 % NOTE:
 % WARNING: - 
 > The agile movement is in some ways a bit like a teenager: very self-conscious,

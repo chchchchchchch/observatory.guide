@@ -5,23 +5,23 @@
 
 % URGENCY:  If you have the feeling that some words are imposed to you and want to reclaim a power of saying/naming. 
 
-% WHEN: When your reach the limit of tolerance for the jargon of digital economy and Silicon Valley rethorics.
+% WHEN: When you reach your limit and can no longer tolerate the jargon of the digital economy and the rhetorics of Silicon Valley.
 % WHO:
 % NOTE:
-% REMEMBER: Be careful in planning your interface hoax, you might get caught for fake news design and circulation. 
+% REMEMBER: Be careful in planning your interface hoax. You might get caught and accused of fake news design and circulation. 
 % SOURCE: The _Interface Détournement_-method was developed by Loup Cellard.
 % HOW: -
 
 1. Choose a particular website where you want to intervene. You can pick an interface in relation to:  
-  * contestable content: bullshit slogans and jargon, problematic rhetoric, unnecessary content interesting to reframe, etc.
+  * contestable content: bullshit slogans and jargon, problematic rhetoric, unnecessary content that is interesting to reframe, etc.
   * problematic interface issues: unreadabillity, problems of orientation/disorientation, interaction design issues, etc.
 2. Open the "developer tool" of your browser. With this tool you will be able to visualize and modify locally the content of your website (the html rendering) and the way it is styled (the css file). 
-3. Then you have to adopt a strategy of intervention guiding your détournement. Here is a list of proposed strategy: 
+3. Then you have to adopt a strategy of intervention guiding your détournement. Here is a list of proposed strategies: 
   * The classical détournement: play with the interface content, replace textual elements, add others with a good dose of humour and irony.
   * The layout and template observation: study the interface layout by removing all the textual content. The layout will appear, after having done this exercise on several interfaces you will be able to compare the regularities between websites. Then feel free to move elements and reconstruct the interface the way you want. 
 4. After having done your détournement, you can share the outcome of your work as a hoax: present the new interface you have done just as if it was a mundane and "real" one. Observe the reactions of the tested credulous and refine your détournement with their insights. You can also take a screenshot of your work and send it to an audience.
 
-%!EXAMPLE: Example of an interface template study by Henrik Jan Grievink: 
+%!EXAMPLE: Example of an interface template study by Henrik Jan Grievink: (%CARLINSAYS: this isn't visible on the PDF as of now)
 % https://www.flickr.com/photos/hendrikjangrievink/sets/72157614340281527
 % SHOW: tgsoimages.svg uigrievink
 % INFO: Interface template study by Henrik Jan Grievink

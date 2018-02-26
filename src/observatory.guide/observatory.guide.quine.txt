@@ -1,7 +1,7 @@
 % METHOD: Quine
-% WHAT: A program whose function consists of displaying its own code. Also known as  "self-replicating program"
-% WHY: Quines show the tension between "software as language" and "software as operation".
-% HOW: By running a quine you will get your code back. You may do a step forward and wonder about functionality and aesthetics, uselessness and performativity, data and code. 
+% WHAT: A program whose function consists of displaying its own code. Also known as  "self-replicating program."
+% WHY: Quines show the tension between "software as language" and "software as operation."
+% HOW: By running a quine you will get your code back. You may choose to go a step further and wonder about functionality and aesthetics, uselessness and performativity, data and code. 
 
 % EXAMPLE: A quine (Python). When executed it outputs the same text as the source:
 
@@ -27,10 +27,10 @@ You may also take quines as point of departure or limit-ideas for exploring soft
 % http://observatory.constantvzw.org/etherdump/auqinas 79-82
 
 "A quine is without why. It prints because it prints. It pays no attention to itself, nor does it asks whether anyone sees it."    
-"Aquine is aquine is aquine. "    
-Aquine is not a quine    
-This is not aquine    
-
+"Aquine is aquine is aquine."    
+Aquine is not a quine.    
+This is not aquine.    
+(%CARLINSAYS: Is it ok that I added punctuation to the last two lines so that they match the prior two or does that make it incorrect because they are examples of quines that were run that did not have punctuation? Also, I love this.)
 
 % REMEMBER: Although seemingly absolutely useless, quines can be used as exploits.
 

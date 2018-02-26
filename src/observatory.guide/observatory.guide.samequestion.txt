@@ -1,6 +1,6 @@
-% METHOD: Ask several people from different fields and age-groups the same question: "_**What is software?**_"
-% WHAT: By paying close attention to the answers, and possibly logging them, observations on the ambiguous place and nature of software can be made.
-% REMEMBER: The answer to this question will vary depending on who is asking it to who.
+% METHOD: Ask several people from different fields and age groups the same question: "_**What is software?**_"
+% WHAT: By paying close attention to the answers, and possibly logging them, observations about the ambiguous place and nature of software can be made.
+% REMEMBER: The answer to this question will vary depending on who is asking it to whom.
 
 % HOW:
 % WHEN:
@@ -29,8 +29,8 @@ so I like to consider it as unique and special_".
 ----what is a file?
 ----in the filesystem, if you ask xxd:
 ------ it's a set of hexadecimal bytes
--------what is hexadecimal bytes? 
------- -b it's a set of binary 01s
+-------what are hexadecimal bytes? 
+------ -b it's a set of binary 01s (%CARLINSAYS: -b?)
 ----if you ask objdump
 -------it's a set of instructions
 --side channel researching also says:

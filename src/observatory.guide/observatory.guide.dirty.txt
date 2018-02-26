@@ -5,8 +5,8 @@
 % WHAT: Sharing the experience of trying to solve a hard-boiled software noir.
 % HOW:
 % WHEN: It is difficult to take notes while working on critical infrastructure, but the sooner notes are compiled, the more vivid the report.
-% WHO: Bug reports are sometimes presented as a dry format intended for insiders only. On the contrary, they can have a rather convivial format.
-% URGENCY: Embracing moments of breakdown as oppurtunities to demystify the workings of software and the practice of software debugging.
+% WHO: Bug reports are sometimes (%CARLINSAYS:  I would say "often" instead of "sometimes") presented in a dry format intended for insiders only. But they do not have to be dry. On the contrary, they can have a rather convivial format.
+% URGENCY: Embracing moments of breakdown as opportunities to demystify the workings of software and the practice of software debugging.
 % WARNING: 
 
 % NEWPAGE:
@@ -27,7 +27,7 @@ A detailed bug report was filed, starting by looking around the pi's filesystem 
 > Sunday evening or how the zeroes got into the file dirty.db
 
 
-% SOURCE: The example was extracted from an e-mail sent by J.Hofmüller to the Technogalactic Software Observatory mailinglist. Full text on the following pages.
+% SOURCE: The example was extracted from an e-mail sent by J.Hofmüller to the Technogalactic Software Observatory mailinglist. The full text is on the following pages.
 
 
 % SHOW: tgsoimages.svg jogi

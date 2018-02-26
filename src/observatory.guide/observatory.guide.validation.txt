@@ -1,5 +1,5 @@
 % METHOD: Adding qualifiers 
-% WHAT:  Bringing a moral, ethical, or otherwise evaluative/adjectival/validating lens.
+% WHAT:  Applying a moral, ethical, or otherwise evaluative/adjectival/validating lens.
 
 % REMEMBER: -
 > [V]alues are properties of things and states of affairs that we care about and strive to attain...
@@ -7,14 +7,14 @@
 > [@flanagan:2014:values]
 
 % HOW: - 
-Adjectives create subcategories. They narrow the focus by naming more specifically the imagined object at hand and by implicitly excluding all objects that do not meet the criteria of the qualifier. The more adjectives that are added, the easier it becomes to answer the question what is software. Or so it seems. Consider what happens if you add the words good, bad, bourgeois, queer, stable, or expensive to software. Now make a list of adjectives and try it for yourself. Level two of this exercise consists of observing a software application and deducing from this the values of the individuals, companies, and societies that produced it. 
+Adjectives create subcategories. They narrow the focus by naming more specifically the imagined object at hand and by implicitly excluding all objects that do not meet the criteria of the qualifier. The more adjectives that are added, the easier it becomes to answer the question "what is software?". Or so it seems. Consider what happens if you add the words good, bad, bourgeois, queer, stable, expensive to software. Now make a list of adjectives and try it for yourself. Level two of this exercise consists of observing a software application and deducing from this the values of the individuals, companies, and societies that produce, distribute, and use it. 
 % WHEN:
 % WHO:
 % URGENCY:
-% NOTE: A qualifier may narrow down definitions to undesirable degrees.
+% NOTE: A qualifier may narrow definitions to undesirable degrees.
 % WARNING: This exercise may be more effective at identifying normative and ideological assumptions at play in the making, distributing, using, and maintaining of software than at producing a concise definition.
 
-% EXAMPLE: "When asked, Jean Heuns had difficulties to answer the question "what is software", but he said that he could answer the question "what is **good** software". What is **good** software?
+% EXAMPLE: "When asked, Jean Heuns had difficulty answering the question "what is software?", but he said that he could answer the question "what is **good** software". What is **good** software?
 
 % RELATESTO:
 % SOURCE: Notes on [Multiple Software Axes](http://observatory.constantvzw.org/etherdump/multiple-software-axes.html)

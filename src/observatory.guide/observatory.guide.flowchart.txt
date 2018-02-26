@@ -2,10 +2,10 @@
 
 % WHAT:  - 
 
-A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.[^]{https://en.wikipedia.org/wiki/Flowchart}
+A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds and showing their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.[^]{https://en.wikipedia.org/wiki/Flowchart}
 
-% WHY: Through flowcharts one will be able to analyse and reflect on one's own software situation. 
-% URGENCY: Using flowchart observation methods towards analysis and self-reflection of software situation.
+% WHY: Through flowcharts one will be able to analyze and reflect on one's own software situation. (%CARLINSAYS: Not a lot of other methods have had the WHY filled out. It seems to overlap with the URGENCY which is also the most inconsistently interpreted across the methods. 
+% URGENCY: Using flowchart observation methods towards analysis and self-reflection of software situation.(%CARLINSAYS: This is an incomplete sentence. Is there a way to add "...and self-reflection on one's own software situation will/may allow...XYZ."
 % NOTE: The term 'software situation' is suggested as a good replacement for 'software problem'. 
 % WHEN: 
 % WHO:
@@ -64,7 +64,7 @@ More info → see Rafaella flowchart pic
 ## Appendix A:
 
 * **IBM ruler:**
-    * http://etherbox.local/home/pi/images/wednesday/P1040728.JPG
+    * http://etherbox.local/home/pi/images/wednesday/P1040728.JPG (%CARLINSAYS: I think this image is supposed to show up in the PDF?)
     * left to right
     * process  - rectange
     * input / output  - skew square
@@ -77,23 +77,23 @@ More info → see Rafaella flowchart pic
     * connector - small circle
     * magnetic tape - circle
     * display -
-    * auxilary operation - squar
+    * auxilary operation - square
     * arrow head - four triangle
     * manual input -
     * Punched Card - rectangle with left cut edge 
     * Punched tape - like a flag
 * **Burroughs:**
-    * http://etherbox.local/home/pi/images/wednesday/P1040730.JPG
+    * http://etherbox.local/home/pi/images/wednesday/P1040730.JPG (%CARLINSAYS: I think this image is supposed to show up in the PDF?)
     * Left to right, top to bottom:
     * input/output = parallelogram
-    * Auxiliary operation = square / Gyrational square
+    * Auxiliary operation = square / gyrational square (%CARLINSAYS: i have decapitalized Gyrational so that it is in keeping with the rest of the list)
     * Preparation - hexagon 
     * Drum or disk - oval
     * Process - rectangle
     * Off-line storage - triangle
     * On-line storage - like a quarter moon
     * Display -  one side oval and one side a little oval
-    * Manual input - rectangle, but top side askew / Irregular rectangle
+    * Manual input - rectangle, but top side askew / irregular rectangle (%CARLINSAYS: I have decapitalized Irregular so that it is in keeping with the rest of the list)
     * Document - rectangle, but buttom line is a wave
     * Manual Operation - tilted rectangle
     * Magnetic Tape - circle but with a square on the buttom right 
@@ -115,23 +115,21 @@ More info → see Rafaella flowchart pic
 ### Friday:
 
 **15:30 - 16:15**    
-We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the ruler with specific shape has special meaning. There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without description. We try to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols. The specific literature explained us that engineer have a kind of standard for these symbols. These symbols are vocabulary 
+We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the two rulers has a specific shape and has a specific meaning. (%CARLINSAYS: I changed the prior sentence from this: "It seems that every symbol on the ruler with specific shape has special meaning". If I am misunderstanding the intent of the sentence then the original text needs clarification.) There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without descriptions. We tried to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols (%CARLINSAYS: Are the X's here supposed to be the number of symbols on each ruler? That needs to be added if so. If not then something else needs to be done with the sentence to make it make sense). The specific literature explained to us that engineers have a kind of standard for these symbols. These symbols are vocabulary. 
 
 **16:15 - 16:40**    
-We started with analysing a educational flow chart as our case example (https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg). We could figure out what the arrows on the ruler means, they are used in compination with the decision symbol. In shape studies Triangles can direct movement based which way they point.Triangles can direct movement based which way they point. In the flowchart the options are represented by rectangles and quares in shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
+We started with analyzing an educational flow chart as our case example.[https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg] We were able to figure out what the arrows on the ruler meant.They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point.(%CARLINSAYS: This sentence repeated. I cut it but if the repetition was on purpose here is the text to reinsert: "Triangles can direct movement based which way they point.") In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
 
 **16:45 - 17:00**    
-We analysed a flow chart of a multiplication algorithm. Its content illustrating to shift left or right the number. The decision box instructing you to repeat it 32 times for the whole number! 
-The rectangles are again representing options, while the flexible factors are illustrated by the rhombus, the symbol for Decision. The final symbol with the title "Done" is illustrated by something inbetween a circle and a rectangle. 
+We analyzed a flow chart of a multiplication algorithm. Its content illustrated an instruction to shift the number left or right . The decision box instructed you to repeat it 32 times for the whole number! 
+The rectangles were again representing options, while the flexible factors were illustrated by the rhombus, the symbol for Decision. The final symbol with the title "Done" was illustrated by something inbetween a circle and a rectangle. 
 
 **17:00 - 17:15**    
-We realised in our undertaking we have to jump into an endo perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to go with the elevator to the 1st floor in the perspective of the elevator. To achieve this task we agreed to do field research and go to the 1st floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. 
-
-Documentary short Lift by Marc Isaacs / UK / 2001    
-https://www.youtube.com/watch?v=FJNAvyLCTik
+We realized in our undertaking that we needed to jump into an internal perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to chart the elevator to the first floor from the perspective of the elevator. To achieve this task we agreed to do field research and go to the first floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. [Futher elevator ruminations were made through reference to Marc Isaacs. Lift. UK, 2001. https://www.youtube.com/watch?v=FJNAvyLCTik]
+(%CARLINSAYS: The text above moved between the past and present tense. I have put it all in the past tense except for the very last moment of deciding to do the final elevator flowchart tomorrow. I also assumed that the citation of the documentary Lift should be in a footnote? Or is it meant to be there to indicate the group going home and watching the movie?)
 
 **17:15 - 17:40**    
-To round off the day we ended on some general reflections. It seems that the different interpretations of symbols have been integrated in the early flowcharts of the 1920's until now [^]{http://odec.ca/projects/2009/xing9t2/hist.htm}. To put this knowledge into practice we started to sketch out the flowchart on the wall using post-its.
+To round off the day we ended with some general reflections. It seems that the different interpretations of symbols have been integrated into flowcharts from the early ones of the 1920's until now. [Tony Xing and Justin Lau. Understanding Flowcharts.{http://odec.ca/projects/2009/xing9t2/hist.htm}] To put this knowledge into practice we started to sketch out the flowchart on the wall using Post-its.
 
 **Current research goals:**
 
@@ -139,18 +137,18 @@ To round off the day we ended on some general reflections. It seems that the dif
 * zenit browser extension
 * iconographic analyses of flow chart symbols
 * call-flow && zenit modeling template for the drop-in clinic interview
-
+(%CARLINSAYS: Can these be bullet points in the PDF instead of just double-spaced?)
 
 % PDFFIX: 1 \newpage
 
 ### Saturday:
 
 **11:00 - 11:40**    
-We updated our research follower about our undertakings.
+We updated our fellow researchers(%CARLINSAYS: this said "research follower" which is a lovely phrase but I think it meant fellow researchers?) about our undertakings.
 
 **14:45-18:00**    
 Zenit (h)modeling/analysis    
-A method derived from a removal of textual informating from flowcharts - related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam ) an early 20th Century movement and zenith - an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith).
+A method derived from a removal of textual informating from flowcharts - related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam) an early 20th Century movement, and zenith - an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith).
 
 Connection inspiration:     
 https://helios.gsfc.nasa.gov/flowchart.html
@@ -167,7 +165,7 @@ https://commons.wikimedia.org/wiki/Flow_chart
 
 **Afternoon**    
 Josef working on all the ideas at the same time    
-continue with flow chart elevator    
+Continue with flow chart elevator    
 Lara working on Zenit(h) modeling/analysis leading to call-flow template, and zenit browser plugin   
 Michaela helping out the flow chart of the elevator as a case study   
 

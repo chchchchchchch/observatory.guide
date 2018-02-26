@@ -6,7 +6,7 @@
 
 % REMEMBER:
 
-% WHAT: Command line scripts to investigate computer clocks, system cycles and software temporalities.
+% WHAT: Command line scripts to investigate computer clocks, system cycles, and software temporalities.
 
 % HOW:
 % WHEN:

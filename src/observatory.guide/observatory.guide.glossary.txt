@@ -2,10 +2,10 @@
 
 % REMEMBER: 
 % WHAT: Using the technique of psychanalytic listening to compile (gather, collect, bring together) a list of key words for understanding software.
-% HOW: Create a shared document that participants can add words to as their importance emerges.To do pyschoanalytic listening, let your attention float freely, hovering evenly, over a conversation or a text until something catches its ear. Write down what your ear/eye catches. When working in a collective context invite others to participate in this project and describe the practice to them. Each individual may move in and out of this mode of listening according to their interest and desire and may add as many words to the list as they want. Use this list to create an index of software observation.
+% HOW: Create a shared document that participants can add words to as their importance emerges. To do pyschoanalytic listening, let your attention float freely, hovering evenly, over a conversation or a text until something catches its ear. Write down what your ear/eye catches. When working in a collective context invite others to participate in this project and describe the practice to them. Each individual may move in and out of this mode of listening according to their interest and desire and may add as many words to the list as they want. Use this list to create an index of software observation.
 % WHEN:
 % WHO:
-% URGENCY: Creating and troubling categories.
+% URGENCY: Not creating and troubling categories on a regular basis risks path determinacy.
 
 % NOTE: Do not remove someone else's word from the glossary during the accumulation phase. If an editing and cutting phase is desired this should be done after the collection through collective consensus. 
 
@@ -21,35 +21,72 @@
 
 % -------
 Agile
+Aquine
+Bash
+Battery
 Beast
+Bounce
+Bug
 Code
 Colonial
+Comfortable
 Command Line
 Communication
-Connectivity 
+Compile
+Comportment
+Connectivity
+Contract 
+Corporate
+Crash
+Curious
+Dirty
 Emotional
+Fountain
 Galaxies
 Green
 Guide
-Kernel
+Icon
+Intimate
 Imperial
 Issues
+Kernel
 Machine
+Magic
 Mantra
 Memory
 Museum
+Naming
+Noise
 Observation
+Passive-aggressive
+Parental
+Perception
+Power
 ProductionPower
 Programmers
 Progress
+Promiscuous
+Public
+Punch
+Quine
 Relational
 Red
 Scripting
+Scroll
 Scrum
+Silence
+Spin
 Software
+Softwear
+Sundial
 Survival
 Technology
 Test
+Thank you
+Time
+Trailing
+Useless
+Volatile
 Warning
 WhiteBoard
 Yoga
