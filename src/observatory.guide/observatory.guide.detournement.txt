@@ -21,9 +21,13 @@
   * The layout and template observation: study the interface layout by removing all the textual content. The layout will appear, after having done this exercise on several interfaces you will be able to compare the regularities between websites. Then feel free to move elements and reconstruct the interface the way you want. 
 4. After having done your détournement, you can share the outcome of your work as a hoax: present the new interface you have done just as if it was a mundane and "real" one. Observe the reactions of the tested credulous and refine your détournement with their insights. You can also take a screenshot of your work and send it to an audience.
 
-%!EXAMPLE: Example of an interface template study by Henrik Jan Grievink: (%CARLINSAYS: this isn't visible on the PDF as of now)
+%!EXAMPLE: Example of an interface template study by Henrik Jan Grievink:
+%!CARLINSAYS: this isn't visible on the PDF as of now
+
+% EXAMPLE: ! 
+    
 % https://www.flickr.com/photos/hendrikjangrievink/sets/72157614340281527
-% SHOW: tgsoimages.svg uigrievink
+% SHOW: tgsoimages.svg uigrievink N
 % INFO: Interface template study by Henrik Jan Grievink
 
 % ![Example of an interface detournement of the dropbox website](http://observatory.constantvzw.org/images/clinic/dropbox-satire3.png)

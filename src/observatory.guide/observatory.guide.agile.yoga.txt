@@ -30,7 +30,7 @@
 > fundamental concept.
 > [@wikipedia:2018:agilemanifesto]
 
-% URGENCY: Use Agile software development methods to develop a new path into your professional and personal life towards creativity, focus and health. (%CARLINSAYS: Was it ok to go from "Using" to "Use"? If the imperative is not quite right then we could substitute "encourages" in place of "towards" to make it a complete sentence.)
+% URGENCY: Use Agile software development methods to develop a new path into your professional and personal life towards creativity, focus and health. (% CARLINSAYS: Was it ok to go from "Using" to "Use"? If the imperative is not quite right then we could substitute "encourages" in place of "towards" to make it a complete sentence.)
 % NOTE:
 % WARNING: - 
 > The agile movement is in some ways a bit like a teenager: very self-conscious,

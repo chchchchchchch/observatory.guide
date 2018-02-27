@@ -3,7 +3,7 @@
 % WHAT: Different ways of exploring your system memory (RAM). As in unix-based systems everything can be approached as a file, you can access your memory as if it were a file. 
 % WHEN:
 % WHO:
-% URGENCY: Observing the operational level of software, getting closer to its workings. Examining the instruction-being of an executable/executing file, the way it is when it is loaded into memory rather than when it sits in the harddisk.(%CARLINSAYS: This reads a bit more like the what than the urgency.)
+% URGENCY: Observing the operational level of software, getting closer to its workings. Examining the instruction-being of an executable/executing file, the way it is when it is loaded into memory rather than when it sits in the harddisk.(% CARLINSAYS: This reads a bit more like the what than the urgency.)
 
 % REMEMBER: In Unix-like operating systems, a device file or special file is an interface for a device driver that appears in a file system as if it were an ordinary file. In the early days you could fully access your memory via the memory device (`/dev/mem`) but over time the access was more and more restricted in order to avoid malicious processes from directly accessing the kernel memory. The kernel option CONFIG_STRICT_DEVMEM was introduced  in kernel version 2.6 and upper (2.6.36–2.6.39, 3.0–3.8, 3.8+HEAD). So  you'll need to use the Linux kernel module fmem: this module creates `/dev/fmem` device, that can be used for  accessing physical memory without the limits of /dev/mem (1MB/1GB, depending  on distribution).
 

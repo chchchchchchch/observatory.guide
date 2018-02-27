@@ -1,17 +1,17 @@
 % METHOD: Persist in calling everyone a Software Curious Person
 
 % REMEMBER:
-% WHAT: Naming can be a method for changing a person's relationship to software. For example, by (sometimes forcibly) calling everyone a Software Curious Person. (%CARLINSAYS: this is a sentence fragment. It could be finished by adding "...it might be possible to encourage people to be more curious about software")
+% WHAT: Naming can be a method for changing a person's relationship to software. For example, by (sometimes forcibly) calling everyone a Software Curious Person. (% CARLINSAYS: this is a sentence fragment. It could be finished by adding "...it might be possible to encourage people to be more curious about software")
 % HOW: Insisting on curiosity as a relation, rather than for example fear or admiration might help cut down the barriers between different types of expertise and allow multiple stakeholders to feel entitled to ask questions, to engage, to investigate and to observe.
 % WHEN: Persistently
 % WHO:
-% URGENCY: Software is too important to not be curious about. Observations could benefit from recognising different forms of knowledge. It seems important to engage with software through multiple interests (%CARLINSAYS: interests doesn't feel like quite the right word here. What about "from multiple perspectives and positions"?), not only by means of technical expertise.
+% URGENCY: Software is too important to not be curious about. Observations could benefit from recognising different forms of knowledge. It seems important to engage with software through multiple interests (% CARLINSAYS: interests doesn't feel like quite the right word here. What about "from multiple perspectives and positions"?), not only by means of technical expertise.
 % NOTE:
 % WARNING:
 
 % EXAMPLE: This method was used to address each of the visitors at the Technogalactic Walk-in Clinic.
 
-% TODO: include pdf here linktothepdf can we put the "software curious person intake form" here? --- it is already included near the introduction maybe there is the file there, and here can be the photo of the printed one?Or are there are any photos of people doing intake that we could use?
+% TODO: include pdf here. can we put the "software curious person intake form" here? --- it is already included near the introduction maybe there is the file there, and here can be the photo of the printed one? Or are there are any photos of people doing intake that we could use?
 
 % RELATESTO:
 % SOURCE:

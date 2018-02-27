@@ -30,7 +30,7 @@ so I like to consider it as unique and special_".
 ----in the filesystem, if you ask xxd:
 ------ it's a set of hexadecimal bytes
 -------what are hexadecimal bytes? 
------- -b it's a set of binary 01s (%CARLINSAYS: -b?)
+------ -b it's a set of binary 01s
 ----if you ask objdump
 -------it's a set of instructions
 --side channel researching also says:
@@ -40,6 +40,8 @@ so I like to consider it as unique and special_".
 ------ a computer's programs is a set of instrutions for performing computer operations
 
 % SRCCODE: quaverbatim
+
+% CARLINSAYS: -b? (-b it's a set of binary 01s)
 
 
 % SOURCE: Pad on [fileflowchart.raw.html](http://observatory.constantvzw.org/etherdump/fileflowchart.raw.html)

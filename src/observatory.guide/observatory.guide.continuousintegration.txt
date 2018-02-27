@@ -10,7 +10,7 @@
 % WARNING: When each service does one thing well, the service makers tend to assume everybody else is doing the things that they do not want to do.
 
 % EXAMPLE: 
-At TGSO, Continuous Integration was introduced as a service that responds to integration hell when putting together a number of TGSO services for a walk-in software clinic. (%CARLINSAYS: this sentence is awkwardly worded. How about using this instead: "At TGSO, continuous integration was introduced as a service for responding to the integration hell that was produced when Software Curious Persons attempted to do more than one of the TGSO services on offer at the walk-in clinic for the software curious") Due to demand, the Continuous Integration service was extended to do "service discovery" and "load balancing" once the walk-in clinic was in operation. 
+At TGSO, Continuous Integration was introduced as a service that responds to integration hell when putting together a number of TGSO services for a walk-in software clinic. (% CARLINSAYS: this sentence is awkwardly worded. How about using this instead: "At TGSO, continuous integration was introduced as a service for responding to the integration hell that was produced when Software Curious Persons attempted to do more than one of the TGSO services on offer at the walk-in clinic for the software curious") Due to demand, the Continuous Integration service was extended to do "service discovery" and "load balancing" once the walk-in clinic was in operation. 
 
 Continuous Integration worked by visiting the different services of the walk-in clinic to check for updates, test the functionality, and think through implications of integration with other services. If the pieces didn't fit, the service delivered error messages and solution options. 
 

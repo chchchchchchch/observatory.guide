@@ -2,7 +2,7 @@
 
 % REMEMBER:
 % WHAT: Interventions in your working-environment. 
-% HOW: Different strategies can be applied to temporarily redefine the workspace and its perception. (%CARLINSAYS: this could be "the workspace and its perceptual architecture" or "the workspace and your perceptions of it." Right now the "its" referes to the workspace so it is about the workspace's perceptions and not the inhabitants perceptions.)
+% HOW: Different strategies can be applied to temporarily redefine the workspace and its perception. (% CARLINSAYS: this could be "the workspace and its perceptual architecture" or "the workspace and your perceptions of it." Right now the "its" referes to the workspace so it is about the workspace's perceptions and not the inhabitants perceptions.)
 % WHEN:
 % WHO: 
 % URGENCY: Aknowledging space and its correlate, noise, as conditioning observations (WTC vs. Museum vs. University vs. Startup Office vs. Shifting Walls that became Water Fountains).

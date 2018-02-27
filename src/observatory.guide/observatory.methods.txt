@@ -21,7 +21,7 @@ Finish Colophon (Femke)
 
 FINISHING THE GUIDE [planning made + e-mailed 09/02]
 
-In the coming weeks, Carlin will be editing. She'll either edit or use comments, %CARLINSAYS:
+In the coming weeks, Carlin will be editing. She'll either edit or use comments, % CARLINSAYS:
 In the first week of March, she'll send an e-mail to say she's ready ;-)
 At that time, Christoph will have produced a final pdf as well.
 After that, reponses and fixing, deadline: 23 March
