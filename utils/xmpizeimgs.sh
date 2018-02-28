@@ -13,15 +13,21 @@
    then echo "----"; echo "$SRCDIR NOT A DIRECTORY."
       exit 0;
   elif [ `echo "$SRCDIR" | wc -c` -lt 2 ]
-   then echo "----"; echo "PROCESS ALL SOURCES."
-        SRCDIR="."
+   then  SRCDIR="."
    if [ `find $SRCDIR -name "*.xmp" | #
          wc -l` -gt 0 ]; then
          N=`find $SRCDIR -name "*.xmp" | wc -l`
-         echo -e "THIS MEANS CHECKING $N FILES \
-                  \nAND WILL TAKE SOME TIME.\n" | tr -s ' '
-         read -p "SHOULD WE DO IT? [y/n] " ANSWER
-         if [ X$ANSWER != Xy ] ; then echo "BYE."; exit 1;
+         clear;echo -e "THIS PROCEDURE WILL APPLY IMAGE CORRECTIONS MADE \
+                        WITH DARKTABLE. SOURCE IMAGES WILL REPLACED(!)   \
+                        BY CORRECTED VERSIONS.\n\nTO BE ABLE TO CONTINUE \
+                        TO WORK ON THE SOURCE FILES AND NOT END\nUP IN A \
+                        CORRECTION LOOP (=CORRECT CORRECTED IMAGES) YOU  \
+                        SHOULD \nUSE DARKTABLE'S 'copy locally'          \
+                        FUNCTIONALITY" | tr -s ' ' | fold -s -w 70
+         echo -e "\nTHERE ARE $N FILES TO PROCESS \
+                    AND THIS WILL TAKE SOME TIME.\n" | tr -s ' '
+         read -p "SHOULD WE CONTINUE? [y/n] " ANSWER
+         if [ X$ANSWER != Xy ] ; then echo "BYE."; exit 0;
                                  else echo; fi
     else echo "NOTHING TO DO.";exit 0;
    fi
@@ -30,7 +36,7 @@
 
 # ====================================================================== #
 
-  for XMP in `find $SRCDIR -name "*.xmp" | grep G1400 | head -n 1`
+  for XMP in `find $SRCDIR -name "*.xmp"`
    do
       XMP=`realpath $XMP`
       IMG=`echo $XMP | sed 's,\.xmp$,,'`
@@ -53,24 +59,31 @@
             IMGMISSING="YES"
       fi
 
+       # ============================================ #
        # IF HAS BEEN PROCESSED ASK/CHECK FOR ORIGINAL #
        # ============================================ #
-        if [ "$CHECKCREATOR" != ""  ] || 
+        if [ $XMP -nt $IMG ] ||
+           [ "$CHECKCREATOR" != ""  ] || 
            [ "$IMGMISSING" == "YES" ];then
- 
+
+        if [ $IMG -nt $XMP ];then
            if [ "$CHECKCREATOR" != "" ];then
-               echo "$IMGNAME HAS BEEN PROCESSED USING darktable" 
-               read -p "WANT TO TRY TO REFRESH FROM REMOTE? [y/n] " ANSWER
+               echo "IMAGE CORRECTION UP-TO-DATE ($IMGNAME)." 
+               read -p "DO IT AGAIN (REFRESH REMOTE)? [y/n] " ANSWER
+              #echo "REFRESH";ANSWER="y"
            fi
            if [ "$IMGMISSING" == "YES" ];then
                echo "LOKAL IMAGE MISSING ($IMG)"
                read -p "WANT TO TRY TO GET REMOTE FILE? [y/n] " ANSWER
            fi
+        else
+           echo "XMP NEWER THAN IMAGE -> REFRESH REMOTE"
+           ANSWER="y"
+        fi
 
-         if [ X$ANSWER != Xy ] ; then echo "SKIPPING $IMG"
+         if [ "$ANSWER" != "y" ];then echo "SKIPPING $IMG"
                                             DOPROCESS="NO"
                                  else 
-
         # ============================================================ #
         # FIND REMOTE HREF AND LOKALIZE (TODO: TESTESTEST)
         # ============================================================ #
@@ -124,7 +137,6 @@
                    DOPROCESS="NO"
               fi
           fi
-
           done; echo $DOPROCESS > /tmp/doprocess.tmp ;)
         # ============================================================ #
         # SUBSHELL ??? HACK !!!
@@ -134,9 +146,7 @@
       # OTHERWISE PROCESS FILE #
       # ====================== #
         else
-
           DOPROCESS="YES"
-
         fi
  
        if [ "$DOPROCESS" == "YES" ];then
@@ -151,7 +161,6 @@
        fi
   done
 # ====================================================================== #
-
 
 exit 0;
 
