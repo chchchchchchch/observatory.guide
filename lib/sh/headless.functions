@@ -1,0 +1,23 @@
+# START VIRTUAL XSERVER FOR PROCESSING HEADLESS ----------------------------- #
+# Xvfb :1 -screen 0 1152x900x8 -fbdir /tmp > /dev/null 2>&1 &
+
+ if [ `echo $DISPLAY | wc -c` -gt 1 ]; then
+
+     # echo "not headless"
+       sleep 0
+ else
+     # echo "headless"
+
+   if [ `ps aux       | #
+         grep Xvfb    | #
+         grep -v grep | #
+         wc -l` -gt 0 ]; then
+         export DISPLAY=localhost:1.0
+   else
+      # echo "sorry. neither real nor virtual X"
+        exit 0;
+   fi
+ fi
+
+
+
