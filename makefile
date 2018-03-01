@@ -1,8 +1,8 @@
 pdf:
-	./lib/mdsh/mk.sh E/observatory.mdsh pdf
+	./lib/mdsh/mk.sh E/tgsoguide.mdsh pdf
 
 html:
-	./lib/mdsh/mk.sh E/observatory.mdsh html
+	./lib/mdsh/mk.sh E/tgsoguide.mdsh html
 
 
 lokal:
