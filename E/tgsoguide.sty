@@ -539,42 +539,25 @@
     }
   }
 % --------------------------------------------------------------------------- % 
-% \newcommand\anchorinfo[2]{%
-% %\begin{figure}[htb] % 
-%    {\grafikinline{\iconseeinline} % DEFINED FROM MDSH FUNCTIONS
-%                  {\hspace{.5em}} %
-%     \symarrowleft
-%    {\footnotesize %
-%     \vspace*{-.5\baselineskip} %
-%     \hspace{4em} P.\pageref{#2} 
-%     \if\relax\detokenize{#1}\relax
-%     % #1 EMPTY -> DO NOTHING IN PLACE
-%     \else
-%       \hspace{1.0em} 
-%       \symarrowleft 
-%       \setstretch{1.2} 
-%       \hspace{2.5em} #1\par %
-%     \fi
-%     }}
-% %\end{figure}
-% }
   % https://tex.stackexchange.com/questions/35933/
   % -> indenting-a-whole-paragraph
   \newcommand\anchorinfo[2]{%
      {\grafikinline{\iconseeinline} % DEFINED FROM MDSH FUNCTIONS
                    {} %
       \hspace{-4.5em}%\symarrowleft
-      \footnotesize %
-      \hspace{3em} P.\pageref{#2} 
-      \hfill\begin{minipage}{\dimexpr\textwidth-12em}%
-        \hspace{-1em}% 
+      \raisebox{-.2\baselineskip}
+      [\baselineskip][\baselineskip]{ %
+     {\footnotesize %
+      \hspace{3em} P.\pageref{#2}}}
+      \hfill\begin{minipage}{\dimexpr\textwidth-9.5em}%
+       \begin{flushleft}
+        \hspace{-2.75em}% 
         \symarrowleft%
-        \setstretch{1.3}%
+        \setstretch{0.8}%
         \hspace{2.7em} #1%
- %    \xdef\tpd{\the\prevdepth}
+       \end{flushleft}
       \end{minipage}\hfill%
       }%
- %\prevdepth\tpd
   }
 % --------------------------------------------------------------------------- % 
   \newcommand\anchor[3]{%
