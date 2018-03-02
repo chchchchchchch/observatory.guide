@@ -150,7 +150,9 @@
   % -> inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex
   \DeclareUnicodeCharacter{00A0}{~}
   \DeclareUnicodeCharacter{00AD}{\allowbreak}
-  \DeclareUnicodeCharacter{2192}{\grafikinline{\iconchararrowright}{\hspace{2em}}}
+  \DeclareUnicodeCharacter{2192}{\hspace{-.5em}%
+                                 \grafikinline{\iconchararrowright}
+                                {\hspace{2em}}}
 
   \newcommand{\symrect}{\grafikinline{\iconcharrect}{}}
   \newcommand{\symrhombus}{\grafikinline{\iconcharrhombus}{}}
