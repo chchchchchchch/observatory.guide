@@ -1111,7 +1111,7 @@ function CARLINSAYS() {
  # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
  # ----
    sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
-   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{samepage}&\n\\\end{samepage}/' \
+   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{dblock}&\n\\\end{dblock}/' \
            $SRCDUMP
    sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
 
