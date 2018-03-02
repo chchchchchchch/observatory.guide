@@ -378,7 +378,10 @@ function TOCITEM() {
           HTMLCMD=""
    fi 
 
-   write2src "$PDFCMD"
+   if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src ""
+        write2src "$PDFCMD"
+   fi
 
   }
 # --------------------------------------------------------------------------- #
