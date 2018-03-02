@@ -145,7 +145,7 @@
 # --------------------------------------------------------------------------- #
 # MOVE (% TO NEW LINE = ALLOW INLINE COMMANDS
   sed -i '/^%/!s/(% /\n!!!% /g' $MDSH
-  sed -i "/^!!!%/s/)/ $APND/"   $MDSH # ?? sed -i "/^!!!%/s/)/\n$APND/"  $MDSH
+  sed -i "/^!!!%/s/)/\n$APND/"  $MDSH
   sed -i 's/^!!!%/%/'           $MDSH
 
 # SAVE MDSH LINES TO PROTECT FROM PANDOC
@@ -155,7 +155,7 @@
   if [ -f $SAVECMDS ]; then rm $SAVECMDS ; fi
   PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
   cp $MDSH $PROTECTED
- 
+
   if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
   for CMDLINE in `grep -n "^%" $PROTECTED | #
                   cut -d ":" -f 1`
