@@ -143,30 +143,46 @@
 
 # PRE-PROCESSING
 # --------------------------------------------------------------------------- #
-# MOVE (% TO NEW LINE = ALLOW INLINE COMMANDS
-  sed -i '/^%/!s/(% /\n!!!% /g' $MDSH
-  sed -i "/^!!!%/s/)/\n$APND/"  $MDSH
-  sed -i 's/^!!!%/%/'           $MDSH
-
-# SAVE MDSH LINES TO PROTECT FROM PANDOC
-# --------------------------------------------------------------------------- #
   APNDCMD="APND${RANDOM}CMD"
-  SAVECMDS=${TMPID}.${TMPIDX}.commented 
-  if [ -f $SAVECMDS ]; then rm $SAVECMDS ; fi
-  PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
-  cp $MDSH $PROTECTED
 
-  if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
-  for CMDLINE in `grep -n "^%" $PROTECTED | #
-                  cut -d ":" -f 1`
-   do
-       LNCMD=$CMDLINE
-         CMD=`sed "${LNCMD}q;d" $MDSH`
-       CMDID=`echo $CMD | md5sum | cut -d " " -f 1`$MKLONG
-       sed -i "${LNCMD}s/^.*$/$APNDCMD$CMDID/g" $PROTECTED
-       echo "${CMDID}:${CMD}" >> $SAVECMDS
-  done
-  fi
+  # MOVE (% TO NEW LINE = ALLOW INLINE COMMANDS
+    sed -i '/^%/!s/(% /\n:C:M:D% /g' $MDSH
+    sed -i "/^:C:M:D%/s/)/\n$APND/"  $MDSH
+    sed -i "s/^:C:M:D%/$APNDCMD%/"  $MDSH
+  
+  # SAVE MDSH LINES TO PROTECT FROM PANDOC
+  # ----------------------------------------------------------------------- #
+  
+    SAVECMDS=${TMPID}.${TMPIDX}.commented 
+    if [ -f $SAVECMDS ]; then rm $SAVECMDS ; fi
+    PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
+    cp $MDSH $PROTECTED
+  
+    if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
+   
+   # TEMPORARILY REMOVE COMMAND LINES
+   # --------------------------------  
+     for CMDLINE in `grep -n "^%" $PROTECTED | #
+                     cut -d ":" -f 1`
+      do  LNCMD=$CMDLINE
+            CMD=`sed "${LNCMD}q;d" $MDSH`
+          CMDID=`echo $CMD | md5sum | cut -d " " -f 1`$MKLONG
+          sed -i "${LNCMD}s/^.*$/$CMDID/g" $PROTECTED
+          echo "${CMDID}:${CMD}" >> $SAVECMDS
+     done
+  
+   # TEMPORARILY REMOVE INLINE COMMANDS (AND MARK FOR APPENDING)
+   # -----------------------------------------------------------
+     for CMDLINE in `grep -n "^$APNDCMD%" $PROTECTED | #
+                     cut -d ":" -f 1`
+      do  LNCMD=$CMDLINE
+            CMD=`sed "${LNCMD}q;d" $MDSH | sed "s/^$APNDCMD//"`
+          CMDID=`echo $CMD | md5sum | cut -d " " -f 1`$MKLONG
+          sed -i "${LNCMD}s/^.*$/$APNDCMD$CMDID/g" $PROTECTED
+          echo "${CMDID}:${CMD}" >> $SAVECMDS
+     done
+
+    fi
 
   sed -i -e :a -i -e "\$!N;s/\n$APNDCMD/$APNDCMD/;ta" -i -e 'P;D' $PROTECTED
 
