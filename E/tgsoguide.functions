@@ -379,7 +379,6 @@ function TOCITEM() {
    fi 
 
    if [ "$OUTPUTFORMAT" == pdf ];then
-        write2src ""
         write2src "$PDFCMD"
    fi
 
@@ -1242,7 +1241,7 @@ function JH() {
 
 # --------------------------------------------------------------------------- #
 
-function SXHOW() {
+function SHOW() {
      sleep 0
 }
 
