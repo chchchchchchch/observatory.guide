@@ -551,10 +551,16 @@ function SHOW() {
                  grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
                  cut -d ":" -f 2-`           # CUT AFTER :
             if [ "$REF" != "" ];then         # IF REF IS SET
-                  REF=`echo $REF | md5sum  | # MAKE HASH
+                  REF=`echo $REF           | # GET REF CODE
+                       sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                       sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                       md5sum              | # MAKE HASH
                        cut -c 1-16`          # CUT HASH
-            else  REF=`echo $RANDOM | md5sum | # MAKE HASH
-                       cut -c 1-16`            # CUT HASH               
+            else  REF=`echo $RANDOM        | # RANDOM REF CODE
+                       sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                       sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                       md5sum              | # MAKE HASH
+                       cut -c 1-16`          # CUT HASH
             fi 
           # EXTRACT PLACEMENT FLAGS
             PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
@@ -669,10 +675,16 @@ function PDF() {
           grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
           cut -d ":" -f 2-`           # CUT AFTER :
      if [ "$REF" != "" ];then         # IF REF IS SET
-           REF=`echo $REF | md5sum  | # MAKE HASH
+           REF=`echo $REF           | # GET REF CODE
+                sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                md5sum              | # MAKE HASH
                 cut -c 1-16`          # CUT HASH
-     else  REF=`echo $PDFNOW | md5sum | # MAKE HASH
-                cut -c 1-16`            # CUT HASH               
+     else  REF=`echo $RANDOM        | # RANDOM REF CODE
+                sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                md5sum              | # MAKE HASH
+                cut -c 1-16`          # CUT HASH
      fi 
    # EXTRACT PLACEMENT FLAGS. N = NOW -> PLACE ANCHOR
    # ------------------------------------------------ #
@@ -996,6 +1008,30 @@ function QUOTESTYLE() {
 }
 # --------------------------------------------------------------------------- #
 
+function REF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-16` # CREATE UNIQUE ID
+  write2src "\label{$REFID}"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function REFREF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-16` # CREATE UNIQUE ID
+  write2src "\mbox{(→ P.\pageref{$REFID}\,)}"
+
+}
+
+# --------------------------------------------------------------------------- #
+
 function TEXIN() {
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
@@ -1028,6 +1064,19 @@ function TODO() {
 
 }
 # --------------------------------------------------------------------------- #
+
+function CARLINSAYS() {
+   if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\carlinsays{$*}"
+   fi
+}
+
+# --------------------------------------------------------------------------- #
+
+
+
+
+
 
 
 # --------------------------------------------------------------------------- #
@@ -1069,8 +1118,7 @@ function TODO() {
    sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
 
  # WRAP URLS IN COMMAND
- # sed -i '/^[\%]/!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
-   sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},' $SRCDUMP
+   sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},g' $SRCDUMP
 
  # CUSTOM STYLE FOR \lstinline
    sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
@@ -1094,20 +1142,6 @@ function TODO() {
 
    fi
  # ------------------------------------------------------------------------- #
-# --------------------------------------------------------------------------- #
-
-function SXHOW() {
-     sleep 0
-}
-
-# --------------------------------------------------------------------------- #
-
-function CARLINSAYS() {
-   if [ "$OUTPUTFORMAT" == pdf ];then
-        write2src "\carlinsays{$*}"
-   fi
-}
-
 # --------------------------------------------------------------------------- #
 
 function MEAS() {
@@ -1201,6 +1235,12 @@ function JH() {
         echo "$JHSAYS" >> $SRCDUMP
   fi
 
+}
+
+# --------------------------------------------------------------------------- #
+
+function SXHOW() {
+     sleep 0
 }
 
 # --------------------------------------------------------------------------- #
