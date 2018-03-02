@@ -69,3 +69,8 @@ Hans Lammerant, January 2018
 
 Such office time can also be implemented and negotiated on your local computer. A small Proof of Concept was the adapted bashrc on the etherbox simulating a system getting bored and stealing time. This can be further developed by including a differentiated response during versus outside office hours, aging (slower when timestamp of original install is more remote in time), etc.
 
+
+
+
+
+

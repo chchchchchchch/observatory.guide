@@ -17,8 +17,9 @@
 
 At one point during the demonstration of a Bull computer at Computer Museum NAM-IP, our museum guide (% CARLINSAYS: Just in the context of this publication as a guide maybe we should use docent or at least qualify it with the descriptor museum?) revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression for early code that used many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
 
-% SHOW: tgsoimages.svg spaghetticode N
+% SHOW: tgsoimages.svg spaghetticode1 N
 % INFO: Spaghetti Codes
+% SHOW: tgsoimages.svg spaghetticode2
 
 Preserving old hardware is a means of observing the physical manifestation of software. Operating older computers can result in actually touching software.
 

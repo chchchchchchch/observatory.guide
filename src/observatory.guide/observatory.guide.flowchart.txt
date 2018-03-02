@@ -64,7 +64,8 @@ More info → see Rafaella flowchart pic
 ## Appendix A:
 
 * **IBM ruler:**
-    * http://etherbox.local/home/pi/images/wednesday/P1040728.JPG (% CARLINSAYS: I think this image is supposed to show up in the PDF?)
+    * http://etherbox.local/home/pi/images/wednesday/P1040728.JPG
+%!CARLINSAYS: I think this image is supposed to show up in the PDF?
     * left to right
     * process  - rectange
     * input / output  - skew square
@@ -84,11 +85,10 @@ More info → see Rafaella flowchart pic
     * Punched tape - like a flag
 * **Burroughs:**
     * http://etherbox.local/home/pi/images/wednesday/P1040730.JPG
-% CARLINSAYS: I think this image is supposed to show up in the PDF?
+%!CARLINSAYS: I think this image is supposed to show up in the PDF?
     * Left to right, top to bottom:
     * input/output = parallelogram
     * Auxiliary operation = square / gyrational square
-% CARLINSAYS: i have decapitalized Gyrational so that it is in keeping with the rest of the list
     * Preparation - hexagon 
     * Drum or disk - oval
     * Process - rectangle
@@ -96,7 +96,6 @@ More info → see Rafaella flowchart pic
     * On-line storage - like a quarter moon
     * Display -  one side oval and one side a little oval
     * Manual input - rectangle, but top side askew / irregular rectangle
-% CARLINSAYS: I have decapitalized Irregular so that it is in keeping with the rest of the list
     * Document - rectangle, but buttom line is a wave
     * Manual Operation - tilted rectangle
     * Magnetic Tape - circle but with a square on the buttom right 
@@ -110,6 +109,8 @@ More info → see Rafaella flowchart pic
     * Flow Direction
     * Card Deck
 
+%!CARLINSAYS: i have decapitalized Gyrational so that it is in keeping with the rest of the list
+%!CARLINSAYS: I have decapitalized Irregular so that it is in keeping with the rest of the list
 
 % PDFFIX: 1 \newpage 
 
@@ -121,7 +122,7 @@ More info → see Rafaella flowchart pic
 We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the two rulers has a specific shape and has a specific meaning. (% CARLINSAYS: I changed the prior sentence from this: "It seems that every symbol on the ruler with specific shape has special meaning". If I am misunderstanding the intent of the sentence then the original text needs clarification.) There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without descriptions. We tried to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols (% CARLINSAYS: Are the X's here supposed to be the number of symbols on each ruler? That needs to be added if so. If not then something else needs to be done with the sentence to make it make sense). The specific literature explained to us that engineers have a kind of standard for these symbols. These symbols are vocabulary. 
 
 **16:15 - 16:40**    
-We started with analyzing an educational flow chart as our case example.[https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg] We were able to figure out what the arrows on the ruler meant.They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point.(% CARLINSAYS: This sentence repeated. I cut it but if the repetition was on purpose here is the text to reinsert: "Triangles can direct movement based which way they point.") In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
+We started with analyzing an educational flow chart as our case example: https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg We were able to figure out what the arrows on the ruler meant.They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point.(% CARLINSAYS: This sentence repeated. I cut it but if the repetition was on purpose here is the text to reinsert: "Triangles can direct movement based which way they point.") In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
 
 **16:45 - 17:00**    
 We analyzed a flow chart of a multiplication algorithm. Its content illustrated an instruction to shift the number left or right . The decision box instructed you to repeat it 32 times for the whole number! 
