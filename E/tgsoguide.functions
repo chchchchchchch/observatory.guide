@@ -928,11 +928,6 @@ function LICENSE() {
   LURL="https://github.com/chchchchchchch/licenses/raw/master/pdf/FAL_1.3.pdf"
   LID=`echo fal | md5sum | cut -c 1-8`
 
-  echo "${LID}:Free Art License" >> ${TMPID}.toc
-  echo "${LID}:4:$*"         >> ${TMPID}.index
-  getFile $LURL ${TMPID}license.pdf
-  conformColor ${TMPID}license.pdf
-
   if [ "$OUTPUTFORMAT" == pdf ];then
         write2src "\pdflicense{${TMPID}license.pdf}{\label{$LID}}"
   fi
@@ -1110,28 +1105,29 @@ function CARLINSAYS() {
    sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
    sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{dblock}&\n\\\end{dblock}/' \
            $SRCDUMP
-   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
 
  # CHANGE (FIRST) QUOTE ENVIRONMENT IF INSIDE dblock
  # ----
    sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
    sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
    sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
-   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
 
  # CHANGE (FIRST) ENUMERATE ENVIRONMENT IF INSIDE dblock
  # ----
    sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
    sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
    sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
-   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
 
  # CHANGE (FIRST) ITEMIZE ENVIRONMENT IF INSIDE dblock
  # ----
    sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
    sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
    sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
-   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
 
  # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
  # ----
