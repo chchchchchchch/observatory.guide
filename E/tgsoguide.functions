@@ -1070,99 +1070,6 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
-
-
-
-
-
-
-# --------------------------------------------------------------------------- #
-# MODIFY $TMPTEX BEFORE COMPILING PDF
-# --------------------------------------------------------------------------- #
-  function modTeX() {
- 
- # APPEND LINE CONTAIN *quote* IF AFTER ^\descriptor
- # ---- 
-   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*quote.*\)/\1\2/ }" \
-          $SRCDUMP
- # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
- # ----
- # sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
- #        $SRCDUMP
-
- # APPEND LINE CONTAIN *enumerate* IF AFTER ^\descriptor
- # ---- 
-   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
-          $SRCDUMP
- # INSERT \betweenqd BETWEEN \descriptor AND \begin{enumerate}
- # ----
- # sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
- #        $SRCDUMP
-
- # WRAP PARAGRAPHS IN \begin{dblock} \end{dblock}
- # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
- # ----
-   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
-   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{dblock}&\n\\\end{dblock}/' \
-           $SRCDUMP
-   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
-
- # CHANGE (FIRST) QUOTE ENVIRONMENT IF INSIDE dblock
- # ----
-   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
-   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
-   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
-   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
-
- # CHANGE (FIRST) ENUMERATE ENVIRONMENT IF INSIDE dblock
- # ----
-   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
-   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
-   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
-   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
-
-
- # CHANGE (FIRST) ITEMIZE ENVIRONMENT IF INSIDE dblock
- # ----
-   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
-   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
-   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
-   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
-
- # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
- # ----
-   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
-
- # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
-   sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
-   sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
-
- # WRAP URLS IN COMMAND
-   sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},g' $SRCDUMP
-
- # CUSTOM STYLE FOR \lstinline
-   sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
-
-  }
-
- # ------------------------------------------------------------------------- #
- # DO IT AT THE END
- # ------------------------------------------------------------------------- #
-   if [ "$OUTPUTFORMAT" == pdf ];then
-
-       # ADD ONLY ONCE
-         if [ `echo $preOutput | grep modTeX | wc -l ` -lt 1 ];then
-               preOutput="$preOutput modTeX"
-         fi
-
-   elif [ "$OUTPUTFORMAT" == html ];then
-
-         sleep 0
-
-   fi
- # ------------------------------------------------------------------------- #
-# --------------------------------------------------------------------------- #
-
 function MEAS() {
 
   MEASWHAT=`echo $* | sed 's/ //g'`
@@ -1262,5 +1169,91 @@ function SHOW() {
      sleep 0
 }
 
+# --------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
+# MODIFY $TMPTEX BEFORE COMPILING PDF
+# --------------------------------------------------------------------------- #
+  function modTeX() {
+ 
+ # APPEND LINE CONTAIN *quote* IF AFTER ^\descriptor
+ # ---- 
+   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*quote.*\)/\1\2/ }" \
+          $SRCDUMP
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
+ # ----
+ # sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
+ #        $SRCDUMP
+
+ # APPEND LINE CONTAIN *enumerate* IF AFTER ^\descriptor
+ # ---- 
+   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
+          $SRCDUMP
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{enumerate}
+ # ----
+ # sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
+ #        $SRCDUMP
+
+ # WRAP PARAGRAPHS IN \begin{dblock} \end{dblock}
+ # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{dblock}&\n\\\end{dblock}/' \
+           $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) QUOTE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) ENUMERATE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+
+ # CHANGE (FIRST) ITEMIZE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+ # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
+ # ----
+   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
+
+ # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
+   sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
+   sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
+
+ # WRAP URLS IN COMMAND
+   sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},g' $SRCDUMP
+
+ # CUSTOM STYLE FOR \lstinline
+   sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
+
+  }
+
+ # ------------------------------------------------------------------------- #
+ # DO IT AT THE END
+ # ------------------------------------------------------------------------- #
+   if [ "$OUTPUTFORMAT" == pdf ];then
+
+       # ADD ONLY ONCE
+         if [ `echo $preOutput | grep modTeX | wc -l ` -lt 1 ];then
+               preOutput="$preOutput modTeX"
+         fi
+
+   elif [ "$OUTPUTFORMAT" == html ];then
+
+         sleep 0
+
+   fi
+ # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 
