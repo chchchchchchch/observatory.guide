@@ -39,6 +39,7 @@
   \usepackage{pifont}
   \usepackage{framed}
   \usepackage{needspace}  % USEDY BY listing
+  \usepackage{changepage}
   \usepackage[natbib=true,hyperref=false,
               style=musuos,backend=biber]{biblatex}
   \usepackage{bibentry}
@@ -302,8 +303,6 @@
   \setlength{\SKIPFOOTINS}{\skip\footins}
 
 
-
-
 % --------------------------------------------------------------------------- %
 %  Q U O T E
 % --------------------------------------------------------------------------- %
@@ -332,14 +331,39 @@
      \fontfamily{iad}\selectfont
   }{\end{flushleft}\smallskip}
 
+% \newenvironment{descriptorquote}{%
+%  \color{red}
+%   \em
+% }{}
+
+ % https://tex.stackexchange.com/questions/163100/
+ % -> correcting-removing-adjustwidths-vertical-spacing
+  \makeatletter
+  \newenvironment{descriptorquote}{%
+   \vspace*{-2.5\parskip}
+    \begin{list}{}{%
+      \partopsep\z@%
+      \topsep\z@%
+     %\listparindent\parindent%
+     %\parsep\parskip%
+      \listparindent\z@%
+      \parsep\z@%
+      \setlength{\leftmargin}{1em}%
+      \setlength{\rightmargin}{1em}%
+      }\em\raggedright%
+       \color{red}%
+       \item[]}
+    {\end{list}\vfill}
+  \makeatother
+
 
 % --------------------------------------------------------------------------- %
 %  L I S T S
 % --------------------------------------------------------------------------- %
 
   \setitemize[0]{leftmargin=8pt,rightmargin=4pt} % (P:enumitem)
-  \setlist[enumerate]{leftmargin=1.2em}
-  \setlist{noitemsep} % (P:enumitem)
+  \setlist[enumerate]{leftmargin=1.2em,topsep=0pt}
+  \setlist{noitemsep,topsep=0pt,partopsep=0pt} % (P:enumitem)
 
   % PREVENT PAGE BREAK WITHIN LISTS
   %  \let\ITEMIZE\itemize
@@ -347,6 +371,20 @@
   %  \renewenvironment{itemize}{\begin{samepage}\ITEMIZE}
   %                            {\ENDITEMIZE\end{samepage}}
 
+ % WRAP (FIRST INSIDE dblock) ENUMERATE ENVIRONENT TO ADJUST SPACING
+   \newenvironment{descriptorenum}[1][]{%
+   \vspace{-1.5\baselineskip}
+   \begin{enumerate}[1.]
+   \color{green}
+   }{\end{enumerate}\vspace{.5\baselineskip}
+   }
+
+   \newenvironment{descriptoritemize}{%
+   \vspace{-1.5\baselineskip}
+   \begin{itemize}
+   \color{blue}
+   }{\end{itemize}\vspace{.5\baselineskip}
+  }
 
 % --------------------------------------------------------------------------- %
 %  C O D E   E N V I R O N M E N T S
@@ -694,6 +732,7 @@
    }
   }
 
+% =========================================================================== %
 % --------------------------------------------------------------------------- %
 %  MDSH TGSO GUIDE (VERY SPECIFIC)
 % --------------------------------------------------------------------------- %
@@ -713,25 +752,25 @@
    }
 
  % ------------------------------------------------------------------------- %
+ % \vspace{} IS DELETED AT AT THE TOP OF A PAGE \vspace*{} IS NOT !!
+ % \newcommand{\betweendq}{\vspace*{-1\parskip}%
+ %                         \vspace*{-2pt}%
+ %                         \vspace*{-1\baselineskip}}
+ % \newcommand{\betweendq}{} % MADE OBSOLETE BY descriptorquote ENVIRONMENT ?
+
+
    \newlength{\abovedescriptor}
    \setlength{\abovedescriptor}{15pt plus 10pt minus 15pt}
    \newcommand{\descriptorskip}{\pagebreak[1]%
                                 \vspace{\abovedescriptor}}
+
    \newcommand{\descriptorlabel}[1]{%
               {\scalefont{.75} %
                \fontfamily{cgt}\selectfont %
                \underline{#1:}\hspace{-.5em}:}\hspace{.25em} %
    }
- % \vspace{} IS DELETED AT AT THE TOP OF A PAGE \vspace*{} IS NOT !!
-   \newcommand{\betweendq}{\vspace*{-1\parskip}%
-                           \vspace*{-2pt}%
-                           \vspace*{-1\baselineskip}}
-
-   \newenvironment{dblock}{%
-   \begin{samepage}
-   }{
-   \end{samepage}
-   }
+   \newenvironment{dblock}{\begin{samepage}}
+                          {\end{samepage}}
 
 % --------------------------------------------------------------------------- % 
  % ------------------------------------------------------------------------- %

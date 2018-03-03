@@ -1092,28 +1092,50 @@ function CARLINSAYS() {
           $SRCDUMP
  # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
  # ----
-   sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
-          $SRCDUMP
+ # sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
+ #        $SRCDUMP
+
  # APPEND LINE CONTAIN *enumerate* IF AFTER ^\descriptor
  # ---- 
    sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
           $SRCDUMP
- # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{enumerate}
  # ----
-   sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
-          $SRCDUMP
+ # sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
+ #        $SRCDUMP
 
- # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
- # ----
-   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
-
- # WRAP PARAGRAPHS IN \begin{samepage} \end{samepage}
+ # WRAP PARAGRAPHS IN \begin{dblock} \end{dblock}
  # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
  # ----
    sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
    sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{dblock}&\n\\\end{dblock}/' \
            $SRCDUMP
    sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) QUOTE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
+   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) ENUMERATE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
+   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) ITEMIZE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
+   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
+
+ # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
+ # ----
+   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
 
  # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
    sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
@@ -1124,7 +1146,6 @@ function CARLINSAYS() {
 
  # CUSTOM STYLE FOR \lstinline
    sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
-
 
   }
 
