@@ -79,16 +79,13 @@ Nannyware is a form of Content-control software: software designed to restrict o
 % (from http://www.workrave.org/documentation/faq/ )
 
 
-
 % ![Content-control software]( http://www.advicegoddess.com/archives/2008/05/03/nannyware.jpg )
 % ![A "nudge" from your music player](http://img.wonderhowto.com/img/10/25/63533437022064/0/disable-high-volume-warning-when-using-headphones-your-samsung-galaxy-s4.w654.jpg)
 % ![Emphasis on the body] (http://classicallytrained.net/wp-content/uploads/2014/10/take-a-break.jpg)
 % ![ "Slack is trying to be my friend but it's more like a slightly insensitive and slightly bossy acquaintance." @briecode ] (https://pbs.twimg.com/media/CuZLgV4XgAAYexX.jpg)
 % ![](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fi0.wp.com%2Fatherbeg.com%2Fwp-content%2Fuploads%2F2015%2F06%2FWorkrave-Restbreak-Shoulder.png&f=1)
-
 % Facebook is working on an app to stop you from drunk-posting
 % "Yann LeCun, who overseas the lab, told Wired magazine that the program would be like someone asking you, 'Uh, this is being posted publicly. Are you sure you want your boss and your mother to see this?'"
-
 % ![](http://waterlog.gd/images/homescreen.png)
 % ![](https://pbs.twimg.com/media/C6oKTduWcAEruIE.jpg:large)
 
