@@ -39,6 +39,7 @@
   \usepackage{pifont}
   \usepackage{ragged2e}
   \usepackage{framed}
+  \usepackage{multicol}
   \usepackage{needspace}  % USEDY BY listing
   \usepackage{changepage}
   \usepackage[natbib=true,hyperref=false,
@@ -247,15 +248,32 @@
   \usepackage{fancyvrb}
   \usepackage{makeidx}
   \makeindex
- %\renewcommand\chapter[1]{}
-  \renewcommand{\indexname}{\label{$2}}
+
+  \renewcommand{\indexname}{\textbf{Keyword Index}\label{$2}}
 
   \newcommand{\insertindex}[1]{
-  \let\CHAPTERSAVE\chapter
-  \renewcommand\chapter[1]{\label{#1}}
+  %\let\CHAPTERSAVE\chapter
+  %\renewcommand\chapter[1]{\label{#1}}
   \printindex
-  \renewcommand\chapter[1]{\CHAPTERSAVE{#1}}
+  %\renewcommand\chapter[1]{\CHAPTERSAVE{#1}}
   }
+
+  % https://tex.stackexchange.com/questions/23870/
+  % -> index-shouldnt-start-new-page
+  \makeatletter
+  \renewenvironment{theindex}
+                 {\bigskip\indexname%
+                  \begin{multicols}{2}
+                  \@mkboth{\MakeUppercase\indexname}%
+                          {\MakeUppercase\indexname}%
+                  \thispagestyle{plain}\parindent\z@
+                  \parskip\z@ \@plus .3\p@\relax
+                  \columnseprule \z@
+                  \columnsep 35\p@
+                  \let\item\@idxitem}
+                 {\end{multicols}}
+  \makeatother
+
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S
