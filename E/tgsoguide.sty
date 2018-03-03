@@ -262,11 +262,10 @@
   \usepackage{makeidx}
   \makeindex
 
-  \renewcommand{\indexname}{\textbf{Keyword Index}\label{$2}}
-
   \newcommand{\insertindex}[1]{
   %\let\CHAPTERSAVE\chapter
   %\renewcommand\chapter[1]{\label{#1}}
+  \renewcommand{\indexname}{\textbf{Keyword Index}\label{#1}}
   \printindex
   %\renewcommand\chapter[1]{\CHAPTERSAVE{#1}}
   }
