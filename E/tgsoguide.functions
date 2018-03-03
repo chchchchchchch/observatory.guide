@@ -809,7 +809,8 @@ function TOC() {
     
      if [ "$OUTPUTFORMAT" == pdf ];then
   
-       echo "\begin{tocpage}"  >  ${TMPID}.tocprocessed
+       echo "\begin{tocpage}"  >   ${TMPID}.tocprocessed
+       echo "\label{$TID}"     >>  ${TMPID}.tocprocessed
 
     ( IFS=$'\n'
       for TOCITEM in `cat ${TMPID}.index | #
@@ -859,6 +860,12 @@ function TOC() {
  # ------------------------------------------------------------------------- #
  # WHERE TO PUT THE TOC
  # ------------------------------------------------------------------------- #
+   # ADD TO INDEX
+   # ------------
+     TID=`echo toc | md5sum | cut -c 1-8`
+     echo "${TID}:Table of Contents" >> ${TMPID}.toc
+     echo "${TID}:4:$*"              >> ${TMPID}.index
+
    # PLACE A MARKER
    # --------------
      TOCMARKER=`echo TOCHERE | md5sum | cut -c 1-16`
