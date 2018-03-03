@@ -243,6 +243,17 @@
 
  %\renewcommand{\bibsetup}{\setlength\textheight{.8\paperheight}}
 
+ %\usepackage{url}
+ % https://tex.stackexchange.com/questions/134191/
+ % -> line-breaks-of-long-urls-in-biblatex-bibliography
+ %\setcounter{biburllcpenalty}{7000}
+ %\setcounter{biburlucpenalty}{8000}
+
+ % https://tex.stackexchange.com/questions/184769/
+  \DeclareFieldFormat{url}{\http{#1}}
+
+  \renewcommand{\bibsetup}{\uchyph=1}
+
 % --------------------------------------------------------------------------- % 
 %  I N D E X I N G
 % --------------------------------------------------------------------------- %  
