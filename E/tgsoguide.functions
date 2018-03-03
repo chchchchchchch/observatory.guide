@@ -893,6 +893,7 @@ function TOC() {
 
  }
 # --------------------------------------------------------------------------- #
+
 function BIBLIST() {
 
   BIBID=`echo bibliography | md5sum | cut -c 1-8`
@@ -906,7 +907,9 @@ function BIBLIST() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function KEYWORDINDEX() {
 
   SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
@@ -921,6 +924,7 @@ function KEYWORDINDEX() {
     KEYWORDIZE $SRCGET $KWID
 
 }
+
 # --------------------------------------------------------------------------- #
 
 function LICENSE() {
@@ -939,6 +943,7 @@ function LICENSE() {
 
 }
 # --------------------------------------------------------------------------- #
+
 function NEWPAGE() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -946,7 +951,9 @@ function NEWPAGE() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function EMPTYPAGE() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -954,7 +961,9 @@ function EMPTYPAGE() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function CLEARTOLEFT() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -962,7 +971,9 @@ function CLEARTOLEFT() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function CLEARTORIGHT() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -970,7 +981,9 @@ function CLEARTORIGHT() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function HEADER() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -985,7 +998,9 @@ function HEADER() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function QUOTESTYLE() {
 
   LNBEGIN=`grep -n "" $SRCDUMP        | # NUMBER ALL LINES
@@ -1008,6 +1023,7 @@ function QUOTESTYLE() {
        sed -i "${LNEND}s/end{quote}/end{$ENVIRONMENT}/" $SRCDUMP
   fi
 }
+
 # --------------------------------------------------------------------------- #
 
 function REF() {
