@@ -928,6 +928,11 @@ function LICENSE() {
   LURL="https://github.com/chchchchchchch/licenses/raw/master/pdf/FAL_1.3.pdf"
   LID=`echo fal | md5sum | cut -c 1-8`
 
+  echo "${LID}:Free Art License" >> ${TMPID}.toc
+  echo "${LID}:4:$*"             >> ${TMPID}.index
+  getFile $LURL ${TMPID}license.pdf
+  conformColor ${TMPID}license.pdf
+
   if [ "$OUTPUTFORMAT" == pdf ];then
         write2src "\pdflicense{${TMPID}license.pdf}{\label{$LID}}"
   fi
