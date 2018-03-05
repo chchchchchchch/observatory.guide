@@ -3,7 +3,7 @@
 
 % TEXIN: \begin{flushleft}
 
-The Guide to technogalactic software observing was compiled by Carlin Wing, Martino Morandi, Peggy Pierrot, Anita, Christoph Haag, Michael Murtaugh, Femke Snelting, Seda Gürses and includes contributions from Andrea, Manetta Berends, Željko Blaće, Larisa Blazic, Freyja van den Boom, Anna Carvalho, Loup Cellard, Joana Chicau, Cristina Cochior, Pieter Heremans, Joak, Jogi Hofmüller, Becky Kazansky, Anne Laforet, Ricardo Lafuente, Michaela Lakova, Hans Lammerant, Silvio Lorusso, Mia Melvaer, An Mertens, Lidia Pereira, Donatella Portoghese, Luis Rodil-Fernandez, Natacha Roussel, Lonneke van der Velden, Ruben van de Ven, Kym Ward, Wendy Van Wynsberghe and Peter Westenberg.
+The Guide to technogalactic software observing was compiled by Carlin Wing, Martino Morandi, Peggy Pierrot, Anita, Christoph Haag, Michael Murtaugh, Femke Snelting, Seda Gürses and includes contributions from Andrea, Manetta Berends, Željko Blaće, Larisa Blazic, Freyja van den Boom, Anna Carvalho, Loup Cellard, Joana Chicau, Cristina Cochior, Pieter Heremans, Joak, Jogi Hofmüller, Becky Kazansky, Anne Laforet, Ricardo Lafuente, Michaela Lakova, Hans Lammerant, Silvio Lorusso, Mia Melvaer, An Mertens, Lidia Pereira, Donatella Portoghese, Luis Rodil-Fernandez, Natacha Roussel, Lonneke van der Velden, Ruben van de Ven, Kym Ward, Wendy Van Wynsberghe and Peter Westenberg.(% CARLINSAYS: Anita is still rocking the first name only here. Which is great. But in case she wants to add her last name :-)
 
 % TEXIN: \end{flushleft}
 

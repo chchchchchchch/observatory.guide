@@ -1,11 +1,11 @@
 % METHOD: Prepare a reader to think theory with software
 % REMEMBER:
 % WHAT: Compile a collection of texts about software.
-% HOW: Choose texts from different realms. Software observations are mostly done in the realm of the technological and the pragmatic. Also the ecology of texts around software includes first and foremost manuals, technical documentation and academic papers by software engineers and these all 'live' in different realms. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes filosophy. By compiling a reader ... ways of speaking/writing about. Proximity.
+% HOW: Choose texts from different realms. Software observations are mostly done in the realm of the technological and the pragmatic. Also the ecology of texts around software includes first and foremost manuals, technical documentation and academic papers by software engineers and these all 'live' in different realms. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes philosophy. (% CARLINSAYS: This text was at the end and was an incomplete sentence so I am putting it here in case someone wants to finish it "By compiling a reader ... ways of speaking/writing about. Proximity.")
 % WHEN:
 % WHO:
 % URGENCY:
-% NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide.
+% NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide. (% CARLINSAYS: I don't think we ever did this so maybe we need to delete this line"?) 
 % WARNING:
 % EXAMPLE: -
 

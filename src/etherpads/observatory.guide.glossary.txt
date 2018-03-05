@@ -22,9 +22,11 @@
 % -------
 Agile
 Aquine
+Attack
 Bash
 Battery
 Beast
+Bestiary
 Bounce
 Bug
 Code

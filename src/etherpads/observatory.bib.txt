@@ -17,6 +17,13 @@
  pages     = {428--442}
 }
 
+@incollection{hu:2015:prehistory,
+  title={A Prehistory of the Cloud},
+  author={Hu, Tung-Hui},
+  year={2015},
+  publisher={MIT Press}
+}
+
 @incollection{ kaldrack:2015:there,
         title = {The Tail on the Hardware Dog},
         author = {Christoph Neubert},
@@ -422,5 +429,9 @@
   acmid      = {315644}
 }
 
-
+@misc{ @xing:flowcharts,
+title={Understanding Flowcharts}
+author={Lau, Justin and Xing}, 
+year={2009},
+url={http://odec.ca/projects/2009/xing9t2/hist.htm}, 
 

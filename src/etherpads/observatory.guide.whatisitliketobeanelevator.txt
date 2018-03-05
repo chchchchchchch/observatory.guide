@@ -4,8 +4,8 @@
 % NOTE: (*) Where this method refers to AN ELEVATOR, the name of any comparable software system may be substituted.
 
 % REMEMBER:
-% WHAT: Understanding software systems by becoming them
-% HOW: Creating a flowchart to incarnate a software system you use everyday
+% WHAT: Understanding software systems by becoming them.
+% HOW: Creating a flowchart to incarnate a software system you use everyday.
 % WHEN:
 % WHO:
 % URGENCY:

@@ -2,10 +2,10 @@
 
 % WHAT:  - 
 
-A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds and showing their order by connecting them with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting or managing a process or program in various fields.[^]{https://en.wikipedia.org/wiki/Flowchart}
+A flowchart is a type of diagram that represents an algorithm, workflow, or process by showing the steps as boxes of various kinds and depicting their order by connecting the boxes with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting, or managing a process or program in various fields.[^]{https://en.wikipedia.org/wiki/Flowchart}
 
 % WHY: Through flowcharts one will be able to analyze and reflect on one's own software situation. (% CARLINSAYS: Not a lot of other methods have had the WHY filled out. It seems to overlap with the URGENCY which is also the most inconsistently interpreted across the methods.)
-% URGENCY: Using flowchart observation methods towards analysis and self-reflection of software situation.(% CARLINSAYS: This is an incomplete sentence. Is there a way to add "...and self-reflection on one's own software situation will/may allow...XYZ.")
+% URGENCY: Using flowchart observation methods towards analysis and self-reflection of software situation.(% CARLINSAYS: This is an incomplete sentence. Is there a way to add "...and self-reflection on one's own software situation will/may allow...XYZ." It also seems very similar to the WHY)
 % NOTE: The term 'software situation' is suggested as a good replacement for 'software problem'. 
 % WHEN: 
 % WHO:
@@ -55,7 +55,7 @@ http://observatory.constantvzw.org/etherdump/clinic.newflow.diff.html
 **Service Log**
 
 1. Microsoft word copy/paste situation 
-2. Machine or human situation: it's uncertain, but looks like is machine situation as client tried to uninstall and reinstall, 6 months later the situation repeated 
+2. Machine or human situation: it's uncertain, but looks like machine situation as client tried to uninstall and reinstall, 6 months later the situation repeated 
 3. & 4). Process: back up files, obtain a copy of OS of choice and then reinstall Word. 
         o) How she feels? Feeling angry 
         
@@ -126,27 +126,26 @@ More info → see Rafaella flowchart pic
 We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the two rulers has a specific shape and has a specific meaning. (% CARLINSAYS: I changed the prior sentence from this: "It seems that every symbol on the ruler with specific shape has special meaning". If I am misunderstanding the intent of the sentence then the original text needs clarification.) There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without descriptions. We tried to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols (% CARLINSAYS: Are the X's here supposed to be the number of symbols on each ruler? That needs to be added if so. If not then something else needs to be done with the sentence to make it make sense). The specific literature explained to us that engineers have a kind of standard for these symbols. These symbols are vocabulary. 
 
 **16:15 - 16:40**    
-We started with analyzing an educational flow chart as our case example: https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg We were able to figure out what the arrows on the ruler meant.They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point.(% CARLINSAYS: This sentence repeated. I cut it but if the repetition was on purpose here is the text to reinsert: "Triangles can direct movement based which way they point.") In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
+We started with analyzing an educational flow chart as our case example: https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg (% CARLINSAYS: should this link be in the main body of the text? I think it should be there as a footnote instead in which case it needs brackets added around it) We were able to figure out what the arrows on the ruler meant.They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point.(% CARLINSAYS: This sentence repeated. I cut it but if the repetition was on purpose here is the text to reinsert: "Triangles can direct movement based which way they point.") In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
 
 **16:45 - 17:00**    
 We analyzed a flow chart of a multiplication algorithm. Its content illustrated an instruction to shift the number left or right . The decision box instructed you to repeat it 32 times for the whole number! 
 The rectangles were again representing options, while the flexible factors were illustrated by the rhombus, the symbol for Decision. The final symbol with the title "Done" was illustrated by something inbetween a circle and a rectangle. 
 
 **17:00 - 17:15**    
-We realized in our undertaking that we needed to jump into an internal perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to chart the elevator to the first floor from the perspective of the elevator. To achieve this task we agreed to do field research and go to the first floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. [Further elevator ruminations were made through reference to Marc Isaacs. Lift. UK, 2001.](https://www.youtube.com/watch?v=FJNAvyLCTik)
+We realized in our undertaking that we needed to jump into an internal perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to chart the elevator to the first floor from the perspective of the elevator. To achieve this task we agreed to do field research and go to the first floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. [^]{Further elevator ruminations were made through reference to Marc Isaacs. Lift. UK, 2001. https://www.youtube.com/watch?v=FJNAvyLCTik}
 (% CARLINSAYS: The text above moved between the past and present tense. I have put it all in the past tense except for the very last moment of deciding to do the final elevator flowchart tomorrow. I also assumed that the citation of the documentary Lift should be in a footnote? Or is it meant to be there to indicate the group going home and watching the movie?)
 
 **17:15 - 17:40**    
-To round off the day we ended with some general reflections. It seems that the different interpretations of symbols have been integrated into flowcharts from the early ones of the 1920's until now. [Tony Xing and Justin Lau. Understanding Flowcharts.](http://odec.ca/projects/2009/xing9t2/hist.htm) To put this knowledge into practice we started to sketch out the flowchart on the wall using Post-its.
+To round off the day we ended with some general reflections. It seems that the different interpretations of symbols have been integrated into flowcharts from the early ones of the 1920's until now.[@xing:flowcharts] To put this knowledge into practice we started to sketch out the flowchart on the wall using Post-its.
 
 **Current research goals:**
 
 * Flowchart or intervention: what is it like to be a elevator
-* zenit browser extension
-* iconographic analyses of flow chart symbols
-* call-flow && zenit modeling template for the drop-in clinic interview
-
-% CARLINSAYS: Can these be bullet points in the PDF instead of just double-spaced?
+* Zenit browser extension
+* Iconographic analyses of flow chart symbols
+* Call-flow && zenit modeling template for the drop-in clinic interview
+(% CARLINSAYS: Can these be bullet points in the PDF instead of just double-spaced?)
 
 % PDFFIX: 1 \newpage
 
@@ -159,7 +158,7 @@ We updated our fellow researchers(% CARLINSAYS: this said "research follower" wh
 Zenit (h)modeling/analysis    
 A method derived from a removal of textual informating from flowcharts -- related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam) an early 20th Century movement, and zenith -- an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith).
 
-Connection inspiration:     
+Connection inspiration: (% CARLINSAYS: can we make all these links actually hyperlinked in the PDF? can they be a smaller font? i know this is documentation so i am not comfortable getting rid of it but i don't think the typed out links look great in the PDF)     
 https://helios.gsfc.nasa.gov/flowchart.html
 
 Some historical experimetation examples:    
@@ -177,7 +176,7 @@ Continue with flow chart elevator
 Lara working on Zenit(h) modeling/analysis leading to call-flow template, and zenit browser plugin   
 Michaela helping out the flow chart of the elevator as a case study   
 
-Here are the flowchart symbols: http://observatory.constantvzw.org/etherdump/flowchartsymbols.md
+Here are the flowchart symbols: http://observatory.constantvzw.org/etherdump/flowchartsymbols.md (% CARLINSAYS: We should embed the images of the symbols in the doc or get rid of this?)
 
 ## Sources:
 
@@ -202,10 +201,10 @@ http://vanseodesign.com/web-design/visual-grammar-shapes/
 
 ## How to create browser add on /or browser extension:
 
-1. Make a new dir at your local machine lets called it adds-on & and a folder called icons
+1. Make a new dir at your local machine. Lets called it adds-on & and a folder called icons
 2. Make an icon for your browser extension
 3. Open text editor and copy paste this jason code 
-4. You will need to modify the last two lines to point to the etherbox.local & css to poit to the extension.css
+4. You will need to modify the last two lines to point to the etherbox.local & css to point to the extension.css
 5. Make an css script place your css there 
 
 On the browser:
@@ -220,7 +219,7 @@ manifest.json:
   "manifest_version": 2,
   "name": "extension",
   "version": "1.0",
-  "description": "this is the browser exteions",
+  "description": "this is the browser exteions",(% CARLINSAYS: is exteions supposed to be extension?)
   "icons": {
     "48": "icons/icon-name-here.png"
   },

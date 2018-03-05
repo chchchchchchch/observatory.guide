@@ -3,7 +3,7 @@
 
 % WHAT: - 
     
-Nannyware is software meant to protect users while limiting their space of activity. It is software that passive-aggressively suggests or enforces some kind of discipline. In other words, create a form of parental control extended to adults by means of user experience / user interfaces.
+Nannyware is software meant to protect users while limiting their space of activity. It is software that passive-aggressively suggests or enforces some kind of discipline. In other words, create a form of parental control extended to adults by means of user experience/user interfaces.
 
 Nannyware is a form of Content-control software: software designed to restrict or control the content a reader is authorised to access, especially when utilized to restrict material delivered over the Internet via the Web, e-mail, or other means. Content-control software determines what content will be available or be blocked.
 
