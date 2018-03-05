@@ -364,7 +364,7 @@ function TOCITEM() {
    DCONTENT=`echo $*               | # DISPLAY
              sed "s/^[ ]*$DNAME//" | # REMOVE DNAME BLANKS
              $PANDOCACTION         | # TRANSLATE TO OUTPUT FORMAT
-   sed 's/\((\\\%[ ]*CARLINSAYS:\)\([^)]*\))/\\\pdfcomment{\2}/' | #
+   sed 's/\((\\\%[ ]*CARLINSAYS:\)\([^)]*\))/\\\pdfcomment{\2}/g' | #
              sed 's,</*p>,,g'`       # RM <p> TAGS (HTML ONLY, DO ANYWAY)
 
    if   [ "$DMODE" == "1" ];then 
@@ -998,7 +998,7 @@ function HEADER() {
    HCONTENT=`echo $*               | # DISPLAY
              sed "s/^[ ]*$DNAME//" | # REMOVE DNAME BLANKS
              $PANDOCACTION         | # TRANSLATE TO OUTPUT FORMAT
-   sed 's/\((\\\%[ ]*CARLINSAYS:\)\([^)]*\))/\\\pdfcomment{\2}/' | #
+   sed 's/\((\\\%[ ]*CARLINSAYS:\)\([^)]*\))/\\\pdfcomment{\2}/g' | #
              sed 's,</*p>,,g'`       # RM <p> TAGS (HTML ONLY, DO ANYWAY)
         write2src "\section{$HCONTENT}"
         write2src "$ANCHOR"
