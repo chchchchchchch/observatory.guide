@@ -937,7 +937,10 @@ function KEYWORDINDEX() {
 function LICENSE() {
 
   LURL="https://github.com/chchchchchchch/licenses/raw/master/pdf/FAL_1.3.pdf"
-  LID=`echo fal | md5sum | cut -c 1-8`
+  LID=`echo fal            | # START
+       sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+       sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+       md5sum | cut -c 1-16` # HASH AND CUT
 
   echo "${LID}:Free Art License" >> ${TMPID}.toc
   echo "${LID}:4:$*"             >> ${TMPID}.index
