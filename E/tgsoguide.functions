@@ -1081,6 +1081,42 @@ function PDFFIX() {
 
 # --------------------------------------------------------------------------- #
 
+function USEFONTIAD() {
+
+   TXT=`echo $*        | # DISPLAY
+        sed "s/^[ ]*//" | # REMOVE LEADING BLANKS
+        $PANDOCACTION    | # TRANSLATE TO OUTPUT FORMAT
+        sed 's,</*p>,,g'`   # RM <p> TAGS (HTML ONLY, DO ANYWAY)
+   write2src "{\fontfamily{iad}\selectfont $TXT}"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function USEFONTCGA() {
+
+   TXT=`echo $*        | # DISPLAY
+        sed "s/^[ ]*//" | # REMOVE LEADING BLANKS
+        $PANDOCACTION    | # TRANSLATE TO OUTPUT FORMAT
+        sed 's,</*p>,,g'`   # RM <p> TAGS (HTML ONLY, DO ANYWAY)
+   write2src "{\fontfamily{cgt}\selectfont\footnotesize $TXT}"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function USEFONTPLM() {
+
+   TXT=`echo $*        | # DISPLAY
+        sed "s/^[ ]*//" | # REMOVE LEADING BLANKS
+        $PANDOCACTION    | # TRANSLATE TO OUTPUT FORMAT
+        sed 's,</*p>,,g'`   # RM <p> TAGS (HTML ONLY, DO ANYWAY)
+   write2src "{\fontfamily{ipm}\selectfont $TXT}"
+
+}
+
+# --------------------------------------------------------------------------- #
+
 function MEAS() {
 
   MEASWHAT=`echo $* | sed 's/ //g'`
@@ -1193,7 +1229,7 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
-function SXHOW() {
+function SHOW() {
      sleep 0
 }
 
