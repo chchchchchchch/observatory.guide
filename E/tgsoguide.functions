@@ -1301,6 +1301,9 @@ function SHOW() {
  # CUSTOM STYLE FOR \lstinline
    sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
 
+ # INJECT NON-BREAKING SPACE HACK
+   sed -i 's,\([a-zA-Z]\)\(::\)\([a-zA-Z]\),\1~\3,g' $SRCDUMP
+
   }
 
  # ------------------------------------------------------------------------- #
