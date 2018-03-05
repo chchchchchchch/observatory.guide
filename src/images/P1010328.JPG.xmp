@@ -10,7 +10,7 @@
    darktable:xmp_version="2"
    darktable:raw_params="0"
    darktable:auto_presets_applied="1"
-   darktable:history_end="14">
+   darktable:history_end="19">
    <darktable:mask_id>
     <rdf:Seq/>
    </darktable:mask_id>
@@ -156,6 +156,51 @@
       darktable:enabled="1"
       darktable:modversion="2"
       darktable:params="0000000000000000000048420000c8428180003d69b4f53eebea6a3f"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="flip"
+      darktable:enabled="0"
+      darktable:modversion="2"
+      darktable:params="ffffffff"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="colorout"
+      darktable:enabled="1"
+      darktable:modversion="4"
+      darktable:params="gz10eJxjYqAfAAABRAAD"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="colisa"
+      darktable:enabled="1"
+      darktable:modversion="1"
+      darktable:params="90c275be5c8f42be9a9919bf"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="shadhi"
+      darktable:enabled="1"
+      darktable:modversion="5"
+      darktable:params="000000000000c842285c5442703d7ac07b14a7c200000000000048420000c84200004842000000000ad7233c00000000"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="colisa"
+      darktable:enabled="1"
+      darktable:modversion="1"
+      darktable:params="703d8abe90c2f5bd52b85ebf"
       darktable:multi_name=""
       darktable:multi_priority="0"
       darktable:blendop_version="7"
