@@ -1,0 +1,134 @@
+% HEADER: Interview with Jean Huens
+
+(% CARLINSAYS: Peggy can you fill in the when and where for this intro and add or change it as you see fit?)
+The following is a transcript of an interview with Jean Huens conducted by Peggy at X date and Y place.
+
+% PP: You have been using computers since a long time, as you explained to us during the tour we had the joy of attending during the TGSO.
+I heard that until recently, let's say the late 1990s, that to learn computer programming you had to start by writing down the program on paper...
+% CARLINSAYS: I want to put a period or a question mark here?
+% JH: In 1973, I did study computer sciences, it was the second year of the Computer Sciense course, here in Leuven. At the time computers were mainframes and you did feed them with programs by punch cards. Programming was writing down the program, then you punched it and the next day you get results, mostly error. That's the way it worked at that time. To teach us programming, they used the language of that time, Fortran and some kind of invented assembly language, it didn't really exist, it was simplified.
+
+Most of the time you wrote down your program, the teacher and the assistant would have to tell you what is wrong or good, you didn't have much practical experience.
+
+% PP: What was it like, tons of pages? 
+% JH: No. As an anecdocte, I remember punchcards were a block of papers, we were jealous of the people who came into the computer center with huge stacks of cards.
+% CARLINSAYS: The "block of papers" is a little confusing. Could we say "punchcards came in huge stacks"?
+They were really small programs, not complicated one. In fact you had to learn to use the computer from scratch, everything was new, you couldn't rely on previous experiences.
+% , everything was new.
+And to start with small programs was difficult enough. 
+
+That was also the time when Edsger W. Dijkstra, who fought against the "goto" and other common but bad constructs.[@dijksra:1972:goto] I still remember him, in an audience, giving us a lecture on good  techniques in programming at the International computing symposium 1977 in Liège.[@dijksra:1977:craft] It was a rather hard course because Dijkstra expected you to quickly  understand and implement his ideas.
+
+And then from '75 on, computers became cheaper and could be bought by departments and smaller entities. And than came the first interactive computer. They were still beasts, about two cubic meters, costing two millions belgian francs. But it was low
+% CARLINSAYS: low?
+enough to allow people to type in directly commands. I started working here in '75 as a researcher, it has evolved continuously and I saw computers getting cheaper and getting easier to use.The way to use it was simplified, you could start to go to the beast and try it out.
+
+I remember more or less: you wrote down the program in Fortran for instance. We always thought in the beginning that it would work and it didn't, so after a turn around you were giving it back to the operator and you have to wait another half a day or a night to get the results.
+
+% PP: What kind of program were you working on? 
+% JH: I remember the first program I had to write was: you got three numbers and you had to make the program decide if you could construct a triangle with the numbers being the sides of the triangle.
+
+% PP: That took an afternoon to be processed?
+% JH: Well, yeah. You had to imagine how to do it which was also one problem, than you prepare the cards with the punching machine and you give the package of cards to the operator who was feeeding the computer with the cards. Operators were people who had the task of feeding the computers by hand, with paper, cards,
+% CARLINSAYS: are these paper cards or paper and then cards because the two are separate?
+then cards got written on disks and later processed by the mainframe from disk. Finally results got printed on paper.
+% it lasts onto the magnetic disks period.
+And after a number of hours or a night you got a listing on a piece of paper with the results or program compilation errors.
+
+% PP: When where you able to record the program onto the machine?
+% JH: I think that happened between '75 and '80. After the punching cards, which were already a way to record the program, we had typewriters and then terminals. We could record the programs by typing it on the terminal  and the computer would store them on disk. We had magnetic discs. IBM had number for everything, I remember the 3300  [manufactured from 1970 on] was a magnetic disk. 
+We didn't touch the machines, operators would change the disks, we could only access the typewriter/terminal. That was our most direct connexion to the computer. The times were different. The mainframes were such huge costly beasts that it had operators day and night to keep it busy. Even at night there were two or three guys mounting tapes, disc mounting tapes, that kind of stuff.
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/IBM_magnetic_disk_drives_3330%2B3333.png/600px-IBM_magnetic_disk_drives_3330%2B3333.png
+
+% PP: When did you stop working with operators?
+% JH: Somewhere between '85 and '90. There were still operators at the main computer of the university, but there were also small computers, so researchers and student could have direct access when needed. 
+
+% PP: When did you start to work with software sold by others or given away in order to do your research?
+% JH: You still needed an operating system for the mainframe that was delivered by IBM or the constructor delivered
+% ing
+the mainframe.
+% CARLINSAYS: does this make sense with these changes?
+When you bought mini-computers, which were the  smaller versions of mainframes, in most cases you bought an operating systems, compilers and all the stuff you needed to be able to program or work  those things. 
+In most cases,  the computer sciences department bought the mini-computer from, for instance *Digital Equipment Corporation*,  a manufactorer at that time, but they didn't buy DEC's  software. The DEC software  was not open source or free,  and as a university we could get Unix for free and could run it on those
+% digital equipment 
+DEC computers. That is what the computer department of the University of Louvain la Neuve *l'unité d'informatique*, did and so did we.
+
+% PP: When did you start working with Unix as an OS? 
+% JH: I took a trip to Amsterdam, it must have been in 1979 or 1980. Well, the story starts in our French sister university (LLN) where they had a PDP-11 with Unix on it. You could get Unix, at the time, when you were a university, from Bell Labs (part of AT&T), the American telephone company. AT&T was a mega organisation at the time [before the [dismantlment of AT&T/Bell system](https://en.wikipedia.org/wiki/Breakup_of_the_Bell_System)]. Due to monopoly, the US authorities split it up into different Baby Bells. One of the restrictions was that the research Baby Bell, could not sell anything. There were computer scientists there who developed some interesting things (e.g. Unix). Universities got the source code for free, but NO support, nothing not even how to install it. In Unité d'informatique, where they had a [PDP-11/70](https://i0.wp.com/www.utterpower.com/wp-content/uploads/2011/10/pdp11-70-panel.jpg) they were lucky: they got the same computer that Unix was developed on.  They got the disk by snail mail as a post-office package. They mounted it and it did spin up and they had UNIX.
+% CARLINSAYS: is there a reason this is all capital letters?
+Here, we had a cheaper PDP11, [the PDP 11/60](https://dave.cheney.net/tag/pdp-11). We got the Unix disk distribution from Bell Labs but we could not run it, because we got another type of disk(RK07). We could look at it but that was all, because our disc format was different than the one at Bell Labs. Somebody here (P.Verbaeten) wrote a driver for that disk in l'unité d'informatique of LLN.
+% But they did not have a RK07.  It compiled it but we couldn't try it because we did not have 
+% CARLINSAYS: I think this should read "It compiled it but we couldn't try it because we did not have a RKO7"?)
+The nearest place with Unix and a RK07 was in Vrije Universiteit Amsterdam.  Andrew Tenenbaum, who wrote a number of books on operating systems, was working there. He was learning to speak Dutch. We understood hisEnglish better but his assistant explained that he needed to practice speaking Dutch because he would have to pass an exam. There we compiled Unix with an RK07 driver and stored it on a bootable RK07 disk. With that disk back in Leuven we could start Unix on our PDP11/60. An error in the process meant a trip Leuven-Amsterdam and back.
+In my opinion the start of open source was Unix because we had to maintain it by ourselves and we learned a lot from the sources. 
+In that time for software distribution you had to store it on magnetic tape and send the tape to different places with associated problems. For example, the agents at the customs at the airport or post office didn't know what to do with the tapes or discs in terms of custom clearance. They used magnetic or x-rays as inspection tools and we had to write on the package that it should not be x-rayed. And sometimes we still got unreadable tapes/discs. 
+
+% PP: So it took weeks between the transportation and the customs?
+% JH: Yes, the custom had to clear the packages. I remember I've been in the customs in Zaventem. I had received a letter that my package from Bell Labs had arrived. I went there thinking I would have to pay something and go. But no. It had to be cleared so there was some organisation that had to do administrative stuff, so I only got it a few days later. The response time was huge.
+% CARLINSAYS: This is a nice idiosyncratic pharse so maybe we leave it even if it is a bit hard to understand? I think it means it took a long time for things to be shipped back and forth) 
+
+% PP: After that period of time, how did you switch from that kind of collaboration on how to make software and make software work, to another kind of collaboration on networks and between universities and researchers?
+% JH: In the Unix systems at that time there was a kind of networking protocol which worked on serial lines (UUCP).
+To connect two Unix systems together you only need a serial line. We had a line between LLN and Leuven, it's only 25 kms, but we had to ask Belgacom, then La Régie des Télégraphes et Téléphones, to get a modem to connect through their network and than over that modem you could reach an amazing speed of 300 characters per second. And that was the first communication. It happened somewhere around 1985. And then you had connection with another computer by writing something here and doing the transfer to the other computer and executing it there. 
+ 
+% PP: What was the first thing you sent through a network like this?
+% JH: I didn't do it myself, I remember it was a kind of chat program. On the LLN side was Professor Elie Milgrom. He is retired now. On this side, it was Professor  Yves Willems. And I remember that they typed something and they got a response from the other side and that was it.  But I remember that Professor Willems sent "Ok, we stop now." And that Elie Milgrom answered "See you later, Alligator" [a reference to Bill Haley and the Comets]. At the time we still had these kind of songs in mind. (lol). 
+Those Unix to Unix connexions were first. And there was a worldwide Unix to Unix based network, Usenet (1979). It still exists somewhere.You can download loads of illegal movies and that stuff. That was not what we meant at the time. But that is what is left. And Usenet became gradually replaced by the Internet in USA. 
+In Europe, the Internet came a lot later, but we had limited access to the Internet by mail and even FTP; We could send mail to the Internet and we could receive mail from them because some friendly American university (and later companiesI translated internet mail to UCP mail. Moreover they translated specially formatted mails into FTP request and sent the result back to us by mail. That was before the 1990's.
+ 
+% PP: Your relation to software had changed at the time because you did not have to do all this manipulations with the software your received. Was it already floppy discs?
+% JH: No, magnetic tapes, for the mainframe at least. Even most of the mini-computers used some (cheaper) magnetic tapes. Between 1990 and 1995 the main machines used for Unix software development was a VAX from DEC. Once a year the software came from Berkeley. It was still Unix but had been modified by Berkeley for virtual memory and all the stuff which is common now. We received a tape, with lot of goodies, I still remember we didn't know what was on the tape  but we scrutinized it  to find out what was on there, what we could use...
+In Europe, companies like Siemens were trying to set up software centers to make software avaiable. They were even trying to set up European networks. But researchers loved the Internet. It worked. It was useful for their research. So companies in Europe were trying to set up their own networks, I remember for example the X/OPEN transport protocol, which was a set of standards about what software layers should do. But it didn't succeed because around 1992 IBM decided to quit their own private network and to go for TCP/IP which was the switching point. 
+Everything done for X/OPEN were suddently forgotten. For the mainframes, and certainly in Belgium computing was mainly mainframes, I'm talking about universities here, so when IBM decided to go for TCP/IP the universities followed. 
+But the adoption of TCP/IP was really slow. For example, Belgacom was not interested in running the Domain Name System so we did it here, for some time, starting in 1993 with [Pierre Verbaten](https://www.dnsbelgium.be/en/history). Belgacom were focused on X25 (DCS - https://en.wikipedia.org/wiki/X.25) so they missed it.
+
+% PP: It was like the french Minitel?
+% JH: Well, at that time we were really jealous about Minitel. Could you imagine that? Terminals?  At home? You could work home with a computer! You could send emails! All in one, a PC computer with a modem! 
+
+% PP: How did the research about software evolve in the department?
+% JH: I am mainly talking about network research but here. There were people working on numerical analysis, computing, artificial intelligence. I was just not involved in that research so I don't know much about it 
+
+% PP: You were focused on software and networks?
+% JH: Yes, we produced some software. We made software to generate compilers. There was some A.I. software in Prolog, numerical analysis libraries, etc. Some were sold or shared, it depends.  
+We sold some software from the beginning I think when it was not even a department but a professor and a couple of students.
+
+% PP: Is that when you joined?
+% JH: No it was already a department. I studied industrial engeneering in electronics first. At the time in electronics you heard something about computers, I was interested in it. I wanted to know more. I heard Kuleuven had started a
+% year before a
+degree in computer engeneering. It was the first year where industrial engineers could join. The only thing we knew about computers were from movies. I wanted to know how they worked. I'm not sure if I know now it now, but I have some ideas.
+
+% PP: How many languages do you know?
+% JH: Assembly, FORTRAN, PL-1 the language invented by IBM to be the universal one, C, Cobol. Perl...I don't know...some more. I'm not fluent in any computer language, but I can read any language especially well written, I know I can understand it and, if needed, learn it... I know JAVA also. As a system administrator, the thing I use most are the command line of UNIX and Perl. But that's because i'm more familiar with those two so it goes faster.
+
+% PP: How did you see the rise of personnal computer and the software that goes with?
+% JH: I have to admit that we missed it. We didn't see the new thing was powerful because it was available for everybody.  We were not impressed by the software. I remember windows 95, the news on TV, people sleeping on the street to get it. I remember when I got my first windows version, with a box of 22 floppies or so. Then I wanted to do something, to compile a program, but there was no compiler. We were used to Unix, which was a basic system but haa lot of utilities in it. Software was for us free, and we were used to having it be free, and on a PC it was not free anymore. 
+
+% PP: Does that mean you didn't had a personal computer until late?
+% JH: Yes. I think it was round 2000. I didn't need it really. I got one when the Belgian UUCP network became commercial. Of course I did not get Windows on it. I think we got Linux here in 1994. There was a guy involved in the kernel studying here. So we did used it very fast.
+
+% PP: So, what is software for you?
+% JH: For me, software is the magic that makes computer usable. I can only gives examples of what I mean by it. A PC without software- most people, even computer scientists, can't do anything with it. You need basic software. Some software is already integrated in the computer hardware. It is the same for phones, tablets. The main characteristic, for me, is that it should be user friendly. That is very difficult I know, because you have to imagine what the people using your software are going to do with it and how they want to use it. That's the magic you need to solve.
+
+% PP: Is command line user friendly?
+% JH: Well, somehow you have to learn the Unix command language; it is in fact a computer language where you can make all the constructs that other languages offers.
+You can create loops, you can test, whatever. It's not so different from computer languages like C or JAVA or whatever. It is certainly programmer friendly.
+
+% PP: But it's already software, no? User friendly depends on what you put behind these words, no?
+% JH: Yes it's already software. I don't have a strong opinion about command lines. It depends on people. I can imagine that someone that has never heard about the command line expects that you click somewhere and it happens. But if you know the command language it's sometimes perhaps easier or productive to type commands and let it run. Sometimes, I find it easier if I have a screen and a number of buttons and I don't have to imagine what happens behind that screen. And sometimes I want to do something with the command line, because I'm used to it. That's why I don't trust myself about user friendliness because I have a long experience in computer interfaces. I'm so used to some of them perhaps I can't even imagine that somebody else would like to do it otherwise or doesn't like what I'm used to.
+
+% PP: Apart from maintaining the museum, what do you work on? You are still active in the department even though you are retired?
+% JH: I work on sensors, in the Internet of Things world in one of the university spin-offs. What I do for them is: wireless sensors need power, most of them are on batteries. They have designed a complete system which should make the battery last for two, three, four years. They need a system to measure that. So I have been working on a mechanism to measure that without waiting four years. That's programming instrumentation computers to measure e.g. power or whatever. Most of it on Unix systems. 
+There are enough new or unknown things and maybe because I'm older, I have another way of looking at things, so we have a lot of discussions. They don't like my Perl, they use python, JAVA and those things... Perl, it has its disadvantages, but you can do a lot of things. Every character has a meaning, that makes Perl programs often unreadable.
+With Python, you need all those libraries... It's easy when you know the libraries, what you have to call. When you know the arguments of the librairies. So it's also complicated. And if the library changes for some reasons, there you go.
+In my humble opinion it's the same with all the languages. It starts easy from scratch but if you have to interface them with existing things from the Internet world or whatever it gets complicated.
+
+% PP: Do you have a last word?
+% JH: I was surprised by your group reaction to the visit. I thought all of this was known. Maybe I'm getting old :)
+% CARLINSAYS:Do we want to include the smiley face or was that just an impulse during the transcription?
+Currently I don't do much about the museum department, but sometimes I like to talk about the little stories about it. I remember a lot of little stories, a lot of techniques that  have been used and forgotten, and some techniques that have been kept alive. I thought when I was young that the best techniques would succeed. That you would have visionary people who would see the way. But I realized that a lot of things happen by accident.
+
+
+
+
+
+

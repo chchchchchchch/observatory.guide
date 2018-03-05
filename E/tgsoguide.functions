@@ -378,7 +378,9 @@ function TOCITEM() {
           HTMLCMD=""
    fi 
 
-   write2src "$PDFCMD"
+   if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "$PDFCMD"
+   fi
 
   }
 # --------------------------------------------------------------------------- #
@@ -551,10 +553,16 @@ function SHOW() {
                  grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
                  cut -d ":" -f 2-`           # CUT AFTER :
             if [ "$REF" != "" ];then         # IF REF IS SET
-                  REF=`echo $REF | md5sum  | # MAKE HASH
+                  REF=`echo $REF           | # GET REF CODE
+                       sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                       sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                       md5sum              | # MAKE HASH
                        cut -c 1-16`          # CUT HASH
-            else  REF=`echo $RANDOM | md5sum | # MAKE HASH
-                       cut -c 1-16`            # CUT HASH               
+            else  REF=`echo $RANDOM        | # RANDOM REF CODE
+                       sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                       sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                       md5sum              | # MAKE HASH
+                       cut -c 1-16`          # CUT HASH
             fi 
           # EXTRACT PLACEMENT FLAGS
             PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
@@ -669,10 +677,16 @@ function PDF() {
           grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
           cut -d ":" -f 2-`           # CUT AFTER :
      if [ "$REF" != "" ];then         # IF REF IS SET
-           REF=`echo $REF | md5sum  | # MAKE HASH
+           REF=`echo $REF           | # GET REF CODE
+                sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                md5sum              | # MAKE HASH
                 cut -c 1-16`          # CUT HASH
-     else  REF=`echo $PDFNOW | md5sum | # MAKE HASH
-                cut -c 1-16`            # CUT HASH               
+     else  REF=`echo $RANDOM        | # RANDOM REF CODE
+                sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+                sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+                md5sum              | # MAKE HASH
+                cut -c 1-16`          # CUT HASH
      fi 
    # EXTRACT PLACEMENT FLAGS. N = NOW -> PLACE ANCHOR
    # ------------------------------------------------ #
@@ -795,7 +809,8 @@ function TOC() {
     
      if [ "$OUTPUTFORMAT" == pdf ];then
   
-       echo "\begin{tocpage}"  >  ${TMPID}.tocprocessed
+       echo "\begin{tocpage}"  >   ${TMPID}.tocprocessed
+       echo "\label{$TID}"     >>  ${TMPID}.tocprocessed
 
     ( IFS=$'\n'
       for TOCITEM in `cat ${TMPID}.index | #
@@ -845,6 +860,12 @@ function TOC() {
  # ------------------------------------------------------------------------- #
  # WHERE TO PUT THE TOC
  # ------------------------------------------------------------------------- #
+   # ADD TO INDEX
+   # ------------
+     TID=`echo toc | md5sum | cut -c 1-8`
+     echo "${TID}:Table of Contents" >> ${TMPID}.toc
+     echo "${TID}:4:$*"              >> ${TMPID}.index
+
    # PLACE A MARKER
    # --------------
      TOCMARKER=`echo TOCHERE | md5sum | cut -c 1-16`
@@ -879,6 +900,7 @@ function TOC() {
 
  }
 # --------------------------------------------------------------------------- #
+
 function BIBLIST() {
 
   BIBID=`echo bibliography | md5sum | cut -c 1-8`
@@ -892,7 +914,9 @@ function BIBLIST() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function KEYWORDINDEX() {
 
   SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
@@ -907,6 +931,7 @@ function KEYWORDINDEX() {
     KEYWORDIZE $SRCGET $KWID
 
 }
+
 # --------------------------------------------------------------------------- #
 
 function LICENSE() {
@@ -915,7 +940,7 @@ function LICENSE() {
   LID=`echo fal | md5sum | cut -c 1-8`
 
   echo "${LID}:Free Art License" >> ${TMPID}.toc
-  echo "${LID}:4:$*"         >> ${TMPID}.index
+  echo "${LID}:4:$*"             >> ${TMPID}.index
   getFile $LURL ${TMPID}license.pdf
   conformColor ${TMPID}license.pdf
 
@@ -925,6 +950,7 @@ function LICENSE() {
 
 }
 # --------------------------------------------------------------------------- #
+
 function NEWPAGE() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -932,7 +958,9 @@ function NEWPAGE() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function EMPTYPAGE() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -940,7 +968,9 @@ function EMPTYPAGE() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function CLEARTOLEFT() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -948,7 +978,9 @@ function CLEARTOLEFT() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function CLEARTORIGHT() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -956,7 +988,9 @@ function CLEARTORIGHT() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function HEADER() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
@@ -971,7 +1005,9 @@ function HEADER() {
   fi
 
 }
+
 # --------------------------------------------------------------------------- #
+
 function QUOTESTYLE() {
 
   LNBEGIN=`grep -n "" $SRCDUMP        | # NUMBER ALL LINES
@@ -994,6 +1030,31 @@ function QUOTESTYLE() {
        sed -i "${LNEND}s/end{quote}/end{$ENVIRONMENT}/" $SRCDUMP
   fi
 }
+
+# --------------------------------------------------------------------------- #
+
+function REF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-16` # CREATE UNIQUE ID
+  write2src "\label{$REFID}"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function REFREF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-16` # CREATE UNIQUE ID
+  write2src "\mbox{(→ P.\pageref{$REFID}\,)}"
+
+}
+
 # --------------------------------------------------------------------------- #
 
 function TEXIN() {
@@ -1027,79 +1088,6 @@ function TODO() {
    fi
 
 }
-# --------------------------------------------------------------------------- #
-
-
-# --------------------------------------------------------------------------- #
-# MODIFY $TMPTEX BEFORE COMPILING PDF
-# --------------------------------------------------------------------------- #
-  function modTeX() {
- 
- # APPEND LINE CONTAIN *quote* IF AFTER ^\descriptor
- # ---- 
-   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*quote.*\)/\1\2/ }" \
-          $SRCDUMP
- # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
- # ----
-   sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
-          $SRCDUMP
- # APPEND LINE CONTAIN *enumerate* IF AFTER ^\descriptor
- # ---- 
-   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
-          $SRCDUMP
- # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
- # ----
-   sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
-          $SRCDUMP
-
- # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
- # ----
-   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
-
- # WRAP PARAGRAPHS IN \begin{samepage} \end{samepage}
- # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
- # ----
-   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
-   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{samepage}&\n\\\end{samepage}/' \
-           $SRCDUMP
-   sed -i '1s/={NL}=//;s/={NL}=/\n/g' $SRCDUMP
-
- # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
-   sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
-   sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
-
- # WRAP URLS IN COMMAND
- # sed -i '/^[\%]/!s,\bhttp.\?://[^ }]*,\\http{&},' $SRCDUMP
-   sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},' $SRCDUMP
-
- # CUSTOM STYLE FOR \lstinline
-   sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
-
-
-  }
-
- # ------------------------------------------------------------------------- #
- # DO IT AT THE END
- # ------------------------------------------------------------------------- #
-   if [ "$OUTPUTFORMAT" == pdf ];then
-
-       # ADD ONLY ONCE
-         if [ `echo $preOutput | grep modTeX | wc -l ` -lt 1 ];then
-               preOutput="$preOutput modTeX"
-         fi
-
-   elif [ "$OUTPUTFORMAT" == html ];then
-
-         sleep 0
-
-   fi
- # ------------------------------------------------------------------------- #
-# --------------------------------------------------------------------------- #
-
-function SXHOW() {
-     sleep 0
-}
-
 # --------------------------------------------------------------------------- #
 
 function CARLINSAYS() {
@@ -1203,5 +1191,97 @@ function JH() {
 
 }
 
+# --------------------------------------------------------------------------- #
+
+function SXHOW() {
+     sleep 0
+}
+
+# --------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
+# MODIFY $TMPTEX BEFORE COMPILING PDF
+# --------------------------------------------------------------------------- #
+  function modTeX() {
+ 
+ # APPEND LINE CONTAIN *quote* IF AFTER ^\descriptor
+ # ---- 
+   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*quote.*\)/\1\2/ }" \
+          $SRCDUMP
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{quote}
+ # ----
+ # sed -i "s/\(\descriptor.*\)\(\\\begin{quote.*\)/\1\n\\\betweendq\n\2/" \
+ #        $SRCDUMP
+
+ # APPEND LINE CONTAIN *enumerate* IF AFTER ^\descriptor
+ # ---- 
+   sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
+          $SRCDUMP
+ # INSERT \betweenqd BETWEEN \descriptor AND \begin{enumerate}
+ # ----
+ # sed -i "s/\(\descriptor.*\)\(\\\begin{enumerate.*\)/\1\n\\\betweendq\n\2/" \
+ #        $SRCDUMP
+
+ # WRAP PARAGRAPHS IN \begin{dblock} \end{dblock}
+ # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\\descrip.*\\/s/^.*$/\n\\\begin{dblock}&\n\\\end{dblock}/' \
+           $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) QUOTE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{quote}/{descriptorquote}/' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+ # CHANGE (FIRST) ENUMERATE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{enumerate}/{descriptorenum}/' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+
+ # CHANGE (FIRST) ITEMIZE ENVIRONMENT IF INSIDE dblock
+ # ----
+   sed -i '/./{H;d;};x;s/\n/={NL}=/g' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
+   sed -i '/^={NL}=\\begin{dblock/s/{itemize}/{descriptoritemize}/' $SRCDUMP
+   sed -i -e '1s/={NL}=//;s/={NL}=/\n/g' -i -e '$s/$/\n/g' $SRCDUMP
+
+ # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
+ # ----
+   sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
+
+ # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
+   sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
+   sed -i 's/{lstlisting}/{plain}/'                   $SRCDUMP
+
+ # WRAP URLS IN COMMAND
+   sed -i '/^%/!s,\bhttp.\?://[^ }!]*,\\http{&},g' $SRCDUMP
+
+ # CUSTOM STYLE FOR \lstinline
+   sed -i 's,\\lstinline!,\\lstinline[style=inline]!,g' $SRCDUMP
+
+  }
+
+ # ------------------------------------------------------------------------- #
+ # DO IT AT THE END
+ # ------------------------------------------------------------------------- #
+   if [ "$OUTPUTFORMAT" == pdf ];then
+
+       # ADD ONLY ONCE
+         if [ `echo $preOutput | grep modTeX | wc -l ` -lt 1 ];then
+               preOutput="$preOutput modTeX"
+         fi
+
+   elif [ "$OUTPUTFORMAT" == html ];then
+
+         sleep 0
+
+   fi
+ # ------------------------------------------------------------------------- #
 # --------------------------------------------------------------------------- #
 

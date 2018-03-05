@@ -1,0 +1,46 @@
+% METHOD: Pan/Monopsychism
+
+% WHAT: Reading and writing sectors of memory from/to different computers.
+
+% URGENCY: Memory, even when it is volatile, is a trace of the processes happening in your computer in the form of saved information, and is therefore more similar to a file than to a process. Challenging the file/process divide, sharing memory with others will allow a more intimate relation with your and other's computers.
+
+% ABOUT: Monopsychism is the philosophical/theological doctrine according to which there exists but one intellect/soul, shared by all beings.
+
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.devmem
+
+% NOTE: The parallel allocation and observation of the same memory sector in two different computers is in a sense the opposite process of machine virtualization, where the localization of multiple virtual machines in one physical comptuers can only happen by rigidly separating the memory sectors dedicated to the different virtual machines.
+
+% WARNING: THIS METHOD HAS NOT BEEN TESTED. IT CAN PROBABLY DAMAGE YOUR RAM MEMORY AND/OR COMPUTER.
+
+
+% HOW: -
+    
+First start the fmem kernel module in both computers:
+    
+% SRCCODE: bash sudo sh fmem/run.sh
+
+Then load part of your computer memory into the other computer via dd and ssh:
+
+% --------
+    dd if=/dev/fmem bs=1 skip=1000000 count=1000 | \
+    ssh user@othercomputer dd of=/dev/fmem
+% SRCCODE: bash
+
+Or viceversa, load part of another computer's memory into yours:
+    
+% --------
+    ssh user@othercomputer dd if=/dev/fmem bs=1 skip=1000000 count=1000 | \
+                           dd of=/dev/fmem
+% SRCCODE: bash
+
+Or even, exchange memory between two other computers:
+
+% --------
+    ssh user@firstcomputer dd if=/dev/fmem bs=1 skip=1000000 count=1000 | \
+    ssh user@secondcomputer dd of=/dev/fmem
+% SRCCODE: bash
+
+% SRCCODE: quaverbatim % F: http://observatory.constantvzw.org/etherdump/files.md 557-569
+
+% SOURCE: Note-snippets and code speculations during the TGSO-worksession. http://observatory.constantvzw.org/etherdump/files.md.diff.html
+

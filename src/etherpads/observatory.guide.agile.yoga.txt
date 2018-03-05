@@ -1,0 +1,59 @@
+% METHOD: Agile Sun Salutation
+% REMEMBER: - 
+> Agile software development describes a set of values and principles for software
+> development under which requirements and solutions evolve through the collaborative
+> effort of self-organizing cross-functional teams. It advocates adaptive planning,
+> evolutionary development, early  delivery, and continuous improvement, and it encourages
+> rapid and flexible response to change. These principles support the definition and
+> continuing evolution of many software development methods.
+> [@wikipedia:2018:agilesoftwaredevelopment]
+
+% WHAT: You will be observing yourself
+% HOW: - 
+> Scrum is a framework for managing software development.
+> It is designed for teams of three to nine developers who
+> break their work into actions that can be completed within
+> fixed duration cycles  (called "sprints"), track progress
+> and re-plan in daily 15-minute stand-up meetings, and collaborate
+> to deliver workable software every sprint. Approaches to coordinating
+> the work of multiple scrum teams in larger organizations include
+> Large-Scale Scrum, Scaled Agile Framework (SAFe) and Scrum of Scrums,
+> among others.
+> [@wikipedia:2018:scrum]
+
+% WHEN: Anywhere where it's possible to lie on the floor 
+% WHO: - 
+> Self-organization and motivation are important, as are interactions
+> like co-location and pair programming. It is better to have a good
+> team of developers who communicate and  collaborate well, rather than
+> a team of experts each operating in isolation. Communication is a
+> fundamental concept.
+> [@wikipedia:2018:agilemanifesto]
+
+% URGENCY: Use Agile software development methods to develop a new path into your professional and personal life towards creativity, focus and health. (% CARLINSAYS: Was it ok to go from "Using" to "Use"? If the imperative is not quite right then we could substitute "encourages" in place of "towards" to make it a complete sentence.)
+% NOTE:
+% WARNING: - 
+> The agile movement is in some ways a bit like a teenager: very self-conscious,
+> checking constantly its appearance in a mirror,  accepting few criticisms,
+> only interested in being with its peers, rejecting en bloc all wisdom from the
+> past, just because it is from the  past, adopting fads and new jargon,
+> at times cocky and arrogant. But I have no doubts that it will mature further,
+> become more open to the outside world, more reflective, and also therefore more effective.
+> [@kruchten:2011:as]
+
+
+% EXAMPLE: - 
+
+% LINK TO PDF PAGES 5-10
+% https://mfr.osf.io/render?url=https://osf.io/ufdvb/?action=download%26direct%26mode=render&initialWidth=450&childId=mfrIframe
+
+% PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf   5 1x1
+% INFO: Privacy After the Agile Turn [Page 5], Seda Gürses and Joris van Hoboken, 2017.
+% PDF: http://observatory.constantvzw.org/documents/PrivacyafterAgileTurn2017.pdf  10 1x1
+% INFO: Privacy After the Agile Turn [Page 10], Seda Gürses and Joris van Hoboken, 2017.
+
+% RELATESTO:
+% SOURCE: _Agile Sun Salutation_ was developed by Anne Laforet and performed by Allegra. See following pages for the full script.
+
+% SHOW: tgsoimages.svg agilefloor
+

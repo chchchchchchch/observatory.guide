@@ -133,7 +133,7 @@
   # ----------------------------------------------------------------------- #
   # DEFINITIONS SPECIFIC TO OUTPUT
   # ----------------------------------------------------------------------- #
-    PANDOCACTION="pandoc --ascii --listings -r markdown -w latex"
+    PANDOCACTION="pandoc --ascii --no-wrap --listings -r markdown -w latex"
   # ----------------------------------------------------------------------- #
   # FOOTNOTES
   # \footnote{the end is near, the text is here}

@@ -5,6 +5,7 @@ function KEYWORDIZE() {
   KEYWORDSRC=$1;IDSTAMP=`echo $KEYWORDSRC | md5sum | cut -c 1-10`
   getFile $KEYWORDSRC ${TMPID}.${IDSTAMP}.tmp
   cat ${TMPID}.${IDSTAMP}.tmp >> ${TMPID}.keywords
+  touch ${TMPID}X.verbatim # CREATE AT LEAST ONE VERBATIM FILE TO PREVENT ERROR
 
   ( # A SUBSHELL => PROTECT VARIABLES
 

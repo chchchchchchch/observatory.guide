@@ -143,29 +143,48 @@
 
 # PRE-PROCESSING
 # --------------------------------------------------------------------------- #
-# MOVE (% TO NEW LINE = ALLOW INLINE COMMANDS
-  sed -i '/^%/!s/(% /\n!!!% /g' $MDSH
-  sed -i "/^!!!%/s/)/\n$APND/"  $MDSH
-  sed -i 's/^!!!%/%/'           $MDSH
+  APNDCMD="APND${RANDOM}CMD"
 
-# SAVE MDSH LINES TO PROTECT FROM PANDOC
-# --------------------------------------------------------------------------- #
-  BCKUPCOMM=${TMPID}.${TMPIDX}.commented 
-  if [ -f $BCKUPCOMM ]; then rm $BCKUPCOMM ; fi
-  PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
-  cp $MDSH $PROTECTED
- 
-  if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
-  for COMMENTNUM in `grep -n "^%" $PROTECTED | #
+  # MOVE (% TO NEW LINE = ALLOW INLINE COMMANDS
+    sed -i '/^%/!s/(% /\n:C:M:D% /g' $MDSH
+    sed -i "/^:C:M:D%/s/)/\n$APND/"  $MDSH
+    sed -i "s/^:C:M:D%/$APNDCMD%/"  $MDSH
+  
+  # SAVE MDSH LINES TO PROTECT FROM PANDOC
+  # ----------------------------------------------------------------------- #
+  
+    SAVECMDS=${TMPID}.${TMPIDX}.commented 
+    if [ -f $SAVECMDS ]; then rm $SAVECMDS ; fi
+    PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
+    cp $MDSH $PROTECTED
+  
+    if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
+   
+   # TEMPORARILY REMOVE COMMAND LINES
+   # --------------------------------  
+     for CMDLINE in `grep -n "^%" $PROTECTED | #
                      cut -d ":" -f 1`
-   do
-        LINENUM=$COMMENTNUM
-        COMMENT=`sed "${LINENUM}q;d" $MDSH`
-      COMMENTID=`echo $COMMENT | md5sum | cut -d " " -f 1`$MKLONG
-       sed -i "${LINENUM}s/^.*$/$COMMENTID/g" $PROTECTED
-       echo "${COMMENTID}:${COMMENT}" >> $BCKUPCOMM
-  done
-  fi
+      do  LNCMD=$CMDLINE
+            CMD=`sed "${LNCMD}q;d" $MDSH`
+          CMDID=`echo $CMD | md5sum | cut -d " " -f 1`$MKLONG
+          sed -i "${LNCMD}s/^.*$/$CMDID/g" $PROTECTED
+          echo "${CMDID}:${CMD}" >> $SAVECMDS
+     done
+  
+   # TEMPORARILY REMOVE INLINE COMMANDS (AND MARK FOR APPENDING)
+   # -----------------------------------------------------------
+     for CMDLINE in `grep -n "^$APNDCMD%" $PROTECTED | #
+                     cut -d ":" -f 1`
+      do  LNCMD=$CMDLINE
+            CMD=`sed "${LNCMD}q;d" $MDSH | sed "s/^$APNDCMD//"`
+          CMDID=`echo $CMD | md5sum | cut -d " " -f 1`$MKLONG
+          sed -i "${LNCMD}s/^.*$/$APNDCMD$CMDID/g" $PROTECTED
+          echo "${CMDID}:${CMD}" >> $SAVECMDS
+     done
+
+    fi
+
+  sed -i -e :a -i -e "\$!N;s/\n$APNDCMD/$APNDCMD/;ta" -i -e 'P;D' $PROTECTED
 
 # CONVERT MARKDOWN WITH PANDOC (CUSTOM FOOTNOTES/BIBREFS)
 # --------------------------------------------------------------------------- #
@@ -217,6 +236,7 @@
   sed "s/^[a-f0-9]\{32\}${MKLONG}$/&\n/g" | # FORCE LINE AFTER 'MDSH LINES'
   sed 's/</\&lt;/g'                       | # ALLOW INLINE <tag>
   eval "$PANDOCACTION"                    | # MD TO TARGET MARKUP
+  sed "s/$APNDCMD/\n/g"                   | # PUT CMD LINES ON SEPARATE LINE
   sed "/^<[^>]*>\([a-f0-9]\{32\}${MKLONG}\)<[^>]*>$/s/<[^>]*>//g" | # REMOVE TAGS IF IS 'FUNCTIONS ONLY'
   sed "s/[ \t]*$FN1FOO/$APND$FNOESC/g"    | # SUBSTITUTE WITH TARGET MARKUP 
   sed "s/[ \t]*$FN2FOO/$FOOTNOTECLOSE/g"  | # SUBSTITUTE WITH TARGET MARKUP 
@@ -243,18 +263,18 @@
 
   if [ X"$SKIP" != XYES ]; then
 
-# RESTORE MDSH LINES (TODO: BETTER VARIABLES) 
+# RESTORE MDSH LINES
 # --------------------------------------------------------------------------- #
-  if [ -f $BCKUPCOMM ]; then
-  sed -i 's/\\/\\\\/g' $BCKUPCOMM # PROTECT ESCAPES (aka. \v PROBLEM)
+  if [ -f $SAVECMDS ]; then
+  sed -i 's/\\/\\\\/g' $SAVECMDS # PROTECT ESCAPES (aka. \v PROBLEM)
 
-  for COMMENTID in `cat $BCKUPCOMM | cut -d ":" -f 1 | sort -u`
+  for CMDID in `cat $SAVECMDS | cut -d ":" -f 1 | sort -u`
    do
-      COMMENT=`grep $COMMENTID $BCKUPCOMM   | # FIND COMMENT
-               head -n 1 | cut -d ":" -f 2- | # SELECT AND RM ID
-               sed 's/\//\\\\\//g'          | # ESCAPE CONTROL CHARACTER
-               sed 's/&/\\\\\&/g'`            # ESCAPE CONTROL CHARACTER
-      sed -i "s/$COMMENTID/\n$COMMENT\n/g" $MDSHMOD
+      CMD=`grep $CMDID $SAVECMDS        | # FIND COMMAND
+           head -n 1 | cut -d ":" -f 2- | # SELECT AND RM ID
+           sed 's/\//\\\\\//g'          | # ESCAPE CONTROL CHARACTER
+           sed 's/&/\\\\\&/g'`            # ESCAPE CONTROL CHARACTER
+      sed -i "s/$CMDID/\n$CMD\n/g" $MDSHMOD
    done
   fi
 
@@ -339,7 +359,7 @@
 
 # CLEANUP (FILES)
 # --------------------------------------------------------------------------- #
-  if [ -f $BCKUPCOMM ]; then rm $BCKUPCOMM ;fi
+  if [ -f $SAVECMDS ]; then rm $SAVECMDS ;fi
   if [ -f $PROTECTED ]; then rm $PROTECTED ;fi
 
     # REMOVE ID AGAIN (REMBERED TO PREVENT RECURSION)

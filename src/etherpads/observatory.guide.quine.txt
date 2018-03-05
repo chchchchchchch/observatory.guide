@@ -1,0 +1,47 @@
+% METHOD: Quine
+% WHAT: A program whose function consists of displaying its own code. Also known as  "self-replicating program."
+% WHY: Quines show the tension between "software as language" and "software as operation."
+% HOW: By running a quine you will get your code back. You may choose to go a step further and wonder about functionality and aesthetics, uselessness and performativity, data and code. 
+
+% EXAMPLE: A quine (Python). When executed it outputs the same text as the source:
+
+% ----------
+    s =  's = %r\nprint(s%%s)'
+    print(s%s)
+% SRCCODE: python
+
+% EXAMPLE: A oneline unibash/etherpad quine, created during relearn 2017:
+
+% https://gitlab.com/relearn/relearn2017/raw/master/complex.local/home/etherpad/etherdump/quine.raw.txt
+% --------
+    wget -qO- "http://192.168.73.188:9001/p/quine/export/txt" | \
+     curl -F  "file=@-;type=text/plain" \
+              "http://192.168.73.188:9001/p/quine/import"
+% SRCCODE: bash
+
+% WARNING: - 
+
+The encounter with quines may deeply affect you. 
+You may want to write one and get lost in trying to make an ever shorter and more elegant one.
+You may also take quines as point of departure or limit-ideas for exploring software dualisms.
+% http://observatory.constantvzw.org/etherdump/auqinas 79-82
+
+"A quine is without why. It prints because it prints. It pays no attention to itself, nor does it asks whether anyone sees it."    
+"Aquine is aquine is aquine."    
+Aquine is not a quine.    
+This is not aquine.    
+(% CARLINSAYS: Is it ok that I added punctuation to the last two lines so that they match the prior two or does that make it incorrect because they are examples of quines that were run that did not have punctuation? Also, I love this.)
+
+% REMEMBER: Although seemingly absolutely useless, quines can be used as exploits.
+
+% http://observatory.constantvzw.org/etherdump/files.md 460-463
+
+Exploring boundaries/tensions    
+
+databases treat their content as data (database punctualization)    
+some exploits manage to include operations in a database
+
+
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.monopsychism
+% SOURCE: This method is part of _Aquine_, a discussion of and research into dualism in software. Notes: http://observatory.constantvzw.org/etherdump/auqinas.diff.html
+
