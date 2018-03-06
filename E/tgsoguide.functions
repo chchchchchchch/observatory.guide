@@ -566,7 +566,7 @@ function SHOW() {
             fi 
           # EXTRACT PLACEMENT FLAGS
             PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-                   egrep '^N$|^b$'          | # EXTRACT VALID FLAGS
+                   egrep '^N$|^b$|^H$'      | # EXTRACT VALID FLAGS
                    head -n 1`                 # TAKE FIRST ONE
 
             if [ "$LNAME" != "" ];then
@@ -595,7 +595,7 @@ function SHOW() {
               RFC="{$REF}{$PFLAG}{$CAPTION}"
               while [ "$PDFSHIFT" -lt "$PDFW" ];
                do
-                  IMGSHIFT="\imgshift{$PDFHERE}{$CNT}$RFC"
+                  IMGSHIFT="\imgasap{$PDFHERE}{$CNT}$RFC"
                   PDFCMD="$PDFCMD$IMGSHIFT"
                   CNT=`expr $CNT + 1`
                   PDFSHIFT=`expr $PAGEW \* $CNT`
@@ -606,8 +606,15 @@ function SHOW() {
             # ----------------------------------------------------------- #
               if [ "$OUTPUTFORMAT" == pdf ];then 
  
-                     write2src "$PDFCMD" 
- 
+
+                  if [ "$PFLAG" == H ];then
+                        write2src "\imghere{$PDFHERE}{$CNT}$RFC"
+                  else
+                        write2src ""
+                        write2src "$PDFCMD" 
+                        write2src ""
+                  fi
+
               elif [ "$OUTPUTFORMAT" == html ];then 
              
                      write2src "<span class=\"$THISCLASS descriptor\">" 
@@ -1232,7 +1239,7 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
-function SHOW() {
+function SXHOW() {
      sleep 0
 }
 
