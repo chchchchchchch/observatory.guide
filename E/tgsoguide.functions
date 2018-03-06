@@ -595,7 +595,7 @@ function SHOW() {
               RFC="{$REF}{$PFLAG}{$CAPTION}"
               while [ "$PDFSHIFT" -lt "$PDFW" ];
                do
-                  IMGSHIFT="\imgshift{$PDFHERE}{$CNT}$RFC"
+                  IMGSHIFT="\imgasap{$PDFHERE}{$CNT}$RFC"
                   PDFCMD="$PDFCMD$IMGSHIFT"
                   CNT=`expr $CNT + 1`
                   PDFSHIFT=`expr $PAGEW \* $CNT`
@@ -606,10 +606,13 @@ function SHOW() {
             # ----------------------------------------------------------- #
               if [ "$OUTPUTFORMAT" == pdf ];then 
  
-                     write2src "$PDFCMD" 
 
                   if [ "$PFLAG" == H ];then
-                        write2src "\clearpage"
+                        write2src "\imghere{$PDFHERE}{$CNT}$RFC"
+                  else
+                        write2src ""
+                        write2src "$PDFCMD" 
+                        write2src ""
                   fi
 
               elif [ "$OUTPUTFORMAT" == html ];then 

@@ -331,6 +331,24 @@
   \newlength{\SKIPFOOTINS} 
   \setlength{\SKIPFOOTINS}{\skip\footins}
 
+ % https://tex.stackexchange.com/questions/312793/
+ % -> toggle-presence-of-footnote-rule
+  \newif\iffootnoterule
+  
+  \makeatletter
+  \AtBeginDocument{%
+  \let\latex@@footnoterule\footnoterule
+  
+  \renewcommand\footnoterule{%
+    \iffootnoterule
+    \latex@@footnoterule%
+    \else
+    \advance\skip\footins 4\p@\@plus2\p@\relax%
+    \fi
+  }
+  }
+  \makeatother
+
 
 % --------------------------------------------------------------------------- %
 %  Q U O T E
@@ -676,7 +694,7 @@
    % \newcounter{floats}
    % \newcounter{pagenow}
  % ------------------------------------------------------------------------ %
-   \newcommand{\imgshift}[5]{
+   \newcommand{\imgasap}[5]{
       % ------------------------------------ %
       % INSERT ANCHOR (OPTIONAL)
         \anchor{#5}{#3}{#4}
@@ -712,6 +730,21 @@
         \label{#3}
         \end{figure}
       % ------------------------------------ %
+  }
+% --------------------------------------------------------------------------- %
+  % TODO: SHIFT,
+  \newcommand{\imghere}[5]{
+   % ------------------------------------ %
+   % INSERT ANCHOR (OPTIONAL)
+     \anchor{#5}{#3}{#4}
+   % ------------------------------------ %
+   % INSERT FULL SIZE IMAGE (+SHIFT) HERE/NOW
+     \footnoterulefalse
+     \includepdf[pagecommand={\thispagestyle{fancy}}%
+                 \label{#5}\pdfpagesplusinfo{#4}{#5},%
+                 offset=0 0, delta=0 0,
+                 scale=1,frame,pages=-,nup=1]{#1}
+     \footnoteruletrue
   }
 % --------------------------------------------------------------------------- %
 
