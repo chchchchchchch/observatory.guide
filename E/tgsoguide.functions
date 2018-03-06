@@ -566,7 +566,7 @@ function SHOW() {
             fi 
           # EXTRACT PLACEMENT FLAGS
             PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-                   egrep '^N$|^b$'          | # EXTRACT VALID FLAGS
+                   egrep '^N$|^b$|^H$'      | # EXTRACT VALID FLAGS
                    head -n 1`                 # TAKE FIRST ONE
 
             if [ "$LNAME" != "" ];then
@@ -607,7 +607,11 @@ function SHOW() {
               if [ "$OUTPUTFORMAT" == pdf ];then 
  
                      write2src "$PDFCMD" 
- 
+
+                  if [ "$PFLAG" == H ];then
+                        write2src "\clearpage"
+                  fi
+
               elif [ "$OUTPUTFORMAT" == html ];then 
              
                      write2src "<span class=\"$THISCLASS descriptor\">" 
@@ -1232,7 +1236,7 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
-function SHOW() {
+function SXHOW() {
      sleep 0
 }
 
