@@ -659,11 +659,14 @@ function PDF() {
    # EXTRACT PLACEMENT FLAGS. N = NOW -> PLACE ANCHOR
    # ------------------------------------------------ #
      PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-            egrep '^N$|^b$'          | # EXTRACT VALID FLAGS
+            egrep '^N$|^b$|^H$'      | # EXTRACT VALID FLAGS
             head -n 1`                 # TAKE FIRST ONE
 
+  if [ "$PFLAG" == "H" ];then FORCEHERE="H";PFLAG="";else FORCEHERE="";fi
+
   if [ -f "$TMPPDF" ];then
-  write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}{$REF}{$PFLAG}{$MARGINICON}"
+  write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}
+                          {$REF}{$PFLAG}{$MARGINICON}{$FORCEHERE}"
   fi
 
  }

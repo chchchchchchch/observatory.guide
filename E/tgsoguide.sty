@@ -770,7 +770,7 @@
       \fi
     }
 
-   \newcommand\pdfpagesplus[7]{%
+   \newcommand\pdfpagesplus[8]{%
    \if\relax\detokenize{#6}\relax
    % #6 EMPTY -> DO NOTHING IN PLACE
    \else
@@ -785,6 +785,7 @@
      #4, see p.~\pageref{#5}} % NON-EMPTY
      \fi
    \fi
+   \if\relax\detokenize{#8}\relax
    \afterpage{
    \renewcommand{\footnoterule}{\rule{0pt}{0pt}}
    \includepdf[pagecommand={\thispagestyle{fancy}}%
@@ -792,6 +793,14 @@
                offset=10 20, delta=5 5,
                scale=.75,frame,pages=#2,nup=#3]{#1}
    }
+   \else
+   \footnoterulefalse
+   \includepdf[pagecommand={\thispagestyle{fancy}}%
+               \label{#5}\pdfpagesplusinfo{#4}{#6},%
+               offset=10 20, delta=5 5,
+               scale=.75,frame,pages=#2,nup=#3]{#1}
+   \footnoteruletrue
+   \fi
   }
 
 % =========================================================================== %
