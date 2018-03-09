@@ -665,8 +665,9 @@ function PDF() {
   if [ "$PFLAG" == "H" ];then FORCEHERE="H";PFLAG="";else FORCEHERE="";fi
 
   if [ -f "$TMPPDF" ];then
-  write2src "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}
-                          {$REF}{$PFLAG}{$MARGINICON}{$FORCEHERE}"
+        echo "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}
+                           {$REF}{$PFLAG}{$MARGINICON}{$FORCEHERE}" | #
+        sed ':a;N;$!ba;s/\n//g' | sed 's,}[ ]*{,}{,g' >> $SRCDUMP
   fi
 
  }
