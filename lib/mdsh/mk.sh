@@ -27,9 +27,9 @@
 # --------------------------------------------------------------------------- #
 # INCLUDE                                                                     #
 # --------------------------------------------------------------------------- #
-  source "$SHDIR/../sh/prepress.functions"
-  source "$SHDIR/../sh/page.functions"
-  source "$SHDIR/../sh/text.functions"
+  source "$SHDIR/prepress.functions"
+  source "$SHDIR/page.functions"
+  source "$SHDIR/text.functions"
 
   source "$SHDIR/output.functions"
   source "$SHDIR/href.functions"
@@ -54,7 +54,7 @@
   else echo '$SRCDUMP not existing'; 
   # ----------------------------------------------------------------------- #
   fi
-
+exit 0
 # =========================================================================== #
 # CLEAN UP (MAKE SURE $TMPID IS SET FOR WILDCARD DELETE)
 
