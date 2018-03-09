@@ -167,18 +167,18 @@
   \pagestyle{fancy}
   \fancyhead{} % CLEAR DEFAULT
   \fancyfoot{} % CLEAR DEFAULT
-  \fancyfoot[LO]{\vspace{-1.7\baselineskip}%
+  \fancyfoot[LO]{\vspace{-5\baselineskip}%
                  \hspace{-1.6em}%
                  {\scriptsize\thepage}}
-  \fancyfoot[RE]{\vspace{-1.7\baselineskip} {\scriptsize\thepage}}
+  \fancyfoot[RE]{\vspace{-5\baselineskip} {\scriptsize\thepage}}
 
   % http://tex.stackexchange.com/questions/114956/
   % -> how-to-insert-footer-in-first-pages-of-chapter 
   \fancypagestyle{plain}{%
-  \fancyfoot[LO]{\vspace{-1.7\baselineskip}%
+  \fancyfoot[LO]{\vspace{-5\baselineskip}%
                  \hspace{-1.6em}%
                  {\scriptsize\thepage}}
-  \fancyfoot[RE]{\vspace{-1.7\baselineskip} {\scriptsize\thepage}}
+  \fancyfoot[RE]{\vspace{-5\baselineskip} {\scriptsize\thepage}}
   }
 
   \renewcommand{\headrulewidth}{0pt}
@@ -320,16 +320,17 @@
   % \, = small non-breaking space 
   \renewcommand\footnote[1]{\,\oldfootnote{#1}} 
   \setlength{\footnotemargin}{1em} 
-  \setlength{\footskip}{15mm} 
+  \setlength{\footskip}{25mm} 
  % ABSTAND TRENNLINIE FUSSNOTEN 
    \renewcommand{\footnoterule}{ 
-     \noindent 
-      \rule{\textwidth}{0.5pt}{ 
-       \vspace*{-5pt} 
+    \noindent 
+     \rule{\textwidth}{0.5pt}{ 
+      \vspace{-.2\baselineskip}
   }} 
-  % SAVE FOR RESET 
-  \newlength{\SKIPFOOTINS} 
-  \setlength{\SKIPFOOTINS}{\skip\footins}
+
+  % https://tex.stackexchange.com/questions/397120/
+  % -> adding-space-between-text-and-footnote-rule
+  \setlength{\skip\footins}{2em plus 3em minus 1em}
 
  % https://tex.stackexchange.com/questions/312793/
  % -> toggle-presence-of-footnote-rule
@@ -819,7 +820,7 @@
 
 
    \newlength{\abovedescriptor}
-   \setlength{\abovedescriptor}{15pt plus 10pt minus 15pt}
+   \setlength{\abovedescriptor}{5pt plus 20pt minus 12pt}
    \newcommand{\descriptorskip}{\pagebreak[1]%
                                 \vspace{\abovedescriptor}}
 
