@@ -1,52 +1,6 @@
 
 # --------------------------------------------------------------------------- #
 
-function INCLUDE() {
-
-echo "MDSH: $MDSH"
-  echo "O INCLUDE STARTS ==================================================="
-
-  # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
-  # -------------------------------------------------------------- #
-    FID=`date +%s%N`; echo $FID >> ${TMPID}.fid
-  
-  # ADD MARK TO $SRCDUMP
-  # -------------------------------------------------------------- #
-    echo -e "\n% $FID\n" >> $SRCDUMP
-  
-  # PROCESS INPUT !!!!!
-  # -------------------------------------------------------------- #
-    mdsh2src $*  
-
-echo "MDSH: $MDSH"
-  
-  # REMOVE ADDED FUNCTIONS
-  # -------------------------------------------------------------- #
-    if [ -f ${TMPID}.fid ]; then
-  
-    # LOAD LATEST FUNCTION ID
-      FID=`tail -n 1 ${TMPID}.fid`
-    # REMOVE FROM FUNCTIONS
-      sed -i "/${FID} -- START$/,/${FID} -- END$/d" ${FUNCTIONS}
-    # REMOVE FROM SAVED IDS
-      sed -i "/$FID/d" ${TMPID}.fid
-    # RELOAD FUNCTIONS
-      source $FUNCTIONS
-
-      echo "FID: $FID"
-    # RESET FID
-      FID=`tail -n 1 ${TMPID}.fid`
-      echo "FID: $FID"
-      MDSH=`grep -l $FID ${TMPID}.*.mdsh`
-  
-    fi
-
-  echo "O INCLUDE ENDS  ===================================================="
-echo "MDSH: $MDSH"
-}
-
-# --------------------------------------------------------------------------- #
-
 function GROUPING() {
 
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
@@ -1239,7 +1193,7 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
-function SXHOW() {
+function SHOW() {
      sleep 0
 }
 

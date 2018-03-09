@@ -381,57 +381,42 @@
 
 function INCLUDE() {
 
-  echo "INCLUDE STARTS ====================================================="
+  #echo "INCLUDE STARTS ==================================================="
 
-# SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
-# ------------------------------------------------------ #
-  FID=`date +%s%N`; echo $FID >> ${TMPID}.fid
+  # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
+  # -------------------------------------------------------------- #
+    FID=`date +%s%N`; echo $FID >> ${TMPID}.fid
 
-# MAKE HREF
-# --------------------------------------------------------
-  WWWLINK=`shortref $*`
-  REFCODE=`refsrc $WWWLINK       | #
-           sed 's/\\\/\\\\\\\/g' | #
-           sed 's/\//\\\\\//g'`    #
-   IDINID=`echo $REFCODE | md5sum | cut -c 1-6`
-  REFIDIN="$IDINID"
-  if [ X"$HREFMODE" != "XOFF" ]; then
-  write2src "HEREREF$REFIDIN"
-  fi
+  # ADD MARK TO $SRCDUMP
+  # -------------------------------------------------------------- #
+    echo -e "\n% $FID\n" >> $SRCDUMP
 
-  echo -e "\n% $FID\n" >> $SRCDUMP
+  # PROCESS INPUT !!!!!
+  # -------------------------------------------------------------- #
+    mdsh2src $*
 
-# PROCESS INPUT !!!!!
-# --------------------------------------------------------
-  mdsh2src $*
+  # REMOVE ADDED FUNCTIONS
+  # -------------------------------------------------------------- #
+    if [ -f ${TMPID}.fid ]; then
 
-# ADD REFERENCE IF NOT SKIPPED
-# --------------------------------------------------------
-  if [ X"$SKIP"     != "XYES" ] &&
-     [ Y"$RUN"      == "YYES" ]; then
-       sed -i "s,HEREREF$REFIDIN,$REFCODE," $SRCDUMP
-  else
-       sed -i "/^HEREREF${REFIDIN}$/d" $SRCDUMP
-  fi
-       sed -i "/^HEREREF.*$/d" $SRCDUMP # EMERGENCY REMOVE
+    # LOAD LATEST FUNCTION ID
+      FID=`tail -n 1 ${TMPID}.fid`
+    # REMOVE FROM FUNCTIONS
+      sed -i "/${FID} -- START$/,/${FID} -- END$/d" ${FUNCTIONS}
+    # REMOVE FROM SAVED IDS
+      sed -i "/$FID/d" ${TMPID}.fid
+    # RELOAD FUNCTIONS
+      source $FUNCTIONS
 
-# REMOVE ADDED FUNCTIONS
-# --------------------------------------------------------
-  if [ -f ${TMPID}.fid ]; then
+    # RESET FID
+      FID=`tail -n 1 ${TMPID}.fid`
+      MDSH=`grep -l $FID ${TMPID}.*.mdsh`
 
-# LOAD LATEST FUNCTION ID
-  FID=`tail -n 1 ${TMPID}.fid`
-# REMOVE FROM FUNCTIONS
-  sed -i "/${FID} -- START$/,/${FID} -- END$/d" ${FUNCTIONS}
-# REMOVE FROM SAVED FUNCTIONS
-  sed -i "/$FID/d" ${TMPID}.fid
-# RELOAD FUNCTIONS
-  source $FUNCTIONS
+    fi
 
-  fi
-
-  echo "INCLUDE ENDS  ======================================================"
+  #echo "INCLUDE ENDS  ===================================================="
 }
+
 
 # --------------------------------------------------------------------------- #
 
