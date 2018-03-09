@@ -93,7 +93,7 @@ function ATTACHMENT() {
        SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
   SRCHREF=`echo $SRCBASE | sed 's/^[ ]*//'` # LINK TO SRC, EASIFY EDIT
 
-  IDT=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
+  IDT=`echo "$1" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
   ATTID=`echo ${IDT} | md5sum | cut -d " " -f 1 | #
          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
 
