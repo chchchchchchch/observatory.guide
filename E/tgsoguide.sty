@@ -899,7 +899,7 @@
  % ------------------------------------------------------------------------- %
    \newcommand\descriptorexample[3]{%
      %\descriptorskip
-      \pagebreak[2]
+      \pagebreak[0] % WAS 2
        \ifnum\numexpr#1 < 2 % DMODE = 1 = NO INLINE CONTENT
          \ifnum\numexpr#2 < 150
           \grafikinline{\iconexamplemargin}{}%
