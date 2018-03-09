@@ -9,8 +9,13 @@ function KEYWORDIZE() {
 
   ( # A SUBSHELL => PROTECT VARIABLES
 
-   UN=U`echo $RANDOM | cut -c 1-2`N
-    S=S`echo $RANDOM | cut -c 1-2`P
+     UN=U`echo $RANDOM | cut -c 1-2`N
+      S=S`echo $RANDOM | cut -c 1-2`P
+   SFOO=S`echo $RANDOM | cut -c 1-2`S
+
+   # PUT WORDS ON SEPARATE LINES
+   # ---------------------------
+     sed -i "s/[ ]\+/ $SFOO\n/g" $SRCDUMP
 
    IFS=$'\n'
    for INDEXTHIS in `cat ${TMPID}.keywords         | # TAKE LIST
@@ -31,22 +36,23 @@ function KEYWORDIZE() {
                          awk '{ print length($1) ":" $0; }'| # PRINT LENGTH
                          sort -n | cut -d ":" -f 2- | tac`   # SORT, CLEAN, REVERT
          do
-                   K=`echo $KEYWORD       | # START
-                      sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
-                      sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
-             # sed -i "s/\b$K\b/K${UN}&K${UN}\\\index{$MAINFOO}/I" $SRCDUMP
-
-             # solved via LaTeX (for section so far ...)
-               set +H;
-               sed -i "/^\\\/!s/\b$K\b/K${UN}&K${UN}\\\index{$MAINFOO}/I" $SRCDUMP
-               sed -i "/^\\\/!s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
-
+             K=`echo $KEYWORD       | # START
+                sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
+                sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
+           # ADD \index TO END OF LINE
+             sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO/I" $SRCDUMP
+             sed -i "s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
          done
         sed -i "s/K$UN//g" $SRCDUMP ${TMPID}*.verbatim # NORMALIZE PROTECTED KEYWORD
    done
 
    sed -i "s/M$UN//g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
    sed -i "s/M$S/ /g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
+
+  # RESET (PUT WORDS ON SEPARATE LINES)
+  # -----------------------------------
+    sed -i -e ":a;N;\$!ba;s/$SFOO\n/ /g" \
+        -i -e "s/$SFOO/ /g" -i -e "s/[ ]\+/ /g" $SRCDUMP
 
    ) # END SUBSHELL
 
