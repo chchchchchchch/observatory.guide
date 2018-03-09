@@ -296,21 +296,28 @@
   \sectionfont{\relscale{0.9}\setstretch{0.9}}
   \subsectionfont{\relscale{0.9}}
 
+  \newif\ifhx
+  % \index produces error if within \section{} <- fancyhdr
+  \let\INDEX\index
+  \renewcommand\index[1]{%
+  \ifhx \else \INDEX{#1}\fi %
+  }
+
   \let\Chapter\chapter
-  \renewcommand\chapter[1]{\Chapter*{#1}}
+  \renewcommand\chapter[1]{\hxtrue\Chapter*{#1}\hxfalse}
   \let\Section\section
-  \renewcommand\section[1]{\Section*{#1}}
+  \renewcommand\section[1]{\hxtrue\Section*{#1}\hxfalse}
   \let\Subsection\subsection
- %\renewcommand\subsection[1]{\Subsection*{#1}}
-  \renewcommand\subsection[1]{\Subsection*{#1}\vspace{-1\medskipamount}}
+  \renewcommand\subsection[1]{\hxtrue\Subsection*{#1}\vspace{-1\medskipamount}\hxfalse}
   \let\Subsubsection\subsubsection
- %\renewcommand\subsubsection[1]{\Subsubsection*{#1}}
-  \renewcommand\subsubsection[1]{\Subsubsection*{#1}\vspace{-1\medskipamount}}
+  \renewcommand\subsubsection[1]{\hxtrue\Subsubsection*{#1}\vspace{-1\medskipamount}\hxfalse}
+
 
   % DON'T START CHAPTER ON NEW PAGE AUTOMATICALLY
   % \makeatletter
   % \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
   % \makeatother
+
 
 % --------------------------------------------------------------------------- % 
 %  F O O T N O T E S  

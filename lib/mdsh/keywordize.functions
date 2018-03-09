@@ -39,6 +39,8 @@ function KEYWORDIZE() {
              K=`echo $KEYWORD       | # START
                 sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
                 sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
+           # solved via LaTeX (for section so far ...)
+           # set +H;
            # ADD \index TO END OF LINE
              sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO/I" $SRCDUMP
              sed -i "s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
