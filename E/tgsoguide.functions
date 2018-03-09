@@ -614,9 +614,9 @@ function PDF() {
 
    # GET/SET PAGES/LAYOUT
    # ------------------------------------------------ #
-     PAGES=`echo $* | sed 's/ /\n/g'     | # DISPAY ON SEPARATE LINES
-            grep '^[0-9]\{1,\}-*[0-9]*$' | # MATCH PATTERN
-            head -n 1`                     # TAKE FIRST
+     PAGES=`echo $* | sed 's/ /\n/g'          | # DISPAY ON SEPARATE LINES
+            grep '^[0-9]\{1,\}[,-]*[0-9,-]*$' | # MATCH PATTERN
+            head -n 1`                          # TAKE FIRST
      if [ "$PAGES" == "" ];then PAGES="-"; fi # FALLBACK
  
     LAYOUT=`echo $* | sed 's/ /\n/g'         | # DISPAY ON SEPARATE LINES

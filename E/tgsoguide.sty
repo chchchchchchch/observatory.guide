@@ -791,14 +791,14 @@
    \includepdf[pagecommand={\thispagestyle{fancy}}%
                \label{#5}\pdfpagesplusinfo{#4}{#6},%
                offset=10 20, delta=5 5,
-               scale=.75,frame,pages=#2,nup=#3]{#1}
+               scale=.75,frame,pages={#2},nup=#3]{#1}
    }
    \else
    \footnoterulefalse
    \includepdf[pagecommand={\thispagestyle{fancy}}%
                \label{#5}\pdfpagesplusinfo{#4}{#6},%
                offset=10 20, delta=5 5,
-               scale=.75,frame,pages=#2,nup=#3]{#1}
+               scale=.75,frame,pages={#2},nup=#3]{#1}
    \footnoteruletrue
    \fi
   }
