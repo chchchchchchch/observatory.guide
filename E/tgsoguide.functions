@@ -1021,6 +1021,20 @@ function REFREF() {
 
 # --------------------------------------------------------------------------- #
 
+function HYPHENATE() {
+
+ #HYPHENATIZED=`echo $* | sed 's,-,\\\\\\\allowbreak{},g'`
+  HYPHENATIZED=`echo $* | sed 's,-,\\\\\\\-,g'`
+  UNHYPHENATED=`echo $* | sed 's/-//g'`
+  LNHYPH=`grep -n "$UNHYPHENATED" $SRCDUMP | #
+          tail -n 1 | cut -d ":" -f 1 `
+  if [ "$LNHYPH" != "" ];then
+  sed -i "${LNHYPH}s/$UNHYPHENATED/$HYPHENATIZED/" $SRCDUMP
+  fi
+}
+
+# --------------------------------------------------------------------------- #
+
 function TEXIN() {
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
