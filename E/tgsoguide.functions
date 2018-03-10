@@ -14,27 +14,26 @@ function GROUPING() {
    fi
    fi
 
-   PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
-            head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
-  cp ${TMPID}grouping.pageinfo
+   LAYERNUM=`sort -t: -k2 -u ${TMPID}grouping.pageinfo  | #
+             sort -t: -k1 -n | grep $GROUPINGID | #
+             sed 's/^.*$/&\n&/' | grep -n "" | #
+             head -n 1 | cut -d ":" -f 1`      #
+   PA="$LAYERNUM"
+   PZ=`expr $PA + 1`
+   PAGERANGE=`echo ${PA}-${PZ} | rev`
 
    GID=`echo ${GROUPINGID} | md5sum | cut -d " " -f 1 | #
         base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
    echo "${GID}:$*"   >> ${TMPID}.toc
    echo "${GID}:1:$*" >> ${TMPID}.index
 
-   if [ `echo $PAGENUM | wc -c` -gt 1 ];then
-         PDFCMD="\grouping{${TMPID}grouping.pdf}{$PAGENUM}{}{\label{$GID}}"
-   else
-         PDFCMD="\groupingfallback{$*\label{$GID}}"
-   fi
+   if [ `echo $PA | wc -c` -gt 1 ];then
+        PDFCMD="\grouping{${TMPID}grouping.pdf}{$PAGERANGE}{}{\label{$GID}}"
+   else PDFCMD="\groupingfallback{$*\label{$GID}}"; fi
 
    if [ "$OUTPUTFORMAT" == pdf ];then 
-  
           write2src "$PDFCMD" 
-  
    elif [ "$OUTPUTFORMAT" == html ];then 
-  
           HTMLCMD="<span class=\"grouping\">$*</span>"        
           write2src "$HTMLCMD" 
    fi
