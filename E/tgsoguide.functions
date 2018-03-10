@@ -28,7 +28,7 @@ function GROUPING() {
    echo "${GID}:1:$*" >> ${TMPID}.index
 
    if [ `echo $PA | wc -c` -gt 1 ];then
-        PDFCMD="\grouping{${TMPID}grouping.pdf}{$PAGERANGE}{}{\label{$GID}}"
+        PDFCMD="\grouping{${TMPID}grouping.pdf}{$PA}{$PZ}{\label{$GID}}"
    else PDFCMD="\groupingfallback{$*\label{$GID}}"; fi
 
    if [ "$OUTPUTFORMAT" == pdf ];then 

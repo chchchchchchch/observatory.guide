@@ -581,6 +581,11 @@
   \ifthispageodd{\blackpage}{}
   }
 % --------------------------------------------------------------------------- %
+  \newcommand\cleartoleftpdf[2]{%
+  \clearpage
+  \ifthispageodd{\pdfpageplus{#1}{#2}{}{}}{}
+  }
+% --------------------------------------------------------------------------- %
   \newcommand\cleartoright{%
   \clearpage
   % http://tex.stackexchange.com/questions/6143/
@@ -814,10 +819,11 @@
 % --------------------------------------------------------------------------- %
 %  MDSH TGSO GUIDE (VERY SPECIFIC)
 % --------------------------------------------------------------------------- %
-   \newcommand\grouping[3]{%
+   \newcommand\grouping[4]{%
    %\cleartoleftblack
-    \cleartoright
-    \pdfpageplus{#1}{#2}{}{#3}
+   %\cleartoright
+    \cleartoleftpdf{#1}{#3}
+    \pdfpageplus{#1}{#2}{}{#4}
    }
  % ------------------------------------------------------------------------- %
   % FALLBACK (IF NO GRAPHIC EXISTS)
