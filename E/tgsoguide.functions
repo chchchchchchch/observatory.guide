@@ -16,7 +16,7 @@ function GROUPING() {
 
    PAGENUM=`grep $GROUPINGID ${TMPID}grouping.pageinfo | #
             head -n 1 | cut -d ":" -f 1 | sed 's/^0*//'`
-
+  cp ${TMPID}grouping.pageinfo
 
    GID=`echo ${GROUPINGID} | md5sum | cut -d " " -f 1 | #
         base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
@@ -1034,13 +1034,16 @@ function REFREF() {
 
 function HYPHENATE() {
 
- #HYPHENATIZED=`echo $* | sed 's,-,\\\\\\\allowbreak{},g'`
-  HYPHENATIZED=`echo $* | sed 's,-,\\\\\\\-,g'`
   UNHYPHENATED=`echo $* | sed 's/-//g'`
   LNHYPH=`grep -n "$UNHYPHENATED" $SRCDUMP | #
           tail -n 1 | cut -d ":" -f 1 `
   if [ "$LNHYPH" != "" ];then
-  sed -i "${LNHYPH}s/$UNHYPHENATED/$HYPHENATIZED/" $SRCDUMP
+
+       if [ "$OUTPUTFORMAT" == pdf ];then 
+            HYPHENATIZED=`echo $* | sed 's,-,\\\\\\\-,g'`
+            sed -i "${LNHYPH}s/$UNHYPHENATED/$HYPHENATIZED/" $SRCDUMP 
+       fi
+
   fi
 }
 
