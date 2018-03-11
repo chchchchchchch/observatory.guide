@@ -17,7 +17,7 @@ function GROUPING() {
    LAYERNUM=`sort -t: -k2 -u ${TMPID}grouping.pageinfo  | #
              sort -t: -k1 -n | grep $GROUPINGID | #
              sed 's/^.*$/&\n&/' | grep -n "" | #
-             head -n 1 | cut -d ":" -f 1`      #
+             head -n 1 | cut -d ":" -f 2`      #
    PA="$LAYERNUM"
    PZ=`expr $PA + 1`
    PAGERANGE=`echo ${PA}-${PZ} | rev`
