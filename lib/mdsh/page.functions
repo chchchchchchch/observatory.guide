@@ -13,7 +13,7 @@
                   sed 's/>/&\n/g'                   | # ALL '>' ON NEWLINE
                   sed '/<g/s/scape:label/\nlabel/'  | # PUT NAME LABEL ON NL
                   grep -n ^label | cut -d " " -f 1  | # SELECT/EXTRACT LABELS
-                  sort -t= -k 2 -u | sort           | # SORT/UNIQ + SORT NUM
+                  sort -t= -k 2 -u | sort -n        | # SORT/UNIQ + SORT NUM
                   grep -v "=\"XX_"                  | # IGNORE XX LAYERS
                   cut -d '"' -f 2`                    # EXTRACT NAMES
 
