@@ -592,6 +592,11 @@
   % -> if-then-else-for-odd-page-even-page
   \ifthispageodd{}{\emptypage}
   }
+% --------------------------------------------------------------------------- %
+  \newcommand\cleartorightblack{%
+  \clearpage
+  \ifthispageodd{}{\blackpage}
+  }
 
 % --------------------------------------------------------------------------- %
 %  G R A P H I C S

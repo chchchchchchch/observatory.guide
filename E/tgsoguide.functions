@@ -122,9 +122,9 @@ function ATTACHMENT() {
 
      if [ `echo $* | sed 's/ /\n/g' | #
            grep "^L$" | wc -l` -ge 1 ];then
-           write2src "\cleartoleft"
+           write2src "\cleartoleftblack"
      else
-           write2src "\cleartoright"
+           write2src "\cleartorightblack"
      fi
            INCLUDE $SRCGET 
   fi
