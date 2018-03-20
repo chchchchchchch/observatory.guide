@@ -33,11 +33,11 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.jean.heuns
 % --------------------
 % Interview with Jean Huens
-% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.jeanhuensitvextended L
 % --------------------
 % Ask several people from different fields and age-groups the same question: "_**What is software?**_"
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.samequestion
-% FMEM and /DEV/MEM OK
+% fmem and /dev/mem OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.devmem
 % Pan/Monopsychism OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.monopsychism
@@ -55,7 +55,7 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.fountain
 % --------------------
 % I hope you are comfortable, [insert name] OK
-% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.ihopeyouarecomfortable
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.ihopeyouarecomfortable L
 % --------------------
 % Compiling a constellation of <PRODUCTIVITY>-Wares OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.silvio
@@ -65,7 +65,7 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.time
 % --------------------
 % How humans and machines negotiate the experience of time OK
-% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.experiencingtime
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.experiencingtime L
 
 
 % GROUPING: Languaging -- Observing software as/through writing
@@ -96,7 +96,7 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.agile.yoga
 % --------------------
 % Agile Sun Salutation
-% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.agilesunsalutation
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.guide.agilesunsalutation L
 % --------------------
 % Hand reading / blobservation OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.blobservation
@@ -104,7 +104,7 @@
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.dirty
 % --------------------
 % When dirty.db get's dirty OK
-% ATTACHMENT: https://pad.constantvzw.org/p/observatory.inventory.jogi
+% ATTACHMENT: https://pad.constantvzw.org/p/observatory.inventory.jogi L
 % --------------------
 % Interface Détournement OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.detournement

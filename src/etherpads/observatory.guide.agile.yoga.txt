@@ -55,5 +55,5 @@
 % RELATESTO:
 % SOURCE: _Agile Sun Salutation_ was developed by Anne Laforet and performed by Allegra. See following pages for the full script.
 
-% SHOW: tgsoimages.svg agilefloor
+
 

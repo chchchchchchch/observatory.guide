@@ -189,9 +189,11 @@ My only two attempts to get into a software company failed as they insisted on f
 
 % RELATESTO:
 
-
+% SHOULD THIS STILL GO IN? WENDY IS ALREADY
 % TODO: [Intake form, SCP: See](http://observatory.constantvzw.org/etherdump/SCP.see.html)
+% https://pad.constantvzw.org/p/observatory.guide.scp.see
 % TODO: [Intake form, SCP: Ayanoa](http://observatory.constantvzw.org/etherdump/SCP.ayanoa.html)
+% https://pad.constantvzw.org/p/observatory.guide.scp.ayanoa
 % TODO: [Intake form, SCP: Wendy](http://observatory.constantvzw.org/etherdump/SCP.wendy.html)
 
 

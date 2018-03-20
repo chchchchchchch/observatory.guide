@@ -219,7 +219,7 @@ manifest.json:
   "manifest_version": 2,
   "name": "extension",
   "version": "1.0",
-  "description": "this is the browser exteions",(% CARLINSAYS: is exteions supposed to be extension?)
+  "description": "this is the browser exteions",
   "icons": {
     "48": "icons/icon-name-here.png"
   },
@@ -232,6 +232,7 @@ manifest.json:
 }
 % SRCCODE: plain
 
+(% CARLINSAYS: is exteions supposed to be extension?)
 
 ## Appendix C
 

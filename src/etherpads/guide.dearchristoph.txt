@@ -36,7 +36,7 @@ Chapter intros
 
 Loving the illustrations. Wondering about the quotes, if there is a way to treat them a bit more like ... citations; make more difference between them (a line? something?)
 
-OK. I'll try somethig
+OK. I'll try something
 
 
 Method icons
@@ -78,7 +78,8 @@ Markdown hierarchies seem not to be processed correctly? p.80-81
 
 attachments
 
-We invented something called ATACHMENTS, for longer/autonomous texts that we first wanted to add to the appendix, but we decided they needed to be closer to the methods.
+We invented something called ATACHMENTS, for longer/autonomous texts that we first wanted to add to the appendix,
+but we decided they needed to be closer to the methods.
 ATTACHMENTS will need a style to differentiate them from the methods somehow; for sure starting on a new page.
 
 

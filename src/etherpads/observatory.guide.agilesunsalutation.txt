@@ -1,3 +1,6 @@
+%__NOPUBLISH__
+% SHOW: tgsoimages.svg anne H
+
 
 % HEADER: Agile Sun Salutation
 

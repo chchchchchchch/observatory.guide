@@ -10,6 +10,21 @@
 % NOTE:
 % REMEMBER: Be careful in planning your interface hoax. You might get caught and accused of fake news design and circulation. 
 % SOURCE: The _Interface Détournement_-method was developed by Loup Cellard.
+
+% PDFFIX: 1 \vfill
+
+% EXAMPLE: - 
+
+Example of an interface template study by Henrik Jan Grievink (% REFREF: hgrievink)
+
+% https://www.flickr.com/photos/hendrikjangrievink/sets/72157614340281527
+% SHOW: tgsoimages.svg uigrievink REF:hgrievink
+% INFO: Interface template study by Henrik Jan Grievink
+
+% PDFFIX: 1 \vfill
+% PDFFIX: 1 \newpage
+
+
 % HOW: -
 
 1. Choose a particular website where you want to intervene. You can pick an interface in relation to:  
@@ -24,11 +39,6 @@
 %!EXAMPLE: Example of an interface template study by Henrik Jan Grievink:
 %!CARLINSAYS: this isn't visible on the PDF as of now
 
-% EXAMPLE: ! 
-    
-% https://www.flickr.com/photos/hendrikjangrievink/sets/72157614340281527
-% SHOW: tgsoimages.svg uigrievink N
-% INFO: Interface template study by Henrik Jan Grievink
 
 % ![Example of an interface detournement of the dropbox website](http://observatory.constantvzw.org/images/clinic/dropbox-satire3.png)
 % SHOW: tgsoimages.svg probdox

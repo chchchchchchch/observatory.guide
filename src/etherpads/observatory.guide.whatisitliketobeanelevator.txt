@@ -69,8 +69,8 @@ update floor indicator
 % SRCCODE: quaverbatim
 
 % TODO: flowchart
-
 % http://observatory.constantvzw.org/documents/joseph/flowchart.pdf
+
 % SHOW: tgsoimages.svg doingelevator
 
 % RELATESTO:

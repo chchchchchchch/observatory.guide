@@ -1,4 +1,6 @@
 %__NOPUBLISH__
+% SHOW: tgsoimages.svg hans H
+
 
 % HEADER: How humans and machines negotiate the experience of time
 

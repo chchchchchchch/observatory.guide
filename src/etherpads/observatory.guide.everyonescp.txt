@@ -13,5 +13,7 @@
 
 % TODO: include pdf here. can we put the "software curious person intake form" here? --- it is already included near the introduction maybe there is the file there, and here can be the photo of the printed one? Or are there are any photos of people doing intake that we could use? (%pEGGY: none i can think of.)
 
+% SHOW: tgsoimages.svg everyonescp
+
 % RELATESTO:
 % SOURCE:

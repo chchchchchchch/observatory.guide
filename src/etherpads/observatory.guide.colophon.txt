@@ -1,9 +1,24 @@
+% CLEARTORIGHT:
+
 % TOCITEM: Colophon T:4
 % =================
 
-% TEXIN: \begin{flushleft}
+% 2 COLONS (..) BETWEEN CHARACTERS WILL BE A NON-BREAKING SPACE
 
-The Guide to technogalactic software observing was compiled by Carlin Wing, Martino Morandi, Peggy Pierrot, Anita, Christoph Haag, Michael Murtaugh, Femke Snelting, Seda Gürses and includes contributions from Andrea, Manetta Berends, Željko Blaće, Larisa Blazic, Freyja van den Boom, Anna Carvalho, Loup Cellard, Joana Chicau, Cristina Cochior, Pieter Heremans, Joak, Jogi Hofmüller, Becky Kazansky, Anne Laforet, Ricardo Lafuente, Michaela Lakova, Hans Lammerant, Silvio Lorusso, Mia Melvaer, An Mertens, Lidia Pereira, Donatella Portoghese, Luis Rodil-Fernandez, Natacha Roussel, Lonneke van der Velden, Ruben van de Ven, Kym Ward, Wendy Van Wynsberghe and Peter Westenberg.(% CARLINSAYS: Anita is still rocking the first name only here. Which is great. But in case she wants to add her last name :-)
+% TEXIN: \begin{flushleft}
+% TEXIN:\large
+
+The Guide to Techno-Galactic software observing was compiled by (% CARLINSAYS: conform to title)
+Carlin::Wing, Martino::Morandi, Peggy::Pierrot, Anita, Christoph::Haag,
+Michael::Murtaugh, Femke::Snelting, Seda::Gürses
+and includes contributions from Andrea, Manetta::Berends, Željko::Blaće,
+Larisa::Blazic, Freyja::van::den::Boom, Anna::Carvalho, Loup::Cellard, Joana::Chicau,
+Cristina::Cochior, Pieter::Heremans, Joak, Jogi::Hofmüller, Becky::Kazansky,
+Anne::Laforet, Ricardo::Lafuente, Michaela::Lakova, Hans::Lammerant, Silvio::Lorusso,
+Mia::Melvaer, An::Mertens, Lidia::Pereira, Donatella::Portoghese, Luis::Rodil-Fernandez,
+Natacha::Roussel, Lonneke::van::der::Velden, Ruben::van::de::Ven, Kym::Ward,
+Wendy::Van::Wynsberghe and Peter::Westenberg.
+(% CARLINSAYS: Anita is still rocking the first name only here. Which is great. But in case she wants to add her last name :- + same for Andrea + Joak )
 
 % TEXIN: \end{flushleft}
 
@@ -11,56 +26,78 @@ The Guide to technogalactic software observing was compiled by Carlin Wing, Mart
 % SHOW: tgsoimages.svg tgsoteam N
 % INFO: Techno-Galactic Software Observation team, WTC Brussels, June 2017
 
+% TEXIN: \vfill
 
+### License: Free Art License (% REFREF: fal)
 
-License: Free Art License
+% TEXIN: \vfill
 
-Support:
-
-Sources:
-
+% SOURCE: -
 http://observatory.constantvzw.org    
 https://gitlab.constantvzw.org/ch/observatory.guide    
 
+% PDFFIX: 1 \newpage
 
+### Notes on Layout:
 
-## Notes on Layout:
+% The typesetting of this guide is part of an ongoing exploration of document engineering
+% from within and without interfaces of digital edit modes. While moving along ideas of lightweight
+% markup and infinite rubber lengths, transplanting paradigms, and experiencing limitations and possibilities
+% there is no end in sight. To put it in the spirit of illiterate programming:
+% _When was the last time you spent a pleasant evening in a comfortable chair,
+% cuddling with a multi-headed monster._[@bentley:1986:literate]
 
 Typesetting this guide is part of an ongoing exploration of document engineering
-from within and without interfaces of digital edit modes. Moving along ideas of lightweight
-markup and infinite rubber lengths, transplanting paradigms, experiencing limitations and possibilities
-no end is in sight. To put it in the spirit of illiterate programming:
+along ideas of lightweight markup languages and infinite rubber lengths.
+While moving through interfaces of digital editing, transplanting paradigms,
+experiencing limitations and possibilities, it seems not like an end is in sight.
+To put it in the spirit of illiterate programming:
 _When was the last time you spent a pleasant evening in a comfortable chair,
 cuddling with a multi-headed monster._[@bentley:1986:literate]
 
+https://freeze.sh/_/2018/tgso
 
-## Fonts:
-
-The fonts ...
-
-Arimo by [Steve Matteson](http://www.monotype.com/people/steve-matteson)
-...
-
-IBM Plex Mono for Monospace ....
-
-IA Writer Duospace is an adaptation of Plex Mono aiming at
-better readability while keeping the
-[look and feel](https://ia.net/topics/in-search-of-the-perfect-writing-font)
-of a monospaced font.
-
-CGA Thin is a 8x8 pixel font in truetype format created
-by [VileR](http://int10h.org) based on text mode fonts
-shipped on the character ROM of IBM's first video solutions.
-
-
-All fonts are available under free licenses and were prepared
-to be used within the Techno-Galactic LaTeX Toolchain
+The fonts used in this guide were prepared to be integrated into the Techno-Galactic LaTeX Toolchain
+and are available through the fontain font collection.
 
 https://fontain.org/arimo     
+https://fontain.org/plexmono    
+https://fontain.org/iaduospace    
+https://fontain.org/pxpcgathin    
+
+
+**Arimo** is a sans serif typeface developed by [Steve Matteson](http://www.monotype.com/people/steve-matteson)
+and released under the Apache 2.0 License.
+Together with Tinos (serif) and Cousine (monospace) it provides the
+Chrome OS core fonts, a collection of fonts that are metrically
+compatible with Monotype Corporation's Arial, Times New Roman, and Courier New.
+
+% USEFONTPLM: **Plex Mono**
+is a monospaced typeface and part of the
+superfamily [IBM Plex](https://github.com/IBM/plex), which was developed to replace fifty
+years of Neue Helvetica as IBM's corporate typeface. It is released
+under the SIL Open Font License.
+
+% USEFONTIAD: **IA Writer Duospace**
+is an adaptation of Plex Mono, aiming at
+better readability while keeping the
+[look and feel](https://ia.net/topics/in-search-of-the-perfect-writing-font)
+of a monospaced typeface. It is released under the SIL Open Font License.
+
+% USEFONTCGA: CGA Thin
+is a 8x8 pixel font  recreated in truetype format
+by [VileR.](http://int10h.org) It is based on text mode fonts
+shipped on the character ROM of IBM's first video solutions. As part of
+the **The Ultimate Oldschool PC Font Pack** it is available according to
+Creative Commons Attribution-ShareAlike 4.0 International License.
+
+
+### Support:
 
 
 
-Constant, February 2018
+% TEXIN: \vfill\vfill
+% TEXIN: {\Large\textbf{Constant, February 2018}}
 
 
 

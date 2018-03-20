@@ -1,3 +1,6 @@
+% PDF: http://observatory.constantvzw.org/documents/2017_techno_galactic_Poster_films_A2_V2.pdf 1x1 H
+
+
 % TOCITEM: Warning T:4
 
 % WARNING: - 
@@ -29,9 +32,6 @@ Loss of time tracking
 
 > our methods for observation,    
 > like mapping, come with their luggage.
-
-
-% PDF: http://observatory.constantvzw.org/documents/2017_techno_galactic_Poster_films_A2_V2.pdf 1x1
 
 
 % CARLINSAYS: Does the bottom part of the warning look OK on the PDF? The last line, which I think is mine from a while back, seems like it could be cut?

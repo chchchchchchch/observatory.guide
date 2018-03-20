@@ -16,7 +16,8 @@
 % https://www.tek.com/sites/default/files/media/image/119-4146-00%20Near%20Field%20Probe%20Set.png.jpg
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3377
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3381
-% SHOW: ../../E/tgsoimages.svg sidechannelanalysis N
+
+% SHOW: tgsoimages.svg sidechannelanalysis N
 % INFO: Thomas De Cnudde from the COSIC research group at the department of Electrical Engineering, KULeuven
 
 

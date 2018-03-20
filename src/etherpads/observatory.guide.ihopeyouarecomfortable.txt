@@ -1,3 +1,7 @@
+%__NOPUBLISH__
+% SHOW: tgsoimages.svg mia H
+
+
 % HEADER: I hope you are comfortable, [insert name]
 
 For the past 100 years the western ideal of a corporate landscape has been moving like a pendulum, oscillating between grids of cubicles and organic, open landscapes, in a nearly perfect 25-year rhythm. These days the changes in office organization is supplemented by sound design in corporate settings mostly to create comfortable silence. Increase the sound and the space becomes more intimate, the person at the table next to you can not immediately hear what you are saying. It seems that actual silence in public and corporate spaces has not been sought after since the start of the 20th century. Actual silence is not at the moment considered comfortable. One of the visible symptoms of our desire to take the edge off the silence is to be observed through the appearance of fountains in public space. The fountain's purpose is to give off neutral sound, like white noise without the negative connotations. However as a sound engineer's definition of noise is unwanted sound that all depends on one's personal relation to the sound of dripping water. (% CARLINSAYS: are these edits ok? i was not sure if i should alter it since this is a document of the script that was performed at the work session. some of this text repeats from the prior page but i think that is ok since the prior page is the method and this is the script.)
@@ -5,6 +9,8 @@ For the past 100 years the western ideal of a corporate landscape has been movin
 This means that there needs to be a consistent inoffensiveness to create comfortable silence.
 
 In corporate architecture the arrival of glass buildings were originally seen as a symbol of transparency, especially loved by governmental buildings. Yet the reflectiveness of this shiny surface once combined with strong light – known as the treason of the glass – was only completely embraced at the invention of one-way-mirror foil. And it was the corporate business-world that would come to be known for their reflective glass skyscrapers. As the foil reacts to light, it appears transparent to someone standing in the dark, while leaving the side with the most light with an opaque surface. Using this foil as room dividers in a room with a changing light, what is hidden or visible will vary throughout the day. So will the need for comfortable silence.
+
+
 Disclaimer :  
 Similar to the last 100 years of western office organisation,  
 this fountain only has two modes:  

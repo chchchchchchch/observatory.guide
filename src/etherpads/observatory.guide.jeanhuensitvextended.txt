@@ -1,3 +1,7 @@
+%__NOPUBLISH__
+% SHOW: tgsoimages.svg jean H
+
+
 % HEADER: Interview with Jean Huens
 
 (% CARLINSAYS: Peggy can you fill in the when and where for this intro and add or change it as you see fit?)
@@ -54,7 +58,7 @@ In most cases,  the computer sciences department bought the mini-computer from, 
 DEC computers. That is what the computer department of the University of Louvain la Neuve *l'unité d'informatique*, did and so did we.
 
 % PP: When did you start working with Unix as an OS? 
-% JH: I took a trip to Amsterdam, it must have been in 1979 or 1980. Well, the story starts in our French sister university (LLN) where they had a PDP-11 with Unix on it. You could get Unix, at the time, when you were a university, from Bell Labs (part of AT&T), the American telephone company. AT&T was a mega organisation at the time [before the [dismantlment of AT&T/Bell system](https://en.wikipedia.org/wiki/Breakup_of_the_Bell_System)]. Due to monopoly, the US authorities split it up into different Baby Bells. One of the restrictions was that the research Baby Bell, could not sell anything. There were computer scientists there who developed some interesting things (e.g. Unix). Universities got the source code for free, but NO support, nothing not even how to install it. In Unité d'informatique, where they had a [PDP-11/70](https://i0.wp.com/www.utterpower.com/wp-content/uploads/2011/10/pdp11-70-panel.jpg) they were lucky: they got the same computer that Unix was developed on.  They got the disk by snail mail as a post-office package. They mounted it and it did spin up and they had UNIX.
+% JH: I took a trip to Amsterdam, it must have been in 1979 or 1980. Well, the story starts in our French sister university (LLN) where they had a PDP-11 with Unix on it. You could get Unix, at the time, when you were a university, from Bell Labs (part of AT&T), the American telephone company. AT&T was a mega organisation at the time [before the [dismantlment of AT&T/Bell system](https://en.wikipedia.org/wiki/Breakup_of_the_Bell_System). Due to monopoly, the US authorities split it up into different Baby Bells. One of the restrictions was that the research Baby Bell, could not sell anything. There were computer scientists there who developed some interesting things (e.g. Unix). Universities got the source code for free, but NO support, nothing not even how to install it. In Unité d'informatique, where they had a [PDP-11/70](https://i0.wp.com/www.utterpower.com/wp-content/uploads/2011/10/pdp11-70-panel.jpg) they were lucky: they got the same computer that Unix was developed on.  They got the disk by snail mail as a post-office package. They mounted it and it did spin up and they had UNIX.
 % CARLINSAYS: is there a reason this is all capital letters?
 Here, we had a cheaper PDP11, [the PDP 11/60](https://dave.cheney.net/tag/pdp-11). We got the Unix disk distribution from Bell Labs but we could not run it, because we got another type of disk(RK07). We could look at it but that was all, because our disc format was different than the one at Bell Labs. Somebody here (P.Verbaeten) wrote a driver for that disk in l'unité d'informatique of LLN.
 % But they did not have a RK07.  It compiled it but we couldn't try it because we did not have 

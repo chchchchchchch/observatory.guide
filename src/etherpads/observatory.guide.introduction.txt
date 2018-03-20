@@ -1,6 +1,8 @@
 % TOCITEM: Introduction T:4
 
-# A Guide to Techno-Galactic Software Observation (% CARLINSAYS: is our title "A Guide to Techno-Galactic Software Observation" or "The Techno-Galactic Guide to Software Observation" or "The Techno-Galactic Software Survival Guide" or some other iteration?)
+# A Guide to Techno-Galactic Software Observation
+
+% CARLINSAYS: is our title "A Guide to Techno-Galactic Software Observation" or "The Techno-Galactic Guide to Software Observation" or "The Techno-Galactic Software Survival Guide" or some other iteration?
 
 > I am less interested in the critical practice of reflection,
 > of showing once-again that the emperor has no clothes, than in
@@ -25,29 +27,19 @@ This guide invites you to experiment with ways to stay with the trouble of softw
 Reading is not enough, software is not just a text, observation is one potential beginning, engagement is tickling. Can you call up that feeling of the approach of a touch that cannot be born with a straight face? Come join us at the edge of the universe, on the metro platform, at your kitchen table, as we mark and measure critical distances from and entanglements with the seemingly endless software systems that surround us.
 
 
-The techno-galactic software survival guide (% CARLINSAYS: use agreed title) was collectively produced as an outcome of the Techno-Galactic Software Observatory. 
-(% CARLINSAYS: This feels like it could be in a different font size or in brackets or is the start of the next page/spread?)
+% LARGE: The techno-galactic software survival guide (% CARLINSAYS: use agreed title) was collectively produced as an outcome of the Techno-Galactic Software Observatory. 
+
+% CARLINSAYS: This feels like it could be in a different font size or in brackets or is the start of the next page/spread?
 
 
-(% CARLINSAYS: do we want to keep this quote for the intro? If so I think it should be up top with the Haraway)
-kostas axelos, planetary interlude, maybe some bits fit with the intro?:
-
- Whether he delves into analysis and disintegration -- since he needs
- analyses, concrete and tangible solutions and experimentations -- or
- whether he plunges into syntheses -- since the abstracting power and
- the ungraspable attract him equally --, as precisely and as far as he
- may cast his nets, what his nets catch and what passes through them
- communicate. Never quite awake and never quite beclouded, will we
- learn to live and to see beings and things simultaneously from close
- up and far away, large and small, in their and in our wandering
- (errance), in the great World which is at the same time small, where
- there are no victors - would there be vanquished?
 
 ## The Techno-Galactic Software Observatory
 
 In the summer of 2017, thirty or so people gathered in Brussels to explore practices of proximate critique with and of software in the context of a worksession entitled "Techno-Galactic Software Observatory".[^]{Worksessions are intensive transdisciplinary moments, organised twice a year by Constant. They aim to provide conditions for participants with different experiences and capabilities to temporarily link their practice and to  develop ideas, prototypes and  research projects together. For the worksessions, primarily Free, Libre and Open Source software is used and material that is available under Open Content Licenses.} The worksession called for software-curious people of all kinds to ask questions about software. The intuition behind such a call was that developing different types of engagement requires a heterogeneous group of participants with different levels of expertise,  skill and background. During three sessions that were two days each, participants collectively inspected the space-time of computation and probed the universe of hardware-software separations through excursions, exercises and conversations. They tried out various perspectives and methods to look at the larger picture of software as a concept, as a practice, and as a set of techniques.
 
-The first two days of The Techno-Galactic Software Observatory included visits to the Musée de l'Informatique Pionnière en Belgique [^]{http://www.nam-ip.be} in Namur and the Computermuseum KULeuven[^]{http://etwie.be/database/actor/computermuseum-ku-leuven}. Surrounded by these collections of historical ’numerical artefacts’, we started considering software in a long-term context (% CARLINSAYS: Do we mean a long historical context or longue duree or something else?). The museum visits provided an occasion to reflect on the conditions of software's appearance (% CARLINSAYS: appearances?) and to take on current-day questions from a genealogical perspective. What is software? How did it appear as a concept, in what industrial and governmental circumstances? What happens to the material conditions of its production (minerals, factory labor, hardware) when it evaporates into a cloud?
+The first two days of the Techno-Galactic Software Observatory included visits to the Musée de l'Informatique Pionnière en Belgique [^]{http://www.nam-ip.be} in Namur and the Computermuseum KU::Leuven[^]{http://etwie.be/database/actor/computermuseum-ku-leuven}. Surrounded by these collections of historical _numerical artefacts_, we started considering software in a long-term context (% CARLINSAYS: Do we mean a long historical context or longue duree or something else?). The museum visits provided an occasion to reflect on the conditions of software's appearance (% CARLINSAYS: appearances?) and to take on current-day questions from a genealogical perspective. What is software? How did it appear as a concept, in what industrial and governmental circumstances? What happens to the material conditions of its production (minerals, factory labor, hardware) when it evaporates into a cloud?
+
+%!HYPHENATE: Musée de l'In-for-ma-tique Pi-o-nnière en Bel-gique
 
 The second two days were spent focusing on the space-time dimension of IT development. The way computer programs and operating systems are manufactured has changed tremendously over the last seventy years, as has its production times and places. From military labs to the mega-corporation cubicles to the open-space freelancer utopia, what ruptures and continuities can be traced in the production, deployment, maintenance and destruction of software? From time-sharing to user-space partitions and containerization, what separations were and are at work? Where and when is software made today?
 

@@ -39,7 +39,8 @@
 % Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
 % http://observatory.constantvzw.org/books/US395781.pdf
 % PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
-% INFO: Sample from the Techno Galactic Software Observatory reader: Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+% INFO: Sample from the Techno Galactic Software Observatory reader: Herman Hollerith. Art of compiling statistics.
+% U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
 
 
 
