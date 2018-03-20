@@ -81,3 +81,28 @@ function ADD2PREAMBLE() { echo "$*" >> ${TMPID}.preamble ; }
 
 # --------------------------------------------------------------------------- #
 
+# MAKE PAGE AMOUNT DIVIDABLE BY FOUR
+# https://groups.google.com/forum/#!topic/de.comp.text.tex/j8wWMv8lZaM
+  echo '\newcount\vs
+        \newcount\vsi
+        \newcommand\cleartofour{
+         \mbox{}\clearpage
+         \pagestyle{empty}
+         \vs\thepage
+         \advance\vs by 3
+         \vsi\vs
+         \divide\vs by 4
+         \multiply\vs by 4
+         \ifnum\vs=\vsi\else\cleartofour\fi
+        }' >> ${TMPID}.preamble
+
+# --------------------------------------------------------------------------- #
+
+function CLOSEBOOK() {
+
+   write2src "\cleartofour"
+
+ }
+
+# --------------------------------------------------------------------------- #
+
