@@ -611,9 +611,26 @@
                scale=1,pages=#2#3]{#1}
   }
 % --------------------------------------------------------------------------- %
+   \newcount\vs
+   \newcount\vsi
+   \newcommand\lastoffactorfour[1]{
+     \mbox{}\clearpage
+     \pagestyle{empty}
+     \vs\thepage
+     \advance\vs by 4
+     \vsi\vs
+     \divide\vs by 4
+     \multiply\vs by 4
+     \ifnum\vs=\vsi
+      #1
+     \else\lastoffactorfour{#1}\fi
+   }
+ % ------------------------------------------------------------------------ %
   \newcommand\pdflicense[2]{%
+   \lastoffactorfour{
    \includepdf[pagecommand={\thispagestyle{fancy}#2},%
                scale=.9,offset=10 0,pages=-]{#1}
+   }
   }
 % --------------------------------------------------------------------------- %
   \newcommand{\grafikinline}[2]{%
