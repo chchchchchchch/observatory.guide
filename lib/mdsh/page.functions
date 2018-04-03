@@ -194,7 +194,9 @@
             sed 's/</\n&/g' | grep "fill:#$AREACOLOR" | # 
             sed 's/\bid=/\nX&/g' | grep "^Xid=" | #
             head -n 1 | cut -d "\"" -f 2` #
-    INFOAREA=`grep $IDAREA $SRCQUERY | head -n 1`
+    if [ "$IDAREA" !=  "" ];then
+           INFOAREA=`grep $IDAREA $SRCQUERY | head -n 1`
+    else   INFOAREA=""; fi
 
     if [ "$INFOAREA" !=  "" ];then
 
