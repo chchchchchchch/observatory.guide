@@ -526,7 +526,7 @@ function SHOW() {
             fi 
           # EXTRACT PLACEMENT FLAGS
             PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-                   egrep '^N$|^b$|^H$'      | # EXTRACT VALID FLAGS
+                   egrep '^N$|^b$|^H$|^I$'  | # EXTRACT VALID FLAGS
                    head -n 1`                 # TAKE FIRST ONE
 
             if [ "$LNAME" != "" ];then
@@ -569,6 +569,12 @@ function SHOW() {
 
                   if [ "$PFLAG" == H ];then
                         write2src "\imghere{$PDFHERE}{$CNT}$RFC"
+                  elif [ "$PFLAG" == I ];then
+                        W=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
+                           egrep '^W:'              | # EXTRACT W:
+                           head -n 1                | # TAKE FIRST ONE
+                           cut -d ":" -f 2`           # SECOND FIELD (:)
+                           write2src "\imginline{$PDFHERE}{$CAPTION}{$W}"
                   else
                         write2src ""
                         write2src "$PDFCMD" 
@@ -1168,6 +1174,21 @@ function A(){
 
 # --------------------------------------------------------------------------- #
 
+function H(){
+
+  HIS=`echo $*            | #
+       cut -d ":" -f 2-   | #
+       eval $PANDOCACTION | # DISPLAY/TRANSLATE
+       sed 's,</*p>,,g'`    # REMOVE <P> TAGS
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src "\smallheadline{$HIS}"
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
 function PP() {
 
   PPASKS=`echo $*            | #
@@ -1240,6 +1261,10 @@ function SXHOW() {
    sed -i "/^\\\descriptor*/{ N; s/\(\descriptor.*\)\n\(.*enumerate.*\)/\1\2/ }" \
           $SRCDUMP
 
+ # RM EMPTY LINE AFTER \smallheadline
+ # ---- 
+ # sed -i "/^\\\smallheadline/{N;s/\n$//}" $SRCDUMP
+
  # WRAP PARAGRAPHS IN \begin{dblock} \end{dblock}
  # IF STARTING WITH \descriptor AND CONTAINING MORE MACROS (= \*)
  # ----
@@ -1272,6 +1297,9 @@ function SXHOW() {
  # IF ON ONE LINE MOVE 2ND DESCRIPTOR TO NEW LINE  
  # ----
    sed -i '/^\\\descript/s/\\\descript/\n\n&/2' $SRCDUMP
+
+ # MOVE NEWLINE ON NEW LINE
+   sed -i 's/\\\\/\n\\\\/g' $SRCDUMP
 
  # CHANGE STANDARD ENVIRONMENT CREATED BY PANDOC 
    sed -i 's/\\begin{lstlisting}/\\begin{plain}{10}/' $SRCDUMP
