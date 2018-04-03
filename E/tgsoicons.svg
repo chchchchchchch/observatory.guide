@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1521650469/3b5029c4d6c34a4145d5605cb6f894aa -->
+<!-- CLEANED: 1522748454/0fbee9596214325147962bafeaae4526 -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -2107,17 +2107,17 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="howmarginsmall"
-     style="display:none">
+     style="display:inline">
     <text
        transform="matrix(0,-1,1,0,0,0)"
        sodipodi:linespacing="100%"
        id="text3208-3"
-       y="96.465851"
+       y="89.465851"
        x="-204.17307"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
        xml:space="preserve"><tspan
          dx="0 0 0 -3.52212 -12.131748"
-         y="96.465851"
+         y="89.465851"
          x="-204.17307"
          id="tspan3210-6"
          sodipodi:role="line"
@@ -2125,12 +2125,12 @@
     <path
        id="path4207-5-8-9-7"
        style="fill:#ffffff;stroke:#ffff00;stroke-width:1.5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
-       d="m 108.375,78.03687 0,158.17626"
+       d="m 101.375,78.03687 0,158.17626"
        sodipodi:nodetypes="cc" />
     <g
        style="display:inline"
        id="g6530-9"
-       transform="matrix(0,-1,1,0,17.875,160.125)">
+       transform="matrix(0,-1,1,0,10.875,160.125)">
       <path
          id="path6534-4"
          style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
@@ -2142,17 +2142,17 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="howmarginmedium"
-     style="display:none">
+     style="display:inline">
     <text
        transform="matrix(0,-1,1,0,0,0)"
        sodipodi:linespacing="100%"
        id="text3208-3-5"
-       y="96.465851"
+       y="89.465851"
        x="-181.96582"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
        xml:space="preserve"><tspan
          dx="0 0 0 -3.52212 -12.131748"
-         y="96.465851"
+         y="89.465851"
          x="-181.96582"
          id="tspan3210-6-3"
          sodipodi:role="line"
@@ -2160,24 +2160,24 @@
     <path
        id="path6534-4-3"
        style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
-       d="m 108.375,78.03687 0,169.17626"
+       d="m 101.375,78.03687 0,169.17626"
        sodipodi:nodetypes="cc" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="howmarginlarge"
-     style="display:none">
+     style="display:inline">
     <text
        transform="matrix(0,-1,1,0,0,0)"
        sodipodi:linespacing="100%"
        id="text3208-3-6"
-       y="96.465851"
+       y="89.465851"
        x="-181.96582"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
        xml:space="preserve"><tspan
          dx="0 0 0 -3.52212 -12.131748"
-         y="96.465851"
+         y="89.465851"
          x="-181.96582"
          id="tspan3210-6-2"
          sodipodi:role="line"
@@ -2185,7 +2185,7 @@
     <path
        id="path6534-4-34"
        style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;display:inline"
-       d="m 108.375,78.03687 0,209.17626"
+       d="m 101.375,78.03687 0,209.17626"
        sodipodi:nodetypes="cc" />
   </g>
   <g
@@ -2999,7 +2999,7 @@
      inkscape:label="source"
      inkscape:groupmode="layer"
      id="g3439"
-     style="display:inline">
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:PxPlus IBM CGAthin;-inkscape-font-specification:PxPlus IBM CGAthin"
