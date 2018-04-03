@@ -5,7 +5,7 @@
 
 % URGENCY:  If you have the feeling that some words are imposed to you and want to reclaim a power of saying/naming. 
 
-% WHEN: When you reach your limit and can no longer tolerate the jargon of the digital economy and the rhetorics of Silicon Valley.
+% WHEN: When you reach your limit and can no longer tolerate the jargon of the digital economy and the rhetoric of Silicon Valley.
 % WHO:
 % NOTE:
 % REMEMBER: Be careful in planning your interface hoax. You might get caught and accused of fake news design and circulation. 
@@ -37,8 +37,6 @@ Example of an interface template study by Henrik Jan Grievink (% REFREF: hgrievi
 4. After having done your détournement, you can share the outcome of your work as a hoax: present the new interface you have done just as if it was a mundane and "real" one. Observe the reactions of the tested credulous and refine your détournement with their insights. You can also take a screenshot of your work and send it to an audience.
 
 %!EXAMPLE: Example of an interface template study by Henrik Jan Grievink:
-%!CARLINSAYS: this isn't visible on the PDF as of now
-
 
 % ![Example of an interface detournement of the dropbox website](http://observatory.constantvzw.org/images/clinic/dropbox-satire3.png)
 % SHOW: tgsoimages.svg probdox

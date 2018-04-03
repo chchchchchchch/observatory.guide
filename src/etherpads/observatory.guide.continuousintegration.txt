@@ -1,7 +1,5 @@
 % METHOD: Continuous Integration
 
-% CARLINSAYS: Capitalizing the term so it reads "Continous Integration" throughout this entry might help the reader's eye.
-
 % WHAT:  A sophisticated form of responsibility management: it is the fascia of software services. Continous Integration picks up after all other services and identifies what needs to happen so that they can work in concert. It is a way of observing the evolution of (micro)services through cybernetic (micro)management. 
 % HOW: Keeping track of changes to all services and allowing everyone to observe if they still can work together after all the moving parts are fitted together.
 % WHEN: In a world of distributed systems where there are many parts being organized simultaneously, continuous integration is a form of observation that helps (micro)services maintain a false sense of independence and decentralization while constantly subjecting them to centralized feedback. 
@@ -10,7 +8,7 @@
 % WARNING: When each service does one thing well, the service makers tend to assume everybody else is doing the things that they do not want to do.
 
 % EXAMPLE: 
-At TGSO, Continuous Integration was introduced as a service that responds to integration hell when putting together a number of TGSO services for a walk-in software clinic. (% CARLINSAYS: this sentence is awkwardly worded. How about using this instead: "At TGSO, continuous integration was introduced as a service for responding to the integration hell that was produced when Software Curious Persons attempted to do more than one of the TGSO services on offer at the walk-in clinic for the software curious") Due to demand, the Continuous Integration service was extended to do "service discovery" and "load balancing" once the walk-in clinic was in operation. 
+At the Walk-in Clinic, Continuous Integration was introduced as a service to respond to the integration hell that was produced when Software Curious Persons attempted to engage in more than one of the TGSO services on offer. Due to demand, the Continuous Integration service was extended to do "service discovery" and "load balancing" once the walk-in clinic was in operation.
 
 Continuous Integration worked by visiting the different services of the walk-in clinic to check for updates, test the functionality, and think through implications of integration with other services. If the pieces didn't fit, the service delivered error messages and solution options. 
 
@@ -22,11 +20,11 @@ When we noticed that Software Curious Persons visiting the walk-in clinic were h
 
 Load balancing meant that Software Curious Persons were forwarded to services that had capacity. If all other services were full, the load balancer defaulted to sending the Software Curious Person to the [Agile Sun Salutation](http://pad.constantvzw.org/p/observatory.guide.agile.yoga) service.
 
-% WARNING: At TGSO, the bundling of different functionalities into the Continuous Integration service broke the "do one thing well" principle, but saved the day. (We register this as technical debt for the next iteration of the walk-in clinic.)
+% WARNING: At TGSO, the bundling of different functionalities into the Continuous Integration service broke the "do one thing well" principle, but saved the day. (We register this as technical debt for the next iteration of the Walk-In Clinic.)
 
 % RELATESTO:
 % SOURCE: While Continous Integration held the day together, we are sorry to report that the work is only documented in images and in the choreography of the day but not in any of our writings.
-% REMEMBER: Continous Integration may be the string that holds your current software galaxy together.
+% REMEMBER: Continous Integration may be the string that holds your current software galaxy together. When operated successfully, it is easily overlooked like the air we breathe.
 
 > More technically, I am interested in how things bounce around in
 > computer systems. I am not sure if these two things are related,

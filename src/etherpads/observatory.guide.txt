@@ -6,11 +6,6 @@
 % Questions for Christoph https://pad.constantvzw.org/p/guide.dearchristoph
 
 
-% TODO: OPENER PAGES
-% EMPTYPAGE:
-% EMPTYPAGE:
-
-
 
 % INTRODUCTION
 % ------------
@@ -159,12 +154,15 @@
 
 % COLOPHON:
 % =========
-% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.colophon
+% ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.colophon L
 
 % BIBLIST:
 % KEYWORDINDEX: https://pad.constantvzw.org/p/observatory.keywords
 
 % LICENSE: FAL
+
+
+
 
 
 

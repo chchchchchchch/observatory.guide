@@ -1,29 +1,155 @@
 % METHOD: Compiling a bestiary of software logos
 
 % REMEMBER:
-% WHAT: Since the early days of GNU-linux and cemented through the ubiquitous O'Reilly publications, the visual culture of software relies heavily on animal representations. But what kinds of animals, and to what effect?
-% HOW: - 
+% WHAT: The visual culture of software has relied heavily on animal representations since the early days of GNU-linux. This tendency was cemented into a tradition through the line-drawings used on the covers of the ubiquitous [O'Reilly publications](http://animals.oreilly.com/browse/). What actors are populating the realm of software observation, and to what effect?
 
-Compile a collection of logos and note the metaphors for observation:
-
-* stethoscope
-* magnifying glass
-* long neck (giraffe)
+% HOW: -
+Compile a collection of logos and note the metaphors for observation and their surrounding vocabularies. How are different relations between observers and objects of observation established through a combination of vocabularies and images?
 
 % WHEN:
 % WHO:
 % URGENCY:
 % NOTE:
 % WARNING:
-% EXAMPLE: - 
-% ----------
-% http://animals.oreilly.com/browse/
-% [check Testing the testbed pads for examples]
-% [something on bestiaries]
+% EXAMPLE: -
 
-% SRCCODE:
+This Bestiary was initiated during _Testing the testbed_, a two-day workshop intended to critically evaluate the _Internet of Things Inspector_, a testsuite for embedded devices proposed by the Princeton University’s Center for Information Technology Policy (CITP). Participants from Constant, Dyne:BXL, COSIC Leuven and others gathered to test the testbed with the help of their camera’s, smartphones, and other "things". As we compared different hard- and software set-ups for observing dataflows in IoT environments, we noticed that many of them were represented by animals and other agents with human traits that would perform the job of looking, analysing, inspecting and investigating. Here, we have expanded the initial collection to address network observation in general. What does it mean to "look" at the activity in a computer network? Who or what is looking and in what way?
+
+## Autopsy®
+
+https://www.sleuthkit.org/autopsy    
+tags: investigation, dissection, forensics
+
+% https://stuff2233.club/~dick/na/bestiary/autopsy_old.jpg
+% INFO: [legacy] Hound dog with face mask and surgeon hat.
+% https://stuff2233.club/~dick/na/bestiary/autopsy.png
+% INFO: Doberman dog with black scarf clenching a magnifying glass between his teeth.
+
+% SHOW: tgsobestiary.svg autopsy-old I W:.4
+% INFO: [legacy] Hound dog with face mask and surgeon hat.
+% SHOW: tgsobestiary.svg autopsy I W:.6
+% INFO: Doberman dog with black scarf clenching a magnifying glass between his teeth.
+
+"Autopsy® is a digital forensics platform and graphical interface to The Sleuth Kit® and other digital forensics tools. It is used by law enforcement, military, and corporate examiners to investigate what happened on a computer. You can even use it to recover photos from your camera's memory card."
 
 
-% RELATESTO:
+## Dowse
+
+http://dowse.eu    
+tags: divination, transubstantiation, clairvoyance
+
+% https://stuff2233.club/~dick/na/bestiary/dowse.png
+% INFO: Instrument touching or stirring liquid which is held in a round receptacle.
+
+"Dowse is a transparent proxy facilitating the awareness of ingoing and outgoing connections, from, to, and within a local area network. Dowse provides a central point of soft control for all local traffic: from ARP traffic (layer 2) to TCP/IP (layers 3 and 4) as well as application space, by chaining a firewall setup to a trasparent proxy setup. A core feature for Dowse is that of hiding all the complexity of such a setup."
+
+
+## Ghostery
+
+https://www.ghostery.com    
+tags: ghostbusting, time travel, immaterialization
+
+% https://stuff2233.club/~dick/na/bestiary/ghostery-logo.png
+% INFO: Friendly bright blue ghost with see-through eyes.
+
+"Faster, safer, and smarter browsing. Ghostery helps you browse smarter by giving you control over ads and tracking technologies to speed up page loads, eliminate clutter, and protect your data."
+
+
+## Hovelbot
+
+http://www.constantvzw.org/site/On-Journey-with-Hovelbot,2661.html    
+tags: exploration, sight-seeing, exquisite corpse
+
+% https://stuff2233.club/~dick/na/bestiary/hovelbot.jpg
+% INFO: Two pixelated snowy mountains floating between a message 'enjoy the ride' (in three languages).
+
+"Hovelbot is a computer program that, just like Frankenstein’s monster, quietly observes how humans live, in order to learn and be able  to share its stories with them. The visitor is asked to connect her phone to a local network. By doing so, the visitor can observe how the hidden activity happening on her device is giving form to Hovelbot. In turn Hovelbot takes its unintentional “teachers” on a journey that, even though it might remind us of the 19th century romantic pursues, will rather be a confrontation between our networked self and the artificial beings that make this network."
+
+
+## Iot inspector
+
+http://www.iot-inspector.com    
+tags: rangefinding, voyeurism, scouting
+
+% https://stuff2233.club/~dick/na/bestiary/iot_inspector.jpg
+% INFO: Wireless signal looking through binoculars.
+
+"Detect vulnerabilities in the firmware of IoT devices, no source code required, instant results, comprehensive reporting and alerting, covers a broad range of IoT devices, including IP Cameras, Routers, Printers and many more, ISP specific solution for CPE devices available.
+Inspection as a service."
+
+
+## Privacy Badger
+
+https://www.eff.org/privacybadger    
+tags: outsmarting, watching you watching me, shielding
+
+% https://stuff2233.club/~dick/na/bestiary/badger-stroke.png
+% INFO: Grinning badger looking cheeky.
+
+"Privacy Badger is a browser add-on that stops advertisers and other third-party trackers from secretly tracking where you go and what pages you look at on the web. If an advertiser seems to be tracking you across multiple websites without your permission, Privacy Badger automatically blocks that advertiser from loading any more content in your browser. To the advertiser, it's like you suddenly disappeared."
+
+
+## The Sleuth Kit®
+
+https://www.sleuthkit.org    
+tags: inspection, protection, hard-boiled
+
+% https://stuff2233.club/~dick/na/bestiary/the%20sleuth%20kit%20logo.gif
+% INFO: [legacy] Hound dog with a fedora hat looking clueless at a laptop.
+% https://www.sleuthkit.org/picts/hash3_v1_sm.jpg
+% INFO: Hound dog looking fierce and defensive.
+
+"The Sleuth Kit® (TSK) is a library and collection of command line tools that allow you to investigate disk images.  The core functionality of TSK allows you to analyze volume and file system data.  The plug-in framework allows you to incorporate additional modules to analyze file contents and build automated systems. The library can be incorporated into larger digital forensics tools and the command line tools can be directly used to find evidence."
+
+
+## Little Snitch
+
+https://www.obdev.at/products/littlesnitch    
+tags: tattletaling, whistleblowing
+
+% https://stuff2233.club/~dick/na/bestiary/littlesnitch_old.png
+% INFO: [legacy] A small humanoid figure (it could also be a duck?) wearing glasses, a red-blue striped propeller hat and blowing a whistle.
+% https://stuff2233.club/~dick/na/bestiary/littlesnitch_340.png
+% INFO: Orange striped propeller hat, so-called 'geek-attire'.
+
+"As soon as you’re connected to the Internet, applications can potentially send whatever they want to wherever they want. Most often they do this to your benefit. But sometimes, like in case of tracking software, trojans or other malware, they don’t. But you don’t notice anything, because all of this happens invisibly under the hood. Little Snitch makes these Internet connections visible and puts you back in control!"
+
+
+## Netflix Stethoscope
+
+http://techblog.netflix.com/2017/02/introducing-netflix-stethoscope.html    
+tags: auscultation, stretching out, diagnostic
+
+% https://stuff2233.club/~dick/na/bestiary/netflix-stetoscope.png
+% INFO: Vacantly smiling giraffe carrying a stethoscope.
+
+"Netflix is pleased to announce the open source release of Stethoscope, our first project following a User Focused Security approach. The notion of "User Focused Security" acknowledges that attacks against corporate users (e.g., phishing, malware) are the primary mechanism leading to security incidents and data breaches, and it’s one of the core principles driving our approach to corporate information security. It’s also reflective of our philosophy that tools are only effective when they consider the true context of people’s work.
+Stethoscope is a web application that collects information for a given user’s devices and gives them clear and specific recommendations for securing their systems. If we provide employees with focused, actionable information and low-friction tools, we believe they can get their devices into a more secure state without heavy-handed policy enforcement."
+
+
+## The Transparency Grenade
+
+https://transparencygrenade.com    
+tags: explosion
+
+% https://stuff2233.club/~dick/na/bestiary/transparency_grenade.jpg
+% INFO: Translucent replica of a Soviet F1 Hand Grenade.
+
+"The lack of Corporate and Governmental transparency has been a topic of much controversy in recent years, yet our only tool for encouraging greater openness is the slow, tedious process of policy reform. Presented in the form of a Soviet F1 Hand Grenade, the Transparency Grenade is an iconic cure for these frustrations, making the process of leaking information from closed meetings as easy as pulling a pin."
+
+
+## Wireshark
+
+https://www.wireshark.org/    
+tags: knifing through, smelling blood, sinking teeth
+
+% https://stuff2233.club/~dick/na/bestiary/wiresharklogo.png
+% INFO: Shark fin cutting through ocean waves.
+
+"Wireshark is the world’s foremost and widely-used network protocol analyzer. It lets you see what’s happening on your network at a microscopic level and is the de facto (and often de jure) standard across many commercial and non-profit enterprises, government  agencies, and educational institutions. Wireshark development thrives thanks to the volunteer contributions of networking experts around the  globe and is the continuation of a project started by Gerald Combs in 1998."
+
+
+% RELATESTO: https://pad.constantvzw.org/p/observatory.guide.glossary
+% RELATESTO: http://pad.constantvzw.org/p/observatory.guide.testingtestbed
 % SOURCE:
 

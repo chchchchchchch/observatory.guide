@@ -2,7 +2,7 @@
 
 % REMEMBER:
 % WHAT: Interventions in your working-environment. 
-% HOW: Different strategies can be applied to temporarily redefine the workspace and its perception. (% CARLINSAYS: this could be "the workspace and its perceptual architecture" or "the workspace and your perceptions of it." Right now the "its" referes to the workspace so it is about the workspace's perceptions and not the inhabitants perceptions.)
+% HOW: Different strategies can be applied to temporarily redefine the workspace and its perceptual structures.
 % WHEN:
 % WHO: 
 % URGENCY: Aknowledging space and its correlate, noise, as conditioning observations (WTC vs. Museum vs. University vs. Startup Office vs. Shifting Walls that became Water Fountains).
@@ -14,7 +14,7 @@
 
  Fountain refreshment: augmenting a piece of standardized office equipment designed to dispense water to perform a decorative and soothing function.
 
-> Actual silence is not at the moment considered comfortable. One of the visible symptoms of our desire to take the edge off the silence can be observed through the appearance of fountains in public space. The fountain's purpose isto give off neutral sound, like white noise without the negative connotations.
+> Actual silence is not at the moment considered comfortable. One of the visible symptoms of our desire to take the edge off the silence can be observed through the appearance of fountains in public space. The fountain's purpose is to give off neutral sound, like white noise without the negative connotations.
 
 % NOTE: Gaining access to standardized water dispensing equipment turned out to be more difficult than expected as such equipment is typically licensed/rented rather than purchased outright. Acquiring a unit that could be modified required access to secondary markets of second hand office equiment in order to purchase a disused model.
 
@@ -33,5 +33,5 @@ One-way mirrors can be used to partition your working environment in a 4-dimensi
 % SOURCE: These two examples of _Space-Noise Rearrangements_ were developed by [Mia Melvaer](http://www.miamelvaer.com/technogalactic).
 
 Following pages:     
-Script for _I hope you are comfortable, [insert name]._
+Script for **_I hope you are comfortable, [insert name]_**.
 

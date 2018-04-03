@@ -1,7 +1,5 @@
 % METHOD: Encounter several historical collections of hardware back-to-back
 
-% CARLINSAYS: Do we want to capitalize all of words naming the Method to make it look like a title?
-
 % REMEMBER:
 % WHAT:
 % HOW: This can be done by identifying one or more computer museums and visiting them with little time in-between. Visiting a friend with a large basement and lots of left-over computer equipment can have a similar effect. Seeing and possibly touching hardware from different contexts (state-administration, business, research, ...), periods of time, cultural contexts (California, Germany, French-speaking Belgium) and price ranges allows you to sense the interactions between hardware and software development.
@@ -15,7 +13,7 @@
 
 % EXAMPLE: Spaghetti Suitcase
 
-At one point during the demonstration of a Bull computer at Computer Museum NAM-IP, our museum guide (% CARLINSAYS: Just in the context of this publication as a guide maybe we should use docent or at least qualify it with the descriptor museum?) revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression for early code that used many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
+At one point during the demonstration of a Bull computer at Computer Museum NAM-IP, our museum guide revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression for early code that used many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
 
 % SHOW: tgsoimages.svg spaghetticode1 N
 % INFO: Spaghetti Codes
@@ -25,17 +23,17 @@ Preserving old hardware is a means of observing the physical manifestation of so
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3244
 % SHOW: tgsoimages.svg touchingsoftware N
-% INFO: Touching Software
+% INFO: Museum guide at NAM-IP touching software.
 
 
 % EXAMPLE: Play with binary. Create punch cards.
 
-"The highlight of the collection is to revive a real punch card workshop of the 1960s." (% CARLINSAYS: I don't want to change this because it is a quote but the right way to say it would be "is a recreation of a real punch card workshop"...it is not grammatically correct right now and also does not totally make sense in English at least)
+"The highlight of the collection is a recreation of a real punch card workshop of the 1960s."
 
 % http://observatory.constantvzw.org/images/wednesday/P1010145.JPG
 % http://observatory.constantvzw.org/images/wednesday/P1010254.JPG
 % SHOW: tgsoimages.svg commandpunch N
-% INFO: Create punchcards "À la table des manipulations"
+% INFO: "À la table des manipulations", manually creating punchcards with the EMPUNCH model 80.
 
 % http://observatory.constantvzw.org/images/wednesday/P1040696.JPG
 % SHOW: tgsoimages.svg punchcard N
@@ -52,22 +50,18 @@ Preserving old hardware is a means of observing the physical manifestation of so
 
 % EXAMPLE: Collection de la Maison des Écritures d'Informatique & Bible, Maredsous  
 
-The particularity of this collection lies in the fact that it conserves and presents multiple stages of the life of a software from its initial computerization through today. (% CARLINSAYS: Is there a way to name the Bible in this first sentence?)
-The idea of introducing informatics as a method for working with/on the Bible (versions in Hebrew, Greek, Latin, and French) dates back to 1971, via punch card recordings and their memorization on magnetic tape. Then came the step of analyzing texts using computers.
+The Collection de la Maison des Écritures d'Informatique & Bible was donated to NAM-IP by the _Centre Informatique et Bible_ that was founded in 1979 at the Benedictine abbey of Maredsous. The center was located in the "House of Scripture", a pavilion near the entrance to the Abbey where biblical scholars, linguists and computer scientists applied computer processing to bible-texts and it's references.
+
+The idea of introducing informatics as a method for working with and on the Bible dates back to 1971 when it was done via punch cards and then transferred to the memory of magnetic tape. Then came the step of analyzing texts using computers while at the same time introducing computers to the delights of reading the Bible with the help of Optical Character Recognition. The particularity of this collection lies in the fact that it conserves and presents multiple moments in the life of a text rendered into and analyzed through software,  starting from its initial stages of computerization and going up to contemporary forms of software.
 
 % http://gallery.constantvzw.org/var/resizes/Preparing-the-Techno-galactic-Software-Observatory/DSC05019.JPG?m=1490635726
 % SHOW: tgsoimages.svg maredsous N
-% INFO: Maredsous 89. 15 ans d'Informatique et Bible
+% INFO: 'Maredsous 89. 15 ans d'Informatique et Bible' ('Maredsous. 15 years of informatics and bible')
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3267
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3271
 % SHOW: tgsoimages.svg lexique N
-% INFO: Lexique description Needed
-
-
-% (% CARLINSAYS: These two images seem like they should go with the Bull example and up top since the second one is the
-% sign for the Computer Museum and should be kept separate from the images that illustrate the Bible software example)
-
+% INFO: Continuous form paper with lexical research and a copy of the _Interface Bulletin_[^http://www.cibmaredsous.be/cib3000.htm], published by the Centre Informatique et Bible.
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.jean.heuns

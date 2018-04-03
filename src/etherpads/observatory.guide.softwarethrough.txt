@@ -1,7 +1,7 @@
 % METHOD: Searching "software" through software
 % WHAT: A quick way to sense the ambiguity of the term "software" is to go through the manual files on your hard drive and observe the cases in which the term is used.
 % HOW: Command-line oneliner
-% WHY: Software is a polymorphic (% CARLINSAYS: can we use polysemous here instead? polymorphic means many shaped rather than many meanings) term that takes on different meanings and comes with different assumptions for the different agents involved in its production, use, and all other forms of encounter and subjection. (% CARLINSAYS: the end of this sentence "and all other forms of encounter and subjection" doesn't really fit/work. Can we say "...and comes with different assumptions for the different agents involved in its production and use and for those who encounter or are subjected to software in any other way or form." Or some other reworking?) From the situated point of view of the software present on your machine, when and why does software call itself by name?
+% WHY: Software is a polysemous term that takes on different meanings depending on where, when and by who it is summoned. It comes with different assumptions for the different agents involved in its production, and for those whom otherwise use, encounter, or are subjected to it in any way or form. From the situated point of view of the software present on your machine, when and why does software call itself by that name. 
 
 % EXAMPLE: - 
 

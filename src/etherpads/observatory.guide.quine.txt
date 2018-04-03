@@ -30,7 +30,6 @@ You may also take quines as point of departure or limit-ideas for exploring soft
 "Aquine is aquine is aquine."    
 Aquine is not a quine.    
 This is not aquine.    
-(% CARLINSAYS: Is it ok that I added punctuation to the last two lines so that they match the prior two or does that make it incorrect because they are examples of quines that were run that did not have punctuation? Also, I love this.)
 
 % REMEMBER: Although seemingly absolutely useless, quines can be used as exploits.
 

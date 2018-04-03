@@ -1,13 +1,13 @@
 % METHOD: Side Channel Analysis
 
 
-% WHAT: A side channel attack is conducted by taking advantage of "leakage from boundaries".
-% HOW: As software runs on hardware it emanates radio-magnetic waves. You can build an antenna and use it to capture these waves and reconstruct what the software is doing.(% CARLINSAYS:This seems like an example not like a general HOW)
+% WHAT: A side channel attack is conducted by taking advantage of "leakage from boundaries". They are made possible by disregarding the abstraction of software into pure logic and focusing on the physical effects of the running of software which become backdoors to observe its functioning, hence re-affirming the materiality of software.
+
+% HOW: As software runs on hardware, it emanates radio-magnetic waves, and you can, for example, build an antenna to capture these waves and then by analyzing them, reconstruct what the software is doing.
 % WHEN:
 % REMEMBER: "Hardware lives in the real world and real world properties lead to side channels."          
 % WHO: bad guys/good guys
-% URGENCY:  Side Channel attacks are possible by disregarding the abstraction of software into pure logic: the physical effects of the running of software become backdoors to observe its functioning, hence re-affirming the materiality of software. (% CARLINSAYS: this seems like the What or the How)
-
+% URGENCY: 
 % NOTE:
 % WARNING: **engineers are good guys!**       
 
@@ -22,4 +22,4 @@
 
 
 % RELATESTO:
-% SOURCE: This method is inspired by a talk by Thomas De Cnudde from the COSIC research group at the department of Electrical Engineering, KULeuven. Notes from the presentation: http://observatory.constantvzw.org/etherdump/side-channel-analysis.diff.html
+% SOURCE: This method is inspired by a talk by Thomas De Cnudde from the COSIC research group at the department of Electrical Engineering, KULeuven. Notes from his presentation: http://observatory.constantvzw.org/etherdump/side-channel-analysis.diff.html

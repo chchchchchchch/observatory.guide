@@ -429,7 +429,7 @@
   acmid      = {315644}
 }
 
-@misc{ @xing:flowcharts,
+@misc{ xing:flowcharts,
   title  = {Understanding Flowcharts},
   author = {Lau, Justin and Xing}, 
   year   = {2009},

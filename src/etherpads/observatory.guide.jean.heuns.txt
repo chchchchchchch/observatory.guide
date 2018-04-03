@@ -4,7 +4,7 @@
 
 % WHAT: Collect personal narratives around software history. Retrace the path of an individual's relation to software, how it changed during the years, and what human access memories surround it. Look at software through personal relations and emotions.
 % HOW: Interviews are a good way to do it, but informal conversations work, too.
-% WHEN: Whenever (retirement period is a plus). (% CARLINSAYS: retirement as in speaking to people who are retired ? peggy : yes)
+% WHEN: Whenever (talking to people who are retired is a plus).
 % WHO: Anyone with ten years or more of any kind of experience with software.
 % URGENCY: High.
 % NOTE: 
@@ -20,8 +20,6 @@
 % EXAMPLE: - 
 
 **Jean Heuns has been collecting servers, calculators, softwares, magnetic tapes hard disks for thirty years. He came to an agreement with the Department of Computer Sciences (KU::Leuven) for them to be displayed in the department hallways.**
-
-% a few quotes to the interview transcription go here, interview in appendix
 
 % JH: _At the time computers were mainframes and you did feed them with programs by punch cards. Programming was writing down the program, then you punched it, and the next day you get results, mostly error. That's the way it worked at that time. To teach us programming, they used the langage of that time, Fortran and some kind of invented assembly langage, it didn't really exist, it was simplified._
 
@@ -40,7 +38,7 @@
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3361
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3355
-% SHOW: tgsoimages.svg kuleuven1
+%!SHOW: tgsoimages.svg kuleuven1
 
 % RELATESTO: 
 % SOURCE: Quotes taken from the interview with Jan Huens, see following pages.

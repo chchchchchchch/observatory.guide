@@ -5,14 +5,14 @@
 % WHAT: Sharing the experience of trying to solve a hard-boiled software noir.
 % HOW:
 % WHEN: It is difficult to take notes while working on critical infrastructure, but the sooner notes are compiled, the more vivid the report.
-% WHO: Bug reports are sometimes (% CARLINSAYS:  I would say "often" instead of "sometimes") presented in a dry format intended for insiders only. But they do not have to be dry. On the contrary, they can have a rather convivial format.
+% WHO: Bug reports are often presented in a dry format intended for insiders only. But they do not have to be dry. On the contrary, they can have a rather convivial format.
 % URGENCY: Embracing moments of breakdown as opportunities to demystify the workings of software and the practice of software debugging.
 % WARNING: 
 
 % NEWPAGE:
 % EXAMPLE: - 
 
-On monday morning, with the Walk-in Clinic about to open, Etherpad had stopped working but it was unclear why. Where did the etherpad 'live'? What could be done to bring it back to normal operation?
+On monday morning, with the Walk-In Clinic about to open, Etherpad had stopped working but it was unclear why. Where did the etherpad _live_? What could be done to bring it back to normal operation?
 A detailed bug report was filed, starting by looking around the pi's filesystem by reading `/var/log/syslog`  in `/opt/etherpad` and in a subdirectory named `var/` there was `dirty.db`, and dirty it was.
 
 > After some getting used to the various commands to navigate

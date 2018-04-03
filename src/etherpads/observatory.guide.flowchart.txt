@@ -4,9 +4,9 @@
 
 A flowchart is a type of diagram that represents an algorithm, workflow, or process by showing the steps as boxes of various kinds and depicting their order by connecting the boxes with arrows. This diagrammatic representation illustrates a solution model to a given problem. Flowcharts are used in analyzing, designing, documenting, or managing a process or program in various fields.[^]{https://en.wikipedia.org/wiki/Flowchart}
 
-% WHY: Through flowcharts one will be able to analyze and reflect on one's own software situation. (% CARLINSAYS: Not a lot of other methods have had the WHY filled out. It seems to overlap with the URGENCY which is also the most inconsistently interpreted across the methods.)
-% URGENCY: Using flowchart observation methods towards analysis and self-reflection of software situation.(% CARLINSAYS: This is an incomplete sentence. Is there a way to add "...and self-reflection on one's own software situation will/may allow...XYZ." It also seems very similar to the WHY)
-% NOTE: The term 'software situation' is suggested as a good replacement for 'software problem'. 
+% WHY: Through flowcharts one will be able to analyze and reflect on one's own software situation.
+% URGENCY: Using flowchart observation methods towards analysis will result in on-demand revelation of flows, relations, and connections previously obscured.
+% NOTE: The term _software situation_ is suggested as a good replacement for _software problem_.
 % WHEN: 
 % WHO:
 % WARNING:
@@ -89,14 +89,14 @@ More info → see Rafaella flowchart pic
     * http://observatory.constantvzw.org/images/wednesday/P1040730.JPG
     * Left to right, top to bottom:
     * input/output = parallelogram
-    * Auxiliary operation = square / gyrational square (% CARLINSAYS: i have decapitalized Gyrational so that it is in keeping with the rest of the list)
+    * Auxiliary operation = square / gyrational square
     * Preparation - hexagon 
     * Drum or disk - oval
     * Process - rectangle
     * Off-line storage - triangle
     * On-line storage - like a quarter moon
     * Display -  one side oval and one side a little oval
-    * Manual input - rectangle, but top side askew / irregular rectangle (% CARLINSAYS: I have decapitalized Irregular so that it is in keeping with the rest of the list)
+    * Manual input - rectangle, but top side askew / irregular rectangle
     * Document - rectangle, but buttom line is a wave
     * Manual Operation - tilted rectangle
     * Magnetic Tape - circle but with a square on the buttom right 
@@ -123,10 +123,10 @@ More info → see Rafaella flowchart pic
 ### Friday:
 
 **15:30 - 16:15**    
-We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the two rulers has a specific shape and has a specific meaning. (% CARLINSAYS: I changed the prior sentence from this: "It seems that every symbol on the ruler with specific shape has special meaning". If I am misunderstanding the intent of the sentence then the original text needs clarification.) There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without descriptions. We tried to figure out their meaning. In total we counted on the X IBM and on the X Burroughs symbols (% CARLINSAYS: Are the X's here supposed to be the number of symbols on each ruler? That needs to be added if so. If not then something else needs to be done with the sentence to make it make sense). The specific literature explained to us that engineers have a kind of standard for these symbols. These symbols are vocabulary. 
+We started our undertaking by analysing the rulers by IBM and Burroughs. It seems that every symbol on the two rulers has a specific shape and has a specific meaning. There are similarities between the shapes on the two rulers. On the Burroughs we found some symbols without descriptions. We tried to figure out their meaning. We counted up the symbols on the IBM and Burroughs rulers. The specific literature explained to us that engineers have a kind of standard for these symbols. These symbols are vocabulary.
 
 **16:15 - 16:40**    
-We started with analyzing an educational flow chart as our case example: https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg (% CARLINSAYS: should this link be in the main body of the text? I think it should be there as a footnote instead in which case it needs brackets added around it) We were able to figure out what the arrows on the ruler meant.They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point.(% CARLINSAYS: This sentence repeated. I cut it but if the repetition was on purpose here is the text to reinsert: "Triangles can direct movement based which way they point.") In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
+We started with analyzing an [educational flow chart as our case example](https://en.wikipedia.org/wiki/Flowchart#/media/File:LampFlowchart.svg): We were able to figure out what the arrows on the ruler meant. They are used in combination with the decision symbol. In shape studies, triangles can be used to direct movement based on the direction they point. In the flowchart, the options are represented by rectangles and squares. In shape studies rectangles and squares are stable. They’re familiar and trusted shapes and suggest honesty. 
 
 **16:45 - 17:00**    
 We analyzed a flow chart of a multiplication algorithm. Its content illustrated an instruction to shift the number left or right . The decision box instructed you to repeat it 32 times for the whole number! 
@@ -134,7 +134,6 @@ The rectangles were again representing options, while the flexible factors were 
 
 **17:00 - 17:15**    
 We realized in our undertaking that we needed to jump into an internal perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to chart the elevator to the first floor from the perspective of the elevator. To achieve this task we agreed to do field research and go to the first floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. [^]{Further elevator ruminations were made through reference to Marc Isaacs. Lift. UK, 2001. https://www.youtube.com/watch?v=FJNAvyLCTik}
-(% CARLINSAYS: The text above moved between the past and present tense. I have put it all in the past tense except for the very last moment of deciding to do the final elevator flowchart tomorrow. I also assumed that the citation of the documentary Lift should be in a footnote? Or is it meant to be there to indicate the group going home and watching the movie?)
 
 **17:15 - 17:40**    
 To round off the day we ended with some general reflections. It seems that the different interpretations of symbols have been integrated into flowcharts from the early ones of the 1920's until now.[@xing:flowcharts] To put this knowledge into practice we started to sketch out the flowchart on the wall using Post-its.
@@ -145,33 +144,31 @@ To round off the day we ended with some general reflections. It seems that the d
 * Zenit browser extension
 * Iconographic analyses of flow chart symbols
 * Call-flow && zenit modeling template for the drop-in clinic interview
-(% CARLINSAYS: Can these be bullet points in the PDF instead of just double-spaced?)
 
 % PDFFIX: 1 \newpage
 
 ### Saturday:
 
 **11:00 - 11:40**    
-We updated our fellow researchers(% CARLINSAYS: this said "research follower" which is a lovely phrase but I think it meant fellow researchers?) about our undertakings.
+We updated our research followers and fellow researchers about our undertakings.
 
 **14:45-18:00**    
-Zenit (h)modeling/analysis    
-A method derived from a removal of textual informating from flowcharts -- related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam) an early 20th Century movement, and zenith -- an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith).
+Zenit(h) modeling/analysis    
+A method derived from a removal of textual informating from flowcharts -- related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam) an early 20th Century movement, and zenith -- an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith) 
 
-Connection inspiration: (% CARLINSAYS: can we make all these links actually hyperlinked in the PDF? can they be a smaller font? i know this is documentation so i am not comfortable getting rid of it but i don't think the typed out links look great in the PDF)     
-https://helios.gsfc.nasa.gov/flowchart.html
+Connection inspiration: https://helios.gsfc.nasa.gov/flowchart.html)
 
-Some historical experimetation examples:    
+Some historical experimentation examples:    
 http://www.e-w-n-s.net/minis-html/futuremillionaire/transition/v.gif
 http://www.e-w-n-s.net/minis-html/futuremillionaire/transition/arrows.gif
 http://www.e-w-n-s.net/minis-html/_navigation.htm
 
-Material: https://commons.wikimedia.org/wiki/Flow_chart
-
+Material:    
+https://commons.wikimedia.org/wiki/Flow_chart
 
 
 **Afternoon**    
-Josef working on all the ideas at the same time    
+Joseph working on all the ideas at the same time    
 Continue with flow chart elevator    
 Lara working on Zenit(h) modeling/analysis leading to call-flow template, and zenit browser plugin   
 Michaela helping out the flow chart of the elevator as a case study   
@@ -219,7 +216,7 @@ manifest.json:
   "manifest_version": 2,
   "name": "extension",
   "version": "1.0",
-  "description": "this is the browser exteions",
+  "description": "this is the browser extensions",
   "icons": {
     "48": "icons/icon-name-here.png"
   },
@@ -232,7 +229,6 @@ manifest.json:
 }
 % SRCCODE: plain
 
-(% CARLINSAYS: is exteions supposed to be extension?)
 
 ## Appendix C
 

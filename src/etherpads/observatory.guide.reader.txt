@@ -1,25 +1,42 @@
 % METHOD: Prepare a reader to think theory with software
 % REMEMBER:
 % WHAT: Compile a collection of texts about software.
-% HOW: Choose texts from different realms. Software observations are mostly done in the realm of the technological and the pragmatic. Also the ecology of texts around software includes first and foremost manuals, technical documentation and academic papers by software engineers and these all 'live' in different realms. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes philosophy. (% CARLINSAYS: This text was at the end and was an incomplete sentence so I am putting it here in case someone wants to finish it "By compiling a reader ... ways of speaking/writing about. Proximity.")
-% WHEN:
+% HOW: Choose texts from different realms. Software observations are mostly done in the realm of the technological and the pragmatic. The ecology of texts around software includes first and foremost manuals, technical documentation, and academic papers by software engineers which all _live_ in different realms of expertise. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes philosophy. A reader allows all of these different kinds of text to intersect and intermingle. It helps to understand the many types of vocabularies that exist around software, and to see what types of observation each of them invites.
 % WHO:
 % URGENCY:
-% NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide. (% CARLINSAYS: I don't think we ever did this so maybe we need to delete this line"?) 
+% NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide.
 % WARNING:
 % EXAMPLE: -
-
-% Pull some quotes from the reader, for example from the chapter: Observation and its consequences.
-
-% Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015
-% http://sci-hub.bz/10.1177/0162243915578486
-
-% Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014,
-% https://www.nngroup.com/articles/talking-to-users/
+Samples from the _Techno Galactic Software Observatory reader_, chapter: _Observation and its consequences_:
 
 % Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive. 2004
 % http://texttechnology.mcmaster.ca/pdf/vol13_2_06.pdf
 % PDF: http://observatory.constantvzw.org/books/vol13_2_06.pdf 1-2 1x2
+% INFO: **Media studies**: Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive.
+
+% Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+% http://observatory.constantvzw.org/books/US395781.pdf
+% PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
+% INFO: **Historical document**: Herman Hollerith. Art of compiling statistics.
+% U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+
+% Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015
+% INFO: **Science studies ethnography**: Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship.
+% http://sci-hub.bz/10.1177/0162243915578486
+
+% Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000.
+% INFO: **Cyberpunk meets software studies**: Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000.
+% https://library.memoryoftheworld.org/b/xpDrXE_VQeeuDDpc5RrywyTJwbzD8eatYGHKmyT2A_HnIHKb
+
+% Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015
+% INFO: **Technical documentation**: Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer
+% www.memcon.com/pdfs/proceedings2015/SAT104_FuturePlus.pdf
+
+
+% ////////////////////////////////////////////////////////////
+
+% Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014,
+% https://www.nngroup.com/articles/talking-to-users/
 
 % Alexander R. Galloway, The Poverty of Philosophy: Realism and Post-Fordism, Critical Inquiry. 2013,
 % http://cultureandcommunication.org/galloway/pdf/Galloway,%20Poverty%20of%20Philosophy.pdf
@@ -27,25 +44,13 @@
 % Edward Alcosser, James P. Phillips, Allen M. Wolk, How to Build a Working Digital Computer. Hayden Book Company, 1968.
 % https://archive.org/details/howtobuildaworkingdigitalcomputer_jun67
 
-% Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000.
-% https://library.memoryoftheworld.org/b/xpDrXE_VQeeuDDpc5RrywyTJwbzD8eatYGHKmyT2A_HnIHKb
-
-% Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015
-% www.memcon.com/pdfs/proceedings2015/SAT104_FuturePlus.pdf
-
 % Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015
 % http://palms.ee.princeton.edu/system/files/SP_vfinal.pdf
-
-% Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
-% http://observatory.constantvzw.org/books/US395781.pdf
-% PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
-% INFO: Sample from the Techno Galactic Software Observatory reader: Herman Hollerith. Art of compiling statistics.
-% U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
-
 
 
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion
 % SOURCE: The reader for the _Technogalactic Software Observatory_ can be consulted here: http://pad.constantvzw.org/p/observatory.reader
+
 
