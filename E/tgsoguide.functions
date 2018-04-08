@@ -1022,10 +1022,13 @@ function QUOTESTYLE() {
 
 function REF() {
 
-  REFID=`echo $*             | # WHAT? 
-         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
-         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
-         md5sum | cut -c 1-16` # CREATE UNIQUE ID
+  REFID=`echo "$*"                        | #
+         sed 's,http.\?://,,'             | #
+         sed 's/ //g'                     | #
+         md5sum | cut -c 1-8              | #
+         md5sum | cut -d " " -f 1         | #
+         base64 | tr  [:upper:] [:lower:] | #
+         cut -c 1-8`                        #
   write2src "\label{$REFID}"
 
 }
@@ -1034,10 +1037,13 @@ function REF() {
 
 function REFREF() {
 
-  REFID=`echo $*             | # WHAT? 
-         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
-         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
-         md5sum | cut -c 1-16` # CREATE UNIQUE ID
+  REFID=`echo "$*"                        | #
+         sed 's,http.\?://,,'             | #
+         sed 's/ //g'                     | #
+         md5sum | cut -c 1-8              | #
+         md5sum | cut -d " " -f 1         | #
+         base64 | tr  [:upper:] [:lower:] | #
+         cut -c 1-8`                        #
   write2src "\mbox{(→ P.\pageref{$REFID}\,)}"
 
 }
