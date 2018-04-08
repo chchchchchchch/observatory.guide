@@ -83,14 +83,21 @@ function SEEHERE() {
 
 function ATTACHMENT() {
 
-  SRCBASE=`echo $* | sed 's/ [A-Z]\b//g' | sed 's/ //g'`
+  SRCBASE=`echo $*             | # DISPLAY ARGUMENTS
+           sed 's/ [A-Z]\b//g' | # RM FLAGS
+           sed 's/ /\n/g'      | # PUT ON SEPARATE LINES
+           head -n 1`            # GET FIRST
   SRCPLUS="$SRCBASE/export/txt"
-
 
   REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
   if [ $REPLYPLUS == '200' ]; then
        SRCGET="$SRCPLUS";else SRCGET="$SRCBASE" ; fi
   SRCHREF=`echo $SRCBASE | sed 's/^[ ]*//'` # LINK TO SRC, EASIFY EDIT
+
+  LINES=`echo $* | sed "s/ /\n/g"    | # SPACES TO NEWLINES
+         sed "/[^0-9\\-]/d"          | # NO LINES WITH MORE THAN NUMS AND -
+         egrep -v "^-|-$"            | # IGNORE ISOLATED -
+         grep -v "^[ ]*$" | tail -n 1` # NO EMPTY / LAST LINE ONLY
 
   IDT=`echo "$1" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
   ATTID=`echo ${IDT} | md5sum | cut -d " " -f 1 | #
@@ -126,7 +133,7 @@ function ATTACHMENT() {
      else
            write2src "\cleartorightblack"
      fi
-           INCLUDE $SRCGET 
+           INCLUDE $SRCGET $LINES
   fi
 
 }
