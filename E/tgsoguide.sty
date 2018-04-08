@@ -289,6 +289,10 @@
                  {\end{multicols}}
   \makeatother
 
+ %\newcommand{\refref}[1]{\mbox{(→ P.\pageref{#1})}}
+  \newcommand{\refref}[1]{\raisebox{0\baselineskip}%
+                          [0pt][0pt]{(\hspace{-.5em}%
+                          \symarrowright\hspace{2em} P.\pageref{#1})}}
 
 % --------------------------------------------------------------------------- % 
 %  H E A D L I N E S

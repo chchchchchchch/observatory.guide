@@ -1044,7 +1044,8 @@ function REFREF() {
          md5sum | cut -d " " -f 1         | #
          base64 | tr  [:upper:] [:lower:] | #
          cut -c 1-8`                        #
-  write2src "\mbox{(→ P.\pageref{$REFID}\,)}"
+ #write2src "\mbox{(→ P.\pageref{$REFID}\,)}"
+  write2src "\refref{$REFID}"
 
 }
 
