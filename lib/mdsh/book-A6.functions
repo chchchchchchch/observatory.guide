@@ -21,8 +21,7 @@ function MKPDFXCOMPLIANT() {
 
 # PDF/X COMPLIANCY
 # ---------------- #
-# echo "\usepackage[x-1a]{pdfx}"                       >> ${TMPID}.preamble
-
+  echo "\usepackage[x-1a]{pdfx}"                       >> ${TMPID}.preamble
   echo "<?xpacket begin=''
          id='W5M0MpCehiHzreSzNTczkc9d'?>"              > $TMPDIR/pdfx-1a.xmp
   cp "$COLORPROFILE" $TMPDIR
