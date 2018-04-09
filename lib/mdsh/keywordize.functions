@@ -15,7 +15,7 @@ function KEYWORDIZE() {
 
    # PUT WORDS ON SEPARATE LINES
    # ---------------------------
-     sed -i "s/[ ]\+/ $SFOO\n/g" $SRCDUMP
+     sed -i "s/[ ]\+/ $SFOO\n/g"   $SRCDUMP
 
    IFS=$'\n'
    for INDEXTHIS in `cat ${TMPID}.keywords         | # TAKE LIST
@@ -42,7 +42,7 @@ function KEYWORDIZE() {
            # solved via LaTeX (for section so far ...)
            # set +H;
            # ADD \index TO END OF LINE
-             sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO/I" $SRCDUMP
+             sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO\n/I" $SRCDUMP
              sed -i "s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
          done
         sed -i "s/K$UN//g" $SRCDUMP ${TMPID}*.verbatim # NORMALIZE PROTECTED KEYWORD
