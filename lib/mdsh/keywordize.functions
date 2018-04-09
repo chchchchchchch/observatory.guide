@@ -13,9 +13,13 @@ function KEYWORDIZE() {
       S=S`echo $RANDOM | cut -c 1-2`P
    SFOO=S`echo $RANDOM | cut -c 1-2`S
 
+   # PROTECT EMPTY LINES
+   # -------------------
+     sed -i "s/^[ \t]*$/E${UN}L/" $SRCDUMP
+
    # PUT WORDS ON SEPARATE LINES
    # ---------------------------
-     sed -i "s/[ ]\+/ $SFOO\n/g"   $SRCDUMP
+     sed -i "s/[ ]\+/ $SFOO\n/g"  $SRCDUMP
 
    IFS=$'\n'
    for INDEXTHIS in `cat ${TMPID}.keywords         | # TAKE LIST
@@ -42,7 +46,7 @@ function KEYWORDIZE() {
            # solved via LaTeX (for section so far ...)
            # set +H;
            # ADD \index TO END OF LINE
-             sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO\n/I" $SRCDUMP
+             sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO/I" $SRCDUMP
              sed -i "s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
          done
         sed -i "s/K$UN//g" $SRCDUMP ${TMPID}*.verbatim # NORMALIZE PROTECTED KEYWORD
@@ -56,8 +60,11 @@ function KEYWORDIZE() {
     sed -i -e ":a;N;\$!ba;s/$SFOO\n/ /g" \
         -i -e "s/$SFOO/ /g" -i -e "s/[ ]\+/ /g" $SRCDUMP
 
-   ) # END SUBSHELL
+  # RESET (PROTECT EMPTY LINES)
+  # --------------------------
+    sed -i "s/E${UN}L/\n/" $SRCDUMP
 
+   ) # END SUBSHELL
 
    if [ "$OUTPUTFORMAT" == "pdf" ];then
 
