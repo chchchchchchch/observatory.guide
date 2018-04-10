@@ -1328,6 +1328,9 @@ function SXHOW() {
  # INJECT NON-BREAKING SPACE HACK
    sed -i 's,\([a-zA-Z]\)\(::\)\([a-zA-Z]\),\1~\3,g' $SRCDUMP
 
+ # INJECT LINEBREAK HACK
+   sed -i 's,\([a-zA-Z]\)\(:;\)\([a-zA-Z]\),\1 \\\\ \3,g' $SRCDUMP
+
   }
 
  # ------------------------------------------------------------------------- #
