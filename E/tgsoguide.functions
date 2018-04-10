@@ -520,11 +520,13 @@ function SHOW() {
                  grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
                  cut -d ":" -f 2-`           # CUT AFTER :
             if [ "$REF" != "" ];then         # IF REF IS SET
-                  REF=`echo $REF           | # GET REF CODE
-                       sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
-                       sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
-                       md5sum              | # MAKE HASH
-                       cut -c 1-16`          # CUT HASH
+                  REF=`echo $REF                        | #
+                       sed 's,http.\?://,,'             | #
+                       sed 's/ //g'                     | #
+                       md5sum | cut -c 1-8              | #
+                       md5sum | cut -d " " -f 1         | #
+                       base64 | tr  [:upper:] [:lower:] | #
+                       cut -c 1-8`                        #
             else  REF=`echo $RANDOM        | # RANDOM REF CODE
                        sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
                        sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
@@ -657,11 +659,13 @@ function PDF() {
           grep '^REF:' | head -n 1  | # MATCH PATTERN/TAKE FIRST
           cut -d ":" -f 2-`           # CUT AFTER :
      if [ "$REF" != "" ];then         # IF REF IS SET
-           REF=`echo $REF           | # GET REF CODE
-                sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
-                sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
-                md5sum              | # MAKE HASH
-                cut -c 1-16`          # CUT HASH
+           REF=`echo $REF                        | #
+                sed 's,http.\?://,,'             | #
+                sed 's/ //g'                     | #
+                md5sum | cut -c 1-8              | #
+                md5sum | cut -d " " -f 1         | #
+                base64 | tr  [:upper:] [:lower:] | #
+                cut -c 1-8`                        #
      else  REF=`echo $RANDOM        | # RANDOM REF CODE
                 sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
                 sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
