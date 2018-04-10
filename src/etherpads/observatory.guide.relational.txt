@@ -3,8 +3,6 @@
 
 % HOW: Read the signs. Considering the ever changing nature of software development and use, and its vast impact on globalized societies, it is necessary to recognize that the problems arising from software are often either passively-perceived or actively-observed without an articulation of the relations. Reading the signs of the relational aspect of software observance will give you another view on software that will shape your ability to survive any kind of software disaster.
 
-
-
 % ![Reading the signs. From: John "Lofty" Wiseman, SAS Survival Handbook: The Ultimate Guide to Surviving Anywhere]( http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1319 )
 % URGENCY: - 
 
@@ -30,7 +28,7 @@
 
 ## What to expect
 
-Through administration of this questionnaire, you will obtain a cartographic view of software users profiles. It will help you to shape your own relation to software. You will be able to construct your own taxonomy and classification of software users which is necessary in order to find a means of rescue in case of a software catastrophe. 
+Through administration of this questionnaire, you will obtain a cartographic view of software users profiles. It will help you to shape your own relation to software. You will be able to construct your own taxonomy and classification of software users which is necessary in order to find a means of rescue in case of a software catastrophe.
 
 ### User Habits
 * What kind of user would you say that you are? 
@@ -43,24 +41,24 @@ Through administration of this questionnaire, you will obtain a cartographic vie
 
 ### Ethics 
 * What is the software feature you care about the most?
-* Do you use any free software?    
+* Do you use any Free Software?    
   If yes than
 		*  do you remember your first attempt at using this software service? Do you still use it? If not why? 
 * Do you pay for media distribution/streaming services?
-* Do you remember your first attempt at using free software and how did that make you feel?
+* Do you remember your first attempt at using Free Software and how did that make you feel?
 * Have you used any of these software services: Facebook, dating apps (Grindr, Tinder, etc.), Twitter, Instagram or equivalent. 
 * Can you talk about your favorite apps or webtools that you use regularly?
-*  What is most popular software your friends use?
+* What is the most popular software your friends use?
 
 ### Skill
 * Would you say that you are a specilised user? 
-*  Have you ever used the command line? 
-*  Do you know about scripting? 
-*  Have you ever edited an HTML page? A CSS file? A PHP file? A configuration file?
-*  Can you talk about your most technical encounter with your computer / telephone? 
+* Have you ever used the command line? 
+* Do you know about scripting? 
+* Have you ever edited an HTML page? A CSS file? A PHP file? A configuration file?
+* Can you talk about your most technical encounter with your computer / telephone? 
 
 ### Economy
-*  How do you pay for your software use?
+* How do you pay for your software use?
    * Please elaborate (for example, do you buy the software? / contribute in kind / deliver services or support)
    * What is the last software that you paid for using? 
    * What online services are you currently paying for?
@@ -70,7 +68,7 @@ Through administration of this questionnaire, you will obtain a cartographic vie
 *  What stories do you have concerning contracts and administration in relation to your software, Internet or computer?
 *  How does software help you shape your relations with other people?
 *  From which countries does your softwares come from / reside? How do you feel about that?
-*  Have you ever read a terms of software service, what about one that is not targeting the American market?
+*  Have you ever read a terms of use for a software service, what about one that is not targeting the American market?
 
 
 
@@ -92,13 +90,13 @@ I payed/purchased  software only twice in my life (totalling less then 25eur), a
 I did it as both of those apps  were niche products in early beta (one was Jeeper Elvis, real-time-non-linear-video-editor for BeOS) that failed to reach market,  but I think I would likely do it again and only in that mode  (supporting the bleeding edge and off-stream work), but maybe with more than 25eur.
 
 % MEAS: SoftwareUserOfOS
-I would spend most of 80s ignoring computers, 90s figuring out software from high-end to low-end, starting with OSF/DecAlpha and SunOS, than IRIX and MacOS, finally Win 95/98 SE, that permanently pushed me into niches (of montly LINUX distro install fests, or even QNX/Solaris experiments and finally BeOS use).
+I would spend most of 80s ignoring computers, 90s figuring out software from high-end to low-end, starting with OSF/DecAlpha and SunOS, than IRIX and MacOS, finally Win 95/98 SE, that permanently pushed me into niches (of montly Linux distro install fests, or even QNX/Solaris experiments and finally BeOS use).
 
 % MEAS: SoftwareWEBSURFER
-I got used to websurfing in more than 15 windows on UNIX systems and never got used to less than that ever since, furthermore with addition of more browser options this  number only multiplied (always wondered if my first system was Windows  3.11 - would I be a more focused person and how would that form my relations to browser windows>tabs).
+I got used to websurfing in more than 15 windows on Unix systems and never got used to less than that ever since, furthermore with addition of more browser options this  number only multiplied (always wondered if my first system was Windows 3.11 - would I be a more focused person and how would that form my relations to browser windows>tabs).
 
 % MEAS: SoftwareUserOfProprietarySoftware
-I signed one NDA contract in person on the paper and with ink on a  rainy day while stopping of at train station in northern Germany for the software that was later to be pulled out of market due to problematic licensing agreement (intuitively I knew it was wrong) - it had too much unprofessional pixeleted edges in its graphics.
+I signed one NDA contract in person on the paper and with ink on a rainy day while stopping of at train station in northern Germany for the software that was later to be pulled out of market due to problematic licensing agreement (intuitively I knew it was wrong) - it had too much unprofessional pixeleted edges in its graphics.
 
 % MEAS: SoftwareUserOfDatingWebsites
 I got one feature request implemented by a prominent dating website (to search profiles by language they speak), however I was never publicly acknowledged (though I tried to make use of it few times), that made our relations feel a bit exploitative and underappreciated.
@@ -121,7 +119,7 @@ My only two attempts to get into a software company failed as they insisted on f
 
 % WWAS: ExperiencedAdventurousUSER: Experiments with software every two days as she uses FLOSS and GNU/Linux, cares the most for malleability of the software - as a result she has big expectations of flexibility even in software category which is quite conventional and stability focused like file-hosting. 
 
-% WWAS: AnInvestorInSoftware: Paid for a compiled version of FLOSS audio software 5 years ago as she is supportive of economy and work around production, maintainance and support, but she also used closed hardware/software where she had to agree on licences she finds unfair, but then she was hacking it in order to use it as an expert - when she had time.  
+% WWAS: AnInvestorInSoftware: Paid for a compiled version of FLOSS audio software 5 years ago as she is supportive of economy and work around production, maintainance and support, but she also used closed hardware/software where she had to agree on licences she finds unfair, but then she was hacking it in order to use it as an expert - when she had time.
 
 % WWAS: CommunicationSoftwareUSER: She is not using commercial social networks, so she is very conscious of information transfers and time relations, but has no strong media/format/design focus. 
 
@@ -133,7 +131,7 @@ My only two attempts to get into a software company failed as they insisted on f
 % A: Fun. I'm good at this. Empowering.
 
 % Q: How often do/when did you last purchase software or pay for a software service?  
-% A: I paid for ardour five years ago. I paid the developper directly. For the compiled version. I paid for the service. I pay for my website and email service at domaine public.
+% A: I paid for ardour five years ago. I paid the developper directly. For the compiled version. I paid for the service. I pay for my website and email service at Domaine Public.
 
 % Q: What kind of user would you say you are?  
 % A: An experienced user drawing outside the lines. I don't behave.
@@ -166,7 +164,7 @@ My only two attempts to get into a software company failed as they insisted on f
 % A: Yes. There maybe are some proprietary drivers.
 
 % Q: Do you remember your first attempt at using free software and how did that make you feel?  
-% A: Yes I installed my dual boot in...10 years ago. Scared and powerful.
+% A: Yes I installed my dual boot in... 10 years ago. Scared and powerful.
 
 % Q: Do you use one of this software service: Facebook, dating apps (Grindr or the sort), Twitter, Instagram or equivalent?  
 % A: Google, Gmail. That's it.
@@ -175,7 +173,7 @@ My only two attempts to get into a software company failed as they insisted on f
 % A: Music player. Vanilla music and f-droid. browser. I pay attention to clearing my history, no cookies. I also have iceweasel. Https by default. Even though I have nothing to hide.
 
 % Q: What stories around contracts and administration in relation to your software internet or computer?  
-% A: Nothing comes to my mind. I'm not allowed to do, to install on phone. When it's an old phone, there is nothing left that is working you have to do it.
+% A: Nothing comes to my mind. I'm not allowed to do, to install on a phone. When it's an old phone, there is nothing left that is working you have to do it.
 
 % Q: How does software help you shape your relations with other people?  
 % A: It's a hard question. If it's communication software of course it's its nature to be related to other people. There is an expectency of immediate reply, of information transfer... It's troubling your relation with people in certain situations.

@@ -4,7 +4,7 @@
 % notes on the process: http://pad.constantvzw.org/p/observatory.methods
 % https://pad.constantvzw.org/p/observatory.bib
 % Questions for Christoph https://pad.constantvzw.org/p/guide.dearchristoph
-
+% REALLY _last_ edits :-) https://pad.constantvzw.org/p/CARLINSAYS_last_comments
 
 
 % INTRODUCTION
@@ -139,7 +139,7 @@
 % ===============================================
 % INCLUDE: http://pad.constantvzw.org/p/observatory.guide.grouping.collections/export/txt
 
-% Compiling a bestiary of software logos CONTENT MISSING
+% Compiling a bestiary of software logos OK
 % SEEHERE: http://pad.constantvzw.org/p/observatory.guide.bestiary
 % Glossaries as an exercise OK
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.glossary

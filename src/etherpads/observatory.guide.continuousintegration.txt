@@ -12,7 +12,7 @@ At the Walk-in Clinic, Continuous Integration was introduced as a service to res
 
 Continuous Integration worked by visiting the different services of the walk-in clinic to check for updates, test the functionality, and think through implications of integration with other services. If the pieces didn't fit, the service delivered error messages and solution options. 
 
-When we noticed that Software Curious Persons visiting the walk-in clinic were having troubles finding the different services, and that some services were overloaded with Software Curious Persons, Continuous Integration was extended. We automated service registration using colored tape and provided a lookup registry for Software Curious Persons. 
+When we noticed that Software Curious Persons visiting the walk-in clinic were having troubles finding the different services, and that some services were overloaded with Software Curious Persons, Continuous Integration was extended. We automated service registration using colored tape and provided a lookup registry for Software Curious Persons.
 
 % Add some images of the tape and color coded sheet.
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/IMAG1404

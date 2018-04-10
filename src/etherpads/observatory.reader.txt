@@ -25,7 +25,7 @@ How do layers of abstraction have an effect on the way software is produced and 
 *Critisticuffs. Free Property - On Social Criticism in the Form of a Software Licence. 2013 https://antinational.org/en/copyleft/
 *Seda Gurses and Joris van Hoboken. “Privacy after the Agile Turn.” Open Science Framework, 2016. https://osf.io/27x3q/
 *Christoph Neubert,  “The Tail on the Hard-ware Dog”: Historical Articulations of Computing Machinery, Software, and Services in Irina Kaldrak and Martina Leeker, There is not software, there are just services. 2015 http://meson.press/wp-content/uploads/2015/06/9783957960566-No-Software-just-Services.pdf
-*Somaesthetic and Computer Science: https://en.wikipedia.org/wiki/Somaesthetics   +  https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/somaesthetics
+*Somaesthetic and Computer Science: https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/somaesthetics
 *EWMN (http://noaeshkol.org/about-eshkol-wachman-movement-notation/) and Cybernetics ( https://joanachicau.x-temporary.org/ ) 
 
 

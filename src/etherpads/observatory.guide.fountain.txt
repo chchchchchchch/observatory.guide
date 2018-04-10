@@ -5,14 +5,14 @@
 % HOW: Different strategies can be applied to temporarily redefine the workspace and its perceptual structures.
 % WHEN:
 % WHO: 
-% URGENCY: Aknowledging space and its correlate, noise, as conditioning observations (WTC vs. Museum vs. University vs. Startup Office vs. Shifting Walls that became Water Fountains).
+% URGENCY: Acknowledging space and its correlated noise, as conditioning observations (the World Trade Center vs. Museum vs. University vs. Startup Office vs. Shifting Walls that became Water Fountains).
 % NOTE: EU-OSHA (European Agency for Safety and Health at Work) Directive 2003/10/EC describes the minimum health and safety requirements regarding the exposure of workers to the risks arising from physical agents (noise). However no current European guidelines exist on the potential benefitial uses of tactially designed additive noise systems.
 % WARNING:
 
 %!NEWPAGE:
 % EXAMPLE: -
 
- Fountain refreshment: augmenting a piece of standardized office equipment designed to dispense water to perform a decorative and soothing function.
+Fountain refreshment: augmenting a piece of standardized office equipment designed to dispense water to perform a decorative and soothing function.
 
 > Actual silence is not at the moment considered comfortable. One of the visible symptoms of our desire to take the edge off the silence can be observed through the appearance of fountains in public space. The fountain's purpose is to give off neutral sound, like white noise without the negative connotations.
 

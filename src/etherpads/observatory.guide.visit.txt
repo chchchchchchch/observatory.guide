@@ -1,5 +1,7 @@
 % METHOD: Encounter several historical collections of hardware back-to-back
 
+% PDFFIX: 1 \vspace{-4\baselineskip}
+
 % REMEMBER:
 % WHAT:
 % HOW: This can be done by identifying one or more computer museums and visiting them with little time in-between. Visiting a friend with a large basement and lots of left-over computer equipment can have a similar effect. Seeing and possibly touching hardware from different contexts (state-administration, business, research, ...), periods of time, cultural contexts (California, Germany, French-speaking Belgium) and price ranges allows you to sense the interactions between hardware and software development.
@@ -9,11 +11,16 @@
 % URGENCY:
 % NOTE: This method offers a perfect opportunity to hear people speak about objects in their contexts, how they worked and did not work and how particular pieces of hardware and software are linked one with another.  It also shows the economic and cultural aspects of softwares.
 
+% PDFFIX: 1 \enlargethispage{4\baselineskip}
+
 % WARNING: **DO NOT FOLD, SPINDLE OR MUTILATE**
+
+% PDFFIX: 1 \newpage
+
 
 % EXAMPLE: Spaghetti Suitcase
 
-At one point during the demonstration of a Bull computer at Computer Museum NAM-IP, our museum guide revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression for early code that used many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
+At one point during the demonstration of a Bull computer at the Computer Museum NAM-IP, our museum guide revealed the system's "software" -- a suitcase sized module with dozens of patch cords. She made the comment that the term "spaghetti code" (a derogatory expression for early code that used many "GOTO" statments) had its origin in this physical arrangement of code as patchings.
 
 % SHOW: tgsoimages.svg spaghetticode1 N
 % INFO: Spaghetti Codes
@@ -34,6 +41,8 @@ Preserving old hardware is a means of observing the physical manifestation of so
 % http://observatory.constantvzw.org/images/wednesday/P1010254.JPG
 % SHOW: tgsoimages.svg commandpunch N
 % INFO: "À la table des manipulations", manually creating punchcards with the EMPUNCH model 80.
+
+
 
 % http://observatory.constantvzw.org/images/wednesday/P1040696.JPG
 % SHOW: tgsoimages.svg punchcard N
@@ -56,12 +65,12 @@ The idea of introducing informatics as a method for working with and on the Bibl
 
 % http://gallery.constantvzw.org/var/resizes/Preparing-the-Techno-galactic-Software-Observatory/DSC05019.JPG?m=1490635726
 % SHOW: tgsoimages.svg maredsous N
-% INFO: 'Maredsous 89. 15 ans d'Informatique et Bible' ('Maredsous. 15 years of informatics and bible')
+% INFO: 'Maredsous 89. 15 ans d'Informatique et Bible' ('Maredsous 89. 15 years of informatics and bible')
 
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3267
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3271
 % SHOW: tgsoimages.svg lexique N
-% INFO: Continuous form paper with lexical research and a copy of the _Interface Bulletin_[^http://www.cibmaredsous.be/cib3000.htm], published by the Centre Informatique et Bible.
+% INFO: Continuous form paper with lexical research and a copy of the _Interface Bulletin_ (http://www.cibmaredsous.be/cib3000.htm), published by the Centre Informatique et Bible.
 
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.jean.heuns

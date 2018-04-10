@@ -18,11 +18,13 @@ Anne::Laforet, Ricardo::Lafuente, Michaela::Lakova, Hans::Lammerant, Silvio::Lor
 Mia::Melvaer, An::Mertens, Lidia::Pereira, Donatella::Portoghese, Luis::Rodil-Fernandez,
 Natacha::Roussel, Andrea::di::Serego::Alighieri, Lonneke::van::der::Velden, Ruben::van::de::Ven, 
 Kym::Ward, Wendy::Van::Wynsberghe and Peter::Westenberg.
-Copy-edit: Carlin::Wing
-Lay-out and document engineering: Christoph::Haag
-Printing: 
 
 % TEXIN: \end{flushleft}
+
+**Copy editing**: Carlin::Wing    
+**Layout, document engineering and bespoke finish**: Christoph::Haag
+**Printing**: Online-Druck.biz, Krumbach::(Schwaben)
+
 
 % http://observatory.constantvzw.org/images/friday/P1010328.JPG
 % SHOW: tgsoimages.svg tgsoteam N
@@ -31,6 +33,8 @@ Printing:
 % TEXIN: \vfill
 
 ### License: Free Art License (% REFREF: fal)
+
+    
 
 % TEXIN: \vfill
 
@@ -93,10 +97,9 @@ shipped on the character ROM of IBM's first video solutions. As part of
 the **The Ultimate Oldschool PC Font Pack** it is available according to
 Creative Commons Attribution-ShareAlike 4.0 International License.
 
-
 ### Support:
 
-% VO logo goes here + obligatory mention
+http://observatory.constantvzw.org/guide/Naakt/Vlaanderen_verbeelding%20werkt.png
 
 % TEXIN: \vfill\vfill
 % TEXIN: {\Large\textbf{Constant (Brussels), May 2018}}

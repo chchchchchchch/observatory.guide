@@ -1,7 +1,7 @@
 % METHOD: Glossaries as an exercise
 
 % REMEMBER: 
-% WHAT: Using the technique of psychoanalytic listening to compile (gather, collect, bring together) a list of key words for understanding software.
+% WHAT: Using the technique of psychoanalytic listening to compile (gather, collect, bring together) a list of keywords for understanding software.
 % HOW: Create a shared document that participants can add words to as their importance emerges. To do pyschoanalytic listening, let your attention float freely, hovering evenly, over a conversation or a text until something catches its ear. Write down what your ear/eye catches. When working in a collective context invite others to participate in this project and describe the practice to them. Each individual may move in and out of this mode of listening according to their interest and desire and may add as many words to the list as they want. Use this list to create an index of software observation.
 % WHEN:
 % WHO:
@@ -100,6 +100,7 @@ Yoga
 
 
 % RELATESTO:
+
 
 
 

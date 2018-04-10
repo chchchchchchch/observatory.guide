@@ -1,56 +1,71 @@
-% METHOD: Prepare a reader to think theory with software
+% METHOD: Prepare a Reader to think theory with software
 % REMEMBER:
 % WHAT: Compile a collection of texts about software.
-% HOW: Choose texts from different realms. Software observations are mostly done in the realm of the technological and the pragmatic. The ecology of texts around software includes first and foremost manuals, technical documentation, and academic papers by software engineers which all _live_ in different realms of expertise. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes philosophy. A reader allows all of these different kinds of text to intersect and intermingle. It helps to understand the many types of vocabularies that exist around software, and to see what types of observation each of them invites.
+% HOW: Choose texts from different areas. Software observations are mostly done in the realm of the technological and the pragmatic. The ecology of texts around software includes first and foremost manuals, technical documentation, and academic papers by software engineers which all _live_ in different realms of expertise. More recently, the field of software studies opened up additional perspectives fuelled by cultural studies and sometimes philosophy. A Reader allows all of these different kinds of text to intersect and intermingle. It helps to understand the many types of vocabularies that exist around software, and to see what types of observation each of them invites.
 % WHO:
 % URGENCY:
 % NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide.
 % WARNING:
 % EXAMPLE: -
-Samples from the _Techno Galactic Software Observatory reader_, chapter: _Observation and its consequences_:
+Samples pages from the chapter **WHAT IS SOFTWARE**, _Techno Galactic Software Observatory reader_:
 
-% Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive. 2004
-% http://texttechnology.mcmaster.ca/pdf/vol13_2_06.pdf
-% PDF: http://observatory.constantvzw.org/books/vol13_2_06.pdf 1-2 1x2
+% PDF: http://observatory.constantvzw.org/books/vol13_2_06.pdf 2x2 1-2
 % INFO: **Media studies**: Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive.
 
-% Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
-% http://observatory.constantvzw.org/books/US395781.pdf
 % PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
-% INFO: **Historical document**: Herman Hollerith. Art of compiling statistics.
-% U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+% INFO: **Patent**: H. Hollerith. Art of compiling statistics
 
-% Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015
-% INFO: **Science studies ethnography**: Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship.
-% http://sci-hub.bz/10.1177/0162243915578486
+% PDF: http://observatory.constantvzw.org/books/irani2015.pdf 2x2 1-2
+% INFO: **Science studies ethnography**: Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship
 
-% Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000.
-% INFO: **Cyberpunk meets software studies**: Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000.
-% https://library.memoryoftheworld.org/b/xpDrXE_VQeeuDDpc5RrywyTJwbzD8eatYGHKmyT2A_HnIHKb
+% PDF: http://observatory.constantvzw.org/books/Behind%20the%20Blip_%20Essays%20on%20the%20Culture%20of%20-%20Matthew%20Fuller.pdf 2x2 1-2
+% INFO: **Cyberpunk meets software studies**: Matthew Fuller, "It looks like you're writing a letter: Microsoft Word"
 
-% Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015
-% INFO: **Technical documentation**: Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer
-% www.memcon.com/pdfs/proceedings2015/SAT104_FuturePlus.pdf
+% PDF: http://observatory.constantvzw.org/books/SAT104_FuturePlus.pdf 2x2 1-4
+% INFO: **Technical presentation slides**: Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer
 
+Full index of the _Techno Galactic Software Observatory reader_:
 
-% ////////////////////////////////////////////////////////////
+## I. WHAT IS SOFTWARE
 
-% Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014,
-% https://www.nngroup.com/articles/talking-to-users/
+Viewing software in the long-term context of historical 'numerical artefacts' is an occasion to reflect on the conditions of its appearance, and allows us to take on current-day questions from a genealogical perspective. What  is software? How did it appear as a concept, in what industrial and governmental circumstances? The selected texts explore the materiality of software, its relation to hardware, language, discourse and abstraction with each their own way of questioning and proposing agendas and assumptions.
 
-% Alexander R. Galloway, The Poverty of Philosophy: Realism and Post-Fordism, Critical Inquiry. 2013,
-% http://cultureandcommunication.org/galloway/pdf/Galloway,%20Poverty%20of%20Philosophy.pdf
+* Herman Hollerith. Art of compiling statistics. U.S. Patent 395,781 filed June 18, 1887, and issued January 8, 1889.
+* Jean-François Blanchette. "A material history of bits." JASIST 62, 1042-1057. 2011.
+* David A. Patterson and John L. Hennessy. Computer Organization and Design, Fifth Edition: The Hardware/Software Interface (5th ed.). Morgan Kaufmann Publishers Inc, 2013
+* Friedrich Kittler, "There Is No Software," Ctheory (October 18, 1995)
+* Thomas Haigh, Mark Priestley, Crispin Rope,  Reconsidering the Stored-Program Concept, IEEE Annals of the History of Computing Volume 36, Number 1, January-March 2014 
+* Wendy Hui Kyong Chun. "Programmability." In Software Studies: A Lexicon, edited by Matthew Fuller, 224–229. MIT Press, 2008
+* Sadie Plant, Zeros + Ones: Digital Women + The New Technoculture. Fourth Estate, 1997
+* David Nofre, Mark Priestley, Gerard Alberts, When Technology Became Language: The Origins of the Linguistic Conception of Computer Programming, 1950-1960. in Technology and Culture, 55(1), 40-75. 2014
+* Graham White. Hardware, Software, Humans: Truth, Fiction and Abstraction. HISTORY AND PHILOSOPHY OF LOGIC  vol. 36, (3) 278-301. 2015.
 
-% Edward Alcosser, James P. Phillips, Allen M. Wolk, How to Build a Working Digital Computer. Hayden Book Company, 1968.
-% https://archive.org/details/howtobuildaworkingdigitalcomputer_jun67
+## II. WHEN AND WHERE IS SOFTWARE
 
-% Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015
-% http://palms.ee.princeton.edu/system/files/SP_vfinal.pdf
+How do layers of abstraction have an effect on the way software is produced and vice versa? What is the space-time dimension of IT development or where and when is software made today? The way computer programs and operating systems are manufactured changed tremendously through time, so its production times and places changed too. From military labs via the mega-corporation cubicles to the open-space freelancer utopia, the texts in this chapter trace the ruptures and continuities in software production. From time-sharing to user-space partitions and containerization, this chapter looks at the separations at work. What happens to the material conditions of software production (factory labor, hardware but also minerals) when it evaporates into a cloud?
 
+* John Harwood, The Interface: IBM and the Transformation of Corporate Design, 1945-1976. University of Minnesota Press, 2011
+* Nathan Ensmenger, The Computer Boys Take Over: Computers, Programmers, and the Politics of Technical Expertise, 2010
+* Ellen Ullman, Close to the Machine: Technophilia and Its Discontents. City Lights Books, 1997 
+* Femke Snelting. Dividing and sharing. 2009
+* Hamid Ekbia and Bonnie Nardi, Heteromation and its (dis)contents: The invisible division of labor between humans and machines. First Monday 19(6) · June 2014
+* Richard Stallman, Who does that server really serve?. 2016 
+* Critisticuffs. Free Property - On Social Criticism in the Form of a Software Licence. 2013
+* Seda Gurses and Joris van Hoboken. "Privacy after the Agile Turn." Open Science Framework, 2016.
+* Christoph Neubert, "The Tail on the Hard-ware Dog": Historical Articulations of Computing Machinery, Software, and Services in Irina Kaldrak and Martina Leeker, There is not software, there are just services. 2015
 
+## III. OBSERVATION AND ITS CONSEQUENCES
 
+The development of software encompasses a series of practices whose evocative names are increasingly familiar: feedback, report, probe, audit, inspect, scan, diagnose, explore ... What are the systems of knowledge and power within which these activities take place, and what other types of observation are possible? The material in this section is a compendium of probes such as learning by doing; exploring software through the analysis of its language and grammar; critical ethnography and self-testing as a user. In addition, we have included some conventional methods and tools for increasing the performance and security of software. Appropriating them for Techno-galactic software observation first of all turns the gaze onto the process of observation itself, and eventually opens up possibilities to actively interfere with the functioning of software.
+
+* Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship, 2015
+* Kara Pernice (Nielsen Norman Group), Talking with Participants During a Usability Test, January 26, 2014,
+* Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive. 2004
+* Alexander R. Galloway, The Poverty of Philosophy: Realism and Post-Fordism, Critical Inquiry. 2013
+* Edward Alcosser, James P. Phillips, Allen M. Wolk, How to Build a Working Digital Computer. Hayden Book Company, 1968
+* Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000
+* Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015
+* Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion
-% SOURCE: The reader for the _Technogalactic Software Observatory_ can be consulted here: http://pad.constantvzw.org/p/observatory.reader
-
-
+% SOURCE: The _Technogalactic Software Observatory reader_ can be consulted here: http://pad.constantvzw.org/p/observatory.reader

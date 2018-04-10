@@ -8,7 +8,7 @@
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.devmem
 
-% NOTE: The parallel allocation and observation of the same memory sector in two different computers is in a sense the opposite process of machine virtualization, where the localization of multiple virtual machines in one physical comptuers can only happen by rigidly separating the memory sectors dedicated to the different virtual machines.
+% NOTE: The parallel allocation and observation of the same memory sector in two different computers is in a sense the opposite process of machine virtualization, where the localization of multiple virtual machines in one physical computers can only happen by rigidly separating the memory sectors dedicated to the different virtual machines.
 
 % WARNING: THIS METHOD HAS NOT BEEN TESTED. IT CAN PROBABLY DAMAGE YOUR RAM MEMORY AND/OR COMPUTER.
 
@@ -42,5 +42,5 @@ Or even, exchange memory between two other computers:
 
 % SRCCODE: quaverbatim % F: http://observatory.constantvzw.org/etherdump/files.md 557-569
 
-% SOURCE: Note-snippets and code speculations during the TGSO-worksession. http://observatory.constantvzw.org/etherdump/files.md.diff.html
+% SOURCE: Note-snippets and code speculations during the TGSO-worksession: http://observatory.constantvzw.org/etherdump/files.md.diff.html
 

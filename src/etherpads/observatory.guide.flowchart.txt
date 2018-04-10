@@ -136,7 +136,7 @@ The rectangles were again representing options, while the flexible factors were 
 We realized in our undertaking that we needed to jump into an internal perspective and get more familiar with the task of flow chart drawing. For this flow chart we decided to chart the elevator to the first floor from the perspective of the elevator. To achieve this task we agreed to do field research and go to the first floor by elevator for real. Some of us used this opportunity to smoke a cigarette and to elaborate on the experience of the elevator. The final goal is the create a flow chart based on our observations, but we are going to do this tomorrow. [^]{Further elevator ruminations were made through reference to Marc Isaacs. Lift. UK, 2001. https://www.youtube.com/watch?v=FJNAvyLCTik}
 
 **17:15 - 17:40**    
-To round off the day we ended with some general reflections. It seems that the different interpretations of symbols have been integrated into flowcharts from the early ones of the 1920's until now.[@xing:flowcharts] To put this knowledge into practice we started to sketch out the flowchart on the wall using Post-its.
+To round off the day we ended with some general reflections. It seems that the different interpretations of symbols have been integrated into flowcharts from the early ones of the 1920s until now.[@xing:flowcharts] To put this knowledge into practice we started to sketch out the flowchart on the wall using Post-its.
 
 **Current research goals:**
 
@@ -156,15 +156,15 @@ We updated our research followers and fellow researchers about our undertakings.
 Zenit(h) modeling/analysis    
 A method derived from a removal of textual informating from flowcharts -- related to previous work with [Zenit: International Review of Arts and Culture](https://monoskop.org/Zenit) created by Ljubomir Micic, founder of Zenitism (Zenitizam) an early 20th Century movement, and zenith -- an imaginary point directly "above" a particular location, on [the imaginary celestial sphere](https://en.wikipedia.org/wiki/Zenith) 
 
-Connection inspiration: https://helios.gsfc.nasa.gov/flowchart.html)
+Connection inspiration: [Procedure Flow Chart](https://helios.gsfc.nasa.gov/flowchart.html)
 
 Some historical experimentation examples:    
 http://www.e-w-n-s.net/minis-html/futuremillionaire/transition/v.gif
 http://www.e-w-n-s.net/minis-html/futuremillionaire/transition/arrows.gif
 http://www.e-w-n-s.net/minis-html/_navigation.htm
 
-Material:    
-https://commons.wikimedia.org/wiki/Flow_chart
+**Material:**
+[Flow chart from Wikimedia Commons, the free media repository](https://commons.wikimedia.org/wiki/Flow_chart)
 
 
 **Afternoon**    
@@ -173,28 +173,27 @@ Continue with flow chart elevator
 Lara working on Zenit(h) modeling/analysis leading to call-flow template, and zenit browser plugin   
 Michaela helping out the flow chart of the elevator as a case study   
 
-Here are the flowchart symbols: http://observatory.constantvzw.org/etherdump/flowchartsymbols.md (% CARLINSAYS: We should embed the images of the symbols in the doc or get rid of this?)
+% Here are the flowchart symbols: http://observatory.constantvzw.org/etherdump/flowchartsymbols.md (% CARLINSAYS: We should embed the images of the symbols in the doc or get rid of this?)
 
-## Sources:
+### Sources:
 
-https://en.wikipedia.org/wiki/Software_design
-https://en.wikipedia.org/wiki/Flowchart
-https://en.wikipedia.org/wiki/Software_design_description
-https://www.w3schools.com/charsets/ref_utf_geometric.asp
-http://www.iausdj.ac.ir/ostad/DocLib71/J._C._Cirlot_Dictionary_of_Symbols__1990.pdf
-**Flowchart humour:** http://observatory.constantvzw.org/video/A_Computer_Glossary.webm#t=02:26
-**Power Point as Knowledge Communication:** http://computationalculture.net/article/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech
+[Software design](https://en.wikipedia.org/wiki/Software_design),
+[Flowchart](https://en.wikipedia.org/wiki/Flowchart),
+[Software design description](https://en.wikipedia.org/wiki/Software_design_description),
+[HTML Unicode UTF-8](https://www.w3schools.com/charsets/ref_utf_geometric.asp),
+[Penguin Dictionary of Symbols](http://www.iausdj.ac.ir/ostad/DocLib71/J._C._Cirlot_Dictionary_of_Symbols__1990.pdf),
+[Flowchart humour](http://observatory.constantvzw.org/video/A_Computer_Glossary.webm#t=02:26),
+[Power Point as Knowledge Communication](http://computationalculture.net/article/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech)
 
-## Blank diagrams:
+### Blank diagrams:
 
-http://silviolorusso.com/see-nothing-volume-three/
-http://silviolorusso.com/blank-diagrams-4-nsa-slides-of-prism-program/
-http://silviolorusso.com/blank-diagrams-1-claude-shannon-schematic-diagram-of-a-general-communication-system/
+[See Nothing Volume Three](http://silviolorusso.com/see-nothing-volume-three),
+[Blank Diagrams #4: NSA Slides of PRISM Program](http://silviolorusso.com/blank-diagrams-4-nsa-slides-of-prism-program),
+[Blank Diagrams #1 – Claude Shannon, schematic diagram of a general communication system](http://silviolorusso.com/blank-diagrams-1-claude-shannon-schematic-diagram-of-a-general-communication-system)
 
-**The Grammar of Shapes:**
-http://vanseodesign.com/web-design/visual-grammar-shapes/
+The Grammar of Shapes: http://vanseodesign.com/web-design/visual-grammar-shapes
 
-
+% PDFFIX: 1 \newpage
 
 ## How to create browser add on /or browser extension:
 
@@ -229,6 +228,7 @@ manifest.json:
 }
 % SRCCODE: plain
 
+% PDFFIX: 1 \newpage
 
 ## Appendix C
 
