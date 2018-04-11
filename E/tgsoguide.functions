@@ -962,6 +962,16 @@ function EMPTYPAGE() {
 
 # --------------------------------------------------------------------------- #
 
+function BLACKPAGE() {
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+       write2src '\blackpage'
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
 function CLEARTOLEFT() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
