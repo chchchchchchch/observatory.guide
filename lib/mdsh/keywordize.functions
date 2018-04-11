@@ -24,36 +24,40 @@ function KEYWORDIZE() {
    IFS=$'\n'
    for INDEXTHIS in `cat ${TMPID}.keywords         | # TAKE LIST
                      egrep -v "^#|^%"              | # IGNORE SOMETHING
+                     sed '/^[ \t]*$/d'             | # NO EMPTY LINES
                      awk 'BEGIN { FS = "|" } ; \
                      { print length($1) ":" $0; }' | # ADD LENGTH OF FIELD 1
                      sort -n                       | # NUMERIC SORT (=LENGTH)
                      cut -d ":" -f 2-              | # REMOVE LENGTH AGAIN
                      tac`                            # REVERT (LONGEST FIRST)
     do
-       MAINKEYWORD=`echo $INDEXTHIS         | # START
-                    cut -d "|" -f 1`          # SELECT FIRST FIELD
-       MAINFOO=`echo $MAINKEYWORD  | # PIPE STARTS
-                sed  "s/./&M$UN/g" | # ADD UNID TO EACH LETTER
-                sed  "s/ /M$S/g"`    # PROTECT/RM SPACE
-         for KEYWORD in `echo $INDEXTHIS                   | # START
-                         sed 's/|/\n/g'                    | # PIPE TO NEWLINE
-                         awk '{ print length($1) ":" $0; }'| # PRINT LENGTH
-                         sort -n | cut -d ":" -f 2- | tac`   # SORT, CLEAN, REVERT
-         do
-             K=`echo $KEYWORD       | # START
-                sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
-                sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
-           # solved via LaTeX (for section so far ...)
-           # set +H;
-           # ADD \index TO END OF LINE
-             sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO/I" $SRCDUMP
-             sed -i "s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
-         done
-        sed -i "s/K$UN//g" $SRCDUMP ${TMPID}*.verbatim # NORMALIZE PROTECTED KEYWORD
+       MAINKEYWORD=`echo $INDEXTHIS | # START
+                    cut -d "|" -f 1`  # SELECT FIRST FIELD
+       MAINFOO=`echo $MAINKEYWORD   | # PIPE STARTS
+                sed  "s/./&M$UN/g"  | # ADD UNID TO EACH LETTER
+                sed  "s/ /M$S/g"    | # PROTECT/RM SPACE
+                sed 's/\//\\\\\//g'`  # ESCAPE \ FOR sed
+
+       for KEYWORD in `echo $INDEXTHIS                   | # START
+                       sed 's/|/\n/g'                    | # PIPE TO NEWLINE
+                       awk '{ print length($1) ":" $0; }'| # PRINT LENGTH
+                       sort -n | cut -d ":" -f 2- | tac`   # SORT, CLEAN, REVERT
+       do
+           K=`echo $KEYWORD       | # START
+              sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
+              sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
+         # solved via LaTeX (for section so far ...)
+         # set +H;
+         # ADD \index TO END OF LINE
+           sed -i "s/\(.*\)\(\b$K\b\)\(.*\)/\1K${UN}\2K${UN}\3 \\\index{$MAINFOO}$SFOO/I" $SRCDUMP
+           sed -i "s/\b$K\b/K${UN}&K${UN}°\\\index{$MAINFOO}°/I" ${TMPID}*.verbatim
+       done
+       sed -i "s/K$UN//g" $SRCDUMP ${TMPID}*.verbatim # NORMALIZE PROTECTED KEYWORD
+
    done
 
-   sed -i "s/M$UN//g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
-   sed -i "s/M$S/ /g" $SRCDUMP ${TMPID}*.verbatim      # NORMALIZE PROTECTED KEYWORD ANCHOR
+   sed -i "s/M$UN//g" $SRCDUMP ${TMPID}*.verbatim     # NORMALIZE PROTECTED KEYWORD ANCHOR
+   sed -i "s/M$S/ /g" $SRCDUMP ${TMPID}*.verbatim     # NORMALIZE PROTECTED KEYWORD ANCHOR
 
   # RESET (PUT WORDS ON SEPARATE LINES)
   # -----------------------------------
