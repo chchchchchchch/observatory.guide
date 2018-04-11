@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1523443431/9d751673d8ddb75fe9b6996b892f0403 -->
+<!-- CLEANED: 1523455391/9f2c7d52a6f326e800a4e532dfbf05ba -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -14,7 +14,7 @@
    height="545.66925"
    id="svg3005"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="tgsoimages.svg">
   <defs
      id="defs3007">
@@ -331,6 +331,15 @@
          id="path4128"
          d="m 196.65625,227.53125 c -24.17335,0 -43.78125,19.6079 -43.78125,43.78125 0,1.22381 0.089,2.4266 0.1875,3.625 -5.85367,4.01541 -9.6875,10.74024 -9.6875,18.375 0,12.30642 9.97482,22.28125 22.28125,22.28125 4.92802,0 9.49774,-1.60398 13.1875,-4.3125 5.44382,2.42976 11.46589,3.78125 17.8125,3.78125 6.34661,0 12.36868,-1.35149 17.8125,-3.78125 3.68976,2.70852 8.25947,4.3125 13.1875,4.3125 12.30642,0 22.28125,-9.97483 22.28125,-22.28125 0,-7.63476 -3.83383,-14.35959 -9.6875,-18.375 0.0985,-1.1984 0.1875,-2.40119 0.1875,-3.625 0,-24.17335 -19.60791,-43.78125 -43.78125,-43.78125 z"
          style="opacity:0.5;color:#000000;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4927">
+      <path
+         id="path4929"
+         d="m 394.20349,377.92084 391.22275,0 0,199.04623 -391.22275,0 z"
+         style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         sodipodi:nodetypes="ccccc" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -973,166 +982,166 @@
        id="g4080">
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         y="-1.1975839"
-         x="-545.31635"
-         id="image4082"
-         height="402.95966"
+         checksum="15591aa06da75109"
+         transform="matrix(0,-1,1,0,0,0)"
          width="537.27954"
-         transform="matrix(0,-1,1,0,0,0)" />
+         height="402.95966"
+         id="image4082"
+         x="-545.31635"
+         y="-1.1975839" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         clip-path="url(#clipPath3289)"
-         y="-0.68014294"
-         x="-579.90558"
-         id="image4084"
-         height="401.9223"
-         width="579.55713"
-         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,0.95210944)" />
-      <image
-         xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)"
-         width="579.55713"
-         height="401.9223"
-         id="image4086"
-         x="-579.90558"
-         y="-0.68014294"
-         clip-path="url(#clipPath3289)" />
-      <image
-         xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
+         checksum="15591aa06da75109"
          transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,0.95210944)"
          width="579.55713"
          height="401.9223"
-         id="image4088"
+         id="image4084"
          x="-579.90558"
          y="-0.68014294"
          clip-path="url(#clipPath3289)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
+         checksum="15591aa06da75109"
          clip-path="url(#clipPath3289)"
          y="-0.68014294"
          x="-579.90558"
-         id="image4090"
+         id="image4086"
          height="401.9223"
          width="579.55713"
          transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
+         checksum="15591aa06da75109"
+         clip-path="url(#clipPath3289)"
+         y="-0.68014294"
+         x="-579.90558"
+         id="image4088"
+         height="401.9223"
+         width="579.55713"
+         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,0.95210944)" />
+      <image
+         xlink:href="../src/images/P1010328.JPG"
+         checksum="15591aa06da75109"
          transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)"
          width="579.55713"
          height="401.9223"
-         id="image4092"
+         id="image4090"
          x="-579.90558"
          y="-0.68014294"
          clip-path="url(#clipPath3289)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         clip-path="url(#clipPath3305)"
+         checksum="15591aa06da75109"
+         clip-path="url(#clipPath3289)"
          y="-0.68014294"
          x="-579.90558"
-         id="image4094"
+         id="image4092"
          height="401.9223"
          width="579.55713"
-         transform="matrix(0,-1.0025809,1.0323941,0,-1.4495999,0.95210944)" />
+         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         transform="matrix(0,-0.93440172,0.96218746,0,5.8780068,2.5457525)"
+         checksum="15591aa06da75109"
+         transform="matrix(0,-1.0025809,1.0323941,0,-1.4495999,0.95210944)"
          width="579.55713"
          height="401.9223"
-         id="image4096"
+         id="image4094"
          x="-579.90558"
          y="-0.68014294"
-         clip-path="url(#clipPath3331)" />
+         clip-path="url(#clipPath3305)" />
+      <image
+         xlink:href="../src/images/P1010328.JPG"
+         checksum="15591aa06da75109"
+         clip-path="url(#clipPath3331)"
+         y="-0.68014294"
+         x="-579.90558"
+         id="image4096"
+         height="401.9223"
+         width="579.55713"
+         transform="matrix(0,-0.93440172,0.96218746,0,5.8780068,2.5457525)" />
     </g>
     <g
        id="g4070"
        transform="matrix(-1,0,0,-1,422.6103,542.60748)">
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         transform="matrix(0,-1,1,0,0,0)"
-         width="537.27954"
-         height="402.95966"
-         id="image3169"
+         checksum="15591aa06da75109"
+         y="-1.1975839"
          x="-545.31635"
-         y="-1.1975839" />
+         id="image3169"
+         height="402.95966"
+         width="537.27954"
+         transform="matrix(0,-1,1,0,0,0)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,0.95210944)"
-         width="579.55713"
-         height="401.9223"
+         checksum="15591aa06da75109"
+         clip-path="url(#clipPath3289)"
+         y="-0.68014294"
+         x="-579.90558"
          id="image3293"
-         x="-579.90558"
-         y="-0.68014294"
-         clip-path="url(#clipPath3289)" />
-      <image
-         xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         clip-path="url(#clipPath3289)"
-         y="-0.68014294"
-         x="-579.90558"
-         id="image3284"
-         height="401.9223"
-         width="579.55713"
-         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)" />
-      <image
-         xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         clip-path="url(#clipPath3289)"
-         y="-0.68014294"
-         x="-579.90558"
-         id="image3295"
          height="401.9223"
          width="579.55713"
          transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,0.95210944)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
+         checksum="15591aa06da75109"
          transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)"
          width="579.55713"
          height="401.9223"
-         id="image3297"
+         id="image3284"
          x="-579.90558"
          y="-0.68014294"
          clip-path="url(#clipPath3289)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
+         checksum="15591aa06da75109"
+         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,0.95210944)"
+         width="579.55713"
+         height="401.9223"
+         id="image3295"
+         x="-579.90558"
+         y="-0.68014294"
+         clip-path="url(#clipPath3289)" />
+      <image
+         xlink:href="../src/images/P1010328.JPG"
+         checksum="15591aa06da75109"
          clip-path="url(#clipPath3289)"
          y="-0.68014294"
          x="-579.90558"
-         id="image3299"
+         id="image3297"
          height="401.9223"
          width="579.55713"
          transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         transform="matrix(0,-1.0025809,1.0323941,0,-1.4495999,0.95210944)"
+         checksum="15591aa06da75109"
+         transform="matrix(0,-1.0025809,1.0025809,0,-0.51568553,-3.0582143)"
          width="579.55713"
          height="401.9223"
-         id="image3301"
+         id="image3299"
          x="-579.90558"
          y="-0.68014294"
-         clip-path="url(#clipPath3305)" />
+         clip-path="url(#clipPath3289)" />
       <image
          xlink:href="../src/images/P1010328.JPG"
-         checksum="85f4f91a7f4c2d1e"
-         clip-path="url(#clipPath3331)"
+         checksum="15591aa06da75109"
+         clip-path="url(#clipPath3305)"
          y="-0.68014294"
          x="-579.90558"
-         id="image3309"
+         id="image3301"
          height="401.9223"
          width="579.55713"
-         transform="matrix(0,-0.93440172,0.96218746,0,5.8780068,2.5457525)" />
+         transform="matrix(0,-1.0025809,1.0323941,0,-1.4495999,0.95210944)" />
+      <image
+         xlink:href="../src/images/P1010328.JPG"
+         checksum="15591aa06da75109"
+         transform="matrix(0,-0.93440172,0.96218746,0,5.8780068,2.5457525)"
+         width="579.55713"
+         height="401.9223"
+         id="image3309"
+         x="-579.90558"
+         y="-0.68014294"
+         clip-path="url(#clipPath3331)" />
     </g>
     <path
        sodipodi:nodetypes="ccccc"
@@ -1148,14 +1157,14 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/IMG_1141.JPG"
-       checksum="cc5f7894591c47fc"
-       clip-path="url(#clipPath3605)"
-       transform="matrix(-1.0932904,-0.04866846,-0.04866846,1.0932904,-56.57204,-10.650107)"
-       width="427.35889"
-       height="569.81183"
-       id="image3364"
+       checksum="8485a966500dca27"
+       y="-42.803364"
        x="-803.87177"
-       y="-42.803364" />
+       id="image3364"
+       height="569.81183"
+       width="427.35889"
+       transform="matrix(-1.0932904,-0.04866846,-0.04866846,1.0932904,-56.57204,-10.650107)"
+       clip-path="url(#clipPath3605)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 381.62994,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
@@ -1170,24 +1179,24 @@
      style="display:none">
     <image
        xlink:href="../src/images/DSC04953.JPG"
-       checksum="ad8d85329b1b8f18"
-       y="-13.081894"
-       x="-68.2659"
-       id="image5631"
-       height="355.56741"
-       width="533.35107"
+       checksum="ccd4340b8c146bc7"
+       transform="matrix(1.0654584,0.02066504,-0.02066504,1.0654584,-10.33559,239.25548)"
        clip-path="url(#clipPath3630)"
-       transform="matrix(1.0654584,0.02066504,-0.02066504,1.0654584,-10.33559,239.25548)" />
+       width="533.35107"
+       height="355.56741"
+       id="image5631"
+       x="-68.2659"
+       y="-13.081894" />
     <image
        xlink:href="../src/images/DSC04991.JPG"
-       checksum="ed422ac1b9729840"
-       clip-path="url(#clipPath3639)"
-       y="-30.558727"
-       x="-779.41162"
-       id="image5629"
-       height="327.60184"
+       checksum="b40d1252ff56f822"
+       transform="matrix(1.0249685,0.02491387,-0.02491387,1.0249685,800.20629,8.6863793)"
        width="491.40274"
-       transform="matrix(1.0249685,0.02491387,-0.02491387,1.0249685,800.20629,8.6863793)" />
+       height="327.60184"
+       id="image5629"
+       x="-779.41162"
+       y="-30.558727"
+       clip-path="url(#clipPath3639)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 9.6615,-5.9511719e-5 393.30725,0 0,545.669309511719 -393.30725,0 z"
@@ -1203,37 +1212,37 @@
      sodipodi:insensitive="true">
     <image
        xlink:href="../src/images/PWFU3235.JPG"
-       checksum="cc6737ba5e6729b5"
-       clip-path="url(#clipPath3300)"
-       style="fill:#ff0000"
-       width="452.06146"
-       height="301.3743"
-       id="image3436"
+       checksum="04aa9cbcc1225ca2"
+       y="-17.336304"
        x="329.43073"
-       y="-17.336304" />
+       id="image3436"
+       height="301.3743"
+       width="452.06146"
+       style="fill:#ff0000"
+       clip-path="url(#clipPath3300)" />
     <g
        id="g3294"
        transform="translate(0,-2)">
       <image
          xlink:href="../src/images/PWFU3244.JPG"
-         checksum="3d3923ae9b0b25ff"
-         y="266.04022"
-         x="392.01334"
-         id="image3498"
-         height="303.67978"
-         width="455.51971"
-         style="fill:#ff0000" />
-      <image
-         xlink:href="../src/images/PWFU3244.JPG"
-         checksum="3d3923ae9b0b25ff"
+         checksum="b0949fb0602f585c"
          style="fill:#ff0000"
          width="455.51971"
          height="303.67978"
-         id="image3287"
+         id="image3498"
          x="392.01334"
-         y="266.04022"
+         y="266.04022" />
+      <image
+         xlink:href="../src/images/PWFU3244.JPG"
+         checksum="b0949fb0602f585c"
+         transform="matrix(4.4980852,0,0,1,-1389.2073,0)"
          clip-path="url(#clipPath3290)"
-         transform="matrix(4.4980852,0,0,1,-1389.2073,0)" />
+         y="266.04022"
+         x="392.01334"
+         id="image3287"
+         height="303.67978"
+         width="455.51971"
+         style="fill:#ff0000" />
     </g>
     <path
        sodipodi:nodetypes="ccccc"
@@ -1254,23 +1263,23 @@
      style="display:none">
     <image
        xlink:href="../src/images/P1040677.JPG"
-       checksum="a431b0aa9e4cdd6c"
-       transform="matrix(1.0860303,0,0,1.0860303,-32.654488,-317.51965)"
-       clip-path="url(#clipPath3254-6)"
-       width="435.76715"
-       height="291.23053"
-       id="image3461-9"
-       x="-27.94437"
+       checksum="9926ac56657055ad"
+       style="display:inline"
        y="255.78967"
-       style="display:inline" />
+       x="-27.94437"
+       id="image3461-9"
+       height="291.23053"
+       width="435.76715"
+       clip-path="url(#clipPath3254-6)"
+       transform="matrix(1.0860303,0,0,1.0860303,-32.654488,-317.51965)" />
     <image
        xlink:href="../src/images/P1040696.JPG"
-       checksum="61bb5fac13911779"
-       width="415.9873"
-       height="278.01135"
-       id="image3190"
+       checksum="075d5a7b5a8446ee"
+       y="268.69199"
        x="-5.8411865"
-       y="268.69199" />
+       id="image3190"
+       height="278.01135"
+       width="415.9873" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 10.629944,-5.9511719e-5 393.307246,0 0,545.669309511719 -393.307246,0 z"
@@ -1285,13 +1294,13 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/P1040696.JPG"
-       checksum="61bb5fac13911779"
-       y="6.4733124"
-       x="-575.46936"
-       id="image3648"
-       height="403.35831"
+       checksum="075d5a7b5a8446ee"
+       transform="matrix(0,-1,1,0,0,0)"
        width="603.54346"
-       transform="matrix(0,-1,1,0,0,0)" />
+       height="403.35831"
+       id="image3648"
+       x="-575.46936"
+       y="6.4733124" />
     <path
        sodipodi:insensitive="true"
        sodipodi:nodetypes="ccccc"
@@ -1306,59 +1315,59 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/P1040677.JPG"
-       checksum="a431b0aa9e4cdd6c"
-       y="255.78967"
-       x="-27.94437"
-       id="image3259"
-       height="291.23053"
-       width="435.76715"
+       checksum="9926ac56657055ad"
+       transform="matrix(1.0753405,0,0,1.0753405,-31.3007,-31.423801)"
        clip-path="url(#clipPath3263)"
-       transform="matrix(1.0753405,0,0,1.0753405,-31.3007,-31.423801)" />
-    <image
-       xlink:href="../src/images/DSC04941.JPG"
-       checksum="d79ece190b501321"
-       transform="matrix(0.99996716,-0.00810453,0.00810453,0.99996716,0,0)"
-       width="880.89362"
-       height="587.26245"
-       id="image3712"
-       x="355.46182"
-       y="1118.3269" />
-    <image
-       xlink:href="../src/images/P1010254.JPG"
-       checksum="fca0c67228c8ca0b"
-       width="479.21384"
-       height="359.41037"
-       id="image3585"
-       x="238.8707"
-       y="-1712.7289" />
-    <image
-       xlink:href="../src/images/P1010244.JPG"
-       checksum="0d1e42a92ef6f8d5"
-       width="489.43063"
-       height="367.073"
-       id="image3523"
-       x="1102.8069"
-       y="179.2177" />
-    <image
-       xlink:href="../src/images/DSC04942.JPG"
-       checksum="d4753379fcf6d0bd"
-       clip-path="url(#clipPath3248)"
-       transform="matrix(1.0094462,-0.0131064,0.0131064,1.0094462,-3.6769245,-9.7065846)"
-       width="418.09995"
-       height="278.73331"
-       id="image3647"
-       x="-8.2213497"
-       y="4.3373928" />
-    <image
-       xlink:href="../src/images/P1040677.JPG"
-       checksum="a431b0aa9e4cdd6c"
-       transform="matrix(1.0753405,0,0,1.0753405,-31.3007,-51.423801)"
-       clip-path="url(#clipPath3254)"
        width="435.76715"
        height="291.23053"
-       id="image3461"
+       id="image3259"
        x="-27.94437"
        y="255.78967" />
+    <image
+       xlink:href="../src/images/DSC04941.JPG"
+       checksum="fa217632f4f82d1d"
+       y="1118.3269"
+       x="355.46182"
+       id="image3712"
+       height="587.26245"
+       width="880.89362"
+       transform="matrix(0.99996716,-0.00810453,0.00810453,0.99996716,0,0)" />
+    <image
+       xlink:href="../src/images/P1010254.JPG"
+       checksum="2f60d666ba2a7e5c"
+       y="-1712.7289"
+       x="238.8707"
+       id="image3585"
+       height="359.41037"
+       width="479.21384" />
+    <image
+       xlink:href="../src/images/P1010244.JPG"
+       checksum="9a8dda5251c387c9"
+       y="179.2177"
+       x="1102.8069"
+       id="image3523"
+       height="367.073"
+       width="489.43063" />
+    <image
+       xlink:href="../src/images/DSC04942.JPG"
+       checksum="fed614b282dd2145"
+       y="4.3373928"
+       x="-8.2213497"
+       id="image3647"
+       height="278.73331"
+       width="418.09995"
+       transform="matrix(1.0094462,-0.0131064,0.0131064,1.0094462,-3.6769245,-9.7065846)"
+       clip-path="url(#clipPath3248)" />
+    <image
+       xlink:href="../src/images/P1040677.JPG"
+       checksum="9926ac56657055ad"
+       y="255.78967"
+       x="-27.94437"
+       id="image3461"
+       height="291.23053"
+       width="435.76715"
+       clip-path="url(#clipPath3254)"
+       transform="matrix(1.0753405,0,0,1.0753405,-31.3007,-51.423801)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 10.629944,-5.9511719e-5 393.307246,0 0,545.669309511719 -393.307246,0 z"
@@ -1378,22 +1387,22 @@
      style="display:none">
     <image
        xlink:href="../src/images/P1010145.JPG"
-       checksum="41fed409ef626add"
-       width="487.78204"
-       height="365.83655"
-       id="image3552"
+       checksum="e0abedcb31a6b5dd"
+       y="208.97137"
        x="-62.290375"
-       y="208.97137" />
+       id="image3552"
+       height="365.83655"
+       width="487.78204" />
     <image
        xlink:href="../src/images/P1010254.JPG"
-       checksum="fca0c67228c8ca0b"
-       clip-path="url(#clipPath3573)"
-       transform="matrix(1.0417583,-0.02771999,0.02771999,1.0417583,-15.439513,-2.912553)"
-       y="-0.054640755"
-       x="-14.321952"
-       id="image3352"
+       checksum="2f60d666ba2a7e5c"
+       width="419.47101"
        height="314.60321"
-       width="419.47101" />
+       id="image3352"
+       x="-14.321952"
+       y="-0.054640755"
+       transform="matrix(1.0417583,-0.02771999,0.02771999,1.0417583,-15.439513,-2.912553)"
+       clip-path="url(#clipPath3573)" />
     <path
        sodipodi:insensitive="true"
        sodipodi:nodetypes="ccccc"
@@ -1413,26 +1422,26 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/DSC04941.JPG"
-       checksum="d79ece190b501321"
-       clip-path="url(#clipPath4777)"
-       transform="matrix(0.99995095,-0.00990473,0.00990473,0.99995095,42,0)"
-       width="845.21393"
-       height="563.47601"
-       id="image3712-1"
-       x="-13.177544"
-       y="-4.7091165"
-       style="display:inline" />
-    <image
-       xlink:href="../src/images/DSC04941.JPG"
-       checksum="d79ece190b501321"
-       clip-path="url(#clipPath4781)"
+       checksum="fa217632f4f82d1d"
        style="display:inline"
        y="-4.7091165"
        x="-13.177544"
-       id="image4773"
+       id="image3712-1"
        height="563.47601"
        width="845.21393"
-       transform="matrix(0.99995095,-0.00990473,0.00990473,0.99995095,-15,0)" />
+       transform="matrix(0.99995095,-0.00990473,0.00990473,0.99995095,42,0)"
+       clip-path="url(#clipPath4777)" />
+    <image
+       xlink:href="../src/images/DSC04941.JPG"
+       checksum="fa217632f4f82d1d"
+       transform="matrix(0.99995095,-0.00990473,0.00990473,0.99995095,-15,0)"
+       width="845.21393"
+       height="563.47601"
+       id="image4773"
+       x="-13.177544"
+       y="-4.7091165"
+       style="display:inline"
+       clip-path="url(#clipPath4781)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 775.96875,545.65625 775.96875,0 10.625,0 l 0,545.65625 z"
@@ -1452,20 +1461,20 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/DSC05020.JPG"
-       checksum="b34dd7fb93b727cc"
-       width="399.97482"
-       height="266.6499"
-       id="image3290"
+       checksum="68942c65af21766d"
+       y="-2.5249386"
        x="5.2938929"
-       y="-2.5249386" />
+       id="image3290"
+       height="266.6499"
+       width="399.97482" />
     <image
        xlink:href="../src/images/IMG_1132.JPG"
-       checksum="0f82bfaab4957f9f"
-       width="401.56561"
-       height="301.17419"
-       id="image3414"
+       checksum="60c0f6b55a9821aa"
+       y="252.16922"
        x="6.3733835"
-       y="252.16922" />
+       id="image3414"
+       height="301.17419"
+       width="401.56561" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3227"
@@ -1479,12 +1488,12 @@
        sodipodi:nodetypes="ccccc" />
     <image
        xlink:href="../src/images/IMG_1131.JPG"
-       checksum="657af30f62be8fa4"
-       width="1375.7806"
-       height="1031.8354"
-       id="image3352-3"
+       checksum="25f080eae7acdb61"
+       y="-1655.3557"
        x="1562.6696"
-       y="-1655.3557" />
+       id="image3352-3"
+       height="1031.8354"
+       width="1375.7806" />
   </g>
   <g
      style="display:none"
@@ -1493,23 +1502,23 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/DSC05019.JPG"
-       checksum="847e8e30cf922be4"
-       y="-12.059668"
-       x="5.8729968"
-       id="image3357"
-       height="592.71918"
+       checksum="78c0d67b19813b49"
+       transform="matrix(0.99999917,0.0012881,-0.0012881,0.99999917,0,0)"
        width="395.45493"
-       transform="matrix(0.99999917,0.0012881,-0.0012881,0.99999917,0,0)" />
+       height="592.71918"
+       id="image3357"
+       x="5.8729968"
+       y="-12.059668" />
     <image
        xlink:href="../src/images/DSC05019.JPG"
-       checksum="847e8e30cf922be4"
-       transform="matrix(3.9356123,-0.06822485,0.03657255,1.0698167,-1062.1083,10.716359)"
-       width="369.48804"
-       height="553.79932"
-       id="image3142"
-       x="6.7138214"
+       checksum="78c0d67b19813b49"
+       clip-path="url(#clipPath3149)"
        y="-1.215968"
-       clip-path="url(#clipPath3149)" />
+       x="6.7138214"
+       id="image3142"
+       height="553.79932"
+       width="369.48804"
+       transform="matrix(3.9356123,-0.06822485,0.03657255,1.0698167,-1062.1083,10.716359)" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3064-7"
@@ -1524,22 +1533,22 @@
      style="display:none">
     <image
        xlink:href="../src/images/PWFU3267.JPG"
-       checksum="34b4dd7072f8c0ff"
-       transform="matrix(0.99994605,0.01038744,-0.01038744,0.99994605,0,0)"
-       width="414.43604"
-       height="276.29065"
-       id="image3644"
-       x="-1.9943236"
+       checksum="9a82609a297e2e44"
+       style="display:inline"
        y="-6.2308588"
-       style="display:inline" />
+       x="-1.9943236"
+       id="image3644"
+       height="276.29065"
+       width="414.43604"
+       transform="matrix(0.99994605,0.01038744,-0.01038744,0.99994605,0,0)" />
     <image
        xlink:href="../src/images/PWFU3271.JPG"
-       checksum="57b63b9fcb42e1cf"
-       width="417.31763"
-       height="278.21173"
-       id="image3222"
+       checksum="ead2c932373bdf51"
+       y="269.9939"
        x="-5.0720892"
-       y="269.9939" />
+       id="image3222"
+       height="278.21173"
+       width="417.31763" />
     <path
        sodipodi:insensitive="true"
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -1554,34 +1563,34 @@
      style="display:none">
     <image
        xlink:href="../src/images/PWFU3350.JPG"
-       checksum="4cc2ca439722ad49"
-       clip-path="url(#clipPath3719)"
+       checksum="0689edee32623b7d"
+       y="257.38831"
+       x="-458.54321"
+       id="image3697"
+       height="293.76538"
+       width="440.64813"
        transform="matrix(-5.2155794,0,0,1.0223799,-88.813661,-9.1060206)"
+       clip-path="url(#clipPath3719)" />
+    <image
+       xlink:href="../src/images/PWFU3350.JPG"
+       checksum="0689edee32623b7d"
+       clip-path="url(#clipPath3693)"
+       transform="matrix(-1.0223799,0,0,1.0223799,-5.213047,-9.1060206)"
        width="440.64813"
        height="293.76538"
-       id="image3697"
+       id="image3420"
        x="-458.54321"
        y="257.38831" />
     <image
-       xlink:href="../src/images/PWFU3350.JPG"
-       checksum="4cc2ca439722ad49"
-       y="257.38831"
-       x="-458.54321"
-       id="image3420"
-       height="293.76538"
-       width="440.64813"
-       transform="matrix(-1.0223799,0,0,1.0223799,-5.213047,-9.1060206)"
-       clip-path="url(#clipPath3693)" />
-    <image
        xlink:href="../src/images/PWFU3361.JPG"
-       checksum="9a20edd633ac3d31"
-       width="424.3382"
-       height="282.89212"
-       id="image3423"
-       x="-431.79559"
-       y="-4.3782883"
+       checksum="6e9e5cb32720984d"
+       clip-path="url(#clipPath3684)"
        transform="scale(-1,1)"
-       clip-path="url(#clipPath3684)" />
+       y="-4.3782883"
+       x="-431.79559"
+       id="image3423"
+       height="282.89212"
+       width="424.3382" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3064-3"
@@ -1596,37 +1605,37 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/PWFU3372.JPG"
-       checksum="b853403a61c03729"
-       y="270.37646"
-       x="-7.4616194"
+       checksum="51353d45b375da1e"
+       transform="matrix(1.1744152,0,0,1.0022272,-72.640206,-4.612905)"
+       clip-path="url(#clipPath4616)"
+       width="414.71613"
+       height="276.47742"
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeSpeed"
        id="image4605"
-       style="image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="276.47742"
-       width="414.71613"
-       clip-path="url(#clipPath4616)"
-       transform="matrix(1.1744152,0,0,1.0022272,-72.640206,-4.612905)" />
-    <image
-       xlink:href="../src/images/PWFU3356.JPG"
-       checksum="40a9c1b6dc3f66ee"
-       transform="matrix(0.99654152,0.08309627,-0.08309627,0.99654152,0,0)"
-       y="-34.040306"
-       x="-22.42165"
-       id="image3447"
-       height="306.46817"
-       width="459.70224" />
-    <image
-       xlink:href="../src/images/PWFU3372.JPG"
-       checksum="b853403a61c03729"
-       transform="matrix(1.0051706,0,0,1.0022272,-7.297822,-2.612905)"
-       clip-path="url(#clipPath4616)"
-       width="414.71613"
-       height="276.47742"
-       preserveAspectRatio="none"
-       style="image-rendering:optimizeSpeed"
-       id="image4620"
        x="-7.4616194"
        y="270.37646" />
+    <image
+       xlink:href="../src/images/PWFU3356.JPG"
+       checksum="c8b9215d665cb41b"
+       width="459.70224"
+       height="306.46817"
+       id="image3447"
+       x="-22.42165"
+       y="-34.040306"
+       transform="matrix(0.99654152,0.08309627,-0.08309627,0.99654152,0,0)" />
+    <image
+       xlink:href="../src/images/PWFU3372.JPG"
+       checksum="51353d45b375da1e"
+       y="270.37646"
+       x="-7.4616194"
+       id="image4620"
+       style="image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="276.47742"
+       width="414.71613"
+       clip-path="url(#clipPath4616)"
+       transform="matrix(1.0051706,0,0,1.0022272,-7.297822,-2.612905)" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
        d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
@@ -1641,22 +1650,22 @@
      style="display:none">
     <image
        xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
-       checksum="5f9f54c3f8af23e1"
-       y="58.609978"
-       x="39.851521"
-       id="image3536"
-       height="371.76718"
-       width="661.24231" />
-    <image
-       xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
-       checksum="5f9f54c3f8af23e1"
-       transform="translate(62,0)"
-       clip-path="url(#clipPath3269)"
+       checksum="fe32e0df9da96b35"
        width="661.24231"
        height="371.76718"
-       id="image3264"
+       id="image3536"
        x="39.851521"
        y="58.609978" />
+    <image
+       xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
+       checksum="fe32e0df9da96b35"
+       y="58.609978"
+       x="39.851521"
+       id="image3264"
+       height="371.76718"
+       width="661.24231"
+       clip-path="url(#clipPath3269)"
+       transform="translate(62,0)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 775.96875,545.65625 0,-545.65624951171878 -765.34375,0 L 10.625,545.65625 z"
@@ -1682,22 +1691,22 @@
        sodipodi:nodetypes="ccccc" />
     <image
        xlink:href="../src/images/PWFU3310.JPG"
-       checksum="03e04e2537116199"
-       width="401.40485"
-       height="267.60324"
-       id="image3562"
+       checksum="6e293ad234cc6fc5"
+       y="279.35468"
        x="6.272347"
-       y="279.35468" />
+       id="image3562"
+       height="267.60324"
+       width="401.40485" />
     <image
        xlink:href="../src/images/Screenshot_from_2017-06-07_164407.png"
-       checksum="5f9f54c3f8af23e1"
-       clip-path="none"
-       y="57.390564"
-       x="53.957989"
-       id="image3536-6"
-       height="172.40694"
+       checksum="fe32e0df9da96b35"
+       style="display:inline"
        width="306.65097"
-       style="display:inline" />
+       height="172.40694"
+       id="image3536-6"
+       x="53.957989"
+       y="57.390564"
+       clip-path="none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1706,12 +1715,12 @@
      style="display:none">
     <image
        xlink:href="../src/images/IMAG1404.jpg"
-       checksum="2d1566906fdebb29"
-       width="401.52011"
-       height="556.52966"
-       id="image3652"
+       checksum="d7ffc3ae20d7e2e9"
+       y="-2.0067916"
        x="6.9179878"
-       y="-2.0067916" />
+       id="image3652"
+       height="556.52966"
+       width="401.52011" />
     <path
        sodipodi:insensitive="true"
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -1726,49 +1735,49 @@
      style="display:none">
     <image
        xlink:href="../src/images/P1010334.JPG"
-       checksum="e13361e6e1189528"
-       transform="matrix(0.99877828,0.04941598,-0.04941598,0.99877828,0,0)"
-       width="582.68591"
-       height="437.01447"
-       id="image3685"
+       checksum="ba89c2ecbeeb29c6"
+       y="-143.9529"
        x="81.954193"
-       y="-143.9529" />
+       id="image3685"
+       height="437.01447"
+       width="582.68591"
+       transform="matrix(0.99877828,0.04941598,-0.04941598,0.99877828,0,0)" />
     <image
        xlink:href="../src/images/IMG_5698.JPG"
-       checksum="346b150f0056ed5c"
-       y="-52.821465"
-       x="161.40411"
-       id="image3789"
-       height="365.03162"
-       width="273.77374"
+       checksum="b416f44629996861"
+       clip-path="url(#clipPath3792)"
        transform="matrix(0.99442893,0.10540926,-0.10540926,0.99442893,-153,0)"
-       clip-path="url(#clipPath3792)" />
+       width="273.77374"
+       height="365.03162"
+       id="image3789"
+       x="161.40411"
+       y="-52.821465" />
     <image
        xlink:href="../src/images/IMAG1400.jpg"
-       checksum="83c06f77f2043f48"
-       clip-path="url(#clipPath3622)"
-       transform="matrix(-0.99996974,-0.00778003,-0.00778003,0.99996974,0,0)"
-       width="559.86426"
-       height="318.69196"
-       id="image3782"
+       checksum="8062b3c84d759e14"
+       y="247.90021"
        x="-564.66431"
-       y="247.90021" />
+       id="image3782"
+       height="318.69196"
+       width="559.86426"
+       transform="matrix(-0.99996974,-0.00778003,-0.00778003,0.99996974,0,0)"
+       clip-path="url(#clipPath3622)" />
     <image
        xlink:href="../src/images/FullSizeRender.jpg"
-       checksum="c52ff6ab16b09b00"
-       y="59.140106"
-       x="-426.13907"
-       id="image3665"
+       checksum="ce09d43e397b55ac"
+       width="142.68857"
        height="204.53908"
-       width="142.68857" />
+       id="image3665"
+       x="-426.13907"
+       y="59.140106" />
     <image
        xlink:href="../src/images/IMG_5695.JPG"
        checksum="5a3153309d215d7e"
-       y="292.29794"
-       x="-506.10138"
-       id="image3727"
+       width="304.49121"
        height="133.77464"
-       width="304.49121" />
+       id="image3727"
+       x="-506.10138"
+       y="292.29794" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
@@ -2268,11 +2277,11 @@
          sodipodi:cy="867.40143"
          sodipodi:rx="10.602075"
          sodipodi:ry="10.602075"
-         d="m -3081.9416,867.40143 c 0,5.85536 -4.7467,10.60207 -10.6021,10.60207 -5.8554,0 -10.6021,-4.74671 -10.6021,-10.60207 0,-5.85537 4.7467,-10.60208 10.6021,-10.60208 5.8554,0 10.6021,4.74671 10.6021,10.60208 z"
+         d="m -3081.9416,867.40143 a 10.602075,10.602075 0 0 1 -10.6021,10.60207 10.602075,10.602075 0 0 1 -10.6021,-10.60207 10.602075,10.602075 0 0 1 10.6021,-10.60208 10.602075,10.602075 0 0 1 10.6021,10.60208 z"
          transform="matrix(0.39883161,0,0,0.3985705,1309.1078,-267.5431)" />
       <path
          transform="matrix(0.39883161,0,0,0.3985705,1323.2026,-267.5431)"
-         d="m -3081.9416,867.40143 c 0,5.85536 -4.7467,10.60207 -10.6021,10.60207 -5.8554,0 -10.6021,-4.74671 -10.6021,-10.60207 0,-5.85537 4.7467,-10.60208 10.6021,-10.60208 5.8554,0 10.6021,4.74671 10.6021,10.60208 z"
+         d="m -3081.9416,867.40143 a 10.602075,10.602075 0 0 1 -10.6021,10.60207 10.602075,10.602075 0 0 1 -10.6021,-10.60207 10.602075,10.602075 0 0 1 10.6021,-10.60208 10.602075,10.602075 0 0 1 10.6021,10.60208 z"
          sodipodi:ry="10.602075"
          sodipodi:rx="10.602075"
          sodipodi:cy="867.40143"
@@ -2288,11 +2297,11 @@
          sodipodi:cy="867.40143"
          sodipodi:rx="10.602075"
          sodipodi:ry="10.602075"
-         d="m -3081.9416,867.40143 c 0,5.85536 -4.7467,10.60207 -10.6021,10.60207 -5.8554,0 -10.6021,-4.74671 -10.6021,-10.60207 0,-5.85537 4.7467,-10.60208 10.6021,-10.60208 5.8554,0 10.6021,4.74671 10.6021,10.60208 z"
+         d="m -3081.9416,867.40143 a 10.602075,10.602075 0 0 1 -10.6021,10.60207 10.602075,10.602075 0 0 1 -10.6021,-10.60207 10.602075,10.602075 0 0 1 10.6021,-10.60208 10.602075,10.602075 0 0 1 10.6021,10.60208 z"
          transform="matrix(0.39883161,0,0,0.3985705,1337.2974,-267.5431)" />
       <path
          transform="matrix(0.13294387,0,0,0.13285684,486.83836,-37.062704)"
-         d="m -3081.9416,867.40143 c 0,5.85536 -4.7467,10.60207 -10.6021,10.60207 -5.8554,0 -10.6021,-4.74671 -10.6021,-10.60207 0,-5.85537 4.7467,-10.60208 10.6021,-10.60208 5.8554,0 10.6021,4.74671 10.6021,10.60208 z"
+         d="m -3081.9416,867.40143 a 10.602075,10.602075 0 0 1 -10.6021,10.60207 10.602075,10.602075 0 0 1 -10.6021,-10.60207 10.602075,10.602075 0 0 1 10.6021,-10.60208 10.602075,10.602075 0 0 1 10.6021,10.60208 z"
          sodipodi:ry="10.602075"
          sodipodi:rx="10.602075"
          sodipodi:cy="867.40143"
@@ -2592,15 +2601,15 @@
          style="color:#000000;fill:#ffffff;stroke:#333333;stroke-width:3.76292038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <image
          xlink:href="../src/images/C6oKTduWcAEruIE.jpg"
-         checksum="7ad8ddf00fd8641e"
-         style="display:inline"
-         height="975"
-         width="719"
-         id="image10388"
-         x="-2011"
-         y="-2547.3308"
+         checksum="4b558c75c1557a03"
+         transform="matrix(1.077624,0,0,1.077624,561.3545,156.16255)"
          clip-path="url(#clipPath7600-3)"
-         transform="matrix(1.077624,0,0,1.077624,561.3545,156.16255)" />
+         y="-2547.3308"
+         x="-2011"
+         id="image10388"
+         width="719"
+         height="975"
+         style="display:inline" />
       <text
          xml:space="preserve"
          style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:129.99999523%;letter-spacing:0.5px;word-spacing:-0.5px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;display:inline;font-family:FreeSans;-inkscape-font-specification:FreeSans"
@@ -3868,7 +3877,7 @@
          sodipodi:cy="-1427.2983"
          sodipodi:rx="1.1782037"
          sodipodi:ry="1.1782037"
-         d="m -1474.3256,-1427.2983 c 0,0.6507 -0.5275,1.1782 -1.1782,1.1782 -0.6507,0 -1.1782,-0.5275 -1.1782,-1.1782 0,-0.6507 0.5275,-1.1782 1.1782,-1.1782 0.6507,0 1.1782,0.5275 1.1782,1.1782 z"
+         d="m -1474.3256,-1427.2983 a 1.1782037,1.1782037 0 0 1 -1.1782,1.1782 1.1782037,1.1782037 0 0 1 -1.1782,-1.1782 1.1782037,1.1782037 0 0 1 1.1782,-1.1782 1.1782037,1.1782037 0 0 1 1.1782,1.1782 z"
          transform="matrix(0.84874967,0,0,0.84874967,86.8333,-223.41175)" />
       <path
          style="color:#000000;fill:none;stroke:#333333;stroke-width:1.78153634;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -4066,15 +4075,15 @@
          sodipodi:nodetypes="ccc" />
       <image
          xlink:href="../src/images/Workrave-Restbreak-Shoulder.png"
-         checksum="84886843df4fa6e8"
-         transform="translate(740,-4.9511719e-5)"
-         style="display:inline"
-         height="403"
-         width="578"
-         y="-2054.3308"
-         x="-795.00269"
+         checksum="a3eff6851563f6ac"
+         clip-path="url(#clipPath7359-7)"
          id="image9921"
-         clip-path="url(#clipPath7359-7)" />
+         x="-795.00269"
+         y="-2054.3308"
+         width="578"
+         height="403"
+         style="display:inline"
+         transform="translate(740,-4.9511719e-5)" />
       <path
          style="color:#000000;fill:none;stroke:#333333;stroke-width:1.77515435;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          d="m -34.5,-2010.8307 253,0 0,253 -253,0 z"
@@ -5103,19 +5112,19 @@
     <image
        xlink:href="../src/images/8-Poses-Yoga-Your-Desk.contours.png"
        checksum="9a11350b61962631"
-       y="43.31472"
-       x="69.653145"
-       id="image4393"
+       width="266.25922"
        height="226.56239"
-       width="266.25922" />
+       id="image4393"
+       x="69.653145"
+       y="43.31472" />
     <image
        xlink:href="../src/images/gayolab-office-chair-for-yoga.contours.png"
        checksum="5c70229dd8fb035a"
-       y="299.82336"
-       x="92.628662"
-       id="image4455"
+       width="212.0441"
        height="175.09703"
-       width="212.0441" />
+       id="image4455"
+       x="92.628662"
+       y="299.82336" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3064-7-7"
@@ -5525,12 +5534,12 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/IMG_0729.JPG"
-       checksum="5cd0179e33c4d9f4"
-       width="835.5694"
-       height="557.04626"
-       id="image3642"
+       checksum="50aa1500c3f4e1e9"
+       y="-6.212554"
        x="-264.47815"
-       y="-6.212554" />
+       id="image3642"
+       height="557.04626"
+       width="835.5694" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3064-7-6"
@@ -5545,13 +5554,13 @@
      style="display:none">
     <image
        xlink:href="../src/images/PWFU3393.JPG"
-       checksum="64bd1db26f6bf0d4"
-       width="1079.0515"
-       height="719.36774"
-       id="image3711"
-       x="-7.3685226"
+       checksum="1370d3de6334652c"
+       style="display:inline"
        y="-47.236023"
-       style="display:inline" />
+       x="-7.3685226"
+       id="image3711"
+       height="719.36774"
+       width="1079.0515" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4462-3"
@@ -5571,12 +5580,12 @@
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <image
        xlink:href="../src/images/dropbox-satire3.png"
-       checksum="b06192a7ac5d690f"
-       y="80.081657"
-       x="61.254974"
-       id="image4549"
+       checksum="91880f3f20158bd5"
+       width="652.03168"
        height="366.58884"
-       width="652.03168" />
+       id="image4549"
+       x="61.254974"
+       y="80.081657" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5591,12 +5600,12 @@
     <image
        xlink:href="../src/images/3306884705_2f3d62ee32_o_d.jpg"
        checksum="84f4dd6486b939b4"
-       width="351.09695"
-       height="245.79263"
-       id="image4175"
-       x="27.192528"
+       style="display:inline"
        y="138.54396"
-       style="display:inline" />
+       x="27.192528"
+       id="image4175"
+       height="245.79263"
+       width="351.09695" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 10.629921,-5.9511719e-5 393.307249,0 0,545.669309511719 -393.307249,0 z"
@@ -5608,29 +5617,13 @@
      inkscape:groupmode="layer"
      id="g4562"
      inkscape:label="doingelevator"
-     style="display:none">
+     style="display:inline">
     <path
-       sodipodi:nodetypes="ccccc"
-       id="path3273"
-       d="m 775.96875,545.65625 0,-545.65625 -380.64142,0 0,545.65625 z"
-       style="color:#000000;fill:#b3b3b3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
        d="M 775.96875,545.65625 775.96875,0 10.625,0 l 0,545.65625 z"
        id="path4564"
        sodipodi:nodetypes="ccccc"
        sodipodi:insensitive="true" />
-    <text
-       xml:space="preserve"
-       style="font-size:9.30408382px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:1.69165146px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ececec;fill-opacity:1;stroke:none;font-family:Aileron;-inkscape-font-specification:Aileron"
-       x="493.01947"
-       y="262.26761"
-       id="text4568"
-       sodipodi:linespacing="141%"><tspan
-         sodipodi:role="line"
-         id="tspan4570"
-         x="493.01947"
-         y="262.26761">images of elevator performance</tspan></text>
     <g
        transform="matrix(3.4241259,0,0,3.4241259,129.25872,87.02345)"
        id="Background">
@@ -5644,7 +5637,7 @@
          rx="0"
          id="rect5" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="17.975"
          y="1.6880929"
          font-size="0.80"
@@ -5661,7 +5654,7 @@
          id="line9" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="17.976,5.948 17.731,5.445 17.98,5.573 18.231,5.45 "
+         points="17.98,5.573 18.231,5.45 17.976,5.948 17.731,5.445 "
          id="polygon11"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
@@ -5675,7 +5668,7 @@
          rx="0"
          id="rect13" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="17.972"
          y="5.4380937"
          font-size="0.80"
@@ -5692,18 +5685,18 @@
          id="line17" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="17.973,9.698 17.724,9.197 17.974,9.323 18.224,9.198 "
+         points="17.974,9.323 18.224,9.198 17.973,9.698 17.724,9.197 "
          id="polygon19"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <!-- Flowchart - Diamond -->
       <polygon
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         points="17.925,17.15 24.85,22.075 17.925,27 11,22.075 "
+         points="17.925,27 11,22.075 17.925,17.15 24.85,22.075 "
          id="polygon21"
          transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="17.924999"
          y="16.429092"
          font-size="0.80"
@@ -5712,7 +5705,7 @@
          id="text23">if current floor is 25th floor</text>
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="25.1"
          y="15.859094"
          font-size="0.80"
@@ -5722,11 +5715,11 @@
       <!-- Flowchart - Diamond -->
       <polygon
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         points="46.07,24.15 52.995,29.075 46.07,34 39.145,29.075 "
+         points="46.07,34 39.145,29.075 46.07,24.15 52.995,29.075 "
          id="polygon27"
          transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.07"
          y="23.429092"
          font-size="0.80"
@@ -5741,7 +5734,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="46.07,24.038 45.82,23.538 46.07,23.663 46.32,23.538 "
+         points="46.07,23.663 46.32,23.538 46.07,24.038 45.82,23.538 "
          id="polygon33"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -5752,7 +5745,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="34.722,35.254 34.472,34.754 34.722,34.879 34.972,34.754 "
+         points="34.722,34.879 34.972,34.754 34.722,35.254 34.472,34.754 "
          id="polygon37"
          transform="translate(0,-5.8409068)" />
       <!-- Flowchart - Box -->
@@ -5765,7 +5758,7 @@
          rx="0"
          id="rect39" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="34.722"
          y="30.995092"
          font-size="0.80"
@@ -5774,7 +5767,7 @@
          id="text41">go one floor up</text>
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="29.166773"
          y="22.725046"
          font-size="0.80"
@@ -5792,7 +5785,7 @@
          rx="0"
          id="rect45" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="56.422001"
          y="31.045095"
          font-size="0.80"
@@ -5807,12 +5800,12 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="56.422,35.304 56.172,34.804 56.422,34.929 56.672,34.804 "
+         points="56.422,34.929 56.672,34.804 56.422,35.304 56.172,34.804 "
          id="polygon51"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="53.87009"
          y="22.803047"
          font-size="0.80"
@@ -5828,7 +5821,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="25.112,11.722 25.612,11.472 25.487,11.722 25.612,11.972 "
+         points="25.487,11.722 25.612,11.972 25.112,11.722 25.612,11.472 "
          id="polygon57"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -5839,7 +5832,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="25.112,10.447 25.612,10.197 25.487,10.447 25.612,10.697 "
+         points="25.487,10.447 25.612,10.697 25.112,10.447 25.612,10.197 "
          id="polygon61"
          transform="translate(0,-5.8409068)" />
       <!-- Flowchart - Box -->
@@ -5852,7 +5845,7 @@
          rx="0"
          id="rect63" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.081"
          y="19.679092"
          font-size="0.80"
@@ -5870,7 +5863,7 @@
          rx="0"
          id="rect67" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.131"
          y="23.445091"
          font-size="0.80"
@@ -5888,7 +5881,7 @@
          rx="0"
          id="rect71" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.131"
          y="27.289093"
          font-size="0.80"
@@ -5906,7 +5899,7 @@
          rx="0"
          id="rect75" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.131"
          y="30.945093"
          font-size="0.80"
@@ -5923,7 +5916,7 @@
          rx="0"
          id="rect79" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.092"
          y="34.745094"
          font-size="0.80"
@@ -5940,7 +5933,7 @@
          id="line83" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.127,27.705 -0.143,27.215 0.111,27.33 0.356,27.195 "
+         points="0.111,27.33 0.356,27.195 0.127,27.705 -0.143,27.215 "
          id="polygon85"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -5953,7 +5946,7 @@
          id="line87" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.131,31.548 -0.119,31.048 0.131,31.173 0.381,31.048 "
+         points="0.131,31.173 0.381,31.048 0.131,31.548 -0.119,31.048 "
          id="polygon89"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -5966,7 +5959,7 @@
          id="line91" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.131,35.204 -0.119,34.704 0.131,34.829 0.381,34.704 "
+         points="0.131,34.829 0.381,34.704 0.131,35.204 -0.119,34.704 "
          id="polygon93"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -5979,7 +5972,7 @@
          id="line95" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.114,38.955 -0.128,38.451 0.12,38.58 0.372,38.459 "
+         points="0.12,38.58 0.372,38.459 0.114,38.955 -0.128,38.451 "
          id="polygon97"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
@@ -5992,13 +5985,13 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.081,23.938 -0.169,23.438 0.081,23.563 0.331,23.438 "
+         points="0.081,23.563 0.331,23.438 0.081,23.938 -0.169,23.438 "
          id="polygon101"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="9.5100002"
          y="15.850093"
          font-size="0.80"
@@ -6009,19 +6002,14 @@
       <!-- Flowchart - Ellipse -->
       <ellipse
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         sodipodi:ry="1.402"
-         sodipodi:rx="4.6069999"
-         sodipodi:cy="-0.77999997"
-         sodipodi:cx="17.922001"
          cx="17.922001"
          cy="-0.77999997"
          rx="4.6069999"
          ry="1.402"
          id="ellipse105"
-         transform="translate(0,-5.8409068)"
-         d="m 22.529001,-0.77999997 c 0,0.77430319 -2.062624,1.40199995 -4.607,1.40199995 -2.544376,0 -4.607,-0.62769676 -4.607,-1.40199995 0,-0.77430323 2.062624,-1.40199993 4.607,-1.40199993 2.544376,0 4.607,0.6276967 4.607,1.40199993 z" />
+         transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="17.922001"
          y="-6.4259067"
          font-size="0.80"
@@ -6038,7 +6026,7 @@
          id="line109" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="17.985,2.514 17.719,2.023 17.973,2.14 18.218,2.006 "
+         points="17.973,2.14 18.218,2.006 17.985,2.514 17.719,2.023 "
          id="polygon111"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
@@ -6048,7 +6036,7 @@
          d="m 10.864,-2.6949067 14.25,-1.04 0,2.5999999 -14.25,0 0,-1.5599999 z"
          id="path113" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="17.989"
          y="-1.7149067"
          font-size="0.80"
@@ -6066,7 +6054,7 @@
          rx="0"
          id="rect117" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.039000001"
          y="60.797096"
          font-size="0.80"
@@ -6076,11 +6064,11 @@
       <!-- Flowchart - Diamond -->
       <polygon
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         points="15.864,52.757 23.316,58.056 15.864,63.356 8.412,58.056 "
+         points="15.864,63.356 8.412,58.056 15.864,52.757 23.316,58.056 "
          id="polygon121"
          transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="15.864"
          y="52.410095"
          font-size="0.80"
@@ -6095,7 +6083,7 @@
          d="m 8.702,39.512094 14.25,-1.04 0,2.6 -14.25,0 0,-1.56 z"
          id="path125" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="15.827"
          y="40.492096"
          font-size="0.80"
@@ -6115,7 +6103,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-13.373,44.284 -13.623,43.784 -13.373,43.909 -13.123,43.784 "
+         points="-13.373,43.909 -13.123,43.784 -13.373,44.284 -13.623,43.784 "
          id="polygon131"
          transform="translate(0,-5.8409068)" />
       <!-- Flowchart - Box -->
@@ -6128,7 +6116,7 @@
          rx="0"
          id="rect133" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-16.898001"
          y="40.025097"
          font-size="0.80"
@@ -6139,11 +6127,11 @@
       <!-- Flowchart - Diamond -->
       <polygon
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         points="-16.846,48.353 -8.35,54.396 -16.846,60.438 -25.342,54.396 "
+         points="-16.846,60.438 -25.342,54.396 -16.846,48.353 -8.35,54.396 "
          id="polygon137"
          transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-16.846001"
          y="48.750095"
          font-size="0.80"
@@ -6160,7 +6148,7 @@
          id="line141" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-16.85,48.242 -17.118,47.751 -16.864,47.867 -16.619,47.733 "
+         points="-16.864,47.867 -16.619,47.733 -16.85,48.242 -17.118,47.751 "
          id="polygon143"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -6171,7 +6159,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="15.827,44.721 15.577,44.221 15.827,44.346 16.077,44.221 "
+         points="15.827,44.346 16.077,44.221 15.827,44.721 15.577,44.221 "
          id="polygon147"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -6182,7 +6170,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-3.474,65.056 -3.724,64.556 -3.474,64.681 -3.224,64.556 "
+         points="-3.474,64.681 -3.224,64.556 -3.474,65.056 -3.724,64.556 "
          id="polygon151"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -6193,12 +6181,12 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="3.553,65.056 3.303,64.556 3.553,64.681 3.803,64.556 "
+         points="3.553,64.681 3.803,64.556 3.553,65.056 3.303,64.556 "
          id="polygon155"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="-8.0080004"
          y="47.980095"
          font-size="0.80"
@@ -6207,7 +6195,7 @@
          id="text157">yes</text>
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="23.657"
          y="51.68605"
          font-size="0.80"
@@ -6224,7 +6212,7 @@
          rx="0"
          id="rect161" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="15.878"
          y="43.529095"
          font-size="0.80"
@@ -6251,7 +6239,7 @@
          id="line167" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="15.872,47.788 15.597,47.302 15.853,47.414 16.096,47.276 "
+         points="15.853,47.414 16.096,47.276 15.872,47.788 15.597,47.302 "
          id="polygon169"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -6264,7 +6252,7 @@
          id="line171" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="15.865,52.645 15.618,52.143 15.867,52.27 16.118,52.146 "
+         points="15.867,52.27 16.118,52.146 15.865,52.645 15.618,52.143 "
          id="polygon173"
          transform="translate(0,-5.8409068)" />
       <!-- Flowchart - Box -->
@@ -6277,7 +6265,7 @@
          rx="0"
          id="rect175" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.050000001"
          y="65.431091"
          font-size="0.80"
@@ -6294,7 +6282,7 @@
          id="line179" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.05,69.69 -0.203,69.191 0.048,69.315 0.297,69.188 "
+         points="0.048,69.315 0.297,69.188 0.05,69.69 -0.203,69.191 "
          id="polygon181"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -6305,12 +6293,12 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="3.564,69.69 3.314,69.19 3.564,69.315 3.814,69.19 "
+         points="3.564,69.315 3.814,69.19 3.564,69.69 3.314,69.19 "
          id="polygon185"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="6.9229999"
          y="51.717049"
          font-size="0.80"
@@ -6321,11 +6309,11 @@
       <!-- Flowchart - Diamond -->
       <polygon
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         points="0.012,83.083 7.464,88.383 0.012,93.683 -7.44,88.383 "
+         points="0.012,93.683 -7.44,88.383 0.012,83.083 7.464,88.383 "
          id="polygon189"
          transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.012"
          y="82.737091"
          font-size="0.80"
@@ -6342,7 +6330,7 @@
          rx="0"
          id="rect193" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.085000001"
          y="69.826088"
          font-size="0.80"
@@ -6359,7 +6347,7 @@
          id="line197" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.082,74.085 -0.177,73.59 0.076,73.71 0.323,73.581 "
+         points="0.076,73.71 0.323,73.581 0.082,74.085 -0.177,73.59 "
          id="polygon199"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
@@ -6374,7 +6362,7 @@
          rx="0"
          id="rect201" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="0.014"
          y="74.069092"
          font-size="0.80"
@@ -6391,7 +6379,7 @@
          id="line205" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.019,78.328 -0.21,77.818 0.034,77.953 0.289,77.839 "
+         points="0.034,77.953 0.289,77.839 0.019,78.328 -0.21,77.818 "
          id="polygon207"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
@@ -6405,7 +6393,7 @@
          id="line209" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="0.012,82.971 -0.237,82.471 0.012,82.596 0.263,82.471 "
+         points="0.012,82.596 0.263,82.471 0.012,82.971 -0.237,82.471 "
          id="polygon211"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
@@ -6419,7 +6407,7 @@
          rx="0"
          id="rect213" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-15.967"
          y="90.430092"
          font-size="0.80"
@@ -6434,7 +6422,7 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-15.967,94.689 -16.217,94.189 -15.967,94.314 -15.717,94.189 "
+         points="-15.967,94.314 -15.717,94.189 -15.967,94.689 -16.217,94.189 "
          id="polygon219"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - ZigZagLine -->
@@ -6445,12 +6433,12 @@
          transform="translate(0,-5.8409068)" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="7.274,75.472 7.774,75.222 7.649,75.472 7.774,75.722 "
+         points="7.649,75.472 7.774,75.722 7.274,75.472 7.774,75.222 "
          id="polygon223"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="7.7709999"
          y="81.89904"
          font-size="0.80"
@@ -6459,7 +6447,7 @@
          id="text225">no</text>
       <!-- Standard - Text -->
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="-9.3870916"
          y="81.87204"
          font-size="0.80"
@@ -6477,7 +6465,7 @@
          rx="0"
          id="rect229" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-15.931"
          y="94.028091"
          font-size="0.80"
@@ -6494,7 +6482,7 @@
          id="line233" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-15.935,98.287 -16.202,97.796 -15.948,97.912 -15.702,97.779 "
+         points="-15.948,97.912 -15.702,97.779 -15.935,98.287 -16.202,97.796 "
          id="polygon235"
          transform="translate(0,-5.8409068)" />
       <!-- Flowchart - Box -->
@@ -6507,7 +6495,7 @@
          rx="0"
          id="rect237" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-16.011"
          y="98.058098"
          font-size="0.80"
@@ -6524,7 +6512,7 @@
          rx="0"
          id="rect241" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-16.011"
          y="101.71408"
          font-size="0.80"
@@ -6541,7 +6529,7 @@
          rx="0"
          id="rect245" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-16.049999"
          y="105.51409"
          font-size="0.80"
@@ -6558,7 +6546,7 @@
          id="line249" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-16.015,102.317 -16.286,101.828 -16.031,101.943 -15.787,101.807 "
+         points="-16.031,101.943 -15.787,101.807 -16.015,102.317 -16.286,101.828 "
          id="polygon251"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -6571,7 +6559,7 @@
          id="line253" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-16.011,105.973 -16.261,105.473 -16.011,105.598 -15.761,105.473 "
+         points="-16.011,105.598 -15.761,105.473 -16.011,105.973 -16.261,105.473 "
          id="polygon255"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -6584,25 +6572,20 @@
          id="line257" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-16.047,109.773 -16.281,109.266 -16.035,109.398 -15.781,109.281 "
+         points="-16.035,109.398 -15.781,109.281 -16.047,109.773 -16.281,109.266 "
          id="polygon259"
          transform="translate(0,-5.8409068)" />
       <!-- Flowchart - Ellipse -->
       <ellipse
          style="fill:#ffffff;stroke:#000000;stroke-width:0.1"
-         sodipodi:ry="1.402"
-         sodipodi:rx="4.6069999"
-         sodipodi:cy="115.781"
-         sodipodi:cx="-16.018999"
          cx="-16.018999"
          cy="115.781"
          rx="4.6069999"
          ry="1.402"
          id="ellipse261"
-         transform="translate(0,-5.8409068)"
-         d="m -11.411999,115.781 c 0,0.7743 -2.062624,1.402 -4.607,1.402 -2.544376,0 -4.607,-0.6277 -4.607,-1.402 0,-0.7743 2.062624,-1.402 4.607,-1.402 2.544376,0 4.607,0.6277 4.607,1.402 z" />
+         transform="translate(0,-5.8409068)" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="-16.018999"
          y="110.13509"
          font-size="0.80"
@@ -6619,13 +6602,13 @@
          id="line265" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="-16.021,114.267 -16.279,113.771 -16.027,113.892 -15.779,113.763 "
+         points="-16.027,113.892 -15.779,113.763 -16.021,114.267 -16.279,113.771 "
          id="polygon267"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
       <!-- Standard - Text -->
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="76.117065"
          font-size="2.12"
@@ -6633,7 +6616,7 @@
          font-weight="400"
          id="text269">what</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="79.923965"
          font-size="2.12"
@@ -6641,7 +6624,7 @@
          font-weight="400"
          id="text271">is</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="83.732651"
          font-size="2.12"
@@ -6649,7 +6632,7 @@
          font-weight="400"
          id="text273">it</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="87.541344"
          font-size="2.12"
@@ -6657,7 +6640,7 @@
          font-weight="400"
          id="text275">like</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="91.348244"
          font-size="2.12"
@@ -6665,7 +6648,7 @@
          font-weight="400"
          id="text277">to</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="95.156929"
          font-size="2.12"
@@ -6673,7 +6656,7 @@
          font-weight="400"
          id="text279">be</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="98.96563"
          font-size="2.12"
@@ -6681,7 +6664,7 @@
          font-weight="400"
          id="text281">an</text>
       <text
-         style="font-size:3.8140893px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.8140893px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="46.299267"
          y="102.77251"
          font-size="2.12"
@@ -6692,7 +6675,7 @@
       <!-- Standard - Text -->
       <!-- Standard - Text -->
       <text
-         style="font-size:2.53672934px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:start;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.53672934px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:start;fill:#000000"
          x="31.496283"
          y="111.69628"
          font-size="1.41"
@@ -6711,7 +6694,7 @@
          rx="0"
          id="rect287" />
       <text
-         style="font-size:0.80000001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:middle;fill:#000000;font-family:Arimo;-inkscape-font-specification:Arimo"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.80000001px;font-family:Arimo;-inkscape-font-specification:Arimo;text-anchor:middle;fill:#000000"
          x="17.969999"
          y="9.1030941"
          font-size="0.80"
@@ -6729,7 +6712,7 @@
          id="line291" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="17.97,13.362 17.721,12.861 17.971,12.987 18.221,12.862 "
+         points="17.971,12.987 18.221,12.862 17.97,13.362 17.721,12.861 "
          id="polygon293"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Line -->
@@ -6742,11 +6725,43 @@
          id="line295" />
       <polygon
          style="fill:#000000;stroke:#000000;stroke-width:0.1"
-         points="17.929,17.038 17.7,16.529 17.944,16.664 18.199,16.549 "
+         points="17.944,16.664 18.199,16.549 17.929,17.038 17.7,16.529 "
          id="polygon297"
          transform="translate(0,-5.8409068)" />
       <!-- Standard - Text -->
     </g>
+    <image
+       y="-24.261917"
+       x="393.75134"
+       id="image4916"
+       xlink:href="../src/images/elevatorperformance_07.jpg"
+       checksum="6759041ecd1182e6"
+       style="image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="215.14059"
+       width="382.4722" />
+    <image
+       y="180.72064"
+       x="393.80774"
+       id="image4792"
+       xlink:href="../src/images/elevatorperformance_14.jpg"
+       checksum="03e4bc73dfd539c4"
+       style="image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="218.25607"
+       width="385.11282" />
+    <image
+       y="350.22391"
+       x="393.06927"
+       id="image4854-5"
+       xlink:href="../src/images/elevatorperformance_17.jpg"
+       checksum="df0feacb19365064"
+       style="image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="217.48787"
+       width="386.64511"
+       clip-path="url(#clipPath4927)"
+       transform="translate(0,-14)" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6755,20 +6770,20 @@
      style="display:none">
     <image
        xlink:href="../src/images/PWFU3377.JPG"
-       checksum="31580b952b7adbc2"
-       y="-1.9245796"
-       x="-19.371475"
-       id="image4712"
+       checksum="e2f4cd873a3a991c"
+       width="448.72791"
        height="299.15192"
-       width="448.72791" />
+       id="image4712"
+       x="-19.371475"
+       y="-1.9245796" />
     <image
        xlink:href="../src/images/PWFU3381.JPG"
-       checksum="b66a0789e7b8bd1d"
-       width="399.2565"
-       height="266.17099"
-       id="image3494"
+       checksum="868888d27402eccb"
+       y="293.17963"
        x="6.5286117"
-       y="293.17963" />
+       id="image3494"
+       height="266.17099"
+       width="399.2565" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path3108-3-5"
@@ -6783,12 +6798,12 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/IMG_0892.JPG"
-       checksum="c2a7321a91d1ffd9"
-       width="840.29688"
-       height="560.19794"
-       id="image4852"
+       checksum="fec87c1a5e35f661"
+       y="-6.2883706"
        x="-16.391968"
-       y="-6.2883706" />
+       id="image4852"
+       height="560.19794"
+       width="840.29688" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4462-6"
@@ -6804,13 +6819,13 @@
      sodipodi:insensitive="true">
     <image
        xlink:href="../src/images/PWFU3442.JPG"
-       checksum="e4be605802b2a999"
-       transform="matrix(0.99999564,0.00295302,-0.00295302,0.99999564,0,0)"
-       width="909.08807"
-       height="606.05872"
-       id="image3254"
+       checksum="3695f581e8da31ed"
+       y="-57.150379"
        x="-101.72163"
-       y="-57.150379" />
+       id="image3254"
+       height="606.05872"
+       width="909.08807"
+       transform="matrix(0.99999564,0.00295302,-0.00295302,0.99999564,0,0)" />
     <path
        style="color:#000000;fill:#ffffff;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 404.25986,-9.37012 381.09448,0 0,564.40943 -381.09448,0 z"
@@ -6829,13 +6844,13 @@
      style="display:none">
     <image
        xlink:href="../src/images/P1040728.JPG"
-       checksum="830f2dcfa6712e6e"
-       transform="matrix(0,-1,1,0,0,0)"
-       width="633.04169"
-       height="423.07239"
-       id="image5692"
+       checksum="83ee2c96f5bb7000"
+       y="-17.122597"
        x="-568.70746"
-       y="-17.122597" />
+       id="image5692"
+       height="423.07239"
+       width="633.04169"
+       transform="matrix(0,-1,1,0,0,0)" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
        d="m 10.629944,-5.9511719e-5 393.307246,0 0,545.669309511719 -393.307246,0 z"
@@ -6855,13 +6870,13 @@
      style="display:none">
     <image
        xlink:href="../src/images/P1040730.JPG"
-       checksum="5bc461990c754919"
-       y="-30.910122"
-       x="-670.69122"
-       id="image5619"
-       height="467.53934"
+       checksum="77ef130a7394446c"
+       transform="matrix(-0.01241285,-0.99992296,0.99992296,-0.01241285,0,0)"
        width="699.57733"
-       transform="matrix(-0.01241285,-0.99992296,0.99992296,-0.01241285,0,0)" />
+       height="467.53934"
+       id="image5619"
+       x="-670.69122"
+       y="-30.910122" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
        d="m 10.629944,-5.9511719e-5 393.307246,0 0,545.669309511719 -393.307246,0 z"
@@ -6881,13 +6896,13 @@
      style="display:none">
     <image
        xlink:href="../src/images/IMG_0721.JPG"
-       checksum="f1fb32183970feac"
-       y="-788.75049"
-       x="-0.673944"
-       id="image4026"
-       height="409.43631"
+       checksum="975c958364993cad"
+       transform="matrix(0,1,-1,0,0,0)"
        width="614.15442"
-       transform="matrix(0,1,-1,0,0,0)" />
+       height="409.43631"
+       id="image4026"
+       x="-0.673944"
+       y="-788.75049" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path5623"
@@ -6907,13 +6922,13 @@
      style="display:none">
     <image
        xlink:href="../src/images/IMG_0787.JPG"
-       checksum="26cdc7070eed7355"
-       transform="matrix(-0.99997953,-0.00639788,-0.00639788,0.99997953,0,0)"
-       width="838.07013"
-       height="558.71338"
-       id="image4940"
+       checksum="8148ae13b39ae1f9"
+       y="-12.320658"
        x="-603.31366"
-       y="-12.320658" />
+       id="image4940"
+       height="558.71338"
+       width="838.07013"
+       transform="matrix(-0.99997953,-0.00639788,-0.00639788,0.99997953,0,0)" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4877"
@@ -6933,12 +6948,12 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/IMG_0707-01.JPG"
-       checksum="40cefcb8ca16c4be"
-       width="909.57593"
-       height="606.38391"
-       id="image5010"
+       checksum="e9ef780baa396338"
+       y="-56.487343"
        x="-497.90457"
-       y="-56.487343" />
+       id="image5010"
+       height="606.38391"
+       width="909.57593" />
     <path
        style="color:#000000;fill:#ffffff;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 404.25986,-9.37012 381.09448,0 0,564.40943 -381.09448,0 z"
@@ -6958,14 +6973,14 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/PWFU3544.JPG"
-       checksum="333b30481e90fdff"
-       transform="matrix(0.999546,0.03012974,-0.03012974,0.999546,0,0)"
-       y="-110.24281"
-       x="-438.08823"
-       id="image4566"
-       preserveAspectRatio="none"
+       checksum="d3dbaa7d8cd030a9"
+       width="986.52332"
        height="669.46045"
-       width="986.52332" />
+       preserveAspectRatio="none"
+       id="image4566"
+       x="-438.08823"
+       y="-110.24281"
+       transform="matrix(0.999546,0.03012974,-0.03012974,0.999546,0,0)" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4118"
@@ -6992,13 +7007,13 @@
      style="display:none">
     <image
        xlink:href="../src/images/PWFU3427.JPG"
-       checksum="7f005fa4212f9abd"
-       y="-8.9713526"
-       x="-186.86823"
-       id="image4481"
-       preserveAspectRatio="none"
+       checksum="5779fd6fa6bd9893"
+       width="802.54919"
        height="567.2652"
-       width="802.54919" />
+       preserveAspectRatio="none"
+       id="image4481"
+       x="-186.86823"
+       y="-8.9713526" />
     <path
        sodipodi:insensitive="true"
        style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
@@ -7025,15 +7040,15 @@
      inkscape:groupmode="layer">
     <image
        xlink:href="../src/images/PWFU3343_Detail.jpg"
-       checksum="1092c2a91dd19dbb"
-       y="-4.4862609"
-       x="-842.56195"
-       id="image4543"
-       style="image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="785.9187"
+       checksum="bbf8b5b7d1936af3"
+       transform="matrix(-0.99974839,0.02243122,0.02243122,0.99974839,0,0)"
        width="1178.2448"
-       transform="matrix(-0.99974839,0.02243122,0.02243122,0.99974839,0,0)" />
+       height="785.9187"
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeSpeed"
+       id="image4543"
+       x="-842.56195"
+       y="-4.4862609" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4075"
@@ -7059,13 +7074,13 @@
      id="g1105"
      inkscape:groupmode="layer">
     <image
-       xlink:href="../src/images/autopsy_old.jpg"
-       checksum="85fa061005d7cf8e"
-       width="108.02343"
-       height="108.02343"
-       id="image4363"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/autopsy_old.jpg"
+       y="177.36263"
        x="142.64182"
-       y="177.36263" />
+       id="image4363"
+       height="108.02343"
+       width="108.02343" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 135.99991,155.99994 121.30725,0 0,147.66931 -121.30725,0 z"
@@ -7078,13 +7093,13 @@
      inkscape:label="autopsy-new"
      style="display:none">
     <image
-       xlink:href="../src/images/AutopsyDogLogo.png"
-       checksum="79ef25226a946505"
-       width="108.60578"
-       height="116.75121"
-       id="image4280"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/AutopsyDogLogo.png"
+       y="164.54109"
        x="142.35065"
-       y="164.54109" />
+       id="image4280"
+       height="116.75121"
+       width="108.60578" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 135.99991,148.99994 121.30725,0 0,158.66931 -121.30725,0 z"
@@ -7097,13 +7112,13 @@
      inkscape:label="dowse"
      style="display:none">
     <image
-       xlink:href="../src/images/dowse.png"
-       checksum="9fb0729565685e95"
-       width="105.29916"
-       height="105.29916"
-       id="image4447"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/dowse.png"
+       y="174.89786"
        x="135.09935"
-       y="174.89786" />
+       id="image4447"
+       height="105.29916"
+       width="105.29916" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 127.62992,164.99994 121.30725,0 0,124.66931 -121.30725,0 z"
@@ -7117,13 +7132,13 @@
      inkscape:groupmode="layer"
      sodipodi:insensitive="true">
     <image
-       xlink:href="../src/images/ghostery-logo.png"
-       checksum="3e9d30f9e9b93f02"
-       width="85.541573"
-       height="98.509972"
-       id="image4531"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/ghostery-logo.png"
+       y="179.24634"
        x="155.93399"
-       y="179.24634" />
+       id="image4531"
+       height="98.509972"
+       width="85.541573" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4467"
@@ -7168,12 +7183,12 @@
      style="display:none">
     <image
        xlink:href="../src/images/hovelbot.jpg"
-       checksum="0db5de453c6a9c6f"
-       width="211.30092"
-       height="127.67072"
-       id="image1120"
+       checksum="eacfd2a4a1ac1997"
+       y="163.40727"
        x="84.068298"
-       y="163.40727" />
+       id="image1120"
+       height="127.67072"
+       width="211.30092" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 86.62992,154.99994 207.30725,0 0,154.66931 -207.30725,0 z"
@@ -7186,14 +7201,14 @@
      inkscape:label="iotinspector"
      style="display:none">
     <image
-       xlink:href="../src/images/iot_inspector.jpg"
-       checksum="38fb73e83a37c014"
-       clip-path="url(#clipPath4126)"
-       width="140.39977"
-       height="140.39977"
-       id="image1125"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/iot_inspector.jpg"
+       y="199.63474"
        x="126.45365"
-       y="199.63474" />
+       id="image1125"
+       height="140.39977"
+       width="140.39977"
+       clip-path="url(#clipPath4126)" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 141.99991,210.49997 110.30725,0 0,124.66931 -110.30725,0 z"
@@ -7206,13 +7221,13 @@
      inkscape:groupmode="layer"
      style="display:none">
     <image
-       xlink:href="../src/images/badger-stroke.png"
-       checksum="242edee24a056edd"
-       width="115.92351"
-       height="84.317101"
-       id="image4783"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/badger-stroke.png"
+       y="225.1348"
        x="137.36636"
-       y="225.1348" />
+       id="image4783"
+       height="84.317101"
+       width="115.92351" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4719"
@@ -7225,13 +7240,13 @@
      id="g4786"
      inkscape:label="sleuthkit-old">
     <image
-       xlink:href="../src/images/the_sleuth_kit_logo.gif"
-       checksum="2690d1bf7aac23f5"
-       width="165.63123"
-       height="139.13023"
-       id="image4854"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/the_sleuth_kit_logo.gif"
+       y="205.50998"
        x="115.21216"
-       y="205.50998" />
+       id="image4854"
+       height="139.13023"
+       width="165.63123" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 105.99991,200.49997 181.30725,0 0,154.66931 -181.30725,0 z"
@@ -7244,13 +7259,13 @@
      inkscape:groupmode="layer"
      style="display:none">
     <image
-       xlink:href="../src/images/hash3_v1_sm.jpg"
-       checksum="ed33439772dbc7ea"
-       width="140.76233"
-       height="196.34232"
-       id="image4925"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/hash3_v1_sm.jpg"
+       y="174.37422"
        x="124.00565"
-       y="174.37422" />
+       id="image4925"
+       height="196.34232"
+       width="140.76233" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path4861"
@@ -7263,13 +7278,13 @@
      id="g4928"
      inkscape:label="littlesnitch-old">
     <image
-       xlink:href="../src/images/littlesnitch_old.png"
-       checksum="b50655f63185de6f"
-       width="173.39067"
-       height="173.39067"
-       id="image4996"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/littlesnitch_old.png"
+       y="184.89304"
        x="100.40955"
-       y="184.89304" />
+       id="image4996"
+       height="173.39067"
+       width="173.39067" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 93.99991,179.49997 183.30725,0 0,183.66931 -183.30725,0 z"
@@ -7282,13 +7297,13 @@
      inkscape:groupmode="layer"
      style="display:none">
     <image
-       xlink:href="../src/images/littlesnitch_340.png"
-       checksum="a07e8b4e5b99bea7"
-       width="161.12413"
-       height="152.59402"
-       id="image5083"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/littlesnitch_340.png"
+       y="198.70969"
        x="103.30805"
-       y="198.70969" />
+       id="image5083"
+       height="152.59402"
+       width="161.12413" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path5003"
@@ -7301,13 +7316,13 @@
      id="g5086"
      inkscape:label="netflixstethoscope">
     <image
-       xlink:href="../src/images/netflix-stetoscope.png"
-       checksum="0b0c17f2216aa264"
-       width="142.35442"
-       height="288.31274"
-       id="image5154"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/netflix-stetoscope.png"
+       y="122.53558"
        x="110.16382"
-       y="122.53558" />
+       id="image5154"
+       height="288.31274"
+       width="142.35442" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 102.99991,119.49997 154.30725,0 0,306.66931 -154.30725,0 z"
@@ -7320,13 +7335,13 @@
      inkscape:groupmode="layer"
      style="display:none">
     <image
-       xlink:href="../src/images/transparency_grenade.jpg"
-       checksum="85f9635111c8dba3"
-       width="218.02892"
-       height="310.69119"
-       id="image5225"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/transparency_grenade.jpg"
+       y="119.67305"
        x="74.470062"
-       y="119.67305" />
+       id="image5225"
+       height="310.69119"
+       width="218.02892" />
     <path
        sodipodi:nodetypes="ccccc"
        id="path5161"
@@ -7339,13 +7354,13 @@
      id="g5228"
      inkscape:label="wireshark">
     <image
-       xlink:href="../src/images/wiresharklogo.png"
-       checksum="fd338826b8843cbd"
-       width="187.55995"
-       height="174.32719"
-       id="image5296"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWP4z8AAAAMBAQCc479ZAAAAAElFTkSuQmCC"
+       deadxlink="../src/images/wiresharklogo.png"
+       y="185.63953"
        x="92.844788"
-       y="185.63953" />
+       id="image5296"
+       height="174.32719"
+       width="187.55995" />
     <path
        style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 76.99991,172.49997 213.30725,0 0,211.66931 -213.30725,0 z"
@@ -7353,7 +7368,7 @@
        sodipodi:nodetypes="ccccc" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="vvw"
      id="g4303"
      inkscape:groupmode="layer">
@@ -7525,14 +7540,14 @@
         <path
            id="path3580"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="m 0,0 0.116,0 0,-1.541 c 0.242,0.17 0.503,0.283 0.851,0.283 0.481,0 0.839,-0.193 1.074,-0.49 0.236,-0.297 0.352,-0.697 0.352,-1.109 0,-0.526 -0.142,-0.994 -0.423,-1.332 -0.283,-0.339 -0.699,-0.545 -1.251,-0.545 -0.206,0 -0.445,0.029 -0.684,0.08 -0.238,0.052 -0.48,0.126 -0.674,0.207 l 0,4.318 L 0,0 z m 0.116,-3.918 c 0.21,-0.068 0.442,-0.097 0.623,-0.097 0.296,0 0.512,0.129 0.657,0.322 0.146,0.191 0.216,0.445 0.216,0.7 0,0.255 -0.067,0.503 -0.203,0.694 -0.135,0.19 -0.338,0.316 -0.606,0.316 -0.232,0 -0.49,-0.084 -0.687,-0.21 l 0,-1.725 z m 4.886,1.764 c -0.19,0.116 -0.377,0.167 -0.568,0.167 -0.245,0 -0.47,-0.09 -0.674,-0.245 l 0,-2.438 -0.754,0 0,3.348 0.638,0 0.078,-0.274 c 0.232,0.196 0.516,0.338 0.851,0.338 0.09,0 0.216,-0.006 0.339,-0.029 C 5.034,-1.309 5.153,-1.342 5.24,-1.39 L 5.002,-2.154 z M 8.017,-4.67 7.94,-4.409 C 7.63,-4.615 7.25,-4.734 6.876,-4.734 c -0.32,0 -0.626,0.087 -0.848,0.28 C 5.805,-4.26 5.66,-3.96 5.66,-3.544 l 0,2.222 0.755,0 0,-2 c 0,-0.248 0.09,-0.419 0.228,-0.529 0.139,-0.109 0.333,-0.161 0.529,-0.161 0.258,0 0.523,0.081 0.729,0.207 l 0,2.483 0.755,0 0,-3.348 -0.639,0 z m 1.197,0.89 c 0.093,-0.051 0.222,-0.106 0.367,-0.154 0.142,-0.049 0.304,-0.081 0.462,-0.081 0.138,0 0.274,0.026 0.38,0.087 0.103,0.061 0.174,0.158 0.174,0.303 0,0.216 -0.158,0.313 -0.364,0.39 -0.106,0.039 -0.219,0.078 -0.339,0.113 -0.245,0.071 -0.461,0.197 -0.6,0.419 -0.07,0.11 -0.106,0.258 -0.106,0.449 0,0.351 0.139,0.603 0.352,0.764 0.212,0.161 0.499,0.232 0.806,0.232 0.258,0 0.548,-0.051 0.745,-0.126 l 0,-0.677 -0.039,-0.029 c -0.181,0.087 -0.358,0.136 -0.577,0.136 -0.142,0 -0.274,-0.023 -0.371,-0.071 -0.097,-0.049 -0.161,-0.123 -0.161,-0.226 0,-0.158 0.155,-0.239 0.361,-0.313 0.103,-0.035 0.216,-0.074 0.335,-0.116 0.242,-0.084 0.455,-0.226 0.594,-0.464 0.067,-0.12 0.103,-0.278 0.103,-0.471 0,-0.387 -0.155,-0.668 -0.394,-0.848 -0.238,-0.184 -0.561,-0.271 -0.893,-0.271 -0.335,0 -0.632,0.084 -0.861,0.229 l 0,0.706 0.026,0.019 z m 2.422,0 c 0.093,-0.051 0.222,-0.106 0.368,-0.154 0.141,-0.049 0.303,-0.081 0.461,-0.081 0.138,0 0.274,0.026 0.38,0.087 0.103,0.061 0.174,0.158 0.174,0.303 0,0.216 -0.158,0.313 -0.364,0.39 -0.107,0.039 -0.219,0.078 -0.339,0.113 -0.245,0.071 -0.461,0.197 -0.6,0.419 -0.071,0.11 -0.106,0.258 -0.106,0.449 0,0.351 0.139,0.603 0.352,0.764 0.212,0.161 0.499,0.232 0.806,0.232 0.258,0 0.548,-0.051 0.745,-0.126 l 0,-0.677 -0.039,-0.029 c -0.181,0.087 -0.358,0.136 -0.577,0.136 -0.142,0 -0.274,-0.023 -0.371,-0.071 -0.097,-0.049 -0.161,-0.123 -0.161,-0.226 0,-0.158 0.155,-0.239 0.361,-0.313 0.103,-0.035 0.216,-0.074 0.335,-0.116 0.242,-0.084 0.455,-0.226 0.594,-0.464 0.067,-0.12 0.103,-0.278 0.103,-0.471 0,-0.387 -0.155,-0.668 -0.394,-0.848 -0.238,-0.184 -0.561,-0.271 -0.893,-0.271 -0.335,0 -0.632,0.084 -0.861,0.229 l 0,0.706 0.026,0.019 z m 5.153,-0.022 0,-0.732 c -0.296,-0.145 -0.664,-0.2 -0.951,-0.2 -0.464,0 -0.894,0.145 -1.209,0.432 -0.316,0.287 -0.516,0.725 -0.516,1.306 0,0.564 0.187,0.997 0.47,1.293 0.281,0.294 0.658,0.445 1.036,0.445 0.106,0 0.296,-0.013 0.493,-0.08 0.197,-0.068 0.413,-0.197 0.574,-0.42 0.161,-0.222 0.274,-0.551 0.274,-1.016 l 0,-0.503 -2.032,0 c 0.062,-0.271 0.2,-0.454 0.381,-0.57 0.177,-0.117 0.394,-0.165 0.609,-0.165 0.284,0 0.584,0.081 0.842,0.219 l 0.029,-0.009 z M 16.27,-2.68 c -0.016,0.245 -0.103,0.419 -0.219,0.535 -0.116,0.113 -0.265,0.162 -0.41,0.162 -0.155,0 -0.313,-0.052 -0.442,-0.165 -0.132,-0.116 -0.232,-0.29 -0.28,-0.532 l 1.351,0 z m 2.106,2.68 0,-4.67 -0.755,0 0,4.606 0.658,0.064 0.097,0 z" />
+           d="m 0,0 0.116,0 0,-1.541 c 0.242,0.17 0.503,0.283 0.851,0.283 0.481,0 0.839,-0.193 1.074,-0.49 0.236,-0.297 0.352,-0.697 0.352,-1.109 0,-0.526 -0.142,-0.994 -0.423,-1.332 -0.283,-0.339 -0.699,-0.545 -1.251,-0.545 -0.206,0 -0.445,0.029 -0.684,0.08 -0.238,0.052 -0.48,0.126 -0.674,0.207 l 0,4.318 L 0,0 Z m 0.116,-3.918 c 0.21,-0.068 0.442,-0.097 0.623,-0.097 0.296,0 0.512,0.129 0.657,0.322 0.146,0.191 0.216,0.445 0.216,0.7 0,0.255 -0.067,0.503 -0.203,0.694 -0.135,0.19 -0.338,0.316 -0.606,0.316 -0.232,0 -0.49,-0.084 -0.687,-0.21 l 0,-1.725 z m 4.886,1.764 c -0.19,0.116 -0.377,0.167 -0.568,0.167 -0.245,0 -0.47,-0.09 -0.674,-0.245 l 0,-2.438 -0.754,0 0,3.348 0.638,0 0.078,-0.274 c 0.232,0.196 0.516,0.338 0.851,0.338 0.09,0 0.216,-0.006 0.339,-0.029 C 5.034,-1.309 5.153,-1.342 5.24,-1.39 L 5.002,-2.154 Z M 8.017,-4.67 7.94,-4.409 C 7.63,-4.615 7.25,-4.734 6.876,-4.734 c -0.32,0 -0.626,0.087 -0.848,0.28 C 5.805,-4.26 5.66,-3.96 5.66,-3.544 l 0,2.222 0.755,0 0,-2 c 0,-0.248 0.09,-0.419 0.228,-0.529 0.139,-0.109 0.333,-0.161 0.529,-0.161 0.258,0 0.523,0.081 0.729,0.207 l 0,2.483 0.755,0 0,-3.348 -0.639,0 z m 1.197,0.89 c 0.093,-0.051 0.222,-0.106 0.367,-0.154 0.142,-0.049 0.304,-0.081 0.462,-0.081 0.138,0 0.274,0.026 0.38,0.087 0.103,0.061 0.174,0.158 0.174,0.303 0,0.216 -0.158,0.313 -0.364,0.39 -0.106,0.039 -0.219,0.078 -0.339,0.113 -0.245,0.071 -0.461,0.197 -0.6,0.419 -0.07,0.11 -0.106,0.258 -0.106,0.449 0,0.351 0.139,0.603 0.352,0.764 0.212,0.161 0.499,0.232 0.806,0.232 0.258,0 0.548,-0.051 0.745,-0.126 l 0,-0.677 -0.039,-0.029 c -0.181,0.087 -0.358,0.136 -0.577,0.136 -0.142,0 -0.274,-0.023 -0.371,-0.071 -0.097,-0.049 -0.161,-0.123 -0.161,-0.226 0,-0.158 0.155,-0.239 0.361,-0.313 0.103,-0.035 0.216,-0.074 0.335,-0.116 0.242,-0.084 0.455,-0.226 0.594,-0.464 0.067,-0.12 0.103,-0.278 0.103,-0.471 0,-0.387 -0.155,-0.668 -0.394,-0.848 -0.238,-0.184 -0.561,-0.271 -0.893,-0.271 -0.335,0 -0.632,0.084 -0.861,0.229 l 0,0.706 0.026,0.019 z m 2.422,0 c 0.093,-0.051 0.222,-0.106 0.368,-0.154 0.141,-0.049 0.303,-0.081 0.461,-0.081 0.138,0 0.274,0.026 0.38,0.087 0.103,0.061 0.174,0.158 0.174,0.303 0,0.216 -0.158,0.313 -0.364,0.39 -0.107,0.039 -0.219,0.078 -0.339,0.113 -0.245,0.071 -0.461,0.197 -0.6,0.419 -0.071,0.11 -0.106,0.258 -0.106,0.449 0,0.351 0.139,0.603 0.352,0.764 0.212,0.161 0.499,0.232 0.806,0.232 0.258,0 0.548,-0.051 0.745,-0.126 l 0,-0.677 -0.039,-0.029 c -0.181,0.087 -0.358,0.136 -0.577,0.136 -0.142,0 -0.274,-0.023 -0.371,-0.071 -0.097,-0.049 -0.161,-0.123 -0.161,-0.226 0,-0.158 0.155,-0.239 0.361,-0.313 0.103,-0.035 0.216,-0.074 0.335,-0.116 0.242,-0.084 0.455,-0.226 0.594,-0.464 0.067,-0.12 0.103,-0.278 0.103,-0.471 0,-0.387 -0.155,-0.668 -0.394,-0.848 -0.238,-0.184 -0.561,-0.271 -0.893,-0.271 -0.335,0 -0.632,0.084 -0.861,0.229 l 0,0.706 0.026,0.019 z m 5.153,-0.022 0,-0.732 c -0.296,-0.145 -0.664,-0.2 -0.951,-0.2 -0.464,0 -0.894,0.145 -1.209,0.432 -0.316,0.287 -0.516,0.725 -0.516,1.306 0,0.564 0.187,0.997 0.47,1.293 0.281,0.294 0.658,0.445 1.036,0.445 0.106,0 0.296,-0.013 0.493,-0.08 0.197,-0.068 0.413,-0.197 0.574,-0.42 0.161,-0.222 0.274,-0.551 0.274,-1.016 l 0,-0.503 -2.032,0 c 0.062,-0.271 0.2,-0.454 0.381,-0.57 0.177,-0.117 0.394,-0.165 0.609,-0.165 0.284,0 0.584,0.081 0.842,0.219 l 0.029,-0.009 z M 16.27,-2.68 c -0.016,0.245 -0.103,0.419 -0.219,0.535 -0.116,0.113 -0.265,0.162 -0.41,0.162 -0.155,0 -0.313,-0.052 -0.442,-0.165 -0.132,-0.116 -0.232,-0.29 -0.28,-0.532 l 1.351,0 z m 2.106,2.68 0,-4.67 -0.755,0 0,4.606 0.658,0.064 0.097,0 z" />
       </g>
     </g>
     <path
        sodipodi:nodetypes="ccccc"
        id="path4307"
        d="m 36.62992,224.99994 342,0 0,84.66931 -342,0 z"
-       style="opacity:0.5;color:#000000;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
   </g>
   <g
      inkscape:groupmode="layer"
