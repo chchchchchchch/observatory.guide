@@ -10,7 +10,7 @@
    darktable:xmp_version="2"
    darktable:raw_params="0"
    darktable:auto_presets_applied="1"
-   darktable:history_end="9">
+   darktable:history_end="11">
    <darktable:mask_id>
     <rdf:Seq/>
    </darktable:mask_id>
@@ -111,6 +111,24 @@
       darktable:enabled="1"
       darktable:modversion="1"
       darktable:params="00000000b047e13d00000000"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="colorcorrection"
+      darktable:enabled="1"
+      darktable:modversion="1"
+      darktable:params="92919140696969410000000000000000cccc4c3f"
+      darktable:multi_name=""
+      darktable:multi_priority="0"
+      darktable:blendop_version="7"
+      darktable:blendop_params="gz12eJxjYGBgkGAAgRNODESDBnsIHll8ANNSGQM="/>
+     <rdf:li
+      darktable:operation="flip"
+      darktable:enabled="0"
+      darktable:modversion="2"
+      darktable:params="ffffffff"
       darktable:multi_name=""
       darktable:multi_priority="0"
       darktable:blendop_version="7"
