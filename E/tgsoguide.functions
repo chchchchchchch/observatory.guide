@@ -181,11 +181,14 @@ function TOCITEM() {
 # --------------------------------------------------------------------------- #
   function insertRefs() {
 
+  ( IFS=$'\n'
     for REF in `grep -n "{[a-z0-9]\{8\}}{CCCHAR}{TTTTITLE}" $SRCDUMP`
      do
         REFLN=`echo $REF | cut -d ":" -f 1`
+        REF=`echo $REF | cut -d ":" -f 2- | sed 's/ /\n/g' | #
+             grep "^\descriptorrelates" | head -n 1`
         REFID=`echo $REF | sed 's/\(.*\)\([a-z0-9]\{8\}\).*/\2/'`
-        REFTITLE=`grep $REFID ${TMPID}.toc     | #
+        REFTITLE=`grep "$REFID" ${TMPID}.toc   | #
                   head -n 1 | cut -d ":" -f 2- | #
                   pandoc --no-wrap -r markdown -w plain | #
                   sed 's,</*p>,,g'      | # RM <p> TAGS (HTML ONLY, DO ANYWAY)
@@ -194,7 +197,7 @@ function TOCITEM() {
         REFCHARNUM=`echo $REFTITLE | wc -c`
         sed -i "${REFLN}s/TTTTITLE/$REFTITLE/" $SRCDUMP
         sed -i "${REFLN}s/CCCHAR/$REFCHARNUM/" $SRCDUMP
-    done
+    done;)
   }
  # ------------------------------------------------------------------------- #
  # DO IT AT THE END
@@ -1274,7 +1277,13 @@ function CARLINSAYS() {
 
 # --------------------------------------------------------------------------- #
 
-function SXHOW() {
+function SHOW() {
+     sleep 0
+}
+
+# --------------------------------------------------------------------------- #
+
+function PDF() {
      sleep 0
 }
 
