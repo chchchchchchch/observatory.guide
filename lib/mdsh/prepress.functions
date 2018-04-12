@@ -84,7 +84,7 @@
         if [ $HASCOLOR -eq 0 ]; then
               pdfxgs $CHECK
         else
-              pdfxgs $CHECK
+              pdfxcymk $CHECK
         fi
         rm checkcolor.jpg
       )
