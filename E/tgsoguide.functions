@@ -680,15 +680,23 @@ function PDF() {
    # EXTRACT PLACEMENT FLAGS. N = NOW -> PLACE ANCHOR
    # ------------------------------------------------ #
      PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-            egrep '^N$|^b$|^H$'      | # EXTRACT VALID FLAGS
+            egrep '^N$|^b$|^H$|^I$'  | # EXTRACT VALID FLAGS
             head -n 1`                 # TAKE FIRST ONE
 
   if [ "$PFLAG" == "H" ];then FORCEHERE="H";PFLAG="";else FORCEHERE="";fi
 
   if [ -f "$TMPPDF" ];then
+        if [ "$PFLAG" == I ];then
+              W=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
+                 egrep '^W:'              | # EXTRACT W:
+                 head -n 1                | # TAKE FIRST ONE
+                 cut -d ":" -f 2`           # SECOND FIELD (:)
+                 write2src "\imginline{$TMPPDF}{$CAPTION}{$W}"
+        else
         echo "\pdfpagesplus{$TMPPDF}{$PAGES}{$LAYOUT}{$CAPTION}
                            {$REF}{$PFLAG}{$MARGINICON}{$FORCEHERE}" | #
         sed ':a;N;$!ba;s/\n//g' | sed 's,}[ ]*{,}{,g' >> $SRCDUMP
+        fi
   fi
 
  }
