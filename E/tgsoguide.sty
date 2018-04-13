@@ -800,15 +800,19 @@
   \newcommand{\imginline}[3]{%
    \hfill%
    \begin{minipage}[c]{#3\textwidth}%
+   \hfill%
+   \begin{minipage}[c]{.8\textwidth}%
    \centering\hspace{-2em}%
-   \includegraphics[width=.8\textwidth]{#1}%
-   \vspace{-1\baselineskip}%
+   \includegraphics[width=1\textwidth]{#1}%
+   \vspace{-.8\baselineskip}%
    \begin{flushleft}
    \tiny
    \setstretch{0.9}#2 %
    \end{flushleft}%
    \end{minipage}%
-   \hfill
+   \hfill%
+   \end{minipage}%
+   \hfill\hfill
   }
 % --------------------------------------------------------------------------- %
 
