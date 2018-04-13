@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- CLEANED: 1523607889/1e3ee1f8a95f4b60e7e4b42df3571502 -->
+<!-- CLEANED: 1523652466/413adf3c7a867fa8a9920f0c4134c314 -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -12851,7 +12851,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="FRONT-BUFFER"
      id="g6848"
      inkscape:groupmode="layer"
@@ -16548,7 +16548,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="FRONT-ICONS"
      id="g8865"
      inkscape:groupmode="layer"
@@ -18985,7 +18985,7 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="FRONT-ICONS"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <g
        id="g37327"
@@ -19871,7 +19871,7 @@
          id="tspan36777">OBSERVATION</tspan></text>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="FRONT-TITEL"
      id="g6852"
      inkscape:groupmode="layer"
@@ -19900,7 +19900,7 @@
      inkscape:groupmode="layer"
      id="g9698"
      inkscape:label="BACK-BUFFER"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        style="color:#000000;fill:#feffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -19911,7 +19911,7 @@
      inkscape:groupmode="layer"
      id="g9615"
      inkscape:label="SPINE-BUFFER"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        style="color:#000000;fill:#feffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -19922,7 +19922,7 @@
      inkscape:label="SPINE-LINES"
      id="g8773"
      inkscape:groupmode="layer"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        id="path8777"
@@ -20029,7 +20029,8 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="SPINE-ICONS"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <g
        transform="matrix(0.3687,0,0,0.3687,596.02024,500.29163)"
        id="g36881-6"
@@ -20056,7 +20057,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:groupmode="layer"
      id="g8819"
      inkscape:label="BACK-LINES"
@@ -20176,7 +20177,8 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="BACK-TXT"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <flowRoot
        xml:space="preserve"
        id="flowRoot9622"
@@ -20195,4 +20197,121 @@
          id="flowPara9636" /><flowPara
          id="flowPara9638" /><flowPara
          id="flowPara9640" /></flowRoot>  </g>
+  <g
+     inkscape:label="INNEN-LINES"
+     id="g7375"
+     inkscape:groupmode="layer"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <path
+       id="path7377"
+       d="m 940.9687,514.6278 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7379"
+       d="m 940.9687,485.0532 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7381"
+       d="m 940.9687,455.47859 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7383"
+       d="m 940.9687,437.41829 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7385"
+       d="m 940.9687,414.38969 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7387"
+       d="m 940.9687,396.41824 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7389"
+       d="m 940.9687,373.38974 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7391"
+       d="m 940.9687,343.41824 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7393"
+       d="m 940.9687,320.38974 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7395"
+       d="m 940.9687,295.40399 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7397"
+       d="m 940.9687,270.41824 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7399"
+       d="m 940.9687,247.38974 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7401"
+       d="m 940.9687,232.90398 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7403"
+       d="m 940.9687,218.41824 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7405"
+       d="m 940.9687,195.38974 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7407"
+       d="m 940.9687,169.90398 -1078.5857,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7409"
+       d="m 940.9687,144.41824 -1078.5857,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7411"
+       d="m 940.9687,121.38974 -1078.5857,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7413"
+       d="m 940.9687,91.403986 -1078.5857,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7415"
+       d="m 940.9687,61.418238 -1078.5857,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7417"
+       d="m 940.9687,38.389738 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path7419"
+       d="m 940.9687,17.0285 -1078.58592,0"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cc" />
+  </g>
 </svg>
