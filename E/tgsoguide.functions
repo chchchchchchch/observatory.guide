@@ -185,19 +185,21 @@ function TOCITEM() {
     for REF in `grep -n "{[a-z0-9]\{8\}}{CCCHAR}{TTTTITLE}" $SRCDUMP`
      do
         REFLN=`echo $REF | cut -d ":" -f 1`
+
         REF=`echo $REF | cut -d ":" -f 2- | sed 's/ /\n/g' | #
-             grep "^\descriptorrelates" | head -n 1`
+             grep "^\\\\\descriptorrelates" | head -n 1`
         REFID=`echo $REF | sed 's/\(.*\)\([a-z0-9]\{8\}\).*/\2/'`
         REFTITLE=`grep "$REFID" ${TMPID}.toc   | #
                   head -n 1 | cut -d ":" -f 2- | #
                   pandoc --no-wrap -r markdown -w plain | #
                   sed 's,</*p>,,g'      | # RM <p> TAGS (HTML ONLY, DO ANYWAY)
-                  sed 's/\\\/\\\\\\\/g' | # THE GREAT ... 
+                  sed 's/\\\/\\\\\\\/g' | # THE GREAT ...
                   sed 's/\//\\\\\//g'`    # ... ESCAPE
         REFCHARNUM=`echo $REFTITLE | wc -c`
         sed -i "${REFLN}s/TTTTITLE/$REFTITLE/" $SRCDUMP
         sed -i "${REFLN}s/CCCHAR/$REFCHARNUM/" $SRCDUMP
     done;)
+
   }
  # ------------------------------------------------------------------------- #
  # DO IT AT THE END
