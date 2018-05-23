@@ -1010,6 +1010,16 @@ function CLEARTORIGHT() {
 
 # --------------------------------------------------------------------------- #
 
+function VFILL() {
+
+  if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src '\vfill'
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
 function HEADER() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
