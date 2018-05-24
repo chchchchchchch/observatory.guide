@@ -5,6 +5,8 @@
 
 function GROUPING() {
 
+   FLUSHIMGREF
+
    GROUPINGID=`echo $* | tr [:upper:] [:lower:] | #
                cut -d "-" -f 1 | sed 's/ //g' | #
                sed 's/[^a-z]//g'`
@@ -45,6 +47,8 @@ function GROUPING() {
 # --------------------------------------------------------------------------- #
 
 function SEEHERE() {
+
+  FLUSHIMGREF
 
   SRCBASE=`echo $* | sed 's/ //g'`;SRCPLUS="$SRCBASE/export/txt"
   REPLYPLUS=`curl -s -o /dev/null -IL -w "%{http_code}" $SRCPLUS`
@@ -498,7 +502,6 @@ function SHOW() {
         # ----
         # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
           T="$RANDOM"
-         #sed -i "${LNCMD}s/^% SHOW:$*/%${T}SHOW:$*/" $MDSH
           sed -i "${LNCMD}s/^% SHOW:/%${T}SHOW:/" $MDSH
         # ----
         # EXTRACT CAPTION FOR TAGGED '% SHOW'
@@ -581,10 +584,15 @@ function SHOW() {
             # WRITE TO SRC                                                #
             # ----------------------------------------------------------- #
               if [ "$OUTPUTFORMAT" == pdf ];then 
- 
 
                   if [ "$PFLAG" == H ];then
                         write2src "\imghere{$PDFHERE}{$CNT}$RFC"
+
+                      # COLLECT CAPTIONS TO BE CLEARED BEFORE NEXT METHOD #
+                      # ------------------------------------------------- #
+                        if [ "$CAPTION" != "" ];then
+                        echo "\refimg{$REF}{$CAPTION}" >> ${TMPID}.imgref;fi
+
                   elif [ "$PFLAG" == I ];then
                         W=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
                            egrep '^W:'              | # EXTRACT W:
@@ -595,10 +603,14 @@ function SHOW() {
                         write2src ""
                         write2src "$PDFCMD" 
                         write2src ""
+
+                      # COLLECT CAPTIONS TO BE CLEARED BEFORE NEXT METHOD #
+                      # ------------------------------------------------- #
+                        if [ "$CAPTION" != "" ];then
+                        echo "\refimg{$REF}{$CAPTION}" >> ${TMPID}.imgref;fi
                   fi
 
-              elif [ "$OUTPUTFORMAT" == html ];then 
-             
+              elif [ "$OUTPUTFORMAT" == html ];then  
                      write2src "<span class=\"$THISCLASS descriptor\">" 
                      write2src "<span>$THISDESCRIPTION</span>"
                      write2src "$DESCRIPTION</span>" 
@@ -614,6 +626,20 @@ function SHOW() {
    if [ -f "$TMPSVG" ];then rm "$TMPSVG"; fi
    if [ -f "$TMPSVG.l.svg" ];then rm "$TMPSVG.l.svg"; fi
    if [ -f "$TMPSVG.$LNAME.crop.svg" ];then rm "$TMPSVG.$LNAME.crop.svg"; fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function FLUSHIMGREF() {
+
+ # FLUSH PREVIOUS IMAGES
+   if [ -f $TMPID.imgref ];then
+       write2src "\flushrefimg"
+       cat $TMPID.imgref >> $SRCDUMP
+       echo ""           >> $SRCDUMP
+        rm $TMPID.imgref
+   fi
 
 }
 

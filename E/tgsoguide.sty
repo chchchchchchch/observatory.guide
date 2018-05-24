@@ -245,7 +245,7 @@
    \newpage\subsection{#1}%
     \markboth{#1}{#1}}
 
- %\renewcommand{\bibsetup}{\setlength\textheight{.8\paperheight}}
+  \renewcommand{\bibsetup}{\setlength\textheight{.8\paperheight}}
 
  %\usepackage{url}
  % https://tex.stackexchange.com/questions/134191/
@@ -696,6 +696,22 @@
       }%
   }
 % --------------------------------------------------------------------------- % 
+  \newcommand\refimg[2]{%
+   \if\relax\detokenize{#2}\relax
+    % #2 EMPTY -> DO NOTHING
+    \else
+   {\small #2~\textbf{P.\pageref{#1}}}
+   \fi
+  }
+ % ----------------------- %
+  \newcommand\flushrefimg{
+
+   \vfill\vfill
+   \grafikinline{\iconrelatepages} %
+                {\hspace{0em}}
+   \descriptorlabel{IMAGES}
+  }
+% --------------------------------------------------------------------------- % 
   \newcommand\anchor[3]{%
     \if\relax\detokenize{#3}\relax
     % #3 EMPTY -> DO NOTHING IN PLACE
@@ -748,7 +764,7 @@
    \newcommand{\imgasap}[5]{
       % ------------------------------------ %
       % INSERT ANCHOR (OPTIONAL)
-        \anchor{#5}{#3}{#4}
+      % \anchor{#5}{#3}{#4}
       % ------------------------------------ %
       % INSERT FULL SIZE IMAGE (+SHIFT) ASAP
        \begin{figure}[p]
