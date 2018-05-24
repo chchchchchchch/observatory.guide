@@ -89,6 +89,8 @@ function SEEHERE() {
 
 function ATTACHMENT() {
 
+  FLUSHIMGREF
+
   SRCBASE=`echo $*             | # DISPLAY ARGUMENTS
            sed 's/ [A-Z]\b//g' | # RM FLAGS
            sed 's/ /\n/g'      | # PUT ON SEPARATE LINES
@@ -147,6 +149,8 @@ function ATTACHMENT() {
 # --------------------------------------------------------------------------- #
 
 function SEEALSO() {
+
+  FLUSHIMGREF
 
   IDA=`echo "$*" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
   SEAID=`echo ${IDA} | md5sum | cut -d " " -f 1 | #
@@ -544,9 +548,9 @@ function SHOW() {
                        cut -c 1-16`          # CUT HASH
             fi 
           # EXTRACT PLACEMENT FLAGS
-            PFLAG=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
-                   egrep '^N$|^b$|^H$|^I$'  | # EXTRACT VALID FLAGS
-                   head -n 1`                 # TAKE FIRST ONE
+            PFLAG=`echo $* | sed 's/ /\n/g'    | # DISPLAY, SPACES2LINEBREAKS
+                   egrep '^N$|^b$|^H$|^I$|^X$' | # EXTRACT VALID FLAGS
+                   head -n 1`                    # TAKE FIRST ONE
 
             if [ "$LNAME" != "" ];then
 
@@ -568,10 +572,12 @@ function SHOW() {
               PDFH=`echo $PDFSIZE | cut -d "x" -f 2 | #
                     cut -d "." -f 1`                  #
               THISIS="";PDFCMD="";PDFSHIFT="0";CNT="0" # RESET
- 
+
             # CREATE TEX MACRO                                            #
             # ----------------------------------------------------------- #
-              RFC="{$REF}{$PFLAG}{$CAPTION}"
+              if [ "$PFLAG" != X ];then # LAST MINUTE HACK
+                   RFC="{$REF}{$PFLAG}{$CAPTION}"
+              else RFC="{$REF}{}{$CAPTION}";fi
               while [ "$PDFSHIFT" -lt "$PDFW" ];
                do
                   IMGSHIFT="\imgasap{$PDFHERE}{$CNT}$RFC"
@@ -588,11 +594,6 @@ function SHOW() {
                   if [ "$PFLAG" == H ];then
                         write2src "\imghere{$PDFHERE}{$CNT}$RFC"
 
-                      # COLLECT CAPTIONS TO BE CLEARED BEFORE NEXT METHOD #
-                      # ------------------------------------------------- #
-                        if [ "$CAPTION" != "" ];then
-                        echo "\refimg{$REF}{$CAPTION}" >> ${TMPID}.imgref;fi
-
                   elif [ "$PFLAG" == I ];then
                         W=`echo $* | sed 's/ /\n/g' | # DISPLAY, SPACES2LINEBREAKS
                            egrep '^W:'              | # EXTRACT W:
@@ -603,12 +604,14 @@ function SHOW() {
                         write2src ""
                         write2src "$PDFCMD" 
                         write2src ""
-
-                      # COLLECT CAPTIONS TO BE CLEARED BEFORE NEXT METHOD #
-                      # ------------------------------------------------- #
-                        if [ "$CAPTION" != "" ];then
-                        echo "\refimg{$REF}{$CAPTION}" >> ${TMPID}.imgref;fi
                   fi
+
+                  # COLLECT CAPTIONS TO BE CLEARED BEFORE NEXT METHOD   #
+                  # --------------------------------------------------- #
+                    if [ "$CAPTION" != "" ] &&
+                       [ `echo $PFLAG | egrep "^I$|^X$" | wc -l` -lt 1 ]
+                    then
+                    echo "\refimg{$REF}{$CAPTION}" >> ${TMPID}.imgref;fi
 
               elif [ "$OUTPUTFORMAT" == html ];then  
                      write2src "<span class=\"$THISCLASS descriptor\">" 
@@ -680,6 +683,7 @@ function PDF() {
               cut -d ":" -f 2-            | # CUT INFO
               $PANDOCACTION               | # DISPLAY/TRANSLATE
               sed 's,</*p>,,g'`             # REMOVE <P> TAGS
+
    # DISABLE CAPTION
    # ------------------------------------------------ #
      LNCMD=`grep -n "^% PDF: $*" $MDSH | # FIND CMD LINE
