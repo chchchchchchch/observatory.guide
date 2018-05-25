@@ -245,8 +245,6 @@
    \newpage\subsection{#1}%
     \markboth{#1}{#1}}
 
- %\renewcommand{\bibsetup}{\setlength\textheight{.8\paperheight}}
-
  %\usepackage{url}
  % https://tex.stackexchange.com/questions/134191/
  % -> line-breaks-of-long-urls-in-biblatex-bibliography
@@ -256,7 +254,8 @@
  % https://tex.stackexchange.com/questions/184769/
   \DeclareFieldFormat{url}{\http{#1}}
 
-  \renewcommand{\bibsetup}{\uchyph=1}
+  \renewcommand{\bibsetup}{\uchyph=1\setstretch{.98}}
+  \setlength{\bibitemsep}{6pt}
 
 % --------------------------------------------------------------------------- % 
 %  I N D E X I N G
