@@ -37,7 +37,7 @@
   else
          echo "SOMETHING WENT WRONG."
   fi
-cp $TMPTEX debug.tex
+
  }
 
 # .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. #
