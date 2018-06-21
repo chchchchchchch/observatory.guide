@@ -12,7 +12,8 @@
       LAYERNAMES=`sed ':a;N;$!ba;s/\n//g' $SVGLAYER | # SVG WITHOUT LINEBREAKS
                   sed 's/>/&\n/g'                   | # ALL '>' ON NEWLINE
                   sed '/<g/s/scape:label/\nlabel/'  | # PUT NAME LABEL ON NL
-                  grep -n ^label | cut -d " " -f 1  | # SELECT/EXTRACT LABELS
+                  grep -n ^label                    | # SELECT LABELS
+                  cut -d "\"" -f 1,2                | # EXTRACT LABELS
                   sort -t= -k 2 -u | sort -n        | # SORT/UNIQ + SORT NUM
                   grep -v "=\"XX_"                  | # IGNORE XX LAYERS
                   cut -d '"' -f 2`                    # EXTRACT NAMES

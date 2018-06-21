@@ -1,4 +1,4 @@
-  SHORTURLBASE="http://lfkn.de"
+# SHORTURLBASE="http://lfkn.de"
   SRCLIST=${TMPID}X.list
 # --------------------------------------------------------------------------- #
 # SHARED/REUSED
@@ -33,7 +33,7 @@
   }
 
 # --------------------------------------------------------------------------- #
-  QRDEKOSRC=151007_qrdeko-simple.svg
+# QRDEKOSRC=151007_qrdeko-simple.svg
    QRURLLOG=${TMPID}.qrurls
 # --------------------------------------------------------------------------- #
 
@@ -97,5 +97,6 @@
   else
        echo "qr graphic for $QURL already generated!"
   fi
+
   }
 

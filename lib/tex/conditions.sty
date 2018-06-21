@@ -6,15 +6,16 @@
    \newif\ifbodytext
    \bodytexttrue
 
-%% SET CONDITION (AND BY THE WAY REMOVE NUMBERING (=\chapter*{x}))
-%  \let\Chapter\chapter
-%  \renewcommand\chapter[1]{\bodytextfalse\Chapter*{#1}\bodytexttrue}
-%  \let\Section\section
-%  \renewcommand\section[1]{\bodytextfalse\Section*{#1}\bodytexttrue}
-%  \let\Subsection\subsection
-%  \renewcommand\subsection[1]{\bodytextfalse\Subsection*{#1}\bodytexttrue}
-%  \let\Subsubsection\subsubsection
-%  \renewcommand\subsubsection[1]{\bodytextfalse\Subsubsection*{#1}\bodytexttrue}
+% SET CONDITION (AND BY THE WAY REMOVE NUMBERING (=\chapter*{x}))
+  \let\ACDCEB\chapter
+  \renewcommand\chapter[1]{\bodytextfalse\ACDCEB{#1}\bodytexttrue}
+  \let\CACACC\section
+  \renewcommand\section[1]{\bodytextfalse\CACACC{#1}\bodytexttrue}
+  \let\ECCBCE\subsection
+  \renewcommand\subsection[1]{\bodytextfalse\ECCBCE{#1}\bodytexttrue}
+  \let\FADFEC\subsubsection
+  \renewcommand\subsubsection[1]{\bodytextfalse\FADFEC{#1}\bodytexttrue}
+
 %% TODO: HEADER/FOOTER/TOC
 
 % IF FOOTNOTE (+NOT BODYTEXT)
@@ -34,4 +35,11 @@
   \footnotetrue\Footnotetext{#1}%
   \bodytexttrue%
   \endgroup}
+
+ %\newcommand{\rotif}{90}
+  \def\rotif{
+  \ifodd\value{page} 90
+  \else -90 \fi}
+
+
 

@@ -1,57 +1,4 @@
-
-% SRCODE
-% -------------------------------------------------------------------- %
-  \usepackage{listings}
-
-  \usepackage{textcomp}
-
-  \newcommand{\emptylinelst}{\vspace{-.5\baselineskip}}
-
-  \newcommand{\kwbBash}{
-    morekeywords = [2]{write2src,getFile,mkqr}
-  }
-
-% \newcommand{\lstsetBash}{\lstset{language=Bash+,
-%              morekeywords = [2]{write2src,getFile,
-%                                 mkqr
-%            }}}
-% \newcommand{\lstsetTeX}{\lstset{language=TeX+}}
-% \newcommand{\lstReset}{\lstset{language={}}}
-
-% ------------------------------------------- %
-%  \definecolor{cyan}{cmyk}{1,0,0,0}
-%  \definecolor{magenta}{cmyk}{0,1,0,0}
-%  \definecolor{darkgreen}{cmyk}{1,0,1,0}
-%  \definecolor{red}{cmyk}{0,1,1,0}
-%  \definecolor{yellow}{cmyk}{0,0,1,0}
-% ------------------------------------------- %
-
-  \newcommand{\kwa}{\bfseries\em}
-  \newcommand{\kwb}{\kwa}
-  \newcommand{\kwc}{}
-
-% \lstset{
-%   basicstyle=\fontfamily{tfi}\selectfont\small,
-%   commentstyle=\scalefont{.9},
-%   keywordstyle = \kwa,
-%   keywordstyle = [2]{\kwb},
-%   keywordstyle = [3]{\kwc},
-%   stringstyle=\bfseries\scalefont{.8},
-%  %directivestyle=\bfseries\color{red}, % ?????
-%   showspaces=false,
-%   showtabs=false,
-%   columns=fixed,
-%   numbers=none,
-%   frame=none,
-%   numberstyle=\tiny,
-%   breaklines=true,
-%   showstringspaces=false,
-%   aboveskip=1em,
-%   xleftmargin=0cm,
-%   upquote=true,
-%   escapechar=°
-% }
-
+ \usepackage{listingsutf8}
 
  % http://tex.stackexchange.com/questions/224093/
  % -> adding-keywords-to-existing-language-for-listings-package
@@ -658,9 +605,6 @@
                   zjsdecode, zless, zlib-flate, zmore, znew, zoo, zsoelim
  }
 }
-
-
-% http://tex.stackexchange.com/questions/224093/adding-keywords-to-existing-language-for-listings-package
 
 \lstdefinelanguage{TeX+}{%
   language     = {[LaTeX]TeX},

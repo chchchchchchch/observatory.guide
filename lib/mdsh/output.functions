@@ -6,12 +6,12 @@
 # --------------------------------------------------------------------------- #
 # WRITE TEX SOURCE
 # --------------------------------------------------------------------------- #
-  echo "\documentclass[8pt,cleardoubleempty]{scrbook}"      >  $TMPTEX
-  if [ -f ${TMPID}.preamble ];then cat ${TMPID}.preamble    >> $TMPTEX ;fi
-  echo "\bibliography{${TMPID}.bib}"                        >> $TMPTEX
-  echo "\begin{document}"                                   >> $TMPTEX
-  cat   $SRCDUMP                                            >> $TMPTEX
-  echo "\end{document}"                                     >> $TMPTEX
+  echo "\documentclass[fontsize=8pt,cleardoublepage=empty]{scrbook}" > $TMPTEX
+  if [ -f ${TMPID}.preamble ];then cat ${TMPID}.preamble        >> $TMPTEX ;fi
+  echo "\bibliography{${TMPID}.bib}"                                >> $TMPTEX
+  echo "\begin{document}"                                           >> $TMPTEX
+  cat   $SRCDUMP                                                    >> $TMPTEX
+  echo "\end{document}"                                             >> $TMPTEX
 
   if [ `echo $THISDOCUMENTCLASS | wc -c` -gt 2 ]; then
   sed -i "s/^\\\documentclass.*}$/\\\documentclass$THISDOCUMENTCLASS/" $TMPTEX
@@ -27,13 +27,17 @@
   cd $TMPDIR
   makeindex -s ${TMPIDBASE}.ist ${TMPIDBASE}.idx
   cd - > /dev/null 2>&1
-  ROUND=0;while [ "$ROUND" -lt 10 ];do
-  pdflatex -interaction=nonstopmode  \
-           -output-directory $TMPDIR $TMPTEX > /dev/null
-  ROUND=`expr $ROUND + 1`; # echo $ROUND
-  done
-  mv ${TMPID}.pdf $OUTPUT
-
+  if [ -f ${TMPID}.pdf ];then
+         ROUND=0;while [ "$ROUND" -lt 10 ];do
+         pdflatex -interaction=nonstopmode  \
+                  -output-directory $TMPDIR $TMPTEX > /dev/null
+         ROUND=`expr $ROUND + 1`; # echo $ROUND
+         done
+         mv ${TMPID}.pdf $OUTPUT
+  else
+         echo "SOMETHING WENT WRONG."
+  fi
+cp $TMPTEX debug.tex
  }
 
 # .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. #
