@@ -151,7 +151,7 @@
     if [ -f $SAVECMDS ]; then rm $SAVECMDS ; fi
     PROTECTED=${TMPID}.${TMPIDX}.mdshprotected
     cp $MDSH $PROTECTED
-  
+
     if [ `grep "^%" $PROTECTED | wc -l` -gt 0 ]; then
    
    # TEMPORARILY REMOVE COMMAND LINES
@@ -225,7 +225,8 @@
   sed "s/$EMPTYLINE/\n&\n/"               | # RESTORE EMPTYLINES
   sed 's/</\&lt;/g'                       | # ALLOW INLINE <tag>
   eval "$PANDOCACTION"                    | # MD TO TARGET MARKUP
-  sed "s/[a-f0-9]\{32\}${MKLONG} /&\n/g"  | # FORCE LINE AFTER 'MDSH LINES'
+  sed "s/[a-f0-9]\{32\}${MKLONG} /&\n/g"  | # PUT CMD LINES ON SEPARATE LINES
+  sed "/^.\{135,\}/s/[a-f0-9]\{32\}${MKLONG}/\n&/g" | # ENSURE SEPARATE 'MDSH LINE'
   sed "s/$APNDCMD/\n/g"                   | # PUT CMD LINES ON SEPARATE LINE
   sed "/^<[^>]*>\([a-f0-9]\{32\}${MKLONG}\)<[^>]*>$/s/<[^>]*>//g" | # REMOVE TAGS IF IS 'FUNCTIONS ONLY'
   sed "s/[ \t]*$FN1FOO/$APND$FNOESC/g"    | # SUBSTITUTE WITH TARGET MARKUP 
