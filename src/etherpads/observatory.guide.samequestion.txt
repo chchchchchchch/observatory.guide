@@ -1,6 +1,12 @@
+% SHOW: tgsoimages.svg askpeople C
+
+
 % METHOD: Ask several people from different fields and age groups the same question: "_**What is software?**_"
+
 % WHAT: By paying close attention to the answers, and possibly logging them, observations about the ambiguous place and nature of software can be made.
 % REMEMBER: The answer to this question will vary depending on who is asking it to whom.
+
+% PDFFIX: 1 \newpage
 
 % HOW:
 % WHEN:

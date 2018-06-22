@@ -7,24 +7,7 @@
 % NOTE: Selected quotes from the reader are used to introduce each of the chapter headers in this guide.
 % WARNING:
 % EXAMPLE: -
-Samples pages from the chapter **WHAT IS SOFTWARE**, _Techno Galactic Software Observatory reader_:
-
-% PDF: http://observatory.constantvzw.org/books/vol13_2_06.pdf 2x2 1-2
-% INFO: **Media studies**: Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive.
-
-% PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
-% INFO: **Patent**: H. Hollerith. Art of compiling statistics
-
-% PDF: http://observatory.constantvzw.org/books/irani2015.pdf 2x2 1-2
-% INFO: **Science studies ethnography**: Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship
-
-% PDF: http://observatory.constantvzw.org/books/Behind%20the%20Blip_%20Essays%20on%20the%20Culture%20of%20-%20Matthew%20Fuller.pdf 2x2 1-2
-% INFO: **Cyberpunk meets software studies**: Matthew Fuller, "It looks like you're writing a letter: Microsoft Word"
-
-% PDF: http://observatory.constantvzw.org/books/SAT104_FuturePlus.pdf 2x2 1-4
-% INFO: **Technical presentation slides**: Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer
-
-Full index of the _Techno Galactic Software Observatory reader_:
+Chapters and index from the _Techno Galactic Software Observatory reader_:
 
 ## I. WHAT IS SOFTWARE
 
@@ -54,6 +37,8 @@ How do layers of abstraction have an effect on the way software is produced and 
 * Seda Gurses and Joris van Hoboken. "Privacy after the Agile Turn." Open Science Framework, 2016.
 * Christoph Neubert, "The Tail on the Hard-ware Dog": Historical Articulations of Computing Machinery, Software, and Services in Irina Kaldrak and Martina Leeker, There is not software, there are just services. 2015
 
+% HYPHENATE: Dis-con-tents
+
 ## III. OBSERVATION AND ITS CONSEQUENCES
 
 The development of software encompasses a series of practices whose evocative names are increasingly familiar: feedback, report, probe, audit, inspect, scan, diagnose, explore ... What are the systems of knowledge and power within which these activities take place, and what other types of observation are possible? The material in this section is a compendium of probes such as learning by doing; exploring software through the analysis of its language and grammar; critical ethnography and self-testing as a user. In addition, we have included some conventional methods and tools for increasing the performance and security of software. Appropriating them for Techno-galactic software observation first of all turns the gaze onto the process of observation itself, and eventually opens up possibilities to actively interfere with the functioning of software.
@@ -66,6 +51,23 @@ The development of software encompasses a series of practices whose evocative na
 * Matthew Fuller, "It looks like you're writing a letter: Microsoft Word", Nettime, 5 Sep 2000
 * Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer. 2015
 * Fangfei Liu, Yuval Yarom, Qian Ge, Gernot Heiser, Ruby B. Lee. Last-Level Cache Side-Channel Attacks are Practical. 2015
+
+% HYPHENATE: Cit-i-zen-ship
+
+% PDF: http://observatory.constantvzw.org/books/US395781.pdf 2x2 1-4
+% INFO: **Patent**: H. Hollerith. Art of compiling statistics
+
+% PDF: http://observatory.constantvzw.org/books/Behind%20the%20Blip_%20Essays%20on%20the%20Culture%20of%20-%20Matthew%20Fuller.pdf 1x2 1-2
+% INFO: **Cyberpunk meets software studies**: Matthew Fuller, "It looks like you're writing a letter: Microsoft Word"
+
+% PDF: http://observatory.constantvzw.org/books/irani2015.pdf 1x2 1-2
+% INFO: **Science studies ethnography**: Lilly Irani, Hackathons and the Making of Entrepreneurial Citizenship
+
+% PDF: http://observatory.constantvzw.org/books/vol13_2_06.pdf 1x2 1-2
+% INFO: **Media studies**: Matthew G. Kirschenbaum, Extreme Inscription: Towards a Grammatology of the Hard Drive.
+
+% PDF: http://observatory.constantvzw.org/books/SAT104_FuturePlus.pdf 2x2 1-4
+% INFO: **Technical presentation slides**: Barbara P. Aichinger, DDR Memory Errors Caused by Row Hammer
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.samequestion
 % SOURCE: The _Technogalactic Software Observatory reader_ can be consulted here: http://pad.constantvzw.org/p/observatory.reader

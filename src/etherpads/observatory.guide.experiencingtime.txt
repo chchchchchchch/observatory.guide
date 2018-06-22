@@ -1,6 +1,6 @@
 % __NOPUBLISH__
 
-% SHOW: tgsoimages.svg hans H
+% SHOW: tgsoattachments.svg hans H
 
 
 % HEADER: How humans and machines negotiate the experience of time
@@ -47,6 +47,7 @@ Hans Lammerant, June 2017 - January 2018
 This text was written in and in resistance/conflict to WTC time, which is exemplary for the bureaucratic office time experience. The WTC building boots up at 9AM and is turned off in several steps (at 5PM the air conditioning is turned off, later entrances close) into a wake state. The concierge can let you in and out through the night side entry, but main life support systems remain turned off outside office hours. This wake state continues during the weekend, turning the building into a glass house with limited air in storage. On Monday morning this bureaucratic time capsule revives from its slumber. A suffocating experience, but actually the building is a great piece of nannyware nudging towards a healthy office rhythm without too much extra hours outside the herd work ethic.
 
 Such office time can also be implemented and negotiated on your local computer. A small Proof of Concept was the adapted bashrc on the etherbox simulating a system getting bored and stealing time. This can be further developed by including a differentiated response during versus outside office hours, aging (slower when timestamp of original install is more remote in time), etc.
+
 
 
 

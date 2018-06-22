@@ -14,7 +14,7 @@ Adjectives create subcategories. They narrow the focus by naming more specifical
 % NOTE: A qualifier may narrow definitions to undesirable degrees.
 % WARNING: This exercise may be more effective at identifying normative and ideological assumptions at play in the making, distributing, using, and maintaining of software than at producing a concise definition.
 
-% EXAMPLE: "When asked, Jean Heuns had difficulty answering the question "what is software?", but he said that he could answer the question "what is **good** software". What is **good** software?
+% EXAMPLE: "When asked, Jean Heuns had difficulty answering the question "what is software", but he said that he could answer the question "what is **good** software". What is **good** software?
 
 % RELATESTO:
 % SOURCE: Notes on [Multiple Software Axes](http://observatory.constantvzw.org/etherdump/multiple-software-axes.html)

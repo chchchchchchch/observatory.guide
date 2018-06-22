@@ -5,12 +5,15 @@
 
 % 2 COLONS (::) BETWEEN CHARACTERS WILL BE A NON-BREAKING SPACE
 
+% PDFFIX: 1 \newgeometry{textwidth=.74\paperwidth,textheight=.8\paperheight}
+% PDFFIX: 1 \setlength\evensidemargin{-.135\paperwidth}
+
 % TEXIN: \begin{flushleft}
-% TEXIN:\large
+% TEXIN: \relscale{1.2}\setstretch{.95}
 
 The Techno-Galactic Guide to Software Observation was compiled by
 Carlin::Wing, Martino::Morandi, Peggy::Pierrot, Anita::Burato, 
-Christoph::Haag, Michael::Murtaugh, Femke::Snelting, Seda::Gürses
+Christoph::Haag, Michael::Murtaugh, Femke::Snelting, Seda::Gürses    
 and includes contributions from Manetta::Berends, Željko::Blaće,
 Larisa::Blazic, Freyja::van::den::Boom, Anna::Carvalho, Loup::Cellard, Joana::Chicau,
 Cristina::Cochior, Pieter::Heremans, Joak aka Joseph::Knierzinger, Jogi::Hofmüller, Becky::Kazansky,
@@ -21,37 +24,35 @@ Kym::Ward, Wendy::Van::Wynsberghe and Peter::Westenberg.
 
 % TEXIN: \end{flushleft}
 
-**Copy editing**: Carlin::Wing    
-**Layout, document engineering and bespoke finish**: Christoph::Haag
-**Printing**: Online-Druck.biz, Krumbach::(Schwaben)
-
+% TEXIN: \vspace{-.8\baselineskip}
+Techno-Galactic Software Observation team,    
+WTC Brussels, June 2017 (% REFREF: tgsoteam)
+% TEXIN: \vspace{-.2\baselineskip}
 
 % http://observatory.constantvzw.org/images/friday/P1010328.JPG
-% SHOW: tgsoimages.svg tgsoteam N
+% SHOW: tgsoimages.svg tgsoteam N REF:tgsoteam
 % INFO: Techno-Galactic Software Observation team, WTC Brussels, June 2017
 
-% TEXIN: \vfill
+**Copy editing**: Carlin::Wing    
+**Layout, document engineering    
+and bespoke finish**: Christoph::Haag    
+**Photography**: Michaela::Lakova, Michael::Murtaugh,    
+Peter::Westenberg, Donatella::Portoghese    
+**Printing**: Online-Druck.biz, Krumbach (Schwaben)    
+**Published by**: Constant, Association for Art and Media,     
+Brussels (2018) 
+**ISBN**: 978-9-08114-596-1    
+**License**: Free Art License (% REFREF: fal)
 
-### License: Free Art License (% REFREF: fal)
+% SOURCE: http://observatory.constantvzw.org:;http://gitlab.constantvzw.org/ch/observatory.guide
 
-    
 
-% TEXIN: \vfill
-
-% SOURCE: -
-http://observatory.constantvzw.org    
-https://gitlab.constantvzw.org/ch/observatory.guide    
 
 % PDFFIX: 1 \newpage
+% PDFFIX: 1 \restoregeometry
+% PDFFIX: 1 \setlength\evensidemargin{-.13\paperwidth}
 
 ### Notes on Layout:
-
-% The typesetting of this guide is part of an ongoing exploration of document engineering
-% from within and without interfaces of digital edit modes. While moving along ideas of lightweight
-% markup and infinite rubber lengths, transplanting paradigms, and experiencing limitations and possibilities
-% there is no end in sight. To put it in the spirit of illiterate programming:
-% _When was the last time you spent a pleasant evening in a comfortable chair,
-% cuddling with a multi-headed monster._[@bentley:1986:literate]
 
 Typesetting this guide is part of an ongoing exploration of document engineering
 along with ideas of lightweight markup languages and infinite rubber lengths.
@@ -97,12 +98,14 @@ shipped on the character ROM of IBM's first video solutions. As part of
 the **The Ultimate Oldschool PC Font Pack** it is available according to
 Creative Commons Attribution-ShareAlike 4.0 International License.
 
+% TEXIN: \vfill\vfill
+
 ### Support:
 
-http://observatory.constantvzw.org/guide/Naakt/Vlaanderen_verbeelding%20werkt.png
+% http://observatory.constantvzw.org/guide/Naakt/Vlaanderen_verbeelding%20werkt.png
+% SHOW: tgsoimages.svg vvw I W:1.5
 
-% TEXIN: \vfill\vfill
-% TEXIN: {\Large\textbf{Constant (Brussels), May 2018}}
+% TEXIN: \vfill
 
 
 

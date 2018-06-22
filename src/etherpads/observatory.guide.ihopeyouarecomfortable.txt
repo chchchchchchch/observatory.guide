@@ -1,5 +1,5 @@
 %__NOPUBLISH__
-% SHOW: tgsoimages.svg mia H
+% SHOW: tgsoattachments.svg mia H
 
 
 % HEADER: I hope you are comfortable, [insert name]

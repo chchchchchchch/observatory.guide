@@ -84,6 +84,7 @@ More info → see Rafaella flowchart pic
     * manual input -
     * Punched Card - rectangle with left cut edge 
     * Punched tape - like a flag
+    
 * **Burroughs Ruler:**
     * Burroughs Flowcharting Template found at NAM-IP (% REFREF: burroughs)
     * http://observatory.constantvzw.org/images/wednesday/P1040730.JPG
@@ -227,9 +228,5 @@ manifest.json:
   ]
 }
 % SRCCODE: plain
-
-% PDFFIX: 1 \newpage
-
-## Appendix C
 
 % SOURCE: Version 3384 Saved June 10, 2017. Authors: m, lara, carlin + 5 unnamed authors

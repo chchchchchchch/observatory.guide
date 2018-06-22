@@ -57,15 +57,18 @@ mdsrcs=$(shell ls etherdump/*.mdsrcs)
 pdocpdf=$(mdsrcs:%.mdsrcs=%.pdoc.pdf)
 pdochtml=$(mdsrcs:%.mdsrcs=%.html)
 
-# .pdfsrc: A listing of local PDF URLS, optionally with #page= fragment
+# .pdfsrc: A listing of local PDF URLS,
+# optionally with #page= fragment
 pdfsrcs=$(shell ls etherdump/*.pdfsrcs)
 scrp=$(pdfsrcs:%.pdfsrcs=%.scrp.pdf)
 
 all: $(md2html) $(md2pdf) $(pdochtml) $(pdocpdf) $(2col) $(scrp)
 
 dump:
-        cd etherdump && etherdump pull --all --pub /home/pi/etherdump \
-        --css lib/styles.css --script lib/versions.js --no-raw-ext
+        cd etherdump && etherdump pull --all \
+        --pub /home/pi/etherdump \
+        --css lib/styles.css \
+        --script lib/versions.js --no-raw-ext
         cd etherdump && etherdump index *.meta.json \
         --templatepath /home/pi/etherdump/lib \
         --template index.template.html > _index.html

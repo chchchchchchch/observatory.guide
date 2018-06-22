@@ -1,5 +1,7 @@
 % __NOPUBLISH__
 
+
+
 % METHOD: Hand reading
 % WHAT: Have your fortunes read and derive insights into life from the wisdom of software.
 % HOW: Put your hand in the nearest Future Blobservation Booth, and get your command lines read.
@@ -31,6 +33,8 @@
 * 16:58 another happy user
 * 17:00 super happy user (peggy)
 * 17:02 more happy user
+
+% PDFFIX: 1 \newpage
 
 % EXAMPLE: - 
 

@@ -25,4 +25,4 @@
 
 % useless scroll against productivity
 % ---------------------------------------------------------------------------------------     
-% SOURCE: This method was discovered at the end of a Etherpad that contained collective notes from Technogalatic Observation sessions taking place on [Friday 8 June, 2017.](http://observatory.constantvzw.org/etherdump/friday.md.diff.html)
+% SOURCE: This method was discovered at the end of an etherpad that contained collective notes from the Technogalatic Observation sessions taking place on [Friday 8 June, 2017.](http://observatory.constantvzw.org/etherdump/friday.md.diff.html)

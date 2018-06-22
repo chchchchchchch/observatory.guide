@@ -56,10 +56,11 @@ Preserving old hardware is a means of observing the physical manifestation of so
 % http://observatory.constantvzw.org/images/thursday/IMG_20170607_111954_122.jpg
 %!SHOW: tgsoimages.svg glitchlogo N
 
+% PDFFIX: 1 \newpage
 
 % EXAMPLE: Collection de la Maison des Écritures d'Informatique & Bible, Maredsous  
 
-The Collection de la Maison des Écritures d'Informatique & Bible was donated to NAM-IP by the _Centre Informatique et Bible_ that was founded in 1979 at the Benedictine abbey of Maredsous. The center was located in the "House of Scripture", a pavilion near the entrance to the Abbey where biblical scholars, linguists and computer scientists applied computer processing to bible-texts and it's references.
+The Collection de la Maison des Écritures d'Informatique & Bible was donated to NAM-IP by the _Centre Informatique et Bible_ that was founded in 1979 at the Benedictine abbey of Maredsous. The center was located in the "House of Scripture", a pavilion near the entrance to the abbey, where biblical scholars, linguists and computer scientists applied computer processing to bible-texts and it's references.
 
 The idea of introducing informatics as a method for working with and on the Bible dates back to 1971 when it was done via punch cards and then transferred to the memory of magnetic tape. Then came the step of analyzing texts using computers while at the same time introducing computers to the delights of reading the Bible with the help of Optical Character Recognition. The particularity of this collection lies in the fact that it conserves and presents multiple moments in the life of a text rendered into and analyzed through software,  starting from its initial stages of computerization and going up to contemporary forms of software.
 
@@ -70,10 +71,12 @@ The idea of introducing informatics as a method for working with and on the Bibl
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3267
 % http://gallery.constantvzw.org/index.php/Techno-Galactic-Software-Observatory/PWFU3271
 % SHOW: tgsoimages.svg lexique N
-% INFO: Continuous form paper with lexical research and a copy of the _Interface Bulletin_ (http://www.cibmaredsous.be/cib3000.htm), published by the Centre Informatique et Bible.
-
+% INFO: Continuous form paper with lexical research and a copy of the _Interface Bulletin_, published by the Centre Informatique et Bible: http://www.cibmaredsous.be/cib3000.htm
 
 % RELATESTO: http://pad.constantvzw.org/p/observatory.guide.jean.heuns
+
+% PDFFIX: 1 \newpage
+
 % SOURCE: [Machines à cartes perforées de marque Bull](http://www.histoireinform.com/Histoire/+Infos/jmclcadr.htm)
 
 

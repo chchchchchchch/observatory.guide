@@ -392,6 +392,13 @@
   publisher={IEEE}
 }
 
+@article{gursesvanhoboken:2017:patat,
+  title={Privacy after the Agile Turn},
+  url={osf.io/27x3q},
+  publisher={Open Science Framework},
+  author={Gurses, Seda and van Hoboken, Joris V J},
+  year={2017}
+}
 
 @misc{ meltdown:2018:spectre17,
  author = {Horn, Jann  et al.},

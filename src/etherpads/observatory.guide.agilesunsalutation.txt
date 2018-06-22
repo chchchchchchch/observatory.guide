@@ -1,5 +1,5 @@
 %__NOPUBLISH__
-% SHOW: tgsoimages.svg anne H
+% SHOW: tgsoattachments.svg anne H
 
 
 % HEADER: Agile Sun Salutation
@@ -45,9 +45,9 @@ Now let's bring the hands back out again in the standing position. Once again th
 
 And then the second movement once more while thinking about the fourth and last mantra: Responding to change over following a plan and of course we continue breathing.
 
-% ![]( http://observatory.constantvzw.org/guide/agileyoga/8-Poses-Yoga-Your-Desk.contours.png )
-% ![]( http://observatory.constantvzw.org/guide/agileyoga/gayolab-office-chair-for-yoga.contours.png )
-% SHOW: tgsoimages.svg agileyoga
+% http://observatory.constantvzw.org/guide/agileyoga/8-Poses-Yoga-Your-Desk.contours.png
+% http://observatory.constantvzw.org/guide/agileyoga/gayolab-office-chair-for-yoga.contours.png
+% SHOW: tgsoattachments.svg agileyoga
 
 Now to finish this session, let's do a sprint together in the corridor!
 

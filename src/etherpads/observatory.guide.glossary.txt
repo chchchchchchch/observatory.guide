@@ -22,6 +22,7 @@
 % -------
 Agile
 Aquine
+Authority
 Attack
 Bash
 Battery
@@ -29,6 +30,7 @@ Beast
 Bestiary
 Bounce
 Bug
+Clouds
 Code
 Colonial
 Comfortable
@@ -41,17 +43,23 @@ Contract
 Corporate
 Crash
 Curious
+Daemon
 Dirty
 Emotional
+Flow
 Fountain
 Galaxies
+Gooey
 Green
 Guide
+Hand
 Icon
+Intake
 Intimate
 Imperial
 Issues
 Kernel
+Libraries
 Machine
 Magic
 Mantra
@@ -62,6 +70,7 @@ Noise
 Observation
 Passive-aggressive
 Parental
+Pause
 Perception
 Power
 ProductionPower
@@ -71,6 +80,7 @@ Promiscuous
 Public
 Punch
 Quine
+Quit
 Relational
 Red
 Scripting
@@ -78,6 +88,7 @@ Scroll
 Scrum
 Silence
 Spin
+Spindle
 Software
 Softwear
 Sundial
@@ -87,20 +98,18 @@ Test
 Thank you
 Time
 Trailing
+Urgency 
 Useless
 Volatile
 Warning
 WhiteBoard
+Write
 Yoga
 % SRCCODE: plain
-
 
 % http://gallery.constantvzw.org/var/resizes/Techno-Galactic-Software-Observatory/PWFU3393.JPG?m=1497084667
 % SHOW: tgsoimages.svg glossaries
 
-
 % RELATESTO:
-
-
 
 

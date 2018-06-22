@@ -1,5 +1,5 @@
 %__NOPUBLISH__
-% SHOW: tgsoimages.svg jogi H
+% SHOW: tgsoattachments.svg jogi H
 
 
 % TOCITEM: When dirty.db get's dirty

@@ -1,5 +1,5 @@
 %__NOPUBLISH__
-% SHOW: tgsoimages.svg jean H
+% SHOW: tgsoattachments.svg jean H
 
 
 % HEADER: Interview with Jean Huens
@@ -31,8 +31,13 @@ I remember more or less: you wrote down the program in Fortran for instance. We 
 
 % PP: When where you able to record the program onto the machine?
 % JH: I think that happened between '75 and '80. After the punching cards, which were already a way to record the program, we had typewriters and then terminals. We could record the programs by typing it on the terminal  and the computer would store them on magnetic discs. IBM had number for everything, I remember the 3300  [manufactured from 1970 on] was a magnetic disk. 
-We didn't touch the machines, operators would change the disks, we could only access the typewriter/terminal. That was our most direct connection to the computer. The times were different. The mainframes were such huge costly beasts that it had operators day and night to keep it busy. Even at night there were two or three guys mounting tapes, disc mounting tapes, that kind of stuff.
-https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/IBM_magnetic_disk_drives_3330%2B3333.png/600px-IBM_magnetic_disk_drives_3330%2B3333.png
+We didn't touch the machines, operators would change the disks, we could only access the typewriter/terminal. That was our most direct connection to the computer. The times were different. The mainframes were such huge costly beasts that it had operators day and night to keep it busy. Even at night there were two or three guys mounting tapes, disc mounting tapes, that kind of stuff (% REFREF:magnetic).
+
+% https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/IBM_magnetic_disk_drives_3330%2B3333.png/600px-IBM_magnetic_disk_drives_3330%2B3333.png
+
+% SHOW: tgsoimages.svg magnetic X REF:magnetic
+% INFO: 3D CG concept of an IBM 3330 Direct Access Storage Facility by Oliver Obi. https://commons.wikimedia.org/wiki/File:IBM_magnetic_disk_drives_3330%2B3333.png
+
 
 % PP: When did you stop working with operators?
 % JH: Somewhere between '85 and '90. There were still operators at the main computer of the university, but there were also small computers, so researchers and student could have direct access when needed. 
@@ -40,7 +45,9 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/IBM_magnetic_disk_driv
 % PP: When did you start to work with software sold by others or given away in order to do your research?
 % JH: You still needed an operating system for the mainframe that was delivered by IBM or the constructor delivered the mainframe.
 When you bought mini-computers, which were the  smaller versions of mainframes, in most cases you bought an operating systems, compilers and all the stuff you needed to be able to program or work  those things. 
-In most cases,  the computer sciences department bought the mini-computer from, for instance *Digital Equipment Corporation*,  a manufactorer at that time, but they didn't buy DEC's  software. The DEC software  was not open source or free,  and as a university we could get Unix for free and could run it on those DEC computers. That is what the computer department of the University of Louvain la Neuve *l'unité d'informatique*, did and so did we.
+In most cases,  the computer sciences department bought the mini-computer from, for instance *Digital Equipment Corporation*,  a manufacturer at that time, but they didn't buy DEC's software. The DEC software  was not open source or free,  and as a university we could get Unix for free and could run it on those DEC computers. That is what the computer department of the University of Louvain la Neuve *l'unité d'informatique*, did and so did we.
+
+% HYPHENATE: Dig-i-tal Equip-ment Cor-po-ra-tion
 
 % PP: When did you start working with Unix as an OS? 
 % JH: I took a trip to Amsterdam, it must have been in 1979 or 1980. Well, the story starts in our French sister university (LLN) where they had a PDP-11 with Unix on it. You could get Unix, at the time, when you were a university, from Bell Labs (part of AT&T), the American telephone company. AT&T was a mega organisation at the time before the [dismantlement of AT&T/Bell system](https://en.wikipedia.org/wiki/Breakup_of_the_Bell_System). Due to monopoly, the US authorities split it up into different Baby Bells. One of the restrictions was that the research Baby Bell, could not sell anything. There were computer scientists there who developed some interesting things (e.g. Unix). Universities got the source code for free, but NO support, nothing not even how to install it. In Unité d'informatique, where they had a [PDP-11/70](https://i0.wp.com/www.utterpower.com/wp-content/uploads/2011/10/pdp11-70-panel.jpg) they were lucky: they got the same computer that Unix was developed on.  They got the disk by snail mail as a post-office package. They mounted it and it did spin up and they had Unix. Here, we had a cheaper PDP11, [the PDP 11/60](https://dave.cheney.net/tag/pdp-11). We got the Unix disk distribution from Bell Labs but we could not run it, because we got another type of disk (RK07). We could look at it but that was all, because our disc format was different than the one at Bell Labs. Somebody here (P. Verbaeten) wrote a driver for that disk in l'unité d'informatique of LLN. It compiled it but we couldn't try it because we did not have a RKO7. The nearest place with Unix and a RK07 was in Vrije Universiteit Amsterdam.  Andrew Tenenbaum, who wrote a number of books on operating systems, was working there. He was learning to speak Dutch. We understood his English better but his assistant explained that he needed to practice speaking Dutch because he would have to pass an exam. There we compiled Unix with an RK07 driver and stored it on a bootable RK07 disk. With that
@@ -82,10 +89,10 @@ We sold some software from the beginning I think when it was not even a departme
 % PP: How many languages do you know?
 % JH: Assembly, FORTRAN, PL-1 the language invented by IBM to be the universal one, C, Cobol. Perl... I don't know... some more. I'm not fluent in any computer language, but I can read any language especially well written, I know I can understand it and, if needed, learn it... I know JAVA also. As a system administrator, the thing I use most are the command line of Unix and Perl. But that's because i'm more familiar with those two so it goes faster.
 
-% PP: How did you see the rise of personnal computer and the software that goes with?
+% PP: How did you see the rise of personal computer and the software that goes with?
 % JH: I have to admit that we missed it. We didn't see the new thing was powerful because it was available for everybody.  We were not impressed by the software. I remember Windows 95, the news on TV, people sleeping on the street to get it. I remember when I got my first Windows version, with a box of 22 floppies or so. Then I wanted to do something, to compile a program, but there was no compiler. We were used to Unix, which was a basic system but haa lot of utilities in it. Software was for us free, and we were used to having it be free, and on a PC it was not free anymore. 
 
-% PP: Does that mean you didn't had a personal computer until late?
+% PP: Does that mean you didn't have a personal computer until late?
 % JH: Yes. I think it was round 2000. I didn't need it really. I got one when the Belgian UUCP network became commercial. Of course I did not get Windows on it. I think we got Linux here in 1994. There was a guy involved in the kernel studying here. So we did used it very fast.
 
 % PP: So, what is software for you?

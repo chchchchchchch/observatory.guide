@@ -9,7 +9,7 @@
 
 % TOCITEM: Introduction T:4
 
-# The Techno-Galactic:;Guide to Software Observation
+**The Techno-Galactic Guide to Software Observation**
 
 > I am less interested in the critical practice of reflection,
 > of showing once-again that the emperor has no clothes, than in
@@ -25,7 +25,7 @@ And so software spins its web around us. As it twists we turn, trying to take so
 
 Overloaded by all these questions, vexed by constant pop-ups and push notifications, a fantasy takes shape: Let's smash our devices with a sledge hammer, throw them out, retreat off grid and out of sight, and live happy software-free lives. But this fantasy cannot hold, nor can it hold us. While 'disconnection' seems to be the latest luxury-item for tech-billionaires -- the same gang that profits from the extension of connectivity -- for most human and non-human inhabitants of this galaxy unplugging is not an option. Even those that experienced the joy that comes from catapulting a smart device across the street know that the liberating feeling that follows does not last. We need a better option: one that lets us poke and push back at the daemons that insist on saturating our time and surrounding our environment.
 
-In June 2017 we gathered with a group of Software Curious Persons (% REFREF: http://pad.constantvzw.org/p/observatory.guide.everyonescp) in Brussels for six days at the Techno-Galactic Software Observatory[^]{http://constantvzw.org/site/-The-Technogalactic-Software-Observatory-.html}. There we engaged in the observation of the multiple scales of software, the industries and communities that produce it and their devastatingly relational political economies. While clutching at our computers and keyboards, we picked up the word _observation_, turning it over and around. We brought it right up to our noses and then held it outstretched to get a better look at the term's colonial and positivist legacy. Observation, and the enabling of it through intensive data-centric feedback mechanisms, is part of the cybernetic spells that underpin the present day software production-consumption complex. Holding the pain and the promise of our limitations, of our situated point of view, we synced our breath to the rhythm of our software and, with an agile sun salutation, began to explore the possibilities of engagement with software's implications. "Excuse me, do you know where to find the Techno-Galactic Walk-in Clinic?"
+In June 2017 we gathered with a group of Software Curious Persons (% REFREF: http://pad.constantvzw.org/p/observatory.guide.everyonescp) in Brussels for six days at the Techno-Galactic Software Observatory[^]{The Techno-Galactic Software was a worksession organised by Constant. http://constantvzw.org/site/-The-Technogalactic-Software-Observatory-.html}. There we engaged in the observation of the multiple scales of software, the industries and communities that produce it and their devastatingly relational political economies. While clutching at our computers and keyboards, we picked up the word _observation_, turning it over and around. We brought it right up to our noses and then held it outstretched to get a better look at the term's colonial and positivist legacy. Observation, and the enabling of it through intensive data-centric feedback mechanisms, is part of the cybernetic spells that underpin the present day software production-consumption complex. Holding the pain and the promise of our limitations, of our situated point of view, we synced our breath to the rhythm of our software and, with an agile sun salutation, began to explore the possibilities of engagement with software's implications. "Excuse me, do you know where to find the Techno-Galactic Walk-in Clinic?"
 
 The Techno-Galactic Guide to Software Observation was collectively produced as an outcome of this temporary Observatory. The methods tried and tested there were collected and compiled in this guide. Although our modest acts of witnessing are incomplete and ongoing, through this kind of collective ghost-hunting we found some ways for being in, around, through, and with software.
 
@@ -34,7 +34,7 @@ This guide invites you to experiment with ways to stay with the trouble of softw
 Observation is one potential beginning -- a way to turn engagement into tickling. Come join us at the edge of the universe, on the metro platform, at your kitchen table or at your next biometric identification, as we mark and measure critical distances from and entanglements with the seemingly endless software systems that surround us.
 
 
-## The Walk-in Clinic (% CARLINSAYS: I think this title should go below the description of the walk-in clinic as the last two days of the observatory worksession and should come instead right above the invitation to the clinic so I have moved it there)
+## Invitation to The Walk-in Clinic, June 2017:
 
 > Do you suffer from the disappearance of your software into the cloud,
 > feel oppressed by unequal user privilege, or experience the torment of
@@ -51,21 +51,20 @@ Observation is one potential beginning -- a way to turn engagement into tickling
 > risk assessment, opening of black-boxes and more.
 > Free software observations provided.
 > Last intake at 16:45.
-> [^]{Invitation to the Walk-In Clinic, June 2017}
 
 % On the following pages:
 % Software as a Critique as a Service (SaaCaaS) Directory
 % and intake forms for Software Curious People (SCP)
 
-%!PDF: http://observatory.constantvzw.org/documents/scprecord_FINAL.pdf 1x1 REF:scprecord
-% SHOW: tgsoimages.svg scprecord I W:.85
-% INFO: Intake Forms for Software Curious People (SCP)
+% TEXIN: \vfill
+
+% PDF: http://observatory.constantvzw.org/documents/2017_techno_galactic_Poster_films_A2_V2.pdf I W:.95
+% INFO: Announcing the Walk-in Clinic. Poster design: Harrisson
 
 % PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 2 1x1
 % INFO: Software as a Critique as a Service (SaaCaaS) Directory
 % PDF: http://observatory.constantvzw.org/documents/masterlist_twosides_NEU.pdf 1 1x1
 % INFO: Software as a Critique as a Service (SaaCaaS) Directory
 
+
 (% CARLINSAYS: I would suggest switching the order of these pages so the intake form is first and the list of services poster is second. It also seems important to make sure that the two page list of services poster for the clinic is printed on pages that are facing each other. If they are already set to do that then maybe nix my suggestion of moving the intake form up, but if they are not then that would be one way to shift the pages to make that happen.)
-
-

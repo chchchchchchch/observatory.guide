@@ -15,6 +15,8 @@ Compile a collection of logos and note the metaphors for observation and their s
 
 This Bestiary was initiated during _Testing the testbed_, a two-day workshop intended to critically evaluate the _Internet of Things (IoT) Inspector_, a testsuite for embedded devices proposed by the Princeton University’s Center for Information Technology and Policy (CITP). Participants from Constant, Dyne:BXL, COSIC Leuven and others gathered to test the testbed with the help of their cameras, smartphones, and other "things". As we compared different hard- and software set-ups for observing dataflows in IoT environments, we noticed that many of them were represented by animals and other agents with human traits that would perform the job of looking, analysing, inspecting and investigating. Here, we have expanded the initial collection to address network observation in general. What does it mean to "look" at the activity in a computer network? Who or what is looking and in what way?
 
+% HYPHENATE: Leu-ven
+
 % H: Autopsy®
 
 https://www.sleuthkit.org/autopsy    
@@ -26,6 +28,8 @@ tags: investigation, dissection, forensics
 % https://stuff2233.club/~dick/na/bestiary/autopsy.png
 % SHOW: tgsoimages.svg autopsy-new I W:.6
 % INFO: Doberman dog with black scarf clenching a magnifying glass between his teeth.
+
+% PDFFIX: 1 \vspace{.2\baselineskip}
 
 "Autopsy® is a digital forensics platform and graphical interface to The Sleuth Kit® and other digital forensics tools. It is used by law enforcement, military, and corporate examiners to investigate what happened on a computer. You can even use it to recover photos from your camera's memory card."
 
@@ -143,7 +147,7 @@ tags: auscultation, stretching out, diagnostic
 % SHOW: tgsoimages.svg netflixstethoscope I W:.5
 % INFO: Vacantly smiling giraffe carrying a stethoscope.
 
-"Netflix is pleased to announce the open source release of Stethoscope, our first project following a User Focused Security approach. The notion of "User Focused Security" acknowledges that attacks against corporate users (e.g., phishing, malware) are the primary mechanism leading to security incidents and data breaches, and it’s one of the core principles driving our approach to corporate information security. It’s also reflective of our philosophy that tools are only effective when they consider the true context of people’s work.
+"Netflix is pleased to announce the open source release of Stethoscope, our first project following a User Focused Security approach. The notion of _User Focused Security_ acknowledges that attacks against corporate users (e.g., phishing, malware) are the primary mechanism leading to security incidents and data breaches, and it’s one of the core principles driving our approach to corporate information security. It’s also reflective of our philosophy that tools are only effective when they consider the true context of people’s work.
 Stethoscope is a web application that collects information for a given user’s devices and gives them clear and specific recommendations for securing their systems. If we provide employees with focused, actionable information and low-friction tools, we believe they can get their devices into a more secure state without heavy-handed policy enforcement."
 
 % HYPHENATE: Stetho-scope

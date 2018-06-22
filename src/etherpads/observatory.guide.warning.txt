@@ -1,5 +1,5 @@
-% PDF: http://observatory.constantvzw.org/documents/2017_techno_galactic_Poster_films_A2_V2.pdf 1x1 H
-% INFO: Announcing the Walk-in Clinic. Poster design: Harrisson
+% PDF: http://observatory.constantvzw.org/documents/scprecord_FINAL.pdf 1x1 REF:scprecord H
+% INFO: Intake form for Software Curious People (SCP)
 
 % TOCITEM: Warning T:4
 

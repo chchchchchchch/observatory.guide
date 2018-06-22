@@ -32,6 +32,4 @@ One-way mirrors can be used to partition your working environment in a 4-dimensi
 
 % SOURCE: These two examples of _Space-Noise Rearrangements_ were developed by [Mia Melvaer](http://www.miamelvaer.com/technogalactic).
 
-Following pages:     
-Script for **_I hope you are comfortable, [insert name]_**.
 

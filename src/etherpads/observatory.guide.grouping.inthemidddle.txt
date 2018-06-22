@@ -25,15 +25,16 @@
 
 % QUOTESTYLE: intro
 
-> Unlike proprietary software, SaaSS does not require covert code to
-> obtain the user's data.  Instead, users must send their data to the
-> server in order to use it.  This has the same effect as spyware:
-> the server operator gets the data—with no special effort, by the nature
-> of SaaSS [...] With SaaSS, the server operator can change the software
-> in use on the server.  He ought to be able to do this, since it's his
-> computer; but the result is the same as using a proprietary application
-> program with a universal back door: someone has the power to silently
-> impose changes in how the user's computing gets done.
+> Unlike proprietary software, Service as a Software Substitute (SaaSS)
+> does not require covert code to obtain the user's data. Instead, users
+> must send their data to the server in order to use it. This has the 
+> same effect as spyware: the server operator gets the data—with no 
+> special effort, by the nature of SaaSS [...] With SaaSS, the server
+> operator can change the software in use on the server.  He ought to
+> be able to do this, since it's his computer; but the result is the same
+> as using a proprietary application program with a universal back door: 
+> someone has the power to silently impose changes in how the user's 
+> computing gets done.
 > [@stallman:2012:what]
 
 % QUOTESTYLE: intro

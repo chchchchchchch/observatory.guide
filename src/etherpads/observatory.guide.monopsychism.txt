@@ -12,7 +12,6 @@
 
 % WARNING: THIS METHOD HAS NOT BEEN TESTED. IT CAN PROBABLY DAMAGE YOUR RAM MEMORY AND/OR COMPUTER.
 
-
 % HOW: -
     
 First start the fmem kernel module in both computers:
@@ -39,6 +38,8 @@ Or even, exchange memory between two other computers:
     ssh user@firstcomputer dd if=/dev/fmem bs=1 skip=1000000 count=1000 | \
     ssh user@secondcomputer dd of=/dev/fmem
 % SRCCODE: bash
+
+% PDFFIX: 1 \newpage
 
 % SRCCODE: quaverbatim % F: http://observatory.constantvzw.org/etherdump/files.md 557-569
 

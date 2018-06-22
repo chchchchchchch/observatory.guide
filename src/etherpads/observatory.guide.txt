@@ -7,13 +7,22 @@
 % REALLY _last_ edits :-) https://pad.constantvzw.org/p/CARLINSAYS_last_comments
 
 
+**The Techno-Galactic Guide to Software Observation**    
+Methods from the Techno-Galactic Software Observatory    
+(Brussels, June 2017)
+
+% VFILL:
+Constant, Association for Art and Media
+
+% TEXIN: \thispagestyle{empty}
+% CLEARTORIGHT:
+
 % INTRODUCTION
 % ------------
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.introduction
 
 % WARNING!
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.warning L
-
 
 % TOC:
 
@@ -152,12 +161,19 @@
 % Compiling a constellation of <PRODUCTIVITY>-Wares - OK????
 % SEEALSO: http://pad.constantvzw.org/p/observatory.guide.silvio
 
+% FLUSHIMGREF:
+
+% BLACKPAGE:
+% BLACKPAGE:
+
+% KEYWORDINDEX: https://pad.constantvzw.org/p/observatory.keywords
+% BIBLIST:
+
 % COLOPHON:
 % =========
 % ATTACHMENT: http://pad.constantvzw.org/p/observatory.guide.colophon L
 
-% BIBLIST:
-% KEYWORDINDEX: https://pad.constantvzw.org/p/observatory.keywords
+% SHOW: tgsoimages.svg theend N
 
 % LICENSE: FAL
 
