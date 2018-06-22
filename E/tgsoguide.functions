@@ -107,7 +107,8 @@ function ATTACHMENT() {
          egrep -v "^-|-$"            | # IGNORE ISOLATED -
          grep -v "^[ ]*$" | tail -n 1` # NO EMPTY / LAST LINE ONLY
 
-  IDT=`echo "$1" | sed 's,http.\?://,,' | sed 's/ //g' | md5sum | cut -c 1-8`
+  IDT=`echo "$SRCHREF" | sed 's,http.\?://,,' | #
+       sed 's/ //g' | md5sum | cut -c 1-8`
   ATTID=`echo ${IDT} | md5sum | cut -d " " -f 1 | #
          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
 
@@ -156,6 +157,7 @@ function SEEALSO() {
   SEAID=`echo ${IDA} | md5sum | cut -d " " -f 1 | #
          base64 | tr  [:upper:] [:lower:] | cut -c 1-8` #
   echo "${SEAID}:2:$*" >> ${TMPID}.index
+
 }
 
 # --------------------------------------------------------------------------- #
@@ -473,6 +475,8 @@ function LARGE() {
 
 function SHOW() {
 
+  THISCMD="SHOW"
+
   # EXTRACT FILE ARGUMENT
   # ------------------------------------ #
     SHOWTHIS=`echo $* | sed 's/ /\n/g' | # DISPLAY ALL / ON SEP LINES
@@ -499,22 +503,29 @@ function SHOW() {
           getFile $INCLUDEPATH/$SHOWTHIS ${TMPSVG}
 
         # CHECK/EXTRACT CAPTION
-        # ---------------------------------------------- #
+        # ------------------------------------------------------------ #
+          THISARGUMENTS=`echo $* | sed 's/\([ ]*\)\(.*\)\([ ]*\)/\2/'`
+        # ----
         # GET LN NUM FOR CMD IN (UNPROCESSED) MDSH SRC
-          LNCMD=`grep -n "^% SHOW: $*" $MDSH | # FIND CMD LINE
-                 head -n 1 | cut -d ":" -f 1` # SELECT FIRST MATCH
+          LNCMD=`grep -n "^% ${THISCMD}:" $MDSH    | # FIND CMD LINE
+                 grep "$THISARGUMENTS"             | # MATCH OPTIONS
+                 head -n 1 | cut -d ":" -f 1`        # SELECT LAST MATCH
         # ----
         # DISABLE/TAG CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
-          T="$RANDOM"
-          sed -i "${LNCMD}s/^% SHOW:/%${T}SHOW:/" $MDSH
+          if [ "$LNCMD" != "" ];then
+                T="$RANDOM"
+                sed -i "${LNCMD}s/^% ${THISCMD}:/%${T}${THISCMD}:/" $MDSH
         # ----
         # EXTRACT CAPTION FOR TAGGED '% SHOW'
-          CAPTION=`grep -A 1 "%${T}SHOW: $*" $MDSH | # FIND CMD + CONTEXT
-                   grep "^% INFO:"                 | # GET INFO
-                   head -n 1                       | # ONLY FIRST
-                   cut -d ":" -f 2-                | # CUT INFO
-                   $PANDOCACTION                   | # DISPLAY/TRANSLATE
-                   sed 's,</*p>,,g'`                 # REMOVE <P> TAGS
+          CAPTION=`grep -A 1 "^%${T}${THISCMD}:" $MDSH | # FIND CMD + CONTEXT
+                   grep "^% INFO:"                     | # GET INFO
+                   head -n 1                           | # ONLY FIRST
+                   cut -d ":" -f 2-                    | # CUT INFO
+                   $PANDOCACTION                       | # DISPLAY/TRANSLATE
+                   sed 's,</*p>,,g'`                     # REMOVE <p> TAGS
+          else
+               CAPTION=""
+          fi
 
         # KEEP ON GOING (IF SUCCESSFUL)                  #
         # ---------------------------------------------- #
@@ -677,18 +688,18 @@ function PDF() {
    # CHECK/EXTRACT CAPTION
    # ------------------------------------------------ #
      CAPTION="" # RESET
-     CAPTION=`grep -A 1 "% PDF: $*" $MDSH | # FIND CMD + CONTEXT
-              grep "^% INFO:"             | # GET INFO
-              head -n 1                   | # ONLY FIRST
-              cut -d ":" -f 2-            | # CUT INFO
-              $PANDOCACTION               | # DISPLAY/TRANSLATE
-              sed 's,</*p>,,g'`             # REMOVE <P> TAGS
+     CAPTION=`grep -A 1 "^% ${THISCMD}:" $MDSH | # FIND CMD + CONTEXT
+              grep "^% INFO:"                  | # GET INFO
+              head -n 1                        | # ONLY FIRST
+              cut -d ":" -f 2-                 | # CUT INFO
+              $PANDOCACTION                    | # DISPLAY/TRANSLATE
+              sed 's,</*p>,,g'`                  # REMOVE <p> TAGS
 
    # DISABLE CAPTION
    # ------------------------------------------------ #
-     LNCMD=`grep -n "^% PDF: $*" $MDSH | # FIND CMD LINE
-            head -n 1 | cut -d ":" -f 1` # SELECT LAST MATCH
-     sed -i "${LNCMD}s/^% PDF:/%X${THISCMD}:/" $MDSH
+     LNCMD=`grep -n "^% ${THISCMD}:" $MDSH    | # FIND CMD LINE
+            head -n 1 | cut -d ":" -f 1`        # SELECT LAST MATCH
+     sed -i "${LNCMD}s/^% ${THISCMD}:/%X${THISCMD}:/" $MDSH
 
    # CHECK/EXTRACT REF
    # ------------------------------------------------ #
@@ -743,7 +754,10 @@ function SRCCODE() {
  # ------------------------------------------------------------------------ #
    ALL="$*";THISCMD="SRCCODE";
    ENVIRONMENT="" # RESET
-   SRCLANG=`echo $1 | sed 's/ //g' | sed 's/[^a-z]//g'`
+   SRCLANG=`echo $* | tr -s ' ' | #
+            cut -d " " -f 1     | #
+            sed 's/ //g'        | #
+            sed 's/[^a-z]//g'`
 
    if [ "$SRCLANG" != "" ];then
          ENVIRONMENT=`grep -ih "newenvironment{$SRCLANG" ${TMPID}*.sty | #
@@ -756,12 +770,15 @@ function SRCCODE() {
        else
             echo $ALL                               > ${TMPID}.xtract
       fi
-         # GET NUMBER FOR CMD LINE IN (UNPROCESSED) MDSH SRC AND
-         # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
-         # ----
-           LNCMD=`grep -n "^% $THISCMD:" $MDSH | # FIND CMD LINE
-                  head -n 1 | cut -d ":" -f 1`   # SELECT LAST MATCH
-           sed -i "${LNCMD}s/^% $THISCMD:/%X${THISCMD}:/" $MDSH 
+          THISARGUMENTS=`echo $* | sed 's/\([ ]*\)\(.*\)\([ ]*\)/\2/'`
+        # ----
+        # GET NUMBER FOR CMD LINE IN (UNPROCESSED) MDSH SRC AND
+        # DISABLE CMD LINE IN MDSH SRC (PREVENT DOUBLE MATCH)
+        # ----
+          LNCMD=`grep -n "^% ${THISCMD}:" $MDSH    | # FIND CMD LINE
+                 grep "$THISARGUMENTS"             | # MATCH OPTIONS
+                 head -n 1 | cut -d ":" -f 1`        # SELECT LAST MATCH
+          sed -i "${LNCMD}s/^% $THISCMD:/%X${THISCMD}:/" $MDSH 
     else
          getVerbatim "$THISCMD" ${TMPID}.xtract 
    fi
@@ -1043,6 +1060,7 @@ function CLEARTORIGHT() {
 function VFILL() {
 
   if [ "$OUTPUTFORMAT" == pdf ];then
+        write2src ''
         write2src '\vfill'
   fi
 

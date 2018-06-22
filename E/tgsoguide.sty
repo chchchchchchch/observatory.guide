@@ -48,6 +48,8 @@
   \usepackage[natbib=true,hyperref=false,
               style=musuos,backend=biber]{biblatex}
   \usepackage{bibentry}
+  \usepackage{textcomp}
+  \DeclareUnicodeCharacter{00A0}{ }
 
   \newcounter{floats}  % COUNT FLOATS TO ADD LABELS
   \newcounter{pagenow} % MOSTLY EMPTY/USED TO STORE
@@ -454,10 +456,11 @@
 % --------------------------------------------------------------------------- %
 %  C O D E   E N V I R O N M E N T S
 % --------------------------------------------------------------------------- %
+  \newcommand{\emptylinelst}{\vspace{-.5\baselineskip}}
 
-  \renewcommand{\kwa}{\bfseries}
-  \renewcommand{\kwb}{\kwa}
-  \renewcommand{\kwc}{}
+  \newcommand{\kwa}{\bfseries}
+  \newcommand{\kwb}{\kwa}
+  \newcommand{\kwc}{}
 
   \lstdefinestyle{inline}{basicstyle=\ttfamily}
 
@@ -488,7 +491,16 @@
     literate={▭}{{\symrect}}1 
              {♢ }{{\symrhombus}}1 
              {⏢}{{\symtrapez}}1 
-             {→}{{\symarrowright}}1,
+             {→}{{\symarrowright}}1
+             {Á}{{\'A}}1 {Ã}{{\~A}}1 {É}{{\'E}}1
+             {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1
+             {À}{{\`A}}1 {è}{{\`E}}1 {Ò}{{\`O}}1
+             {à}{{\`a}}1 {è}{{\`e}}1 {ò}{{\`o}}1
+             {Ö}{{\"O}}1 {Ü}{{\"ü}}1 {Ä}{{\"A}}1
+             {ö}{{\"o}}1 {ü}{{\"u}}1 {ä}{{\"a}}1
+             {»}{\guillemotleft}1 {«}{\guillemotright}1
+             {'}{\textquotesingle}1 {€}{\euro}1
+             {-}{\textemdash}1 { }{{\,}}1,
     escapechar=° 
    }\renewcommand{\emptylinelst}{\vspace{-1\baselineskip}
                                 \vfill\pagebreak[0]}

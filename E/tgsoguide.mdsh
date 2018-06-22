@@ -7,30 +7,30 @@
 % -> bibtex references: http://freeze.sh/etherpad/bibref
 % -> markdown reference: http://daringfireball.net/projects/markdown
 
-% DOCUMENTCLASS: [8pt,cleardoubleempty]{scrbook}
-% EXTENDFUNCTIONS: tgsoguide.functions
-
 % --------------------------------------------------------------------------- %
 % EXTENDFUNCTIONS: ../lib/mdsh/book-A6.functions
-% PDFXTITLE: a guide to techno-galactic software observation
+% --------------------------------------------------------------------------- %
+% DOCUMENTCLASS: [8pt,cleardoubleempty]{scrbook}
+% PDFXTITLE: The Techno-Galactic Guide to Software Observation
 % PDFXORG: Constant VZW
 % PDFXAUTHOR: TGSO Editorial Team
 % MKPDFXCOMPLIANT:
 % --------------------------------------------------------------------------- %
 % USEPACKAGE: ../lib/tex/conditions
-% USEPACKAGE: ../lib/tex/listingcustom
+% USEPACKAGE: ../lib/tex/lstlanguages
+% --
 % USEPACKAGE: tgsoguide
 % --------------------------------------------------------------------------- %
 % EXTENDFUNCTIONS: ../lib/mdsh/keywordize.functions
-% ADD2PREAMBLE: \usepackage{makeidx}
-% ADD2PREAMBLE: \makeindex
 % --------------------------------------------------------------------------- %
 % EXTENDFUNCTIONS: ../lib/mdsh/bibref.functions
-% BIBREF: references.bib
-% ----
-% HREF: OFF
+% BIBREF: https://pad.constantvzw.org/p/observatory.bib/export/txt
 % --------------------------------------------------------------------------- %
+% EXTENDFUNCTIONS: tgsoguide.functions
+% --------------------------------------------------------------------------- %
+% =========================================================================== %
 
+% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-180
 
-% INCLUDE: https://pad.constantvzw.org/p/observatory.guide/export/txt 1-40
+% =========================================================================== %
 
