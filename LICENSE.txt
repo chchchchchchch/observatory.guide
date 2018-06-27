@@ -1,7 +1,7 @@
 --------------------------------------------------------------------
  src/
 --------------------------------------------------------------------
- COPYRIGHT (C) Constant+Authors 2018
+ COPYRIGHT (C) 2018 Constant+Authors
 --------------------------------------------------------------------
  This work is free. You may copy, distribute and modify it according
  to the terms of the Free Art License (see below)
